@@ -1,0 +1,712 @@
+﻿Выполняется удаление сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление источника EventLog UsedSchalerService.
+Выполняется удаление службы UsedSchalerService из системы...
+Служба UsedSchalerService успешно удалена из системы.
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Устанавливается служба UsedSchalerService...
+Служба UsedSchalerService успешно установлена.
+Создается исходный EventLog UsedSchalerService в журнале Application...
+Выполняется фиксация сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление источника EventLog UsedSchalerService.
+Выполняется удаление службы UsedSchalerService из системы...
+Служба UsedSchalerService успешно удалена из системы.
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Устанавливается служба UsedSchalerService...
+Служба UsedSchalerService успешно установлена.
+Создается исходный EventLog UsedSchalerService в журнале Application...
+Выполняется фиксация сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление источника EventLog UsedSchalerService.
+Выполняется удаление службы UsedSchalerService из системы...
+Служба UsedSchalerService успешно удалена из системы.
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется откат для сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется откат для сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Устанавливается служба UsedSchalerService...
+Служба UsedSchalerService успешно установлена.
+Создается исходный EventLog UsedSchalerService в журнале Application...
+Выполняется фиксация сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Устанавливается служба UsedSchalerService...
+Создается исходный EventLog UsedSchalerService в журнале Application...
+Выполняется откат для сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Восстанавливается исходное состояние журнала событий для источника UsedSchalerService.
+Выполняется удаление сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление источника EventLog UsedSchalerService.
+Выполняется удаление службы UsedSchalerService из системы...
+Служба UsedSchalerService успешно удалена из системы.
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Устанавливается служба UsedSchalerService...
+Служба UsedSchalerService успешно установлена.
+Создается исходный EventLog UsedSchalerService в журнале Application...
+Выполняется фиксация сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление источника EventLog UsedSchalerService.
+Выполняется удаление службы UsedSchalerService из системы...
+Служба UsedSchalerService успешно удалена из системы.
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется откат для сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление источника EventLog UsedSchalerService.
+Предупреждение. Источник UsedSchalerService не зарегистрирован на локальном компьютере.
+Выполняется удаление службы UsedSchalerService из системы...
+При выполнении программы установки System.ServiceProcess.ServiceInstaller во время установки возникло исключение.
+System.ComponentModel.Win32Exception: Указанная служба не установлена
+При удалении из системы возникло исключение. Это исключение будет проигнорировано, и удаление из системы будет продолжено. Однако после завершения удаления данное приложение может оказаться не полностью удаленным.
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Устанавливается служба UsedSchalerService...
+Служба UsedSchalerService успешно установлена.
+Создается исходный EventLog UsedSchalerService в журнале Application...
+Выполняется фиксация сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление источника EventLog UsedSchalerService.
+Выполняется удаление службы UsedSchalerService из системы...
+Служба UsedSchalerService успешно удалена из системы.
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Устанавливается служба UsedSchalerService...
+Служба UsedSchalerService успешно установлена.
+Создается исходный EventLog UsedSchalerService в журнале Application...
+Выполняется фиксация сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление источника EventLog UsedSchalerService.
+Выполняется удаление службы UsedSchalerService из системы...
+Служба UsedSchalerService успешно удалена из системы.
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Устанавливается служба UsedSchalerService...
+Создается исходный EventLog UsedSchalerService в журнале Application...
+Выполняется откат для сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Восстанавливается исходное состояние журнала событий для источника UsedSchalerService.
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется откат для сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Устанавливается служба UsedSchalerService...
+Создается исходный EventLog UsedSchalerService в журнале Application...
+Выполняется откат для сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Восстанавливается исходное состояние журнала событий для источника UsedSchalerService.
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Устанавливается служба UsedSchalerService...
+Создается исходный EventLog UsedSchalerService в журнале Application...
+Выполняется откат для сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Восстанавливается исходное состояние журнала событий для источника UsedSchalerService.
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Устанавливается служба UsedSchalerService...
+Служба UsedSchalerService успешно установлена.
+Создается исходный EventLog UsedSchalerService в журнале Application...
+Выполняется фиксация сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление источника EventLog UsedSchalerService.
+Выполняется удаление службы UsedSchalerService из системы...
+Служба UsedSchalerService успешно удалена из системы.
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Устанавливается служба UsedSchalerService...
+Служба UsedSchalerService успешно установлена.
+Создается исходный EventLog UsedSchalerService в журнале Application...
+Выполняется фиксация сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление источника EventLog UsedSchalerService.
+Выполняется удаление службы UsedSchalerService из системы...
+Служба UsedSchalerService успешно удалена из системы.
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Устанавливается служба UsedSchalerService...
+Создается исходный EventLog UsedSchalerService в журнале Application...
+Выполняется откат для сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Восстанавливается исходное состояние журнала событий для источника UsedSchalerService.
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Устанавливается служба UsedSchalerService...
+Создается исходный EventLog UsedSchalerService в журнале Application...
+Выполняется откат для сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Восстанавливается исходное состояние журнала событий для источника UsedSchalerService.
+При выполнении программы установки System.Diagnostics.EventLogInstaller на этапе отката возникло исключение.
+System.Security.SecurityException: Источник не найден, но не удалось выполнить поиск по нескольким или всем журналам событий.  Недоступные журналы: Security.
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Устанавливается служба UsedSchalerService...
+Создается исходный EventLog UsedSchalerService в журнале Application...
+Выполняется откат для сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Восстанавливается исходное состояние журнала событий для источника UsedSchalerService.
+При выполнении программы установки System.Diagnostics.EventLogInstaller на этапе отката возникло исключение.
+System.Security.SecurityException: Источник не найден, но не удалось выполнить поиск по нескольким или всем журналам событий.  Недоступные журналы: Security.
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+Выполняется удаление сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление источника EventLog UsedSchalerService.
+При выполнении программы установки System.Diagnostics.EventLogInstaller во время установки возникло исключение.
+System.Security.SecurityException: Источник не найден, но не удалось выполнить поиск по нескольким или всем журналам событий.  Недоступные журналы: Security.
+При удалении из системы возникло исключение. Это исключение будет проигнорировано, и удаление из системы будет продолжено. Однако после завершения удаления данное приложение может оказаться не полностью удаленным.
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Устанавливается служба UsedSchalerService...
+Создается исходный EventLog UsedSchalerService в журнале Application...
+Выполняется откат для сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Восстанавливается исходное состояние журнала событий для источника UsedSchalerService.
+При выполнении программы установки System.Diagnostics.EventLogInstaller на этапе отката возникло исключение.
+System.Security.SecurityException: Источник не найден, но не удалось выполнить поиск по нескольким или всем журналам событий.  Недоступные журналы: Security.
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Устанавливается служба UsedSchalerService...
+Создается исходный EventLog UsedSchalerService в журнале Application...
+Выполняется откат для сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Восстанавливается исходное состояние журнала событий для источника UsedSchalerService.
+При выполнении программы установки System.Diagnostics.EventLogInstaller на этапе отката возникло исключение.
+System.Security.SecurityException: Источник не найден, но не удалось выполнить поиск по нескольким или всем журналам событий.  Недоступные журналы: Security.
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Устанавливается служба UsedSchalerService...
+Служба UsedSchalerService успешно установлена.
+Создается исходный EventLog UsedSchalerService в журнале Application...
+Выполняется фиксация сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление источника EventLog UsedSchalerService.
+Выполняется удаление службы UsedSchalerService из системы...
+Служба UsedSchalerService успешно удалена из системы.
+Выполняется удаление сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление источника EventLog UsedSchalerService.
+Предупреждение. Источник UsedSchalerService не зарегистрирован на локальном компьютере.
+Выполняется удаление службы UsedSchalerService из системы...
+При выполнении программы установки System.ServiceProcess.ServiceInstaller во время установки возникло исключение.
+System.ComponentModel.Win32Exception: Указанная служба не установлена
+При удалении из системы возникло исключение. Это исключение будет проигнорировано, и удаление из системы будет продолжено. Однако после завершения удаления данное приложение может оказаться не полностью удаленным.
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Устанавливается служба UsedSchalerService...
+Служба UsedSchalerService успешно установлена.
+Создается исходный EventLog UsedSchalerService в журнале Application...
+Выполняется фиксация сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление источника EventLog UsedSchalerService.
+Выполняется удаление службы UsedSchalerService из системы...
+Служба UsedSchalerService успешно удалена из системы.
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Устанавливается служба UsedSchalerService...
+Служба UsedSchalerService успешно установлена.
+Создается исходный EventLog UsedSchalerService в журнале Application...
+Выполняется фиксация сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление источника EventLog UsedSchalerService.
+Выполняется удаление службы UsedSchalerService из системы...
+Служба UsedSchalerService успешно удалена из системы.
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Устанавливается служба UsedSchalerService...
+Создается исходный EventLog UsedSchalerService в журнале Application...
+Выполняется откат для сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Восстанавливается исходное состояние журнала событий для источника UsedSchalerService.
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Устанавливается служба UsedSchalerService...
+Создается исходный EventLog UsedSchalerService в журнале Application...
+Выполняется откат для сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Восстанавливается исходное состояние журнала событий для источника UsedSchalerService.
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Устанавливается служба UsedSchalerService...
+Создается исходный EventLog UsedSchalerService в журнале Application...
+Выполняется откат для сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Восстанавливается исходное состояние журнала событий для источника UsedSchalerService.
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Устанавливается служба UsedSchalerService...
+Служба UsedSchalerService успешно установлена.
+Создается исходный EventLog UsedSchalerService в журнале Application...
+Выполняется фиксация сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление источника EventLog UsedSchalerService.
+Выполняется удаление службы UsedSchalerService из системы...
+Служба UsedSchalerService успешно удалена из системы.
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Устанавливается служба UsedSchalerService...
+Служба UsedSchalerService успешно установлена.
+Создается исходный EventLog UsedSchalerService в журнале Application...
+Выполняется фиксация сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление источника EventLog UsedSchalerService.
+Выполняется удаление службы UsedSchalerService из системы...
+Служба UsedSchalerService успешно удалена из системы.
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Устанавливается служба UsedSchalerService...
+Служба UsedSchalerService успешно установлена.
+Создается исходный EventLog UsedSchalerService в журнале Application...
+Выполняется фиксация сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление источника EventLog UsedSchalerService.
+Выполняется удаление службы UsedSchalerService из системы...
+Служба UsedSchalerService успешно удалена из системы.
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Устанавливается служба UsedSchalerService...
+Служба UsedSchalerService успешно установлена.
+Создается исходный EventLog UsedSchalerService в журнале Application...
+Выполняется фиксация сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление источника EventLog UsedSchalerService.
+Выполняется удаление службы UsedSchalerService из системы...
+Служба UsedSchalerService успешно удалена из системы.
+Попытка останова службы UsedSchalerService.
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Устанавливается служба UsedSchalerService...
+Служба UsedSchalerService успешно установлена.
+Создается исходный EventLog UsedSchalerService в журнале Application...
+Выполняется фиксация сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление источника EventLog UsedSchalerService.
+Выполняется удаление службы UsedSchalerService из системы...
+Служба UsedSchalerService успешно удалена из системы.
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Устанавливается служба UsedSchalerService...
+Служба UsedSchalerService успешно установлена.
+Создается исходный EventLog UsedSchalerService в журнале Application...
+Выполняется фиксация сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление источника EventLog UsedSchalerService.
+Выполняется удаление службы UsedSchalerService из системы...
+Служба UsedSchalerService успешно удалена из системы.
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Устанавливается служба UsedSchalerService...
+Служба UsedSchalerService успешно установлена.
+Создается исходный EventLog UsedSchalerService в журнале Application...
+Выполняется фиксация сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление источника EventLog UsedSchalerService.
+Выполняется удаление службы UsedSchalerService из системы...
+Служба UsedSchalerService успешно удалена из системы.
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Устанавливается служба UsedSchalerService...
+Служба UsedSchalerService успешно установлена.
+Создается исходный EventLog UsedSchalerService в журнале Application...
+Выполняется фиксация сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление источника EventLog UsedSchalerService.
+Выполняется удаление службы UsedSchalerService из системы...
+Служба UsedSchalerService успешно удалена из системы.
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Устанавливается служба UsedSchalerService...
+Служба UsedSchalerService успешно установлена.
+Создается исходный EventLog UsedSchalerService в журнале Application...
+Выполняется фиксация сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление источника EventLog UsedSchalerService.
+Выполняется удаление службы UsedSchalerService из системы...
+Служба UsedSchalerService успешно удалена из системы.
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Устанавливается служба UsedSchalerService...
+Служба UsedSchalerService успешно установлена.
+Создается исходный EventLog UsedSchalerService в журнале Application...
+Выполняется фиксация сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется удаление источника EventLog UsedSchalerService.
+Выполняется удаление службы UsedSchalerService из системы...
+Служба UsedSchalerService успешно удалена из системы.
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется откат для сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Выполняется установка сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog
+Устанавливается служба UsedSchalerService...
+Служба UsedSchalerService успешно установлена.
+Создается исходный EventLog UsedSchalerService в журнале Application...
+Выполняется фиксация сборки 'C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+   logfile = C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.InstallLog

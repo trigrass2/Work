@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MESReportModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BSU_Errors_Log">
+    <Key>
+      <PropertyRef Name="ErrorID" />
+    </Key>
+    <Property Name="ErrorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Time" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="Number" Type="Int32" Nullable="false" />
+    <Property Name="SpsNumber" Type="Int32" />
+    <Property Name="DischargePos" Type="Int32" />
+    <Property Name="Recpie" Type="Int32" />
+    <Property Name="Weighter" Type="Int32" />
+    <Property Name="Silo" Type="Int32" />
+    <Property Name="Flag" Type="Int32" />
+    <Property Name="IntText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Text" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LongText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Geht" Type="DateTime" Precision="3" />
+    <Property Name="Acknowledged" Type="DateTime" Precision="3" />
+    <Property Name="DosStart" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="MESReportEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BSU_Errors_Log" EntityType="Self.BSU_Errors_Log" />
+  </EntityContainer>
+</Schema>

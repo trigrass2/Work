@@ -1,0 +1,13 @@
+C:\Users\Ильгар\source\repos\ListTools\ListTools\bin\Debug\ListTools.exe.config
+C:\Users\Ильгар\source\repos\ListTools\ListTools\bin\Debug\ListTools.exe
+C:\Users\Ильгар\source\repos\ListTools\ListTools\bin\Debug\ListTools.pdb
+C:\Users\Ильгар\source\repos\ListTools\ListTools\bin\Debug\Syncfusion.Licensing.dll
+C:\Users\Ильгар\source\repos\ListTools\ListTools\bin\Debug\Syncfusion.SfBarcode.Windows.dll
+C:\Users\Ильгар\source\repos\ListTools\ListTools\bin\Debug\Syncfusion.SfBarcode.Windows.xml
+C:\Users\Ильгар\source\repos\ListTools\ListTools\obj\Debug\ListTools.csprojAssemblyReference.cache
+C:\Users\Ильгар\source\repos\ListTools\ListTools\obj\Debug\ListTools.Properties.Resources.resources
+C:\Users\Ильгар\source\repos\ListTools\ListTools\obj\Debug\ListTools.csproj.GenerateResource.cache
+C:\Users\Ильгар\source\repos\ListTools\ListTools\obj\Debug\ListTools.csproj.CoreCompileInputs.cache
+C:\Users\Ильгар\source\repos\ListTools\ListTools\obj\Debug\ListTools.csproj.CopyComplete
+C:\Users\Ильгар\source\repos\ListTools\ListTools\obj\Debug\ListTools.exe
+C:\Users\Ильгар\source\repos\ListTools\ListTools\obj\Debug\ListTools.pdb

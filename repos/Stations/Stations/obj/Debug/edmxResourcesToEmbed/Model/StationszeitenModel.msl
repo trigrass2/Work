@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище l2prodModelContainer" CdmEntityContainer="l2prodEntities">
+    <EntitySetMapping Name="Stationszeiten">
+      <EntityTypeMapping TypeName="l2prodModel.Stationszeiten">
+        <MappingFragment StoreEntitySet="Stationszeiten">
+          <ScalarProperty Name="F_Palettennummer" ColumnName="F_Palettennummer" />
+          <ScalarProperty Name="PalettenID" ColumnName="PalettenID" />
+          <ScalarProperty Name="Zeittype" ColumnName="Zeittype" />
+          <ScalarProperty Name="Zeit" ColumnName="Zeit" />
+          <ScalarProperty Name="Stationsnummer" ColumnName="Stationsnummer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,15 @@
+﻿11.07.2018 15:46:57 -  CADUniqueIdClass/GetCADUniq -> Заданный аргумент находится вне диапазона допустимых значений.
+Имя параметра: i
+11.07.2018 15:56:10 -  CADUniqueIdClass/GetCADUniq -> Заданный аргумент находится вне диапазона допустимых значений.
+Имя параметра: i
+11.07.2018 15:56:10 -  GetCADUniq -> Индекс находился вне границ массива.
+11.07.2018 16:00:41 -  CADUniqueIdClass/GetCADUniq -> Заданный аргумент находится вне диапазона допустимых значений.
+Имя параметра: i
+11.07.2018 16:00:41 -  GetCADUniq -> Индекс находился вне границ массива.
+11.07.2018 16:00:41 -  Form1/OpenFolder/data = new List<CADUniqueIdModel>(CADUniqueIdClass.GetCollectionCADUnique(namesFiles)) -> Значение не может быть неопределенным.
+Имя параметра: collection
+11.07.2018 16:00:54 -  CADUniqueIdClass/GetCADUniq -> Заданный аргумент находится вне диапазона допустимых значений.
+Имя параметра: i
+11.07.2018 16:00:54 -  GetCADUniq -> Индекс находился вне границ массива.
+11.07.2018 16:00:54 -  Form1/OpenFile/data = new List<CADUniqueIdModel>(CADUniqueIdClass.GetCollectionCADUnique(needNames)) -> Значение не может быть неопределенным.
+Имя параметра: collection

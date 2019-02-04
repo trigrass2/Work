@@ -1,0 +1,14 @@
+C:\Users\Ильгар\source\repos\TestCAD\TestCAD\bin\Release\Skeleton depictor.exe.config
+C:\Users\Ильгар\source\repos\TestCAD\TestCAD\bin\Release\Skeleton depictor.exe.manifest
+C:\Users\Ильгар\source\repos\TestCAD\TestCAD\bin\Release\Skeleton depictor.application
+C:\Users\Ильгар\source\repos\TestCAD\TestCAD\bin\Release\Skeleton depictor.exe
+C:\Users\Ильгар\source\repos\TestCAD\TestCAD\bin\Release\Skeleton depictor.pdb
+C:\Users\Ильгар\source\repos\TestCAD\TestCAD\obj\Release\TestCAD.DataGridForm.resources
+C:\Users\Ильгар\source\repos\TestCAD\TestCAD\obj\Release\TestCAD.Form1.resources
+C:\Users\Ильгар\source\repos\TestCAD\TestCAD\obj\Release\TestCAD.Properties.Resources.resources
+C:\Users\Ильгар\source\repos\TestCAD\TestCAD\obj\Release\TestCAD.csproj.GenerateResource.Cache
+C:\Users\Ильгар\source\repos\TestCAD\TestCAD\obj\Release\TestCAD.csproj.CoreCompileInputs.cache
+C:\Users\Ильгар\source\repos\TestCAD\TestCAD\obj\Release\Skeleton depictor.exe.manifest
+C:\Users\Ильгар\source\repos\TestCAD\TestCAD\obj\Release\Skeleton depictor.application
+C:\Users\Ильгар\source\repos\TestCAD\TestCAD\obj\Release\Skeleton depictor.exe
+C:\Users\Ильгар\source\repos\TestCAD\TestCAD\obj\Release\Skeleton depictor.pdb

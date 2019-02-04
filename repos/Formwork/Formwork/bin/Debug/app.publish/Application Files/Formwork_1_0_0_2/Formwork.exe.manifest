@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="Formwork.exe" version="1.0.0.2" publicKeyToken="71ae3c8c5606820b" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="143.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Formwork" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Formwork.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          Параметры манифеста UAC
+          При необходимости изменить уровень контроля учетных записей Windows замените узел 
+          requestedExecutionLevel одним из следующих значений.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         Если вы хотите использовать виртуализацию файлов и реестра для обратной 
+         совместимости, удалите узел requestedExecutionLevel.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CADUniqueIdParse.dll" size="18432">
+      <assemblyIdentity name="CADUniqueIdParse" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>JX1zdgoNGA4tUJl18qf4ONlQzycKuoUC6hdr2q38/vE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EntityFramework.dll" size="5225168">
+      <assemblyIdentity name="EntityFramework" version="6.0.0.0" publicKeyToken="B77A5C561934E089" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>nCD7KthqdgsMauvZMByQCYkdAq4UcgqTkmwLU1uK0Js=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EntityFramework.SqlServer.dll" size="622288">
+      <assemblyIdentity name="EntityFramework.SqlServer" version="6.0.0.0" publicKeyToken="B77A5C561934E089" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>4OEmw7inupUB0D+Z1Upcu9F0vOy2FwCYq0zBIZ8n+TM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Formwork.exe" size="158184">
+      <assemblyIdentity name="Formwork" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>iYfIF6Y1Vm5ct2AgFhOC2Vm22y0Xspbcb3bm2CUUe5g=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="143.ico" size="142526">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>a9sxVsQZ7pK2rvnqZW0/nWGYhrwnx+0pv28rspt+FZQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Formwork.exe.config" size="784">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>FfZwegRcq6CrMZTvfHXLJXecb4PvgfMpgZAOaVF5cWg=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=DESKTOP-266QKML\Ильгар" issuerKeyHash="0b9e029a005a8fcbd881f5d05c2040aedb31473f" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>7S5GSSSu3igWHFrGo+TkKs5dTyXRDmV8tfAPDmijWO8=</DigestValue></Reference></SignedInfo><SignatureValue>hpXPMhJtMjcOiSy/srG80k1G3z5gU/4NQl1gwd+CTfCM1N446BGAaBkFQOcdMVP9T0NFa04HphXaZhbgsfzQPqQOaNlPKs54C7+ni0ILFdwJgD65Olxgtpd9k/YYauXmn8cr/+IN529yHADiiK073C+B/lvCziFVKWV/l4T3kFU=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>2bLCeShqMkQU/YZc0AXMyl7rYDmXvGLc9JLtypF/IBD2FEIbz8hS+FpLqnuqfxE+DjxvjhJUSHiWfK4P1MZhK8NZ0/PjqjLCc+Eobk09HHILS6cF57EQ5IsHcGsruihGHucH1GhfNqABMIQR0wCZP0D3MCOsQsU2yTUpFNtSh4k=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="ef58a3680e0ff0b57c650ed1254f5dce2ae4e4a3c65a1c1628deae2449462eed" Description="" Url=""><as:assemblyIdentity name="Formwork.exe" version="1.0.0.2" publicKeyToken="71ae3c8c5606820b" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-266QKML\Ильгар</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>dhmkXhFEiIxb6/61Dzf4FJ4FTdv9twFlUSOqMG66cto=</DigestValue></Reference></SignedInfo><SignatureValue>sTV9ChKPGhWSRf7xtwhmgajku3XemeIpZ66/vcmph8Z7z9p9mkPp8/1e0wo5fz8E7bvsS4/4WaPMSFNxVwYl7vTdK5BcUCoc6nBbijXuXucswHlaY59TuCAXk6LSkmkcmf+NpGQHKwmkLKVBPOIMYD5Fs5Jn5gDnGud0Car9Jf0=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>2bLCeShqMkQU/YZc0AXMyl7rYDmXvGLc9JLtypF/IBD2FEIbz8hS+FpLqnuqfxE+DjxvjhJUSHiWfK4P1MZhK8NZ0/PjqjLCc+Eobk09HHILS6cF57EQ5IsHcGsruihGHucH1GhfNqABMIQR0wCZP0D3MCOsQsU2yTUpFNtSh4k=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB8TCCAVqgAwIBAgIQO5KRV2xYxolLCmGVCmdDkzANBgkqhkiG9w0BAQsFADA3MTUwMwYDVQQDHiwARABFAFMASwBUAE8AUAAtADIANgA2AFEASwBNAEwAXAQYBDsETAQzBDAEQDAeFw0xODA3MTExMzMyMDRaFw0xOTA3MTExOTMyMDRaMDcxNTAzBgNVBAMeLABEAEUAUwBLAFQATwBQAC0AMgA2ADYAUQBLAE0ATABcBBgEOwRMBDMEMARAMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDZssJ5KGoyRBT9hlzQBczKXutgOZe8Ytz0ku3KkX8gEPYUQhvPyFL4Wkuqe6p/ET4OPG+OElRIeJZ8rg/UxmErw1nT8+OqMsJz4ShuTT0ccgtLpwXnsRDkiwdwayu6KEYe5wfUaF82oAEwhBHTAJk/QPcwI6xCxTbJNSkU21KHiQIDAQABMA0GCSqGSIb3DQEBCwUAA4GBAL+NXJVfrr+zS3LrXkZuVd23objSvH+NkFVdNpqpEMGDzWmrVSZ/JWy7OrR2pYAqNARPb3RReGqN7Ow46xqVZunkiwKKKlyM0ZGkiBEnJ3Mv9J+w7S2p88/vmk/DCG7jtcWF9eKIyiSAVJfJ1O6WJtilP1I1aLPEqWl2TmQtyC/Y</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

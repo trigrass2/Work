@@ -1,0 +1,11 @@
+C:\Users\Ильгар\source\repos\PersonManager\RestApi\bin\Release\RestApi.dll
+C:\Users\Ильгар\source\repos\PersonManager\RestApi\bin\Release\RestApi.pdb
+C:\Users\Ильгар\source\repos\PersonManager\RestApi\bin\Release\Newtonsoft.Json.dll
+C:\Users\Ильгар\source\repos\PersonManager\RestApi\bin\Release\RestSharp.dll
+C:\Users\Ильгар\source\repos\PersonManager\RestApi\bin\Release\Newtonsoft.Json.xml
+C:\Users\Ильгар\source\repos\PersonManager\RestApi\bin\Release\RestSharp.xml
+C:\Users\Ильгар\source\repos\PersonManager\RestApi\obj\Release\RestApi.csproj.CoreCompileInputs.cache
+C:\Users\Ильгар\source\repos\PersonManager\RestApi\obj\Release\RestApi.csproj.CopyComplete
+C:\Users\Ильгар\source\repos\PersonManager\RestApi\obj\Release\RestApi.dll
+C:\Users\Ильгар\source\repos\PersonManager\RestApi\obj\Release\RestApi.pdb
+C:\Users\Ильгар\source\repos\PersonManager\RestApi\obj\Release\RestApi.csprojAssemblyReference.cache

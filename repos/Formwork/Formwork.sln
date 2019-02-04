@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Formwork", "Formwork\Formwork.csproj", "{3C6B7F12-D4AE-493F-9C5B-A1FDA30BE0B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CADUniqueIdParse", "CADUniqueIdParse\CADUniqueIdParse.csproj", "{51FEB99D-8F09-4CBB-8B4D-6B28BEB55C34}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3C6B7F12-D4AE-493F-9C5B-A1FDA30BE0B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C6B7F12-D4AE-493F-9C5B-A1FDA30BE0B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C6B7F12-D4AE-493F-9C5B-A1FDA30BE0B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C6B7F12-D4AE-493F-9C5B-A1FDA30BE0B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51FEB99D-8F09-4CBB-8B4D-6B28BEB55C34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51FEB99D-8F09-4CBB-8B4D-6B28BEB55C34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51FEB99D-8F09-4CBB-8B4D-6B28BEB55C34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51FEB99D-8F09-4CBB-8B4D-6B28BEB55C34}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AAE39155-033B-48EE-9F71-0256B3BE63AE}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://mamishovin.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = CADUniqueIdParse\\CADUniqueIdParse.csproj
+		SccProjectName1 = CADUniqueIdParse
+		SccLocalPath1 = CADUniqueIdParse
+		SccProjectUniqueName2 = Formwork\\Formwork.csproj
+		SccProjectName2 = Formwork
+		SccLocalPath2 = Formwork
+	EndGlobalSection
+EndGlobal

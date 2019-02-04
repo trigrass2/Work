@@ -1,0 +1,13 @@
+﻿Выполняется установка сборки 'C:\Users\Ильгар\source\repos\SeekerPdfService\SeekerPdfService\bin\Release\SeekerPdfService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\SeekerPdfService\SeekerPdfService\bin\Release\SeekerPdfService.exe
+   logfile = C:\Users\Ильгар\source\repos\SeekerPdfService\SeekerPdfService\bin\Release\SeekerPdfService.InstallLog
+Устанавливается служба SeekerPdfService...
+Служба SeekerPdfService успешно установлена.
+Создается исходный EventLog SeekerPdfService в журнале Application...
+Выполняется фиксация сборки 'C:\Users\Ильгар\source\repos\SeekerPdfService\SeekerPdfService\bin\Release\SeekerPdfService.exe'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Users\Ильгар\source\repos\SeekerPdfService\SeekerPdfService\bin\Release\SeekerPdfService.exe
+   logfile = C:\Users\Ильгар\source\repos\SeekerPdfService\SeekerPdfService\bin\Release\SeekerPdfService.InstallLog

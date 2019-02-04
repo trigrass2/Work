@@ -1,0 +1,728 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LOG_ZAVOD_NFModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AWM_Dur">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Timestamp" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Seconds" Type="Int32" Nullable="false" />
+    <Property Name="Dur_id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AWM_Hmimesh_Log">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Timestamp" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Eventtype" Type="Int32" Nullable="false" />
+    <Property Name="Error_id" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="Desk_en" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Desk_ru" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Log_id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AWM_Rep">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Timestamp" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Mesh_id" Type="Int32" Nullable="false" />
+    <Property Name="Mesh_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Rep_id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BSU_Errors_Log">
+    <Key>
+      <PropertyRef Name="Error_id" />
+    </Key>
+    <Property Name="Error_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Time" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="Number" Type="Int32" Nullable="false" />
+    <Property Name="SpsNumber" Type="Int32" Nullable="false" />
+    <Property Name="DischargePos" Type="Int32" Nullable="false" />
+    <Property Name="Recpie" Type="Int32" Nullable="false" />
+    <Property Name="Weighter" Type="Int32" Nullable="false" />
+    <Property Name="Silo" Type="Int32" Nullable="false" />
+    <Property Name="Flag" Type="Int32" Nullable="false" />
+    <Property Name="IntText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Text" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LongText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Geht" Type="DateTime" Precision="3" />
+    <Property Name="Acknowledged" Type="DateTime" Precision="3" />
+    <Property Name="DoStart" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="BSU_Production">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Time" Type="Time" Precision="7" />
+    <Property Name="Number" Type="Int32" />
+    <Property Name="ProductId" Type="Int32" />
+    <Property Name="ProductName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Volume" Type="Single" />
+    <Property Name="SpecId" Type="Int32" />
+    <Property Name="SpecName" Type="Int32" />
+    <Property Name="Operator" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UnitId" Type="Int32" />
+    <Property Name="MixerID" Type="Int32" />
+    <Property Name="WCfactSet" Type="Single" />
+    <Property Name="WCfactPerm" Type="Int32" />
+    <Property Name="LastSet" Type="Int32" />
+    <Property Name="DosTimeDate" Type="DateTime" Precision="0" />
+    <Property Name="DosTimeOrder" Type="Time" Precision="7" />
+    <Property Name="DosTimeDosing" Type="Time" Precision="7" />
+    <Property Name="DosTimeStart" Type="Time" Precision="7" />
+    <Property Name="DosTimeHygStart" Type="Time" Precision="7" />
+    <Property Name="DosTimeHygEnd" Type="Time" Precision="7" />
+    <Property Name="DosTimeHygDuration" Type="Time" Precision="7" />
+    <Property Name="DosTimeDischarge" Type="Time" Precision="7" />
+    <Property Name="DosTimeMixTime" Type="Time" Precision="7" />
+    <Property Name="WCwet" Type="Single" />
+    <Property Name="WCwater" Type="Single" />
+    <Property Name="WCabswater" Type="Int32" />
+    <Property Name="WCSolidsInWater" Type="Int32" />
+    <Property Name="WCprelWater" Type="Int32" />
+    <Property Name="WCWaterInAdds" Type="Single" />
+    <Property Name="WCWaterInPaint" Type="Int32" />
+    <Property Name="WCCement" Type="Single" />
+    <Property Name="WCPropOfFiller" Type="Int32" />
+    <Property Name="WC" Type="Single" />
+    <Property Name="HygDryMixSet" Type="Int32" />
+    <Property Name="HygWetMixSet" Type="Int32" />
+    <Property Name="HygDryMixFact" Type="Int32" />
+    <Property Name="HygWetMixFact" Type="Int32" />
+    <Property Name="HygSteamTime" Type="Int32" />
+    <Property Name="HygDrySet" Type="Single" />
+    <Property Name="HygWetSet" Type="Single" />
+    <Property Name="HygDryFact" Type="Int32" />
+    <Property Name="HygWetFact" Type="Int32" />
+    <Property Name="HygManualWater1" Type="Int32" />
+    <Property Name="HygTemp" Type="Single" />
+    <Property Name="HygRecipe" Type="Int32" />
+    <Property Name="HygWaterSet" Type="Single" />
+    <Property Name="HygWaterFact" Type="Single" />
+    <Property Name="HygRecWaterSet" Type="Int32" />
+    <Property Name="HygRecWaterFact" Type="Int32" />
+    <Property Name="HygCleanWaterSet" Type="Int32" />
+    <Property Name="HygCleanWaterFact" Type="Int32" />
+    <Property Name="HygProbeSet" Type="Int32" />
+    <Property Name="HygProbeFact" Type="Int32" />
+    <Property Name="HygWaterTemp" Type="Int32" />
+    <Property Name="HygRecWaterFill1" Type="Int32" />
+    <Property Name="HygRecWaterFill2" Type="Int32" />
+    <Property Name="HygWaterCorrection" Type="Int32" />
+    <Property Name="HygManualWater2" Type="Int32" />
+    <Property Name="HygFlushWater" Type="Int32" />
+    <Property Name="HygCleanWaterMax" Type="Int32" />
+    <Property Name="HygRecWaterMax" Type="Int32" />
+    <Property Name="HygSolidRecWater" Type="Int32" />
+    <Property Name="HygMicrowave" Type="Single" />
+    <Property Name="HygSet" Type="Single" />
+    <Property Name="HygStart" Type="Time" Precision="7" />
+    <Property Name="HygStop" Type="Time" Precision="7" />
+    <Property Name="HygEnd" Type="Time" Precision="7" />
+    <Property Name="MaterialId1" Type="Int32" />
+    <Property Name="MaterialName1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialAmount1" Type="Single" />
+    <Property Name="MaterialSet1" Type="Single" />
+    <Property Name="MaterialManual1" Type="Single" />
+    <Property Name="MaterialWetPerc1" Type="Single" />
+    <Property Name="MaterialWet1" Type="Single" />
+    <Property Name="MaterialAbsPerc1" Type="Single" />
+    <Property Name="MaterialAbs1" Type="Single" />
+    <Property Name="MaterialCementPart1" Type="Single" />
+    <Property Name="MaterialFiller1" Type="Int32" />
+    <Property Name="MaterialKValue1" Type="Single" />
+    <Property Name="MaterialInhibitor1" Type="Int32" />
+    <Property Name="MaterialSolidPerc1" Type="Single" />
+    <Property Name="MaterialLiquidPerc1" Type="Single" />
+    <Property Name="MaterialRecValue1" Type="Single" />
+    <Property Name="MaterialDen1" Type="Single" />
+    <Property Name="MaterialVolume1" Type="Single" />
+    <Property Name="MaterialDrySet1" Type="Single" />
+    <Property Name="MaterialWetSet1" Type="Single" />
+    <Property Name="MaterialNote1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialSetId1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialId2" Type="Int32" />
+    <Property Name="MaterialName2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialAmount2" Type="Single" />
+    <Property Name="MaterialSet2" Type="Single" />
+    <Property Name="MaterialManual2" Type="Single" />
+    <Property Name="MaterialWetPerc2" Type="Single" />
+    <Property Name="MaterialWet2" Type="Single" />
+    <Property Name="MaterialAbsPerc2" Type="Single" />
+    <Property Name="MaterialAbs2" Type="Single" />
+    <Property Name="MaterialCementPart2" Type="Single" />
+    <Property Name="MaterialFiller2" Type="Int32" />
+    <Property Name="MaterialKValue2" Type="Single" />
+    <Property Name="MaterialInhibitor2" Type="Int32" />
+    <Property Name="MaterialSolidPerc2" Type="Single" />
+    <Property Name="MaterialLiquidPerc2" Type="Single" />
+    <Property Name="MaterialRecValue2" Type="Single" />
+    <Property Name="MaterialDen2" Type="Single" />
+    <Property Name="MaterialVolume2" Type="Single" />
+    <Property Name="MaterialDrySet2" Type="Single" />
+    <Property Name="MaterialWetSet2" Type="Single" />
+    <Property Name="MaterialNote2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialSetId2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialId3" Type="Int32" />
+    <Property Name="MaterialName3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialAmount3" Type="Single" />
+    <Property Name="MaterialSet3" Type="Single" />
+    <Property Name="MaterialManual3" Type="Single" />
+    <Property Name="MaterialWetPerc3" Type="Single" />
+    <Property Name="MaterialWet3" Type="Single" />
+    <Property Name="MaterialAbsPerc3" Type="Single" />
+    <Property Name="MaterialAbs3" Type="Single" />
+    <Property Name="MaterialCementPart3" Type="Single" />
+    <Property Name="MaterialFiller3" Type="Int32" />
+    <Property Name="MaterialKValue3" Type="Single" />
+    <Property Name="MaterialInhibitor3" Type="Int32" />
+    <Property Name="MaterialSolidPerc3" Type="Single" />
+    <Property Name="MaterialLiquidPerc3" Type="Single" />
+    <Property Name="MaterialRecValue3" Type="Single" />
+    <Property Name="MaterialDen3" Type="Single" />
+    <Property Name="MaterialVolume3" Type="Single" />
+    <Property Name="MaterialDrySet3" Type="Single" />
+    <Property Name="MaterialWetSet3" Type="Single" />
+    <Property Name="MaterialNote3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialSetId3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialId4" Type="Int32" />
+    <Property Name="MaterialName4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialAmount4" Type="Single" />
+    <Property Name="MaterialSet4" Type="Single" />
+    <Property Name="MaterialManual4" Type="Single" />
+    <Property Name="MaterialWetPerc4" Type="Single" />
+    <Property Name="MaterialWet4" Type="Single" />
+    <Property Name="MaterialAbsPerc4" Type="Single" />
+    <Property Name="MaterialAbs4" Type="Single" />
+    <Property Name="MaterialCementPart4" Type="Single" />
+    <Property Name="MaterialFiller4" Type="Int32" />
+    <Property Name="MaterialKValue4" Type="Single" />
+    <Property Name="MaterialInhibitor4" Type="Int32" />
+    <Property Name="MaterialSolidPerc4" Type="Single" />
+    <Property Name="MaterialLiquidPerc4" Type="Single" />
+    <Property Name="MaterialRecValue4" Type="Single" />
+    <Property Name="MaterialDen4" Type="Single" />
+    <Property Name="MaterialVolume4" Type="Single" />
+    <Property Name="MaterialDrySet4" Type="Single" />
+    <Property Name="MaterialWetSet4" Type="Single" />
+    <Property Name="MaterialNote4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialSetId4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialId5" Type="Int32" />
+    <Property Name="MaterialName5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialAmount5" Type="Single" />
+    <Property Name="MaterialSet5" Type="Single" />
+    <Property Name="MaterialManual5" Type="Single" />
+    <Property Name="MaterialWetPerc5" Type="Single" />
+    <Property Name="MaterialWet5" Type="Single" />
+    <Property Name="MaterialAbsPerc5" Type="Single" />
+    <Property Name="MaterialAbs5" Type="Single" />
+    <Property Name="MaterialCementPart5" Type="Single" />
+    <Property Name="MaterialFiller5" Type="Int32" />
+    <Property Name="MaterialKValue5" Type="Single" />
+    <Property Name="MaterialInhibitor5" Type="Int32" />
+    <Property Name="MaterialSolidPerc5" Type="Single" />
+    <Property Name="MaterialLiquidPerc5" Type="Single" />
+    <Property Name="MaterialRecValue5" Type="Single" />
+    <Property Name="MaterialDen5" Type="Single" />
+    <Property Name="MaterialVolume5" Type="Single" />
+    <Property Name="MaterialDrySet5" Type="Single" />
+    <Property Name="MaterialWetSet5" Type="Single" />
+    <Property Name="MaterialNote5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialSetId5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialId6" Type="Int32" />
+    <Property Name="MaterialName6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialAmount6" Type="Single" />
+    <Property Name="MaterialSet6" Type="Single" />
+    <Property Name="MaterialManual6" Type="Single" />
+    <Property Name="MaterialWetPerc6" Type="Single" />
+    <Property Name="MaterialWet6" Type="Single" />
+    <Property Name="MaterialAbsPerc6" Type="Single" />
+    <Property Name="MaterialAbs6" Type="Single" />
+    <Property Name="MaterialCementPart6" Type="Single" />
+    <Property Name="MaterialFiller6" Type="Int32" />
+    <Property Name="MaterialKValue6" Type="Single" />
+    <Property Name="MaterialInhibitor6" Type="Int32" />
+    <Property Name="MaterialSolidPerc6" Type="Single" />
+    <Property Name="MaterialLiquidPerc6" Type="Single" />
+    <Property Name="MaterialRecValue6" Type="Single" />
+    <Property Name="MaterialDen6" Type="Single" />
+    <Property Name="MaterialVolume6" Type="Single" />
+    <Property Name="MaterialDrySet6" Type="Single" />
+    <Property Name="MaterialWetSet6" Type="Single" />
+    <Property Name="MaterialNote6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialSetId6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialId7" Type="Int32" />
+    <Property Name="MaterialName7" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialAmount7" Type="Single" />
+    <Property Name="MaterialSet7" Type="Single" />
+    <Property Name="MaterialManual7" Type="Single" />
+    <Property Name="MaterialWetPerc7" Type="Single" />
+    <Property Name="MaterialWet7" Type="Single" />
+    <Property Name="MaterialAbsPerc7" Type="Single" />
+    <Property Name="MaterialAbs7" Type="Single" />
+    <Property Name="MaterialCementPart7" Type="Single" />
+    <Property Name="MaterialFiller7" Type="Int32" />
+    <Property Name="MaterialKValue7" Type="Single" />
+    <Property Name="MaterialInhibitor7" Type="Int32" />
+    <Property Name="MaterialSolidPerc7" Type="Single" />
+    <Property Name="MaterialLiquidPerc7" Type="Single" />
+    <Property Name="MaterialRecValue7" Type="Single" />
+    <Property Name="MaterialDen7" Type="Single" />
+    <Property Name="MaterialVolume7" Type="Single" />
+    <Property Name="MaterialDrySet7" Type="Single" />
+    <Property Name="MaterialWetSet7" Type="Single" />
+    <Property Name="MaterialNote7" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialSetId7" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialId8" Type="Int32" />
+    <Property Name="MaterialName8" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialAmount8" Type="Single" />
+    <Property Name="MaterialSet8" Type="Single" />
+    <Property Name="MaterialManual8" Type="Single" />
+    <Property Name="MaterialWetPerc8" Type="Single" />
+    <Property Name="MaterialWet8" Type="Single" />
+    <Property Name="MaterialAbsPerc8" Type="Single" />
+    <Property Name="MaterialAbs8" Type="Single" />
+    <Property Name="MaterialCementPart8" Type="Single" />
+    <Property Name="MaterialFiller8" Type="Int32" />
+    <Property Name="MaterialKValue8" Type="Single" />
+    <Property Name="MaterialInhibitor8" Type="Int32" />
+    <Property Name="MaterialSolidPerc8" Type="Single" />
+    <Property Name="MaterialLiquidPerc8" Type="Single" />
+    <Property Name="MaterialRecValue8" Type="Single" />
+    <Property Name="MaterialDen8" Type="Single" />
+    <Property Name="MaterialVolume8" Type="Single" />
+    <Property Name="MaterialDrySet8" Type="Single" />
+    <Property Name="MaterialWetSet8" Type="Single" />
+    <Property Name="MaterialNote8" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialSetId8" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialId9" Type="Int32" />
+    <Property Name="MaterialName9" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialAmount9" Type="Single" />
+    <Property Name="MaterialSet9" Type="Single" />
+    <Property Name="MaterialManual9" Type="Single" />
+    <Property Name="MaterialWetPerc9" Type="Single" />
+    <Property Name="MaterialWet9" Type="Single" />
+    <Property Name="MaterialAbsPerc9" Type="Single" />
+    <Property Name="MaterialAbs9" Type="Single" />
+    <Property Name="MaterialCementPart9" Type="Single" />
+    <Property Name="MaterialFiller9" Type="Int32" />
+    <Property Name="MaterialKValue9" Type="Single" />
+    <Property Name="MaterialInhibitor9" Type="Int32" />
+    <Property Name="MaterialSolidPerc9" Type="Single" />
+    <Property Name="MaterialLiquidPerc9" Type="Single" />
+    <Property Name="MaterialRecValue9" Type="Single" />
+    <Property Name="MaterialDen9" Type="Single" />
+    <Property Name="MaterialVolume9" Type="Single" />
+    <Property Name="MaterialDrySet9" Type="Single" />
+    <Property Name="MaterialWetSet9" Type="Single" />
+    <Property Name="MaterialNote9" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialSetId9" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialId10" Type="Int32" />
+    <Property Name="MaterialName10" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialAmount10" Type="Single" />
+    <Property Name="MaterialSet10" Type="Single" />
+    <Property Name="MaterialManual10" Type="Single" />
+    <Property Name="MaterialWetPerc10" Type="Single" />
+    <Property Name="MaterialWet10" Type="Single" />
+    <Property Name="MaterialAbsPerc10" Type="Single" />
+    <Property Name="MaterialAbs10" Type="Single" />
+    <Property Name="MaterialCementPart10" Type="Single" />
+    <Property Name="MaterialFiller10" Type="Int32" />
+    <Property Name="MaterialKValue10" Type="Single" />
+    <Property Name="MaterialInhibitor10" Type="Int32" />
+    <Property Name="MaterialSolidPerc10" Type="Single" />
+    <Property Name="MaterialLiquidPerc10" Type="Single" />
+    <Property Name="MaterialRecValue10" Type="Single" />
+    <Property Name="MaterialDen10" Type="Single" />
+    <Property Name="MaterialVolume10" Type="Single" />
+    <Property Name="MaterialDrySet10" Type="Single" />
+    <Property Name="MaterialWetSet10" Type="Single" />
+    <Property Name="MaterialNote10" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialSetId10" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialId11" Type="Int32" />
+    <Property Name="MaterialName11" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialAmount11" Type="Single" />
+    <Property Name="MaterialSet11" Type="Single" />
+    <Property Name="MaterialManual11" Type="Single" />
+    <Property Name="MaterialWetPerc11" Type="Single" />
+    <Property Name="MaterialWet11" Type="Single" />
+    <Property Name="MaterialAbsPerc11" Type="Single" />
+    <Property Name="MaterialAbs11" Type="Single" />
+    <Property Name="MaterialCementPart11" Type="Single" />
+    <Property Name="MaterialFiller11" Type="Int32" />
+    <Property Name="MaterialKValue11" Type="Single" />
+    <Property Name="MaterialInhibitor11" Type="Int32" />
+    <Property Name="MaterialSolidPerc11" Type="Single" />
+    <Property Name="MaterialLiquidPerc11" Type="Single" />
+    <Property Name="MaterialRecValue11" Type="Single" />
+    <Property Name="MaterialDen11" Type="Single" />
+    <Property Name="MaterialVolume11" Type="Single" />
+    <Property Name="MaterialDrySet11" Type="Single" />
+    <Property Name="MaterialWetSet11" Type="Single" />
+    <Property Name="MaterialNote11" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialSetId11" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialId12" Type="Int32" />
+    <Property Name="MaterialName12" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialAmount12" Type="Single" />
+    <Property Name="MaterialSet12" Type="Single" />
+    <Property Name="MaterialManual12" Type="Single" />
+    <Property Name="MaterialWetPerc12" Type="Single" />
+    <Property Name="MaterialWet12" Type="Single" />
+    <Property Name="MaterialAbsPerc12" Type="Single" />
+    <Property Name="MaterialAbs12" Type="Single" />
+    <Property Name="MaterialCementPart12" Type="Single" />
+    <Property Name="MaterialFiller12" Type="Int32" />
+    <Property Name="MaterialKValue12" Type="Single" />
+    <Property Name="MaterialInhibitor12" Type="Int32" />
+    <Property Name="MaterialSolidPerc12" Type="Single" />
+    <Property Name="MaterialLiquidPerc12" Type="Single" />
+    <Property Name="MaterialRecValue12" Type="Single" />
+    <Property Name="MaterialDen12" Type="Single" />
+    <Property Name="MaterialVolume12" Type="Single" />
+    <Property Name="MaterialDrySet12" Type="Single" />
+    <Property Name="MaterialWetSet12" Type="Single" />
+    <Property Name="MaterialNote12" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialSetId12" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialId13" Type="Int32" />
+    <Property Name="MaterialName13" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialAmount13" Type="Single" />
+    <Property Name="MaterialSet13" Type="Single" />
+    <Property Name="MaterialManual13" Type="Single" />
+    <Property Name="MaterialWetPerc13" Type="Single" />
+    <Property Name="MaterialWet13" Type="Single" />
+    <Property Name="MaterialAbsPerc13" Type="Single" />
+    <Property Name="MaterialAbs13" Type="Single" />
+    <Property Name="MaterialCementPart13" Type="Single" />
+    <Property Name="MaterialFiller13" Type="Int32" />
+    <Property Name="MaterialKValue13" Type="Single" />
+    <Property Name="MaterialInhibitor13" Type="Int32" />
+    <Property Name="MaterialSolidPerc13" Type="Single" />
+    <Property Name="MaterialLiquidPerc13" Type="Single" />
+    <Property Name="MaterialRecValue13" Type="Single" />
+    <Property Name="MaterialDen13" Type="Single" />
+    <Property Name="MaterialVolume13" Type="Single" />
+    <Property Name="MaterialDrySet13" Type="Single" />
+    <Property Name="MaterialWetSet13" Type="Single" />
+    <Property Name="MaterialNote13" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialSetId13" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialId14" Type="Int32" />
+    <Property Name="MaterialName14" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialAmount14" Type="Single" />
+    <Property Name="MaterialSet14" Type="Single" />
+    <Property Name="MaterialManual14" Type="Single" />
+    <Property Name="MaterialWetPerc14" Type="Single" />
+    <Property Name="MaterialWet14" Type="Single" />
+    <Property Name="MaterialAbsPerc14" Type="Single" />
+    <Property Name="MaterialAbs14" Type="Single" />
+    <Property Name="MaterialCementPart14" Type="Single" />
+    <Property Name="MaterialFiller14" Type="Int32" />
+    <Property Name="MaterialKValue14" Type="Single" />
+    <Property Name="MaterialInhibitor14" Type="Int32" />
+    <Property Name="MaterialSolidPerc14" Type="Single" />
+    <Property Name="MaterialLiquidPerc14" Type="Single" />
+    <Property Name="MaterialRecValue14" Type="Single" />
+    <Property Name="MaterialDen14" Type="Single" />
+    <Property Name="MaterialVolume14" Type="Single" />
+    <Property Name="MaterialDrySet14" Type="Single" />
+    <Property Name="MaterialWetSet14" Type="Single" />
+    <Property Name="MaterialNote14" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialSetId14" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialId15" Type="Int32" />
+    <Property Name="MaterialName15" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialAmount15" Type="Single" />
+    <Property Name="MaterialSet15" Type="Single" />
+    <Property Name="MaterialManual15" Type="Single" />
+    <Property Name="MaterialWetPerc15" Type="Single" />
+    <Property Name="MaterialWet15" Type="Single" />
+    <Property Name="MaterialAbsPerc15" Type="Single" />
+    <Property Name="MaterialAbs15" Type="Single" />
+    <Property Name="MaterialCementPart15" Type="Single" />
+    <Property Name="MaterialFiller15" Type="Int32" />
+    <Property Name="MaterialKValue15" Type="Single" />
+    <Property Name="MaterialInhibitor15" Type="Int32" />
+    <Property Name="MaterialSolidPerc15" Type="Single" />
+    <Property Name="MaterialLiquidPerc15" Type="Single" />
+    <Property Name="MaterialRecValue15" Type="Single" />
+    <Property Name="MaterialDen15" Type="Single" />
+    <Property Name="MaterialVolume15" Type="Single" />
+    <Property Name="MaterialDrySet15" Type="Single" />
+    <Property Name="MaterialWetSet15" Type="Single" />
+    <Property Name="MaterialNote15" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialSetId15" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialId16" Type="Int32" />
+    <Property Name="MaterialName16" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialAmount16" Type="Single" />
+    <Property Name="MaterialSet16" Type="Single" />
+    <Property Name="MaterialManual16" Type="Single" />
+    <Property Name="MaterialWetPerc16" Type="Single" />
+    <Property Name="MaterialWet16" Type="Single" />
+    <Property Name="MaterialAbsPerc16" Type="Single" />
+    <Property Name="MaterialAbs16" Type="Single" />
+    <Property Name="MaterialCementPart16" Type="Single" />
+    <Property Name="MaterialFiller16" Type="Int32" />
+    <Property Name="MaterialKValue16" Type="Single" />
+    <Property Name="MaterialInhibitor16" Type="Int32" />
+    <Property Name="MaterialSolidPerc16" Type="Single" />
+    <Property Name="MaterialLiquidPerc16" Type="Single" />
+    <Property Name="MaterialRecValue16" Type="Single" />
+    <Property Name="MaterialDen16" Type="Single" />
+    <Property Name="MaterialVolume16" Type="Single" />
+    <Property Name="MaterialDrySet16" Type="Single" />
+    <Property Name="MaterialWetSet16" Type="Single" />
+    <Property Name="MaterialNote16" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialSetId16" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialId17" Type="Int32" />
+    <Property Name="MaterialName17" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialAmount17" Type="Single" />
+    <Property Name="MaterialSet17" Type="Single" />
+    <Property Name="MaterialManual17" Type="Single" />
+    <Property Name="MaterialWetPerc17" Type="Single" />
+    <Property Name="MaterialWet17" Type="Single" />
+    <Property Name="MaterialAbsPerc17" Type="Single" />
+    <Property Name="MaterialAbs17" Type="Single" />
+    <Property Name="MaterialCementPart17" Type="Single" />
+    <Property Name="MaterialFiller17" Type="Int32" />
+    <Property Name="MaterialKValue17" Type="Single" />
+    <Property Name="MaterialInhibitor17" Type="Int32" />
+    <Property Name="MaterialSolidPerc17" Type="Single" />
+    <Property Name="MaterialLiquidPerc17" Type="Single" />
+    <Property Name="MaterialRecValue17" Type="Single" />
+    <Property Name="MaterialDen17" Type="Single" />
+    <Property Name="MaterialVolume17" Type="Single" />
+    <Property Name="MaterialDrySet17" Type="Single" />
+    <Property Name="MaterialWetSet17" Type="Single" />
+    <Property Name="MaterialNote17" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialSetId17" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialId18" Type="Int32" />
+    <Property Name="MaterialName18" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialAmount18" Type="Single" />
+    <Property Name="MaterialSet18" Type="Single" />
+    <Property Name="MaterialManual18" Type="Single" />
+    <Property Name="MaterialWetPerc18" Type="Single" />
+    <Property Name="MaterialWet18" Type="Single" />
+    <Property Name="MaterialAbsPerc18" Type="Single" />
+    <Property Name="MaterialAbs18" Type="Single" />
+    <Property Name="MaterialCementPart18" Type="Single" />
+    <Property Name="MaterialFiller18" Type="Int32" />
+    <Property Name="MaterialKValue18" Type="Single" />
+    <Property Name="MaterialInhibitor18" Type="Int32" />
+    <Property Name="MaterialSolidPerc18" Type="Single" />
+    <Property Name="MaterialLiquidPerc18" Type="Single" />
+    <Property Name="MaterialRecValue18" Type="Single" />
+    <Property Name="MaterialDen18" Type="Single" />
+    <Property Name="MaterialVolume18" Type="Single" />
+    <Property Name="MaterialDrySet18" Type="Single" />
+    <Property Name="MaterialWetSet18" Type="Single" />
+    <Property Name="MaterialNote18" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialSetId18" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialId19" Type="Int32" />
+    <Property Name="MaterialName19" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialAmount19" Type="Single" />
+    <Property Name="MaterialSet19" Type="Single" />
+    <Property Name="MaterialManual19" Type="Single" />
+    <Property Name="MaterialWetPerc19" Type="Single" />
+    <Property Name="MaterialWet19" Type="Single" />
+    <Property Name="MaterialAbsPerc19" Type="Single" />
+    <Property Name="MaterialAbs19" Type="Single" />
+    <Property Name="MaterialCementPart19" Type="Single" />
+    <Property Name="MaterialFiller19" Type="Int32" />
+    <Property Name="MaterialKValue19" Type="Single" />
+    <Property Name="MaterialInhibitor19" Type="Int32" />
+    <Property Name="MaterialSolidPerc19" Type="Single" />
+    <Property Name="MaterialLiquidPerc19" Type="Single" />
+    <Property Name="MaterialRecValue19" Type="Single" />
+    <Property Name="MaterialDen19" Type="Single" />
+    <Property Name="MaterialVolume19" Type="Single" />
+    <Property Name="MaterialDrySet19" Type="Single" />
+    <Property Name="MaterialWetSet19" Type="Single" />
+    <Property Name="MaterialNote19" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialSetId19" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialId20" Type="Int32" />
+    <Property Name="MaterialName20" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialAmount20" Type="Single" />
+    <Property Name="MaterialSet20" Type="Single" />
+    <Property Name="MaterialManual20" Type="Single" />
+    <Property Name="MaterialWetPerc20" Type="Single" />
+    <Property Name="MaterialWet20" Type="Single" />
+    <Property Name="MaterialAbsPerc20" Type="Single" />
+    <Property Name="MaterialAbs20" Type="Single" />
+    <Property Name="MaterialCementPart20" Type="Single" />
+    <Property Name="MaterialFiller20" Type="Int32" />
+    <Property Name="MaterialKValue20" Type="Single" />
+    <Property Name="MaterialInhibitor20" Type="Int32" />
+    <Property Name="MaterialSolidPerc20" Type="Single" />
+    <Property Name="MaterialLiquidPerc20" Type="Single" />
+    <Property Name="MaterialRecValue20" Type="Single" />
+    <Property Name="MaterialDen20" Type="Single" />
+    <Property Name="MaterialVolume20" Type="Single" />
+    <Property Name="MaterialDrySet20" Type="Single" />
+    <Property Name="MaterialWetSet20" Type="Single" />
+    <Property Name="MaterialNote20" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialSetId20" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialId21" Type="Int32" />
+    <Property Name="MaterialName21" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialAmount21" Type="Single" />
+    <Property Name="MaterialSet21" Type="Single" />
+    <Property Name="MaterialManual21" Type="Single" />
+    <Property Name="MaterialWetPerc21" Type="Single" />
+    <Property Name="MaterialWet21" Type="Single" />
+    <Property Name="MaterialAbsPerc21" Type="Single" />
+    <Property Name="MaterialAbs21" Type="Single" />
+    <Property Name="MaterialCementPart21" Type="Single" />
+    <Property Name="MaterialFiller21" Type="Int32" />
+    <Property Name="MaterialKValue21" Type="Single" />
+    <Property Name="MaterialInhibitor21" Type="Int32" />
+    <Property Name="MaterialSolidPerc21" Type="Single" />
+    <Property Name="MaterialLiquidPerc21" Type="Single" />
+    <Property Name="MaterialRecValue21" Type="Single" />
+    <Property Name="MaterialDen21" Type="Single" />
+    <Property Name="MaterialVolume21" Type="Single" />
+    <Property Name="MaterialDrySet21" Type="Single" />
+    <Property Name="MaterialWetSet21" Type="Single" />
+    <Property Name="MaterialNote21" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialSetId21" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialId22" Type="Int32" />
+    <Property Name="MaterialName22" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialAmount22" Type="Single" />
+    <Property Name="MaterialSet22" Type="Single" />
+    <Property Name="MaterialManual22" Type="Single" />
+    <Property Name="MaterialWetPerc22" Type="Single" />
+    <Property Name="MaterialWet22" Type="Single" />
+    <Property Name="MaterialAbsPerc22" Type="Single" />
+    <Property Name="MaterialAbs22" Type="Single" />
+    <Property Name="MaterialCementPart22" Type="Single" />
+    <Property Name="MaterialFiller22" Type="Int32" />
+    <Property Name="MaterialKValue22" Type="Single" />
+    <Property Name="MaterialInhibitor22" Type="Int32" />
+    <Property Name="MaterialSolidPerc22" Type="Single" />
+    <Property Name="MaterialLiquidPerc22" Type="Single" />
+    <Property Name="MaterialRecValue22" Type="Single" />
+    <Property Name="MaterialDen22" Type="Single" />
+    <Property Name="MaterialVolume22" Type="Single" />
+    <Property Name="MaterialDrySet22" Type="Single" />
+    <Property Name="MaterialWetSet22" Type="Single" />
+    <Property Name="MaterialNote22" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialSetId22" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialId23" Type="Int32" />
+    <Property Name="MaterialName23" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialAmount23" Type="Single" />
+    <Property Name="MaterialSet23" Type="Single" />
+    <Property Name="MaterialManual23" Type="Single" />
+    <Property Name="MaterialWetPerc23" Type="Single" />
+    <Property Name="MaterialWet23" Type="Single" />
+    <Property Name="MaterialAbsPerc23" Type="Single" />
+    <Property Name="MaterialAbs23" Type="Single" />
+    <Property Name="MaterialCementPart23" Type="Single" />
+    <Property Name="MaterialFiller23" Type="Int32" />
+    <Property Name="MaterialKValue23" Type="Single" />
+    <Property Name="MaterialInhibitor23" Type="Int32" />
+    <Property Name="MaterialSolidPerc23" Type="Single" />
+    <Property Name="MaterialLiquidPerc23" Type="Single" />
+    <Property Name="MaterialRecValue23" Type="Single" />
+    <Property Name="MaterialDen23" Type="Single" />
+    <Property Name="MaterialVolume23" Type="Single" />
+    <Property Name="MaterialDrySet23" Type="Single" />
+    <Property Name="MaterialWetSet23" Type="Single" />
+    <Property Name="MaterialNote23" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialSetId23" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialId24" Type="Int32" />
+    <Property Name="MaterialName24" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialAmount24" Type="Single" />
+    <Property Name="MaterialSet24" Type="Single" />
+    <Property Name="MaterialManual24" Type="Single" />
+    <Property Name="MaterialWetPerc24" Type="Single" />
+    <Property Name="MaterialWet24" Type="Single" />
+    <Property Name="MaterialAbsPerc24" Type="Single" />
+    <Property Name="MaterialAbs24" Type="Single" />
+    <Property Name="MaterialCementPart24" Type="Single" />
+    <Property Name="MaterialFiller24" Type="Int32" />
+    <Property Name="MaterialKValue24" Type="Single" />
+    <Property Name="MaterialInhibitor24" Type="Int32" />
+    <Property Name="MaterialSolidPerc24" Type="Single" />
+    <Property Name="MaterialLiquidPerc24" Type="Single" />
+    <Property Name="MaterialRecValue24" Type="Single" />
+    <Property Name="MaterialDen24" Type="Single" />
+    <Property Name="MaterialVolume24" Type="Single" />
+    <Property Name="MaterialDrySet24" Type="Single" />
+    <Property Name="MaterialWetSet24" Type="Single" />
+    <Property Name="MaterialNote24" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialSetId24" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialId25" Type="Int32" />
+    <Property Name="MaterialName25" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialAmount25" Type="Single" />
+    <Property Name="MaterialSet25" Type="Single" />
+    <Property Name="MaterialManual25" Type="Single" />
+    <Property Name="MaterialWetPerc25" Type="Single" />
+    <Property Name="MaterialWet25" Type="Single" />
+    <Property Name="MaterialAbsPerc25" Type="Single" />
+    <Property Name="MaterialAbs25" Type="Single" />
+    <Property Name="MaterialCementPart25" Type="Single" />
+    <Property Name="MaterialFiller25" Type="Int32" />
+    <Property Name="MaterialKValue25" Type="Single" />
+    <Property Name="MaterialInhibitor25" Type="Int32" />
+    <Property Name="MaterialSolidPerc25" Type="Single" />
+    <Property Name="MaterialLiquidPerc25" Type="Single" />
+    <Property Name="MaterialRecValue25" Type="Single" />
+    <Property Name="MaterialDen25" Type="Single" />
+    <Property Name="MaterialVolume25" Type="Single" />
+    <Property Name="MaterialDrySet25" Type="Single" />
+    <Property Name="MaterialWetSet25" Type="Single" />
+    <Property Name="MaterialNote25" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialSetId25" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Leit_Errors">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StartTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ErrorNumber" Type="Int32" Nullable="false" />
+    <Property Name="ShortText" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LongText" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ErrorCode" Type="Int32" Nullable="false" />
+    <Property Name="EndTime" Type="DateTime" Precision="3" />
+    <Property Name="PU_id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Leit_PU">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PU_id" Type="Int32" Nullable="false" />
+    <Property Name="StationNumber" Type="Int32" Nullable="false" />
+    <Property Name="Timestamp" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PalID" Type="Int32" Nullable="false" />
+    <Property Name="CADUniqueId" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Timetype" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="LOG_ZAVOD_NFEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AWM_Dur" EntityType="Self.AWM_Dur" />
+    <EntitySet Name="AWM_Hmimesh_Log" EntityType="Self.AWM_Hmimesh_Log" />
+    <EntitySet Name="AWM_Rep" EntityType="Self.AWM_Rep" />
+    <EntitySet Name="BSU_Errors_Log" EntityType="Self.BSU_Errors_Log" />
+    <EntitySet Name="BSU_Production" EntityType="Self.BSU_Production" />
+    <EntitySet Name="Leit_Errors" EntityType="Self.Leit_Errors" />
+    <EntitySet Name="Leit_PU" EntityType="Self.Leit_PU" />
+    <EntitySet Name="AWM_HmiCrane_Log" EntityType="LOG_ZAVOD_NFModel.AWM_HmiCrane_Log" />
+  </EntityContainer>
+  <EntityType Name="AWM_HmiCrane_Log">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Timestamp" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Eventtype" Type="Int32" Nullable="false" />
+    <Property Name="Error_id" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="Desk_en" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Desk_ru" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Log_id" Type="Int32" Nullable="false" />
+  </EntityType>
+</Schema>

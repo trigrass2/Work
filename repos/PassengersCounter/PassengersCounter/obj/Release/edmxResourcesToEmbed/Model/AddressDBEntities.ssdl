@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище AddressDBModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BusStopTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nameBusStop" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="coordinateBusStop" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="countPassengers" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Passenger">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Address" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Shift" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CoordinatesAddress" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="busStop" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Polygon">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="namePolygon" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="oneCoordinate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="twoCoordinate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="threeCoordinate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="fourCoordinate" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Shift">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nameShift" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="Хранилище AddressDBModelContainer">
+    <EntitySet Name="BusStopTable" EntityType="Self.BusStopTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Passenger" EntityType="Self.Passenger" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Polygon" EntityType="Self.Polygon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Shift" EntityType="Self.Shift" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,12 @@
+C:\Users\Ильгар\source\repos\WindowsFormsApp3\DataCollector\bin\Debug\DataCollector.dll.config
+C:\Users\Ильгар\source\repos\WindowsFormsApp3\DataCollector\bin\Debug\DataCollector.dll
+C:\Users\Ильгар\source\repos\WindowsFormsApp3\DataCollector\bin\Debug\DataCollector.pdb
+C:\Users\Ильгар\source\repos\WindowsFormsApp3\DataCollector\bin\Debug\EntityFramework.dll
+C:\Users\Ильгар\source\repos\WindowsFormsApp3\DataCollector\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Ильгар\source\repos\WindowsFormsApp3\DataCollector\bin\Debug\EntityFramework.xml
+C:\Users\Ильгар\source\repos\WindowsFormsApp3\DataCollector\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Ильгар\source\repos\WindowsFormsApp3\DataCollector\obj\Debug\DataCollector.csprojResolveAssemblyReference.cache
+C:\Users\Ильгар\source\repos\WindowsFormsApp3\DataCollector\obj\Debug\DataCollector.csproj.CoreCompileInputs.cache
+C:\Users\Ильгар\source\repos\WindowsFormsApp3\DataCollector\obj\Debug\DataCollector.csproj.CopyComplete
+C:\Users\Ильгар\source\repos\WindowsFormsApp3\DataCollector\obj\Debug\DataCollector.dll
+C:\Users\Ильгар\source\repos\WindowsFormsApp3\DataCollector\obj\Debug\DataCollector.pdb

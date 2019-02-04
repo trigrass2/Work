@@ -1,0 +1,6 @@
+C:\Users\Ильгар\source\repos\LogAnalyzer\LogParser\bin\Debug\LogParser.dll
+C:\Users\Ильгар\source\repos\LogAnalyzer\LogParser\bin\Debug\LogParser.pdb
+C:\Users\Ильгар\source\repos\LogAnalyzer\LogParser\obj\Debug\LogParser.csprojAssemblyReference.cache
+C:\Users\Ильгар\source\repos\LogAnalyzer\LogParser\obj\Debug\LogParser.csproj.CoreCompileInputs.cache
+C:\Users\Ильгар\source\repos\LogAnalyzer\LogParser\obj\Debug\LogParser.dll
+C:\Users\Ильгар\source\repos\LogAnalyzer\LogParser\obj\Debug\LogParser.pdb

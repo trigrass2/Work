@@ -1,0 +1,55 @@
+C:\Users\Ильгар\OneDrive\Документы\ElematicV2\ElematicV2\bin\Debug\ElematicV2.exe.config
+C:\Users\Ильгар\OneDrive\Документы\ElematicV2\ElematicV2\bin\Debug\ElematicV2.exe
+C:\Users\Ильгар\OneDrive\Документы\ElematicV2\ElematicV2\bin\Debug\ElematicV2.pdb
+C:\Users\Ильгар\OneDrive\Документы\ElematicV2\ElematicV2\bin\Debug\FillTrack.dll
+C:\Users\Ильгар\OneDrive\Документы\ElematicV2\ElematicV2\bin\Debug\FillTrack.pdb
+C:\Users\Ильгар\OneDrive\Документы\ElematicV2\ElematicV2\obj\Debug\ElematicV2.csprojResolveAssemblyReference.cache
+C:\Users\Ильгар\OneDrive\Документы\ElematicV2\ElematicV2\obj\Debug\ElematicV2.Form1.resources
+C:\Users\Ильгар\OneDrive\Документы\ElematicV2\ElematicV2\obj\Debug\ElematicV2.Properties.Resources.resources
+C:\Users\Ильгар\OneDrive\Документы\ElematicV2\ElematicV2\obj\Debug\ElematicV2.csproj.GenerateResource.Cache
+C:\Users\Ильгар\OneDrive\Документы\ElematicV2\ElematicV2\obj\Debug\ElematicV2.csproj.CoreCompileInputs.cache
+C:\Users\Ильгар\OneDrive\Документы\ElematicV2\ElematicV2\obj\Debug\ElematicV2.exe
+C:\Users\Ильгар\OneDrive\Документы\ElematicV2\ElematicV2\obj\Debug\ElematicV2.pdb
+C:\Users\Ильгар\source\repos\ElematicV2\ElematicV2\bin\Debug\ElematicV2.exe.config
+C:\Users\Ильгар\source\repos\ElematicV2\ElematicV2\bin\Debug\ElematicV2.exe
+C:\Users\Ильгар\source\repos\ElematicV2\ElematicV2\bin\Debug\ElematicV2.pdb
+C:\Users\Ильгар\source\repos\ElematicV2\ElematicV2\bin\Debug\FillTrack.dll
+C:\Users\Ильгар\source\repos\ElematicV2\ElematicV2\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Ильгар\source\repos\ElematicV2\ElematicV2\bin\Debug\FillTrack.pdb
+C:\Users\Ильгар\source\repos\ElematicV2\ElematicV2\obj\Debug\ElematicV2.csprojResolveAssemblyReference.cache
+C:\Users\Ильгар\source\repos\ElematicV2\ElematicV2\obj\Debug\ElematicV2.Form1.resources
+C:\Users\Ильгар\source\repos\ElematicV2\ElematicV2\obj\Debug\ElematicV2.Properties.Resources.resources
+C:\Users\Ильгар\source\repos\ElematicV2\ElematicV2\obj\Debug\ElematicV2.csproj.GenerateResource.Cache
+C:\Users\Ильгар\source\repos\ElematicV2\ElematicV2\obj\Debug\ElematicV2.csproj.CoreCompileInputs.cache
+C:\Users\Ильгар\source\repos\ElematicV2\ElematicV2\obj\Debug\ElematicV2.exe
+C:\Users\Ильгар\source\repos\ElematicV2\ElematicV2\obj\Debug\ElematicV2.pdb
+C:\Users\Ильгар\Downloads\ElematicV2\ElematicV2\bin\Debug\ElematicV2.exe.config
+C:\Users\Ильгар\Downloads\ElematicV2\ElematicV2\bin\Debug\ElematicV2.exe
+C:\Users\Ильгар\Downloads\ElematicV2\ElematicV2\bin\Debug\ElematicV2.pdb
+C:\Users\Ильгар\Downloads\ElematicV2\ElematicV2\bin\Debug\FillTrack.dll
+C:\Users\Ильгар\Downloads\ElematicV2\ElematicV2\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Ильгар\Downloads\ElematicV2\ElematicV2\bin\Debug\FillTrack.pdb
+C:\Users\Ильгар\Downloads\ElematicV2\ElematicV2\obj\Debug\ElematicV2.csprojResolveAssemblyReference.cache
+C:\Users\Ильгар\Downloads\ElematicV2\ElematicV2\obj\Debug\ElematicV2.Form1.resources
+C:\Users\Ильгар\Downloads\ElematicV2\ElematicV2\obj\Debug\ElematicV2.Properties.Resources.resources
+C:\Users\Ильгар\Downloads\ElematicV2\ElematicV2\obj\Debug\ElematicV2.csproj.GenerateResource.Cache
+C:\Users\Ильгар\Downloads\ElematicV2\ElematicV2\obj\Debug\ElematicV2.csproj.CoreCompileInputs.cache
+C:\Users\Ильгар\Downloads\ElematicV2\ElematicV2\obj\Debug\ElematicV2.exe
+C:\Users\Ильгар\Downloads\ElematicV2\ElematicV2\obj\Debug\ElematicV2.pdb
+C:\Users\Ильгар\source\repos\fixElematicV2\ElematicV2\bin\Debug\FillTrack.dll
+C:\Users\Ильгар\source\repos\fixElematicV2\ElematicV2\bin\Debug\FillTrack.pdb
+C:\Users\Ильгар\source\repos\fixElematicV2\ElematicV2\obj\Debug\ElematicV2.csprojResolveAssemblyReference.cache
+C:\Users\Ильгар\source\repos\fixElematicV2\ElematicV2\obj\Debug\ElematicV2.Form1.resources
+C:\Users\Ильгар\source\repos\fixElematicV2\ElematicV2\obj\Debug\ElematicV2.Properties.Resources.resources
+C:\Users\Ильгар\source\repos\fixElematicV2\ElematicV2\obj\Debug\ElematicV2.csproj.GenerateResource.Cache
+C:\Users\Ильгар\source\repos\fixElematicV2\ElematicV2\obj\Debug\ElematicV2.csproj.CoreCompileInputs.cache
+C:\Users\Ильгар\source\repos\fixElematicV2\ElematicV2\bin\Debug\Easy Elematic.exe.config
+C:\Users\Ильгар\source\repos\fixElematicV2\ElematicV2\bin\Debug\Easy Elematic.exe.manifest
+C:\Users\Ильгар\source\repos\fixElematicV2\ElematicV2\bin\Debug\Easy Elematic.application
+C:\Users\Ильгар\source\repos\fixElematicV2\ElematicV2\bin\Debug\Easy Elematic.exe
+C:\Users\Ильгар\source\repos\fixElematicV2\ElematicV2\bin\Debug\Easy Elematic.pdb
+C:\Users\Ильгар\source\repos\fixElematicV2\ElematicV2\obj\Debug\Easy Elematic.exe.manifest
+C:\Users\Ильгар\source\repos\fixElematicV2\ElematicV2\obj\Debug\Easy Elematic.application
+C:\Users\Ильгар\source\repos\fixElematicV2\ElematicV2\obj\Debug\Easy Elematic.exe
+C:\Users\Ильгар\source\repos\fixElematicV2\ElematicV2\obj\Debug\Easy Elematic.pdb
+C:\Users\Ильгар\source\repos\fixElematicV2\ElematicV2\obj\Debug\ElematicV2.csproj.CopyComplete

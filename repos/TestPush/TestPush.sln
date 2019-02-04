@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPush.Android", "TestPush\TestPush.Android\TestPush.Android.csproj", "{2671B78E-15E2-45C1-92DF-6D2486A2AB2E}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "TestPush", "TestPush\TestPush\TestPush.shproj", "{6D37D22C-D44B-462D-A7B2-82A508FA79FB}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		TestPush\TestPush\TestPush.projitems*{2671b78e-15e2-45c1-92df-6d2486a2ab2e}*SharedItemsImports = 4
+		TestPush\TestPush\TestPush.projitems*{6d37d22c-d44b-462d-a7b2-82a508fa79fb}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2671B78E-15E2-45C1-92DF-6D2486A2AB2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2671B78E-15E2-45C1-92DF-6D2486A2AB2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2671B78E-15E2-45C1-92DF-6D2486A2AB2E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2671B78E-15E2-45C1-92DF-6D2486A2AB2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2671B78E-15E2-45C1-92DF-6D2486A2AB2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2671B78E-15E2-45C1-92DF-6D2486A2AB2E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {97D9DA8C-2408-4A8E-B4E1-5241046C600B}
+	EndGlobalSection
+EndGlobal

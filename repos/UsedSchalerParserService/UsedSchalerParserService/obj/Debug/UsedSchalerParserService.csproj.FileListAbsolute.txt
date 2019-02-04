@@ -1,0 +1,17 @@
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\EntityFramework.dll
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserLogic.dll
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserLogic.pdb
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserLogic.dll.config
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\EntityFramework.xml
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\obj\Debug\UsedSchalerParserService.csproj.CoreCompileInputs.cache
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\obj\Debug\UsedSchalerParserService.exe
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\obj\Debug\UsedSchalerParserService.pdb
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe.config
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.exe
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Debug\UsedSchalerParserService.pdb
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\obj\Debug\UsedSchalerParserService.csprojAssemblyReference.cache
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\obj\Debug\UsedSchalerParserService.csproj.CopyComplete

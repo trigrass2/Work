@@ -1,0 +1,17 @@
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Release\UsedSchalerParserService.exe.config
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Release\UsedSchalerParserService.exe
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Release\UsedSchalerParserService.pdb
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Release\EntityFramework.dll
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Release\UsedSchalerParserLogic.dll
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Release\UsedSchalerParserLogic.pdb
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Release\UsedSchalerParserLogic.dll.config
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Release\EntityFramework.xml
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Release\ru\EntityFramework.resources.dll
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\bin\Release\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\obj\Release\UsedSchalerParserService.csprojAssemblyReference.cache
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\obj\Release\UsedSchalerParserService.csproj.CoreCompileInputs.cache
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\obj\Release\UsedSchalerParserService.csproj.CopyComplete
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\obj\Release\UsedSchalerParserService.exe
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserService\obj\Release\UsedSchalerParserService.pdb

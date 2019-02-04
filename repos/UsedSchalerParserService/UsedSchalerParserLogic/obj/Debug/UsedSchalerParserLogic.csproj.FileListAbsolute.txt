@@ -1,0 +1,35 @@
+C:\Users\Ильгар\source\repos\WindowsForms_TestService\UsedSchalerParserLogic\bin\Debug\UsedSchalerParserLogic.dll.config
+C:\Users\Ильгар\source\repos\WindowsForms_TestService\UsedSchalerParserLogic\bin\Debug\UsedSchalerParserLogic.dll
+C:\Users\Ильгар\source\repos\WindowsForms_TestService\UsedSchalerParserLogic\bin\Debug\UsedSchalerParserLogic.pdb
+C:\Users\Ильгар\source\repos\WindowsForms_TestService\UsedSchalerParserLogic\bin\Debug\EntityFramework.dll
+C:\Users\Ильгар\source\repos\WindowsForms_TestService\UsedSchalerParserLogic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Ильгар\source\repos\WindowsForms_TestService\UsedSchalerParserLogic\bin\Debug\EntityFramework.xml
+C:\Users\Ильгар\source\repos\WindowsForms_TestService\UsedSchalerParserLogic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Ильгар\source\repos\WindowsForms_TestService\UsedSchalerParserLogic\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Ильгар\source\repos\WindowsForms_TestService\UsedSchalerParserLogic\obj\Debug\UsedSchalerParserLogic.csproj.CoreCompileInputs.cache
+C:\Users\Ильгар\source\repos\WindowsForms_TestService\UsedSchalerParserLogic\obj\Debug\UsedSchalerParserLogic.csproj.CopyComplete
+C:\Users\Ильгар\source\repos\WindowsForms_TestService\UsedSchalerParserLogic\obj\Debug\UsedSchalerParserLogic.dll
+C:\Users\Ильгар\source\repos\WindowsForms_TestService\UsedSchalerParserLogic\obj\Debug\UsedSchalerParserLogic.pdb
+C:\Users\Ильгар\source\repos\WindowsForms_TestService\UsedSchalerParserLogic\obj\Debug\UsedSchalerParserLogic.csprojAssemblyReference.cache
+C:\Users\Ильгар\Google Диск\UsedSchalerParserLogic\bin\Debug\UsedSchalerParserLogic.dll.config
+C:\Users\Ильгар\Google Диск\UsedSchalerParserLogic\bin\Debug\UsedSchalerParserLogic.dll
+C:\Users\Ильгар\Google Диск\UsedSchalerParserLogic\bin\Debug\UsedSchalerParserLogic.pdb
+C:\Users\Ильгар\Google Диск\UsedSchalerParserLogic\obj\Debug\UsedSchalerParserLogic.csproj.CoreCompileInputs.cache
+C:\Users\Ильгар\Google Диск\UsedSchalerParserLogic\obj\Debug\UsedSchalerParserLogic.csproj.CopyComplete
+C:\Users\Ильгар\Google Диск\UsedSchalerParserLogic\obj\Debug\UsedSchalerParserLogic.dll
+C:\Users\Ильгар\Google Диск\UsedSchalerParserLogic\obj\Debug\UsedSchalerParserLogic.pdb
+C:\Users\Ильгар\Google Диск\UsedSchalerParserLogic\obj\Debug\UsedSchalerParserLogic.csprojAssemblyReference.cache
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserLogic\bin\Debug\UsedSchalerParserLogic.dll.config
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserLogic\bin\Debug\UsedSchalerParserLogic.dll
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserLogic\bin\Debug\UsedSchalerParserLogic.pdb
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserLogic\bin\Debug\EntityFramework.dll
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserLogic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserLogic\bin\Debug\EntityFramework.xml
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserLogic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserLogic\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserLogic\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserLogic\obj\Debug\UsedSchalerParserLogic.csproj.CoreCompileInputs.cache
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserLogic\obj\Debug\UsedSchalerParserLogic.csproj.CopyComplete
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserLogic\obj\Debug\UsedSchalerParserLogic.dll
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserLogic\obj\Debug\UsedSchalerParserLogic.pdb
+C:\Users\Ильгар\source\repos\UsedSchalerParserService\UsedSchalerParserLogic\obj\Debug\UsedSchalerParserLogic.csprojAssemblyReference.cache

@@ -1,0 +1,14 @@
+C:\Users\Ильгар\source\repos\WindowsFormsServisePrint\PdfSeeker\bin\Release\PdfSeeker.dll
+C:\Users\Ильгар\source\repos\WindowsFormsServisePrint\PdfSeeker\bin\Release\PdfSeeker.pdb
+C:\Users\Ильгар\source\repos\WindowsFormsServisePrint\PdfSeeker\bin\Release\Spire.License.dll
+C:\Users\Ильгар\source\repos\WindowsFormsServisePrint\PdfSeeker\bin\Release\Spire.Pdf.dll
+C:\Users\Ильгар\source\repos\WindowsFormsServisePrint\PdfSeeker\bin\Release\Spire.PdfViewer.Forms.dll
+C:\Users\Ильгар\source\repos\WindowsFormsServisePrint\PdfSeeker\bin\Release\Microsoft.mshtml.dll
+C:\Users\Ильгар\source\repos\WindowsFormsServisePrint\PdfSeeker\bin\Release\Spire.License.xml
+C:\Users\Ильгар\source\repos\WindowsFormsServisePrint\PdfSeeker\bin\Release\Spire.Pdf.xml
+C:\Users\Ильгар\source\repos\WindowsFormsServisePrint\PdfSeeker\bin\Release\Spire.PdfViewer.Forms.xml
+C:\Users\Ильгар\source\repos\WindowsFormsServisePrint\PdfSeeker\obj\Release\PdfSeeker.csproj.CoreCompileInputs.cache
+C:\Users\Ильгар\source\repos\WindowsFormsServisePrint\PdfSeeker\obj\Release\PdfSeeker.csproj.CopyComplete
+C:\Users\Ильгар\source\repos\WindowsFormsServisePrint\PdfSeeker\obj\Release\PdfSeeker.dll
+C:\Users\Ильгар\source\repos\WindowsFormsServisePrint\PdfSeeker\obj\Release\PdfSeeker.pdb
+C:\Users\Ильгар\source\repos\WindowsFormsServisePrint\PdfSeeker\obj\Release\PdfSeeker.csprojAssemblyReference.cache

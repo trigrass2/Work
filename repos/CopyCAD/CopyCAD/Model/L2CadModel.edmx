@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Хранилище l2cadModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Auftrag">
+          <Key>
+            <PropertyRef Name="AuftragsNr" />
+          </Key>
+          <Property Name="AuftragsNr" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="Kundennummer" Type="int" />
+          <Property Name="Projektname" Type="varchar" MaxLength="20" />
+          <Property Name="Status" Type="smallint" Nullable="false" />
+          <Property Name="AnzElement" Type="smallint" />
+          <Property Name="Flaechensumme" Type="float" />
+          <Property Name="AnzTransportlose" Type="smallint" />
+          <Property Name="BeginnDatum" Type="datetime" />
+          <Property Name="FertigstellungsDat" Type="datetime" Nullable="false" />
+          <Property Name="Bauvorhaben" Type="varchar" MaxLength="80" />
+          <Property Name="Baulos" Type="varchar" MaxLength="80" />
+          <Property Name="Bauort" Type="varchar" MaxLength="80" />
+          <Property Name="Geschoss" Type="varchar" MaxLength="20" />
+          <Property Name="Betreuer" Type="varchar" MaxLength="80" />
+          <Property Name="Lieferanschrift" Type="varchar" MaxLength="80" />
+          <Property Name="LAStrasse" Type="varchar" MaxLength="80" />
+          <Property Name="LA_Ort" Type="varchar" MaxLength="80" />
+          <Property Name="LA_PLZ" Type="varchar" MaxLength="40" />
+          <Property Name="MusterFlag" Type="smallint" />
+          <Property Name="InfoText" Type="varchar" MaxLength="254" />
+          <Property Name="ProjektInfo2" Type="varchar" MaxLength="80" />
+          <Property Name="ProjektInfo3" Type="varchar" MaxLength="80" />
+          <Property Name="Erstellungsdatum" Type="datetime" />
+          <Property Name="Ersteller" Type="varchar" MaxLength="80" />
+        </EntityType>
+        <EntityType Name="CADPalBelegung">
+          <Key>
+            <PropertyRef Name="AuftragsNr" />
+            <PropertyRef Name="ElementId" />
+            <PropertyRef Name="SlabId" />
+            <PropertyRef Name="FK_PalettenId" />
+            <PropertyRef Name="ZugriffsId" />
+            <PropertyRef Name="V_AuftragsNr" />
+            <PropertyRef Name="V_ZeichnungsNr" />
+            <PropertyRef Name="V_RevisionsNr" />
+            <PropertyRef Name="V_SlabId" />
+          </Key>
+          <Property Name="AuftragsNr" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="ElementId" Type="smallint" Nullable="false" />
+          <Property Name="SlabId" Type="smallint" Nullable="false" />
+          <Property Name="FK_PalettenId" Type="int" Nullable="false" />
+          <Property Name="ZugriffsId" Type="int" Nullable="false" />
+          <Property Name="V_AuftragsNr" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="V_ZeichnungsNr" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="V_RevisionsNr" Type="smallint" Nullable="false" />
+          <Property Name="V_SlabId" Type="smallint" Nullable="false" />
+          <Property Name="Belegungsgrad" Type="float" />
+          <Property Name="BetonBindevolumen" Type="float" />
+          <Property Name="BetonBindeguete" Type="smallint" />
+          <Property Name="domGTTyp" Type="varchar" MaxLength="40" />
+          <Property Name="domSteinTyp" Type="varchar" MaxLength="20" />
+          <Property Name="SchnittsteinAnt" Type="float" />
+          <Property Name="PalettenProdType" Type="smallint" />
+          <Property Name="OrdnungsNr" Type="int" />
+          <Property Name="Datum1" Type="datetime" />
+          <Property Name="Datum2" Type="datetime" />
+          <Property Name="aenderungsFlag" Type="int" />
+        </EntityType>
+        <EntityType Name="Element">
+          <Key>
+            <PropertyRef Name="AuftragsNr" />
+            <PropertyRef Name="ElementId" />
+          </Key>
+          <Property Name="AuftragsNr" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="ElementId" Type="smallint" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="V_AuftragsNr" Type="varchar" MaxLength="40" />
+          <Property Name="V_ZeichnungsNr" Type="varchar" MaxLength="20" />
+          <Property Name="V_RevisionsNr" Type="smallint" />
+          <Property Name="ERPSchluessel" Type="varchar" MaxLength="80" />
+          <Property Name="VonVorlage" Type="smallint" />
+          <Property Name="Elementart" Type="int" />
+          <Property Name="Stueckzahl" Type="smallint" />
+          <Property Name="StueckzahlFertig" Type="smallint" />
+          <Property Name="Losnummer" Type="smallint" />
+          <Property Name="LosAuftrag" Type="varchar" MaxLength="40" />
+          <Property Name="Lage_im_Los" Type="smallint" />
+          <Property Name="Montagereihenfolge" Type="smallint" />
+          <Property Name="Elementgewicht" Type="float" />
+          <Property Name="Elementdicke" Type="float" />
+          <Property Name="ProdHierFertig" Type="smallint" />
+          <Property Name="Endprodukt_j_n" Type="smallint" />
+          <Property Name="Status" Type="smallint" Nullable="false" />
+          <Property Name="ZRasterHoehe" Type="float" />
+          <Property Name="Vorsatzdicke_unten" Type="float" />
+          <Property Name="Vorsatzdicke_oben" Type="float" />
+          <Property Name="BMGuete_unten" Type="varchar" MaxLength="20" />
+          <Property Name="BMFarbe_unten" Type="varchar" MaxLength="20" />
+          <Property Name="BMGuete_oben" Type="varchar" MaxLength="20" />
+          <Property Name="BMFarbe_oben" Type="varchar" MaxLength="20" />
+          <Property Name="MassivFlag" Type="smallint" />
+          <Property Name="Fundamentwinkel" Type="float" />
+          <Property Name="Produktionsart" Type="smallint" />
+          <Property Name="Um_90Grad_dreh" Type="smallint" />
+          <Property Name="Stapeltype" Type="smallint" />
+          <Property Name="MaxEBTHoehe" Type="float" />
+          <Property Name="x_min" Type="float" />
+          <Property Name="x_max" Type="float" />
+          <Property Name="y_min" Type="float" />
+          <Property Name="y_max" Type="float" />
+          <Property Name="z_min" Type="float" />
+          <Property Name="z_max" Type="float" />
+          <Property Name="ElmZeichnungsnr" Type="varchar" MaxLength="20" />
+          <Property Name="Reklamationswert" Type="smallint" />
+          <Property Name="DatenStatus" Type="smallint" />
+          <Property Name="Komplexitaetswert" Type="float" />
+          <Property Name="RevisionsNr" Type="varchar" MaxLength="20" />
+          <Property Name="ExterneJobNr" Type="varchar" MaxLength="40" />
+          <Property Name="FraechterNr" Type="varchar" MaxLength="40" Nullable="false" />
+        </EntityType>
+        <Association Name="auft_elm">
+          <End Role="Auftrag" Type="Self.Auftrag" Multiplicity="1" />
+          <End Role="Element" Type="Self.Element" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Auftrag">
+              <PropertyRef Name="AuftragsNr" />
+            </Principal>
+            <Dependent Role="Element">
+              <PropertyRef Name="AuftragsNr" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище l2cadModelContainer">
+          <EntitySet Name="Auftrag" EntityType="Self.Auftrag" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CADPalBelegung" EntityType="Self.CADPalBelegung" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Element" EntityType="Self.Element" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="auft_elm" Association="Self.auft_elm">
+            <End Role="Auftrag" EntitySet="Auftrag" />
+            <End Role="Element" EntitySet="Element" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="l2cadModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Auftrag">
+          <Key>
+            <PropertyRef Name="AuftragsNr" />
+          </Key>
+          <Property Name="AuftragsNr" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Kundennummer" Type="Int32" />
+          <Property Name="Projektname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="Int16" Nullable="false" />
+          <Property Name="AnzElement" Type="Int16" />
+          <Property Name="Flaechensumme" Type="Double" />
+          <Property Name="AnzTransportlose" Type="Int16" />
+          <Property Name="BeginnDatum" Type="DateTime" Precision="3" />
+          <Property Name="FertigstellungsDat" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Bauvorhaben" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="Baulos" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="Bauort" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="Geschoss" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Betreuer" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="Lieferanschrift" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="LAStrasse" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="LA_Ort" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="LA_PLZ" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="MusterFlag" Type="Int16" />
+          <Property Name="InfoText" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Name="ProjektInfo2" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="ProjektInfo3" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="Erstellungsdatum" Type="DateTime" Precision="3" />
+          <Property Name="Ersteller" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Element" Relationship="Self.auft_elm" FromRole="Auftrag" ToRole="Element" />
+        </EntityType>
+        <EntityType Name="Element">
+          <Key>
+            <PropertyRef Name="AuftragsNr" />
+            <PropertyRef Name="ElementId" />
+          </Key>
+          <Property Name="AuftragsNr" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ElementId" Type="Int16" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="V_AuftragsNr" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="V_ZeichnungsNr" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="V_RevisionsNr" Type="Int16" />
+          <Property Name="ERPSchluessel" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="VonVorlage" Type="Int16" />
+          <Property Name="Elementart" Type="Int32" />
+          <Property Name="Stueckzahl" Type="Int16" />
+          <Property Name="StueckzahlFertig" Type="Int16" />
+          <Property Name="Losnummer" Type="Int16" />
+          <Property Name="LosAuftrag" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="Lage_im_Los" Type="Int16" />
+          <Property Name="Montagereihenfolge" Type="Int16" />
+          <Property Name="Elementgewicht" Type="Double" />
+          <Property Name="Elementdicke" Type="Double" />
+          <Property Name="ProdHierFertig" Type="Int16" />
+          <Property Name="Endprodukt_j_n" Type="Int16" />
+          <Property Name="Status" Type="Int16" Nullable="false" />
+          <Property Name="ZRasterHoehe" Type="Double" />
+          <Property Name="Vorsatzdicke_unten" Type="Double" />
+          <Property Name="Vorsatzdicke_oben" Type="Double" />
+          <Property Name="BMGuete_unten" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="BMFarbe_unten" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="BMGuete_oben" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="BMFarbe_oben" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="MassivFlag" Type="Int16" />
+          <Property Name="Fundamentwinkel" Type="Double" />
+          <Property Name="Produktionsart" Type="Int16" />
+          <Property Name="Um_90Grad_dreh" Type="Int16" />
+          <Property Name="Stapeltype" Type="Int16" />
+          <Property Name="MaxEBTHoehe" Type="Double" />
+          <Property Name="x_min" Type="Double" />
+          <Property Name="x_max" Type="Double" />
+          <Property Name="y_min" Type="Double" />
+          <Property Name="y_max" Type="Double" />
+          <Property Name="z_min" Type="Double" />
+          <Property Name="z_max" Type="Double" />
+          <Property Name="ElmZeichnungsnr" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Reklamationswert" Type="Int16" />
+          <Property Name="DatenStatus" Type="Int16" />
+          <Property Name="Komplexitaetswert" Type="Double" />
+          <Property Name="RevisionsNr" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ExterneJobNr" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="FraechterNr" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Auftrag" Relationship="Self.auft_elm" FromRole="Element" ToRole="Auftrag" />
+        </EntityType>
+        <Association Name="auft_elm">
+          <End Role="Auftrag" Type="Self.Auftrag" Multiplicity="1" />
+          <End Role="Element" Type="Self.Element" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Auftrag">
+              <PropertyRef Name="AuftragsNr" />
+            </Principal>
+            <Dependent Role="Element">
+              <PropertyRef Name="AuftragsNr" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="l2cadEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Auftrag" EntityType="Self.Auftrag" />
+          <EntitySet Name="Element" EntityType="Self.Element" />
+          <AssociationSet Name="auft_elm" Association="Self.auft_elm">
+            <End Role="Auftrag" EntitySet="Auftrag" />
+            <End Role="Element" EntitySet="Element" />
+          </AssociationSet>
+          <EntitySet Name="CADPalBelegung" EntityType="l2cadModel.CADPalBelegung" />
+        </EntityContainer>
+        <EntityType Name="CADPalBelegung">
+          <Key>
+            <PropertyRef Name="AuftragsNr" />
+            <PropertyRef Name="ElementId" />
+            <PropertyRef Name="SlabId" />
+            <PropertyRef Name="FK_PalettenId" />
+            <PropertyRef Name="ZugriffsId" />
+            <PropertyRef Name="V_AuftragsNr" />
+            <PropertyRef Name="V_ZeichnungsNr" />
+            <PropertyRef Name="V_RevisionsNr" />
+            <PropertyRef Name="V_SlabId" />
+          </Key>
+          <Property Name="AuftragsNr" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="ElementId" Type="Int16" Nullable="false" />
+          <Property Name="SlabId" Type="Int16" Nullable="false" />
+          <Property Name="FK_PalettenId" Type="Int32" Nullable="false" />
+          <Property Name="ZugriffsId" Type="Int32" Nullable="false" />
+          <Property Name="V_AuftragsNr" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="V_ZeichnungsNr" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="V_RevisionsNr" Type="Int16" Nullable="false" />
+          <Property Name="V_SlabId" Type="Int16" Nullable="false" />
+          <Property Name="Belegungsgrad" Type="Double" />
+          <Property Name="BetonBindevolumen" Type="Double" />
+          <Property Name="BetonBindeguete" Type="Int16" />
+          <Property Name="domGTTyp" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="domSteinTyp" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SchnittsteinAnt" Type="Double" />
+          <Property Name="PalettenProdType" Type="Int16" />
+          <Property Name="OrdnungsNr" Type="Int32" />
+          <Property Name="Datum1" Type="DateTime" Precision="3" />
+          <Property Name="Datum2" Type="DateTime" Precision="3" />
+          <Property Name="aenderungsFlag" Type="Int32" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище l2cadModelContainer" CdmEntityContainer="l2cadEntities">
+          <EntitySetMapping Name="Auftrag">
+            <EntityTypeMapping TypeName="l2cadModel.Auftrag">
+              <MappingFragment StoreEntitySet="Auftrag">
+                <ScalarProperty Name="AuftragsNr" ColumnName="AuftragsNr" />
+                <ScalarProperty Name="Kundennummer" ColumnName="Kundennummer" />
+                <ScalarProperty Name="Projektname" ColumnName="Projektname" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="AnzElement" ColumnName="AnzElement" />
+                <ScalarProperty Name="Flaechensumme" ColumnName="Flaechensumme" />
+                <ScalarProperty Name="AnzTransportlose" ColumnName="AnzTransportlose" />
+                <ScalarProperty Name="BeginnDatum" ColumnName="BeginnDatum" />
+                <ScalarProperty Name="FertigstellungsDat" ColumnName="FertigstellungsDat" />
+                <ScalarProperty Name="Bauvorhaben" ColumnName="Bauvorhaben" />
+                <ScalarProperty Name="Baulos" ColumnName="Baulos" />
+                <ScalarProperty Name="Bauort" ColumnName="Bauort" />
+                <ScalarProperty Name="Geschoss" ColumnName="Geschoss" />
+                <ScalarProperty Name="Betreuer" ColumnName="Betreuer" />
+                <ScalarProperty Name="Lieferanschrift" ColumnName="Lieferanschrift" />
+                <ScalarProperty Name="LAStrasse" ColumnName="LAStrasse" />
+                <ScalarProperty Name="LA_Ort" ColumnName="LA_Ort" />
+                <ScalarProperty Name="LA_PLZ" ColumnName="LA_PLZ" />
+                <ScalarProperty Name="MusterFlag" ColumnName="MusterFlag" />
+                <ScalarProperty Name="InfoText" ColumnName="InfoText" />
+                <ScalarProperty Name="ProjektInfo2" ColumnName="ProjektInfo2" />
+                <ScalarProperty Name="ProjektInfo3" ColumnName="ProjektInfo3" />
+                <ScalarProperty Name="Erstellungsdatum" ColumnName="Erstellungsdatum" />
+                <ScalarProperty Name="Ersteller" ColumnName="Ersteller" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Element">
+            <EntityTypeMapping TypeName="l2cadModel.Element">
+              <MappingFragment StoreEntitySet="Element">
+                <ScalarProperty Name="AuftragsNr" ColumnName="AuftragsNr" />
+                <ScalarProperty Name="ElementId" ColumnName="ElementId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="V_AuftragsNr" ColumnName="V_AuftragsNr" />
+                <ScalarProperty Name="V_ZeichnungsNr" ColumnName="V_ZeichnungsNr" />
+                <ScalarProperty Name="V_RevisionsNr" ColumnName="V_RevisionsNr" />
+                <ScalarProperty Name="ERPSchluessel" ColumnName="ERPSchluessel" />
+                <ScalarProperty Name="VonVorlage" ColumnName="VonVorlage" />
+                <ScalarProperty Name="Elementart" ColumnName="Elementart" />
+                <ScalarProperty Name="Stueckzahl" ColumnName="Stueckzahl" />
+                <ScalarProperty Name="StueckzahlFertig" ColumnName="StueckzahlFertig" />
+                <ScalarProperty Name="Losnummer" ColumnName="Losnummer" />
+                <ScalarProperty Name="LosAuftrag" ColumnName="LosAuftrag" />
+                <ScalarProperty Name="Lage_im_Los" ColumnName="Lage_im_Los" />
+                <ScalarProperty Name="Montagereihenfolge" ColumnName="Montagereihenfolge" />
+                <ScalarProperty Name="Elementgewicht" ColumnName="Elementgewicht" />
+                <ScalarProperty Name="Elementdicke" ColumnName="Elementdicke" />
+                <ScalarProperty Name="ProdHierFertig" ColumnName="ProdHierFertig" />
+                <ScalarProperty Name="Endprodukt_j_n" ColumnName="Endprodukt_j_n" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ZRasterHoehe" ColumnName="ZRasterHoehe" />
+                <ScalarProperty Name="Vorsatzdicke_unten" ColumnName="Vorsatzdicke_unten" />
+                <ScalarProperty Name="Vorsatzdicke_oben" ColumnName="Vorsatzdicke_oben" />
+                <ScalarProperty Name="BMGuete_unten" ColumnName="BMGuete_unten" />
+                <ScalarProperty Name="BMFarbe_unten" ColumnName="BMFarbe_unten" />
+                <ScalarProperty Name="BMGuete_oben" ColumnName="BMGuete_oben" />
+                <ScalarProperty Name="BMFarbe_oben" ColumnName="BMFarbe_oben" />
+                <ScalarProperty Name="MassivFlag" ColumnName="MassivFlag" />
+                <ScalarProperty Name="Fundamentwinkel" ColumnName="Fundamentwinkel" />
+                <ScalarProperty Name="Produktionsart" ColumnName="Produktionsart" />
+                <ScalarProperty Name="Um_90Grad_dreh" ColumnName="Um_90Grad_dreh" />
+                <ScalarProperty Name="Stapeltype" ColumnName="Stapeltype" />
+                <ScalarProperty Name="MaxEBTHoehe" ColumnName="MaxEBTHoehe" />
+                <ScalarProperty Name="x_min" ColumnName="x_min" />
+                <ScalarProperty Name="x_max" ColumnName="x_max" />
+                <ScalarProperty Name="y_min" ColumnName="y_min" />
+                <ScalarProperty Name="y_max" ColumnName="y_max" />
+                <ScalarProperty Name="z_min" ColumnName="z_min" />
+                <ScalarProperty Name="z_max" ColumnName="z_max" />
+                <ScalarProperty Name="ElmZeichnungsnr" ColumnName="ElmZeichnungsnr" />
+                <ScalarProperty Name="Reklamationswert" ColumnName="Reklamationswert" />
+                <ScalarProperty Name="DatenStatus" ColumnName="DatenStatus" />
+                <ScalarProperty Name="Komplexitaetswert" ColumnName="Komplexitaetswert" />
+                <ScalarProperty Name="RevisionsNr" ColumnName="RevisionsNr" />
+                <ScalarProperty Name="ExterneJobNr" ColumnName="ExterneJobNr" />
+                <ScalarProperty Name="FraechterNr" ColumnName="FraechterNr" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CADPalBelegung">
+            <EntityTypeMapping TypeName="l2cadModel.CADPalBelegung">
+              <MappingFragment StoreEntitySet="CADPalBelegung">
+                <ScalarProperty Name="aenderungsFlag" ColumnName="aenderungsFlag" />
+                <ScalarProperty Name="Datum2" ColumnName="Datum2" />
+                <ScalarProperty Name="Datum1" ColumnName="Datum1" />
+                <ScalarProperty Name="OrdnungsNr" ColumnName="OrdnungsNr" />
+                <ScalarProperty Name="PalettenProdType" ColumnName="PalettenProdType" />
+                <ScalarProperty Name="SchnittsteinAnt" ColumnName="SchnittsteinAnt" />
+                <ScalarProperty Name="domSteinTyp" ColumnName="domSteinTyp" />
+                <ScalarProperty Name="domGTTyp" ColumnName="domGTTyp" />
+                <ScalarProperty Name="BetonBindeguete" ColumnName="BetonBindeguete" />
+                <ScalarProperty Name="BetonBindevolumen" ColumnName="BetonBindevolumen" />
+                <ScalarProperty Name="Belegungsgrad" ColumnName="Belegungsgrad" />
+                <ScalarProperty Name="V_SlabId" ColumnName="V_SlabId" />
+                <ScalarProperty Name="V_RevisionsNr" ColumnName="V_RevisionsNr" />
+                <ScalarProperty Name="V_ZeichnungsNr" ColumnName="V_ZeichnungsNr" />
+                <ScalarProperty Name="V_AuftragsNr" ColumnName="V_AuftragsNr" />
+                <ScalarProperty Name="ZugriffsId" ColumnName="ZugriffsId" />
+                <ScalarProperty Name="FK_PalettenId" ColumnName="FK_PalettenId" />
+                <ScalarProperty Name="SlabId" ColumnName="SlabId" />
+                <ScalarProperty Name="ElementId" ColumnName="ElementId" />
+                <ScalarProperty Name="AuftragsNr" ColumnName="AuftragsNr" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

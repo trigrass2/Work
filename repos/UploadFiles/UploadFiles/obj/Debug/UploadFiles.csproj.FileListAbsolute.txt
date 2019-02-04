@@ -1,0 +1,16 @@
+C:\Users\Ильгар\source\repos\UploadFiles\UploadFiles\bin\Debug\UploadFiles.exe.config
+C:\Users\Ильгар\source\repos\UploadFiles\UploadFiles\bin\Debug\UploadFiles.exe
+C:\Users\Ильгар\source\repos\UploadFiles\UploadFiles\bin\Debug\UploadFiles.pdb
+C:\Users\Ильгар\source\repos\UploadFiles\UploadFiles\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Ильгар\source\repos\UploadFiles\UploadFiles\bin\Debug\RestSharp.dll
+C:\Users\Ильгар\source\repos\UploadFiles\UploadFiles\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Ильгар\source\repos\UploadFiles\UploadFiles\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Ильгар\source\repos\UploadFiles\UploadFiles\bin\Debug\RestSharp.xml
+C:\Users\Ильгар\source\repos\UploadFiles\UploadFiles\obj\Debug\UploadFiles.csprojAssemblyReference.cache
+C:\Users\Ильгар\source\repos\UploadFiles\UploadFiles\obj\Debug\UploadFiles.Form1.resources
+C:\Users\Ильгар\source\repos\UploadFiles\UploadFiles\obj\Debug\UploadFiles.Properties.Resources.resources
+C:\Users\Ильгар\source\repos\UploadFiles\UploadFiles\obj\Debug\UploadFiles.csproj.GenerateResource.cache
+C:\Users\Ильгар\source\repos\UploadFiles\UploadFiles\obj\Debug\UploadFiles.csproj.CoreCompileInputs.cache
+C:\Users\Ильгар\source\repos\UploadFiles\UploadFiles\obj\Debug\UploadFiles.csproj.CopyComplete
+C:\Users\Ильгар\source\repos\UploadFiles\UploadFiles\obj\Debug\UploadFiles.exe
+C:\Users\Ильгар\source\repos\UploadFiles\UploadFiles\obj\Debug\UploadFiles.pdb

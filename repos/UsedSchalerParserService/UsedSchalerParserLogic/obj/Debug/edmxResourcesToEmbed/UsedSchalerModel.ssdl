@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище LOG_ZAVOD_NFModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Used_schaler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PU_id" Type="varchar" MaxLength="50" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="UserName" Type="varchar(max)" />
+    <Property Name="ProdNr" Type="int" />
+    <Property Name="Unknow" Type="nvarchar" MaxLength="50" />
+    <Property Name="TypeFormwork" Type="int" />
+    <Property Name="NameFormwork" Type="varchar(max)" />
+  </EntityType>
+  <EntityContainer Name="Хранилище LOG_ZAVOD_NFModelContainer">
+    <EntitySet Name="Used_schaler" EntityType="Self.Used_schaler" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

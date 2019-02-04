@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestModule", "TestModule\TestModule.csproj", "{41DE3222-DCED-47CC-B5EB-D19B442C5102}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAllocator", "DataAllocator\DataAllocator.csproj", "{174D0B3D-EAA1-486E-B9CF-A398E4A3C717}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{41DE3222-DCED-47CC-B5EB-D19B442C5102}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41DE3222-DCED-47CC-B5EB-D19B442C5102}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41DE3222-DCED-47CC-B5EB-D19B442C5102}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41DE3222-DCED-47CC-B5EB-D19B442C5102}.Release|Any CPU.Build.0 = Release|Any CPU
+		{174D0B3D-EAA1-486E-B9CF-A398E4A3C717}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{174D0B3D-EAA1-486E-B9CF-A398E4A3C717}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{174D0B3D-EAA1-486E-B9CF-A398E4A3C717}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{174D0B3D-EAA1-486E-B9CF-A398E4A3C717}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ACCE871B-1C14-4874-A01C-265AD5F63EF7}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://mamishovin.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = DataAllocator\\DataAllocator.csproj
+		SccProjectName1 = DataAllocator
+		SccLocalPath1 = DataAllocator
+		SccProjectUniqueName2 = TestModule\\TestModule.csproj
+		SccProjectName2 = TestModule
+		SccLocalPath2 = TestModule
+	EndGlobalSection
+EndGlobal

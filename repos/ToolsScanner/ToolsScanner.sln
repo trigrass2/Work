@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolsScanner.Android", "ToolsScanner\ToolsScanner.Android\ToolsScanner.Android.csproj", "{2DF137EF-C8E1-4AE4-9C36-7E48018DBD92}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ToolsScanner", "ToolsScanner\ToolsScanner\ToolsScanner.shproj", "{68803AFE-4DC0-48C7-A2C5-7C78BF1371FC}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		ToolsScanner\ToolsScanner\ToolsScanner.projitems*{2df137ef-c8e1-4ae4-9c36-7e48018dbd92}*SharedItemsImports = 4
+		ToolsScanner\ToolsScanner\ToolsScanner.projitems*{68803afe-4dc0-48c7-a2c5-7c78bf1371fc}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2DF137EF-C8E1-4AE4-9C36-7E48018DBD92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DF137EF-C8E1-4AE4-9C36-7E48018DBD92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DF137EF-C8E1-4AE4-9C36-7E48018DBD92}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2DF137EF-C8E1-4AE4-9C36-7E48018DBD92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DF137EF-C8E1-4AE4-9C36-7E48018DBD92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DF137EF-C8E1-4AE4-9C36-7E48018DBD92}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {760F2AD7-A35C-41C3-9B35-AEF3007325A3}
+	EndGlobalSection
+EndGlobal
