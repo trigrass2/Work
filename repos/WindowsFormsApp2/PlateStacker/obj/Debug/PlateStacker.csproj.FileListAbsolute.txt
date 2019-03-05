@@ -1,5 +1,0 @@
-c:\users\ильгар\source\repos\WindowsFormsApp2\PlateStacker\bin\Debug\PlateStacker.dll
-c:\users\ильгар\source\repos\WindowsFormsApp2\PlateStacker\bin\Debug\PlateStacker.pdb
-c:\users\ильгар\source\repos\WindowsFormsApp2\PlateStacker\obj\Debug\PlateStacker.csproj.CoreCompileInputs.cache
-c:\users\ильгар\source\repos\WindowsFormsApp2\PlateStacker\obj\Debug\PlateStacker.dll
-c:\users\ильгар\source\repos\WindowsFormsApp2\PlateStacker\obj\Debug\PlateStacker.pdb

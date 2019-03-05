@@ -1,5 +1,0 @@
-C:\Users\Ильгар\source\repos\LogAnalyzer\LogParser\bin\Release\LogParser.dll
-C:\Users\Ильгар\source\repos\LogAnalyzer\LogParser\bin\Release\LogParser.pdb
-C:\Users\Ильгар\source\repos\LogAnalyzer\LogParser\obj\Release\LogParser.csproj.CoreCompileInputs.cache
-C:\Users\Ильгар\source\repos\LogAnalyzer\LogParser\obj\Release\LogParser.dll
-C:\Users\Ильгар\source\repos\LogAnalyzer\LogParser\obj\Release\LogParser.pdb
