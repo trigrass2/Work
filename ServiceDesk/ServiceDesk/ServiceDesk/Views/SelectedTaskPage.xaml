@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ServiceDesk.Views.SelectedTaskPage"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"             
+             BackgroundColor="Accent">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="#464451"/>
+                <Setter Property="HorizontalTextAlignment" Value="Start"/>
+                <Setter Property="Margin" Value="5,0,0,0"/>
+                <Setter Property="FontSize" Value="Small"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+            </Style>
+            <Style x:Key="entryStyle" TargetType="Entry">
+                <Setter Property="TextColor" Value="#464451"/>
+                <Style.Triggers>
+                    <Trigger Property="Entry.IsFocused" Value="True" TargetType="Entry">
+                        <Setter Property="Text" Value="" />
+                    </Trigger>
+                    <Trigger Property="Entry.IsFocused" Value="false" TargetType="Entry">
+                        <Setter Property="Text" Value="Добавить комментарий" />
+                    </Trigger>
+                </Style.Triggers>                
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <Label x:Name="titleLable" Text="{Binding ServiceDesk_TaskListView.Title}" FontAttributes="Bold" FontSize="Large" 
+                        HorizontalTextAlignment="Center" Margin="3"/>
+            <ScrollView>
+                <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <Grid x:Name="taskInfoGrid">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <Label Text="От кого: " Grid.Row="0" Grid.Column="0"/>
+                        <Label x:Name="initiatorLabel" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding ServiceDesk_TaskListView.Initiator_name}"/>
+
+                        <Label Text="Статус: " Grid.Row="1" Grid.Column="0"/>
+                        <Label x:Name="statusLabel" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding ServiceDesk_TaskListView.Status_name}"/>
+
+                        <Label Text="Дата: " Grid.Row="2" Grid.Column="0"/>
+                        <Label x:Name="dateLable" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding ServiceDesk_TaskListView.Timestamp}"/>
+
+                        <Label Text="Завод: " Grid.Row="3" Grid.Column="0"/>
+                        <Label x:Name="factoryLabel" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding ServiceDesk_TaskListView.Factory_name}"/>
+
+                        <Label Text="Линия: " Grid.Row="4" Grid.Column="0"/>
+                        <Label x:Name="plantLabel" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding ServiceDesk_TaskListView.Plant_name}"/>
+
+                        <Label Text="Производственная единица: " Grid.Row="5" Grid.Column="0"/>
+                        <Label x:Name="unitLabel" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding ServiceDesk_TaskListView.Unit_name}"/>
+
+                        <Label Text="Файлы: " Grid.Row="6" Grid.Column="0"/>
+                        <!--<Label x:Name="attachmentsLabel" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding AttachmentsNames}"/>-->
+                        <buttons:SfChipGroup
+                            ChipTextColor="Accent"
+                            ChipBackgroundColor="#464451"
+                            Grid.Row="6" Grid.Column="1" 
+                            Grid.ColumnSpan="2"
+				            ItemsSource="{Binding Attachments}"                            
+				            ChipPadding="0,0,0,0"
+				            DisplayMemberPath="Attachment_name"
+                            ChipImageWidth="50">
+                            <buttons:SfChipGroup.ChipLayout>
+                                <StackLayout
+						            HorizontalOptions="Start" 
+						            VerticalOptions="Start"			            
+                                    />                            
+                            </buttons:SfChipGroup.ChipLayout>
+                        </buttons:SfChipGroup>
+                        <Frame Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="3" BorderColor="#464451" BackgroundColor="Accent" CornerRadius="7">
+                            <Label x:Name="textTaskLabel" Text="{Binding ServiceDesk_TaskListView.Text}"/>
+                        </Frame>
+                        <Button Grid.Row="8" Grid.Column="0" CornerRadius="20" Text="+files" TextColor="Accent" BackgroundColor="#464451" Command="{Binding AddNewAttachmentCommand}"/>
+                    </Grid>
+                    <ListView x:Name="commentsListView"                              
+                              ItemsSource="{Binding Comments}" 
+                              HasUnevenRows="True"
+                              SeparatorVisibility="None"
+                              SelectionMode="None">
+                        <ListView.Header>
+                            <Label x:Name="titleComment" Text="Комментарии" BackgroundColor="#464451" TextColor="Accent" Margin="0" HorizontalOptions="FillAndExpand"/>
+                        </ListView.Header>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <ViewCell.View>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+                                            <Label x:Name="timeCreateCommentLable" Grid.Column="0" Grid.Row="0" Text="{Binding Timestamp}"/>
+                                            <Frame Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" 
+                                                   HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" 
+                                                   BackgroundColor="#464451"
+                                                   CornerRadius="7">
+                                                <StackLayout>
+                                                    <Label x:Name="nameCommentatorLabel" TextColor="Accent" Text="{Binding Commentator_name}"/>
+                                                    <Label x:Name="textCommentLabel"  TextColor="Accent" Text="{Binding Text}"/>
+                                                </StackLayout>
+                                            </Frame>
+                                        </Grid>
+                                    </ViewCell.View>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </ScrollView>            
+            <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand">
+                <Entry x:Name="sentComment" Text="Добавить комментарий" FontAttributes="Italic" Style="{StaticResource entryStyle}" HorizontalOptions="Fill"/>
+                <Button x:Name="sendButton" Text="Отправить" BackgroundColor="#464451" 
+                                        TextColor="Accent" HorizontalOptions="EndAndExpand" Command="{Binding AddNewCommentCommand}" 
+                                        BindingContext="{Binding}" CommandParameter="{Binding Source={x:Reference Name=sentComment}, Path=Text}"/>
+            </StackLayout>
+        </StackLayout>        
+    </ContentPage.Content>
+</ContentPage>

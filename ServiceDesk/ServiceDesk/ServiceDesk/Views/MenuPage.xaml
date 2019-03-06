@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ServiceDesk.Views.MenuPage"
+             BackgroundColor="Accent">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="#464451"/>
+                <Setter Property="HorizontalOptions" Value="Start"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <RelativeLayout>
+            <ScrollView>
+                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Label x:Name="titleLable" Text="Активные заявки" FontAttributes="Bold" TextColor="#464451" FontSize="20" HorizontalTextAlignment="Center" Margin="3,5,3,3"/>                   
+                    <ListView x:Name="listViewTasks" Margin="5,0,0,0" HasUnevenRows="True" ItemsSource="{Binding Tasks}" 
+                          SelectedItem="{Binding SelectedTask, Mode=TwoWay}" SeparatorColor="Gainsboro">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <ViewCell.View>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>                                            
+                                            <Label Text="{Binding Title}" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1" FontAttributes="Bold"/>
+                                            <Label Text="{Binding Initiator_name}" Grid.Column="0" Grid.Row="2"/>
+                                            <Label Text="->" Grid.Column="1" Grid.Row="2"/>
+                                            <Label Text="{Binding Recipient_name}" Grid.Column="3" Grid.Row="2"/>
+                                        </Grid>
+                                    </ViewCell.View>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </ScrollView>
+            <Button 
+                Text="+" 
+                FontAttributes="Bold"
+                FontSize="30"
+                TextColor="Accent"
+                BackgroundColor="#464451"                
+                RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, 
+                Property=Width, Factor=1, Constant=-100}"
+                RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, 
+                Property=Height, Factor=1, Constant=-100}"
+                CornerRadius="50"
+                RelativeLayout.WidthConstraint = "70" RelativeLayout.HeightConstraint = "70"
+                Command="{Binding CreateTaskCommand}"
+                />        
+        </RelativeLayout>
+                
+    </ContentPage.Content>
+</ContentPage>
