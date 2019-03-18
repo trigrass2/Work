@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:autocomplete="clr-namespace:Syncfusion.SfAutoComplete.XForms;assembly=Syncfusion.SfAutoComplete.XForms"
+             x:Class="ServiceDesk.Views.SendTaskPage"
+             BackgroundColor="Accent">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="#464451"/>
+                <Setter Property="HorizontalOptions" Value="Start"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <RelativeLayout>
+            <ScrollView
+                RelativeLayout.WidthConstraint = "{ConstraintExpression Type=RelativeToParent, 
+                Property=Width, Factor=1}"
+                RelativeLayout.HeightConstraint = "{ConstraintExpression Type=RelativeToParent, 
+                Property=Height, Factor=1}">
+                <StackLayout x:Name="taskStack" Padding="10,5,0,0">
+                    <Label Text="Тип заявки" />
+                    <Picker x:Name="picker" ItemsSource="{Binding Types}" ItemDisplayBinding="{Binding Type_name}" SelectedItem="{Binding SelectedTypes}"/>
+                    <Label Text="Заголовок"/>
+                    <Entry Text="{Binding Title}" FontSize="Medium"/>
+                    <Label Text="Текст"/>
+                    <Entry Text="{Binding Text}" FontSize="Medium"/>
+                    <Label Text="Завод"/>
+                    <Picker x:Name="pickerFactory" ItemsSource="{Binding Factorys}" ItemDisplayBinding="{Binding Factory_name}" SelectedItem="{Binding SelectedFactory}"/>
+                    <Label Text="Линия"/>
+                    <Picker x:Name="pickerPlants" ItemsSource="{Binding Plants}" ItemDisplayBinding="{Binding Plant_name}" SelectedItem="{Binding SelectedPlant}"/>
+                    <Label Text="Производственная единица"/>
+                    <Picker x:Name="pickerUnits" ItemsSource="{Binding Units}" ItemDisplayBinding="{Binding Unit_name}" SelectedItem="{Binding SelectedUnit}"/>
+                    <Label Text="Исполнитель"/>                    
+                    <StackLayout>
+                        <autocomplete:SfAutoComplete HeightRequest="40" DataSource="{Binding UsersNames}" SelectedItem="{Binding SelectedRecipent}">
+                           
+                        </autocomplete:SfAutoComplete>
+                    </StackLayout>
+                    <Label Text="Load file" FontSize="Medium"/>
+                    <StackLayout>
+                        <Button 
+                            Text="Выбрать файл" 
+                            TextColor="White"
+                            BackgroundColor="#5990c6" 
+                            Command="{Binding GetFileCommand}" 
+                            HorizontalOptions="Center" 
+                            VerticalOptions="Center"/>
+                        <ListView
+                            HeightRequest="300"
+                            SeparatorVisibility="None"
+                            ItemsSource="{Binding Attachments}" 
+                            Margin="5" 
+                            HorizontalOptions="Start" 
+                            VerticalOptions="StartAndExpand">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <ViewCell.View>
+                                            <StackLayout>
+                                                <Label Text="{Binding Attachment_name}"/>
+                                            </StackLayout>
+                                        </ViewCell.View>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackLayout>                    
+                </StackLayout>
+            </ScrollView>
+            <Button 
+                Text="Добавить"                
+                TextColor="Accent"
+                BackgroundColor="#464451"                
+                RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, 
+                Property=Width, Factor=0.35, Constant=0}"
+                RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, 
+                Property=Height, Factor=1, Constant=-50}"
+                CornerRadius="10"
+                Command="{Binding SendTaskCommand}"
+                />
+            
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>
