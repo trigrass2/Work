@@ -1,2 +1,0 @@
-drawable/inputlayout_togglecollapseicon.png;drawable/inputlayout_togglecollapseicon.png
-drawable/inputlayout_togglevisibleicon.png;drawable/inputlayout_togglevisibleicon.png
