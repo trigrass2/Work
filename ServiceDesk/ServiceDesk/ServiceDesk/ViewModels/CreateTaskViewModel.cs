@@ -186,7 +186,7 @@ namespace ServiceDesk.ViewModels
         public async void GetFile()
         {
             
-            file = await CrossFilePicker.Current.PickFile();
+            file = await CrossFilePicker.Current.PickFile();            
 
             if (file != null)
             {

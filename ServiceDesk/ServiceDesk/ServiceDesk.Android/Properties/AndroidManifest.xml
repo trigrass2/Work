@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.pik_industry" android:installLocation="auto">
-	<uses-sdk android:minSdkVersion="10" android:targetSdkVersion="27" />
+	<uses-sdk android:minSdkVersion="18" android:targetSdkVersion="27" />
 	<permission android:name="com.pik_industry.permission.C2D_MESSAGE" android:protectionLevel="signature" />
 	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -10,7 +10,7 @@
 	<uses-permission android:name="android.permission.CALL_PRIVILEGED" />
 	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-	<application android:label="ServiceDesk.Android" android:icon="@drawable/baseline_settings_black_18">
+	<application android:label="ServiceDesk.Android" android:icon="@mipmap/icon">
 		<receiver android:name="com.onesignal.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
 			<intent-filter>
 				<action android:name="com.google.android.c2dm.intent.RECEIVE" />

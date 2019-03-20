@@ -23,6 +23,10 @@ namespace ServiceDesk.Views
         protected async override void OnAppearing()
         {
             await TaskViewModel.UpdateStatuses();
+            if (TaskViewModel.ServiceDesk_TaskListView.Factory_name == null || TaskViewModel.ServiceDesk_TaskListView.Factory_name == "")
+            {
+                TaskViewModel.IsVisibleFactory = false;
+            };
             if (TaskViewModel.ServiceDesk_TaskListView.Plant_name == null || TaskViewModel.ServiceDesk_TaskListView.Plant_name == "")
             {
                 TaskViewModel.IsVisiblePlant = false;

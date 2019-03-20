@@ -22,26 +22,25 @@
                 <StackLayout x:Name="taskStack" Padding="10,5,0,0">
                     <Label Text="Тип заявки" />
                     <Picker x:Name="picker" ItemsSource="{Binding Types}" ItemDisplayBinding="{Binding Type_name}" 
-                            SelectedItem="{Binding SelectedTypes}" BackgroundColor="White" Margin="0,0,5,0"/>
+                            SelectedItem="{Binding SelectedTypes}" Margin="0,0,5,0"/>
                     <Label Text="Заголовок"/>
-                    <Entry Text="{Binding Title}" FontSize="Medium" BackgroundColor="White" Margin="0,0,5,0"/>
+                    <Entry Text="{Binding Title}" FontSize="Medium" Margin="0,0,5,0"/>
                     <Label Text="Текст"/>
-                    <Entry Text="{Binding Text}" FontSize="Medium" BackgroundColor="White" Margin="0,0,5,0"/>
+                    <Entry Text="{Binding Text}" FontSize="Medium" Margin="0,0,5,0"/>
                     <Label Text="Завод"/>
                     <Picker x:Name="pickerFactory" ItemsSource="{Binding Factorys}" ItemDisplayBinding="{Binding Factory_name}" 
-                            SelectedItem="{Binding SelectedFactory}" BackgroundColor="White" Margin="0,0,5,0"/>
+                            SelectedItem="{Binding SelectedFactory}" Margin="0,0,5,0"/>
                     <Label Text="Линия"/>
                     <Picker x:Name="pickerPlants" ItemsSource="{Binding Plants}" ItemDisplayBinding="{Binding Plant_name}" 
-                            SelectedItem="{Binding SelectedPlant}" BackgroundColor="White" Margin="0,0,5,0"/>
+                            SelectedItem="{Binding SelectedPlant}" Margin="0,0,5,0"/>
                     <Label Text="Производственная единица"/>
                     <Picker x:Name="pickerUnits" ItemsSource="{Binding Units}" ItemDisplayBinding="{Binding Unit_name}" 
-                            SelectedItem="{Binding SelectedUnit}" BackgroundColor="White" Margin="0,0,5,0"/>
+                            SelectedItem="{Binding SelectedUnit}" Margin="0,0,5,0"/>
                     <Label Text="Исполнитель"/>                    
                     <StackLayout>
                         <autocomplete:SfAutoComplete HeightRequest="40" DataSource="{Binding UsersNames}" 
                                                      SelectedItem="{Binding SelectedRecipent}"
-                                                     BackgroundColor="White" Margin="0,0,5,0"/> 
-
+                                                     Margin="0,0,5,0"/>
 
                     </StackLayout>
                     <Label Text="Load file" FontSize="Medium"/>

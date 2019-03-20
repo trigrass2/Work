@@ -13,10 +13,8 @@
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>               
                 <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            
-            <Entry x:Name="loginEntry" Grid.Row="0" Text="{Binding User.Login, Mode=TwoWay}" BackgroundColor="White"/>
-            
+            </Grid.ColumnDefinitions>            
+            <Entry x:Name="loginEntry" Grid.Row="0" Text="{Binding User.Login, Mode=TwoWay}" BackgroundColor="White"/>            
             <Entry x:Name="passwdEntry" Grid.Row="1" Text="{Binding User.Password, Mode=TwoWay}" IsPassword="True" BackgroundColor="White"/>
             <Button Text="OK" Grid.Row="2" Command="{Binding OkCommand}"/>
         </Grid>

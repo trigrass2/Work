@@ -9,16 +9,12 @@ namespace ServiceDesk.Views
     /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AuthView : ContentPage
-    {
-        
+    {        
         public AuthView()
         {
             InitializeComponent();
-            //NavigationPage.SetHasNavigationBar(this, false);
-            BindingContext = new AuthViewModel() { Navigation = this.Navigation };
-            
-        }
-        
+            BindingContext = new AuthViewModel() { Navigation = this.Navigation };            
+        }       
         
     }
 }

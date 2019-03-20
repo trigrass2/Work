@@ -2,11 +2,12 @@
 using Android.Content.Res;
 using Android.Graphics.Drawables;
 using Android.Text;
+using ServiceDesk;
 using ServiceDesk.Droid;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
-[assembly: ExportRenderer(typeof(Entry), typeof(CustomEntryRenderer))]
+[assembly: ExportRenderer(typeof(MyEntry), typeof(CustomEntryRenderer))]
 namespace ServiceDesk.Droid
 {
     public class CustomEntryRenderer : EntryRenderer

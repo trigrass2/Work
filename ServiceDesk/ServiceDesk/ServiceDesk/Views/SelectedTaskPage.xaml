@@ -1,9 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ServiceDesk.Views.SelectedTaskPage"
-             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms" 
-             xmlns:local="clr-namespace:CustomRenderer;assembly=CustomRenderer"
+             x:Class="ServiceDesk.Views.SelectedTaskPage"             
+             xmlns:myentry="clr-namespace:ServiceDesk"
              BackgroundColor="Accent">
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -37,12 +36,9 @@
             </Grid>           
 
             <ScrollView>
-                <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">                                           
-                    <Frame BorderColor="#464451" BackgroundColor="Accent" CornerRadius="7" HorizontalOptions="FillAndExpand" Margin="3">
-                        <Label x:Name="textTaskLabel" Text="{Binding ServiceDesk_TaskListView.Text}"/>
-                    </Frame>
-                    <Label Text="инициатор" TextColor="White"/>
-                    
+                <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Spacing="0">                                                              
+                    <Label x:Name="textTaskLabel" Text="{Binding ServiceDesk_TaskListView.Text}" HorizontalOptions="FillAndExpand"/>
+                    <Label Text="инициатор" TextColor="White"/>                    
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
@@ -53,20 +49,26 @@
                                 HorizontalOptions="End" BackgroundColor="White" HeightRequest="50" WidthRequest="50" CornerRadius="25"
                                 Margin="0,0,10,0"/>
                     </Grid>
-
-                    <Label Text="статус " HeightRequest="40" TextColor="White"/>
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        
-                        <Label x:Name="nameStatus" Grid.Column="0" Text="{Binding ServiceDesk_TaskListView.Status_name}"/>
+
+                        <StackLayout Spacing="0" Grid.Column="0" VerticalOptions="Center">
+                            <Label Text="статус " TextColor="White"/>
+                            <Label x:Name="nameStatus"  Text="{Binding ServiceDesk_TaskListView.Status_name}"/>
+                        </StackLayout>
                         <Button Text="{Binding TextButton}" Grid.Column="1" 
                                 Command="{Binding EditStatusCommand}" 
                                 CommandParameter="{Binding Source={x:Reference Name=nameStatus}, Path=Text}"
-                                BackgroundColor="White" Margin="0,15,10,15" CornerRadius="20"/>
+                                Margin="0,15,10,15" CornerRadius="20"
+                                IsVisible="{Binding IsVisibleStatusButton}"
+                                BackgroundColor="White" Padding="1"/>
                     </Grid>
+
+                    <Label Text="завод" TextColor="White" IsVisible="{Binding IsVisibleFactory}"/>
+                    <Label x:Name="factoryLabel" Text="{Binding ServiceDesk_TaskListView.Factory_name}" IsVisible="{Binding IsVisibleFactory}"/>
 
                     <Label Text="линия " TextColor="White" IsVisible="{Binding IsVisiblePlant}"/>
                     <Label x:Name="plantLabel" Text="{Binding ServiceDesk_TaskListView.Plant_name}" IsVisible="{Binding IsVisiblePlant}"/>
@@ -74,38 +76,24 @@
                     <Label Text="производственная единица" TextColor="White" IsVisible="{Binding IsVisibleUnit}"/>
                     <Label x:Name="unitLabel" Text="{Binding ServiceDesk_TaskListView.Unit_name}" IsVisible="{Binding IsVisibleUnit}"/>
 
-                    <Label Text="файлы" TextColor="White" IsVisible="{Binding IsVisibleAttach}"/>
-
-                    <buttons:SfChipGroup IsVisible="{Binding IsVisibleAttach}"
-                        CloseButtonColor="Accent"
-                        ChipBackgroundColor="#464451"
-                        ChipTextColor="Accent"
-				        ItemsSource="{Binding Attachments}"                            
-				        ChipPadding="0,0,0,0"
-				        DisplayMemberPath="Attachment_name"
-                        SelectedItem="{Binding SelectedAttachment, Mode=TwoWay}"                           
-                        ChipImageWidth="50">
-                        <buttons:SfChipGroup.ChipLayout>
-                            <StackLayout
-					            HorizontalOptions="Start" 
-					            VerticalOptions="Start"/>
-                        </buttons:SfChipGroup.ChipLayout>
-                    </buttons:SfChipGroup>
-                    <!--<ListView IsVisible="{Binding IsVisibleAttach}" BackgroundColor="Accent" 
+                    <ListView IsVisible="{Binding IsVisibleAttach}" BackgroundColor="Accent" 
                               ItemsSource="{Binding Attachments}" SelectedItem="{Binding SelectedAttachment, Mode=TwoWay}" 
-                              SeparatorVisibility="None">
+                              VerticalOptions="Start" HasUnevenRows="False" RowHeight="30" HeightRequest="100">
+                        <ListView.Header>
+                            <Label x:Name="titleAttach" Text="файлы" BackgroundColor="Accent" TextColor="White" HorizontalOptions="FillAndExpand"/>
+                        </ListView.Header>
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
                                     <ViewCell.View>
                                         <StackLayout>
-                                            <Label  Text="{Binding Attachment_name}" TextColor="Blue"/>
+                                            <Label Text="{Binding Attachment_name}" FontSize="13" TextColor="Blue"/>
                                         </StackLayout>
                                     </ViewCell.View>
                                 </ViewCell>
                             </DataTemplate>
                         </ListView.ItemTemplate>
-                    </ListView>-->
+                    </ListView>
                     <ListView x:Name="commentsListView"                              
                               ItemsSource="{Binding Comments}" 
                               HasUnevenRows="True"
@@ -145,7 +133,7 @@
                     </ListView>
                 </StackLayout>
             </ScrollView>
-            <Grid BackgroundColor="#464451">
+            <Grid BackgroundColor="#464451" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="50"/>
                     <ColumnDefinition/>
@@ -158,7 +146,7 @@
                         Image="baseline_attach_file_white_18.png" TextColor="Accent" Command="{Binding AddNewAttachmentCommand}"
                         BackgroundColor="#464451"/>
                 <Frame CornerRadius="10" Grid.Column="1" Grid.Row="0" Margin="0,2,0,2" Padding="0">
-                    <Entry x:Name="sentComment" FontSize="13" Placeholder="Комментарий..."
+                    <myentry:MyEntry x:Name="sentComment" FontSize="13" Placeholder="Комментарий..."
                                 FontAttributes="Italic" BackgroundColor="White"
                                 HorizontalTextAlignment="Start" Margin="0" VerticalOptions="Center"/>
                 </Frame>

@@ -21,7 +21,8 @@ namespace ServiceDesk.Views
 
         protected async override void OnAppearing()
         {
-            await _viewModel.UpdateTasks();
+            await _viewModel.UpdateStatuses();
+            await _viewModel.UpdateTasksAsync(_viewModel.SelectedStatus.Status_id);            
             base.OnAppearing();
         }
 	}

@@ -1,8 +1,5 @@
 ﻿using ServiceDesk.Views;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -23,6 +20,7 @@ namespace ServiceDesk.ViewModels
             {
                 case "google": await Navigation.PushAsync(new GoogleAuthView()); break;
                 case "1c": await Navigation.PushAsync(new AuthView()); break;
+                case "Local": await Navigation.PushAsync(new LocalAuthPage()); break;
             }
         }
     }

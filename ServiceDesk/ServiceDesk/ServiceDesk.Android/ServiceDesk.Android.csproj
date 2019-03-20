@@ -44,13 +44,13 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
-    <AndroidUseSharedRuntime>true</AndroidUseSharedRuntime>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <AotAssemblies>false</AotAssemblies>
     <EnableLLVM>false</EnableLLVM>
     <BundleAssemblies>false</BundleAssemblies>
-    <EmbedAssembliesIntoApk>false</EmbedAssembliesIntoApk>
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <AndroidSupportedAbis />
-    <AndroidLinkMode>None</AndroidLinkMode>
+    <AndroidLinkMode>Full</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
@@ -82,10 +82,10 @@
     <PackageReference Include="Syncfusion.Xamarin.SfAutoComplete">
       <Version>16.4.0.54</Version>
     </PackageReference>
-    <PackageReference Include="Syncfusion.Xamarin.SfBackdrop">
+    <PackageReference Include="Syncfusion.Xamarin.SfBusyIndicator">
       <Version>16.4.0.54</Version>
     </PackageReference>
-    <PackageReference Include="Syncfusion.Xamarin.SfBusyIndicator">
+    <PackageReference Include="Syncfusion.Xamarin.SfComboBox">
       <Version>16.4.0.54</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfListView">
@@ -113,9 +113,7 @@
   <ItemGroup>
     <Compile Include="CustomEntryRenderer .cs" />
     <Compile Include="CustomWebView.cs" />
-    <Compile Include="FileWorker.cs" />
     <Compile Include="MainActivity.cs" />
-    <Compile Include="MyPickerDroid .cs" />
     <Compile Include="PhoneCall_Droid .cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

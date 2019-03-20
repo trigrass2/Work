@@ -40,6 +40,9 @@ namespace ServiceDesk.ViewModels
         public bool IsVisiblePlant { get; set; } = true;
         public bool IsVisibleUnit { get; set; } = true;
         public bool IsVisibleAttach { get; set; } = true;
+        public bool IsVisibleStatusButton { get; set; } = true;
+        public bool IsEnableStatusButton { get; set; } = true;
+        public bool IsVisibleFactory { get; set; } = true;
 
         private ServiceDesk_TaskAttachmentInfoListView _selectedAttachment;
         public ServiceDesk_TaskAttachmentInfoListView SelectedAttachment
@@ -51,8 +54,10 @@ namespace ServiceDesk.ViewModels
             set
             {
                 _selectedAttachment = value;
-                //var model = new { ServiceDesk_TaskListView.Task_id, _selectedAttachment.Attachment_num };
-                //var files = GetTaskAttachments<ServiceDesk_TaskAttachmentListView>(model, ApiEnum.GetTaskAttachments);
+                var model = new { ServiceDesk_TaskListView.Task_id, _selectedAttachment.Attachment_num };
+                var files = GetTaskAttachments<ServiceDesk_TaskAttachmentListView>(model, ApiEnum.GetTaskAttachments);
+                
+                DownloadFiles();
             }
         }
         public ServiceDesk_StatusListView SelectedStatus { get; set; }
@@ -65,9 +70,10 @@ namespace ServiceDesk.ViewModels
             Comments = new ObservableCollection<ServiceDesk_TaskCommentListView>();
             ServiceDesk_TaskListView = serviceDesk_Task;
 
-            if (ServiceDesk_TaskListView.Status_name == "Открыта") TextButton = "Начать";
-            if (ServiceDesk_TaskListView.Status_name == "В работе") TextButton = "Завершить";
-            if (ServiceDesk_TaskListView.Status_name == "Закрыта") TextButton = "Начать";
+            if (ServiceDesk_TaskListView.Status_id == 1) TextButton = "Начать";
+            if (ServiceDesk_TaskListView.Status_id == 2) TextButton = "Завершить";
+            if (ServiceDesk_TaskListView.Status_id == 50) TextButton = "Возобновить";
+            if (ServiceDesk_TaskListView.Status_id > 50) TextButton = "Закрыто";
 
             UpdateAttachments(ServiceDesk_TaskListView.Task_id);
             UpdateComments();
@@ -78,11 +84,19 @@ namespace ServiceDesk.ViewModels
             EditStatusCommand = new Command(EditStatus);
         }
 
-        //public void DownloadFiles(byte[] byteOfFile)
-        //{
+        public async void DownloadFiles()
+        {
+            
+           //if( await App.Current.MainPage.DisplayAlert("Сообщение", "Сохранить файл?", "Да", "Нет") == true)
+           //{
+           //    var folder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+           //}
+        }
 
-        //}
-
+        /// <summary>
+        /// Обновляет статусы
+        /// </summary>
+        /// <returns></returns>
         public async Task UpdateStatuses()
         {
             Statuses.Clear();
@@ -93,12 +107,23 @@ namespace ServiceDesk.ViewModels
             }
             
             SelectedStatus = statuses.Where(x => x.Status_id == ServiceDesk_TaskListView.Status_id).FirstOrDefault();
+            if (SelectedStatus.Status_id > 50)
+            {
+                IsVisibleStatusButton = false;
+            }
         }
+
+        /// <summary>
+        /// Отправляет на редактирование
+        /// </summary>
         public async void GoEdit()
         {
             await Navigation.PushAsync(new EditTaskView(ServiceDesk_TaskListView));
         }
 
+        /// <summary>
+        /// Звонит
+        /// </summary>
         public async void Call()
         {
             try
@@ -119,6 +144,10 @@ namespace ServiceDesk.ViewModels
             
         }
         
+        /// <summary>
+        /// Обновляет список вложений
+        /// </summary>
+        /// <param name="taskId"></param>
         private async void UpdateAttachments(int taskId)
         {
             Attachments.Clear();
@@ -134,6 +163,9 @@ namespace ServiceDesk.ViewModels
             }
         }
 
+        /// <summary>
+        /// Добавляет вложение
+        /// </summary>
         public async void AddNewAttachment()
         {           
             file = await CrossFilePicker.Current.PickFile();
@@ -142,8 +174,7 @@ namespace ServiceDesk.ViewModels
             {
                 var TaskAttachment = new { ServiceDesk_TaskListView.Task_id, Attachment_name = file.FileName, Attachment_bytes = file.DataArray };
                 SendDataToServer(TaskAttachment, ApiEnum.AddTaskAttachment);
-                UpdateAttachments(ServiceDesk_TaskListView.Task_id);
-                
+                UpdateAttachments(ServiceDesk_TaskListView.Task_id);                
             }
         }
 
@@ -168,21 +199,23 @@ namespace ServiceDesk.ViewModels
             string st = statusName as string;
             var status = Statuses.Where(x => x.Status_name == st).FirstOrDefault();
             int id = status.Status_id;
-            EditTaskModel NewTask = new EditTaskModel();
-            NewTask.Task_id = ServiceDesk_TaskListView?.Task_id;
-            NewTask.Type_id = ServiceDesk_TaskListView?.Type_id ?? null;
-            NewTask.Factory_id = ServiceDesk_TaskListView?.Factory_id ?? null;
-            NewTask.Plant_id = ServiceDesk_TaskListView?.Plant_id ?? null;
-            NewTask.Unit_id = ServiceDesk_TaskListView?.Unit_id ?? null;
-            NewTask.Recipient_id = ServiceDesk_TaskListView.Recipient_name;
-            NewTask.Title = ServiceDesk_TaskListView.Title;
-            NewTask.Text = ServiceDesk_TaskListView.Text;
+            EditTaskModel NewTask = new EditTaskModel
+            {
+                Task_id = ServiceDesk_TaskListView?.Task_id,
+                Type_id = ServiceDesk_TaskListView?.Type_id ?? null,
+                Factory_id = ServiceDesk_TaskListView?.Factory_id ?? null,
+                Plant_id = ServiceDesk_TaskListView?.Plant_id ?? null,
+                Unit_id = ServiceDesk_TaskListView?.Unit_id ?? null,
+                Recipient_id = ServiceDesk_TaskListView.Recipient_name,
+                Title = ServiceDesk_TaskListView.Title,
+                Text = ServiceDesk_TaskListView.Text
+            };
 
             switch (id)
             {
                 case 1:
                     {
-                        SelectedStatus = Statuses.Where(x => x.Status_id == 2).FirstOrDefault(); ;
+                        SelectedStatus = Statuses.Where(x => x.Status_id == 2).FirstOrDefault();
                         NewTask.Status_id = 2;
                         SendDataToServer(NewTask, ApiEnum.EditTask);
                         TextButton = "Завершить";
@@ -190,12 +223,20 @@ namespace ServiceDesk.ViewModels
                     }
                 case 2:
                     {
-                        SelectedStatus = Statuses.Where(x => x.Status_id == 50).FirstOrDefault(); ;
+                        SelectedStatus = Statuses.Where(x => x.Status_id == 50).FirstOrDefault();
                         NewTask.Status_id = 50;
                         SendDataToServer(NewTask, ApiEnum.EditTask);
-                        TextButton = "Начать";
+                        TextButton = "Возобновить";
                         break;
-                    }                     
+                    }
+                case 50:
+                    {
+                        SelectedStatus = Statuses.Where(x => x.Status_id == 2).FirstOrDefault();
+                        NewTask.Status_id = 2;
+                        SendDataToServer(NewTask, ApiEnum.EditTask);
+                        TextButton = "Завершить";
+                        break;
+                    }
             }
             ServiceDesk_TaskListView = GetData<ServiceDesk_TaskListView>(ApiEnum.GetTasks).Where(x => x.Task_id == NewTask.Task_id).FirstOrDefault();
         }
@@ -208,12 +249,12 @@ namespace ServiceDesk.ViewModels
         {
             
             string comment = message as string;
-            if(comment != "Добавить комментарий" || comment != "")
+            if(comment != "")
             {
                 SendDataToServer(
-                new AddTaskCommentModel
+                new
                 {
-                    Task_id = ServiceDesk_TaskListView.Task_id,
+                    ServiceDesk_TaskListView.Task_id,
                     Text = comment
                 },
                 ApiEnum.AddTaskComment
@@ -385,20 +426,6 @@ namespace ServiceDesk.ViewModels
         }
 
         #endregion
-
-        public bool IsValid
-        {
-            get
-            {
-                return (!string.IsNullOrEmpty(Type_name.Trim())) ||
-                        (!string.IsNullOrEmpty(Status_name.Trim())) ||
-                        (!string.IsNullOrEmpty(Title.Trim())) ||
-                        (!string.IsNullOrEmpty(Text.Trim())) ||
-                        (!string.IsNullOrEmpty(Initiator_name.Trim())) ||
-                        (!string.IsNullOrEmpty(Recipient_name.Trim())) ||
-                        (!string.IsNullOrEmpty(Plant_name.Trim())) ||
-                        (!string.IsNullOrEmpty(Unit_name.Trim()));
-            }
-        }
+        
     }
 }

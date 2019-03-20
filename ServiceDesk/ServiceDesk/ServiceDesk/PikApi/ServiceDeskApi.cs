@@ -399,9 +399,9 @@ namespace ServiceDesk.PikApi
 
             request.RequestFormat = DataFormat.Json;
 
-            string jsonUser = JsonConvert.SerializeObject(new { Login = login, Password = password});
+            string jsonUser = JsonConvert.SerializeObject(new { Login = login, Password = password });
             request.AddParameter("application/json", jsonUser, ParameterType.RequestBody);
-           
+
             IRestResponse restResponse = client.Execute(request);
 
             if (restResponse.IsSuccessful)
@@ -410,7 +410,31 @@ namespace ServiceDesk.PikApi
                 AccessToken = Token.access_token;
             }
             return restResponse.StatusCode;
+        }
+
+        public static HttpStatusCode LocalRegister(string login, string password)
+        {
+            WebRequest wrAutorize;
+            string reqString = $"grant_type=password&username={login}&password={password}";
+            byte[] requestData = Encoding.UTF8.GetBytes(reqString);
+
+            wrAutorize = WebRequest.Create("https://apiinfo.pik-industry.ru/Token");
+            wrAutorize.Method = "POST";
+            wrAutorize.ContentType = "application/x-www-form-urlencoded";
+            wrAutorize.ContentLength = requestData.Length;
+
+            using (Stream S = wrAutorize.GetRequestStream())
+                S.Write(requestData, 0, requestData.Length);
+
+            var response = (HttpWebResponse)wrAutorize.GetResponse();
+            using (response)
+            {
+                Token = JsonConvert.DeserializeObject<AccessToken>(new StreamReader(response.GetResponseStream()).ReadToEnd());
+            }
             
+            AccessToken = Token.access_token;
+
+            return response.StatusCode;
         }
 
         #region GOOGLE API
