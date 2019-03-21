@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using ServiceDesk.PikApi;
-using System.Linq;
 
 namespace ServiceDesk.Views
 {
@@ -61,7 +60,7 @@ namespace ServiceDesk.Views
                     };
                     Label label = new Label
                     {
-                        Text = sb.Label,
+                        Text = "Подписка на уведомления",
                         VerticalOptions = LayoutOptions.Center,
                         HorizontalOptions = LayoutOptions.StartAndExpand
                     };

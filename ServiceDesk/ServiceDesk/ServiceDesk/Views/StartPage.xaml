@@ -19,7 +19,7 @@
             <Button x:Name="oneCSignInButton" Grid.Row="1" Text="1C" Command="{Binding OkCommand}" 
                     TextColor="#464451" BackgroundColor="Accent" CommandParameter="1c"/>
             <Button x:Name="localSignInButton" Grid.Row="2" Text="Local" Command="{Binding OkCommand}" 
-                    TextColor="#464451" BackgroundColor="Accent" CommandParameter="1c"/>
+                    TextColor="#464451" BackgroundColor="Accent" CommandParameter="Local"/>
         </Grid>
     </ContentPage.Content>    
 </ContentPage>

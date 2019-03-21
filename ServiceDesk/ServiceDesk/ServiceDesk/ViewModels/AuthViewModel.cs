@@ -4,6 +4,7 @@ using ServiceDesk.Models;
 using ServiceDesk.PikApi;
 using ServiceDesk.Views;
 using System.ComponentModel;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -43,7 +44,10 @@ namespace ServiceDesk.ViewModels
             {
                 Login = User.Login;
                 Password = User.Password;
-                await Navigation.PushAsync(new MenuPage());
+                LoadPage loadPage = new LoadPage();
+                await Navigation.PushAsync(loadPage);
+                await Navigation.PushAsync(await Task.Run(() => new MenuPage()));
+                Navigation.RemovePage(loadPage);
             }
             else
             {

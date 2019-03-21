@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
              x:Class="ServiceDesk.Views.MenuPage"
              BackgroundColor="Accent">
     <ContentPage.Resources>
@@ -12,9 +13,14 @@
             </Style>            
         </ResourceDictionary>
     </ContentPage.Resources>
-    <ContentPage.Content>
+    <ContentPage.Content>        
         <RelativeLayout>
-            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <!--<syncfusion:SfBusyIndicator x:Name="busyindicator" AnimationType="Ball" Title="Loading..." 
+                                            ViewBoxWidth = "150" ViewBoxHeight="150" TextColor="Maroon"
+                                            VerticalOptions="Center" HorizontalOptions="Center"
+                                            IsBusy="{Binding IsBusy}"/>-->
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsVisible="{Binding IsVisibleContent}">
+                
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>

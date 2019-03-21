@@ -3,6 +3,7 @@ using Plugin.FilePicker.Abstractions;
 using ServiceDesk.Models;
 using ServiceDesk.PikApi;
 using ServiceDesk.Views;
+using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
@@ -186,8 +187,8 @@ namespace ServiceDesk.ViewModels
         public async void GetFile()
         {
             
-            file = await CrossFilePicker.Current.PickFile();            
-
+            file = await CrossFilePicker.Current.PickFile();
+            
             if (file != null)
             {
                 NewTask.Attachments.Add(new AttachmentFileModel { Attachment_name = file.FileName, Attachment_bytes = file.DataArray });

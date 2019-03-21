@@ -41,6 +41,9 @@ namespace ServiceDesk.ViewModels
             }
         }
 
+        //public bool IsBusy { get; set; } = false;
+        //public bool IsVisibleContent { get; set; }
+
         public TaskListViewModel()
         {            
             Tasks = new ObservableCollection<ServiceDesk_TaskListView>();
@@ -62,7 +65,7 @@ namespace ServiceDesk.ViewModels
                 Statuses.Add(s);
             }
             Statuses.Add(_allTasksStatus);
-            SelectedStatus = _allTasksStatus;
+            SelectedStatus = Statuses.Where(x => x.Status_id == 1).FirstOrDefault();
         }
         /// <summary>
         /// Переходит на страницу настроек
@@ -85,7 +88,8 @@ namespace ServiceDesk.ViewModels
         /// </summary>
         /// <returns></returns>
         public async Task UpdateTasksAsync(int statusId)
-        {            
+        {
+            //IsBusy = true;
             var items = await ServiceDeskApi.GetDataAsync<ServiceDesk_TaskListView>(ServiceDeskApi.ApiEnum.GetTasks);
             var sortItems = items.OrderBy(x => x.Status_id).Select(x => x);
             if(statusId != 3740)
@@ -101,10 +105,12 @@ namespace ServiceDesk.ViewModels
                     Tasks.Add(i);
                 }                
             }
+            //IsBusy = false;
         }
 
         public void UpdateTasks(int statusId)
         {
+            //IsBusy = true;
             var items = ServiceDeskApi.GetData<ServiceDesk_TaskListView>(ServiceDeskApi.ApiEnum.GetTasks);
             var sortItems = items.OrderBy(x => x.Status_id).Select(x => x);
             if (statusId != 3740)
@@ -121,6 +127,7 @@ namespace ServiceDesk.ViewModels
                 }
 
             }
+            //IsBusy = false;
         }
 
         private ServiceDesk_TaskListView _selectedTask;

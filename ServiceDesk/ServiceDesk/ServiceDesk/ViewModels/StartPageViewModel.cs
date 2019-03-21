@@ -15,7 +15,7 @@ namespace ServiceDesk.ViewModels
             => _okCommand ?? (_okCommand = new Command<string>(GoToAuth));
 
         public async void GoToAuth(string provider)
-        {
+        {            
             switch (provider)
             {
                 case "google": await Navigation.PushAsync(new GoogleAuthView()); break;

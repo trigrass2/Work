@@ -11,6 +11,8 @@ using ServiceDesk.PikApi;
 using ServiceDesk.Views;
 using System.Threading.Tasks;
 using System.Linq;
+using System.IO;
+using Java.IO;
 
 namespace ServiceDesk.ViewModels
 {
@@ -57,7 +59,7 @@ namespace ServiceDesk.ViewModels
                 var model = new { ServiceDesk_TaskListView.Task_id, _selectedAttachment.Attachment_num };
                 var files = GetTaskAttachments<ServiceDesk_TaskAttachmentListView>(model, ApiEnum.GetTaskAttachments);
                 
-                DownloadFiles();
+                DownloadFiles(files.ElementAt(0).Attachment_name, files.ElementAt(0).Attachment_bytes);
             }
         }
         public ServiceDesk_StatusListView SelectedStatus { get; set; }
@@ -84,13 +86,35 @@ namespace ServiceDesk.ViewModels
             EditStatusCommand = new Command(EditStatus);
         }
 
-        public async void DownloadFiles()
-        {
-            
-           //if( await App.Current.MainPage.DisplayAlert("Сообщение", "Сохранить файл?", "Да", "Нет") == true)
-           //{
-           //    var folder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-           //}
+        public async void DownloadFiles(string fileName, byte[] dataArray)
+        {           
+             
+            var javafile = Android.OS.Environment.GetExternalStoragePublicDirectory(Android.OS.Environment.DirectoryDownloads);
+            var path = Path.Combine(javafile.AbsolutePath, fileName);
+
+            if (await App.Current.MainPage.DisplayAlert("Сообщение", "Сохранить файл?", "Да", "Нет") == true)
+            {
+                
+                using (FileStream fileStream = new FileStream(path, FileMode.Create))
+                {
+                    for (int i = 0; i < dataArray.Length; i++)
+                    {
+                        fileStream.WriteByte(dataArray[i]);
+                    }
+
+                    fileStream.Seek(0, SeekOrigin.Begin);
+
+                    for (int i = 0; i < fileStream.Length; i++)
+                    {
+                        if (dataArray[i] != fileStream.ReadByte())
+                        {
+                            await App.Current.MainPage.DisplayAlert("Error", "Error writing data.", "Ok");
+                            return;
+                        }
+                    }
+                    await App.Current.MainPage.DisplayAlert("Message", $"Сохранено в Download", "Ok");
+                }
+            }
         }
 
         /// <summary>

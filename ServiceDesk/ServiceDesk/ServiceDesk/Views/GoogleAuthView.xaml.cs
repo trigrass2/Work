@@ -1,10 +1,6 @@
 ﻿using ServiceDesk.PikApi;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -36,14 +32,18 @@ namespace ServiceDesk.Views
         }
 
         private async void WebViewOnNavigated(object sender, WebNavigatedEventArgs e)
-        {
+        {            
             var access_token = ExtractCodeFromUrl(e.Url);
             string accessToken = string.Empty;
             if (access_token != "")
             {
                 if (ServiceDeskApi.LoginExternalService(access_token) == System.Net.HttpStatusCode.OK)
                 {
-                    await Navigation.PushAsync(new MenuPage());
+                    LoadPage loadPage = new LoadPage();
+                    await Navigation.PushAsync(loadPage);
+                    await Navigation.PushAsync(await Task.Run(() => new MenuPage()));
+                    Navigation.RemovePage(loadPage);
+                    Navigation.RemovePage(this);                    
                 }
                 else await DisplayAlert("Ошибка", "Неверный логин или пароль", "Ок");
             }
