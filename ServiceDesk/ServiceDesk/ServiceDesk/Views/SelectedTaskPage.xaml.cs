@@ -10,14 +10,14 @@ namespace ServiceDesk.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class SelectedTaskPage : ContentPage
 	{
-        public TaskViewModel TaskViewModel { get; private set; }
+        public TaskViewModel TaskViewModel { get; set; }
 
         public SelectedTaskPage(TaskViewModel viewModel)
         {
 			InitializeComponent ();
             TaskViewModel = viewModel;
             TaskViewModel.Navigation = this.Navigation;
-            BindingContext = TaskViewModel;            
+            this.BindingContext = TaskViewModel;            
         }
 
         protected async override void OnAppearing()

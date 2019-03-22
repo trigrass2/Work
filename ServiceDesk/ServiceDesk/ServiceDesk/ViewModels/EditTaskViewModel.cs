@@ -1,5 +1,6 @@
 ﻿using ServiceDesk.Models;
 using ServiceDesk.PikApi;
+using ServiceDesk.Views;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -145,7 +146,6 @@ namespace ServiceDesk.ViewModels
             Units = new ObservableCollection<Product_UnitListView>();
             Users = new ObservableCollection<UserModel>();
             UsersNames = new ObservableCollection<string>();
-
             NewTask = new EditTaskModel();
             SendTaskCommand = new Command(SendTask);
         }
@@ -162,9 +162,21 @@ namespace ServiceDesk.ViewModels
             NewTask.Unit_id = _selectedUnit?.Unit_id ?? null;
             NewTask.Recipient_id = Users.Where(x => x.UserName == _selectedUser).Select(x => x.Id).FirstOrDefault();
             await ServiceDeskApi.SendDataToServerAsync(NewTask, ServiceDeskApi.ApiEnum.EditTask);
+            UpdateCOntext();
             await Navigation.PopAsync();
         }
 
+        private void UpdateCOntext()
+        {
+            NavigationPage navPage = (NavigationPage)Application.Current.MainPage;
+            IReadOnlyList<Page> navStack = navPage.Navigation.NavigationStack;
+            SelectedTaskPage homePage = navStack[navPage.Navigation.NavigationStack.Count - 2] as SelectedTaskPage;
+
+            if (homePage != null)
+            {
+                homePage.TaskViewModel.UpdateContext();
+            }
+        }
         #region UPDATE DATA
 
         public async Task UpdateUsers()

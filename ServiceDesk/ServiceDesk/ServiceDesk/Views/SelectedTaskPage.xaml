@@ -38,7 +38,7 @@
             <ScrollView>
                 <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Spacing="0">                                                              
                     <Label x:Name="textTaskLabel" Text="{Binding ServiceDesk_TaskListView.Text}" HorizontalOptions="FillAndExpand"/>
-                    <Label Text="инициатор" TextColor="White"/>                    
+                    <Label Text="заявитель" TextColor="White"/>                    
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>

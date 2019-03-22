@@ -12,7 +12,6 @@ using ServiceDesk.Views;
 using System.Threading.Tasks;
 using System.Linq;
 using System.IO;
-using Java.IO;
 
 namespace ServiceDesk.ViewModels
 {
@@ -45,6 +44,7 @@ namespace ServiceDesk.ViewModels
         public bool IsVisibleStatusButton { get; set; } = true;
         public bool IsEnableStatusButton { get; set; } = true;
         public bool IsVisibleFactory { get; set; } = true;
+        public bool IsEdit { get; set; } = false;
 
         private ServiceDesk_TaskAttachmentInfoListView _selectedAttachment;
         public ServiceDesk_TaskAttachmentInfoListView SelectedAttachment
@@ -84,6 +84,12 @@ namespace ServiceDesk.ViewModels
             CallCommand = new Command(Call);
             GoToEdit = new Command(GoEdit);
             EditStatusCommand = new Command(EditStatus);
+        }
+
+        public void UpdateContext()
+        {
+            var d = ServiceDeskApi.GetData<ServiceDesk_TaskListView>(ServiceDeskApi.ApiEnum.GetTasks);
+            ServiceDesk_TaskListView = d.Where(x => x.Task_id == ServiceDesk_TaskListView.Task_id).FirstOrDefault();
         }
 
         public async void DownloadFiles(string fileName, byte[] dataArray)
@@ -284,8 +290,7 @@ namespace ServiceDesk.ViewModels
                 ApiEnum.AddTaskComment
             );
                 UpdateComments();
-            }
-            
+            }            
         }
 
         public TaskListViewModel TaskListViewModel

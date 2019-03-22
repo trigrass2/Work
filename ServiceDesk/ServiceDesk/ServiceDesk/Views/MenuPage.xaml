@@ -14,13 +14,8 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>        
-        <RelativeLayout>
-            <!--<syncfusion:SfBusyIndicator x:Name="busyindicator" AnimationType="Ball" Title="Loading..." 
-                                            ViewBoxWidth = "150" ViewBoxHeight="150" TextColor="Maroon"
-                                            VerticalOptions="Center" HorizontalOptions="Center"
-                                            IsBusy="{Binding IsBusy}"/>-->
-            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsVisible="{Binding IsVisibleContent}">
-                
+        <RelativeLayout>            
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">                
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>

@@ -20,7 +20,7 @@ namespace ServiceDesk.Views
 			InitializeComponent ();
             
             _user = ServiceDeskApi.GetUser<ApplicationUser>(ServiceDeskApi.ApiEnum.GetUserInfo);
-            SubList = new StackLayout();
+            SubList = new StackLayout();            
             Content = SubList;
         }
 
@@ -47,6 +47,7 @@ namespace ServiceDesk.Views
         {
             try
             {                
+                
                 List<SubButton> subscriptions = await GetSubsAsync();
                 if (subscriptions == null)
                     return;

@@ -31,6 +31,7 @@ C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\Views\StartPage
 C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\Views\GoogleAuthView.xaml.g.cs
 C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\Views\EditTaskView.xaml.g.cs
 C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\Views\LocalAuthPage.xaml.g.cs
+C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\Views\LoadPage.xaml.g.cs
 C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\ServiceDesk.Android.csproj.CoreCompileInputs.cache
 C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\XamlC.stamp
 C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\ServiceDesk.Android.dll
@@ -82,7 +83,6 @@ C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\res\drawable-hd
 C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\R.cs.flag
 C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\R.txt
 C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\uploadflags.txt
-C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\Views\LoadPage.xaml.g.cs
 C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\bin\Debug\Com.OneSignal.Abstractions.pdb
 C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\bin\Debug\Com.OneSignal.pdb
 C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\bin\Debug\FormsViewGroup.pdb

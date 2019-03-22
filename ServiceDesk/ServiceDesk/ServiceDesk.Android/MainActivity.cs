@@ -3,6 +3,7 @@ using Android.Content.PM;
 using Android.OS;
 using Android.Content;
 using Com.OneSignal;
+using ServiceDesk.Views;
 
 namespace ServiceDesk.Droid
 {
@@ -20,13 +21,20 @@ namespace ServiceDesk.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 
             LoadApplication(new App());
-        }
 
+              
+        }
+       
         protected override void OnNewIntent(Intent intent)
         {
             if (intent != null)
             {
-                var args = intent.GetStringExtra("args");
+                var message = intent.GetStringExtra("message");
+
+                if (!string.IsNullOrEmpty(message))
+                {
+                    // Do something
+                }
             }
         }
     }

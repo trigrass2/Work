@@ -15,8 +15,8 @@ namespace ServiceDesk.Views
 		{
 			InitializeComponent();
 
-            _sv = serviceDesk_TaskListView;
-            _viewModel = new EditTaskViewModel(_sv) { Navigation = this.Navigation };
+            //_sv = serviceDesk_TaskListView;
+            _viewModel = new EditTaskViewModel(serviceDesk_TaskListView) { Navigation = this.Navigation };
             BindingContext = _viewModel;
         }
 

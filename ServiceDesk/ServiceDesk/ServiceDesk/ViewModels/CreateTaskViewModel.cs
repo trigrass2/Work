@@ -2,8 +2,6 @@
 using Plugin.FilePicker.Abstractions;
 using ServiceDesk.Models;
 using ServiceDesk.PikApi;
-using ServiceDesk.Views;
-using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
@@ -20,7 +18,7 @@ namespace ServiceDesk.ViewModels
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public CreateTaskModel NewTask { get; set; }        
+        public CreateTaskModel NewTask { get; set; }
 
         /// <summary>
         /// Отправляет новую заявку
@@ -53,8 +51,6 @@ namespace ServiceDesk.ViewModels
             set
             {
                 _selectedPlant = value;
-                if (_selectedPlant != null && Units != null)
-                    UpdateUnits(_selectedFactory.Factory_id, _selectedPlant.Plant_id);
             }
         }
         private Product_UnitListView _selectedUnit;
@@ -67,7 +63,7 @@ namespace ServiceDesk.ViewModels
             set
             {
                 _selectedUnit = value;
-                    
+
             }
         }
         private Product_FactoryListView _selectedFactory;
@@ -80,9 +76,6 @@ namespace ServiceDesk.ViewModels
             set
             {
                 _selectedFactory = value;
-                
-                if (_selectedFactory != null && Plants != null)
-                    UpdatePlants(_selectedFactory.Factory_id);
             }
         }
         private string _selectedUser;
@@ -98,12 +91,40 @@ namespace ServiceDesk.ViewModels
             }
         }
 
-        public ObservableCollection<Product_FactoryListView> Factorys { get; set; }        
-        public ObservableCollection<ServiceDesk_TypeListView> Types { get; set; }      
+        public ObservableCollection<Product_FactoryListView> Factorys { get; set; }
+        public ObservableCollection<ServiceDesk_TypeListView> Types { get; set; }
         public ObservableCollection<Product_PlantListView> Plants { get; set; }
         public ObservableCollection<Product_UnitListView> Units { get; set; }
         public ObservableCollection<UserModel> Users { get; set; }
         public ObservableCollection<string> UsersNames { get; set; }
+
+        private bool _initializedTypes = false;
+        private bool _initializedFactorys = false;
+        private bool _initializedUsers = false;
+
+        private bool _isBusy;
+        public bool IsBusy
+        {
+            get
+            {
+                return _isBusy;
+            }
+            set
+            {
+                _isBusy = value;
+                OnPropertyChanged("IsBusy");
+                OnPropertyChanged("IsLoaded");
+            }
+        }
+
+        private bool _isLoaded;
+        public bool IsLoaded
+        {
+            get
+            {
+                return !_isBusy;
+            }
+        }
 
         #region set model
 
@@ -165,6 +186,8 @@ namespace ServiceDesk.ViewModels
             NewTask = new CreateTaskModel() { Attachments = new ObservableCollection<AttachmentFileModel>() };
             SendTaskCommand = new Command(SendTask);
             GetFileCommand = new Command(GetFile);
+            UpdatePlants();
+            UpdateUnits();
         }
 
         /// <summary>
@@ -199,23 +222,31 @@ namespace ServiceDesk.ViewModels
 
         public async Task UpdateUsers()
         {
+            if (_initializedUsers == true) return;
+
             Users.Clear();
             var users = await ServiceDeskApi.GetAllUsersAsync(new { User_id = default(string), Search = default(string) }, ServiceDeskApi.ApiEnum.GetUsersList);
             Users = new ObservableCollection<UserModel>(users);
             UsersNames = new ObservableCollection<string>(users.Select(x => x.UserName));
+
+            _initializedUsers = true;
         }
 
         /// <summary>
         /// Обновляет типы заявок
         /// </summary>
         public async Task UpdateTypes()
-        {            
+        {
+            if (_initializedTypes == true) return;
+            
             var typesTasks = await ServiceDeskApi.GetDataServisDeskManagmentAsync<ServiceDesk_TypeListView>(ServiceDeskApi.ApiEnum.GetTypes);
             Types.Clear();
             foreach(var t in typesTasks)
             {
                 Types.Add(t);
             }
+            
+            _initializedTypes = true;
         }
 
         /// <summary>
@@ -223,6 +254,7 @@ namespace ServiceDesk.ViewModels
         /// </summary>
         public async Task UpdateFactorys()
         {
+            if (_initializedFactorys == true) return;
             Factorys.Clear();
 
             var factorys = await ServiceDeskApi.GetProductUnitAsync<Product_FactoryListView>(ServiceDeskApi.ApiEnum.GetProductFactoryList);
@@ -230,26 +262,22 @@ namespace ServiceDesk.ViewModels
             {
                 Factorys.Add(f);
             }
-
-           
+            
+            _initializedFactorys = true;
         }
 
         /// <summary>
         /// Обновляет линии
         /// </summary>
-        private void UpdatePlants(int factoryId)
+        private void UpdatePlants()
         {
             Plants.Clear();
 
-            if(factoryId > 0)
+            var plants = ServiceDeskApi.GetProductUnit<Product_PlantListView>(ServiceDeskApi.ApiEnum.GetProductPlantList);
+            foreach (var p in plants)
             {
-                var plants = ServiceDeskApi.GetProductUnit<Product_PlantListView>(ServiceDeskApi.ApiEnum.GetProductPlantList, factoryId);
-                foreach (var p in plants)
-                {
-                    Plants.Add(p);
-                }
+                Plants.Add(p);
             }
-            
         }
 
         /// <summary>
@@ -257,20 +285,22 @@ namespace ServiceDesk.ViewModels
         /// </summary>
         /// <param name="factoryId"></param>
         /// <param name="plantId"></param>
-        private void UpdateUnits(int factoryId, int plantId)
+        private void UpdateUnits()
         {
             Units.Clear();
 
-            if (factoryId > 0 && plantId > 0)
+            var units = ServiceDeskApi.GetProductUnit<Product_UnitListView>(ServiceDeskApi.ApiEnum.GetProductUnitList);
+            foreach (var u in units)
             {
-                var units = ServiceDeskApi.GetProductUnit<Product_UnitListView>(ServiceDeskApi.ApiEnum.GetProductUnitList, factoryId, plantId);
-                foreach (var u in units)
-                {
-                    Units.Add(u);
-                }
+                Units.Add(u);
             }
 
         }
         #endregion
+
+        protected void OnPropertyChanged(string propName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
+        }
     }
 }

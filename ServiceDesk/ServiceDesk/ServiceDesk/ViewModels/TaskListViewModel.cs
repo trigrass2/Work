@@ -3,8 +3,6 @@ using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using Plugin.Settings;
-using Plugin.Settings.Abstractions;
 using ServiceDesk.Models;
 using ServiceDesk.PikApi;
 using ServiceDesk.Views;
@@ -41,8 +39,7 @@ namespace ServiceDesk.ViewModels
             }
         }
 
-        //public bool IsBusy { get; set; } = false;
-        //public bool IsVisibleContent { get; set; }
+        public bool IsBusy { get; set; } = false;
 
         public TaskListViewModel()
         {            
@@ -89,7 +86,6 @@ namespace ServiceDesk.ViewModels
         /// <returns></returns>
         public async Task UpdateTasksAsync(int statusId)
         {
-            //IsBusy = true;
             var items = await ServiceDeskApi.GetDataAsync<ServiceDesk_TaskListView>(ServiceDeskApi.ApiEnum.GetTasks);
             var sortItems = items.OrderBy(x => x.Status_id).Select(x => x);
             if(statusId != 3740)
@@ -105,12 +101,10 @@ namespace ServiceDesk.ViewModels
                     Tasks.Add(i);
                 }                
             }
-            //IsBusy = false;
         }
 
         public void UpdateTasks(int statusId)
         {
-            //IsBusy = true;
             var items = ServiceDeskApi.GetData<ServiceDesk_TaskListView>(ServiceDeskApi.ApiEnum.GetTasks);
             var sortItems = items.OrderBy(x => x.Status_id).Select(x => x);
             if (statusId != 3740)
@@ -126,8 +120,7 @@ namespace ServiceDesk.ViewModels
                     Tasks.Add(i);
                 }
 
-            }
-            //IsBusy = false;
+            }           
         }
 
         private ServiceDesk_TaskListView _selectedTask;
