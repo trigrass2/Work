@@ -6,6 +6,8 @@
     <ContentPage.Content>
         <Grid VerticalOptions="Center" Margin="5,0,5,0">
             <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
                 <RowDefinition Height="70"/>
                 <RowDefinition Height="70"/>
                 <RowDefinition Height="70"/>
@@ -13,12 +15,15 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="googleSignInButton" Grid.Row="0" Text="Google" 
+            <Image x:Name="companyLabel" Grid.Row="0"
+                   Source="drawable/StartLabel.PNG" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Label Text="Введите данные для входа" Grid.Row="1" FontSize="Large" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+            <Button x:Name="googleSignInButton" Grid.Row="2" Text="Google" 
                     Command="{Binding OkCommand}" CommandParameter="google"
                     TextColor="#464451" BackgroundColor="Accent"/>
-            <Button x:Name="oneCSignInButton" Grid.Row="1" Text="1C" Command="{Binding OkCommand}" 
+            <Button x:Name="oneCSignInButton" Grid.Row="3" Text="1C" Command="{Binding OkCommand}" 
                     TextColor="#464451" BackgroundColor="Accent" CommandParameter="1c"/>
-            <Button x:Name="localSignInButton" Grid.Row="2" Text="Local" Command="{Binding OkCommand}" 
+            <Button x:Name="localSignInButton" Grid.Row="4" Text="Local" Command="{Binding OkCommand}" 
                     TextColor="#464451" BackgroundColor="Accent" CommandParameter="Local"/>
         </Grid>
     </ContentPage.Content>    

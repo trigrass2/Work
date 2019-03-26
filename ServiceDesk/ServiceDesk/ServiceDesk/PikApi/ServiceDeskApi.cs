@@ -20,15 +20,11 @@ namespace ServiceDesk.PikApi
     public class ServiceDeskApi
     {
         private static readonly string connectionString = "https://apiinfo.pik-industry.ru/api/";
-        public static ISettings AppSettings => CrossSettings.Current;
 
         public static AccessToken Token = new AccessToken();
         
-        public static string AccessToken
-        {
-            get => AppSettings.GetValueOrDefault(nameof(AccessToken), string.Empty);
-            set => AppSettings.AddOrUpdateValue(nameof(AccessToken), value);
-        }
+        public static string AccessToken { get; private set; }
+        
 
         /// <summary>
         /// Имя запроса

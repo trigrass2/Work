@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.pik_industry" android:installLocation="auto">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="2" android:versionName="1.0" package="com.pik_industry" android:installLocation="auto">
   <uses-sdk android:minSdkVersion="18" android:targetSdkVersion="27" />
   <permission android:name="com.pik_industry.permission.C2D_MESSAGE" android:protectionLevel="signature" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -17,15 +17,14 @@
         <category android:name="com.pik_industry" />
       </intent-filter>
     </receiver>
-    <activity android:configChanges="orientation|screenSize" android:icon="@mipmap/icon" android:label="ПИК-Заявка" android:launchMode="singleTop" android:theme="@style/MainTheme" android:name="md5b17021c95a6f529190ab2858ffdb539c.MainActivity" />
-    <activity android:icon="@mipmap/icon" android:label="ПИК-Заявка" android:noHistory="true" android:theme="@style/MainTheme.Splash" android:name="md5b17021c95a6f529190ab2858ffdb539c.SplashActivity">
+    <activity android:configChanges="orientation|screenSize" android:icon="@mipmap/icon" android:label="ПИК-Индустрия СД" android:launchMode="singleTop" android:theme="@style/MainTheme" android:name="md5b17021c95a6f529190ab2858ffdb539c.MainActivity" />
+    <activity android:icon="@mipmap/icon" android:label="ПИК-Индустрия СД" android:noHistory="true" android:theme="@style/MainTheme.Splash" android:name="md5b17021c95a6f529190ab2858ffdb539c.SplashActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
     <activity android:configChanges="orientation|screenSize" android:name="md54fe4aef201482be7d95d72c0c9bf0b33.FilePickerActivity" />
-    <service android:name="md5dcb6eccdc824e0677ffae8ccdde42930.KeepAliveService" />
     <receiver android:enabled="true" android:exported="false" android:name="md51558244f76c53b6aeda52c8a337f2c37.PowerSaveModeBroadcastReceiver" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="com.pik_industry.mono.MonoRuntimeProvider.__mono_init__" />
     <!--suppress ExportedReceiver-->

@@ -7,6 +7,10 @@ using ServiceDesk.Models;
 using ServiceDesk.PikApi;
 using ServiceDesk.Views;
 using Xamarin.Forms;
+using Com.OneSignal;
+using System.Collections.Generic;
+using ServiceDesk.Models.Push;
+using System;
 
 namespace ServiceDesk.ViewModels
 {
@@ -22,7 +26,6 @@ namespace ServiceDesk.ViewModels
 
         public INavigation Navigation { get; set; }
         public ICommand CreateTaskCommand { get; set; }
-        public ICommand GoToSettings { get; set; }
 
         private ServiceDesk_StatusListView _allTasksStatus = new ServiceDesk_StatusListView { Status_id = 3740, Status_name = "Все заявки" };
         private ServiceDesk_StatusListView _selectedStatus;
@@ -46,7 +49,14 @@ namespace ServiceDesk.ViewModels
             Tasks = new ObservableCollection<ServiceDesk_TaskListView>();
             Statuses = new ObservableCollection<ServiceDesk_StatusListView>();
             CreateTaskCommand = new Command(GoInCreatePage);
-            GoToSettings = new Command(GoToSettingsPage);
+        }
+        
+        /// <summary>
+        /// переходит на страницу создания заявки
+        /// </summary>
+        public async void GoInCreatePage()
+        {
+            await Navigation.PushAsync(new SendTaskPage());
         }
 
         /// <summary>
@@ -64,22 +74,7 @@ namespace ServiceDesk.ViewModels
             Statuses.Add(_allTasksStatus);
             SelectedStatus = Statuses.Where(x => x.Status_id == 1).FirstOrDefault();
         }
-        /// <summary>
-        /// Переходит на страницу настроек
-        /// </summary>
-        public async void GoToSettingsPage()
-        {
-            await Navigation.PushAsync(new SettingsPage());
-        }
 
-        /// <summary>
-        /// переходит на страницу создания заявки
-        /// </summary>
-        public async void GoInCreatePage()
-        {
-            await Navigation.PushAsync(new SendTaskPage());
-        }
-        
         /// <summary>
         /// Обновляет заявки
         /// </summary>
@@ -135,6 +130,72 @@ namespace ServiceDesk.ViewModels
                 ServiceDesk_TaskListView tempTask = value;
                 _selectedTask = null;
                 Navigation.PushAsync(new SelectedTaskPage(new TaskViewModel(tempTask)));
+            }
+        }
+
+        private bool IsInitialiseSubscribed { get; set; } = false;
+        ApplicationUser _user;
+        public void UpdateSubscribed()
+        {
+            IsInitialiseSubscribed = true;
+            _user = ServiceDeskApi.GetUser<ApplicationUser>(ServiceDeskApi.ApiEnum.GetUserInfo);
+
+            OneSignal.Current.GetTags(TagsReceived);
+        }
+
+        private void TagsReceived(Dictionary<string, object> tags)
+        {
+            if (tags == null)
+            {
+                tags = new Dictionary<string, object>();
+            }
+            MakeSublistAsync(tags);
+        }
+
+        private async void MakeSublistAsync(Dictionary<string, object> tags)
+        {
+            try
+            {
+                foreach(var t in tags)
+                {                    
+                    OneSignal.Current.DeleteTag(t.Key.ToString());
+                }
+                OneSignal.Current.SendTag(_user.Id, "User_id");
+                return;
+                #region ccc
+                //List<SubButton> subscriptions = await GetSubsAsync();
+                //if (subscriptions == null)
+                //    return;
+                //foreach (SubButton sb in subscriptions)
+                //{
+
+                //    switcher.Toggled += delegate (object sender, ToggledEventArgs e)
+                //    {
+                //        if (e.Value)
+                //            OneSignal.Current.SendTag(sb.Id.ToString(), sb.Label);
+                //        else
+                //            OneSignal.Current.DeleteTag(sb.Id.ToString());
+                //    };
+
+                //    await Task.Run(() =>
+                //    {
+                //        var tcs = new TaskCompletionSource<bool>();
+                //        Device.BeginInvokeOnMainThread(() =>
+                //        {
+                //            SubList.Children.Add(stack);
+                //            tcs.SetResult(false);
+                //        });
+                //        return tcs.Task;
+                //    });
+                //}
+
+                //return;
+                #endregion
+            }
+            catch (Exception e)
+            {
+                await App.Current.MainPage.DisplayAlert("ERROR", e.ToString(), "OK");
+                return;
             }
         }        
     }

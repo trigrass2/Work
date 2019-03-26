@@ -21,7 +21,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\EditTaskCommentModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\EditTaskModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\GetTasksModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\PhoneCall.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Product_FactoryListView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Product_PlantListView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Product_UnitListView.cs" />
@@ -75,10 +74,6 @@
       <DependentUpon>SendTaskPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\SettingsPage.xaml.cs">
-      <DependentUpon>SettingsPage.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\StartPage.xaml.cs">
       <DependentUpon>StartPage.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -101,12 +96,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\SendTaskPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\SettingsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>

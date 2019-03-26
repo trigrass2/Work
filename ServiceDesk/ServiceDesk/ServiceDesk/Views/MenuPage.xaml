@@ -25,9 +25,9 @@
                         <combobox:SfComboBox HeightRequest="40" x:Name="comboBox" DataSource="{Binding Statuses}" DisplayMemberPath="Status_name"
                                              SelectedItem="{Binding SelectedStatus}" />
                     </StackLayout>
-                    <Button x:Name="Settings" BackgroundColor="Accent" Image="baseline_settings_black_18.png" 
+                    <!--<Button x:Name="Settings" BackgroundColor="Accent" Image="baseline_settings_black_18.png" 
                             TextColor="#464451" Grid.Column="1" Command="{Binding GoToSettings}" 
-                            HeightRequest="50" WidthRequest="50" VerticalOptions="Start" HorizontalOptions="End"/>
+                            HeightRequest="50" WidthRequest="50" VerticalOptions="Start" HorizontalOptions="End"/>-->
                 </Grid>
                 <ListView x:Name="listViewTasks" Margin="5,0,0,0" HasUnevenRows="True" ItemsSource="{Binding Tasks}" 
                           SelectedItem="{Binding SelectedTask, Mode=TwoWay}" SeparatorColor="Gainsboro">

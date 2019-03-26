@@ -25,7 +25,6 @@ C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\App.xaml.g.cs
 C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\Views\MenuPage.xaml.g.cs
 C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\Views\SelectedTaskPage.xaml.g.cs
 C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\Views\SendTaskPage.xaml.g.cs
-C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\Views\SettingsPage.xaml.g.cs
 C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\Views\AuthView.xaml.g.cs
 C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\Views\StartPage.xaml.g.cs
 C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\Views\GoogleAuthView.xaml.g.cs
@@ -144,6 +143,7 @@ C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\bin\Debug\Plugin.Settings.dl
 C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\linksrc\Plugin.FilePicker.dll.mdb
 C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\linksrc\Plugin.Settings.Abstractions.dll.mdb
 C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\linksrc\Plugin.Settings.dll.mdb
+C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\ServiceDesk.Android.csprojAssemblyReference.cache
 C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\android\assets\Plugin.FilePicker.dll.mdb
 C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\android\assets\Plugin.Settings.Abstractions.dll.mdb
 C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\android\assets\Plugin.Settings.dll.mdb
@@ -175,7 +175,7 @@ C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\android\assets\
 C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\android\assets\Xamarin.Forms.Core.pdb
 C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\android\assets\Xamarin.Forms.Platform.Android.pdb
 C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\android\assets\Xamarin.Forms.Xaml.pdb
-C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\ServiceDesk.Android.csprojAssemblyReference.cache
+C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\res\drawable\startlabel.png
 C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\linksrc\Plugin.FilePicker.dll.mdb
 C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\linksrc\Plugin.Settings.Abstractions.dll.mdb
 C:\Work\ServiceDesk\ServiceDesk\ServiceDesk.Android\obj\Debug\81\linksrc\Plugin.Settings.dll.mdb

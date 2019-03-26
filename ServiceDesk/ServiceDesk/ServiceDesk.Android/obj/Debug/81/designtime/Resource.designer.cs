@@ -6472,104 +6472,104 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F010002
 			public const int baseline_attach_file_24 = 2130771970;
 			
-			// aapt resource value: 0x7F010009
-			public const int baseline_attach_file_white_18 = 2130771977;
-			
 			// aapt resource value: 0x7F010010
-			public const int baseline_attach_file_white_24 = 2130771984;
+			public const int baseline_attach_file_white_18 = 2130771984;
 			
 			// aapt resource value: 0x7F010011
-			public const int baseline_attach_file_white_36 = 2130771985;
+			public const int baseline_attach_file_white_24 = 2130771985;
 			
 			// aapt resource value: 0x7F010012
-			public const int baseline_attach_file_white_48 = 2130771986;
+			public const int baseline_attach_file_white_36 = 2130771986;
+			
+			// aapt resource value: 0x7F010013
+			public const int baseline_attach_file_white_48 = 2130771987;
 			
 			// aapt resource value: 0x7F010003
 			public const int baseline_call_24 = 2130771971;
 			
-			// aapt resource value: 0x7F010013
-			public const int baseline_call_black_18 = 2130771987;
-			
 			// aapt resource value: 0x7F010014
-			public const int baseline_call_black_24 = 2130771988;
+			public const int baseline_call_black_18 = 2130771988;
 			
 			// aapt resource value: 0x7F010015
-			public const int baseline_call_black_36 = 2130771989;
+			public const int baseline_call_black_24 = 2130771989;
 			
 			// aapt resource value: 0x7F010016
-			public const int baseline_call_black_48 = 2130771990;
+			public const int baseline_call_black_36 = 2130771990;
+			
+			// aapt resource value: 0x7F010017
+			public const int baseline_call_black_48 = 2130771991;
 			
 			// aapt resource value: 0x7F010004
 			public const int baseline_create_24 = 2130771972;
 			
-			// aapt resource value: 0x7F010017
-			public const int baseline_create_black_18 = 2130771991;
-			
 			// aapt resource value: 0x7F010018
-			public const int baseline_create_black_24 = 2130771992;
+			public const int baseline_create_black_18 = 2130771992;
 			
 			// aapt resource value: 0x7F010019
-			public const int baseline_create_black_36 = 2130771993;
+			public const int baseline_create_black_24 = 2130771993;
 			
 			// aapt resource value: 0x7F010020
-			public const int baseline_create_black_48 = 2130772000;
+			public const int baseline_create_black_36 = 2130772000;
+			
+			// aapt resource value: 0x7F010021
+			public const int baseline_create_black_48 = 2130772001;
 			
 			// aapt resource value: 0x7F010005
 			public const int baseline_send_24 = 2130771973;
 			
-			// aapt resource value: 0x7F010021
-			public const int baseline_send_white_18 = 2130772001;
-			
 			// aapt resource value: 0x7F010022
-			public const int baseline_send_white_24 = 2130772002;
+			public const int baseline_send_white_18 = 2130772002;
 			
 			// aapt resource value: 0x7F010023
-			public const int baseline_send_white_36 = 2130772003;
+			public const int baseline_send_white_24 = 2130772003;
 			
 			// aapt resource value: 0x7F010024
-			public const int baseline_send_white_48 = 2130772004;
+			public const int baseline_send_white_36 = 2130772004;
 			
 			// aapt resource value: 0x7F010025
-			public const int baseline_settings_black_18 = 2130772005;
+			public const int baseline_send_white_48 = 2130772005;
 			
 			// aapt resource value: 0x7F010026
-			public const int baseline_settings_black_24 = 2130772006;
+			public const int baseline_settings_black_18 = 2130772006;
 			
 			// aapt resource value: 0x7F010027
-			public const int baseline_settings_black_36 = 2130772007;
+			public const int baseline_settings_black_24 = 2130772007;
 			
 			// aapt resource value: 0x7F010028
-			public const int baseline_settings_black_48 = 2130772008;
+			public const int baseline_settings_black_36 = 2130772008;
 			
-			// aapt resource value: 0x7F010166
-			public const int btn_checkbox = 2130772326;
+			// aapt resource value: 0x7F010029
+			public const int baseline_settings_black_48 = 2130772009;
 			
 			// aapt resource value: 0x7F010167
-			public const int btn_checkbox_checked = 2130772327;
+			public const int btn_checkbox = 2130772327;
 			
 			// aapt resource value: 0x7F010168
-			public const int btn_checkbox_checked_to_indeterminate_animation = 2130772328;
+			public const int btn_checkbox_checked = 2130772328;
 			
 			// aapt resource value: 0x7F010169
-			public const int btn_checkbox_checked_to_unchecked_animation = 2130772329;
+			public const int btn_checkbox_checked_to_indeterminate_animation = 2130772329;
 			
 			// aapt resource value: 0x7F010170
-			public const int btn_checkbox_indeterminate = 2130772336;
+			public const int btn_checkbox_checked_to_unchecked_animation = 2130772336;
 			
 			// aapt resource value: 0x7F010171
-			public const int btn_checkbox_indeterminate_to_checked_animation = 2130772337;
+			public const int btn_checkbox_indeterminate = 2130772337;
 			
 			// aapt resource value: 0x7F010172
-			public const int btn_checkbox_indeterminate_to_unchecked_animation = 2130772338;
+			public const int btn_checkbox_indeterminate_to_checked_animation = 2130772338;
 			
 			// aapt resource value: 0x7F010173
-			public const int btn_checkbox_unchecked = 2130772339;
+			public const int btn_checkbox_indeterminate_to_unchecked_animation = 2130772339;
 			
 			// aapt resource value: 0x7F010174
-			public const int btn_checkbox_unchecked_to_checked_animation = 2130772340;
+			public const int btn_checkbox_unchecked = 2130772340;
 			
 			// aapt resource value: 0x7F010175
-			public const int btn_checkbox_unchecked_to_indeterminate_animation = 2130772341;
+			public const int btn_checkbox_unchecked_to_checked_animation = 2130772341;
+			
+			// aapt resource value: 0x7F010176
+			public const int btn_checkbox_unchecked_to_indeterminate_animation = 2130772342;
 			
 			// aapt resource value: 0x7F090001
 			public const int cast_abc_scrubber_control_off_mtrl_alpha = 2131296257;
@@ -6808,8 +6808,8 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F09005B
 			public const int design_snackbar_background = 2131296347;
 			
-			// aapt resource value: 0x7F010180
-			public const int dropdownbuttonimage = 2130772352;
+			// aapt resource value: 0x7F010181
+			public const int dropdownbuttonimage = 2130772353;
 			
 			// aapt resource value: 0x7F09004A
 			public const int googleg_disabled_color_18 = 2131296330;
@@ -7363,11 +7363,11 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F090104
 			public const int ic_vol_type_tv_light = 2131296516;
 			
-			// aapt resource value: 0x7F010176
-			public const int inputlayout_togglecollapseicon = 2130772342;
-			
 			// aapt resource value: 0x7F010177
-			public const int inputlayout_togglevisibleicon = 2130772343;
+			public const int inputlayout_togglecollapseicon = 2130772343;
+			
+			// aapt resource value: 0x7F010178
+			public const int inputlayout_togglevisibleicon = 2130772344;
 			
 			// aapt resource value: 0x7F090105
 			public const int mr_button_connected_dark = 2131296517;
@@ -7603,8 +7603,8 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F090089
 			public const int quantum_ic_volume_up_white_36 = 2131296393;
 			
-			// aapt resource value: 0x7F010178
-			public const int sfclosebutton = 2130772344;
+			// aapt resource value: 0x7F010179
+			public const int sfclosebutton = 2130772345;
 			
 			// aapt resource value: 0x7F010006
 			public const int splash_logo = 2130771974;
@@ -7612,8 +7612,11 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F010007
 			public const int splash_screen = 2130771975;
 			
-			// aapt resource value: 0x7F010179
-			public const int styleinfo = 2130772345;
+			// aapt resource value: 0x7F010008
+			public const int StartLabel = 2130771976;
+			
+			// aapt resource value: 0x7F010180
+			public const int styleinfo = 2130772352;
 			
 			// aapt resource value: 0x7F090069
 			public const int tooltip_frame_dark = 2131296361;
@@ -7621,8 +7624,8 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F09006A
 			public const int tooltip_frame_light = 2131296362;
 			
-			// aapt resource value: 0x7F010008
-			public const int ViewCellBackground = 2130771976;
+			// aapt resource value: 0x7F010009
+			public const int ViewCellBackground = 2130771977;
 			
 			static Drawable()
 			{

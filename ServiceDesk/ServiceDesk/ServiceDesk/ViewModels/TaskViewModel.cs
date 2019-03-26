@@ -163,8 +163,8 @@ namespace ServiceDesk.ViewModels
                     await App.Current.MainPage.DisplayAlert("Alert", "Specify the number to start the call.", "OK");
                 }
                 else
-                {
-                   await DependencyService.Get<IPhoneCall>()?.MakeQuickCall(ServiceDesk_TaskListView.Initiator_phone);
+                {                    
+                    Device.OpenUri(new Uri($"tel:{ServiceDesk_TaskListView.Initiator_phone}"));
                 }
             }
             catch (Exception ex)

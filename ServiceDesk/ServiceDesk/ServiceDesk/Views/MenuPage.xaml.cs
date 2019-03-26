@@ -21,12 +21,9 @@ namespace ServiceDesk.Views
 
         protected async override void OnAppearing()
         {
-            //_viewModel.IsBusy = true;
-            //_viewModel.IsVisibleContent = false;
+            _viewModel.UpdateSubscribed();
             await _viewModel.UpdateStatuses();
             await _viewModel.UpdateTasksAsync(_viewModel.SelectedStatus.Status_id);
-            //_viewModel.IsBusy = false;
-            //_viewModel.IsVisibleContent = true;
             base.OnAppearing();
         }
 	}
