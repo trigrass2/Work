@@ -23,8 +23,7 @@ namespace ServiceDesk.PikApi
 
         public static AccessToken Token = new AccessToken();
         
-        public static string AccessToken { get; private set; }
-        
+        public static string AccessToken { get; private set; }        
 
         /// <summary>
         /// Имя запроса
@@ -52,6 +51,13 @@ namespace ServiceDesk.PikApi
 
         #region SERVICE DESK
 
+        /// <summary>
+        /// Возвращает список юзеров
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="user">модель юзера (User_id, Search)</param>
+        /// <param name="nameApi"></param>
+        /// <returns></returns>
         public static IEnumerable<UserModel> GetAllUsers<T>(T user, ApiEnum nameApi)
         {
             RestClient client = new RestClient($"{connectionString}ServiceDesk/{Enum.GetName(typeof(ApiEnum), nameApi)}");
@@ -71,6 +77,14 @@ namespace ServiceDesk.PikApi
             }
             else return default(IEnumerable<UserModel>);
         }
+
+        /// <summary>
+        /// Возвращает список юзеров
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="user">модель юзера (User_id, Search)</param>
+        /// <param name="nameApi"></param>
+        /// <returns></returns>
         public static async Task<IEnumerable<UserModel>> GetAllUsersAsync<T>(T user, ApiEnum nameApi)
         {
             RestClient client = new RestClient($"{connectionString}ServiceDesk/{Enum.GetName(typeof(ApiEnum), nameApi)}");
@@ -281,7 +295,6 @@ namespace ServiceDesk.PikApi
 
         #endregion
 
-
         #region PRODUCT UNIT
 
         /// <summary>
@@ -449,7 +462,7 @@ namespace ServiceDesk.PikApi
             IRestResponse response = client.Execute(request);
         }
 
-        public static bool Error = false;
+        
         public static HttpStatusCode LoginExternalService(string externaltoken)
         {          
             

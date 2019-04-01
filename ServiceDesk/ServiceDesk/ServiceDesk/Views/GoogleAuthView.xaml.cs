@@ -1,4 +1,9 @@
-﻿using ServiceDesk.PikApi;
+﻿using Android.Gms.Auth.Api;
+using Android.Gms.Auth.Api.SignIn;
+using Android.Gms.Common;
+using Android.Gms.Common.Apis;
+using ServiceDesk.Droid;
+using ServiceDesk.PikApi;
 using System.Linq;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -8,7 +13,7 @@ namespace ServiceDesk.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class GoogleAuthView : ContentPage
-    {
+    {        
         public GoogleAuthView()
         {
             InitializeComponent();
@@ -17,7 +22,7 @@ namespace ServiceDesk.Views
                 "https://accounts.google.com/o/oauth2/v2/auth"
                 + "?response_type=token"
                 + "&scope=email"
-                + "&redirect_uri=" + "https://pik-industry.info:81/signin-google"
+                + "&redirect_uri=" + "https://apiinfo.pik-industry.ru/signin-google"
                 + "&client_id=" + "1043677311551-kjl4mqjfm0dj7i1himvku9301onr7r4p.apps.googleusercontent.com"
                 + "&prompt=" + "select_account";
 
@@ -31,8 +36,25 @@ namespace ServiceDesk.Views
             Content = webView;
         }
 
+        //public void GoogleManager()
+        //{
+        //    string serverClientId = "1043677311551-kjl4mqjfm0dj7i1himvku9301onr7r4p.apps.googleusercontent.com";
+        //    GoogleSignInOptions gso = new
+        //    GoogleSignInOptions.Builder(GoogleSignInOptions.DefaultSignIn)
+        //        .RequestEmail()
+        //        .RequestServerAuthCode(serverClientId)
+        //        .Build();
+
+        //    var _googleApiClient = new
+        //    GoogleApiClient.Builder(((MainActivity)Forms.Context).ApplicationContext)
+        //         .AddApi(Auth.GOOGLE_SIGN_IN_API, gso)
+        //         .AddScope(new Scope(Scopes.Profile))
+        //         .Build();
+        //}
+
         private async void WebViewOnNavigated(object sender, WebNavigatedEventArgs e)
         {            
+            
             var access_token = ExtractCodeFromUrl(e.Url);
             string accessToken = string.Empty;
             if (access_token != "")
@@ -44,8 +66,7 @@ namespace ServiceDesk.Views
                     await Navigation.PushAsync(await Task.Run(() => new MenuPage()));
                     Navigation.RemovePage(loadPage);
                     Navigation.RemovePage(this);                    
-                }
-                else await DisplayAlert("Ошибка", "Неверный логин или пароль", "Ок");
+                }else await DisplayAlert("Ошибка", "Неверный логин или пароль", "Ок");
             }
         }
 

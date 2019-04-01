@@ -20,7 +20,7 @@
           "lib/MonoAndroid10/OneSignal.Android.Binding.dll": {}
         }
       },
-      "Fody/3.3.2": {
+      "Fody/4.2.1": {
         "type": "package",
         "build": {
           "build/Fody.targets": {}
@@ -102,10 +102,10 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "PropertyChanged.Fody/2.6.0": {
+      "PropertyChanged.Fody/2.6.1": {
         "type": "package",
         "dependencies": {
-          "Fody": "3.3.2",
+          "Fody": "4.2.1",
           "NETStandard.Library": "1.6.1"
         },
         "compile": {
@@ -136,11 +136,11 @@
           "lib/MonoAndroid10/Syncfusion.Licensing.dll": {}
         }
       },
-      "Syncfusion.Xamarin.Buttons/16.4.0.54": {
+      "Syncfusion.Xamarin.Buttons/17.1.0.38": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "16.4.0.54",
-          "Xamarin.Forms": "2.5.1.527436"
+          "Syncfusion.Xamarin.Core": "17.1.0.38",
+          "Xamarin.Forms": "3.1.0.697729"
         },
         "compile": {
           "lib/MonoAndroid10/Syncfusion.Buttons.XForms.Android.dll": {},
@@ -151,10 +151,10 @@
           "lib/MonoAndroid10/Syncfusion.Buttons.XForms.dll": {}
         }
       },
-      "Syncfusion.Xamarin.Core/16.4.0.54": {
+      "Syncfusion.Xamarin.Core/17.1.0.38": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Licensing": "16.4.0.54"
+          "Syncfusion.Licensing": "17.1.0.38"
         },
         "compile": {
           "lib/MonoAndroid10/Syncfusion.Core.XForms.Android.dll": {},
@@ -165,7 +165,7 @@
           "lib/MonoAndroid10/Syncfusion.Core.XForms.dll": {}
         }
       },
-      "Syncfusion.Xamarin.DataSource/16.4.0.54": {
+      "Syncfusion.Xamarin.DataSource/17.1.0.38": {
         "type": "package",
         "compile": {
           "lib/MonoAndroid10/Syncfusion.DataSource.Portable.dll": {}
@@ -174,7 +174,7 @@
           "lib/MonoAndroid10/Syncfusion.DataSource.Portable.dll": {}
         }
       },
-      "Syncfusion.Xamarin.GridCommon/16.4.0.54": {
+      "Syncfusion.Xamarin.GridCommon/17.1.0.38": {
         "type": "package",
         "compile": {
           "lib/MonoAndroid10/Syncfusion.GridCommon.Portable.dll": {}
@@ -183,11 +183,11 @@
           "lib/MonoAndroid10/Syncfusion.GridCommon.Portable.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfAutoComplete/16.4.0.54": {
+      "Syncfusion.Xamarin.SfAutoComplete/17.1.0.38": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "16.4.0.54",
-          "Xamarin.Forms": "2.5.1.527436"
+          "Syncfusion.Xamarin.Core": "17.1.0.38",
+          "Xamarin.Forms": "3.1.0.697729"
         },
         "compile": {
           "lib/MonoAndroid10/Syncfusion.SfAutoComplete.Android.dll": {},
@@ -200,11 +200,11 @@
           "lib/MonoAndroid10/Syncfusion.SfAutoComplete.XForms.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfBusyIndicator/16.4.0.54": {
+      "Syncfusion.Xamarin.SfBusyIndicator/17.1.0.38": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "16.4.0.54",
-          "Xamarin.Forms": "2.5.1.527436"
+          "Syncfusion.Xamarin.Core": "17.1.0.38",
+          "Xamarin.Forms": "3.1.0.697729"
         },
         "compile": {
           "lib/MonoAndroid10/Syncfusion.SfBusyIndicator.Android.dll": {},
@@ -217,11 +217,11 @@
           "lib/MonoAndroid10/Syncfusion.SfBusyIndicator.XForms.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfComboBox/16.4.0.54": {
+      "Syncfusion.Xamarin.SfComboBox/17.1.0.38": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "16.4.0.54",
-          "Xamarin.Forms": "2.5.1.527436"
+          "Syncfusion.Xamarin.Core": "17.1.0.38",
+          "Xamarin.Forms": "3.1.0.697729"
         },
         "compile": {
           "lib/MonoAndroid10/Syncfusion.SfComboBox.XForms.Android.dll": {},
@@ -232,13 +232,13 @@
           "lib/MonoAndroid10/Syncfusion.SfComboBox.XForms.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfListView/16.4.0.54": {
+      "Syncfusion.Xamarin.SfListView/17.1.0.38": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "16.4.0.54",
-          "Syncfusion.Xamarin.DataSource": "16.4.0.54",
-          "Syncfusion.Xamarin.GridCommon": "16.4.0.54",
-          "Xamarin.Forms": "2.5.1.527436"
+          "Syncfusion.Xamarin.Core": "17.1.0.38",
+          "Syncfusion.Xamarin.DataSource": "17.1.0.38",
+          "Syncfusion.Xamarin.GridCommon": "17.1.0.38",
+          "Xamarin.Forms": "3.1.0.697729"
         },
         "compile": {
           "lib/MonoAndroid10/Syncfusion.SfListView.XForms.Android.dll": {},
@@ -1069,84 +1069,141 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
-      "Xamarin.GooglePlayServices.Base/42.1021.1": {
+      "Xamarin.GooglePlayServices.Auth/60.1142.1": {
         "type": "package",
         "dependencies": {
-          "Xamarin.GooglePlayServices.Basement": "[42.1021.1]",
-          "Xamarin.GooglePlayServices.Tasks": "[42.1021.1]"
+          "Xamarin.GooglePlayServices.Auth.Api.Phone": "[60.1142.1]",
+          "Xamarin.GooglePlayServices.Auth.Base": "[60.1142.1]",
+          "Xamarin.GooglePlayServices.Base": "[60.1142.1]",
+          "Xamarin.GooglePlayServices.Basement": "[60.1142.1]",
+          "Xamarin.GooglePlayServices.Tasks": "[60.1142.1]"
         },
         "compile": {
-          "lib/MonoAndroid70/Xamarin.GooglePlayServices.Base.dll": {}
+          "lib/MonoAndroid80/Xamarin.GooglePlayServices.Auth.dll": {}
         },
         "runtime": {
-          "lib/MonoAndroid70/Xamarin.GooglePlayServices.Base.dll": {}
+          "lib/MonoAndroid80/Xamarin.GooglePlayServices.Auth.dll": {}
         },
         "build": {
-          "build/MonoAndroid70/Xamarin.GooglePlayServices.Base.targets": {}
+          "build/MonoAndroid80/Xamarin.GooglePlayServices.Auth.targets": {}
         }
       },
-      "Xamarin.GooglePlayServices.Basement/42.1021.1": {
+      "Xamarin.GooglePlayServices.Auth.Api.Phone/60.1142.1": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Android.Support.v4": "25.1.0",
-          "Xamarin.Build.Download": "0.4.2"
+          "Xamarin.GooglePlayServices.Base": "[60.1142.1]",
+          "Xamarin.GooglePlayServices.Basement": "[60.1142.1]",
+          "Xamarin.GooglePlayServices.Tasks": "[60.1142.1]"
         },
         "compile": {
-          "lib/MonoAndroid70/Xamarin.GooglePlayServices.Basement.dll": {}
+          "lib/MonoAndroid80/Xamarin.GooglePlayServices.Auth.Api.Phone.dll": {}
         },
         "runtime": {
-          "lib/MonoAndroid70/Xamarin.GooglePlayServices.Basement.dll": {}
+          "lib/MonoAndroid80/Xamarin.GooglePlayServices.Auth.Api.Phone.dll": {}
         },
         "build": {
-          "build/MonoAndroid70/Xamarin.GooglePlayServices.Basement.targets": {}
+          "build/MonoAndroid80/Xamarin.GooglePlayServices.Auth.Api.Phone.targets": {}
         }
       },
-      "Xamarin.GooglePlayServices.Gcm/42.1021.1": {
+      "Xamarin.GooglePlayServices.Auth.Base/60.1142.1": {
         "type": "package",
         "dependencies": {
-          "Xamarin.GooglePlayServices.Base": "[42.1021.1]",
-          "Xamarin.GooglePlayServices.Basement": "[42.1021.1]",
-          "Xamarin.GooglePlayServices.Iid": "[42.1021.1]"
+          "Xamarin.GooglePlayServices.Base": "[60.1142.1]",
+          "Xamarin.GooglePlayServices.Basement": "[60.1142.1]",
+          "Xamarin.GooglePlayServices.Tasks": "[60.1142.1]"
         },
         "compile": {
-          "lib/MonoAndroid70/Xamarin.GooglePlayServices.Gcm.dll": {}
+          "lib/MonoAndroid80/Xamarin.GooglePlayServices.Auth.Base.dll": {}
         },
         "runtime": {
-          "lib/MonoAndroid70/Xamarin.GooglePlayServices.Gcm.dll": {}
+          "lib/MonoAndroid80/Xamarin.GooglePlayServices.Auth.Base.dll": {}
         },
         "build": {
-          "build/MonoAndroid70/Xamarin.GooglePlayServices.Gcm.targets": {}
+          "build/MonoAndroid80/Xamarin.GooglePlayServices.Auth.Base.targets": {}
         }
       },
-      "Xamarin.GooglePlayServices.Iid/42.1021.1": {
+      "Xamarin.GooglePlayServices.Base/60.1142.1": {
         "type": "package",
         "dependencies": {
-          "Xamarin.GooglePlayServices.Base": "[42.1021.1]",
-          "Xamarin.GooglePlayServices.Basement": "[42.1021.1]"
+          "Xamarin.GooglePlayServices.Basement": "[60.1142.1]",
+          "Xamarin.GooglePlayServices.Tasks": "[60.1142.1]"
         },
         "compile": {
-          "lib/MonoAndroid70/Xamarin.GooglePlayServices.Iid.dll": {}
+          "lib/MonoAndroid80/Xamarin.GooglePlayServices.Base.dll": {}
         },
         "runtime": {
-          "lib/MonoAndroid70/Xamarin.GooglePlayServices.Iid.dll": {}
+          "lib/MonoAndroid80/Xamarin.GooglePlayServices.Base.dll": {}
         },
         "build": {
-          "build/MonoAndroid70/Xamarin.GooglePlayServices.Iid.targets": {}
+          "build/MonoAndroid80/Xamarin.GooglePlayServices.Base.targets": {}
         }
       },
-      "Xamarin.GooglePlayServices.Tasks/42.1021.1": {
+      "Xamarin.GooglePlayServices.Basement/60.1142.1": {
         "type": "package",
         "dependencies": {
-          "Xamarin.GooglePlayServices.Basement": "[42.1021.1]"
+          "Xamarin.Android.Support.Compat": "26.0.2",
+          "Xamarin.Android.Support.Core.UI": "26.0.2",
+          "Xamarin.Android.Support.Core.Utils": "26.0.2",
+          "Xamarin.Android.Support.Fragment": "26.0.2",
+          "Xamarin.Android.Support.Media.Compat": "26.0.2",
+          "Xamarin.Build.Download": "0.4.9"
         },
         "compile": {
-          "lib/MonoAndroid70/Xamarin.GooglePlayServices.Tasks.dll": {}
+          "lib/MonoAndroid80/Xamarin.GooglePlayServices.Basement.dll": {}
         },
         "runtime": {
-          "lib/MonoAndroid70/Xamarin.GooglePlayServices.Tasks.dll": {}
+          "lib/MonoAndroid80/Xamarin.GooglePlayServices.Basement.dll": {}
         },
         "build": {
-          "build/MonoAndroid70/Xamarin.GooglePlayServices.Tasks.targets": {}
+          "build/MonoAndroid80/Xamarin.GooglePlayServices.Basement.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Gcm/60.1142.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.GooglePlayServices.Base": "[60.1142.1]",
+          "Xamarin.GooglePlayServices.Basement": "[60.1142.1]",
+          "Xamarin.GooglePlayServices.Iid": "[60.1142.1]"
+        },
+        "compile": {
+          "lib/MonoAndroid80/Xamarin.GooglePlayServices.Gcm.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid80/Xamarin.GooglePlayServices.Gcm.dll": {}
+        },
+        "build": {
+          "build/MonoAndroid80/Xamarin.GooglePlayServices.Gcm.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Iid/60.1142.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.GooglePlayServices.Base": "[60.1142.1]",
+          "Xamarin.GooglePlayServices.Basement": "[60.1142.1]"
+        },
+        "compile": {
+          "lib/MonoAndroid80/Xamarin.GooglePlayServices.Iid.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid80/Xamarin.GooglePlayServices.Iid.dll": {}
+        },
+        "build": {
+          "build/MonoAndroid80/Xamarin.GooglePlayServices.Iid.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Tasks/60.1142.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.GooglePlayServices.Basement": "[60.1142.1]"
+        },
+        "compile": {
+          "lib/MonoAndroid80/Xamarin.GooglePlayServices.Tasks.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid80/Xamarin.GooglePlayServices.Tasks.dll": {}
+        },
+        "build": {
+          "build/MonoAndroid80/Xamarin.GooglePlayServices.Tasks.targets": {}
         }
       },
       "Xamarin.Plugin.FilePicker/2.0.135": {
@@ -1190,15 +1247,15 @@
         "lib/netstandard1.0/Com.OneSignal.pdb"
       ]
     },
-    "Fody/3.3.2": {
-      "sha512": "cotwoyB9JtIbawV1z2w4S/qbcR87C94VrBK1xXxCE+/CxnfaPi6u8a7kDk3z1QbrwCeK8jefnxpqfHiEu0QxVg==",
+    "Fody/4.2.1": {
+      "sha512": "46t+e1eESclH4TkfqUEYAgZ1+ZbXSFS7GqSKvtcw6u2yT05heDKdzj1r3YA/6FCZM4uB4z7qRW9V+gBsCilonQ==",
       "type": "package",
-      "path": "fody/3.3.2",
+      "path": "fody/4.2.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "build/Fody.targets",
-        "fody.3.3.2.nupkg.sha512",
+        "fody.4.2.1.nupkg.sha512",
         "fody.nuspec",
         "netclassictask/Fody.dll",
         "netclassictask/FodyCommon.dll",
@@ -1328,10 +1385,10 @@
         "newtonsoft.json.nuspec"
       ]
     },
-    "PropertyChanged.Fody/2.6.0": {
-      "sha512": "N0pu2ZCoS4e2qrRK+ZZO7TymGJc9bp5L/qLlQRvbfvgN0rcjv61eT85T8dlltWNqQegULVmQnE0BvpXs9VHqkA==",
+    "PropertyChanged.Fody/2.6.1": {
+      "sha512": "dCMGDjA7ahlpCIfvPxwXB6KIIeYtc2qALk69p22HQwgzKJQG25l87l5skk5ZBV5/B/z3dQZBVZkdJZbvtEXuAg==",
       "type": "package",
-      "path": "propertychanged.fody/2.6.0",
+      "path": "propertychanged.fody/2.6.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1341,10 +1398,12 @@
         "lib/netstandard1.0/PropertyChanged.dll",
         "lib/netstandard1.0/PropertyChanged.xml",
         "netclassicweaver/PropertyChanged.Fody.dll",
+        "netclassicweaver/PropertyChanged.Fody.pdb",
         "netclassicweaver/PropertyChanged.Fody.xcf",
         "netstandardweaver/PropertyChanged.Fody.dll",
+        "netstandardweaver/PropertyChanged.Fody.pdb",
         "netstandardweaver/PropertyChanged.Fody.xcf",
-        "propertychanged.fody.2.6.0.nupkg.sha512",
+        "propertychanged.fody.2.6.1.nupkg.sha512",
         "propertychanged.fody.nuspec"
       ]
     },
@@ -1389,10 +1448,10 @@
         "syncfusion.licensing.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.Buttons/16.4.0.54": {
-      "sha512": "CVs7zOUmZLUTQ05/kEn+w5F/zVpkPRLB+QYBh3I/n4id3zR3KoovvL8QEoSxY+/3JkLLpzPTb0jp0Gvz1JbYPg==",
+    "Syncfusion.Xamarin.Buttons/17.1.0.38": {
+      "sha512": "WF77wLU42mFbAUbw/yBqNxQqvRPDu4pIpbRKAqurWZcLjQAJvULF+jQRBG1tBTjzgRy896bY7tTS7Im8kmgezA==",
       "type": "package",
-      "path": "syncfusion.xamarin.buttons/16.4.0.54",
+      "path": "syncfusion.xamarin.buttons/17.1.0.38",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1413,17 +1472,16 @@
         "lib/uap10.0/Syncfusion.Buttons.XForms.UWP/Properties/Syncfusion.Buttons.XForms.UWP.rd.xml",
         "lib/uap10.0/Syncfusion.Buttons.XForms.UWP/Syncfusion.Buttons.XForms.UWP.xr.xml",
         "lib/uap10.0/Syncfusion.Buttons.XForms.UWP/Themes/Generic.xaml",
-        "lib/uap10.0/Syncfusion.Buttons.XForms.UWP/Themes/Generic.xbf",
         "lib/uap10.0/Syncfusion.Buttons.XForms.dll",
         "lib/uap10.0/Syncfusion.Buttons.XForms.xml",
-        "syncfusion.xamarin.buttons.16.4.0.54.nupkg.sha512",
+        "syncfusion.xamarin.buttons.17.1.0.38.nupkg.sha512",
         "syncfusion.xamarin.buttons.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.Core/16.4.0.54": {
-      "sha512": "DWPiekLe0THLAuJymeGmEFry0GPa+Q6Tqega7HZMVyp81dv9NFxVhBw0Ef9AksrJEHGywLgqqS/kGugAPUFYvg==",
+    "Syncfusion.Xamarin.Core/17.1.0.38": {
+      "sha512": "Xs52ZzDbqJ829bPxt1wI0qLvQy81oDNeCM6SoWXZwBE3cYwBU7ct6SnDB3Qs/Tm2hIGuOK4swfka3w7T+S8ZYg==",
       "type": "package",
-      "path": "syncfusion.xamarin.core/16.4.0.54",
+      "path": "syncfusion.xamarin.core/17.1.0.38",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1443,19 +1501,17 @@
         "lib/uap10.0/Syncfusion.Core.XForms.UWP.pri",
         "lib/uap10.0/Syncfusion.Core.XForms.UWP/Syncfusion.Core.XForms.UWP.xr.xml",
         "lib/uap10.0/Syncfusion.Core.XForms.UWP/ToggleIcons/ToggleCollapsedIcon.xaml",
-        "lib/uap10.0/Syncfusion.Core.XForms.UWP/ToggleIcons/ToggleCollapsedIcon.xbf",
         "lib/uap10.0/Syncfusion.Core.XForms.UWP/ToggleIcons/ToggleVisibleIcon.xaml",
-        "lib/uap10.0/Syncfusion.Core.XForms.UWP/ToggleIcons/ToggleVisibleIcon.xbf",
         "lib/uap10.0/Syncfusion.Core.XForms.dll",
         "lib/uap10.0/Syncfusion.Core.XForms.xml",
-        "syncfusion.xamarin.core.16.4.0.54.nupkg.sha512",
+        "syncfusion.xamarin.core.17.1.0.38.nupkg.sha512",
         "syncfusion.xamarin.core.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.DataSource/16.4.0.54": {
-      "sha512": "A9k/zVbB2GImo/RWr+I0KZ17vDMm25ivhOXEgfpMA0dCpPFnK0D7wsqrGsUG9wGZZEv9MVZbeO0sVddE/1m0Kw==",
+    "Syncfusion.Xamarin.DataSource/17.1.0.38": {
+      "sha512": "NZ4kOT6io/JiI2zSIMqs59ABBXQgzHzYVWtlRVhV2p6EMAp5kiMlWVdpfG0nnwOWALAGnmbdbhD9SO1/7QCFiQ==",
       "type": "package",
-      "path": "syncfusion.xamarin.datasource/16.4.0.54",
+      "path": "syncfusion.xamarin.datasource/17.1.0.38",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1469,14 +1525,14 @@
         "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.DataSource.Portable.dll",
         "lib/uap10.0/Syncfusion.DataSource.Portable.XML",
         "lib/uap10.0/Syncfusion.DataSource.Portable.dll",
-        "syncfusion.xamarin.datasource.16.4.0.54.nupkg.sha512",
+        "syncfusion.xamarin.datasource.17.1.0.38.nupkg.sha512",
         "syncfusion.xamarin.datasource.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.GridCommon/16.4.0.54": {
-      "sha512": "xEzHvgWy1vaSUakBkzKrGfd7VO9xsmScCe9cTcd4X7XZXK6FmCDOIpg+CoflkcqkQ90ZaE2E3T9VROzPlkkP1w==",
+    "Syncfusion.Xamarin.GridCommon/17.1.0.38": {
+      "sha512": "MoGcNG2bL6UvB3rQtDnYX37ydjnwNGi4C+es88iuZLzz9nVWMcaUr3IXiqDmM2ojOX1FBjdwvEO+rAussB1HOg==",
       "type": "package",
-      "path": "syncfusion.xamarin.gridcommon/16.4.0.54",
+      "path": "syncfusion.xamarin.gridcommon/17.1.0.38",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1492,33 +1548,33 @@
         "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.GridCommon.Portable.dll",
         "lib/uap10.0/Syncfusion.GridCommon.Portable.XML",
         "lib/uap10.0/Syncfusion.GridCommon.Portable.dll",
-        "syncfusion.xamarin.gridcommon.16.4.0.54.nupkg.sha512",
+        "syncfusion.xamarin.gridcommon.17.1.0.38.nupkg.sha512",
         "syncfusion.xamarin.gridcommon.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.SfAutoComplete/16.4.0.54": {
-      "sha512": "J+c+5PZpyrsvWX11JjjAJM0CsF2PKN5fCxEZVYr7ZrcC7xmiXQ+BGAxpf5LlULSOAaJdXCopiiuEbZEn5so2rA==",
+    "Syncfusion.Xamarin.SfAutoComplete/17.1.0.38": {
+      "sha512": "BaNVo60UtFRITFuVy+qKepCr810+oSbVVS3nNr0+mF5+9OMtk7Do+ON3n+qNoTNfhX715F2ZlvtYDW/PaqNXSg==",
       "type": "package",
-      "path": "syncfusion.xamarin.sfautocomplete/16.4.0.54",
+      "path": "syncfusion.xamarin.sfautocomplete/17.1.0.38",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/MonoAndroid10/Syncfusion.SfAutoComplete.Android.dll",
         "lib/MonoAndroid10/Syncfusion.SfAutoComplete.XForms.Android.dll",
+        "lib/MonoAndroid10/Syncfusion.SfAutoComplete.XForms.XML",
         "lib/MonoAndroid10/Syncfusion.SfAutoComplete.XForms.dll",
-        "lib/MonoAndroid10/Syncfusion.SfAutoComplete.XForms.xml",
+        "lib/Xamarin.iOS10/Syncfusion.SfAutoComplete.XForms.XML",
         "lib/Xamarin.iOS10/Syncfusion.SfAutoComplete.XForms.dll",
         "lib/Xamarin.iOS10/Syncfusion.SfAutoComplete.XForms.iOS.dll",
-        "lib/Xamarin.iOS10/Syncfusion.SfAutoComplete.XForms.xml",
         "lib/Xamarin.iOS10/Syncfusion.SfAutoComplete.iOS.dll",
         "lib/Xamarin.iOS10/Syncfusion.SfAutoComplete.iOS.xml",
+        "lib/netstandard1.0/Syncfusion.SfAutoComplete.XForms.XML",
         "lib/netstandard1.0/Syncfusion.SfAutoComplete.XForms.dll",
-        "lib/netstandard1.0/Syncfusion.SfAutoComplete.XForms.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfAutoComplete.XForms.XML",
         "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfAutoComplete.XForms.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfAutoComplete.XForms.xml",
         "lib/uap10.0/Syncfusion.SfAutoComplete.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.SfAutoComplete.XForms.XML",
         "lib/uap10.0/Syncfusion.SfAutoComplete.XForms.dll",
-        "lib/uap10.0/Syncfusion.SfAutoComplete.XForms.xml",
         "lib/uap10.0/Syncfusion.SfInput.UWP.XML",
         "lib/uap10.0/Syncfusion.SfInput.UWP.dll",
         "lib/uap10.0/Syncfusion.SfInput.UWP.pri",
@@ -1540,14 +1596,14 @@
         "lib/uap10.0/Syncfusion.SfShared.UWP/Syncfusion.SfShared.UWP.xr.xml",
         "lib/uap10.0/Syncfusion.SfShared.UWP/Themes/generic.xaml",
         "lib/uap10.0/Syncfusion.SfShared.UWP/Themes/generic.xbf",
-        "syncfusion.xamarin.sfautocomplete.16.4.0.54.nupkg.sha512",
+        "syncfusion.xamarin.sfautocomplete.17.1.0.38.nupkg.sha512",
         "syncfusion.xamarin.sfautocomplete.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.SfBusyIndicator/16.4.0.54": {
-      "sha512": "TULWO5KGzUgm0PbthuLH5QzJiBCBwWweXRuvrnoQKTwyIjXAFdNGdktw5xxIn+OLaK90u2gIiwAaMGA0Vxp/3w==",
+    "Syncfusion.Xamarin.SfBusyIndicator/17.1.0.38": {
+      "sha512": "6E3hwQ3K/VXvka72BApb2IWWHR/9kt929wompezefj4ovxn192HcpekBSC99hDoXbLyXa/QwKaUAmhJv8qyAbw==",
       "type": "package",
-      "path": "syncfusion.xamarin.sfbusyindicator/16.4.0.54",
+      "path": "syncfusion.xamarin.sfbusyindicator/17.1.0.38",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1587,63 +1643,58 @@
         "lib/uap10.0/Syncfusion.SfShared.UWP/Syncfusion.SfShared.UWP.xr.xml",
         "lib/uap10.0/Syncfusion.SfShared.UWP/Themes/generic.xaml",
         "lib/uap10.0/Syncfusion.SfShared.UWP/Themes/generic.xbf",
-        "syncfusion.xamarin.sfbusyindicator.16.4.0.54.nupkg.sha512",
+        "syncfusion.xamarin.sfbusyindicator.17.1.0.38.nupkg.sha512",
         "syncfusion.xamarin.sfbusyindicator.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.SfComboBox/16.4.0.54": {
-      "sha512": "R/YdhTD72+s4YJuCbh76wJEQHgOo65xAv/WXNqpFKfEnvTaJEqXZn5LpDNlYoPETYGPu4FJKXKT6tzhJGs1Y8Q==",
+    "Syncfusion.Xamarin.SfComboBox/17.1.0.38": {
+      "sha512": "NprpOcLxJq0e2DHRYYY3hN9LftX+YEqOT+o0Tj5wOdNWO8FrMxbRcFlEJyNB1SlA+0zJ3rzFGYFCqbWI3ni+CQ==",
       "type": "package",
-      "path": "syncfusion.xamarin.sfcombobox/16.4.0.54",
+      "path": "syncfusion.xamarin.sfcombobox/17.1.0.38",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/MonoAndroid10/Syncfusion.SfComboBox.XForms.Android.dll",
+        "lib/MonoAndroid10/Syncfusion.SfComboBox.XForms.XML",
         "lib/MonoAndroid10/Syncfusion.SfComboBox.XForms.dll",
-        "lib/MonoAndroid10/Syncfusion.SfComboBox.XForms.xml",
+        "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.XML",
         "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.dll",
         "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.iOS.dll",
-        "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.xml",
+        "lib/netstandard1.0/Syncfusion.SfComboBox.XForms.XML",
         "lib/netstandard1.0/Syncfusion.SfComboBox.XForms.dll",
-        "lib/netstandard1.0/Syncfusion.SfComboBox.XForms.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfComboBox.XForms.XML",
         "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfComboBox.XForms.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfComboBox.XForms.xml",
         "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP.dll",
         "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP.pri",
         "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/Properties/Syncfusion.SfComboBox.XForms.UWP.rd.xml",
         "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/Syncfusion.SfComboBox.XForms.UWP.xr.xml",
         "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/Themes/Generic.xaml",
-        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/Themes/Generic.xbf",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/darkthemeimage.png",
         "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/dropdownbuttonimage.png",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.XML",
         "lib/uap10.0/Syncfusion.SfComboBox.XForms.dll",
-        "lib/uap10.0/Syncfusion.SfComboBox.XForms.xml",
-        "syncfusion.xamarin.sfcombobox.16.4.0.54.nupkg.sha512",
+        "syncfusion.xamarin.sfcombobox.17.1.0.38.nupkg.sha512",
         "syncfusion.xamarin.sfcombobox.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.SfListView/16.4.0.54": {
-      "sha512": "lJ0Qh/ewxn/ieGjw6yfNr1ek/pOaJv56iPAgsFzyfma6Y/7m0vS+lJ/k4wvNW+hbYta54gaeR3H+UG8SrECrMQ==",
+    "Syncfusion.Xamarin.SfListView/17.1.0.38": {
+      "sha512": "Q6P52K2SHZbZT9vGpZ/CyT2pL/9UpGr19vL93JDWlOR/ccnpn7whgq4D61SOf7GiSJBtTsP3Xkx8n8hPQICLMA==",
       "type": "package",
-      "path": "syncfusion.xamarin.sflistview/16.4.0.54",
+      "path": "syncfusion.xamarin.sflistview/17.1.0.38",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/MonoAndroid10/Syncfusion.SfListView.XForms.Android.dll",
         "lib/MonoAndroid10/Syncfusion.SfListView.XForms.dll",
-        "lib/MonoAndroid10/Syncfusion.SfListView.XForms.xml",
         "lib/Xamarin.Mac/Syncfusion.SfListView.XForms.dll",
         "lib/Xamarin.Mac/Syncfusion.SfListView.XForms.macOS.dll",
         "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.dll",
         "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.iOS.dll",
-        "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.xml",
         "lib/netstandard1.0/Syncfusion.SfListView.XForms.dll",
-        "lib/netstandard1.0/Syncfusion.SfListView.XForms.xml",
         "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfListView.XForms.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfListView.XForms.xml",
         "lib/uap10.0/Syncfusion.SfListView.XForms.UWP.dll",
         "lib/uap10.0/Syncfusion.SfListView.XForms.dll",
-        "lib/uap10.0/Syncfusion.SfListView.XForms.xml",
-        "syncfusion.xamarin.sflistview.16.4.0.54.nupkg.sha512",
+        "syncfusion.xamarin.sflistview.17.1.0.38.nupkg.sha512",
         "syncfusion.xamarin.sflistview.nuspec"
       ]
     },
@@ -4914,69 +4965,108 @@
         "xamarin.forms.nuspec"
       ]
     },
-    "Xamarin.GooglePlayServices.Base/42.1021.1": {
-      "sha512": "hT+srItg5VaMSsBfjhkO9AERkxdVS50x2AsQVIIn0CzTVndVs4pioD8WnOkWZeDfp/Ku+Cu8TzuqLmjv+OkNnw==",
+    "Xamarin.GooglePlayServices.Auth/60.1142.1": {
+      "sha512": "8CHzhTuvqULDutqjrkpncRGPUD+nilHMl4EnkHNpT+wO0YR5qP4q97Wvp75l56s5dW9ep5kbnEXtB7IpHHKvOg==",
       "type": "package",
-      "path": "xamarin.googleplayservices.base/42.1021.1",
+      "path": "xamarin.googleplayservices.auth/60.1142.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "build/MonoAndroid70/Xamarin.GooglePlayServices.Base.targets",
-        "lib/MonoAndroid70/Xamarin.GooglePlayServices.Base.dll",
-        "xamarin.googleplayservices.base.42.1021.1.nupkg.sha512",
+        "build/MonoAndroid80/Xamarin.GooglePlayServices.Auth.targets",
+        "lib/MonoAndroid80/Xamarin.GooglePlayServices.Auth.dll",
+        "xamarin.googleplayservices.auth.60.1142.1.nupkg.sha512",
+        "xamarin.googleplayservices.auth.nuspec"
+      ]
+    },
+    "Xamarin.GooglePlayServices.Auth.Api.Phone/60.1142.1": {
+      "sha512": "e4i9RXNFqI5W3uVb3xd2Fajqg5TwxeOK0yxt/atPRaUTDC/fdRf38/TkTa7uWEHOCG1fYDHNexgEjOKjVdhVpQ==",
+      "type": "package",
+      "path": "xamarin.googleplayservices.auth.api.phone/60.1142.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/MonoAndroid80/Xamarin.GooglePlayServices.Auth.Api.Phone.targets",
+        "lib/MonoAndroid80/Xamarin.GooglePlayServices.Auth.Api.Phone.dll",
+        "xamarin.googleplayservices.auth.api.phone.60.1142.1.nupkg.sha512",
+        "xamarin.googleplayservices.auth.api.phone.nuspec"
+      ]
+    },
+    "Xamarin.GooglePlayServices.Auth.Base/60.1142.1": {
+      "sha512": "xb5s+tqNFEMxQQ6iooPd1xnFL9hVIkfwyYffkbMBibf3JtW0EqP1kQ7DQX7CXCDsX32349sMOG6Bu7acOPjRpQ==",
+      "type": "package",
+      "path": "xamarin.googleplayservices.auth.base/60.1142.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/MonoAndroid80/Xamarin.GooglePlayServices.Auth.Base.targets",
+        "lib/MonoAndroid80/Xamarin.GooglePlayServices.Auth.Base.dll",
+        "xamarin.googleplayservices.auth.base.60.1142.1.nupkg.sha512",
+        "xamarin.googleplayservices.auth.base.nuspec"
+      ]
+    },
+    "Xamarin.GooglePlayServices.Base/60.1142.1": {
+      "sha512": "XI1JjQRV3sYgZ8AfMzL67ttVtlELkXf2wUQr8XI06MbCAX7lCC7yw/Bdwyf6atTsDCa7CRIrL0PkWMf0riAbOA==",
+      "type": "package",
+      "path": "xamarin.googleplayservices.base/60.1142.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/MonoAndroid80/Xamarin.GooglePlayServices.Base.targets",
+        "lib/MonoAndroid80/Xamarin.GooglePlayServices.Base.dll",
+        "xamarin.googleplayservices.base.60.1142.1.nupkg.sha512",
         "xamarin.googleplayservices.base.nuspec"
       ]
     },
-    "Xamarin.GooglePlayServices.Basement/42.1021.1": {
-      "sha512": "lTDGIBr6wvfHN/5X9HFVZtADq3Sb1f80Q51p9h2ajyI554zR0h1+TCcwuWNVop7TRJ2Y1QmgiZJ2depddEwCCw==",
+    "Xamarin.GooglePlayServices.Basement/60.1142.1": {
+      "sha512": "G4PFBPoAovRwmCdO7jpdeZ5N974JsOjiLKDnOcZxC+4IjYs0ZvoBP/dyYDI32tCbpzNEbb/00oqx35Gjgl5f2g==",
       "type": "package",
-      "path": "xamarin.googleplayservices.basement/42.1021.1",
+      "path": "xamarin.googleplayservices.basement/60.1142.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "build/MonoAndroid70/Xamarin.GooglePlayServices.Basement.targets",
-        "build/MonoAndroid70/Xamarin.GooglePlayServices.Tasks.dll",
-        "lib/MonoAndroid70/Xamarin.GooglePlayServices.Basement.dll",
-        "xamarin.googleplayservices.basement.42.1021.1.nupkg.sha512",
+        "build/MonoAndroid80/Xamarin.GooglePlayServices.Basement.targets",
+        "build/MonoAndroid80/Xamarin.GooglePlayServices.Tasks.dll",
+        "lib/MonoAndroid80/Xamarin.GooglePlayServices.Basement.dll",
+        "xamarin.googleplayservices.basement.60.1142.1.nupkg.sha512",
         "xamarin.googleplayservices.basement.nuspec"
       ]
     },
-    "Xamarin.GooglePlayServices.Gcm/42.1021.1": {
-      "sha512": "nzoHfLC2Jt/KATPHXP0zJ15af1w8QhcsbyURHFkGErppzqWp6DRVxfOkrqHn+64f9sAGNUAsa05mMJD9n6yOWg==",
+    "Xamarin.GooglePlayServices.Gcm/60.1142.1": {
+      "sha512": "iU5pRIU6Y6IGgEEUfeAnC3EFUjnGlF/j/VEzOIUfwi+45m4rbavNTTfUcOX3oIAjq4ew9EYlVN877hF0E5pPgg==",
       "type": "package",
-      "path": "xamarin.googleplayservices.gcm/42.1021.1",
+      "path": "xamarin.googleplayservices.gcm/60.1142.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "build/MonoAndroid70/Xamarin.GooglePlayServices.Gcm.targets",
-        "lib/MonoAndroid70/Xamarin.GooglePlayServices.Gcm.dll",
-        "xamarin.googleplayservices.gcm.42.1021.1.nupkg.sha512",
+        "build/MonoAndroid80/Xamarin.GooglePlayServices.Gcm.targets",
+        "lib/MonoAndroid80/Xamarin.GooglePlayServices.Gcm.dll",
+        "xamarin.googleplayservices.gcm.60.1142.1.nupkg.sha512",
         "xamarin.googleplayservices.gcm.nuspec"
       ]
     },
-    "Xamarin.GooglePlayServices.Iid/42.1021.1": {
-      "sha512": "wETBUsNfeC/eZrmqp4K2kIuLDJXl+ZTL0SVDnj+sClXrqZikhW0fRl/lR6BK9cqEZ9e2pGmC4Z6eVBeBbtB3cg==",
+    "Xamarin.GooglePlayServices.Iid/60.1142.1": {
+      "sha512": "1uYHm8oHZYCcnMilX8tu2NGRLdXcA3/qR3ifhl5PBiQsx9XZwbLgfUds5+iS0C1MJenJKogHMUPpxgZ4Jbcnmw==",
       "type": "package",
-      "path": "xamarin.googleplayservices.iid/42.1021.1",
+      "path": "xamarin.googleplayservices.iid/60.1142.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "build/MonoAndroid70/Xamarin.GooglePlayServices.Iid.targets",
-        "lib/MonoAndroid70/Xamarin.GooglePlayServices.Iid.dll",
-        "xamarin.googleplayservices.iid.42.1021.1.nupkg.sha512",
+        "build/MonoAndroid80/Xamarin.GooglePlayServices.Iid.targets",
+        "lib/MonoAndroid80/Xamarin.GooglePlayServices.Iid.dll",
+        "xamarin.googleplayservices.iid.60.1142.1.nupkg.sha512",
         "xamarin.googleplayservices.iid.nuspec"
       ]
     },
-    "Xamarin.GooglePlayServices.Tasks/42.1021.1": {
-      "sha512": "jIhcZpsrD0KzXGnP6WmkiJw9tsW5kcl2WyzS3Fg36STZRWwc6cmF3hc1+fjz0ndNS3J5H1S+GHqO8t3REk7G9Q==",
+    "Xamarin.GooglePlayServices.Tasks/60.1142.1": {
+      "sha512": "DS4MgQWwbAuAf5gXGPAPCpuCVkElQSTv/iguZ9Ca5vmiXpbrbvCpN5JhxBYu2qGkSn1wwX37bI+EHib/FVQthg==",
       "type": "package",
-      "path": "xamarin.googleplayservices.tasks/42.1021.1",
+      "path": "xamarin.googleplayservices.tasks/60.1142.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "build/MonoAndroid70/Xamarin.GooglePlayServices.Tasks.targets",
-        "lib/MonoAndroid70/Xamarin.GooglePlayServices.Tasks.dll",
-        "xamarin.googleplayservices.tasks.42.1021.1.nupkg.sha512",
+        "build/MonoAndroid80/Xamarin.GooglePlayServices.Tasks.targets",
+        "lib/MonoAndroid80/Xamarin.GooglePlayServices.Tasks.dll",
+        "xamarin.googleplayservices.tasks.60.1142.1.nupkg.sha512",
         "xamarin.googleplayservices.tasks.nuspec"
       ]
     },
@@ -5033,14 +5123,14 @@
     "MonoAndroid,Version=v8.1": [
       "Com.OneSignal >= 3.2.2",
       "Newtonsoft.Json >= 12.0.1",
-      "PropertyChanged.Fody >= 2.6.0",
+      "PropertyChanged.Fody >= 2.6.1",
       "RestSharp >= 106.6.9",
       "Syncfusion.Licensing >= 16.4.0.54",
-      "Syncfusion.Xamarin.Buttons >= 16.4.0.54",
-      "Syncfusion.Xamarin.SfAutoComplete >= 16.4.0.54",
-      "Syncfusion.Xamarin.SfBusyIndicator >= 16.4.0.54",
-      "Syncfusion.Xamarin.SfComboBox >= 16.4.0.54",
-      "Syncfusion.Xamarin.SfListView >= 16.4.0.54",
+      "Syncfusion.Xamarin.Buttons >= 17.1.0.38",
+      "Syncfusion.Xamarin.SfAutoComplete >= 17.1.0.38",
+      "Syncfusion.Xamarin.SfBusyIndicator >= 17.1.0.38",
+      "Syncfusion.Xamarin.SfComboBox >= 17.1.0.38",
+      "Syncfusion.Xamarin.SfListView >= 17.1.0.38",
       "Xam.Plugins.Settings >= 3.1.1",
       "Xamarin.Android.Support.CustomTabs >= 28.0.0.1",
       "Xamarin.Android.Support.Design >= 28.0.0.1",
@@ -5050,6 +5140,8 @@
       "Xamarin.Android.Support.v7.MediaRouter >= 28.0.0.1",
       "Xamarin.Build.Download >= 0.4.11",
       "Xamarin.Forms >= 3.6.0.264807",
+      "Xamarin.GooglePlayServices.Auth >= 60.1142.1",
+      "Xamarin.GooglePlayServices.Gcm >= 60.1142.1",
       "Xamarin.Plugin.FilePicker >= 2.0.135"
     ]
   },
@@ -5096,7 +5188,7 @@
           },
           "PropertyChanged.Fody": {
             "target": "Package",
-            "version": "[2.6.0, )"
+            "version": "[2.6.1, )"
           },
           "RestSharp": {
             "target": "Package",
@@ -5108,23 +5200,23 @@
           },
           "Syncfusion.Xamarin.Buttons": {
             "target": "Package",
-            "version": "[16.4.0.54, )"
+            "version": "[17.1.0.38, )"
           },
           "Syncfusion.Xamarin.SfAutoComplete": {
             "target": "Package",
-            "version": "[16.4.0.54, )"
+            "version": "[17.1.0.38, )"
           },
           "Syncfusion.Xamarin.SfBusyIndicator": {
             "target": "Package",
-            "version": "[16.4.0.54, )"
+            "version": "[17.1.0.38, )"
           },
           "Syncfusion.Xamarin.SfComboBox": {
             "target": "Package",
-            "version": "[16.4.0.54, )"
+            "version": "[17.1.0.38, )"
           },
           "Syncfusion.Xamarin.SfListView": {
             "target": "Package",
-            "version": "[16.4.0.54, )"
+            "version": "[17.1.0.38, )"
           },
           "Xam.Plugins.Settings": {
             "target": "Package",
@@ -5162,6 +5254,14 @@
             "target": "Package",
             "version": "[3.6.0.264807, )"
           },
+          "Xamarin.GooglePlayServices.Auth": {
+            "target": "Package",
+            "version": "[60.1142.1, )"
+          },
+          "Xamarin.GooglePlayServices.Gcm": {
+            "target": "Package",
+            "version": "[60.1142.1, )"
+          },
           "Xamarin.Plugin.FilePicker": {
             "target": "Package",
             "version": "[2.0.135, )"
@@ -5187,6 +5287,56 @@
       "warningLevel": 1,
       "message": "Версия обнаруженного пакета нарушает ограничение зависимости: Com.OneSignal 3.2.2 требуется Xamarin.Android.Support.CustomTabs (>= 27.0.0 && < 27.2.0), но в результате разрешения получена версия Xamarin.Android.Support.CustomTabs 28.0.0.1.",
       "libraryId": "Xamarin.Android.Support.CustomTabs",
+      "targetGraphs": [
+        "MonoAndroid,Version=v8.1"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Обнаружено понижение версии пакета Syncfusion.Licensing с 17.1.0.38 на 16.4.0.54. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n ServiceDesk.Android -> Syncfusion.Xamarin.Buttons 17.1.0.38 -> Syncfusion.Xamarin.Core 17.1.0.38 -> Syncfusion.Licensing (>= 17.1.0.38) \r\n ServiceDesk.Android -> Syncfusion.Licensing (>= 16.4.0.54)",
+      "libraryId": "Syncfusion.Licensing",
+      "targetGraphs": [
+        "MonoAndroid,Version=v8.1"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Обнаружено понижение версии пакета Syncfusion.Licensing с 17.1.0.38 на 16.4.0.54. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n ServiceDesk.Android -> Syncfusion.Xamarin.SfAutoComplete 17.1.0.38 -> Syncfusion.Xamarin.Core 17.1.0.38 -> Syncfusion.Licensing (>= 17.1.0.38) \r\n ServiceDesk.Android -> Syncfusion.Licensing (>= 16.4.0.54)",
+      "libraryId": "Syncfusion.Licensing",
+      "targetGraphs": [
+        "MonoAndroid,Version=v8.1"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Обнаружено понижение версии пакета Syncfusion.Licensing с 17.1.0.38 на 16.4.0.54. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n ServiceDesk.Android -> Syncfusion.Xamarin.SfBusyIndicator 17.1.0.38 -> Syncfusion.Xamarin.Core 17.1.0.38 -> Syncfusion.Licensing (>= 17.1.0.38) \r\n ServiceDesk.Android -> Syncfusion.Licensing (>= 16.4.0.54)",
+      "libraryId": "Syncfusion.Licensing",
+      "targetGraphs": [
+        "MonoAndroid,Version=v8.1"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Обнаружено понижение версии пакета Syncfusion.Licensing с 17.1.0.38 на 16.4.0.54. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n ServiceDesk.Android -> Syncfusion.Xamarin.SfComboBox 17.1.0.38 -> Syncfusion.Xamarin.Core 17.1.0.38 -> Syncfusion.Licensing (>= 17.1.0.38) \r\n ServiceDesk.Android -> Syncfusion.Licensing (>= 16.4.0.54)",
+      "libraryId": "Syncfusion.Licensing",
+      "targetGraphs": [
+        "MonoAndroid,Version=v8.1"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Обнаружено понижение версии пакета Syncfusion.Licensing с 17.1.0.38 на 16.4.0.54. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n ServiceDesk.Android -> Syncfusion.Xamarin.SfListView 17.1.0.38 -> Syncfusion.Xamarin.Core 17.1.0.38 -> Syncfusion.Licensing (>= 17.1.0.38) \r\n ServiceDesk.Android -> Syncfusion.Licensing (>= 16.4.0.54)",
+      "libraryId": "Syncfusion.Licensing",
       "targetGraphs": [
         "MonoAndroid,Version=v8.1"
       ]

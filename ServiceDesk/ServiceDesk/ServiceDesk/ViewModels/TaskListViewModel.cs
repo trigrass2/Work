@@ -26,6 +26,7 @@ namespace ServiceDesk.ViewModels
 
         public INavigation Navigation { get; set; }
         public ICommand CreateTaskCommand { get; set; }
+        public ICommand OpenProfileCommand { get; set; }
 
         private ServiceDesk_StatusListView _allTasksStatus = new ServiceDesk_StatusListView { Status_id = 3740, Status_name = "Все заявки" };
         private ServiceDesk_StatusListView _selectedStatus;
@@ -51,6 +52,11 @@ namespace ServiceDesk.ViewModels
             CreateTaskCommand = new Command(GoInCreatePage);
         }
         
+        public async void OpenProfile()
+        {
+            await Navigation.PushAsync(new ProfilePage());
+        }
+
         /// <summary>
         /// переходит на страницу создания заявки
         /// </summary>
