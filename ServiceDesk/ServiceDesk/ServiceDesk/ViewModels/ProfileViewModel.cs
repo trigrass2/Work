@@ -13,8 +13,7 @@ namespace ServiceDesk.ViewModels
     public class ProfileViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-
-        public ApplicationUser User { get; set; }
+       
         public UserModel MyProfile { get; set; } 
         public ObservableCollection<ServiceDesk_GroupUserListView> Groups { get; set; }
 
@@ -28,6 +27,9 @@ namespace ServiceDesk.ViewModels
             ExitCommand = new Command(Exit);
         }
 
+        /// <summary>
+        /// Выводит из текущего профиля
+        /// </summary>
         private void Exit()
         {
             //var cookieManager = CookieManager.Instance;
@@ -35,9 +37,12 @@ namespace ServiceDesk.ViewModels
             App.Current.MainPage = new NavigationPage(new StartPage());
         }
 
+        /// <summary>
+        /// Обновляет список пользователей
+        /// </summary>
         private void UpdateUser()
         {
-            User = ServiceDeskApi.GetUser<ApplicationUser>(ServiceDeskApi.ApiEnum.GetUserInfo);
+            var User = ServiceDeskApi.GetUser<ApplicationUser>(ServiceDeskApi.ApiEnum.GetUserInfo);
             MyProfile = ServiceDeskApi.GetAllUsers(new { User_id = User.Id, Search = default(string) }, ServiceDeskApi.ApiEnum.GetUsersList).FirstOrDefault();
             Groups.Clear();
             var groupCollection = ServiceDeskApi.GetDataServisDeskManagment<ServiceDesk_GroupUserListView>(new { Group_id = default(int?), User_id = User.Id }, ServiceDeskApi.ApiEnum.GetGroupsUsers);

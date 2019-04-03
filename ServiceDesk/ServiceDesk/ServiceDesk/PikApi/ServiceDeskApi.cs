@@ -1,14 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.IO;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
-using Android.Net;
 using Newtonsoft.Json;
-using Plugin.Settings;
-using Plugin.Settings.Abstractions;
 using RestSharp;
 using ServiceDesk.Models;
 

@@ -102,30 +102,6 @@ namespace ServiceDesk.ViewModels
         private bool _initializedFactorys = false;
         private bool _initializedUsers = false;
 
-        private bool _isBusy;
-        public bool IsBusy
-        {
-            get
-            {
-                return _isBusy;
-            }
-            set
-            {
-                _isBusy = value;
-                OnPropertyChanged("IsBusy");
-                OnPropertyChanged("IsLoaded");
-            }
-        }
-
-        private bool _isLoaded;
-        public bool IsLoaded
-        {
-            get
-            {
-                return !_isBusy;
-            }
-        }
-
         #region set model
 
         public string Title

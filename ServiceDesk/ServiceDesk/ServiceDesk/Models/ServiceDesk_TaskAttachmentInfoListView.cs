@@ -45,4 +45,15 @@ namespace ServiceDesk.Models
         /// </summary>
         public string User_name { get; set; }
     }
+
+    /// <summary>
+    /// Модель прикрепленного файла
+    /// </summary>
+    public class AttachmentFileModel : ServiceDesk_TaskAttachmentInfoListView
+    {       
+        /// <summary>
+        /// Содержимое файла
+        /// </summary>
+        public byte[] Attachment_bytes { get; set; }
+    }
 }

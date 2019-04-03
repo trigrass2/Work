@@ -2,8 +2,7 @@
 using System.ComponentModel;
 
 namespace ServiceDesk.Models
-{    
-    [Serializable]
+{      
     /// <summary>
     /// Модель комментария
     /// </summary>

@@ -162,11 +162,14 @@ namespace ServiceDesk.ViewModels
             NewTask.Unit_id = _selectedUnit?.Unit_id ?? null;
             NewTask.Recipient_id = Users.Where(x => x.UserName == _selectedUser).Select(x => x.Id).FirstOrDefault();
             await ServiceDeskApi.SendDataToServerAsync(NewTask, ServiceDeskApi.ApiEnum.EditTask);
-            UpdateCOntext();
+            UpdateContext();
             await Navigation.PopAsync();
         }
 
-        private void UpdateCOntext()
+
+        #region UPDATE DATA
+
+        private void UpdateContext()
         {
             NavigationPage navPage = (NavigationPage)Application.Current.MainPage;
             IReadOnlyList<Page> navStack = navPage.Navigation.NavigationStack;
@@ -177,7 +180,6 @@ namespace ServiceDesk.ViewModels
                 homePage.TaskViewModel.UpdateContext();
             }
         }
-        #region UPDATE DATA
 
         public async Task UpdateUsers()
         {

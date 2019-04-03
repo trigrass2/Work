@@ -92,6 +92,11 @@ namespace ServiceDesk.ViewModels
             ServiceDesk_TaskListView = d.Where(x => x.Task_id == ServiceDesk_TaskListView.Task_id).FirstOrDefault();
         }
 
+        /// <summary>
+        /// Скачивает файл на телефон
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <param name="dataArray"></param>
         public async void DownloadFiles(string fileName, byte[] dataArray)
         {           
              

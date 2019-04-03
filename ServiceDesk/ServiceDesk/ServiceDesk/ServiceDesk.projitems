@@ -15,22 +15,19 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Models\AddTaskCommentModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ApplicationUser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\BaseTask.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\BaseUser.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\CreateTaskModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\EditTaskCommentModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\EditTaskModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\GetTasksModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Product_FactoryListView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Product_PlantListView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Product_UnitListView.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Push\SubButton.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ServiceDeskListViews.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ServiceDesk_GroupUserListView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ServiceDesk_TaskAttachmentInfoListView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ServiceDesk_TaskCommentListView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ServiceDesk_TaskListView.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\ServiceDesk_TypeListView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\User.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\UserModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MyEntry.cs" />
@@ -38,7 +35,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AuthViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\CreateTaskViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\EditTaskViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\GoogleAuthViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LocalAuthViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ProfileViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\StartPageViewModel.cs" />

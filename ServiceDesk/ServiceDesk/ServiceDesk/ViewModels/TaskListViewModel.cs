@@ -9,7 +9,6 @@ using ServiceDesk.Views;
 using Xamarin.Forms;
 using Com.OneSignal;
 using System.Collections.Generic;
-using ServiceDesk.Models.Push;
 using System;
 
 namespace ServiceDesk.ViewModels
@@ -42,9 +41,7 @@ namespace ServiceDesk.ViewModels
                 UpdateTasks(_selectedStatus.Status_id);
             }
         }
-
-        public bool IsBusy { get; set; } = false;
-
+        
         public TaskListViewModel()
         {            
             Tasks = new ObservableCollection<ServiceDesk_TaskListView>();
@@ -145,6 +142,7 @@ namespace ServiceDesk.ViewModels
 
         private bool IsInitialiseSubscribed { get; set; } = false;
         ApplicationUser _user;
+
         public void UpdateSubscribed()
         {
             IsInitialiseSubscribed = true;
@@ -171,36 +169,7 @@ namespace ServiceDesk.ViewModels
                     OneSignal.Current.DeleteTag(t.Key.ToString());
                 }
                 OneSignal.Current.SendTag(_user.Id, "User_id");
-                return;
-                #region ccc
-                //List<SubButton> subscriptions = await GetSubsAsync();
-                //if (subscriptions == null)
-                //    return;
-                //foreach (SubButton sb in subscriptions)
-                //{
-
-                //    switcher.Toggled += delegate (object sender, ToggledEventArgs e)
-                //    {
-                //        if (e.Value)
-                //            OneSignal.Current.SendTag(sb.Id.ToString(), sb.Label);
-                //        else
-                //            OneSignal.Current.DeleteTag(sb.Id.ToString());
-                //    };
-
-                //    await Task.Run(() =>
-                //    {
-                //        var tcs = new TaskCompletionSource<bool>();
-                //        Device.BeginInvokeOnMainThread(() =>
-                //        {
-                //            SubList.Children.Add(stack);
-                //            tcs.SetResult(false);
-                //        });
-                //        return tcs.Task;
-                //    });
-                //}
-
-                //return;
-                #endregion
+                return;                
             }
             catch (Exception e)
             {

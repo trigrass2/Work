@@ -1,14 +1,11 @@
-﻿using System.ComponentModel;
-
+﻿
 namespace ServiceDesk.Models
 {
     /// <summary>
     /// Учетные данные для входа
     /// </summary>
-    public class User : INotifyPropertyChanged
-    {
-        public event PropertyChangedEventHandler PropertyChanged;
-
+    public class User : BaseUser
+    {        
         public string Login { get; set; }
         public string Password { get; set; }
     }

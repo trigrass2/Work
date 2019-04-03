@@ -1,6 +1,4 @@
 ﻿using System;
-using System.ComponentModel;
-using System.Runtime.Serialization;
 
 namespace ServiceDesk.Models
 {
@@ -8,17 +6,12 @@ namespace ServiceDesk.Models
     /// <summary>
     /// Модель заявки для отображения
     /// </summary>
-    public class ServiceDesk_TaskListView : INotifyPropertyChanged
+    public class ServiceDesk_TaskListView : BaseTask
     {        
         /// <summary>
         /// ID заявки
         /// </summary>
         public int Task_id { get; set; }
-
-        /// <summary>
-        /// ID типа заявки
-        /// </summary>
-        public int Type_id { get; set; }
 
         /// <summary>
         /// Тип заявки
@@ -44,17 +37,7 @@ namespace ServiceDesk.Models
         /// Время создания заявки
         /// </summary>
         public DateTime Timestamp { get; set; }
-        
-        /// <summary>
-        /// Заголовок заякви
-        /// </summary>
-        public  string Title { get; set; }
-        
-        /// <summary>
-        /// Текст заявки
-        /// </summary>
-        public string Text { get; set; }
-
+       
         /// <summary>
         /// Создатель заявки
         /// </summary>
@@ -76,19 +59,9 @@ namespace ServiceDesk.Models
         public string Recipient_phone { get; set; }
 
         /// <summary>
-        /// ID Завода
-        /// </summary>
-        public int? Factory_id { get; set; }
-
-        /// <summary>
         /// Завод
         /// </summary>
         public string Factory_name { get; set; }
-
-        /// <summary>
-        /// ID Линии завода
-        /// </summary>
-        public int? Plant_id { get; set; }
 
         /// <summary>
         /// Линия
@@ -96,20 +69,8 @@ namespace ServiceDesk.Models
         public string Plant_name { get; set; }
 
         /// <summary>
-        /// ID Производственной единицы 
-        /// </summary>
-        public int? Unit_id { get; set; }
-
-        /// <summary>
         /// Подразделение
         /// </summary>
         public string Unit_name { get; set; }
-
-        /// <summary>
-        /// ID Производственной единицы
-        /// </summary>
-        public string Recipient_id { get; set; }
-
-        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

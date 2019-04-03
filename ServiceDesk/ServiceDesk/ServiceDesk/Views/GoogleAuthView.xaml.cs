@@ -32,8 +32,7 @@ namespace ServiceDesk.Views
         }
         
         private async void WebViewOnNavigated(object sender, WebNavigatedEventArgs e)
-        {            
-            
+        {                       
             var access_token = ExtractCodeFromUrl(e.Url);
             string accessToken = string.Empty;
             if (access_token != "")
