@@ -50,8 +50,12 @@ namespace ServiceDesk.ViewModels
             Tasks = new ObservableCollection<ServiceDesk_TaskListView>();
             Statuses = new ObservableCollection<ServiceDesk_StatusListView>();
             CreateTaskCommand = new Command(GoInCreatePage);
+            OpenProfileCommand = new Command(OpenProfile);
         }
         
+        /// <summary>
+        /// переходит на страницу профиля
+        /// </summary>
         public async void OpenProfile()
         {
             await Navigation.PushAsync(new ProfilePage());

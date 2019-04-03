@@ -64,9 +64,9 @@ namespace ServiceDesk
                         }
                         else
                         {
-                            if (ServiceDeskApi.AccessToken != null && serviceDesk_TaskListView != null)
-                            {                                
-                                MainPage = new NavigationPage(new SelectedTaskPage(new ViewModels.TaskViewModel(serviceDesk_TaskListView)));
+                            if (ServiceDeskApi.AccessToken != null)
+                            {
+                                MainPage = new NavigationPage(new MenuPage());//(new SelectedTaskPage(new ViewModels.TaskViewModel(serviceDesk_TaskListView)));
                                 IsNotified = true;
                             }
                             else
@@ -82,9 +82,9 @@ namespace ServiceDesk
                 }
                 else
                 {
-                    if (ServiceDeskApi.AccessToken != null && serviceDesk_TaskListView != null)
+                    if (ServiceDeskApi.AccessToken != null)
                     {
-                        MainPage = new NavigationPage(new SelectedTaskPage(new ViewModels.TaskViewModel(serviceDesk_TaskListView)));
+                        MainPage = new NavigationPage(new MenuPage());//(new SelectedTaskPage(new ViewModels.TaskViewModel(serviceDesk_TaskListView)));
                     }
                     else
                     {

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using ServiceDesk.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +10,7 @@ namespace ServiceDesk.Views
 		public ProfilePage ()
 		{
 			InitializeComponent ();
+            BindingContext = new ProfileViewModel() { Navigation = this.Navigation };
 		}
 	}
 }

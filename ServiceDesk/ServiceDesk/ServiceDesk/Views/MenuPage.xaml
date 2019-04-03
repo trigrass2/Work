@@ -2,7 +2,6 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
-             xmlns:syncfusion="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
              x:Class="ServiceDesk.Views.MenuPage"
              BackgroundColor="Accent">
     <ContentPage.Resources>
@@ -10,7 +9,8 @@
             <Style TargetType="Label">
                 <Setter Property="TextColor" Value="#464451"/>
                 <Setter Property="HorizontalOptions" Value="Start"/>
-            </Style>            
+            </Style>  
+            
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>        
@@ -21,12 +21,12 @@
                         <ColumnDefinition/>
                         <ColumnDefinition Width="70"/>
                     </Grid.ColumnDefinitions>
-                    <StackLayout VerticalOptions="Start" HorizontalOptions="Start" Padding="30">
+                    <StackLayout VerticalOptions="Start" HorizontalOptions="Start">
                         <combobox:SfComboBox HeightRequest="40" x:Name="comboBox" DataSource="{Binding Statuses}" DisplayMemberPath="Status_name"
                                              SelectedItem="{Binding SelectedStatus}" />
                     </StackLayout>
                     <Button x:Name="profileButton" BackgroundColor="Accent" Image="baseline_person_black_18dp.png" 
-                            TextColor="#464451" Grid.Column="1" Command="{Binding GoToSettings}" 
+                            TextColor="#464451" Grid.Column="1" Command="{Binding OpenProfileCommand}" 
                             HeightRequest="50" WidthRequest="50" VerticalOptions="Start" HorizontalOptions="End"/>
                 </Grid>
                 <ListView x:Name="listViewTasks" Margin="5,0,0,0" HasUnevenRows="True" ItemsSource="{Binding Tasks}" 
@@ -35,20 +35,15 @@
                         <DataTemplate>
                             <ViewCell>
                                 <ViewCell.View>
-                                    <Grid>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="Auto"/>
-                                            <ColumnDefinition Width="50"/>
-                                            <ColumnDefinition Width="Auto"/>
-                                        </Grid.ColumnDefinitions>
+                                    <Grid>                                        
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="Auto"/>
                                             <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
                                         </Grid.RowDefinitions>
-                                        <Label Text="{Binding Title}" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" FontAttributes="Bold"/>                                        
-                                        <Label Text="{Binding Initiator_name}" Grid.Column="0" Grid.Row="1"/>
-                                        <Label Text=">" Grid.Column="1" Grid.Row="1"/>
-                                        <Label Text="{Binding Recipient_name}" Grid.Column="2" Grid.Row="1"/>
+                                        <Label Text="{Binding Title}" Grid.Row="0" FontAttributes="Bold"/>
+                                        <Label Text="{Binding Initiator_name, StringFormat='Заявитель: {0}'}" Grid.Row="1"/>
+                                        <Label Text="{Binding Recipient_name, StringFormat='Исполнитель: {0}'}" Grid.Row="2"/>
                                     </Grid>
                                 </ViewCell.View>
                             </ViewCell>

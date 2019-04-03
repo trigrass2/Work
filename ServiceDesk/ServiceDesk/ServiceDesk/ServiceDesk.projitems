@@ -26,6 +26,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\Product_UnitListView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Push\SubButton.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ServiceDeskListViews.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ServiceDesk_GroupUserListView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ServiceDesk_TaskAttachmentInfoListView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ServiceDesk_TaskCommentListView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ServiceDesk_TaskListView.cs" />

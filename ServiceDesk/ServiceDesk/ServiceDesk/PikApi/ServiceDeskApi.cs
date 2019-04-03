@@ -46,7 +46,8 @@ namespace ServiceDesk.PikApi
             GetProductPlantList,
             GetProductUnitList,
             GetUsersList,
-            GetStatuses
+            GetStatuses,
+            GetGroupsUsers
         }
 
         #region SERVICE DESK
@@ -246,6 +247,26 @@ namespace ServiceDesk.PikApi
         #endregion
 
         #region SERVICE DESK MANAGMENT
+
+        public static IEnumerable<T> GetDataServisDeskManagment<T>(object dataModel,ApiEnum nameApi)
+        {
+            RestClient client = new RestClient($"{connectionString}ServiceDeskManagement/{Enum.GetName(typeof(ApiEnum), nameApi)}");
+            RestRequest request = new RestRequest(Method.POST);
+
+            request.AddHeader("authorization", $"Bearer {AccessToken}");
+            request.RequestFormat = DataFormat.Json;
+
+            string jsonModel = JsonConvert.SerializeObject(dataModel);
+            request.AddParameter("application/json", jsonModel, ParameterType.RequestBody);
+
+            IRestResponse restResponse = client.Execute(request);
+
+            if (restResponse.IsSuccessful)
+            {
+                return JsonConvert.DeserializeObject<IEnumerable<T>>(restResponse.Content);
+            }
+            else return default(IEnumerable<T>);
+        }
 
         /// <summary>
         /// Асинхронно возвращает данные из системы управления ServiceDesk
