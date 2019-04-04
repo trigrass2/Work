@@ -2,8 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:autocomplete="clr-namespace:Syncfusion.SfAutoComplete.XForms;assembly=Syncfusion.SfAutoComplete.XForms"
-             x:Class="ServiceDesk.Views.EditTaskView"  
-             BackgroundColor="Accent">
+             x:Class="ServiceDesk.Views.EditTaskView"
+             BackgroundColor="White">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style TargetType="Label">
@@ -33,10 +33,11 @@
                 </StackLayout>
                 <Button 
                     Text="Ok"                
-                    TextColor="Accent"
+                    TextColor="White"
                     BackgroundColor="#464451"                              
                     CornerRadius="10"
                     Command="{Binding SendTaskCommand}"
+                    Margin="0,0,0,3"
                     />
             </StackLayout>
         </ScrollView>              

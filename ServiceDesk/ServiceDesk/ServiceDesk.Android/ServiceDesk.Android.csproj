@@ -149,11 +149,7 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\drawable-xhdpi\" />
-    <Folder Include="Resources\drawable-xxhdpi\" />
-    <Folder Include="Resources\drawable-xxxhdpi\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\splash_logo.PNG" />
   </ItemGroup>
@@ -161,32 +157,27 @@
     <Content Include="FodyWeavers.xml" />
     <AndroidResource Include="Resources\drawable\splash_screen.xml" />
     <AndroidResource Include="Resources\drawable\ViewCellBackground.xml" />
-    <AndroidResource Include="Resources\drawable-hdpi\baseline_settings_black_18.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\baseline_settings_black_24.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\baseline_settings_black_36.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\baseline_settings_black_48.png" />
-    <AndroidResource Include="Resources\drawable\baseline_call_24.xml" />
-    <AndroidResource Include="Resources\drawable-hdpi\baseline_call_black_18.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\baseline_call_black_24.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\baseline_call_black_36.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\baseline_call_black_48.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\baseline_attach_file_white_18.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\baseline_attach_file_white_24.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\baseline_attach_file_white_36.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\baseline_attach_file_white_48.png" />
-    <AndroidResource Include="Resources\drawable\baseline_attach_file_24.xml" />
-    <AndroidResource Include="Resources\drawable\baseline_create_24.xml" />
-    <AndroidResource Include="Resources\drawable\baseline_send_24.xml" />
-    <AndroidResource Include="Resources\drawable-hdpi\baseline_send_white_18.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\baseline_send_white_24.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\baseline_send_white_36.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\baseline_send_white_48.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\baseline_create_black_18.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\baseline_create_black_24.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\baseline_create_black_36.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\baseline_create_black_48.png" />
     <AndroidResource Include="Resources\drawable\StartLabel.PNG" />
-    <AndroidResource Include="Resources\drawable-hdpi\baseline_person_black_18dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_profile.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_profile.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_profile.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_profile.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_edit.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_edit.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_edit.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_edit.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_attach_file.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_attach_file.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_attach_file.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_attach_file.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_send.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_send.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_send.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_send.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_call.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_call.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_call.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_call.png" />
   </ItemGroup>
   <Import Project="..\ServiceDesk\ServiceDesk.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

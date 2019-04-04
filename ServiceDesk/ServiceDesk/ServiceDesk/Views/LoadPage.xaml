@@ -3,9 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
              x:Class="ServiceDesk.Views.LoadPage"
-             BackgroundColor="Accent">
+             BackgroundColor="White">
     <ContentPage.Content>       
-            <syncfusion:SfBusyIndicator x:Name="busyindicator" AnimationType="Ball" Title="Loading..."
+            <syncfusion:SfBusyIndicator x:Name="busyindicator" AnimationType="Ball"
                                         ViewBoxWidth = "150" ViewBoxHeight="150" TextColor="#464451" 
                                         VerticalOptions="Center" HorizontalOptions="Center"/>       
     </ContentPage.Content>

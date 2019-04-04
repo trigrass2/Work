@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:autocomplete="clr-namespace:Syncfusion.SfAutoComplete.XForms;assembly=Syncfusion.SfAutoComplete.XForms"
              x:Class="ServiceDesk.Views.SendTaskPage"
-             BackgroundColor="Accent">
+             BackgroundColor="White">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style TargetType="Label">
@@ -76,7 +76,7 @@
             </ScrollView>
             <Button 
                 Text="Добавить"                
-                TextColor="Accent"
+                TextColor="White"
                 BackgroundColor="#464451"                
                 RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, 
                 Property=Width, Factor=0.35, Constant=0}"
@@ -85,15 +85,6 @@
                 CornerRadius="10"
                 Command="{Binding SendTaskCommand}"
                 />
-            <StackLayout IsVisible="{Binding IsBusy}"
-                    RelativeLayout.XConstraint = "{ConstraintExpression Type=RelativeToParent, 
-                Property=Width, Factor=0.35, Constant=0}"
-                RelativeLayout.YConstraint = "{ConstraintExpression Type=RelativeToParent, 
-                Property=Height, Factor=1, Constant=50}">
-                <Label Text="Загрузка данных..." TextColor="Gray" HorizontalOptions="Center" />
-                <ActivityIndicator IsRunning="{Binding IsBusy}" Color="Red" >
-                </ActivityIndicator>
-            </StackLayout>
         </RelativeLayout>
     </ContentPage.Content>
 </ContentPage>
