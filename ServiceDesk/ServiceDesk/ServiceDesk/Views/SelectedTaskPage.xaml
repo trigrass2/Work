@@ -77,7 +77,7 @@
                     <Label Text="линия " TextColor="#8c8c8c" IsVisible="{Binding IsVisiblePlant}"/>
                     <Label x:Name="plantLabel" Text="{Binding ServiceDesk_TaskListView.Plant_name}" IsVisible="{Binding IsVisiblePlant}"/>
 
-                    <Label Text="производственная единица" TextColor="Black" IsVisible="{Binding IsVisibleUnit}"/>
+                    <Label Text="производственная единица" TextColor="#8c8c8c" IsVisible="{Binding IsVisibleUnit}"/>
                     <Label x:Name="unitLabel" Text="{Binding ServiceDesk_TaskListView.Unit_name}" IsVisible="{Binding IsVisibleUnit}"/>
 
                     <ListView IsVisible="{Binding IsVisibleAttach}" BackgroundColor="White" 

@@ -41,6 +41,7 @@ namespace ServiceDesk.ViewModels
                 UpdateTasks(_selectedStatus.Status_id);
             }
         }
+        public bool IsBoosy { get; set; } = true;
         
         public TaskListViewModel()
         {            
@@ -78,6 +79,7 @@ namespace ServiceDesk.ViewModels
             {
                 Statuses.Add(s);
             }
+
             Statuses.Add(_allTasksStatus);
             SelectedStatus = Statuses.Where(x => x.Status_id == 1).FirstOrDefault();
         }
@@ -89,16 +91,15 @@ namespace ServiceDesk.ViewModels
         public async Task UpdateTasksAsync(int statusId)
         {
             var items = await ServiceDeskApi.GetDataAsync<ServiceDesk_TaskListView>(ServiceDeskApi.ApiEnum.GetTasks);
-            var sortItems = items.OrderBy(x => x.Status_id).Select(x => x);
             if(statusId != 3740)
             {
-                sortItems = sortItems.Where(x => x.Status_id == statusId);
+                items = items.Where(x => x.Status_id == statusId);
             }
             Tasks.Clear();
             
-            if(sortItems != null)
+            if(items != null)
             {
-                foreach (var i in sortItems)
+                foreach (var i in items)
                 {                    
                     Tasks.Add(i);
                 }                
@@ -143,10 +144,10 @@ namespace ServiceDesk.ViewModels
         private bool IsInitialiseSubscribed { get; set; } = false;
         ApplicationUser _user;
 
-        public void UpdateSubscribed()
+        public async Task UpdateSubscribed()
         {
             IsInitialiseSubscribed = true;
-            _user = ServiceDeskApi.GetUser<ApplicationUser>(ServiceDeskApi.ApiEnum.GetUserInfo);
+            _user = await ServiceDeskApi.GetUserAsync<ApplicationUser>(ServiceDeskApi.ApiEnum.GetUserInfo);
 
             OneSignal.Current.GetTags(TagsReceived);
         }

@@ -106,9 +106,9 @@ namespace ServiceDesk.PikApi
         /// Отправляет данные на сервер
         /// </summary>
         /// <typeparam name="T">Тип отправляемых данных</typeparam>
-        /// <param name="commentModel">Отправляемые данные</param>
+        /// <param name="dataModel">Отправляемые данные</param>
         /// <param name="nameApi">Имя функции из API</param>
-        public static void SendDataToServer<T>(T commentModel, ApiEnum nameApi)
+        public static void SendDataToServer<T>(T dataModel, ApiEnum nameApi)
         {
             RestClient client = new RestClient($"{connectionString}ServiceDesk/{Enum.GetName(typeof(ApiEnum), nameApi)}");
             RestRequest request = new RestRequest(Method.POST);
@@ -116,7 +116,7 @@ namespace ServiceDesk.PikApi
             request.AddHeader("authorization", $"Bearer {AccessToken}");
             request.RequestFormat = DataFormat.Json;
 
-            string commentJson = JsonConvert.SerializeObject(commentModel);
+            string commentJson = JsonConvert.SerializeObject(dataModel);
             request.AddParameter("application/json", commentJson, ParameterType.RequestBody);
 
             IRestResponse restResponse = client.Execute(request);
@@ -516,7 +516,23 @@ namespace ServiceDesk.PikApi
                 return JsonConvert.DeserializeObject<T>(restResponse.Content);
             }
             else return default(T);
-        }        
+        }
+
+        public async static Task<T> GetUserAsync<T>(ApiEnum nameApi)
+        {
+            RestClient client = new RestClient($"{connectionString}Auth/{Enum.GetName(typeof(ApiEnum), nameApi)}");
+            RestRequest request = new RestRequest(Method.GET);
+
+            request.AddHeader("authorization", $"Bearer {AccessToken}");
+            request.RequestFormat = DataFormat.Json;
+
+            IRestResponse restResponse = await client.ExecuteTaskAsync(request);
+            if (restResponse.IsSuccessful)
+            {
+                return JsonConvert.DeserializeObject<T>(restResponse.Content);
+            }
+            else return default(T);
+        }
 
     }
 

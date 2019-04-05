@@ -8,28 +8,40 @@
         <ResourceDictionary>
             <Style TargetType="Label">
                 <Setter Property="TextColor" Value="#464451"/>
-                <Setter Property="HorizontalOptions" Value="Start"/>
-            </Style>  
-            
+                <Setter Property="HorizontalOptions" Value="Start"/>               
+            </Style>
+            <Style x:Key="ProductUnitStyle" TargetType="Label">
+                <Style.Triggers>
+                    <Trigger Property="Label.Text" Value="{x:Null}" TargetType="Label">
+                        <Setter Property="IsVisible" Value="False"/>
+                    </Trigger>
+                    <Trigger Property="Label.Text" Value="" TargetType="Label">
+                        <Setter Property="IsVisible" Value="False"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>        
         <RelativeLayout>            
-            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">                
-                <Grid>
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Grid BackgroundColor="#464451">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition Width="70"/>
                     </Grid.ColumnDefinitions>
-                    <StackLayout VerticalOptions="Start" HorizontalOptions="Start">
-                        <combobox:SfComboBox HeightRequest="40" x:Name="comboBox" DataSource="{Binding Statuses}" DisplayMemberPath="Status_name"
-                                             SelectedItem="{Binding SelectedStatus}" />
-                    </StackLayout>
-                    <ImageButton x:Name="profileButton" BackgroundColor="White" Source="ic_profile.png" 
+                    <Frame VerticalOptions="Center" HorizontalOptions="Start" Margin="5,0,0,0" CornerRadius="5" Padding="1">
+                        <StackLayout>
+                            <combobox:SfComboBox HeightRequest="40" x:Name="comboBox" DataSource="{Binding Statuses}" DisplayMemberPath="Status_name"
+                                             SelectedItem="{Binding SelectedStatus}" BackgroundColor="White" DropDownCornerRadius="5" ShowBorder="False" TextColor="#464451"/>
+                        </StackLayout>
+                    </Frame>
+                    
+                    <ImageButton x:Name="profileButton" BackgroundColor="#464451" Source="ic_profile.png" 
                             Grid.Column="1" Command="{Binding OpenProfileCommand}"/>
                     
                 </Grid>
-                <ListView x:Name="listViewTasks" Margin="5,0,0,0" HasUnevenRows="True" ItemsSource="{Binding Tasks}" 
+                <ListView x:Name="listViewTasks" Margin="5,0,0,3" HasUnevenRows="True" ItemsSource="{Binding Tasks}" 
                           SelectedItem="{Binding SelectedTask, Mode=TwoWay}" SeparatorColor="Gainsboro">
                     <ListView.ItemTemplate>
                         <DataTemplate>
@@ -38,19 +50,31 @@
                                     <Grid>                                        
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="Auto"/>
-                                            <RowDefinition Height="Auto"/>
-                                            <RowDefinition Height="Auto"/>
                                         </Grid.RowDefinitions>
-                                        <Label Text="{Binding Title}" Grid.Row="0" FontAttributes="Bold"/>
-                                        <Label Text="{Binding Initiator_name, StringFormat='Заявитель: {0}'}" Grid.Row="1"/>
-                                        <Label Text="{Binding Recipient_name, StringFormat='Исполнитель: {0}'}" Grid.Row="2"/>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="5"/>
+                                        </Grid.ColumnDefinitions>
+                                        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                            <StackLayout Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Spacing="3">
+                                                <Label Text="{Binding Task_id, StringFormat='Заявка №{0}'}" FontAttributes="Bold" VerticalOptions="End"/>
+                                                <Label Text="{Binding Title}" FontSize="12" VerticalOptions="End"/>
+                                            </StackLayout>
+                                            <Label Text="{Binding Initiator_name}" Grid.Row="0" Grid.Column="0"/>
+                                            <Label Text="{Binding Type_name}" Grid.Row="0" Grid.Column="0"/>
+                                            <Label Text="{Binding Factory_name}" Grid.Row="0" Grid.Column="0" FontSize="12" TextColor="#8c8c8c" Style="{StaticResource Key=ProductUnitStyle}"/>
+                                            <Label Text="{Binding Plant_name}" Grid.Row="0" Grid.Column="0" FontSize="12" TextColor="#8c8c8c" Style="{StaticResource Key=ProductUnitStyle}"/>
+                                            <Label Text="{Binding Unit_name}" Grid.Row="0" Grid.Column="0" FontSize="12" TextColor="#8c8c8c" Style="{StaticResource Key=ProductUnitStyle}"/>
+                                            <Label Text="{Binding Timestamp}" Grid.Row="0" Grid.Column="0"/>
+                                        </StackLayout>                                        
+                                        <!--<BoxView Color="Green" Grid.Row="0" Grid.RowSpan="6" Grid.Column="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>-->
                                     </Grid>
                                 </ViewCell.View>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-            </StackLayout>
+            </StackLayout>            
             <Button 
                 Text="+" 
                 FontAttributes="Bold"
