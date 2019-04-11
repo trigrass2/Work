@@ -26,8 +26,8 @@ namespace ServiceDesk
             navigating = shallNavigate;
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NzA1MzJAMzEzNjJlMzQyZTMwQ0h1aGdRZ0oybTJ2NDVmU1hvVDkxdkorLzJaZjdWbWlpbGx0M3RUN1dpVT0=");
 
-            InitializeComponent();            
-           
+            InitializeComponent();
+
             MainPage = new NavigationPage(new StartPage());
         }
 
@@ -36,7 +36,25 @@ namespace ServiceDesk
             OneSignal.Current.StartInit("8cacfbb9-a453-41c4-a4a0-c98dce5721a1")
                              .HandleNotificationOpened(HandleNotificationOpened)
                              .EndInit();
-            OnAppStart();
+            try
+            {
+                if (serviceDesk_TaskListView != null)
+                {
+                    MainPage = new NavigationPage(new MenuPage());
+                    App.Current.MainPage.Navigation.PushAsync(new SelectedTaskPage(new ViewModels.TaskViewModel(serviceDesk_TaskListView)));
+                    serviceDesk_TaskListView = null;
+                }
+                else if (ServiceDeskApi.AccessToken != null)
+                {
+                    MainPage = new NavigationPage(new MenuPage());
+                }
+                else MainPage = new NavigationPage(new StartPage());
+            }
+            catch (Exception)
+            {
+                MainPage = new NavigationPage(new StartPage());
+            }
+            
         }
 
         protected override void OnSleep()
@@ -45,59 +63,71 @@ namespace ServiceDesk
         }
 
         protected override void OnResume()
-        {
-
+        {            
+            if (serviceDesk_TaskListView != null)
+            {
+                MainPage = new NavigationPage(new MenuPage());
+                App.Current.MainPage.Navigation.PushAsync(new SelectedTaskPage(new ViewModels.TaskViewModel(serviceDesk_TaskListView)));
+                serviceDesk_TaskListView = null;
+            }else if(ServiceDeskApi.AccessToken != null)
+            {
+                MainPage = new NavigationPage(new MenuPage());
+            }else MainPage = new NavigationPage(new StartPage());
         }
 
-        private async void OnAppStart()
-        {
-            #region PushNotication
-            try
-            {
-                if (navigating == false)
-                {
-                    if (ServiceDeskApi.AccessToken != null)
-                    {
-                        if (IsNotified == true)
-                        {
-                            MainPage = new NavigationPage(new MenuPage());
-                        }
-                        else
-                        {
-                            if (ServiceDeskApi.AccessToken != null)
-                            {
-                                MainPage = new NavigationPage(new MenuPage());//(new SelectedTaskPage(new ViewModels.TaskViewModel(serviceDesk_TaskListView)));
-                                IsNotified = true;
-                            }
-                            else
-                            {
-                                MainPage = new NavigationPage(new StartPage());
-                            }
-                        }
-                    }
-                    else
-                    {
-                        MainPage = new NavigationPage(new StartPage());
-                    }
-                }
-                else
-                {
-                    if (ServiceDeskApi.AccessToken != null)
-                    {
-                        MainPage = new NavigationPage(new MenuPage());//(new SelectedTaskPage(new ViewModels.TaskViewModel(serviceDesk_TaskListView)));
-                    }
-                    else
-                    {
-                        MainPage = new NavigationPage(new StartPage());
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-            #endregion
-        }
+        //private async void OnAppStart()
+        //{
+        //    #region PushNotication
+        //    try
+        //    {
+        //        if (navigating == false)
+        //        {
+        //            if (ServiceDeskApi.AccessToken != null)
+        //            {
+        //                if (IsNotified == true)
+        //                {
+        //                    MainPage = new NavigationPage(new MenuPage());
+        //                }
+        //                else
+        //                {
+        //                    if (ServiceDeskApi.AccessToken != null)
+        //                    {
+        //                        MainPage = new NavigationPage(new MenuPage());
+        //                        await App.Current.MainPage.Navigation.PushAsync(new SelectedTaskPage(new ViewModels.TaskViewModel(serviceDesk_TaskListView)));
+        //                        IsNotified = true;
+        //                        serviceDesk_TaskListView = null;
+        //                    }
+        //                    else
+        //                    {
+        //                        MainPage = new NavigationPage(new StartPage());
+        //                    }
+        //                }
+        //            }
+        //            else
+        //            {
+        //                MainPage = new NavigationPage(new StartPage());
+        //            }
+        //        }
+        //        else
+        //        {
+        //            if (ServiceDeskApi.AccessToken != null)
+        //            {
+        //                MainPage = new NavigationPage(new MenuPage());
+        //                await App.Current.MainPage.Navigation.PushAsync(new SelectedTaskPage(new ViewModels.TaskViewModel(serviceDesk_TaskListView)));
+        //                serviceDesk_TaskListView = null;
+        //            }
+        //            else
+        //            {
+        //                MainPage = new NavigationPage(new StartPage());
+        //            }
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw new Exception(ex.Message);
+        //    }
+        //    #endregion
+        //}
 
         private static void HandleNotificationOpened(OSNotificationOpenedResult result)
         {
@@ -109,7 +139,7 @@ namespace ServiceDesk
             {
                 foreach (var a in additionalData)
                 {
-                    taskId = a.Key;
+                    taskId = a.Value.ToString();
                 }
 
                 var d = ServiceDeskApi.GetData<ServiceDesk_TaskListView>(ServiceDeskApi.ApiEnum.GetTasks);

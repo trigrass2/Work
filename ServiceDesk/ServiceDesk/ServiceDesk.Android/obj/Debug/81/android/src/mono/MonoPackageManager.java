@@ -116,7 +116,6 @@ class MonoPackageManager_Resources {
 		"Plugin.FilePicker.dll",
 		"Plugin.Settings.Abstractions.dll",
 		"Plugin.Settings.dll",
-		"PropertyChanged.dll",
 		"RestSharp.dll",
 		"Syncfusion.Buttons.XForms.Android.dll",
 		"Syncfusion.Buttons.XForms.dll",
