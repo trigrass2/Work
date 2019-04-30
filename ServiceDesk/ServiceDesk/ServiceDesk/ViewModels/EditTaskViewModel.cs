@@ -1,6 +1,7 @@
 ﻿using ServiceDesk.Models;
 using ServiceDesk.PikApi;
 using ServiceDesk.Views;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -155,15 +156,25 @@ namespace ServiceDesk.ViewModels
         /// </summary>
         public async void SendTask()
         {
-            NewTask.Task_id = TaskEdit?.Task_id;
-            NewTask.Type_id = _selectedType?.Type_id ?? null;
-            NewTask.Factory_id = _selectedFactory?.Factory_id ?? null;
-            NewTask.Plant_id = _selectedPlant?.Plant_id ?? null;
-            NewTask.Unit_id = _selectedUnit?.Unit_id ?? null;
-            NewTask.Recipient_id = Users.Where(x => x.UserName == _selectedUser).Select(x => x.Id).FirstOrDefault();
-            await ServiceDeskApi.SendDataToServerAsync(NewTask, ServiceDeskApi.ApiEnum.EditTask);
-            UpdateContext();
-            await Navigation.PopAsync();
+            try
+            {
+                Log.WriteMessage("Изменение заявки...");
+                NewTask.Task_id = TaskEdit?.Task_id;
+                NewTask.Type_id = _selectedType?.Type_id ?? null;
+                NewTask.Factory_id = _selectedFactory?.Factory_id ?? null;
+                NewTask.Plant_id = _selectedPlant?.Plant_id ?? null;
+                NewTask.Unit_id = _selectedUnit?.Unit_id ?? null;
+                NewTask.Recipient_id = Users.Where(x => x.UserName == _selectedUser).Select(x => x.Id).FirstOrDefault();
+                await ServiceDeskApi.SendDataToServerAsync(NewTask, ServiceDeskApi.ApiEnum.EditTask);
+                UpdateContext();
+                Log.WriteMessage("Заявка изменена");
+                await Navigation.PopAsync();
+            }
+            catch (Exception ex)
+            {
+                Log.WriteMessage($"Ошибка при изменении заявки {ex.Message}");
+            }
+            
         }
 
 
@@ -171,23 +182,39 @@ namespace ServiceDesk.ViewModels
 
         private void UpdateContext()
         {
-            NavigationPage navPage = (NavigationPage)Application.Current.MainPage;
-            IReadOnlyList<Page> navStack = navPage.Navigation.NavigationStack;
-            SelectedTaskPage homePage = navStack[navPage.Navigation.NavigationStack.Count - 2] as SelectedTaskPage;
-
-            if (homePage != null)
+            try
             {
-                homePage.TaskViewModel.UpdateContext();
+                NavigationPage navPage = (NavigationPage)Application.Current.MainPage;
+                IReadOnlyList<Page> navStack = navPage.Navigation.NavigationStack;
+                SelectedTaskPage homePage = navStack[navPage.Navigation.NavigationStack.Count - 2] as SelectedTaskPage;
+
+                if (homePage != null)
+                {
+                    homePage.TaskViewModel.UpdateContext();
+                }
             }
+            catch (Exception ex)
+            {
+                Log.WriteMessage($"Ошибка при выполнении UpdateContext() : {ex.Message}");
+            }
+            
         }
 
         public async Task UpdateUsers()
         {
-            Users.Clear();
-            var users = await ServiceDeskApi.GetAllUsersAsync(new { User_id = default(string), Search = default(string) }, ServiceDeskApi.ApiEnum.GetUsersList);
-            Users = new ObservableCollection<UserModel>(users);
-            UsersNames = new ObservableCollection<string>(users.Select(x => x.UserName));
-            SelectedRecipent = TaskEdit.Recipient_name ?? default(string); 
+            try
+            {
+                Users.Clear();
+
+                var users = await ServiceDeskApi.GetAllUsersAsync(new { User_id = default(string), Search = default(string) }, ServiceDeskApi.ApiEnum.GetUsersList);
+                Users = new ObservableCollection<UserModel>(users);
+                UsersNames = new ObservableCollection<string>(users.Select(x => x.UserName));
+                SelectedRecipent = TaskEdit.Recipient_name ?? default(string);
+            }
+            catch (Exception ex)
+            {
+                Log.WriteMessage($"Ошибка при обновлении юзеров : {ex.Message}");
+            }            
         }
 
         /// <summary>
@@ -195,16 +222,23 @@ namespace ServiceDesk.ViewModels
         /// </summary>
         public async Task UpdateTypes()
         {
-
-            Title = TaskEdit.Title;
-            Text = TaskEdit.Text;
-            var typesTasks = await ServiceDeskApi.GetDataServisDeskManagmentAsync<ServiceDesk_TypeListView>(ServiceDeskApi.ApiEnum.GetTypes);
-            Types.Clear();
-            foreach (var t in typesTasks)
+            try
             {
-                Types.Add(t);
+                Title = TaskEdit.Title;
+                Text = TaskEdit.Text;
+                var typesTasks = await ServiceDeskApi.GetDataServisDeskManagmentAsync<ServiceDesk_TypeListView>(ServiceDeskApi.ApiEnum.GetTypes);
+                Types.Clear();
+                foreach (var t in typesTasks)
+                {
+                    Types.Add(t);
+                }
+                SelectedTypes = TaskEdit.Type_name != null ? typesTasks.Where(x => x.Type_name == TaskEdit.Type_name).FirstOrDefault() : default(ServiceDesk_TypeListView);
             }
-            SelectedTypes = TaskEdit.Type_name != null ? typesTasks.Where(x => x.Type_name == TaskEdit.Type_name).FirstOrDefault() : default(ServiceDesk_TypeListView);
+            catch (Exception ex)
+            {
+                Log.WriteMessage($"Ошибка при обновлении типов заявки : {ex.Message}");
+            }
+            
         }
 
         /// <summary>

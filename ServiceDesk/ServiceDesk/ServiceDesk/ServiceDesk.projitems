@@ -15,6 +15,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Log.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ApplicationUser.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\BaseTask.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\BaseUser.cs" />

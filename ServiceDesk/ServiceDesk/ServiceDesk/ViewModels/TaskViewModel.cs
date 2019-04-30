@@ -88,8 +88,18 @@ namespace ServiceDesk.ViewModels
 
         public void UpdateContext()
         {
-            var d = ServiceDeskApi.GetData<ServiceDesk_TaskListView>(ServiceDeskApi.ApiEnum.GetTasks);
-            ServiceDesk_TaskListView = d.Where(x => x.Task_id == ServiceDesk_TaskListView.Task_id).FirstOrDefault();
+            try
+            {
+                var d = ServiceDeskApi.GetData<ServiceDesk_TaskListView>(ServiceDeskApi.ApiEnum.GetTasks);
+                ServiceDesk_TaskListView = d.Where(x => x.Task_id == ServiceDesk_TaskListView.Task_id).FirstOrDefault();
+
+                Log.WriteMessage("Обновление данных");
+            }
+            catch (Exception ex)
+            {
+                Log.WriteMessage($"Ошибка при обновлении данных : {ex.Message}");
+            }
+            
         }
 
         /// <summary>
@@ -103,29 +113,41 @@ namespace ServiceDesk.ViewModels
             var javafile = Android.OS.Environment.GetExternalStoragePublicDirectory(Android.OS.Environment.DirectoryDownloads);
             var path = Path.Combine(javafile.AbsolutePath, fileName);
 
-            if (await App.Current.MainPage.DisplayAlert("Сообщение", "Сохранить файл?", "Да", "Нет") == true)
+            try
             {
-                
-                using (FileStream fileStream = new FileStream(path, FileMode.Create))
+                if (await App.Current.MainPage.DisplayAlert("Сообщение", "Сохранить файл?", "Да", "Нет") == true)
                 {
-                    for (int i = 0; i < dataArray.Length; i++)
-                    {
-                        fileStream.WriteByte(dataArray[i]);
-                    }
 
-                    fileStream.Seek(0, SeekOrigin.Begin);
-
-                    for (int i = 0; i < fileStream.Length; i++)
+                    using (FileStream fileStream = new FileStream(path, FileMode.Create))
                     {
-                        if (dataArray[i] != fileStream.ReadByte())
+                        Log.WriteMessage("Сохраняю файл...");
+
+                        for (int i = 0; i < dataArray.Length; i++)
                         {
-                            await App.Current.MainPage.DisplayAlert("Error", "Error writing data.", "Ok");
-                            return;
+                            fileStream.WriteByte(dataArray[i]);
                         }
+
+                        fileStream.Seek(0, SeekOrigin.Begin);
+
+                        for (int i = 0; i < fileStream.Length; i++)
+                        {
+                            if (dataArray[i] != fileStream.ReadByte())
+                            {
+                                Log.WriteMessage("Error writing data");
+                                await App.Current.MainPage.DisplayAlert("Error", "Error writing data.", "Ok");
+                                return;
+                            }
+                        }
+                        await App.Current.MainPage.DisplayAlert("Message", "Сохранено в Download", "Ok");
                     }
-                    await App.Current.MainPage.DisplayAlert("Message", $"Сохранено в Download", "Ok");
                 }
             }
+            catch (Exception ex)
+            {
+                Log.WriteMessage($"Ошибка сохранения : {ex.Message}");
+                await App.Current.MainPage.DisplayAlert("Message", "Ошибка при попытке сохранения!", "Ok");
+            }
+            
         }
 
         /// <summary>
@@ -134,18 +156,29 @@ namespace ServiceDesk.ViewModels
         /// <returns></returns>
         public async Task UpdateStatuses()
         {
+            Log.WriteMessage("Обновление списка статусов...");
             Statuses.Clear();
-            var statuses = await GetDataServisDeskManagmentAsync<ServiceDesk_StatusListView>(ApiEnum.GetStatuses);
-            foreach(var s in statuses)
+            try
             {
-                Statuses.Add(s);
+                var statuses = await GetDataServisDeskManagmentAsync<ServiceDesk_StatusListView>(ApiEnum.GetStatuses);
+                foreach (var s in statuses)
+                {
+                    Statuses.Add(s);
+                }
+
+                Log.WriteMessage("Статусы обновлены.");
+
+                SelectedStatus = statuses.Where(x => x.Status_id == ServiceDesk_TaskListView.Status_id).FirstOrDefault();
+                if (SelectedStatus.Status_id > 50)
+                {
+                    IsVisibleStatusButton = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.WriteMessage($"Ошибка обновления статусов : {ex.Message}");
             }
             
-            SelectedStatus = statuses.Where(x => x.Status_id == ServiceDesk_TaskListView.Status_id).FirstOrDefault();
-            if (SelectedStatus.Status_id > 50)
-            {
-                IsVisibleStatusButton = false;
-            }
         }
 
         /// <summary>
@@ -153,6 +186,7 @@ namespace ServiceDesk.ViewModels
         /// </summary>
         public async void GoEdit()
         {
+            Log.WriteMessage("Переход на страницу редактирования");
             await Navigation.PushAsync(new EditTaskView(ServiceDesk_TaskListView));
         }
 
@@ -168,15 +202,15 @@ namespace ServiceDesk.ViewModels
                     await App.Current.MainPage.DisplayAlert("Alert", "Specify the number to start the call.", "OK");
                 }
                 else
-                {                    
+                {
+                    Log.WriteMessage($"Вызываю {ServiceDesk_TaskListView.Initiator_phone}");
                     Device.OpenUri(new Uri($"tel:{ServiceDesk_TaskListView.Initiator_phone}"));
                 }
             }
             catch (Exception ex)
             {
-                throw ex;
-            }
-            
+                Log.WriteMessage($"Ошибка при попытке позвонить : {ex.Message}");
+            }            
         }
         
         /// <summary>
@@ -187,15 +221,23 @@ namespace ServiceDesk.ViewModels
         {
             Attachments.Clear();
             AttachmentsNames = string.Empty;
-            var attachments = await GetDataFromTask<ServiceDesk_TaskAttachmentInfoListView>(ApiEnum.GetTaskAttachmentsInfo, taskId);
-            foreach (var a in attachments)
+            try
             {
-                Attachments.Add(a);
+                var attachments = await GetDataFromTask<ServiceDesk_TaskAttachmentInfoListView>(ApiEnum.GetTaskAttachmentsInfo, taskId);
+                foreach (var a in attachments)
+                {
+                    Attachments.Add(a);
+                }
+                if (Attachments.Count > 0)
+                {
+                    IsVisibleAttach = true;
+                }
             }
-            if(Attachments.Count > 0)
+            catch (Exception ex)
             {
-                IsVisibleAttach = true;
+                Log.WriteMessage($"Ошибка при обновлении списка вложений : {ex.Message}");
             }
+            
         }
 
         /// <summary>
@@ -207,9 +249,18 @@ namespace ServiceDesk.ViewModels
 
             if (file != null)
             {
-                var TaskAttachment = new { ServiceDesk_TaskListView.Task_id, Attachment_name = file.FileName, Attachment_bytes = file.DataArray };
-                SendDataToServer(TaskAttachment, ApiEnum.AddTaskAttachment);
-                UpdateAttachments(ServiceDesk_TaskListView.Task_id);                
+                try
+                {
+                    var TaskAttachment = new { ServiceDesk_TaskListView.Task_id, Attachment_name = file.FileName, Attachment_bytes = file.DataArray };
+                    SendDataToServer(TaskAttachment, ApiEnum.AddTaskAttachment);
+                    UpdateAttachments(ServiceDesk_TaskListView.Task_id);
+
+                    Log.WriteMessage($"Добавил вложение");
+                }
+                catch (Exception ex)
+                {
+                    Log.WriteMessage($"Ошибка при добавлении вложения : {ex.Message}");
+                }                              
             }
         }
 
@@ -219,10 +270,18 @@ namespace ServiceDesk.ViewModels
         private async void UpdateComments()
         {
             Comments.Clear();
-            var comments = await GetDataFromTask<ServiceDesk_TaskCommentListView>(ApiEnum.GetTaskComments, ServiceDesk_TaskListView.Task_id);
-            foreach (var c in comments)
+            try
             {
-                Comments.Add(c);
+                var comments = await GetDataFromTask<ServiceDesk_TaskCommentListView>(ApiEnum.GetTaskComments, ServiceDesk_TaskListView.Task_id);
+                foreach (var c in comments)
+                {
+                    Comments.Add(c);
+                }
+                Log.WriteMessage("Обновил список комментариев");
+            }
+            catch (Exception ex)
+            {
+                Log.WriteMessage($"Ошибка при обновлении комментариев : {ex.Message}");
             }
             
         }
@@ -234,46 +293,59 @@ namespace ServiceDesk.ViewModels
             string st = statusName as string;
             var status = Statuses.Where(x => x.Status_name == st).FirstOrDefault();
             int id = status.Status_id;
-            EditTaskModel NewTask = new EditTaskModel
-            {
-                Task_id = ServiceDesk_TaskListView?.Task_id,
-                Type_id = ServiceDesk_TaskListView?.Type_id ?? null,
-                Factory_id = ServiceDesk_TaskListView?.Factory_id ?? null,
-                Plant_id = ServiceDesk_TaskListView?.Plant_id ?? null,
-                Unit_id = ServiceDesk_TaskListView?.Unit_id ?? null,
-                Recipient_id = ServiceDesk_TaskListView.Recipient_name,
-                Title = ServiceDesk_TaskListView.Title,
-                Text = ServiceDesk_TaskListView.Text
-            };
 
-            switch (id)
+            try
             {
-                case 1:
-                    {
-                        SelectedStatus = Statuses.Where(x => x.Status_id == 2).FirstOrDefault();
-                        NewTask.Status_id = 2;
-                        SendDataToServer(NewTask, ApiEnum.EditTask);
-                        TextButton = "Завершить";
-                        break;
-                    }
-                case 2:
-                    {
-                        SelectedStatus = Statuses.Where(x => x.Status_id == 50).FirstOrDefault();
-                        NewTask.Status_id = 50;
-                        SendDataToServer(NewTask, ApiEnum.EditTask);
-                        TextButton = "Возобновить";
-                        break;
-                    }
-                case 50:
-                    {
-                        SelectedStatus = Statuses.Where(x => x.Status_id == 2).FirstOrDefault();
-                        NewTask.Status_id = 2;
-                        SendDataToServer(NewTask, ApiEnum.EditTask);
-                        TextButton = "Завершить";
-                        break;
-                    }
+                EditTaskModel NewTask = new EditTaskModel
+                {
+                    Task_id = ServiceDesk_TaskListView?.Task_id,
+                    Type_id = ServiceDesk_TaskListView?.Type_id ?? null,
+                    Factory_id = ServiceDesk_TaskListView?.Factory_id ?? null,
+                    Plant_id = ServiceDesk_TaskListView?.Plant_id ?? null,
+                    Unit_id = ServiceDesk_TaskListView?.Unit_id ?? null,
+                    Recipient_id = ServiceDesk_TaskListView.Recipient_name,
+                    Title = ServiceDesk_TaskListView.Title,
+                    Text = ServiceDesk_TaskListView.Text
+                };
+
+                Log.WriteMessage($"Изменение статуса..");
+
+                switch (id)
+                {
+                    case 1:
+                        {
+                            SelectedStatus = Statuses.Where(x => x.Status_id == 2).FirstOrDefault();
+                            NewTask.Status_id = 2;
+                            SendDataToServer(NewTask, ApiEnum.EditTask);
+                            TextButton = "Завершить";
+                            break;
+                        }
+                    case 2:
+                        {
+                            SelectedStatus = Statuses.Where(x => x.Status_id == 50).FirstOrDefault();
+                            NewTask.Status_id = 50;
+                            SendDataToServer(NewTask, ApiEnum.EditTask);
+                            TextButton = "Возобновить";
+                            break;
+                        }
+                    case 50:
+                        {
+                            SelectedStatus = Statuses.Where(x => x.Status_id == 2).FirstOrDefault();
+                            NewTask.Status_id = 2;
+                            SendDataToServer(NewTask, ApiEnum.EditTask);
+                            TextButton = "Завершить";
+                            break;
+                        }
+                }
+
+                Log.WriteMessage($"Статус изменен");
+                ServiceDesk_TaskListView = GetData<ServiceDesk_TaskListView>(ApiEnum.GetTasks).Where(x => x.Task_id == NewTask.Task_id).FirstOrDefault();
             }
-            ServiceDesk_TaskListView = GetData<ServiceDesk_TaskListView>(ApiEnum.GetTasks).Where(x => x.Task_id == NewTask.Task_id).FirstOrDefault();
+            catch (Exception ex)
+            {
+                Log.WriteMessage($"Ошибка при изменении статуса : {ex.Message}");
+            }
+            
         }
 
         /// <summary>
@@ -282,20 +354,28 @@ namespace ServiceDesk.ViewModels
         /// <param name="message"></param>
         private void AddComment(object message)
         {
-            
-            string comment = message as string;
-            if(comment != "")
+            try
             {
-                SendDataToServer(
-                new
+                string comment = message as string;
+                if (comment != "")
                 {
-                    ServiceDesk_TaskListView.Task_id,
-                    Text = comment
-                },
-                ApiEnum.AddTaskComment
-            );
-                UpdateComments();
-            }            
+                    SendDataToServer(
+                    new
+                    {
+                        ServiceDesk_TaskListView.Task_id,
+                        Text = comment
+                    },
+                    ApiEnum.AddTaskComment
+                );
+                    Log.WriteMessage("Добавил комментарий");
+                    UpdateComments();
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.WriteMessage($"Ошибка при добавлении комментария : {ex.Message}");
+            }
+                     
         }
 
         public TaskListViewModel TaskListViewModel

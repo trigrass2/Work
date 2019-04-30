@@ -68,20 +68,28 @@ namespace ServiceDesk.ViewModels
         }
 
         /// <summary>
-        /// обновляет список заявок
+        /// обновляет список статусов
         /// </summary>
         /// <returns></returns>
         public async Task UpdateStatuses()
         {
-            Statuses.Clear();
-            var statuses = await ServiceDeskApi.GetDataServisDeskManagmentAsync<ServiceDesk_StatusListView>(ServiceDeskApi.ApiEnum.GetStatuses);
-            foreach (var s in statuses)
+            try
             {
-                Statuses.Add(s);
-            }
+                Statuses.Clear();
+                var statuses = await ServiceDeskApi.GetDataServisDeskManagmentAsync<ServiceDesk_StatusListView>(ServiceDeskApi.ApiEnum.GetStatuses);
+                foreach (var s in statuses)
+                {
+                    Statuses.Add(s);
+                }
 
-            Statuses.Add(_allTasksStatus);
-            SelectedStatus = Statuses.Where(x => x.Status_id == 1).FirstOrDefault();
+                Statuses.Add(_allTasksStatus);
+                SelectedStatus = Statuses.Where(x => x.Status_id == 1).FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                Log.WriteMessage($"Ошибка при обновлении списка статусов : {ex.Message}");
+            }
+            
         }
 
         /// <summary>
@@ -90,40 +98,61 @@ namespace ServiceDesk.ViewModels
         /// <returns></returns>
         public async Task UpdateTasksAsync(int statusId)
         {
-            var items = await ServiceDeskApi.GetDataAsync<ServiceDesk_TaskListView>(ServiceDeskApi.ApiEnum.GetTasks);
-            if(statusId != 3740)
+            try
             {
-                items = items.Where(x => x.Status_id == statusId);
+                Log.WriteMessage($"Обновление заявок...");
+
+                var items = await ServiceDeskApi.GetDataAsync<ServiceDesk_TaskListView>(ServiceDeskApi.ApiEnum.GetTasks);
+                if (statusId != 3740)
+                {
+                    items = items.Where(x => x.Status_id == statusId);
+                }
+                Tasks.Clear();
+
+                if (items != null && items.Count() > 0 && Tasks != null)
+                {
+                    foreach (var i in items)
+                    {
+                        Tasks.Add(i);
+                    }
+                }
+
+                Log.WriteMessage($"Список заявок обновлен");
             }
-            Tasks.Clear();
+            catch (Exception ex)
+            {
+                Log.WriteMessage($"Ошибка при обновлении списка заявок : {ex.Message}");
+            }
             
-            if(items != null)
-            {
-                foreach (var i in items)
-                {                    
-                    Tasks.Add(i);
-                }                
-            }
         }
 
         public void UpdateTasks(int statusId)
         {
-            var items = ServiceDeskApi.GetData<ServiceDesk_TaskListView>(ServiceDeskApi.ApiEnum.GetTasks);
-            var sortItems = items.OrderBy(x => x.Status_id).Select(x => x);
-            if (statusId != 3740)
+            try
             {
-                sortItems = sortItems.Where(x => x.Status_id == statusId);
-            }
-            Tasks.Clear();
-
-            if (sortItems != null)
-            {
-                foreach (var i in sortItems)
+                Log.WriteMessage($"Обновление заявок...");
+                var items = ServiceDeskApi.GetData<ServiceDesk_TaskListView>(ServiceDeskApi.ApiEnum.GetTasks);
+                if (statusId != 3740)
                 {
-                    Tasks.Add(i);
+                    items = items.Where(x => x.Status_id == statusId);
                 }
 
-            }           
+                Tasks.Clear();
+
+                if (items != null && items.Count() > 0 && Tasks != null)
+                {
+                    foreach (var i in items)
+                    {
+                        Tasks.Add(i);
+                    }
+                }
+                Log.WriteMessage($"Список заявок обновлен");
+            }
+            catch (Exception ex)
+            {
+                Log.WriteMessage($"Ошибка при обновлении списка заявок : {ex.Message}");
+            }
+            
         }
 
         private ServiceDesk_TaskListView _selectedTask;
@@ -165,16 +194,22 @@ namespace ServiceDesk.ViewModels
         {
             try
             {
-                foreach(var t in tags)
+                Log.WriteMessage($"Подписывание юзера");
+
+                foreach (var t in tags)
                 {                    
                     OneSignal.Current.DeleteTag(t.Key.ToString());
                 }
                 OneSignal.Current.SendTag(_user.Id, "User_id");
+
+                Log.WriteMessage($"Подписка обновлена");
+
                 return;                
             }
             catch (Exception e)
             {
-                await App.Current.MainPage.DisplayAlert("ERROR", e.ToString(), "OK");
+                Log.WriteMessage($"Ошибка подписки : {e.Message}");
+                //await App.Current.MainPage.DisplayAlert("ERROR", e.ToString(), "OK");
                 return;
             }
         }        

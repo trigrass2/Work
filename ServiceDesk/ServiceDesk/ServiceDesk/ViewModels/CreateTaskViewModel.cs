@@ -2,6 +2,7 @@
 using Plugin.FilePicker.Abstractions;
 using ServiceDesk.Models;
 using ServiceDesk.PikApi;
+using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
@@ -171,13 +172,23 @@ namespace ServiceDesk.ViewModels
         /// </summary>
         public async void SendTask()
         {
-            NewTask.Type_id = _selectedType?.Type_id ?? null;
-            NewTask.Factory_id = _selectedFactory?.Factory_id ?? null;
-            NewTask.Plant_id = _selectedPlant?.Plant_id ?? null;
-            NewTask.Unit_id = _selectedUnit?.Unit_id ?? null;
-            NewTask.Recipient_id = Users.Where(x => x.UserName == _selectedUser).Select(x => x.Id).FirstOrDefault();
-            await ServiceDeskApi.SendDataToServerAsync(NewTask, ServiceDeskApi.ApiEnum.CreateTask);
-            await Navigation.PopAsync();
+            try
+            {
+                Log.WriteMessage("Создание новой заявки...");
+                NewTask.Type_id = _selectedType?.Type_id ?? null;
+                NewTask.Factory_id = _selectedFactory?.Factory_id ?? null;
+                NewTask.Plant_id = _selectedPlant?.Plant_id ?? null;
+                NewTask.Unit_id = _selectedUnit?.Unit_id ?? null;
+                NewTask.Recipient_id = Users.Where(x => x.UserName == _selectedUser).Select(x => x.Id).FirstOrDefault();
+                await ServiceDeskApi.SendDataToServerAsync(NewTask, ServiceDeskApi.ApiEnum.CreateTask);
+                Log.WriteMessage("Заявка создана");
+                await Navigation.PopAsync();
+            }
+            catch (Exception ex)
+            {
+                Log.WriteMessage($"Ошибка при создании заявки {ex.Message}");
+            }
+            
         }
 
         /// <summary>
@@ -185,13 +196,24 @@ namespace ServiceDesk.ViewModels
         /// </summary>
         public async void GetFile()
         {
-            
-            file = await CrossFilePicker.Current.PickFile();
-            
-            if (file != null)
+            try
             {
-                NewTask.Attachments.Add(new AttachmentFileModel { Attachment_name = file.FileName, Attachment_bytes = file.DataArray });
+                Log.WriteMessage($"Открытие файла...");
+
+                file = await CrossFilePicker.Current.PickFile();
+
+                if (file != null)
+                {
+                    NewTask.Attachments.Add(new AttachmentFileModel { Attachment_name = file.FileName, Attachment_bytes = file.DataArray });
+                }
+
+                Log.WriteMessage("Файл добавлен");
             }
+            catch (Exception ex)
+            {
+                Log.WriteMessage($"Ошибка при открытии файла {ex.Message}");
+            }
+            
         }
 
         #region UPDATE DATA

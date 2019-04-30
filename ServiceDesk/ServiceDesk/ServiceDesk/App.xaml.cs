@@ -33,6 +33,7 @@ namespace ServiceDesk
 
         protected override void OnStart()
         {
+            Log.WriteMessage("Start");
             OneSignal.Current.StartInit("8cacfbb9-a453-41c4-a4a0-c98dce5721a1")
                              .HandleNotificationOpened(HandleNotificationOpened)
                              .EndInit();
@@ -63,16 +64,18 @@ namespace ServiceDesk
         }
 
         protected override void OnResume()
-        {            
+        {
+            Log.WriteMessage("Resume");
             if (serviceDesk_TaskListView != null)
             {
                 MainPage = new NavigationPage(new MenuPage());
                 App.Current.MainPage.Navigation.PushAsync(new SelectedTaskPage(new ViewModels.TaskViewModel(serviceDesk_TaskListView)));
                 serviceDesk_TaskListView = null;
-            }else if(ServiceDeskApi.AccessToken != null)
+            }else if(ServiceDeskApi.AccessToken == null)
             {
-                MainPage = new NavigationPage(new MenuPage());
-            }else MainPage = new NavigationPage(new StartPage());
+                MainPage = new NavigationPage(new StartPage());
+                //MainPage = new NavigationPage(new MenuPage());
+            }/*else MainPage = new NavigationPage(new StartPage());*/
         }
 
         //private async void OnAppStart()
