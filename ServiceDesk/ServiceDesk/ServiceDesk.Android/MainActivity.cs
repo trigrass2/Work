@@ -3,6 +3,9 @@ using Android.Content.PM;
 using Android.OS;
 using Android.Content;
 using Com.OneSignal;
+using Android.Support.V4.Content;
+using Android.Support.V4.App;
+using Android;
 
 namespace ServiceDesk.Droid
 {
@@ -18,7 +21,17 @@ namespace ServiceDesk.Droid
            
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            
+
+            if (ContextCompat.CheckSelfPermission(this, Manifest.Permission.WriteExternalStorage) != (int)Permission.Granted)
+            {
+                ActivityCompat.RequestPermissions(this, new string[] { Manifest.Permission.WriteExternalStorage }, 0);
+            }
+
+            if (ContextCompat.CheckSelfPermission(this, Manifest.Permission.ReadExternalStorage) != (int)Permission.Granted)
+            {
+                ActivityCompat.RequestPermissions(this, new string[] { Manifest.Permission.ReadExternalStorage }, 0);
+            }
+
             string JobId = Intent.GetStringExtra("JobID");
             string NotificationId = Intent.GetStringExtra("NotificationId");
 

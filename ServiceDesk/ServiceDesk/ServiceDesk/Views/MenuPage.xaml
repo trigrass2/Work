@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
              x:Class="ServiceDesk.Views.MenuPage"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
              BackgroundColor="White">
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -24,7 +25,7 @@
     </ContentPage.Resources>
     <ContentPage.Content>        
         <RelativeLayout>            
-            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">                
                 <Grid BackgroundColor="#464451">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>

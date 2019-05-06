@@ -126,10 +126,12 @@ namespace ServiceDesk.ViewModels
             
         }
 
+        
         public void UpdateTasks(int statusId)
         {
             try
             {
+               
                 Log.WriteMessage($"Обновление заявок...");
                 var items = ServiceDeskApi.GetData<ServiceDesk_TaskListView>(ServiceDeskApi.ApiEnum.GetTasks);
                 if (statusId != 3740)
@@ -209,7 +211,6 @@ namespace ServiceDesk.ViewModels
             catch (Exception e)
             {
                 Log.WriteMessage($"Ошибка подписки : {e.Message}");
-                //await App.Current.MainPage.DisplayAlert("ERROR", e.ToString(), "OK");
                 return;
             }
         }        
