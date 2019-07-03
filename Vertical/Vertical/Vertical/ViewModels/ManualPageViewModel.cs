@@ -119,8 +119,8 @@ namespace Vertical.ViewModels
         private async void NextPage(SystemObjectModel _selectedObject)
         {
             IsEnabled = false;
-            var propertiesValues = Api.GetDataFromServer<SystemObjectPropertyValueModel>("GetSystemObjectPropertiesValues", new { ObjectGUID = _selectedObject.GUID});
-            await Navigation.PushAsync(new ManualPage(_selectedObject));
+            await Navigation.PushModalAsync(new CheckListPage());
+            //await Navigation.PushAsync(new ManualPage(_selectedObject));
 
             IsEnabled = true;
         }

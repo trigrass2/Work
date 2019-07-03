@@ -19,6 +19,10 @@ namespace Vertical.Models
         /// </summary>
         public string Name { get; set; }
 
+        /// <summary>
+        /// Значение свойства
+        /// </summary>
+        public object Value { get; set; }
 
         /// <summary>
         /// GUID Объекта к которому принадлежит свойство
@@ -58,12 +62,12 @@ namespace Vertical.Models
         /// <summary>
         /// Вес параметра
         /// </summary>
-        public int Weight { get; set; }
+        public int? Weight { get; set; }
 
         /// <summary>
         /// ID Группы к которой принадлежит параметр (для группировки)
         /// </summary>
-        public int GroupID { get; set; }
+        public int? GroupID { get; set; }
 
         /// <summary>
         /// Название группы к которой принадлежит параметр

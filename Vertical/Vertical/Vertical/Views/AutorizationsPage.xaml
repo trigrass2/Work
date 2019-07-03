@@ -18,7 +18,7 @@
     </ContentPage.Resources>
     <stateContainerDemo:StateContainer State="{Binding States}">
         <stateContainerDemo:StateCondition Is="Normal">
-            <StackLayout Spacing="3" Margin="10" VerticalOptions="Center">
+            <StackLayout Spacing="3" Margin="10" VerticalOptions="FillAndExpand">
                 <Image x:Name="svgLogo" Source="{Binding PikLogoImage}"/>
                 <inputLayout:SfTextInputLayout 
                     x:Name="entryLogin"
