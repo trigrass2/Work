@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:servicedesk="clr-namespace:ServiceDesk"
+             x:Class="ServiceDesk.Views.FilterPage">
+    <ContentPage.Content>
+        <Grid Margin="10" VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0" Margin="0,5,0,10" VerticalOptions="Start">
+                <Label Text="Статус" FontSize="Small" TextColor="#464451"/>
+                <servicedesk:CustomPicker ItemsSource="{Binding Statuses}" Title="Все статусы" TitleColor="#464451" ItemDisplayBinding="{Binding Status_name}" SelectedItem="{Binding SelectedStatus, Mode=TwoWay}"
+                    Image="drop_down_arrow"/>
+            </StackLayout>
+            <StackLayout Grid.Row="1" Margin="0,5,0,10" VerticalOptions="Start">
+                <Label Text="Категория заявки" FontSize="Small" TextColor="#464451"/>
+                <servicedesk:CustomPicker ItemsSource="{Binding Types}"  Title="Все категории" TitleColor="#464451" ItemDisplayBinding="{Binding Type_name}" SelectedItem="{Binding SelectedTypes, Mode=TwoWay}"
+                    Image="drop_down_arrow"/>
+            </StackLayout>
+            <StackLayout Grid.Row="2" Margin="0,5,0,10" VerticalOptions="Start">
+                <Label Text="Завод" TextColor="#464451" FontSize="Small"/>
+                <servicedesk:CustomPicker ItemsSource="{Binding Factorys}"  Title="Все заводы" TitleColor="#464451" ItemDisplayBinding="{Binding Factory_name}" SelectedItem="{Binding SelectedFactory, Mode=TwoWay}"
+                    Image="drop_down_arrow" />
+            </StackLayout>
+            <StackLayout Grid.Row="3" Margin="0,5,0,10" VerticalOptions="Start">
+                <Label Text="Линия" TextColor="#464451" FontSize="Small"/>
+                <servicedesk:CustomPicker ItemsSource="{Binding Plants}"  Title="Все линии" TitleColor="#464451" ItemDisplayBinding="{Binding Plant_name}" SelectedItem="{Binding SelectedPlant, Mode=TwoWay}"
+                    Image="drop_down_arrow" />
+            </StackLayout>
+            <StackLayout Grid.Row="4" Margin="0,5,0,10" VerticalOptions="Start">
+                <Label Text="Блок" TextColor="#464451" FontSize="Small"/>
+                <servicedesk:CustomPicker ItemsSource="{Binding Units}"  Title="Все блоки" TitleColor="#464451" ItemDisplayBinding="{Binding Unit_name}" SelectedItem="{Binding SelectedUnit, Mode=TwoWay}"
+                    Image="drop_down_arrow" />
+            </StackLayout>
+
+            <Button Grid.Row="5" Text="Показать" Margin="0,10,0,0" BackgroundColor="#464451" TextColor="White" VerticalOptions="End" Command="{Binding OnFilterCommand}"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
