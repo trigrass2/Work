@@ -19,7 +19,8 @@
     <stateContainerDemo:StateContainer State="{Binding States}">
         <stateContainerDemo:StateCondition Is="Normal">
             <StackLayout Spacing="3" Margin="10" VerticalOptions="FillAndExpand">
-                <Image x:Name="svgLogo" Source="{Binding PikLogoImage}"/>
+                
+                <Image x:Name="svgLogo" Source="{Binding PikLogoImage}" Margin="0,130,0,0"/>
                 <inputLayout:SfTextInputLayout 
                     x:Name="entryLogin"
                     Style="{x:StaticResource SfTextInputLayoutStyle}"
@@ -32,7 +33,7 @@
                     x:Name="passwordEntry"
                     Style="{x:StaticResource SfTextInputLayoutStyle}"
                     Hint="Пароль"                           
-                    Margin="0,10,0,0"                                              
+                    Margin="0,5,0,0"                                              
                     EnablePasswordVisibilityToggle="True"
                     >
                     <Entry Text="{Binding User.Password, Mode=TwoWay}" IsPassword="True" Style="{StaticResource entryStyle}"/>
@@ -40,6 +41,10 @@
                 
                 <Button x:Name="sighInButton" Text="Войти" Command="{Binding SignInCommand}" 
                         Margin="0,30,0,0" IsEnabled="{Binding IsEnabled}" Style="{x:StaticResource BlueButtonStyle}"/>
+                <ActivityIndicator IsRunning="{Binding IsRunning, Mode=TwoWay}" IsVisible="{Binding IsRunning}" 
+                                   Margin="0,10,0,0" HorizontalOptions="Center"
+                                   HeightRequest="50" WidthRequest="50"
+                                   Color="#ff4114" />
             </StackLayout>            
         </stateContainerDemo:StateCondition>
         

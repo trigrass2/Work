@@ -7,6 +7,7 @@ using Plugin.Settings.Abstractions;
 using Plugin.Settings;
 using System.ComponentModel;
 using static Vertical.Constants;
+using System.Threading.Tasks;
 
 namespace Vertical.ViewModels
 {    
@@ -34,6 +35,7 @@ namespace Vertical.ViewModels
         public States States { get; set; } = States.Normal;
 
         public bool IsEnabled { get; set; } = true;
+        public bool IsRunning { get; set; } = false;
 
         public AutorizationsPageViewModel()
         {           
@@ -47,9 +49,11 @@ namespace Vertical.ViewModels
         /// </summary>
         private async void SignIn()
         {
+            await Task.Run(()=> { IsRunning = true; });
+            
             IsEnabled = false;
             States = States.Loading;
-            
+
             if (NetworkCheck.IsInternet())
             {
                 switch (Api.GetToken(User.Login, User.Password))
@@ -61,32 +65,36 @@ namespace Vertical.ViewModels
                             await Navigation.PushAsync(new MenuPage());
                             States = States.Normal;
                             IsEnabled = true;
-                        } break;
+                        }
+                        break;
 
                     case System.Net.HttpStatusCode.InternalServerError:
                         {
                             await Application.Current.MainPage.DisplayAlert("Ошибка", "Сервер временно не доступен", "Ок");
                             States = States.Normal;
                             IsEnabled = true;
-                        } break;
+                        }
+                        break;
 
                     case System.Net.HttpStatusCode.BadRequest:
                         {
                             await Application.Current.MainPage.DisplayAlert("Ошибка", "Неверный логин или пароль", "Ок");
                             States = States.Normal;
                             IsEnabled = true;
-                        } break;
+                        }
+                        break;
                     default:
                         {
                             await Application.Current.MainPage.DisplayAlert("!", "Ошибка входа", "Ок");
-                        } break;
+                        }
+                        break;
                 }
             }
             else
             {
                 await Application.Current.MainPage.DisplayAlert("Ошибка", "Отсутствует интернет-соединение", "Ок");
             }
-        }        
+        }
     }    
     
     public class User : INotifyPropertyChanged
