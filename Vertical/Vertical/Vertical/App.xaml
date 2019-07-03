@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             x:Class="Vertical.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style x:Key="MenuButtonStyle" TargetType="Button">
+                <Setter Property="Padding" Value="5,10,5,5"/>
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="BorderColor" Value="#2C2F33"/>
+                <Setter Property="BorderWidth" Value="0.5"/>
+                <Setter Property="FontSize" Value="Micro"/>
+                <Setter Property="ContentLayout" Value="Top,10"/>
+            </Style>
+            <Style x:Key="BlueButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#336DAB"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontFamily" Value="Graphik"/>
+                <Setter Property="CornerRadius" Value="6"/>
+            </Style>
+            <Style x:Key="SfTextInputLayoutStyle" TargetType="inputLayout:SfTextInputLayout">
+                <Setter Property="ContainerType" Value="Outlined"/>
+                <Setter Property="OutlineCornerRadius" Value="6"/>
+                <Setter Property="FocusedStrokeWidth" Value="3"/>
+                <Setter Property="FocusedColor" Value="#336dab"/>
+                <Setter Property="UnfocusedStrokeWidth" Value="2"/>
+                <Setter Property="InputViewPadding" Value="10,5,5,5"/>
+            </Style>
+            <Style x:Key="ActivityIndicatorStyle" TargetType="ActivityIndicator">
+                <Setter Property="HeightRequest" Value="50"/>
+                <Setter Property="WidthRequest" Value="50"/>
+                <Setter Property="Color" Value="#ff4114"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+            </Style>
+            <Style x:Key="DefaultLabelStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="Graphik"/>
+                <Setter Property="TextColor" Value="#737373"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

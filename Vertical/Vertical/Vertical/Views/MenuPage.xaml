@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:svg="clr-namespace:Xamarin.Forms.Svg;assembly=SvgImageSource"
+             x:Class="Vertical.Views.MenuPage"
+             xmlns:stateContainerDemo="clr-namespace:Xamarin.Forms.Essentials.Controls;assembly=Xamarin.Forms.Essentials.Controls"
+             BackgroundColor="#fafafa">
+    <stateContainerDemo:StateContainer State ="{Binding StatesPage}">        
+
+        <stateContainerDemo:StateCondition Is="Normal">
+            <Grid HorizontalOptions="CenterAndExpand" Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <Button 
+                    x:Name="startWorkButton" Grid.Row="0" Grid.Column="0" 
+                    Text="Начать работу" Style="{DynamicResource MenuButtonStyle}"
+                    IsEnabled="{Binding IsEnabled}">
+                    <Button.ImageSource>
+                        <svg:SvgImageSource Source="Vertical.SvgPictures.next.svg" Height="50" Width="50"/>
+                    </Button.ImageSource>
+                </Button>
+
+                <Button 
+                    x:Name="openCatalogButton" Grid.Row="0" Grid.Column="1"
+                    Command="{Binding MoveToCatalogPageCommand}"
+                    Text="Справочник" Style="{DynamicResource MenuButtonStyle}"
+                    IsEnabled="{Binding IsEnabled}">
+                    <Button.ImageSource>
+                        <svg:SvgImageSource Source="Vertical.SvgPictures.agenda.svg" Height="50" Width="50"/>
+                    </Button.ImageSource>
+                </Button>
+
+                <Button 
+                    x:Name="openChecklistButton" Grid.Row="0" Grid.Column="2"                    
+                    Command="{Binding MoveToChekPageCommand}"
+                    Text="Чеклисты" Style="{DynamicResource MenuButtonStyle}"
+                    IsEnabled="{Binding IsEnabled}">
+                    <Button.ImageSource>
+                        <svg:SvgImageSource Source="Vertical.SvgPictures.checklist.svg" Height="50" Width="50"/>
+                    </Button.ImageSource>
+                </Button>
+
+                <Button 
+                    x:Name="openRequestsButton" Grid.Row="1" Grid.Column="0"
+                    Command="{Binding MoveToRequestPageCommand}"
+                    Text="Заявки" Style="{DynamicResource MenuButtonStyle}"
+                    IsEnabled="{Binding IsEnabled}">
+                    <Button.ImageSource>
+                        <svg:SvgImageSource Source="Vertical.SvgPictures.user.svg" Height="50" Width="50"/>
+                    </Button.ImageSource>
+                </Button>
+
+                <Button 
+                    x:Name="openSettingsButton" Grid.Row="1" Grid.Column="1"
+                    Text="Настройки" Style="{DynamicResource MenuButtonStyle}"
+                    IsEnabled="{Binding IsEnabled}">
+                    <Button.ImageSource>
+                        <svg:SvgImageSource Source="Vertical.SvgPictures.settings.svg" Height="50" Width="50"/>
+                    </Button.ImageSource>
+                </Button>
+            </Grid>
+        </stateContainerDemo:StateCondition>
+
+        <stateContainerDemo:StateCondition Is="Loading">
+            <ActivityIndicator IsRunning="True" Style="{x:StaticResource ActivityIndicatorStyle}"/>
+        </stateContainerDemo:StateCondition>
+    </stateContainerDemo:StateContainer>
+    
+</ContentPage>

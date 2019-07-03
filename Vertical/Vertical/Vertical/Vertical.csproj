@@ -1,0 +1,88 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="PikGroupLogo.svg" />
+    <None Remove="SvgPictures\agenda.svg" />
+    <None Remove="SvgPictures\checklist.svg" />
+    <None Remove="SvgPictures\google_logo.svg" />
+    <None Remove="SvgPictures\ic_edit.svg" />
+    <None Remove="SvgPictures\next.svg" />
+    <None Remove="SvgPictures\settings.svg" />
+    <None Remove="SvgPictures\user.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="SvgPictures\agenda.svg" />
+    <EmbeddedResource Include="SvgPictures\checklist.svg" />
+    <EmbeddedResource Include="SvgPictures\ic_edit.svg" />
+    <EmbeddedResource Include="SvgPictures\next.svg" />
+    <EmbeddedResource Include="SvgPictures\PikGroupLogo.svg" />
+    <EmbeddedResource Include="SvgPictures\settings.svg" />
+    <EmbeddedResource Include="SvgPictures\user.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="NGraphics" Version="0.5.0" />
+    <PackageReference Include="PropertyChanged.Fody" Version="2.6.1" />
+    <PackageReference Include="RestSharp" Version="106.6.9" />
+    <PackageReference Include="Syncfusion.Licensing" Version="17.1.0.53" />
+    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="17.1.0.53" />
+    <PackageReference Include="Xam.Plugin.Connectivity" Version="3.2.0" />
+    <PackageReference Include="Xam.Plugins.Settings" Version="3.1.1" />
+    <PackageReference Include="Xamarin.Forms" Version="4.0.0.540366" />
+    <PackageReference Include="Xamarin.Forms.Essentials.Controls" Version="1.1.1" />
+    <PackageReference Include="Xamarin.Forms.Svg" Version="1.0.0-pre4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Mono.Android">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v8.1\Mono.Android.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\InitializeObjectPage.xaml.cs">
+      <DependentUpon>InitializeObjectPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\AutorizationsPage.xaml.cs">
+      <DependentUpon>AutorizationsPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\InitializeObjectPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\AutorizationsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ManualPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MenuPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SettingsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Views\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
+</Project>

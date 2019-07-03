@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:stateContainerDemo="clr-namespace:Xamarin.Forms.Essentials.Controls;assembly=Xamarin.Forms.Essentials.Controls"
+             x:Class="Vertical.Views.ManualPage"
+             x:Name="Page">
+    <stateContainerDemo:StateContainer State ="{Binding States}">
+        <stateContainerDemo:StateCondition Is="Normal">
+            <RelativeLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Label 
+                    x:Name="titleLabel" Margin="7,0,7,0" 
+                    Text="{Binding Title}" IsVisible="{Binding IsVisibleTitle}" 
+                    FontSize="Large" FontAttributes="Bold" Style="{x:StaticResource DefaultLabelStyle}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                    HeightRequest="50"/>
+                <ListView 
+                    x:Name="listTypesModels" ItemsSource="{Binding SystemObjectModels}" 
+                    Margin="7" SelectedItem="{Binding SelectedObject}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=titleLabel, Property=Height, Factor=1, Constant=5}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-100}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <Grid x:Name="Item">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition Width="50"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Label 
+                                            x:Name="nameObjectLabel" Text="{Binding Name}" FontSize="Medium" Style="{x:StaticResource DefaultLabelStyle}"
+                                            Grid.Column="0"/>
+                                        <Button 
+                                            ImageSource="{Binding Source={x:Reference Page}, Path = BindingContext.EditButtonImage}"
+                                            Margin="0,0,5,0"
+                                            Command="{Binding Source={x:Reference Page}, Path = BindingContext.EditObjectCommand}" 
+                                            CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
+                                            HorizontalOptions="End"
+                                            Grid.Column="1"
+                                            BackgroundColor="#fafafa"
+                                            IsEnabled="{Binding Source={x:Reference Page}, Path = BindingContext.IsEnabled}"/>
+                                    </Grid>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Button                    
+                    x:Name="addNewObjectButton"
+                    Text="+" FontAttributes="Bold" FontSize="Medium"
+                    Style="{x:StaticResource BlueButtonStyle}" 
+                    Command="{Binding AddNewObjectCommand}"
+                    HeightRequest="50" WidthRequest="50"
+                    CornerRadius="30"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=-55}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-55}"
+                    IsEnabled="{Binding IsEnabled}"/>
+            </RelativeLayout>
+            
+        </stateContainerDemo:StateCondition>
+
+        <stateContainerDemo:StateCondition Is="Loading">
+            <ActivityIndicator IsRunning="True" Style="{x:StaticResource ActivityIndicatorStyle}"/>
+        </stateContainerDemo:StateCondition>
+        
+        <stateContainerDemo:StateCondition Is="NoInternet">
+            <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
+                <Label Text="Отсутствует интернет-&#10;соединение" HorizontalTextAlignment="Center"/>
+                <Button Text="Повторить" Command="{Binding UpdateContentCommand}" Style="{DynamicResource BlueButtonStyle}"/>
+            </StackLayout>
+        </stateContainerDemo:StateCondition>
+        
+        <stateContainerDemo:StateCondition Is="NoData">
+            <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
+                <Label Text="Данных пока нет" HorizontalTextAlignment="Center"/>
+                <Button Text="Добавить" Style="{DynamicResource BlueButtonStyle}" Command="{Binding AddNewObjectCommand}"/>
+            </StackLayout>
+        </stateContainerDemo:StateCondition>
+    </stateContainerDemo:StateContainer>    
+</ContentPage>
