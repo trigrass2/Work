@@ -39,7 +39,9 @@ namespace Vertical.ViewModels
         private async void MoveToCatalogPage()
         {
             IsEnabled = false;
+
             await Navigation.PushAsync(new ManualPage());
+
             IsEnabled = true;
            
         }
@@ -49,7 +51,7 @@ namespace Vertical.ViewModels
         /// </summary>
         private async void MoveToRequestPage()
         {
-            StatesPage = States.NoInternet;
+            
         }
         
         /// <summary>

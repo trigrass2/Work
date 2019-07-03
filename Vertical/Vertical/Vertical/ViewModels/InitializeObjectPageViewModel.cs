@@ -1,7 +1,9 @@
-﻿using PropertyChanged;
+﻿using Android.Util;
+using PropertyChanged;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Vertical.Models;
 using Vertical.Services;
@@ -20,7 +22,8 @@ namespace Vertical.ViewModels
         public ICommand CancelCommand => new Command(Cancel);
         public SystemObjectModel InputObject { get; set; }  
         public object NewObject { get; set; }
-        public string TextButton { get; set; } = "Добавить";        
+        public string TextButton { get; set; } = "Добавить";
+        private string NameMetod { get; set; } = "AddSystemObject";
 
         public bool IsEnabled { get; set; } = true;
 
@@ -41,6 +44,7 @@ namespace Vertical.ViewModels
             else
             {
                 TextButton = "Изменить";
+                NameMetod = "EditSystemObject";
                 NewObject = new InputEditSystemObject { ObjectGUID = InputObject?.GUID, Name = InputObject?.Name };
             }
         }
@@ -48,16 +52,31 @@ namespace Vertical.ViewModels
         private async void AddNewObject()
         {
             IsEnabled = false;
-            if(!Api.SendData(Api.NameMetodsApi.AddSystemObject, NewObject))
+
+            if (!NetworkCheck.IsInternet())
+            {
+                await Application.Current.MainPage.DisplayAlert("Сообщение", "Отсутствует интернет-соединение!", "Ок");
+                return;
+            }
+
+            if (!Api.SendDataToServer(NameMetod, NewObject))
             {
                 await Application.Current.MainPage.DisplayAlert("Сообщение", "Не удалось создать.", "Ок");
                 return;
             }
-            NavigationPage navPage = (NavigationPage)Application.Current.MainPage;
-            IReadOnlyList<Page> navStack = navPage.Navigation.NavigationStack;            
-            var manualPage = navStack[navPage.Navigation.NavigationStack.Count - 1] as ManualPage;
-            manualPage.ViewModel.States = States.Loading;
-            manualPage.ViewModel.UpdateSystemObjects();
+
+            try
+            {
+                NavigationPage navPage = (NavigationPage)Application.Current.MainPage;
+                IReadOnlyList<Page> navStack = navPage.Navigation.NavigationStack;
+                var manualPage = navStack[navPage.Navigation.NavigationStack.Count - 1] as ManualPage;
+                manualPage.ViewModel.States = States.Loading;
+                manualPage.ViewModel.UpdateSystemObjects();
+            }
+            catch (Exception ex)
+            {
+                Log.WriteLine(LogPriority.Error, $"{nameof(AddNewObject)}", $"{ex.Message}");
+            }            
 
             await Navigation.PopModalAsync();
         } 

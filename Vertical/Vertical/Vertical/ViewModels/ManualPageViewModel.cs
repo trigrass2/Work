@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Vertical.Models;
 using Vertical.Services;
@@ -69,7 +70,7 @@ namespace Vertical.ViewModels
             Title = ParentObject?.Name;
             SystemObjectModels = new ObservableCollection<SystemObjectModel>();
             SystemObjectTypesModels = new ObservableCollection<SystemObjectTypeModel>();
-            UpdateSystemObjects();            
+            UpdateSystemObjects();
         }
 
         /// <summary>
@@ -85,13 +86,15 @@ namespace Vertical.ViewModels
                 States = States.NoInternet;
                 return;
             }
-            SystemObjectModels.Clear();
 
-            var items = Api.GetServerData<SystemObjectModel>(Api.NameMetodsApi.GetSystemObjects,new { ParentGUID = ParentObject?.GUID } );
+            SystemObjectModels?.Clear();
+            var items = Api.GetDataFromServer<SystemObjectModel>("GetSystemObjects", new { ParentGUID = ParentObject?.GUID });
+
             foreach (var i in items)
             {
                 SystemObjectModels.Add(i);
             }
+
             States = SystemObjectModels.Count == 0 ? States.NoData : States.Normal;
         }
 
@@ -115,7 +118,11 @@ namespace Vertical.ViewModels
 
         private async void NextPage(SystemObjectModel _selectedObject)
         {
+            IsEnabled = false;
+            var propertiesValues = Api.GetDataFromServer<SystemObjectPropertyValueModel>("GetSystemObjectPropertiesValues", new { ObjectGUID = _selectedObject.GUID});
             await Navigation.PushAsync(new ManualPage(_selectedObject));
+
+            IsEnabled = true;
         }
     }
 }

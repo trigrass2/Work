@@ -56,26 +56,30 @@ namespace Vertical.ViewModels
                 {
                     case System.Net.HttpStatusCode.OK:
                         {
-                            Login = User.Login;
-                            Password = User.Password;
+                            Login = User?.Login;
+                            Password = User?.Password;
                             await Navigation.PushAsync(new MenuPage());
                             States = States.Normal;
                             IsEnabled = true;
-                        }; break;
+                        } break;
 
                     case System.Net.HttpStatusCode.InternalServerError:
                         {
                             await Application.Current.MainPage.DisplayAlert("Ошибка", "Сервер временно не доступен", "Ок");
                             States = States.Normal;
                             IsEnabled = true;
-                        }; break;
+                        } break;
 
                     case System.Net.HttpStatusCode.BadRequest:
                         {
                             await Application.Current.MainPage.DisplayAlert("Ошибка", "Неверный логин или пароль", "Ок");
                             States = States.Normal;
                             IsEnabled = true;
-                        }; break;
+                        } break;
+                    default:
+                        {
+                            await Application.Current.MainPage.DisplayAlert("!", "Ошибка входа", "Ок");
+                        } break;
                 }
             }
             else
