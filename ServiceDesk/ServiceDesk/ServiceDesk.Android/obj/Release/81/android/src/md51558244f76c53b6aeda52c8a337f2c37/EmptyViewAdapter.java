@@ -11,8 +11,10 @@ public class EmptyViewAdapter
 	static {
 		__md_methods = 
 			"n_getItemCount:()I:GetGetItemCountHandler\n" +
+			"n_onViewRecycled:(Landroid/support/v7/widget/RecyclerView$ViewHolder;)V:GetOnViewRecycled_Landroid_support_v7_widget_RecyclerView_ViewHolder_Handler\n" +
 			"n_onBindViewHolder:(Landroid/support/v7/widget/RecyclerView$ViewHolder;I)V:GetOnBindViewHolder_Landroid_support_v7_widget_RecyclerView_ViewHolder_IHandler\n" +
 			"n_onCreateViewHolder:(Landroid/view/ViewGroup;I)Landroid/support/v7/widget/RecyclerView$ViewHolder;:GetOnCreateViewHolder_Landroid_view_ViewGroup_IHandler\n" +
+			"n_getItemViewType:(I)I:GetGetItemViewType_IHandler\n" +
 			"";
 		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.EmptyViewAdapter, Xamarin.Forms.Platform.Android", EmptyViewAdapter.class, __md_methods);
 	}
@@ -34,6 +36,14 @@ public class EmptyViewAdapter
 	private native int n_getItemCount ();
 
 
+	public void onViewRecycled (android.support.v7.widget.RecyclerView.ViewHolder p0)
+	{
+		n_onViewRecycled (p0);
+	}
+
+	private native void n_onViewRecycled (android.support.v7.widget.RecyclerView.ViewHolder p0);
+
+
 	public void onBindViewHolder (android.support.v7.widget.RecyclerView.ViewHolder p0, int p1)
 	{
 		n_onBindViewHolder (p0, p1);
@@ -48,6 +58,14 @@ public class EmptyViewAdapter
 	}
 
 	private native android.support.v7.widget.RecyclerView.ViewHolder n_onCreateViewHolder (android.view.ViewGroup p0, int p1);
+
+
+	public int getItemViewType (int p0)
+	{
+		return n_getItemViewType (p0);
+	}
+
+	private native int n_getItemViewType (int p0);
 
 	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)

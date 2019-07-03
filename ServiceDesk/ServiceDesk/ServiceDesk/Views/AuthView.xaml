@@ -2,7 +2,6 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ServiceDesk.Views.AuthView"
-             xmlns:syncfusion="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
              BackgroundColor="Accent">
     <ContentPage.Content>        
         <Grid VerticalOptions="Center" Margin="5,0,5,0">

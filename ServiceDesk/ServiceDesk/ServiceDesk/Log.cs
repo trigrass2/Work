@@ -17,7 +17,7 @@ namespace ServiceDesk
         /// <param name="msg"></param>
         public static void WriteMessage(string msg)
         {
-            Android.Util.Log.WriteLine(Android.Util.LogPriority.Info, "SERVICE DESK LOGER", GetLocation() + msg);
+            Android.Util.Log.WriteLine(Android.Util.LogPriority.Info, "SERVICE DESK LOGER", GetLocation() + msg);       
         }
 
         private static string GetLocation()

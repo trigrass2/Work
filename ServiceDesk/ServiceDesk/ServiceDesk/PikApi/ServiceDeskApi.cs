@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using RestSharp;
 using ServiceDesk.Models;
+using Xamarin.Forms;
 
 namespace ServiceDesk.PikApi
 {
@@ -44,6 +46,23 @@ namespace ServiceDesk.PikApi
             GetUsersList,
             GetStatuses,
             GetGroupsUsers
+        }
+
+        public static void SendErrorToTelegram(string textMessage, [CallerMemberName] string invokeMetodName = "")
+        {
+            try
+            {
+                string textMsg = $"In {invokeMetodName} {textMessage}";
+                RestClient client = new RestClient($"https://api.telegram.org/bot870858359:AAH0xAUXEm3zNVVFM7buY6Avwvrj_av4Rac/sendMessage?chat_id=@sderror&text={textMsg}");
+                RestRequest restRequest = new RestRequest(Method.POST);
+
+                var responce = client.Execute(restRequest);
+            }
+            catch (Exception ex)
+            {
+                Log.WriteMessage($"Ошибка при авке в телеграм : {ex.Message}");
+            }
+            
         }
 
         #region SERVICE DESK
@@ -215,6 +234,26 @@ namespace ServiceDesk.PikApi
             else return default(IEnumerable<T>);
         }
 
+        public static IEnumerable<ServiceDesk_TaskListView> GetTasksPages<T>(T model)
+        {
+            RestClient client = new RestClient($"{connectionString}ServiceDesk/GetTasks");
+            RestRequest request = new RestRequest(Method.POST);
+
+            request.AddHeader("authorization", $"Bearer {AccessToken}");
+            request.RequestFormat = DataFormat.Json;
+
+            string modelJson = JsonConvert.SerializeObject(model);
+            request.AddParameter("application/json", modelJson, ParameterType.RequestBody);
+
+            IRestResponse restResponse = client.Execute(request);
+
+            if (restResponse.IsSuccessful)
+            {
+                return JsonConvert.DeserializeObject<IEnumerable<ServiceDesk_TaskListView>>(restResponse.Content);
+            }
+            else return default(IEnumerable<ServiceDesk_TaskListView>);
+        }
+
         /// <summary>
         /// Возвращает данные по запросу используя ID заявки
         /// </summary>
@@ -366,7 +405,7 @@ namespace ServiceDesk.PikApi
         /// <param name="nameApi"></param>
         /// <param name="idFactory">id завода</param>
         /// <returns></returns>
-        public static IEnumerable<T> GetProductUnit<T>(ApiEnum nameApi, int idFactory)
+        public static IEnumerable<T> GetProductUnit<T>(ApiEnum nameApi, int? idFactory)
         {
             RestClient client = new RestClient($"{connectionString}ProductUnit/{Enum.GetName(typeof(ApiEnum), nameApi)}?factory_id={idFactory}");
             RestRequest request = new RestRequest(Method.GET);
@@ -391,7 +430,7 @@ namespace ServiceDesk.PikApi
         /// <param name="idFactory"></param>
         /// <param name="idPlant"></param>
         /// <returns></returns>
-        public static IEnumerable<T> GetProductUnit<T>(ApiEnum nameApi, int idFactory, int idPlant)
+        public static IEnumerable<T> GetProductUnit<T>(ApiEnum nameApi, int? idPlant, int? idFactory )
         {
             RestClient client = new RestClient($"{connectionString}ProductUnit/{Enum.GetName(typeof(ApiEnum), nameApi)}?plant_id={idPlant}&factory_id={idFactory}");
             RestRequest request = new RestRequest(Method.GET);

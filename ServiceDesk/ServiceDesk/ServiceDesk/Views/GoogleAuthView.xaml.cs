@@ -1,5 +1,8 @@
-﻿using ServiceDesk.PikApi;
+﻿using Newtonsoft.Json;
+using ServiceDesk.PikApi;
 using System.Linq;
+using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -12,7 +15,6 @@ namespace ServiceDesk.Views
         public GoogleAuthView()
         {
             InitializeComponent();
-
             var authRequest =
                 "https://accounts.google.com/o/oauth2/v2/auth"
                 + "?response_type=token"
@@ -40,6 +42,7 @@ namespace ServiceDesk.Views
                 if (ServiceDeskApi.LoginExternalService(access_token) == System.Net.HttpStatusCode.OK)
                 {
                     LoadPage loadPage = new LoadPage();
+                    
                     await Navigation.PushAsync(loadPage);
                     await Navigation.PushAsync(await Task.Run(() => new MenuPage()));
                     Navigation.RemovePage(loadPage);
@@ -58,5 +61,6 @@ namespace ServiceDesk.Views
             }
             return string.Empty;
         }
+
     }
 }

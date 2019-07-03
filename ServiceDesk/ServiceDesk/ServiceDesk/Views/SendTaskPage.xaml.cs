@@ -18,9 +18,12 @@ namespace ServiceDesk.Views
         protected async override void OnAppearing()
         {
             //viewModel.IsBusy = true;
-            await viewModel.UpdateTypes();
-            await viewModel.UpdateFactorys();
-            await viewModel.UpdateUsers();
+            if (viewModel._initializedTypes == false)
+                await viewModel.UpdateTypes();
+            if (viewModel._initializedFactorys == false)
+                await viewModel.UpdateFactorys();
+            if (viewModel._initializedUsers == false)
+                await viewModel.UpdateUsers();
             //viewModel.IsBusy = false;
             base.OnAppearing();
         }

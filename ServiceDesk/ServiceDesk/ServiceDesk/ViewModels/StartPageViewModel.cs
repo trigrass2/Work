@@ -1,7 +1,9 @@
 ﻿using ServiceDesk.Views;
+using System;
 using System.ComponentModel;
 using System.Windows.Input;
 using Xamarin.Forms;
+using Xamarin.Forms.Svg;
 
 namespace ServiceDesk.ViewModels
 {
@@ -14,8 +16,15 @@ namespace ServiceDesk.ViewModels
         public ICommand OkCommand
             => _okCommand ?? (_okCommand = new Command<string>(GoToAuth));
 
+        public ImageSource Logo { get; set; }
+
+        public StartPageViewModel()
+        {
+            Logo = SvgImageSource.FromSvgResource("ServiceDesk.whitePikLogo.svg", 150, 150);
+        }
+
         public async void GoToAuth(string provider)
-        {            
+        {
             switch (provider)
             {
                 case "google": await Navigation.PushAsync(new GoogleAuthView()); break;
@@ -23,5 +32,8 @@ namespace ServiceDesk.ViewModels
                 case "Local": await Navigation.PushAsync(new LocalAuthPage()); break;
             }
         }
+        
+
     }
+    
 }

@@ -1,6 +1,7 @@
 ﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using ServiceDesk.ViewModels;
+using Syncfusion.XForms.ComboBox;
 
 namespace ServiceDesk.Views
 {
@@ -9,21 +10,19 @@ namespace ServiceDesk.Views
     /// </summary>
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class MenuPage : ContentPage
-	{
-        TaskListViewModel _viewModel;
+	{       
+        public TaskListViewModel ViewModel { get; set; }
         public MenuPage ()
 		{
 			InitializeComponent ();
             NavigationPage.SetHasNavigationBar(this, false);
-            _viewModel = new TaskListViewModel() { Navigation = this.Navigation };
-            BindingContext = _viewModel;
+            ViewModel = new TaskListViewModel() { Navigation = this.Navigation };
+            BindingContext = ViewModel;
         }
 
         protected async override void OnAppearing()
         {
-            await _viewModel.UpdateSubscribed();
-            await _viewModel.UpdateStatuses();
-            await _viewModel.UpdateTasksAsync(_viewModel.SelectedStatus.Status_id);
+            ViewModel.Page = 0;
             base.OnAppearing();
         }
 	}

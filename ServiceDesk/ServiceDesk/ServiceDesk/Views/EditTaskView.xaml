@@ -18,9 +18,9 @@
                 <Label Text="Тип заявки" />
                 <Picker x:Name="picker" ItemsSource="{Binding Types}" ItemDisplayBinding="{Binding Type_name}" SelectedItem="{Binding SelectedTypes, Mode=TwoWay}"/>
                 <Label Text="Заголовок"/>
-                <Entry Text="{Binding Title, Mode=TwoWay}" FontSize="Medium"/>
+                <Entry Text="{Binding NewTask.Title, Mode=TwoWay}" FontSize="Medium"/>
                 <Label Text="Текст"/>
-                <Entry Text="{Binding Text, Mode=TwoWay}" FontSize="Medium"/>
+                <Entry Text="{Binding NewTask.Text, Mode=TwoWay}" FontSize="Medium"/>
                 <Label Text="Завод"/>
                 <Picker x:Name="pickerFactory" ItemsSource="{Binding Factorys}" ItemDisplayBinding="{Binding Factory_name}" SelectedItem="{Binding SelectedFactory, Mode=TwoWay}"/>
                 <Label Text="Линия"/>

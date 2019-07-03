@@ -24,9 +24,9 @@
                     <Picker x:Name="picker" ItemsSource="{Binding Types}" ItemDisplayBinding="{Binding Type_name}" 
                             SelectedItem="{Binding SelectedTypes}" Margin="0,0,5,0"/>
                     <Label Text="Заголовок"/>
-                    <Entry Text="{Binding Title}" FontSize="Medium" Margin="0,0,5,0"/>
+                    <Entry Text="{Binding NewTask.Title}" FontSize="Medium" Margin="0,0,5,0"/>
                     <Label Text="Текст"/>
-                    <Entry Text="{Binding Text}" FontSize="Medium" Margin="0,0,5,0"/>
+                    <Entry Text="{Binding NewTask.Text}" FontSize="Medium" Margin="0,0,5,0"/>
                     <Label Text="Завод"/>
                     <Picker x:Name="pickerFactory" ItemsSource="{Binding Factorys}" ItemDisplayBinding="{Binding Factory_name}" 
                             SelectedItem="{Binding SelectedFactory}" Margin="0,0,5,0"/>
@@ -55,7 +55,7 @@
                         <ListView
                             HeightRequest="300"
                             SeparatorVisibility="None"
-                            ItemsSource="{Binding Attachments}" 
+                            ItemsSource="{Binding NewTask.Attachments}" 
                             Margin="5" 
                             HorizontalOptions="Start" 
                             VerticalOptions="StartAndExpand">

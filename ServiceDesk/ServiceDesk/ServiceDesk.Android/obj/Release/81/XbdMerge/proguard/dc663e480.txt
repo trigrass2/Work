@@ -1,8 +1,10 @@
+
 # Proguard flags for consumers of the Google Play services SDK
 # https://developers.google.com/android/guides/setup#add_google_play_services_to_your_project
 
-# Keep SafeParcelable NULL value, needed for reflection by DowngradeableSafeParcel
--keepclassmembers public class com.google.android.gms.common.internal.safeparcel.SafeParcelable {
+# Keep SafeParcelable value, needed for reflection. This is required to support backwards
+# compatibility of some classes.
+-keep public class com.google.android.gms.common.internal.safeparcel.SafeParcelable {
     public static final *** NULL;
 }
 
@@ -44,9 +46,8 @@
 # Needed when building against Marshmallow SDK.
 -dontwarn android.app.Notification
 
-# Protobuf has references not on the Android boot classpath
--dontwarn sun.misc.Unsafe
--dontwarn libcore.io.Memory
+# Ensure that proguard will not strip GcmListenerService.handleIntent()
+-keepclassmembers class com.google.android.gms.gcm.GcmListenerService {
+    public void handleIntent(android.content.Intent);
+}
 
-# Internal Google annotations for generating Proguard keep rules.
--dontwarn com.google.android.apps.common.proguard.UsedBy*

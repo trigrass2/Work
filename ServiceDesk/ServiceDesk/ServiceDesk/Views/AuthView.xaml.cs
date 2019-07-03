@@ -12,7 +12,8 @@ namespace ServiceDesk.Views
     {        
         public AuthView()
         {
-            InitializeComponent();
+            InitializeComponent();           
+
             BindingContext = new AuthViewModel() { Navigation = this.Navigation };            
         }       
         

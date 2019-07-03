@@ -20,35 +20,86 @@ namespace ServiceDesk.ViewModels
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public ObservableCollection<ServiceDesk_TaskListView> Tasks { get; set; }
+        public ServiceDesk_TaskListView Filter { get; set; }
+
+        private ObservableCollection<ServiceDesk_TaskListView> _tasks;
+        public ObservableCollection<ServiceDesk_TaskListView> Tasks
+        {
+            get
+            {
+                return _tasks;
+            }
+            set
+            {
+                _tasks = value;
+            }
+        }
         public ObservableCollection<ServiceDesk_StatusListView> Statuses { get; set; }
 
         public INavigation Navigation { get; set; }
         public ICommand CreateTaskCommand { get; set; }
         public ICommand OpenProfileCommand { get; set; }
+        public ICommand NextButtonCommand { get; set; }
+        public ICommand BackButtonComand { get; set; }
+        public ICommand OpenFilterCommand { get; set; }
 
-        private ServiceDesk_StatusListView _allTasksStatus = new ServiceDesk_StatusListView { Status_id = 3740, Status_name = "Все заявки" };
-        private ServiceDesk_StatusListView _selectedStatus;
-        public ServiceDesk_StatusListView SelectedStatus
+        public int Page { get; set; }
+
+        private bool _isEnableBackButton;
+        public bool IsEnableBackButton
         {
             get
             {
-                return _selectedStatus;
+                return _isEnableBackButton;
             }
             set
             {
-                _selectedStatus = value;
-                UpdateTasks(_selectedStatus.Status_id);
+                _isEnableBackButton = value;
             }
         }
+
+        public Color StatusColor { get; set; } = Color.FromHex("#ffff");        
+
         public bool IsBoosy { get; set; } = true;
         
         public TaskListViewModel()
-        {            
+        {
+            UpdateSubscribed();
+            IsEnableNextButton = true;
+            IsEnableBackButton = false;
+            Filter = new ServiceDesk_TaskListView();
             Tasks = new ObservableCollection<ServiceDesk_TaskListView>();
             Statuses = new ObservableCollection<ServiceDesk_StatusListView>();
             CreateTaskCommand = new Command(GoInCreatePage);
             OpenProfileCommand = new Command(OpenProfile);
+            NextButtonCommand = new Command(NextPages);
+            BackButtonComand = new Command(BackPages);
+            OpenFilterCommand = new Command(OpenFilter);
+
+            UpdateTasks(Filter.Status_id);
+        }
+
+        public async void OpenFilter()
+        {
+            await Navigation.PushModalAsync(new FilterPage(Filter)); 
+        }
+
+        public void NextPages()
+        {
+            Page++;
+            IsEnableBackButton = true;
+            UpdateTasks(Filter.Status_id);
+        }
+
+        public void BackPages()
+        {
+            if (Page > 0)
+            {
+                IsEnableNextButton = true;
+                Page--;
+                UpdateTasks(Filter.Status_id);
+            }
+            else IsEnableBackButton = false;
         }
         
         /// <summary>
@@ -71,72 +122,79 @@ namespace ServiceDesk.ViewModels
         /// обновляет список статусов
         /// </summary>
         /// <returns></returns>
-        public async Task UpdateStatuses()
-        {
-            try
-            {
-                Statuses.Clear();
-                var statuses = await ServiceDeskApi.GetDataServisDeskManagmentAsync<ServiceDesk_StatusListView>(ServiceDeskApi.ApiEnum.GetStatuses);
-                foreach (var s in statuses)
-                {
-                    Statuses.Add(s);
-                }
+        //public async Task UpdateStatusesAsync()
+        //{            
+        //    try
+        //    {
+        //        Statuses.Clear();
+        //        var statuses = await ServiceDeskApi.GetDataServisDeskManagmentAsync<ServiceDesk_StatusListView>(ServiceDeskApi.ApiEnum.GetStatuses);
+        //        foreach (var s in statuses)
+        //        {
+        //            Statuses.Add(s);
+        //        }
 
-                Statuses.Add(_allTasksStatus);
-                SelectedStatus = Statuses.Where(x => x.Status_id == 1).FirstOrDefault();
-            }
-            catch (Exception ex)
-            {
-                Log.WriteMessage($"Ошибка при обновлении списка статусов : {ex.Message}");
-            }
-            
-        }
+        //        //Statuses.Add(_allTasksStatus);
+        //        //SelectedStatus = _allTasksStatus;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Log.WriteMessage($"Ошибка при обновлении списка статусов : {ex.Message}");
+        //    }            
+        //}
 
+        //public void UpdateStatuses()
+        //{
+        //    try
+        //    {
+        //        Statuses.Clear();
+        //        var statuses = ServiceDeskApi.GetDataServisDeskManagment<ServiceDesk_StatusListView>(ServiceDeskApi.ApiEnum.GetStatuses);
+
+        //        foreach (var s in statuses)
+        //        {
+        //            Statuses.Add(s);
+        //        }
+
+        //        //Statuses.Add(_allTasksStatus);
+        //        //SelectedStatus = _allTasksStatus;//Statuses.Where(x => x.Status_id == 1).FirstOrDefault();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Log.WriteMessage($"Ошибка при обновлении списка статусов : {ex.Message}");
+        //    }
+
+        //}
+
+        public bool _isEnableNextButton;
         /// <summary>
         /// Обновляет заявки
         /// </summary>
-        /// <returns></returns>
-        public async Task UpdateTasksAsync(int statusId)
+        /// <returns></returns>       
+        public bool IsEnableNextButton
         {
-            try
+            get
             {
-                Log.WriteMessage($"Обновление заявок...");
-
-                var items = await ServiceDeskApi.GetDataAsync<ServiceDesk_TaskListView>(ServiceDeskApi.ApiEnum.GetTasks);
-                if (statusId != 3740)
-                {
-                    items = items.Where(x => x.Status_id == statusId);
-                }
-                Tasks.Clear();
-
-                if (items != null && items.Count() > 0 && Tasks != null)
-                {
-                    foreach (var i in items)
-                    {
-                        Tasks.Add(i);
-                    }
-                }
-
-                Log.WriteMessage($"Список заявок обновлен");
+                return _isEnableNextButton;
             }
-            catch (Exception ex)
+            set
             {
-                Log.WriteMessage($"Ошибка при обновлении списка заявок : {ex.Message}");
+                _isEnableNextButton = value;
             }
-            
         }
 
-        
         public void UpdateTasks(int statusId)
         {
             try
             {
-               
+                IEnumerable<ServiceDesk_TaskListView> items;
                 Log.WriteMessage($"Обновление заявок...");
-                var items = ServiceDeskApi.GetData<ServiceDesk_TaskListView>(ServiceDeskApi.ApiEnum.GetTasks);
-                if (statusId != 3740)
+
+                if (statusId != 0)
                 {
-                    items = items.Where(x => x.Status_id == statusId);
+                    items = ServiceDeskApi.GetTasksPages(new { Filter.Status_id, Filter.Type_id, Filter.Factory_id, Filter.Plant_id, Filter.Unit_id, Page = Page, Amount = 10 });
+                }
+                else
+                {
+                    items = ServiceDeskApi.GetTasksPages(new { Filter.Type_id, Filter.Factory_id, Filter.Plant_id, Filter.Unit_id, Page = Page, Amount = 10 });
                 }
 
                 Tasks.Clear();
@@ -146,8 +204,21 @@ namespace ServiceDesk.ViewModels
                     foreach (var i in items)
                     {
                         Tasks.Add(i);
+                        switch (i.Status_id)
+                        {
+                            case 1: StatusColor = Color.FromHex("#ff8c00"); break;
+                            case 51: StatusColor = Color.FromHex("#2e8b57"); break;
+                            case 50: StatusColor = Color.FromHex("#4682b4"); break;
+                            case 2: StatusColor = Color.FromHex("#ffff"); break;
+                        }
                     }
+                    if (Tasks.Count < 10)
+                    {
+                        IsEnableNextButton = false;
+                    }
+                    else IsEnableNextButton = true;
                 }
+
                 Log.WriteMessage($"Список заявок обновлен");
             }
             catch (Exception ex)
@@ -177,9 +248,9 @@ namespace ServiceDesk.ViewModels
 
         public async Task UpdateSubscribed()
         {
-            IsInitialiseSubscribed = true;
+            
             _user = await ServiceDeskApi.GetUserAsync<ApplicationUser>(ServiceDeskApi.ApiEnum.GetUserInfo);
-
+            
             OneSignal.Current.GetTags(TagsReceived);
         }
 
@@ -192,25 +263,27 @@ namespace ServiceDesk.ViewModels
             MakeSublistAsync(tags);
         }
 
-        private async void MakeSublistAsync(Dictionary<string, object> tags)
+        private void MakeSublistAsync(Dictionary<string, object> tags)
         {
             try
             {
                 Log.WriteMessage($"Подписывание юзера");
-
+                
                 foreach (var t in tags)
                 {                    
                     OneSignal.Current.DeleteTag(t.Key.ToString());
                 }
-                OneSignal.Current.SendTag(_user.Id, "User_id");
+                OneSignal.Current.SendTag(_user?.Id, "User_id");
 
                 Log.WriteMessage($"Подписка обновлена");
 
                 return;                
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Log.WriteMessage($"Ошибка подписки : {e.Message}");
+                ServiceDeskApi.SendErrorToTelegram($"{ex.Message}");
+                //OneSignal.Current.SendTag(_user?.Id, "User_id");
+                //Log.WriteMessage($"Ошибка подписки : {e.Message}");
                 return;
             }
         }        

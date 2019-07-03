@@ -15,6 +15,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)CustomPicker.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Log.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ApplicationUser.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\BaseTask.cs" />
@@ -36,6 +37,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AuthViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\CreateTaskViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\EditTaskViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\FilterPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LocalAuthViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ProfileViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\StartPageViewModel.cs" />
@@ -47,6 +49,10 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\EditTaskView.xaml.cs">
       <DependentUpon>EditTaskView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\FilterPage.xaml.cs">
+      <DependentUpon>FilterPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\GoogleAuthView.xaml.cs">
@@ -141,6 +147,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ProfilePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\FilterPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>

@@ -2,7 +2,9 @@
 using Plugin.FilePicker.Abstractions;
 using ServiceDesk.Models;
 using ServiceDesk.PikApi;
+using ServiceDesk.Views;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
@@ -40,6 +42,7 @@ namespace ServiceDesk.ViewModels
             set
             {
                 _selectedType = value;
+                NewTask.Type_id = _selectedType?.Type_id ?? null;
             }
         }
         private Product_PlantListView _selectedPlant;
@@ -52,6 +55,8 @@ namespace ServiceDesk.ViewModels
             set
             {
                 _selectedPlant = value;
+                NewTask.Plant_id = _selectedPlant?.Plant_id ?? null;
+                UpdateUnits(NewTask?.Plant_id, NewTask?.Factory_id);
             }
         }
         private Product_UnitListView _selectedUnit;
@@ -64,7 +69,7 @@ namespace ServiceDesk.ViewModels
             set
             {
                 _selectedUnit = value;
-
+                NewTask.Unit_id = _selectedUnit?.Unit_id ?? null;
             }
         }
         private Product_FactoryListView _selectedFactory;
@@ -77,6 +82,8 @@ namespace ServiceDesk.ViewModels
             set
             {
                 _selectedFactory = value;
+                NewTask.Factory_id = _selectedFactory?.Factory_id ?? null;
+                UpdatePlants(NewTask.Factory_id);
             }
         }
         private string _selectedUser;
@@ -89,6 +96,7 @@ namespace ServiceDesk.ViewModels
             set
             {
                 _selectedUser = value;
+                NewTask.Recipient_id = Users.Where(x => x.UserName == _selectedUser).Select(x => x.Id).FirstOrDefault();
             }
         }
 
@@ -99,60 +107,15 @@ namespace ServiceDesk.ViewModels
         public ObservableCollection<UserModel> Users { get; set; }
         public ObservableCollection<string> UsersNames { get; set; }
 
-        private bool _initializedTypes = false;
-        private bool _initializedFactorys = false;
-        private bool _initializedUsers = false;
-
-        #region set model
-
-        public string Title
-        {
-            get
-            {
-                return NewTask.Title;
-            }
-            set
-            {
-
-
-                NewTask.Title = value;
-
-            }
-        }
-
-        public string Text
-        {
-            get
-            {
-                return NewTask.Text;
-            }
-            set
-            {
-
-
-                NewTask.Text = value;
-
-            }
-        }
-
-        public ObservableCollection<AttachmentFileModel> Attachments
-        {
-            get
-            {
-                return NewTask.Attachments;
-            }
-            set
-            {
-                NewTask.Attachments = value;
-            }
-
-        }
+        public bool _initializedTypes = false;
+        public bool _initializedFactorys = false;
+        public bool _initializedUsers = false;
 
         
-        #endregion
 
         public CreateTaskViewModel()
-        {            
+        {
+            
             Factorys = new ObservableCollection<Product_FactoryListView>();
             Types = new ObservableCollection<ServiceDesk_TypeListView>();
             Plants = new ObservableCollection<Product_PlantListView>();
@@ -163,8 +126,8 @@ namespace ServiceDesk.ViewModels
             NewTask = new CreateTaskModel() { Attachments = new ObservableCollection<AttachmentFileModel>() };
             SendTaskCommand = new Command(SendTask);
             GetFileCommand = new Command(GetFile);
-            UpdatePlants();
-            UpdateUnits();
+            UpdatePlants(NewTask?.Factory_id);
+            UpdateUnits(NewTask?.Plant_id, NewTask?.Factory_id);
         }
 
         /// <summary>
@@ -175,13 +138,34 @@ namespace ServiceDesk.ViewModels
             try
             {
                 Log.WriteMessage("Создание новой заявки...");
-                NewTask.Type_id = _selectedType?.Type_id ?? null;
-                NewTask.Factory_id = _selectedFactory?.Factory_id ?? null;
-                NewTask.Plant_id = _selectedPlant?.Plant_id ?? null;
-                NewTask.Unit_id = _selectedUnit?.Unit_id ?? null;
-                NewTask.Recipient_id = Users.Where(x => x.UserName == _selectedUser).Select(x => x.Id).FirstOrDefault();
+                
+                if(NewTask.Type_id == null || NewTask.Title == null || NewTask.Text == null)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Ошибка", "Заполните обязательные поля! (Тип заявки, Заголовок заявки, Текст заявки)", "OK");
+                    return;
+                }
+
                 await ServiceDeskApi.SendDataToServerAsync(NewTask, ServiceDeskApi.ApiEnum.CreateTask);
                 Log.WriteMessage("Заявка создана");
+                
+                LoadPage loadPage = new LoadPage();               
+
+                NavigationPage navPage = (NavigationPage)Application.Current.MainPage;
+                IReadOnlyList<Page> navStack = navPage.Navigation.NavigationStack;
+                MenuPage homePage = navStack[navPage.Navigation.NavigationStack.Count - 2] as MenuPage;
+                SendTaskPage thisPage = navStack[navPage.Navigation.NavigationStack.Count - 1] as SendTaskPage;
+
+                await Navigation.PushAsync(loadPage);
+
+                if (homePage != null)
+                {
+                    await Task.Run(() =>
+                    {                        
+                        homePage.ViewModel.UpdateTasks(homePage.ViewModel.Filter.Status_id);                        
+                    });                    
+                }
+                
+                Navigation.RemovePage(loadPage);
                 await Navigation.PopAsync();
             }
             catch (Exception ex)
@@ -267,11 +251,12 @@ namespace ServiceDesk.ViewModels
         /// <summary>
         /// Обновляет линии
         /// </summary>
-        private void UpdatePlants()
+        private void UpdatePlants(int? idFactory)
         {
             Plants.Clear();
 
-            var plants = ServiceDeskApi.GetProductUnit<Product_PlantListView>(ServiceDeskApi.ApiEnum.GetProductPlantList);
+            var plants = ServiceDeskApi.GetProductUnit<Product_PlantListView>(ServiceDeskApi.ApiEnum.GetProductPlantList, idFactory);
+
             foreach (var p in plants)
             {
                 Plants.Add(p);
@@ -283,11 +268,12 @@ namespace ServiceDesk.ViewModels
         /// </summary>
         /// <param name="factoryId"></param>
         /// <param name="plantId"></param>
-        private void UpdateUnits()
+        private void UpdateUnits(int? idPlant, int? idFactory)
         {
             Units.Clear();
 
-            var units = ServiceDeskApi.GetProductUnit<Product_UnitListView>(ServiceDeskApi.ApiEnum.GetProductUnitList);
+            var units = ServiceDeskApi.GetProductUnit<Product_UnitListView>(ServiceDeskApi.ApiEnum.GetProductUnitList, idPlant, idFactory);
+
             foreach (var u in units)
             {
                 Units.Add(u);

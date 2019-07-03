@@ -23,6 +23,7 @@ namespace ServiceDesk.Views
         protected async override void OnAppearing()
         {
             await TaskViewModel.UpdateStatuses();
+
             if (TaskViewModel.ServiceDesk_TaskListView.Factory_name == null || TaskViewModel.ServiceDesk_TaskListView.Factory_name == "")
             {
                 TaskViewModel.IsVisibleFactory = false;
@@ -40,6 +41,12 @@ namespace ServiceDesk.Views
                 TaskViewModel.IsVisibleAttach = false;
             };
             base.OnAppearing();
+        }
+
+        private void StatusPicker_DropDownOpen(object sender, System.EventArgs e)
+        {
+            if(TaskViewModel.IsEdit == false)
+            TaskViewModel.IsEdit = true;
         }
     }
 }

@@ -45,7 +45,35 @@ namespace ServiceDesk.ViewModels
         public bool IsEnableStatusButton { get; set; } = true;
         public bool IsVisibleFactory { get; set; } = true;
         public bool IsEdit { get; set; } = false;
+        public bool IsVisibleCloseButton { get; set; } = false;
 
+        private bool _isVisibleIndicator;
+        public bool IsVisibleIndicator
+        {
+            get
+            {
+                return _isVisibleIndicator;
+            }
+            set
+            {
+                _isVisibleIndicator = value;
+            }
+        }
+        private bool _isLoading;
+        public bool IsLoading
+        {
+            get
+            {
+                return _isLoading;
+            }
+            set
+            {
+                _isLoading = value;
+            }
+        }
+        
+        public Color ComboBoxColor { get; set; } = Color.White;
+        
         private ServiceDesk_TaskAttachmentInfoListView _selectedAttachment;
         public ServiceDesk_TaskAttachmentInfoListView SelectedAttachment
         {
@@ -62,28 +90,50 @@ namespace ServiceDesk.ViewModels
                 DownloadFiles(files.ElementAt(0).Attachment_name, files.ElementAt(0).Attachment_bytes);
             }
         }
-        public ServiceDesk_StatusListView SelectedStatus { get; set; }
+        private ServiceDesk_StatusListView _selectedStatus;
+        public ServiceDesk_StatusListView SelectedStatus
+        {
+            get
+            {
+                return _selectedStatus;
+            }
+            set
+            {
+                if (_selectedStatus != value)
+                {
+                    _selectedStatus = value;
+                    if(IsEdit == true)
+                    {
+                        EditStatus(_selectedStatus);
+                    }
+                    
+                }
+
+            }
+        }
         FileData file = new FileData();
 
-        public TaskViewModel(ServiceDesk_TaskListView serviceDesk_Task)
+        public enum States
         {
+            Normal,
+            Loading
+        }
+
+        public States State { get; set; } = States.Loading;
+
+        public TaskViewModel(ServiceDesk_TaskListView serviceDesk_Task)
+        {            
             Statuses = new ObservableCollection<ServiceDesk_StatusListView>();
             Attachments = new ObservableCollection<ServiceDesk_TaskAttachmentInfoListView>();
             Comments = new ObservableCollection<ServiceDesk_TaskCommentListView>();
             ServiceDesk_TaskListView = serviceDesk_Task;
-
-            if (ServiceDesk_TaskListView.Status_id == 1) TextButton = "Начать";
-            if (ServiceDesk_TaskListView.Status_id == 2) TextButton = "Завершить";
-            if (ServiceDesk_TaskListView.Status_id == 50) TextButton = "Возобновить";
-            if (ServiceDesk_TaskListView.Status_id > 50) TextButton = "Закрыто";
-
             UpdateAttachments(ServiceDesk_TaskListView.Task_id);
             UpdateComments();
             AddNewCommentCommand = new Command(AddComment);
             AddNewAttachmentCommand = new Command(AddNewAttachment);
             CallCommand = new Command(Call);
             GoToEdit = new Command(GoEdit);
-            EditStatusCommand = new Command(EditStatus);
+            State = States.Normal;
         }
 
         public void UpdateContext()
@@ -97,7 +147,8 @@ namespace ServiceDesk.ViewModels
             }
             catch (Exception ex)
             {
-                Log.WriteMessage($"Ошибка при обновлении данных : {ex.Message}");
+                ServiceDeskApi.SendErrorToTelegram($"{ex.Message}");
+                //Log.WriteMessage($"Ошибка при обновлении данных : {ex.Message}");
             }
             
         }
@@ -108,8 +159,7 @@ namespace ServiceDesk.ViewModels
         /// <param name="fileName"></param>
         /// <param name="dataArray"></param>
         public async void DownloadFiles(string fileName, byte[] dataArray)
-        {           
-             
+        {                     
             var javafile = Android.OS.Environment.GetExternalStoragePublicDirectory(Android.OS.Environment.DirectoryDownloads);
             var path = Path.Combine(javafile.AbsolutePath, fileName);
 
@@ -143,8 +193,9 @@ namespace ServiceDesk.ViewModels
                 }
             }
             catch (Exception ex)
-            {
-                Log.WriteMessage($"Ошибка сохранения : {ex.Message}");
+            {                
+                ServiceDeskApi.SendErrorToTelegram($"{ex.Message}");
+                //Log.WriteMessage($"Ошибка сохранения : {ex.Message}");
                 await App.Current.MainPage.DisplayAlert("Message", "Ошибка при попытке сохранения!", "Ok");
             }
             
@@ -155,8 +206,7 @@ namespace ServiceDesk.ViewModels
         /// </summary>
         /// <returns></returns>
         public async Task UpdateStatuses()
-        {
-            Log.WriteMessage("Обновление списка статусов...");
+        {            
             Statuses.Clear();
             try
             {
@@ -165,9 +215,7 @@ namespace ServiceDesk.ViewModels
                 {
                     Statuses.Add(s);
                 }
-
-                Log.WriteMessage("Статусы обновлены.");
-
+                
                 SelectedStatus = statuses.Where(x => x.Status_id == ServiceDesk_TaskListView.Status_id).FirstOrDefault();
                 if (SelectedStatus.Status_id > 50)
                 {
@@ -176,6 +224,7 @@ namespace ServiceDesk.ViewModels
             }
             catch (Exception ex)
             {
+                ServiceDeskApi.SendErrorToTelegram($"{ex.Message}");
                 Log.WriteMessage($"Ошибка обновления статусов : {ex.Message}");
             }
             
@@ -288,64 +337,48 @@ namespace ServiceDesk.ViewModels
 
         public string TextButton { get; set; }
 
-        public void EditStatus(object statusName)
+        public async void EditStatus(ServiceDesk_StatusListView selectedStatus)
         {
-            string st = statusName as string;
-            var status = Statuses.Where(x => x.Status_name == st).FirstOrDefault();
-            int id = status.Status_id;
+            IsVisibleIndicator = true;
+            IsLoading = true;
 
-            try
-            {
-                EditTaskModel NewTask = new EditTaskModel
+            await Task.Run(() => {
+
+                try
                 {
-                    Task_id = ServiceDesk_TaskListView?.Task_id,
-                    Type_id = ServiceDesk_TaskListView?.Type_id ?? null,
-                    Factory_id = ServiceDesk_TaskListView?.Factory_id ?? null,
-                    Plant_id = ServiceDesk_TaskListView?.Plant_id ?? null,
-                    Unit_id = ServiceDesk_TaskListView?.Unit_id ?? null,
-                    Recipient_id = ServiceDesk_TaskListView.Recipient_name,
-                    Title = ServiceDesk_TaskListView.Title,
-                    Text = ServiceDesk_TaskListView.Text
-                };
+                    EditTaskModel NewTask = new EditTaskModel
+                    {
+                        Status_id = selectedStatus?.Status_id,
+                        Task_id = ServiceDesk_TaskListView?.Task_id,
+                        Type_id = ServiceDesk_TaskListView?.Type_id ?? null,
+                        Factory_id = ServiceDesk_TaskListView?.Factory_id ?? null,
+                        Plant_id = ServiceDesk_TaskListView?.Plant_id ?? null,
+                        Unit_id = ServiceDesk_TaskListView?.Unit_id ?? null,
+                        Recipient_id = ServiceDesk_TaskListView.Recipient_name,
+                        Title = ServiceDesk_TaskListView.Title,
+                        Text = ServiceDesk_TaskListView.Text
+                    };
 
-                Log.WriteMessage($"Изменение статуса..");
+                    Log.WriteMessage($"Изменение статуса..");
 
-                switch (id)
+                    SendDataToServer(NewTask, ApiEnum.EditTask);
+
+                    Log.WriteMessage($"Статус изменен");
+                    ServiceDesk_TaskListView = GetData<ServiceDesk_TaskListView>(ApiEnum.GetTasks).Where(x => x.Task_id == NewTask.Task_id).FirstOrDefault();
+                    IsVisibleIndicator = false;
+                    IsLoading = false;
+                }
+                catch (Exception ex)
                 {
-                    case 1:
-                        {
-                            SelectedStatus = Statuses.Where(x => x.Status_id == 2).FirstOrDefault();
-                            NewTask.Status_id = 2;
-                            SendDataToServer(NewTask, ApiEnum.EditTask);
-                            TextButton = "Завершить";
-                            break;
-                        }
-                    case 2:
-                        {
-                            SelectedStatus = Statuses.Where(x => x.Status_id == 50).FirstOrDefault();
-                            NewTask.Status_id = 50;
-                            SendDataToServer(NewTask, ApiEnum.EditTask);
-                            TextButton = "Возобновить";
-                            break;
-                        }
-                    case 50:
-                        {
-                            SelectedStatus = Statuses.Where(x => x.Status_id == 2).FirstOrDefault();
-                            NewTask.Status_id = 2;
-                            SendDataToServer(NewTask, ApiEnum.EditTask);
-                            TextButton = "Завершить";
-                            break;
-                        }
+                    IsVisibleIndicator = false;
+                    IsLoading = false;
+                    ServiceDeskApi.SendErrorToTelegram($"{ex.Message}");
+                    Log.WriteMessage($"Ошибка при изменении статуса : {ex.Message}");
                 }
 
-                Log.WriteMessage($"Статус изменен");
-                ServiceDesk_TaskListView = GetData<ServiceDesk_TaskListView>(ApiEnum.GetTasks).Where(x => x.Task_id == NewTask.Task_id).FirstOrDefault();
-            }
-            catch (Exception ex)
-            {
-                Log.WriteMessage($"Ошибка при изменении статуса : {ex.Message}");
-            }
+            });
             
+
         }
 
         /// <summary>

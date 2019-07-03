@@ -2,7 +2,6 @@
 using ServiceDesk.PikApi;
 using ServiceDesk.Views;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -37,6 +36,7 @@ namespace ServiceDesk.ViewModels
             set
             {
                 _selectedType = value;
+                NewTask.Type_id = _selectedType?.Type_id ?? null;
             }
         }
         private Product_PlantListView _selectedPlant;
@@ -49,9 +49,10 @@ namespace ServiceDesk.ViewModels
             set
             {
                 _selectedPlant = value;
+                NewTask.Plant_id = _selectedPlant?.Plant_id ?? null;
                 if (_selectedPlant != null)
                 {
-                    UpdateUnits(_selectedPlant.Plant_id);
+                    UpdateUnits(_selectedPlant.Plant_id, _selectedFactory?.Factory_id);
                 }               
                     
             }
@@ -66,7 +67,7 @@ namespace ServiceDesk.ViewModels
             set
             {
                 _selectedUnit = value;
-
+                NewTask.Unit_id = _selectedUnit?.Unit_id ?? null;
             }
         }
         private Product_FactoryListView _selectedFactory;
@@ -79,7 +80,7 @@ namespace ServiceDesk.ViewModels
             set
             {
                 _selectedFactory = value;
-
+                NewTask.Factory_id = _selectedFactory?.Factory_id ?? null;
                 if (_selectedFactory != null)
                 {
                     UpdatePlants(_selectedFactory.Factory_id);
@@ -97,6 +98,7 @@ namespace ServiceDesk.ViewModels
             set
             {
                 _selectedUser = value;
+                NewTask.Recipient_id = Users.Where(x => x.UserName == _selectedUser).Select(x => x.Id).FirstOrDefault();
             }
         }
 
@@ -105,38 +107,7 @@ namespace ServiceDesk.ViewModels
         public ObservableCollection<Product_PlantListView> Plants { get; set; }
         public ObservableCollection<Product_UnitListView> Units { get; set; }
         public ObservableCollection<UserModel> Users { get; set; }
-        public ObservableCollection<string> UsersNames { get; set; }
-
-        #region set model
-        
-        public string Title
-        {
-            get
-            {
-                return NewTask.Title;
-            }
-            set
-            {
-                NewTask.Title = value;
-            }
-        }
-
-        public string Text
-        {
-            get
-            {
-                return NewTask.Text;
-            }
-            set
-            {
-
-
-                NewTask.Text = value;
-
-            }
-        }
-
-        #endregion
+        public ObservableCollection<string> UsersNames { get; set; }        
 
         public EditTaskViewModel(ServiceDesk_TaskListView taskModel)
         {
@@ -159,12 +130,12 @@ namespace ServiceDesk.ViewModels
             try
             {
                 Log.WriteMessage("Изменение заявки...");
-                NewTask.Task_id = TaskEdit?.Task_id;
-                NewTask.Type_id = _selectedType?.Type_id ?? null;
-                NewTask.Factory_id = _selectedFactory?.Factory_id ?? null;
-                NewTask.Plant_id = _selectedPlant?.Plant_id ?? null;
-                NewTask.Unit_id = _selectedUnit?.Unit_id ?? null;
-                NewTask.Recipient_id = Users.Where(x => x.UserName == _selectedUser).Select(x => x.Id).FirstOrDefault();
+                
+                if (NewTask.Type_id == null || NewTask.Title == null || NewTask.Text == null)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Ошибка", "Заполните обязательные поля! (Тип заявки, Заголовок заявки, Текст заявки)", "OK");
+                    return;
+                }
                 await ServiceDeskApi.SendDataToServerAsync(NewTask, ServiceDeskApi.ApiEnum.EditTask);
                 UpdateContext();
                 Log.WriteMessage("Заявка изменена");
@@ -172,7 +143,8 @@ namespace ServiceDesk.ViewModels
             }
             catch (Exception ex)
             {
-                Log.WriteMessage($"Ошибка при изменении заявки {ex.Message}");
+                ServiceDeskApi.SendErrorToTelegram($"{ex.Message}");
+                //Log.WriteMessage($"Ошибка при изменении заявки {ex.Message}");
             }
             
         }
@@ -195,7 +167,8 @@ namespace ServiceDesk.ViewModels
             }
             catch (Exception ex)
             {
-                Log.WriteMessage($"Ошибка при выполнении UpdateContext() : {ex.Message}");
+                ServiceDeskApi.SendErrorToTelegram($"{ex.Message}");
+                //Log.WriteMessage($"Ошибка при выполнении UpdateContext() : {ex.Message}");
             }
             
         }
@@ -224,8 +197,8 @@ namespace ServiceDesk.ViewModels
         {
             try
             {
-                Title = TaskEdit.Title;
-                Text = TaskEdit.Text;
+                NewTask.Title = TaskEdit.Title;
+                NewTask.Text = TaskEdit.Text;
                 var typesTasks = await ServiceDeskApi.GetDataServisDeskManagmentAsync<ServiceDesk_TypeListView>(ServiceDeskApi.ApiEnum.GetTypes);
                 Types.Clear();
                 foreach (var t in typesTasks)
@@ -259,11 +232,11 @@ namespace ServiceDesk.ViewModels
         /// <summary>
         /// Обновляет линии
         /// </summary>
-        private void UpdatePlants(params int[] args)
+        private void UpdatePlants(int? idFactory)
         {
             Plants.Clear();
 
-            IEnumerable<Product_PlantListView> plants = ServiceDeskApi.GetProductUnit<Product_PlantListView>(ServiceDeskApi.ApiEnum.GetProductPlantList).Where(x => x.Factory_id == args[0]);
+            var plants = ServiceDeskApi.GetProductUnit<Product_PlantListView>(ServiceDeskApi.ApiEnum.GetProductPlantList, idFactory);
 
             foreach (var p in plants)
             {
@@ -291,11 +264,11 @@ namespace ServiceDesk.ViewModels
         /// Обновляет юниты, args1 - factory id, args2 - plantid
         /// </summary>
         /// <param name="args"></param>
-        private void UpdateUnits(params int[] args)
+        private void UpdateUnits(int? idPlant, int? idFactory)
         {
             Units.Clear();
-            IEnumerable<Product_UnitListView> units = ServiceDeskApi.GetProductUnit<Product_UnitListView>(ServiceDeskApi.ApiEnum.GetProductUnitList).Where(x => x.Plant_id == args[0]);
-            
+            var units = ServiceDeskApi.GetProductUnit<Product_UnitListView>(ServiceDeskApi.ApiEnum.GetProductUnitList, idPlant, idFactory);
+
             foreach (var u in units)
             {
                 Units.Add(u);

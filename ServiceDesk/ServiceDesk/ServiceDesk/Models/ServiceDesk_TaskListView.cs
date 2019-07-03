@@ -57,7 +57,7 @@ namespace ServiceDesk.Models
         /// Телефон исполнителя
         /// </summary>
         public string Recipient_phone { get; set; }
-
+        
         /// <summary>
         /// Завод
         /// </summary>

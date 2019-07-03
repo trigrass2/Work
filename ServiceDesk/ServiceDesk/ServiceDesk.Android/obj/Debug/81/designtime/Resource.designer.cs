@@ -26,60 +26,3354 @@ namespace ServiceDesk.Droid
 		
 		public static void UpdateIdValues()
 		{
-			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.btn_checkbox_indeterminate_to_checked_box_inner_merged_animation = global::ServiceDesk.Droid.Resource.Animation.btn_checkbox_indeterminate_to_checked_box_inner_merged_animation;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.btn_checkbox_indeterminate_to_checked_icon_null_animation = global::ServiceDesk.Droid.Resource.Animation.btn_checkbox_indeterminate_to_checked_icon_null_animation;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.btn_checkbox_to_checked_box_inner_merged_animation = global::ServiceDesk.Droid.Resource.Animation.btn_checkbox_to_checked_box_inner_merged_animation;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.btn_checkbox_to_checked_box_outer_merged_animation = global::ServiceDesk.Droid.Resource.Animation.btn_checkbox_to_checked_box_outer_merged_animation;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.btn_checkbox_to_checked_icon_null_animation = global::ServiceDesk.Droid.Resource.Animation.btn_checkbox_to_checked_icon_null_animation;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.btn_checkbox_to_indeterminate_from_checked_box_inner_merged_animation = global::ServiceDesk.Droid.Resource.Animation.btn_checkbox_to_indeterminate_from_checked_box_inner_merged_animation;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.btn_checkbox_to_indeterminate_from_checked_icon_null_animation = global::ServiceDesk.Droid.Resource.Animation.btn_checkbox_to_indeterminate_from_checked_icon_null_animation;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.btn_checkbox_to_indeterminate_from_unchecked_box_inner_merged_animation = global::ServiceDesk.Droid.Resource.Animation.btn_checkbox_to_indeterminate_from_unchecked_box_inner_merged_animation;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.btn_checkbox_to_indeterminate_from_unchecked_box_outer_merged_animation = global::ServiceDesk.Droid.Resource.Animation.btn_checkbox_to_indeterminate_from_unchecked_box_outer_merged_animation;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.btn_checkbox_to_indeterminate_from_unchecked_icon_null_animation = global::ServiceDesk.Droid.Resource.Animation.btn_checkbox_to_indeterminate_from_unchecked_icon_null_animation;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.btn_checkbox_to_unchecked_box_inner_merged_animation = global::ServiceDesk.Droid.Resource.Animation.btn_checkbox_to_unchecked_box_inner_merged_animation;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.btn_checkbox_to_unchecked_check_path_merged_animation = global::ServiceDesk.Droid.Resource.Animation.btn_checkbox_to_unchecked_check_path_merged_animation;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.btn_checkbox_to_unchecked_from_indeterminate_box_inner_merged_animation = global::ServiceDesk.Droid.Resource.Animation.btn_checkbox_to_unchecked_from_indeterminate_box_inner_merged_animation;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.btn_checkbox_to_unchecked_from_indeterminate_check_path_merged_animation = global::ServiceDesk.Droid.Resource.Animation.btn_checkbox_to_unchecked_from_indeterminate_check_path_merged_animation;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.btn_checkbox_to_unchecked_from_indeterminate_icon_null_animation = global::ServiceDesk.Droid.Resource.Animation.btn_checkbox_to_unchecked_from_indeterminate_icon_null_animation;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.btn_checkbox_to_unchecked_icon_null_animation = global::ServiceDesk.Droid.Resource.Animation.btn_checkbox_to_unchecked_icon_null_animation;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Attribute.state_indeterminate = global::ServiceDesk.Droid.Resource.Attribute.state_indeterminate;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Color.control_checkable_material = global::ServiceDesk.Droid.Resource.Color.control_checkable_material;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Dimension.disabledAlpha = global::ServiceDesk.Droid.Resource.Dimension.disabledAlpha;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Drawable.btn_checkbox = global::ServiceDesk.Droid.Resource.Drawable.btn_checkbox;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Drawable.btn_checkbox_checked = global::ServiceDesk.Droid.Resource.Drawable.btn_checkbox_checked;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Drawable.btn_checkbox_checked_to_indeterminate_animation = global::ServiceDesk.Droid.Resource.Drawable.btn_checkbox_checked_to_indeterminate_animation;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Drawable.btn_checkbox_checked_to_unchecked_animation = global::ServiceDesk.Droid.Resource.Drawable.btn_checkbox_checked_to_unchecked_animation;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Drawable.btn_checkbox_indeterminate = global::ServiceDesk.Droid.Resource.Drawable.btn_checkbox_indeterminate;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Drawable.btn_checkbox_indeterminate_to_checked_animation = global::ServiceDesk.Droid.Resource.Drawable.btn_checkbox_indeterminate_to_checked_animation;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Drawable.btn_checkbox_indeterminate_to_unchecked_animation = global::ServiceDesk.Droid.Resource.Drawable.btn_checkbox_indeterminate_to_unchecked_animation;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Drawable.btn_checkbox_unchecked = global::ServiceDesk.Droid.Resource.Drawable.btn_checkbox_unchecked;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Drawable.btn_checkbox_unchecked_to_checked_animation = global::ServiceDesk.Droid.Resource.Drawable.btn_checkbox_unchecked_to_checked_animation;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Drawable.btn_checkbox_unchecked_to_indeterminate_animation = global::ServiceDesk.Droid.Resource.Drawable.btn_checkbox_unchecked_to_indeterminate_animation;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Id.@checked = global::ServiceDesk.Droid.Resource.Id.@checked;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Id.indeterminate = global::ServiceDesk.Droid.Resource.Id.indeterminate;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Id.@unchecked = global::ServiceDesk.Droid.Resource.Id.@unchecked;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Interpolator.btn_checkbox_checked_animation_interpolator_0 = global::ServiceDesk.Droid.Resource.Interpolator.btn_checkbox_checked_animation_interpolator_0;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Interpolator.btn_checkbox_checked_animation_interpolator_1 = global::ServiceDesk.Droid.Resource.Interpolator.btn_checkbox_checked_animation_interpolator_1;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Interpolator.btn_checkbox_indeterminate_animation_interpolator_1 = global::ServiceDesk.Droid.Resource.Interpolator.btn_checkbox_indeterminate_animation_interpolator_1;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Interpolator.btn_checkbox_unchecked_animation_interpolator_0 = global::ServiceDesk.Droid.Resource.Interpolator.btn_checkbox_unchecked_animation_interpolator_0;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Interpolator.btn_checkbox_unchecked_animation_interpolator_1 = global::ServiceDesk.Droid.Resource.Interpolator.btn_checkbox_unchecked_animation_interpolator_1;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Styleable.SfCheckBox = global::ServiceDesk.Droid.Resource.Styleable.SfCheckBox;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Styleable.SfCheckBox_checked = global::ServiceDesk.Droid.Resource.Styleable.SfCheckBox_checked;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Styleable.SfCheckBox_cornerradius = global::ServiceDesk.Droid.Resource.Styleable.SfCheckBox_cornerradius;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Styleable.SfCheckBox_isthreestate = global::ServiceDesk.Droid.Resource.Styleable.SfCheckBox_isthreestate;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Styleable.SfSegmentedControl = global::ServiceDesk.Droid.Resource.Styleable.SfSegmentedControl;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Styleable.SfSegmentedControl_segmentBackColor = global::ServiceDesk.Droid.Resource.Styleable.SfSegmentedControl_segmentBackColor;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Styleable.SfSegmentedControl_segmentBorderColor = global::ServiceDesk.Droid.Resource.Styleable.SfSegmentedControl_segmentBorderColor;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Styleable.SfSegmentedControl_segmentBorderThickness = global::ServiceDesk.Droid.Resource.Styleable.SfSegmentedControl_segmentBorderThickness;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Styleable.SfSegmentedControl_segmentColor = global::ServiceDesk.Droid.Resource.Styleable.SfSegmentedControl_segmentColor;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Styleable.SfSegmentedControl_segmentCornerRadius = global::ServiceDesk.Droid.Resource.Styleable.SfSegmentedControl_segmentCornerRadius;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Styleable.SfSegmentedControl_segmentDisplayMode = global::ServiceDesk.Droid.Resource.Styleable.SfSegmentedControl_segmentDisplayMode;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Styleable.SfSegmentedControl_segmentPosition = global::ServiceDesk.Droid.Resource.Styleable.SfSegmentedControl_segmentPosition;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Styleable.SfSegmentedControl_segmentSelectedIndex = global::ServiceDesk.Droid.Resource.Styleable.SfSegmentedControl_segmentSelectedIndex;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Styleable.SfSegmentedControl_segmentStrokeThickness = global::ServiceDesk.Droid.Resource.Styleable.SfSegmentedControl_segmentStrokeThickness;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Styleable.SfSegmentedControl_segmentedHeight = global::ServiceDesk.Droid.Resource.Styleable.SfSegmentedControl_segmentedHeight;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Styleable.SfSegmentedControl_segmentedPadding = global::ServiceDesk.Droid.Resource.Styleable.SfSegmentedControl_segmentedPadding;
-			global::Syncfusion.Buttons.XForms.Android.Resource.Styleable.SfSegmentedControl_segmentedWidth = global::ServiceDesk.Droid.Resource.Styleable.SfSegmentedControl_segmentedWidth;
+			global::Controls.Droid.Resource.Animation.abc_fade_in = global::ServiceDesk.Droid.Resource.Animation.abc_fade_in;
+			global::Controls.Droid.Resource.Animation.abc_fade_out = global::ServiceDesk.Droid.Resource.Animation.abc_fade_out;
+			global::Controls.Droid.Resource.Animation.abc_grow_fade_in_from_bottom = global::ServiceDesk.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::Controls.Droid.Resource.Animation.abc_popup_enter = global::ServiceDesk.Droid.Resource.Animation.abc_popup_enter;
+			global::Controls.Droid.Resource.Animation.abc_popup_exit = global::ServiceDesk.Droid.Resource.Animation.abc_popup_exit;
+			global::Controls.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom = global::ServiceDesk.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::Controls.Droid.Resource.Animation.abc_slide_in_bottom = global::ServiceDesk.Droid.Resource.Animation.abc_slide_in_bottom;
+			global::Controls.Droid.Resource.Animation.abc_slide_in_top = global::ServiceDesk.Droid.Resource.Animation.abc_slide_in_top;
+			global::Controls.Droid.Resource.Animation.abc_slide_out_bottom = global::ServiceDesk.Droid.Resource.Animation.abc_slide_out_bottom;
+			global::Controls.Droid.Resource.Animation.abc_slide_out_top = global::ServiceDesk.Droid.Resource.Animation.abc_slide_out_top;
+			global::Controls.Droid.Resource.Animation.design_snackbar_in = global::ServiceDesk.Droid.Resource.Animation.design_snackbar_in;
+			global::Controls.Droid.Resource.Animation.design_snackbar_out = global::ServiceDesk.Droid.Resource.Animation.design_snackbar_out;
+			global::Controls.Droid.Resource.Attribute.actionBarDivider = global::ServiceDesk.Droid.Resource.Attribute.actionBarDivider;
+			global::Controls.Droid.Resource.Attribute.actionBarItemBackground = global::ServiceDesk.Droid.Resource.Attribute.actionBarItemBackground;
+			global::Controls.Droid.Resource.Attribute.actionBarPopupTheme = global::ServiceDesk.Droid.Resource.Attribute.actionBarPopupTheme;
+			global::Controls.Droid.Resource.Attribute.actionBarSize = global::ServiceDesk.Droid.Resource.Attribute.actionBarSize;
+			global::Controls.Droid.Resource.Attribute.actionBarSplitStyle = global::ServiceDesk.Droid.Resource.Attribute.actionBarSplitStyle;
+			global::Controls.Droid.Resource.Attribute.actionBarStyle = global::ServiceDesk.Droid.Resource.Attribute.actionBarStyle;
+			global::Controls.Droid.Resource.Attribute.actionBarTabBarStyle = global::ServiceDesk.Droid.Resource.Attribute.actionBarTabBarStyle;
+			global::Controls.Droid.Resource.Attribute.actionBarTabStyle = global::ServiceDesk.Droid.Resource.Attribute.actionBarTabStyle;
+			global::Controls.Droid.Resource.Attribute.actionBarTabTextStyle = global::ServiceDesk.Droid.Resource.Attribute.actionBarTabTextStyle;
+			global::Controls.Droid.Resource.Attribute.actionBarTheme = global::ServiceDesk.Droid.Resource.Attribute.actionBarTheme;
+			global::Controls.Droid.Resource.Attribute.actionBarWidgetTheme = global::ServiceDesk.Droid.Resource.Attribute.actionBarWidgetTheme;
+			global::Controls.Droid.Resource.Attribute.actionButtonStyle = global::ServiceDesk.Droid.Resource.Attribute.actionButtonStyle;
+			global::Controls.Droid.Resource.Attribute.actionDropDownStyle = global::ServiceDesk.Droid.Resource.Attribute.actionDropDownStyle;
+			global::Controls.Droid.Resource.Attribute.actionLayout = global::ServiceDesk.Droid.Resource.Attribute.actionLayout;
+			global::Controls.Droid.Resource.Attribute.actionMenuTextAppearance = global::ServiceDesk.Droid.Resource.Attribute.actionMenuTextAppearance;
+			global::Controls.Droid.Resource.Attribute.actionMenuTextColor = global::ServiceDesk.Droid.Resource.Attribute.actionMenuTextColor;
+			global::Controls.Droid.Resource.Attribute.actionModeBackground = global::ServiceDesk.Droid.Resource.Attribute.actionModeBackground;
+			global::Controls.Droid.Resource.Attribute.actionModeCloseButtonStyle = global::ServiceDesk.Droid.Resource.Attribute.actionModeCloseButtonStyle;
+			global::Controls.Droid.Resource.Attribute.actionModeCloseDrawable = global::ServiceDesk.Droid.Resource.Attribute.actionModeCloseDrawable;
+			global::Controls.Droid.Resource.Attribute.actionModeCopyDrawable = global::ServiceDesk.Droid.Resource.Attribute.actionModeCopyDrawable;
+			global::Controls.Droid.Resource.Attribute.actionModeCutDrawable = global::ServiceDesk.Droid.Resource.Attribute.actionModeCutDrawable;
+			global::Controls.Droid.Resource.Attribute.actionModeFindDrawable = global::ServiceDesk.Droid.Resource.Attribute.actionModeFindDrawable;
+			global::Controls.Droid.Resource.Attribute.actionModePasteDrawable = global::ServiceDesk.Droid.Resource.Attribute.actionModePasteDrawable;
+			global::Controls.Droid.Resource.Attribute.actionModePopupWindowStyle = global::ServiceDesk.Droid.Resource.Attribute.actionModePopupWindowStyle;
+			global::Controls.Droid.Resource.Attribute.actionModeSelectAllDrawable = global::ServiceDesk.Droid.Resource.Attribute.actionModeSelectAllDrawable;
+			global::Controls.Droid.Resource.Attribute.actionModeShareDrawable = global::ServiceDesk.Droid.Resource.Attribute.actionModeShareDrawable;
+			global::Controls.Droid.Resource.Attribute.actionModeSplitBackground = global::ServiceDesk.Droid.Resource.Attribute.actionModeSplitBackground;
+			global::Controls.Droid.Resource.Attribute.actionModeStyle = global::ServiceDesk.Droid.Resource.Attribute.actionModeStyle;
+			global::Controls.Droid.Resource.Attribute.actionModeWebSearchDrawable = global::ServiceDesk.Droid.Resource.Attribute.actionModeWebSearchDrawable;
+			global::Controls.Droid.Resource.Attribute.actionOverflowButtonStyle = global::ServiceDesk.Droid.Resource.Attribute.actionOverflowButtonStyle;
+			global::Controls.Droid.Resource.Attribute.actionOverflowMenuStyle = global::ServiceDesk.Droid.Resource.Attribute.actionOverflowMenuStyle;
+			global::Controls.Droid.Resource.Attribute.actionProviderClass = global::ServiceDesk.Droid.Resource.Attribute.actionProviderClass;
+			global::Controls.Droid.Resource.Attribute.actionViewClass = global::ServiceDesk.Droid.Resource.Attribute.actionViewClass;
+			global::Controls.Droid.Resource.Attribute.activityChooserViewStyle = global::ServiceDesk.Droid.Resource.Attribute.activityChooserViewStyle;
+			global::Controls.Droid.Resource.Attribute.alertDialogButtonGroupStyle = global::ServiceDesk.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::Controls.Droid.Resource.Attribute.alertDialogCenterButtons = global::ServiceDesk.Droid.Resource.Attribute.alertDialogCenterButtons;
+			global::Controls.Droid.Resource.Attribute.alertDialogStyle = global::ServiceDesk.Droid.Resource.Attribute.alertDialogStyle;
+			global::Controls.Droid.Resource.Attribute.alertDialogTheme = global::ServiceDesk.Droid.Resource.Attribute.alertDialogTheme;
+			global::Controls.Droid.Resource.Attribute.arrowHeadLength = global::ServiceDesk.Droid.Resource.Attribute.arrowHeadLength;
+			global::Controls.Droid.Resource.Attribute.arrowShaftLength = global::ServiceDesk.Droid.Resource.Attribute.arrowShaftLength;
+			global::Controls.Droid.Resource.Attribute.autoCompleteTextViewStyle = global::ServiceDesk.Droid.Resource.Attribute.autoCompleteTextViewStyle;
+			global::Controls.Droid.Resource.Attribute.background = global::ServiceDesk.Droid.Resource.Attribute.background;
+			global::Controls.Droid.Resource.Attribute.backgroundSplit = global::ServiceDesk.Droid.Resource.Attribute.backgroundSplit;
+			global::Controls.Droid.Resource.Attribute.backgroundStacked = global::ServiceDesk.Droid.Resource.Attribute.backgroundStacked;
+			global::Controls.Droid.Resource.Attribute.backgroundTint = global::ServiceDesk.Droid.Resource.Attribute.backgroundTint;
+			global::Controls.Droid.Resource.Attribute.backgroundTintMode = global::ServiceDesk.Droid.Resource.Attribute.backgroundTintMode;
+			global::Controls.Droid.Resource.Attribute.barLength = global::ServiceDesk.Droid.Resource.Attribute.barLength;
+			global::Controls.Droid.Resource.Attribute.behavior_overlapTop = global::ServiceDesk.Droid.Resource.Attribute.behavior_overlapTop;
+			global::Controls.Droid.Resource.Attribute.borderWidth = global::ServiceDesk.Droid.Resource.Attribute.borderWidth;
+			global::Controls.Droid.Resource.Attribute.borderlessButtonStyle = global::ServiceDesk.Droid.Resource.Attribute.borderlessButtonStyle;
+			global::Controls.Droid.Resource.Attribute.buttonBarButtonStyle = global::ServiceDesk.Droid.Resource.Attribute.buttonBarButtonStyle;
+			global::Controls.Droid.Resource.Attribute.buttonBarNegativeButtonStyle = global::ServiceDesk.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::Controls.Droid.Resource.Attribute.buttonBarNeutralButtonStyle = global::ServiceDesk.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::Controls.Droid.Resource.Attribute.buttonBarPositiveButtonStyle = global::ServiceDesk.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::Controls.Droid.Resource.Attribute.buttonBarStyle = global::ServiceDesk.Droid.Resource.Attribute.buttonBarStyle;
+			global::Controls.Droid.Resource.Attribute.buttonPanelSideLayout = global::ServiceDesk.Droid.Resource.Attribute.buttonPanelSideLayout;
+			global::Controls.Droid.Resource.Attribute.buttonStyle = global::ServiceDesk.Droid.Resource.Attribute.buttonStyle;
+			global::Controls.Droid.Resource.Attribute.buttonStyleSmall = global::ServiceDesk.Droid.Resource.Attribute.buttonStyleSmall;
+			global::Controls.Droid.Resource.Attribute.buttonTint = global::ServiceDesk.Droid.Resource.Attribute.buttonTint;
+			global::Controls.Droid.Resource.Attribute.buttonTintMode = global::ServiceDesk.Droid.Resource.Attribute.buttonTintMode;
+			global::Controls.Droid.Resource.Attribute.cardBackgroundColor = global::ServiceDesk.Droid.Resource.Attribute.cardBackgroundColor;
+			global::Controls.Droid.Resource.Attribute.cardCornerRadius = global::ServiceDesk.Droid.Resource.Attribute.cardCornerRadius;
+			global::Controls.Droid.Resource.Attribute.cardElevation = global::ServiceDesk.Droid.Resource.Attribute.cardElevation;
+			global::Controls.Droid.Resource.Attribute.cardMaxElevation = global::ServiceDesk.Droid.Resource.Attribute.cardMaxElevation;
+			global::Controls.Droid.Resource.Attribute.cardPreventCornerOverlap = global::ServiceDesk.Droid.Resource.Attribute.cardPreventCornerOverlap;
+			global::Controls.Droid.Resource.Attribute.cardUseCompatPadding = global::ServiceDesk.Droid.Resource.Attribute.cardUseCompatPadding;
+			global::Controls.Droid.Resource.Attribute.checkboxStyle = global::ServiceDesk.Droid.Resource.Attribute.checkboxStyle;
+			global::Controls.Droid.Resource.Attribute.checkedTextViewStyle = global::ServiceDesk.Droid.Resource.Attribute.checkedTextViewStyle;
+			global::Controls.Droid.Resource.Attribute.closeIcon = global::ServiceDesk.Droid.Resource.Attribute.closeIcon;
+			global::Controls.Droid.Resource.Attribute.closeItemLayout = global::ServiceDesk.Droid.Resource.Attribute.closeItemLayout;
+			global::Controls.Droid.Resource.Attribute.collapseContentDescription = global::ServiceDesk.Droid.Resource.Attribute.collapseContentDescription;
+			global::Controls.Droid.Resource.Attribute.collapseIcon = global::ServiceDesk.Droid.Resource.Attribute.collapseIcon;
+			global::Controls.Droid.Resource.Attribute.collapsedTitleGravity = global::ServiceDesk.Droid.Resource.Attribute.collapsedTitleGravity;
+			global::Controls.Droid.Resource.Attribute.collapsedTitleTextAppearance = global::ServiceDesk.Droid.Resource.Attribute.collapsedTitleTextAppearance;
+			global::Controls.Droid.Resource.Attribute.color = global::ServiceDesk.Droid.Resource.Attribute.color;
+			global::Controls.Droid.Resource.Attribute.colorAccent = global::ServiceDesk.Droid.Resource.Attribute.colorAccent;
+			global::Controls.Droid.Resource.Attribute.colorButtonNormal = global::ServiceDesk.Droid.Resource.Attribute.colorButtonNormal;
+			global::Controls.Droid.Resource.Attribute.colorControlActivated = global::ServiceDesk.Droid.Resource.Attribute.colorControlActivated;
+			global::Controls.Droid.Resource.Attribute.colorControlHighlight = global::ServiceDesk.Droid.Resource.Attribute.colorControlHighlight;
+			global::Controls.Droid.Resource.Attribute.colorControlNormal = global::ServiceDesk.Droid.Resource.Attribute.colorControlNormal;
+			global::Controls.Droid.Resource.Attribute.colorPrimary = global::ServiceDesk.Droid.Resource.Attribute.colorPrimary;
+			global::Controls.Droid.Resource.Attribute.colorPrimaryDark = global::ServiceDesk.Droid.Resource.Attribute.colorPrimaryDark;
+			global::Controls.Droid.Resource.Attribute.colorSwitchThumbNormal = global::ServiceDesk.Droid.Resource.Attribute.colorSwitchThumbNormal;
+			global::Controls.Droid.Resource.Attribute.commitIcon = global::ServiceDesk.Droid.Resource.Attribute.commitIcon;
+			global::Controls.Droid.Resource.Attribute.contentInsetEnd = global::ServiceDesk.Droid.Resource.Attribute.contentInsetEnd;
+			global::Controls.Droid.Resource.Attribute.contentInsetLeft = global::ServiceDesk.Droid.Resource.Attribute.contentInsetLeft;
+			global::Controls.Droid.Resource.Attribute.contentInsetRight = global::ServiceDesk.Droid.Resource.Attribute.contentInsetRight;
+			global::Controls.Droid.Resource.Attribute.contentInsetStart = global::ServiceDesk.Droid.Resource.Attribute.contentInsetStart;
+			global::Controls.Droid.Resource.Attribute.contentPadding = global::ServiceDesk.Droid.Resource.Attribute.contentPadding;
+			global::Controls.Droid.Resource.Attribute.contentPaddingBottom = global::ServiceDesk.Droid.Resource.Attribute.contentPaddingBottom;
+			global::Controls.Droid.Resource.Attribute.contentPaddingLeft = global::ServiceDesk.Droid.Resource.Attribute.contentPaddingLeft;
+			global::Controls.Droid.Resource.Attribute.contentPaddingRight = global::ServiceDesk.Droid.Resource.Attribute.contentPaddingRight;
+			global::Controls.Droid.Resource.Attribute.contentPaddingTop = global::ServiceDesk.Droid.Resource.Attribute.contentPaddingTop;
+			global::Controls.Droid.Resource.Attribute.contentScrim = global::ServiceDesk.Droid.Resource.Attribute.contentScrim;
+			global::Controls.Droid.Resource.Attribute.controlBackground = global::ServiceDesk.Droid.Resource.Attribute.controlBackground;
+			global::Controls.Droid.Resource.Attribute.customNavigationLayout = global::ServiceDesk.Droid.Resource.Attribute.customNavigationLayout;
+			global::Controls.Droid.Resource.Attribute.defaultQueryHint = global::ServiceDesk.Droid.Resource.Attribute.defaultQueryHint;
+			global::Controls.Droid.Resource.Attribute.dialogPreferredPadding = global::ServiceDesk.Droid.Resource.Attribute.dialogPreferredPadding;
+			global::Controls.Droid.Resource.Attribute.dialogTheme = global::ServiceDesk.Droid.Resource.Attribute.dialogTheme;
+			global::Controls.Droid.Resource.Attribute.displayOptions = global::ServiceDesk.Droid.Resource.Attribute.displayOptions;
+			global::Controls.Droid.Resource.Attribute.divider = global::ServiceDesk.Droid.Resource.Attribute.divider;
+			global::Controls.Droid.Resource.Attribute.dividerHorizontal = global::ServiceDesk.Droid.Resource.Attribute.dividerHorizontal;
+			global::Controls.Droid.Resource.Attribute.dividerPadding = global::ServiceDesk.Droid.Resource.Attribute.dividerPadding;
+			global::Controls.Droid.Resource.Attribute.dividerVertical = global::ServiceDesk.Droid.Resource.Attribute.dividerVertical;
+			global::Controls.Droid.Resource.Attribute.drawableSize = global::ServiceDesk.Droid.Resource.Attribute.drawableSize;
+			global::Controls.Droid.Resource.Attribute.drawerArrowStyle = global::ServiceDesk.Droid.Resource.Attribute.drawerArrowStyle;
+			global::Controls.Droid.Resource.Attribute.dropDownListViewStyle = global::ServiceDesk.Droid.Resource.Attribute.dropDownListViewStyle;
+			global::Controls.Droid.Resource.Attribute.dropdownListPreferredItemHeight = global::ServiceDesk.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::Controls.Droid.Resource.Attribute.editTextBackground = global::ServiceDesk.Droid.Resource.Attribute.editTextBackground;
+			global::Controls.Droid.Resource.Attribute.editTextColor = global::ServiceDesk.Droid.Resource.Attribute.editTextColor;
+			global::Controls.Droid.Resource.Attribute.editTextStyle = global::ServiceDesk.Droid.Resource.Attribute.editTextStyle;
+			global::Controls.Droid.Resource.Attribute.elevation = global::ServiceDesk.Droid.Resource.Attribute.elevation;
+			global::Controls.Droid.Resource.Attribute.errorEnabled = global::ServiceDesk.Droid.Resource.Attribute.errorEnabled;
+			global::Controls.Droid.Resource.Attribute.errorTextAppearance = global::ServiceDesk.Droid.Resource.Attribute.errorTextAppearance;
+			global::Controls.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable = global::ServiceDesk.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::Controls.Droid.Resource.Attribute.expanded = global::ServiceDesk.Droid.Resource.Attribute.expanded;
+			global::Controls.Droid.Resource.Attribute.expandedTitleGravity = global::ServiceDesk.Droid.Resource.Attribute.expandedTitleGravity;
+			global::Controls.Droid.Resource.Attribute.expandedTitleMargin = global::ServiceDesk.Droid.Resource.Attribute.expandedTitleMargin;
+			global::Controls.Droid.Resource.Attribute.expandedTitleMarginBottom = global::ServiceDesk.Droid.Resource.Attribute.expandedTitleMarginBottom;
+			global::Controls.Droid.Resource.Attribute.expandedTitleMarginEnd = global::ServiceDesk.Droid.Resource.Attribute.expandedTitleMarginEnd;
+			global::Controls.Droid.Resource.Attribute.expandedTitleMarginStart = global::ServiceDesk.Droid.Resource.Attribute.expandedTitleMarginStart;
+			global::Controls.Droid.Resource.Attribute.expandedTitleMarginTop = global::ServiceDesk.Droid.Resource.Attribute.expandedTitleMarginTop;
+			global::Controls.Droid.Resource.Attribute.expandedTitleTextAppearance = global::ServiceDesk.Droid.Resource.Attribute.expandedTitleTextAppearance;
+			global::Controls.Droid.Resource.Attribute.externalRouteEnabledDrawable = global::ServiceDesk.Droid.Resource.Attribute.externalRouteEnabledDrawable;
+			global::Controls.Droid.Resource.Attribute.fabSize = global::ServiceDesk.Droid.Resource.Attribute.fabSize;
+			global::Controls.Droid.Resource.Attribute.gapBetweenBars = global::ServiceDesk.Droid.Resource.Attribute.gapBetweenBars;
+			global::Controls.Droid.Resource.Attribute.goIcon = global::ServiceDesk.Droid.Resource.Attribute.goIcon;
+			global::Controls.Droid.Resource.Attribute.headerLayout = global::ServiceDesk.Droid.Resource.Attribute.headerLayout;
+			global::Controls.Droid.Resource.Attribute.height = global::ServiceDesk.Droid.Resource.Attribute.height;
+			global::Controls.Droid.Resource.Attribute.hideOnContentScroll = global::ServiceDesk.Droid.Resource.Attribute.hideOnContentScroll;
+			global::Controls.Droid.Resource.Attribute.hintAnimationEnabled = global::ServiceDesk.Droid.Resource.Attribute.hintAnimationEnabled;
+			global::Controls.Droid.Resource.Attribute.hintTextAppearance = global::ServiceDesk.Droid.Resource.Attribute.hintTextAppearance;
+			global::Controls.Droid.Resource.Attribute.homeAsUpIndicator = global::ServiceDesk.Droid.Resource.Attribute.homeAsUpIndicator;
+			global::Controls.Droid.Resource.Attribute.homeLayout = global::ServiceDesk.Droid.Resource.Attribute.homeLayout;
+			global::Controls.Droid.Resource.Attribute.icon = global::ServiceDesk.Droid.Resource.Attribute.icon;
+			global::Controls.Droid.Resource.Attribute.iconifiedByDefault = global::ServiceDesk.Droid.Resource.Attribute.iconifiedByDefault;
+			global::Controls.Droid.Resource.Attribute.indeterminateProgressStyle = global::ServiceDesk.Droid.Resource.Attribute.indeterminateProgressStyle;
+			global::Controls.Droid.Resource.Attribute.initialActivityCount = global::ServiceDesk.Droid.Resource.Attribute.initialActivityCount;
+			global::Controls.Droid.Resource.Attribute.insetForeground = global::ServiceDesk.Droid.Resource.Attribute.insetForeground;
+			global::Controls.Droid.Resource.Attribute.isLightTheme = global::ServiceDesk.Droid.Resource.Attribute.isLightTheme;
+			global::Controls.Droid.Resource.Attribute.itemBackground = global::ServiceDesk.Droid.Resource.Attribute.itemBackground;
+			global::Controls.Droid.Resource.Attribute.itemIconTint = global::ServiceDesk.Droid.Resource.Attribute.itemIconTint;
+			global::Controls.Droid.Resource.Attribute.itemPadding = global::ServiceDesk.Droid.Resource.Attribute.itemPadding;
+			global::Controls.Droid.Resource.Attribute.itemTextAppearance = global::ServiceDesk.Droid.Resource.Attribute.itemTextAppearance;
+			global::Controls.Droid.Resource.Attribute.itemTextColor = global::ServiceDesk.Droid.Resource.Attribute.itemTextColor;
+			global::Controls.Droid.Resource.Attribute.keylines = global::ServiceDesk.Droid.Resource.Attribute.keylines;
+			global::Controls.Droid.Resource.Attribute.layout = global::ServiceDesk.Droid.Resource.Attribute.layout;
+			global::Controls.Droid.Resource.Attribute.layout_anchor = global::ServiceDesk.Droid.Resource.Attribute.layout_anchor;
+			global::Controls.Droid.Resource.Attribute.layout_anchorGravity = global::ServiceDesk.Droid.Resource.Attribute.layout_anchorGravity;
+			global::Controls.Droid.Resource.Attribute.layout_behavior = global::ServiceDesk.Droid.Resource.Attribute.layout_behavior;
+			global::Controls.Droid.Resource.Attribute.layout_collapseMode = global::ServiceDesk.Droid.Resource.Attribute.layout_collapseMode;
+			global::Controls.Droid.Resource.Attribute.layout_collapseParallaxMultiplier = global::ServiceDesk.Droid.Resource.Attribute.layout_collapseParallaxMultiplier;
+			global::Controls.Droid.Resource.Attribute.layout_keyline = global::ServiceDesk.Droid.Resource.Attribute.layout_keyline;
+			global::Controls.Droid.Resource.Attribute.layout_scrollFlags = global::ServiceDesk.Droid.Resource.Attribute.layout_scrollFlags;
+			global::Controls.Droid.Resource.Attribute.layout_scrollInterpolator = global::ServiceDesk.Droid.Resource.Attribute.layout_scrollInterpolator;
+			global::Controls.Droid.Resource.Attribute.listChoiceBackgroundIndicator = global::ServiceDesk.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::Controls.Droid.Resource.Attribute.listDividerAlertDialog = global::ServiceDesk.Droid.Resource.Attribute.listDividerAlertDialog;
+			global::Controls.Droid.Resource.Attribute.listItemLayout = global::ServiceDesk.Droid.Resource.Attribute.listItemLayout;
+			global::Controls.Droid.Resource.Attribute.listLayout = global::ServiceDesk.Droid.Resource.Attribute.listLayout;
+			global::Controls.Droid.Resource.Attribute.listPopupWindowStyle = global::ServiceDesk.Droid.Resource.Attribute.listPopupWindowStyle;
+			global::Controls.Droid.Resource.Attribute.listPreferredItemHeight = global::ServiceDesk.Droid.Resource.Attribute.listPreferredItemHeight;
+			global::Controls.Droid.Resource.Attribute.listPreferredItemHeightLarge = global::ServiceDesk.Droid.Resource.Attribute.listPreferredItemHeightLarge;
+			global::Controls.Droid.Resource.Attribute.listPreferredItemHeightSmall = global::ServiceDesk.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::Controls.Droid.Resource.Attribute.listPreferredItemPaddingLeft = global::ServiceDesk.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::Controls.Droid.Resource.Attribute.listPreferredItemPaddingRight = global::ServiceDesk.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::Controls.Droid.Resource.Attribute.logo = global::ServiceDesk.Droid.Resource.Attribute.logo;
+			global::Controls.Droid.Resource.Attribute.logoDescription = global::ServiceDesk.Droid.Resource.Attribute.logoDescription;
+			global::Controls.Droid.Resource.Attribute.maxActionInlineWidth = global::ServiceDesk.Droid.Resource.Attribute.maxActionInlineWidth;
+			global::Controls.Droid.Resource.Attribute.maxButtonHeight = global::ServiceDesk.Droid.Resource.Attribute.maxButtonHeight;
+			global::Controls.Droid.Resource.Attribute.measureWithLargestChild = global::ServiceDesk.Droid.Resource.Attribute.measureWithLargestChild;
+			global::Controls.Droid.Resource.Attribute.mediaRouteButtonStyle = global::ServiceDesk.Droid.Resource.Attribute.mediaRouteButtonStyle;
+			global::Controls.Droid.Resource.Attribute.mediaRoutePauseDrawable = global::ServiceDesk.Droid.Resource.Attribute.mediaRoutePauseDrawable;
+			global::Controls.Droid.Resource.Attribute.mediaRoutePlayDrawable = global::ServiceDesk.Droid.Resource.Attribute.mediaRoutePlayDrawable;
+			global::Controls.Droid.Resource.Attribute.menu = global::ServiceDesk.Droid.Resource.Attribute.menu;
+			global::Controls.Droid.Resource.Attribute.multiChoiceItemLayout = global::ServiceDesk.Droid.Resource.Attribute.multiChoiceItemLayout;
+			global::Controls.Droid.Resource.Attribute.navigationContentDescription = global::ServiceDesk.Droid.Resource.Attribute.navigationContentDescription;
+			global::Controls.Droid.Resource.Attribute.navigationIcon = global::ServiceDesk.Droid.Resource.Attribute.navigationIcon;
+			global::Controls.Droid.Resource.Attribute.navigationMode = global::ServiceDesk.Droid.Resource.Attribute.navigationMode;
+			global::Controls.Droid.Resource.Attribute.overlapAnchor = global::ServiceDesk.Droid.Resource.Attribute.overlapAnchor;
+			global::Controls.Droid.Resource.Attribute.paddingEnd = global::ServiceDesk.Droid.Resource.Attribute.paddingEnd;
+			global::Controls.Droid.Resource.Attribute.paddingStart = global::ServiceDesk.Droid.Resource.Attribute.paddingStart;
+			global::Controls.Droid.Resource.Attribute.panelBackground = global::ServiceDesk.Droid.Resource.Attribute.panelBackground;
+			global::Controls.Droid.Resource.Attribute.panelMenuListTheme = global::ServiceDesk.Droid.Resource.Attribute.panelMenuListTheme;
+			global::Controls.Droid.Resource.Attribute.panelMenuListWidth = global::ServiceDesk.Droid.Resource.Attribute.panelMenuListWidth;
+			global::Controls.Droid.Resource.Attribute.popupMenuStyle = global::ServiceDesk.Droid.Resource.Attribute.popupMenuStyle;
+			global::Controls.Droid.Resource.Attribute.popupTheme = global::ServiceDesk.Droid.Resource.Attribute.popupTheme;
+			global::Controls.Droid.Resource.Attribute.popupWindowStyle = global::ServiceDesk.Droid.Resource.Attribute.popupWindowStyle;
+			global::Controls.Droid.Resource.Attribute.preserveIconSpacing = global::ServiceDesk.Droid.Resource.Attribute.preserveIconSpacing;
+			global::Controls.Droid.Resource.Attribute.pressedTranslationZ = global::ServiceDesk.Droid.Resource.Attribute.pressedTranslationZ;
+			global::Controls.Droid.Resource.Attribute.progressBarPadding = global::ServiceDesk.Droid.Resource.Attribute.progressBarPadding;
+			global::Controls.Droid.Resource.Attribute.progressBarStyle = global::ServiceDesk.Droid.Resource.Attribute.progressBarStyle;
+			global::Controls.Droid.Resource.Attribute.queryBackground = global::ServiceDesk.Droid.Resource.Attribute.queryBackground;
+			global::Controls.Droid.Resource.Attribute.queryHint = global::ServiceDesk.Droid.Resource.Attribute.queryHint;
+			global::Controls.Droid.Resource.Attribute.radioButtonStyle = global::ServiceDesk.Droid.Resource.Attribute.radioButtonStyle;
+			global::Controls.Droid.Resource.Attribute.ratingBarStyle = global::ServiceDesk.Droid.Resource.Attribute.ratingBarStyle;
+			global::Controls.Droid.Resource.Attribute.rippleColor = global::ServiceDesk.Droid.Resource.Attribute.rippleColor;
+			global::Controls.Droid.Resource.Attribute.searchHintIcon = global::ServiceDesk.Droid.Resource.Attribute.searchHintIcon;
+			global::Controls.Droid.Resource.Attribute.searchIcon = global::ServiceDesk.Droid.Resource.Attribute.searchIcon;
+			global::Controls.Droid.Resource.Attribute.searchViewStyle = global::ServiceDesk.Droid.Resource.Attribute.searchViewStyle;
+			global::Controls.Droid.Resource.Attribute.selectableItemBackground = global::ServiceDesk.Droid.Resource.Attribute.selectableItemBackground;
+			global::Controls.Droid.Resource.Attribute.selectableItemBackgroundBorderless = global::ServiceDesk.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::Controls.Droid.Resource.Attribute.showAsAction = global::ServiceDesk.Droid.Resource.Attribute.showAsAction;
+			global::Controls.Droid.Resource.Attribute.showDividers = global::ServiceDesk.Droid.Resource.Attribute.showDividers;
+			global::Controls.Droid.Resource.Attribute.showText = global::ServiceDesk.Droid.Resource.Attribute.showText;
+			global::Controls.Droid.Resource.Attribute.singleChoiceItemLayout = global::ServiceDesk.Droid.Resource.Attribute.singleChoiceItemLayout;
+			global::Controls.Droid.Resource.Attribute.spinBars = global::ServiceDesk.Droid.Resource.Attribute.spinBars;
+			global::Controls.Droid.Resource.Attribute.spinnerDropDownItemStyle = global::ServiceDesk.Droid.Resource.Attribute.spinnerDropDownItemStyle;
+			global::Controls.Droid.Resource.Attribute.spinnerStyle = global::ServiceDesk.Droid.Resource.Attribute.spinnerStyle;
+			global::Controls.Droid.Resource.Attribute.splitTrack = global::ServiceDesk.Droid.Resource.Attribute.splitTrack;
+			global::Controls.Droid.Resource.Attribute.state_above_anchor = global::ServiceDesk.Droid.Resource.Attribute.state_above_anchor;
+			global::Controls.Droid.Resource.Attribute.statusBarBackground = global::ServiceDesk.Droid.Resource.Attribute.statusBarBackground;
+			global::Controls.Droid.Resource.Attribute.statusBarScrim = global::ServiceDesk.Droid.Resource.Attribute.statusBarScrim;
+			global::Controls.Droid.Resource.Attribute.submitBackground = global::ServiceDesk.Droid.Resource.Attribute.submitBackground;
+			global::Controls.Droid.Resource.Attribute.subtitle = global::ServiceDesk.Droid.Resource.Attribute.subtitle;
+			global::Controls.Droid.Resource.Attribute.subtitleTextAppearance = global::ServiceDesk.Droid.Resource.Attribute.subtitleTextAppearance;
+			global::Controls.Droid.Resource.Attribute.subtitleTextColor = global::ServiceDesk.Droid.Resource.Attribute.subtitleTextColor;
+			global::Controls.Droid.Resource.Attribute.subtitleTextStyle = global::ServiceDesk.Droid.Resource.Attribute.subtitleTextStyle;
+			global::Controls.Droid.Resource.Attribute.suggestionRowLayout = global::ServiceDesk.Droid.Resource.Attribute.suggestionRowLayout;
+			global::Controls.Droid.Resource.Attribute.switchMinWidth = global::ServiceDesk.Droid.Resource.Attribute.switchMinWidth;
+			global::Controls.Droid.Resource.Attribute.switchPadding = global::ServiceDesk.Droid.Resource.Attribute.switchPadding;
+			global::Controls.Droid.Resource.Attribute.switchStyle = global::ServiceDesk.Droid.Resource.Attribute.switchStyle;
+			global::Controls.Droid.Resource.Attribute.switchTextAppearance = global::ServiceDesk.Droid.Resource.Attribute.switchTextAppearance;
+			global::Controls.Droid.Resource.Attribute.tabBackground = global::ServiceDesk.Droid.Resource.Attribute.tabBackground;
+			global::Controls.Droid.Resource.Attribute.tabContentStart = global::ServiceDesk.Droid.Resource.Attribute.tabContentStart;
+			global::Controls.Droid.Resource.Attribute.tabGravity = global::ServiceDesk.Droid.Resource.Attribute.tabGravity;
+			global::Controls.Droid.Resource.Attribute.tabIndicatorColor = global::ServiceDesk.Droid.Resource.Attribute.tabIndicatorColor;
+			global::Controls.Droid.Resource.Attribute.tabIndicatorHeight = global::ServiceDesk.Droid.Resource.Attribute.tabIndicatorHeight;
+			global::Controls.Droid.Resource.Attribute.tabMaxWidth = global::ServiceDesk.Droid.Resource.Attribute.tabMaxWidth;
+			global::Controls.Droid.Resource.Attribute.tabMinWidth = global::ServiceDesk.Droid.Resource.Attribute.tabMinWidth;
+			global::Controls.Droid.Resource.Attribute.tabMode = global::ServiceDesk.Droid.Resource.Attribute.tabMode;
+			global::Controls.Droid.Resource.Attribute.tabPadding = global::ServiceDesk.Droid.Resource.Attribute.tabPadding;
+			global::Controls.Droid.Resource.Attribute.tabPaddingBottom = global::ServiceDesk.Droid.Resource.Attribute.tabPaddingBottom;
+			global::Controls.Droid.Resource.Attribute.tabPaddingEnd = global::ServiceDesk.Droid.Resource.Attribute.tabPaddingEnd;
+			global::Controls.Droid.Resource.Attribute.tabPaddingStart = global::ServiceDesk.Droid.Resource.Attribute.tabPaddingStart;
+			global::Controls.Droid.Resource.Attribute.tabPaddingTop = global::ServiceDesk.Droid.Resource.Attribute.tabPaddingTop;
+			global::Controls.Droid.Resource.Attribute.tabSelectedTextColor = global::ServiceDesk.Droid.Resource.Attribute.tabSelectedTextColor;
+			global::Controls.Droid.Resource.Attribute.tabTextAppearance = global::ServiceDesk.Droid.Resource.Attribute.tabTextAppearance;
+			global::Controls.Droid.Resource.Attribute.tabTextColor = global::ServiceDesk.Droid.Resource.Attribute.tabTextColor;
+			global::Controls.Droid.Resource.Attribute.textAllCaps = global::ServiceDesk.Droid.Resource.Attribute.textAllCaps;
+			global::Controls.Droid.Resource.Attribute.textAppearanceLargePopupMenu = global::ServiceDesk.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::Controls.Droid.Resource.Attribute.textAppearanceListItem = global::ServiceDesk.Droid.Resource.Attribute.textAppearanceListItem;
+			global::Controls.Droid.Resource.Attribute.textAppearanceListItemSmall = global::ServiceDesk.Droid.Resource.Attribute.textAppearanceListItemSmall;
+			global::Controls.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle = global::ServiceDesk.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::Controls.Droid.Resource.Attribute.textAppearanceSearchResultTitle = global::ServiceDesk.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::Controls.Droid.Resource.Attribute.textAppearanceSmallPopupMenu = global::ServiceDesk.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::Controls.Droid.Resource.Attribute.textColorAlertDialogListItem = global::ServiceDesk.Droid.Resource.Attribute.textColorAlertDialogListItem;
+			global::Controls.Droid.Resource.Attribute.textColorSearchUrl = global::ServiceDesk.Droid.Resource.Attribute.textColorSearchUrl;
+			global::Controls.Droid.Resource.Attribute.theme = global::ServiceDesk.Droid.Resource.Attribute.theme;
+			global::Controls.Droid.Resource.Attribute.thickness = global::ServiceDesk.Droid.Resource.Attribute.thickness;
+			global::Controls.Droid.Resource.Attribute.thumbTextPadding = global::ServiceDesk.Droid.Resource.Attribute.thumbTextPadding;
+			global::Controls.Droid.Resource.Attribute.title = global::ServiceDesk.Droid.Resource.Attribute.title;
+			global::Controls.Droid.Resource.Attribute.titleEnabled = global::ServiceDesk.Droid.Resource.Attribute.titleEnabled;
+			global::Controls.Droid.Resource.Attribute.titleMarginBottom = global::ServiceDesk.Droid.Resource.Attribute.titleMarginBottom;
+			global::Controls.Droid.Resource.Attribute.titleMarginEnd = global::ServiceDesk.Droid.Resource.Attribute.titleMarginEnd;
+			global::Controls.Droid.Resource.Attribute.titleMarginStart = global::ServiceDesk.Droid.Resource.Attribute.titleMarginStart;
+			global::Controls.Droid.Resource.Attribute.titleMarginTop = global::ServiceDesk.Droid.Resource.Attribute.titleMarginTop;
+			global::Controls.Droid.Resource.Attribute.titleMargins = global::ServiceDesk.Droid.Resource.Attribute.titleMargins;
+			global::Controls.Droid.Resource.Attribute.titleTextAppearance = global::ServiceDesk.Droid.Resource.Attribute.titleTextAppearance;
+			global::Controls.Droid.Resource.Attribute.titleTextColor = global::ServiceDesk.Droid.Resource.Attribute.titleTextColor;
+			global::Controls.Droid.Resource.Attribute.titleTextStyle = global::ServiceDesk.Droid.Resource.Attribute.titleTextStyle;
+			global::Controls.Droid.Resource.Attribute.toolbarId = global::ServiceDesk.Droid.Resource.Attribute.toolbarId;
+			global::Controls.Droid.Resource.Attribute.toolbarNavigationButtonStyle = global::ServiceDesk.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::Controls.Droid.Resource.Attribute.toolbarStyle = global::ServiceDesk.Droid.Resource.Attribute.toolbarStyle;
+			global::Controls.Droid.Resource.Attribute.track = global::ServiceDesk.Droid.Resource.Attribute.track;
+			global::Controls.Droid.Resource.Attribute.voiceIcon = global::ServiceDesk.Droid.Resource.Attribute.voiceIcon;
+			global::Controls.Droid.Resource.Attribute.windowActionBar = global::ServiceDesk.Droid.Resource.Attribute.windowActionBar;
+			global::Controls.Droid.Resource.Attribute.windowActionBarOverlay = global::ServiceDesk.Droid.Resource.Attribute.windowActionBarOverlay;
+			global::Controls.Droid.Resource.Attribute.windowActionModeOverlay = global::ServiceDesk.Droid.Resource.Attribute.windowActionModeOverlay;
+			global::Controls.Droid.Resource.Attribute.windowFixedHeightMajor = global::ServiceDesk.Droid.Resource.Attribute.windowFixedHeightMajor;
+			global::Controls.Droid.Resource.Attribute.windowFixedHeightMinor = global::ServiceDesk.Droid.Resource.Attribute.windowFixedHeightMinor;
+			global::Controls.Droid.Resource.Attribute.windowFixedWidthMajor = global::ServiceDesk.Droid.Resource.Attribute.windowFixedWidthMajor;
+			global::Controls.Droid.Resource.Attribute.windowFixedWidthMinor = global::ServiceDesk.Droid.Resource.Attribute.windowFixedWidthMinor;
+			global::Controls.Droid.Resource.Attribute.windowMinWidthMajor = global::ServiceDesk.Droid.Resource.Attribute.windowMinWidthMajor;
+			global::Controls.Droid.Resource.Attribute.windowMinWidthMinor = global::ServiceDesk.Droid.Resource.Attribute.windowMinWidthMinor;
+			global::Controls.Droid.Resource.Attribute.windowNoTitle = global::ServiceDesk.Droid.Resource.Attribute.windowNoTitle;
+			global::Controls.Droid.Resource.Boolean.abc_action_bar_embed_tabs = global::ServiceDesk.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::Controls.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::ServiceDesk.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::Controls.Droid.Resource.Boolean.abc_config_closeDialogWhenTouchOutside = global::ServiceDesk.Droid.Resource.Boolean.abc_config_closeDialogWhenTouchOutside;
+			global::Controls.Droid.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent = global::ServiceDesk.Droid.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent;
+			global::Controls.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark = global::ServiceDesk.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::Controls.Droid.Resource.Color.abc_background_cache_hint_selector_material_light = global::ServiceDesk.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::Controls.Droid.Resource.Color.abc_color_highlight_material = global::ServiceDesk.Droid.Resource.Color.abc_color_highlight_material;
+			global::Controls.Droid.Resource.Color.abc_input_method_navigation_guard = global::ServiceDesk.Droid.Resource.Color.abc_input_method_navigation_guard;
+			global::Controls.Droid.Resource.Color.abc_primary_text_disable_only_material_dark = global::ServiceDesk.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::Controls.Droid.Resource.Color.abc_primary_text_disable_only_material_light = global::ServiceDesk.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::Controls.Droid.Resource.Color.abc_primary_text_material_dark = global::ServiceDesk.Droid.Resource.Color.abc_primary_text_material_dark;
+			global::Controls.Droid.Resource.Color.abc_primary_text_material_light = global::ServiceDesk.Droid.Resource.Color.abc_primary_text_material_light;
+			global::Controls.Droid.Resource.Color.abc_search_url_text = global::ServiceDesk.Droid.Resource.Color.abc_search_url_text;
+			global::Controls.Droid.Resource.Color.abc_search_url_text_normal = global::ServiceDesk.Droid.Resource.Color.abc_search_url_text_normal;
+			global::Controls.Droid.Resource.Color.abc_search_url_text_pressed = global::ServiceDesk.Droid.Resource.Color.abc_search_url_text_pressed;
+			global::Controls.Droid.Resource.Color.abc_search_url_text_selected = global::ServiceDesk.Droid.Resource.Color.abc_search_url_text_selected;
+			global::Controls.Droid.Resource.Color.abc_secondary_text_material_dark = global::ServiceDesk.Droid.Resource.Color.abc_secondary_text_material_dark;
+			global::Controls.Droid.Resource.Color.abc_secondary_text_material_light = global::ServiceDesk.Droid.Resource.Color.abc_secondary_text_material_light;
+			global::Controls.Droid.Resource.Color.accent_material_dark = global::ServiceDesk.Droid.Resource.Color.accent_material_dark;
+			global::Controls.Droid.Resource.Color.accent_material_light = global::ServiceDesk.Droid.Resource.Color.accent_material_light;
+			global::Controls.Droid.Resource.Color.background_floating_material_dark = global::ServiceDesk.Droid.Resource.Color.background_floating_material_dark;
+			global::Controls.Droid.Resource.Color.background_floating_material_light = global::ServiceDesk.Droid.Resource.Color.background_floating_material_light;
+			global::Controls.Droid.Resource.Color.background_material_dark = global::ServiceDesk.Droid.Resource.Color.background_material_dark;
+			global::Controls.Droid.Resource.Color.background_material_light = global::ServiceDesk.Droid.Resource.Color.background_material_light;
+			global::Controls.Droid.Resource.Color.bright_foreground_disabled_material_dark = global::ServiceDesk.Droid.Resource.Color.bright_foreground_disabled_material_dark;
+			global::Controls.Droid.Resource.Color.bright_foreground_disabled_material_light = global::ServiceDesk.Droid.Resource.Color.bright_foreground_disabled_material_light;
+			global::Controls.Droid.Resource.Color.bright_foreground_inverse_material_dark = global::ServiceDesk.Droid.Resource.Color.bright_foreground_inverse_material_dark;
+			global::Controls.Droid.Resource.Color.bright_foreground_inverse_material_light = global::ServiceDesk.Droid.Resource.Color.bright_foreground_inverse_material_light;
+			global::Controls.Droid.Resource.Color.bright_foreground_material_dark = global::ServiceDesk.Droid.Resource.Color.bright_foreground_material_dark;
+			global::Controls.Droid.Resource.Color.bright_foreground_material_light = global::ServiceDesk.Droid.Resource.Color.bright_foreground_material_light;
+			global::Controls.Droid.Resource.Color.button_material_dark = global::ServiceDesk.Droid.Resource.Color.button_material_dark;
+			global::Controls.Droid.Resource.Color.button_material_light = global::ServiceDesk.Droid.Resource.Color.button_material_light;
+			global::Controls.Droid.Resource.Color.cardview_dark_background = global::ServiceDesk.Droid.Resource.Color.cardview_dark_background;
+			global::Controls.Droid.Resource.Color.cardview_light_background = global::ServiceDesk.Droid.Resource.Color.cardview_light_background;
+			global::Controls.Droid.Resource.Color.cardview_shadow_end_color = global::ServiceDesk.Droid.Resource.Color.cardview_shadow_end_color;
+			global::Controls.Droid.Resource.Color.cardview_shadow_start_color = global::ServiceDesk.Droid.Resource.Color.cardview_shadow_start_color;
+			global::Controls.Droid.Resource.Color.design_fab_shadow_end_color = global::ServiceDesk.Droid.Resource.Color.design_fab_shadow_end_color;
+			global::Controls.Droid.Resource.Color.design_fab_shadow_mid_color = global::ServiceDesk.Droid.Resource.Color.design_fab_shadow_mid_color;
+			global::Controls.Droid.Resource.Color.design_fab_shadow_start_color = global::ServiceDesk.Droid.Resource.Color.design_fab_shadow_start_color;
+			global::Controls.Droid.Resource.Color.design_fab_stroke_end_inner_color = global::ServiceDesk.Droid.Resource.Color.design_fab_stroke_end_inner_color;
+			global::Controls.Droid.Resource.Color.design_fab_stroke_end_outer_color = global::ServiceDesk.Droid.Resource.Color.design_fab_stroke_end_outer_color;
+			global::Controls.Droid.Resource.Color.design_fab_stroke_top_inner_color = global::ServiceDesk.Droid.Resource.Color.design_fab_stroke_top_inner_color;
+			global::Controls.Droid.Resource.Color.design_fab_stroke_top_outer_color = global::ServiceDesk.Droid.Resource.Color.design_fab_stroke_top_outer_color;
+			global::Controls.Droid.Resource.Color.design_snackbar_background_color = global::ServiceDesk.Droid.Resource.Color.design_snackbar_background_color;
+			global::Controls.Droid.Resource.Color.dim_foreground_disabled_material_dark = global::ServiceDesk.Droid.Resource.Color.dim_foreground_disabled_material_dark;
+			global::Controls.Droid.Resource.Color.dim_foreground_disabled_material_light = global::ServiceDesk.Droid.Resource.Color.dim_foreground_disabled_material_light;
+			global::Controls.Droid.Resource.Color.dim_foreground_material_dark = global::ServiceDesk.Droid.Resource.Color.dim_foreground_material_dark;
+			global::Controls.Droid.Resource.Color.dim_foreground_material_light = global::ServiceDesk.Droid.Resource.Color.dim_foreground_material_light;
+			global::Controls.Droid.Resource.Color.foreground_material_dark = global::ServiceDesk.Droid.Resource.Color.foreground_material_dark;
+			global::Controls.Droid.Resource.Color.foreground_material_light = global::ServiceDesk.Droid.Resource.Color.foreground_material_light;
+			global::Controls.Droid.Resource.Color.highlighted_text_material_dark = global::ServiceDesk.Droid.Resource.Color.highlighted_text_material_dark;
+			global::Controls.Droid.Resource.Color.highlighted_text_material_light = global::ServiceDesk.Droid.Resource.Color.highlighted_text_material_light;
+			global::Controls.Droid.Resource.Color.material_blue_grey_800 = global::ServiceDesk.Droid.Resource.Color.material_blue_grey_800;
+			global::Controls.Droid.Resource.Color.material_blue_grey_900 = global::ServiceDesk.Droid.Resource.Color.material_blue_grey_900;
+			global::Controls.Droid.Resource.Color.material_blue_grey_950 = global::ServiceDesk.Droid.Resource.Color.material_blue_grey_950;
+			global::Controls.Droid.Resource.Color.material_deep_teal_200 = global::ServiceDesk.Droid.Resource.Color.material_deep_teal_200;
+			global::Controls.Droid.Resource.Color.material_deep_teal_500 = global::ServiceDesk.Droid.Resource.Color.material_deep_teal_500;
+			global::Controls.Droid.Resource.Color.material_grey_100 = global::ServiceDesk.Droid.Resource.Color.material_grey_100;
+			global::Controls.Droid.Resource.Color.material_grey_300 = global::ServiceDesk.Droid.Resource.Color.material_grey_300;
+			global::Controls.Droid.Resource.Color.material_grey_50 = global::ServiceDesk.Droid.Resource.Color.material_grey_50;
+			global::Controls.Droid.Resource.Color.material_grey_600 = global::ServiceDesk.Droid.Resource.Color.material_grey_600;
+			global::Controls.Droid.Resource.Color.material_grey_800 = global::ServiceDesk.Droid.Resource.Color.material_grey_800;
+			global::Controls.Droid.Resource.Color.material_grey_850 = global::ServiceDesk.Droid.Resource.Color.material_grey_850;
+			global::Controls.Droid.Resource.Color.material_grey_900 = global::ServiceDesk.Droid.Resource.Color.material_grey_900;
+			global::Controls.Droid.Resource.Color.primary_dark_material_dark = global::ServiceDesk.Droid.Resource.Color.primary_dark_material_dark;
+			global::Controls.Droid.Resource.Color.primary_dark_material_light = global::ServiceDesk.Droid.Resource.Color.primary_dark_material_light;
+			global::Controls.Droid.Resource.Color.primary_material_dark = global::ServiceDesk.Droid.Resource.Color.primary_material_dark;
+			global::Controls.Droid.Resource.Color.primary_material_light = global::ServiceDesk.Droid.Resource.Color.primary_material_light;
+			global::Controls.Droid.Resource.Color.primary_text_default_material_dark = global::ServiceDesk.Droid.Resource.Color.primary_text_default_material_dark;
+			global::Controls.Droid.Resource.Color.primary_text_default_material_light = global::ServiceDesk.Droid.Resource.Color.primary_text_default_material_light;
+			global::Controls.Droid.Resource.Color.primary_text_disabled_material_dark = global::ServiceDesk.Droid.Resource.Color.primary_text_disabled_material_dark;
+			global::Controls.Droid.Resource.Color.primary_text_disabled_material_light = global::ServiceDesk.Droid.Resource.Color.primary_text_disabled_material_light;
+			global::Controls.Droid.Resource.Color.ripple_material_dark = global::ServiceDesk.Droid.Resource.Color.ripple_material_dark;
+			global::Controls.Droid.Resource.Color.ripple_material_light = global::ServiceDesk.Droid.Resource.Color.ripple_material_light;
+			global::Controls.Droid.Resource.Color.secondary_text_default_material_dark = global::ServiceDesk.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::Controls.Droid.Resource.Color.secondary_text_default_material_light = global::ServiceDesk.Droid.Resource.Color.secondary_text_default_material_light;
+			global::Controls.Droid.Resource.Color.secondary_text_disabled_material_dark = global::ServiceDesk.Droid.Resource.Color.secondary_text_disabled_material_dark;
+			global::Controls.Droid.Resource.Color.secondary_text_disabled_material_light = global::ServiceDesk.Droid.Resource.Color.secondary_text_disabled_material_light;
+			global::Controls.Droid.Resource.Color.switch_thumb_disabled_material_dark = global::ServiceDesk.Droid.Resource.Color.switch_thumb_disabled_material_dark;
+			global::Controls.Droid.Resource.Color.switch_thumb_disabled_material_light = global::ServiceDesk.Droid.Resource.Color.switch_thumb_disabled_material_light;
+			global::Controls.Droid.Resource.Color.switch_thumb_material_dark = global::ServiceDesk.Droid.Resource.Color.switch_thumb_material_dark;
+			global::Controls.Droid.Resource.Color.switch_thumb_material_light = global::ServiceDesk.Droid.Resource.Color.switch_thumb_material_light;
+			global::Controls.Droid.Resource.Color.switch_thumb_normal_material_dark = global::ServiceDesk.Droid.Resource.Color.switch_thumb_normal_material_dark;
+			global::Controls.Droid.Resource.Color.switch_thumb_normal_material_light = global::ServiceDesk.Droid.Resource.Color.switch_thumb_normal_material_light;
+			global::Controls.Droid.Resource.Dimension.abc_action_bar_content_inset_material = global::ServiceDesk.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::Controls.Droid.Resource.Dimension.abc_action_bar_default_height_material = global::ServiceDesk.Droid.Resource.Dimension.abc_action_bar_default_height_material;
+			global::Controls.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material = global::ServiceDesk.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::Controls.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material = global::ServiceDesk.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::Controls.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::ServiceDesk.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::Controls.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::ServiceDesk.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::Controls.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::ServiceDesk.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::Controls.Droid.Resource.Dimension.abc_action_bar_progress_bar_size = global::ServiceDesk.Droid.Resource.Dimension.abc_action_bar_progress_bar_size;
+			global::Controls.Droid.Resource.Dimension.abc_action_bar_stacked_max_height = global::ServiceDesk.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::Controls.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::ServiceDesk.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::Controls.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::ServiceDesk.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::Controls.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::ServiceDesk.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::Controls.Droid.Resource.Dimension.abc_action_button_min_height_material = global::ServiceDesk.Droid.Resource.Dimension.abc_action_button_min_height_material;
+			global::Controls.Droid.Resource.Dimension.abc_action_button_min_width_material = global::ServiceDesk.Droid.Resource.Dimension.abc_action_button_min_width_material;
+			global::Controls.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material = global::ServiceDesk.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::Controls.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height = global::ServiceDesk.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::Controls.Droid.Resource.Dimension.abc_button_inset_horizontal_material = global::ServiceDesk.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::Controls.Droid.Resource.Dimension.abc_button_inset_vertical_material = global::ServiceDesk.Droid.Resource.Dimension.abc_button_inset_vertical_material;
+			global::Controls.Droid.Resource.Dimension.abc_button_padding_horizontal_material = global::ServiceDesk.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::Controls.Droid.Resource.Dimension.abc_button_padding_vertical_material = global::ServiceDesk.Droid.Resource.Dimension.abc_button_padding_vertical_material;
+			global::Controls.Droid.Resource.Dimension.abc_config_prefDialogWidth = global::ServiceDesk.Droid.Resource.Dimension.abc_config_prefDialogWidth;
+			global::Controls.Droid.Resource.Dimension.abc_control_corner_material = global::ServiceDesk.Droid.Resource.Dimension.abc_control_corner_material;
+			global::Controls.Droid.Resource.Dimension.abc_control_inset_material = global::ServiceDesk.Droid.Resource.Dimension.abc_control_inset_material;
+			global::Controls.Droid.Resource.Dimension.abc_control_padding_material = global::ServiceDesk.Droid.Resource.Dimension.abc_control_padding_material;
+			global::Controls.Droid.Resource.Dimension.abc_dialog_min_width_major = global::ServiceDesk.Droid.Resource.Dimension.abc_dialog_min_width_major;
+			global::Controls.Droid.Resource.Dimension.abc_dialog_min_width_minor = global::ServiceDesk.Droid.Resource.Dimension.abc_dialog_min_width_minor;
+			global::Controls.Droid.Resource.Dimension.abc_dialog_padding_material = global::ServiceDesk.Droid.Resource.Dimension.abc_dialog_padding_material;
+			global::Controls.Droid.Resource.Dimension.abc_dialog_padding_top_material = global::ServiceDesk.Droid.Resource.Dimension.abc_dialog_padding_top_material;
+			global::Controls.Droid.Resource.Dimension.abc_disabled_alpha_material_dark = global::ServiceDesk.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::Controls.Droid.Resource.Dimension.abc_disabled_alpha_material_light = global::ServiceDesk.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::Controls.Droid.Resource.Dimension.abc_dropdownitem_icon_width = global::ServiceDesk.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::Controls.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left = global::ServiceDesk.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::Controls.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right = global::ServiceDesk.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::Controls.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material = global::ServiceDesk.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::Controls.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::ServiceDesk.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::Controls.Droid.Resource.Dimension.abc_edit_text_inset_top_material = global::ServiceDesk.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::Controls.Droid.Resource.Dimension.abc_floating_window_z = global::ServiceDesk.Droid.Resource.Dimension.abc_floating_window_z;
+			global::Controls.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material = global::ServiceDesk.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::Controls.Droid.Resource.Dimension.abc_panel_menu_list_width = global::ServiceDesk.Droid.Resource.Dimension.abc_panel_menu_list_width;
+			global::Controls.Droid.Resource.Dimension.abc_search_view_preferred_width = global::ServiceDesk.Droid.Resource.Dimension.abc_search_view_preferred_width;
+			global::Controls.Droid.Resource.Dimension.abc_switch_padding = global::ServiceDesk.Droid.Resource.Dimension.abc_switch_padding;
+			global::Controls.Droid.Resource.Dimension.abc_text_size_body_1_material = global::ServiceDesk.Droid.Resource.Dimension.abc_text_size_body_1_material;
+			global::Controls.Droid.Resource.Dimension.abc_text_size_body_2_material = global::ServiceDesk.Droid.Resource.Dimension.abc_text_size_body_2_material;
+			global::Controls.Droid.Resource.Dimension.abc_text_size_button_material = global::ServiceDesk.Droid.Resource.Dimension.abc_text_size_button_material;
+			global::Controls.Droid.Resource.Dimension.abc_text_size_caption_material = global::ServiceDesk.Droid.Resource.Dimension.abc_text_size_caption_material;
+			global::Controls.Droid.Resource.Dimension.abc_text_size_display_1_material = global::ServiceDesk.Droid.Resource.Dimension.abc_text_size_display_1_material;
+			global::Controls.Droid.Resource.Dimension.abc_text_size_display_2_material = global::ServiceDesk.Droid.Resource.Dimension.abc_text_size_display_2_material;
+			global::Controls.Droid.Resource.Dimension.abc_text_size_display_3_material = global::ServiceDesk.Droid.Resource.Dimension.abc_text_size_display_3_material;
+			global::Controls.Droid.Resource.Dimension.abc_text_size_display_4_material = global::ServiceDesk.Droid.Resource.Dimension.abc_text_size_display_4_material;
+			global::Controls.Droid.Resource.Dimension.abc_text_size_headline_material = global::ServiceDesk.Droid.Resource.Dimension.abc_text_size_headline_material;
+			global::Controls.Droid.Resource.Dimension.abc_text_size_large_material = global::ServiceDesk.Droid.Resource.Dimension.abc_text_size_large_material;
+			global::Controls.Droid.Resource.Dimension.abc_text_size_medium_material = global::ServiceDesk.Droid.Resource.Dimension.abc_text_size_medium_material;
+			global::Controls.Droid.Resource.Dimension.abc_text_size_menu_material = global::ServiceDesk.Droid.Resource.Dimension.abc_text_size_menu_material;
+			global::Controls.Droid.Resource.Dimension.abc_text_size_small_material = global::ServiceDesk.Droid.Resource.Dimension.abc_text_size_small_material;
+			global::Controls.Droid.Resource.Dimension.abc_text_size_subhead_material = global::ServiceDesk.Droid.Resource.Dimension.abc_text_size_subhead_material;
+			global::Controls.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::ServiceDesk.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::Controls.Droid.Resource.Dimension.abc_text_size_title_material = global::ServiceDesk.Droid.Resource.Dimension.abc_text_size_title_material;
+			global::Controls.Droid.Resource.Dimension.abc_text_size_title_material_toolbar = global::ServiceDesk.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::Controls.Droid.Resource.Dimension.cardview_compat_inset_shadow = global::ServiceDesk.Droid.Resource.Dimension.cardview_compat_inset_shadow;
+			global::Controls.Droid.Resource.Dimension.cardview_default_elevation = global::ServiceDesk.Droid.Resource.Dimension.cardview_default_elevation;
+			global::Controls.Droid.Resource.Dimension.cardview_default_radius = global::ServiceDesk.Droid.Resource.Dimension.cardview_default_radius;
+			global::Controls.Droid.Resource.Dimension.design_appbar_elevation = global::ServiceDesk.Droid.Resource.Dimension.design_appbar_elevation;
+			global::Controls.Droid.Resource.Dimension.design_fab_border_width = global::ServiceDesk.Droid.Resource.Dimension.design_fab_border_width;
+			global::Controls.Droid.Resource.Dimension.design_fab_elevation = global::ServiceDesk.Droid.Resource.Dimension.design_fab_elevation;
+			global::Controls.Droid.Resource.Dimension.design_fab_size_mini = global::ServiceDesk.Droid.Resource.Dimension.design_fab_size_mini;
+			global::Controls.Droid.Resource.Dimension.design_fab_size_normal = global::ServiceDesk.Droid.Resource.Dimension.design_fab_size_normal;
+			global::Controls.Droid.Resource.Dimension.design_fab_translation_z_pressed = global::ServiceDesk.Droid.Resource.Dimension.design_fab_translation_z_pressed;
+			global::Controls.Droid.Resource.Dimension.design_navigation_elevation = global::ServiceDesk.Droid.Resource.Dimension.design_navigation_elevation;
+			global::Controls.Droid.Resource.Dimension.design_navigation_icon_padding = global::ServiceDesk.Droid.Resource.Dimension.design_navigation_icon_padding;
+			global::Controls.Droid.Resource.Dimension.design_navigation_icon_size = global::ServiceDesk.Droid.Resource.Dimension.design_navigation_icon_size;
+			global::Controls.Droid.Resource.Dimension.design_navigation_max_width = global::ServiceDesk.Droid.Resource.Dimension.design_navigation_max_width;
+			global::Controls.Droid.Resource.Dimension.design_navigation_padding_bottom = global::ServiceDesk.Droid.Resource.Dimension.design_navigation_padding_bottom;
+			global::Controls.Droid.Resource.Dimension.design_navigation_separator_vertical_padding = global::ServiceDesk.Droid.Resource.Dimension.design_navigation_separator_vertical_padding;
+			global::Controls.Droid.Resource.Dimension.design_snackbar_action_inline_max_width = global::ServiceDesk.Droid.Resource.Dimension.design_snackbar_action_inline_max_width;
+			global::Controls.Droid.Resource.Dimension.design_snackbar_background_corner_radius = global::ServiceDesk.Droid.Resource.Dimension.design_snackbar_background_corner_radius;
+			global::Controls.Droid.Resource.Dimension.design_snackbar_elevation = global::ServiceDesk.Droid.Resource.Dimension.design_snackbar_elevation;
+			global::Controls.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::ServiceDesk.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
+			global::Controls.Droid.Resource.Dimension.design_snackbar_max_width = global::ServiceDesk.Droid.Resource.Dimension.design_snackbar_max_width;
+			global::Controls.Droid.Resource.Dimension.design_snackbar_min_width = global::ServiceDesk.Droid.Resource.Dimension.design_snackbar_min_width;
+			global::Controls.Droid.Resource.Dimension.design_snackbar_padding_horizontal = global::ServiceDesk.Droid.Resource.Dimension.design_snackbar_padding_horizontal;
+			global::Controls.Droid.Resource.Dimension.design_snackbar_padding_vertical = global::ServiceDesk.Droid.Resource.Dimension.design_snackbar_padding_vertical;
+			global::Controls.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::ServiceDesk.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines;
+			global::Controls.Droid.Resource.Dimension.design_snackbar_text_size = global::ServiceDesk.Droid.Resource.Dimension.design_snackbar_text_size;
+			global::Controls.Droid.Resource.Dimension.design_tab_max_width = global::ServiceDesk.Droid.Resource.Dimension.design_tab_max_width;
+			global::Controls.Droid.Resource.Dimension.disabled_alpha_material_dark = global::ServiceDesk.Droid.Resource.Dimension.disabled_alpha_material_dark;
+			global::Controls.Droid.Resource.Dimension.disabled_alpha_material_light = global::ServiceDesk.Droid.Resource.Dimension.disabled_alpha_material_light;
+			global::Controls.Droid.Resource.Dimension.highlight_alpha_material_colored = global::ServiceDesk.Droid.Resource.Dimension.highlight_alpha_material_colored;
+			global::Controls.Droid.Resource.Dimension.highlight_alpha_material_dark = global::ServiceDesk.Droid.Resource.Dimension.highlight_alpha_material_dark;
+			global::Controls.Droid.Resource.Dimension.highlight_alpha_material_light = global::ServiceDesk.Droid.Resource.Dimension.highlight_alpha_material_light;
+			global::Controls.Droid.Resource.Dimension.notification_large_icon_height = global::ServiceDesk.Droid.Resource.Dimension.notification_large_icon_height;
+			global::Controls.Droid.Resource.Dimension.notification_large_icon_width = global::ServiceDesk.Droid.Resource.Dimension.notification_large_icon_width;
+			global::Controls.Droid.Resource.Dimension.notification_subtext_size = global::ServiceDesk.Droid.Resource.Dimension.notification_subtext_size;
+			global::Controls.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::ServiceDesk.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::Controls.Droid.Resource.Drawable.abc_action_bar_item_background_material = global::ServiceDesk.Droid.Resource.Drawable.abc_action_bar_item_background_material;
+			global::Controls.Droid.Resource.Drawable.abc_btn_borderless_material = global::ServiceDesk.Droid.Resource.Drawable.abc_btn_borderless_material;
+			global::Controls.Droid.Resource.Drawable.abc_btn_check_material = global::ServiceDesk.Droid.Resource.Drawable.abc_btn_check_material;
+			global::Controls.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::ServiceDesk.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::Controls.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::ServiceDesk.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::Controls.Droid.Resource.Drawable.abc_btn_colored_material = global::ServiceDesk.Droid.Resource.Drawable.abc_btn_colored_material;
+			global::Controls.Droid.Resource.Drawable.abc_btn_default_mtrl_shape = global::ServiceDesk.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::Controls.Droid.Resource.Drawable.abc_btn_radio_material = global::ServiceDesk.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::Controls.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::ServiceDesk.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::Controls.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::ServiceDesk.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::Controls.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::ServiceDesk.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::Controls.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::ServiceDesk.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::Controls.Droid.Resource.Drawable.abc_cab_background_internal_bg = global::ServiceDesk.Droid.Resource.Drawable.abc_cab_background_internal_bg;
+			global::Controls.Droid.Resource.Drawable.abc_cab_background_top_material = global::ServiceDesk.Droid.Resource.Drawable.abc_cab_background_top_material;
+			global::Controls.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::ServiceDesk.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::Controls.Droid.Resource.Drawable.abc_control_background_material = global::ServiceDesk.Droid.Resource.Drawable.abc_control_background_material;
+			global::Controls.Droid.Resource.Drawable.abc_edit_text_material = global::ServiceDesk.Droid.Resource.Drawable.abc_edit_text_material;
+			global::Controls.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::ServiceDesk.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::Controls.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::ServiceDesk.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::Controls.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::ServiceDesk.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::Controls.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::ServiceDesk.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::Controls.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::ServiceDesk.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::Controls.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::ServiceDesk.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::Controls.Droid.Resource.Drawable.abc_item_background_holo_dark = global::ServiceDesk.Droid.Resource.Drawable.abc_item_background_holo_dark;
+			global::Controls.Droid.Resource.Drawable.abc_item_background_holo_light = global::ServiceDesk.Droid.Resource.Drawable.abc_item_background_holo_light;
+			global::Controls.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha = global::ServiceDesk.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::Controls.Droid.Resource.Drawable.abc_list_focused_holo = global::ServiceDesk.Droid.Resource.Drawable.abc_list_focused_holo;
+			global::Controls.Droid.Resource.Drawable.abc_list_longpressed_holo = global::ServiceDesk.Droid.Resource.Drawable.abc_list_longpressed_holo;
+			global::Controls.Droid.Resource.Drawable.abc_list_pressed_holo_dark = global::ServiceDesk.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::Controls.Droid.Resource.Drawable.abc_list_pressed_holo_light = global::ServiceDesk.Droid.Resource.Drawable.abc_list_pressed_holo_light;
+			global::Controls.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::ServiceDesk.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::Controls.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::ServiceDesk.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::Controls.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::ServiceDesk.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::Controls.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light = global::ServiceDesk.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::Controls.Droid.Resource.Drawable.abc_list_selector_holo_dark = global::ServiceDesk.Droid.Resource.Drawable.abc_list_selector_holo_dark;
+			global::Controls.Droid.Resource.Drawable.abc_list_selector_holo_light = global::ServiceDesk.Droid.Resource.Drawable.abc_list_selector_holo_light;
+			global::Controls.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::ServiceDesk.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::Controls.Droid.Resource.Drawable.abc_popup_background_mtrl_mult = global::ServiceDesk.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::Controls.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::ServiceDesk.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::Controls.Droid.Resource.Drawable.abc_spinner_textfield_background_material = global::ServiceDesk.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::Controls.Droid.Resource.Drawable.abc_switch_thumb_material = global::ServiceDesk.Droid.Resource.Drawable.abc_switch_thumb_material;
+			global::Controls.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha = global::ServiceDesk.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::Controls.Droid.Resource.Drawable.abc_tab_indicator_material = global::ServiceDesk.Droid.Resource.Drawable.abc_tab_indicator_material;
+			global::Controls.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::ServiceDesk.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::Controls.Droid.Resource.Drawable.abc_text_cursor_material = global::ServiceDesk.Droid.Resource.Drawable.abc_text_cursor_material;
+			global::Controls.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::ServiceDesk.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::Controls.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::ServiceDesk.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::Controls.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::ServiceDesk.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::Controls.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::ServiceDesk.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::Controls.Droid.Resource.Drawable.abc_textfield_search_material = global::ServiceDesk.Droid.Resource.Drawable.abc_textfield_search_material;
+			global::Controls.Droid.Resource.Drawable.design_fab_background = global::ServiceDesk.Droid.Resource.Drawable.design_fab_background;
+			global::Controls.Droid.Resource.Drawable.design_snackbar_background = global::ServiceDesk.Droid.Resource.Drawable.design_snackbar_background;
+			global::Controls.Droid.Resource.Drawable.notification_template_icon_bg = global::ServiceDesk.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::Controls.Droid.Resource.Id.action0 = global::ServiceDesk.Droid.Resource.Id.action0;
+			global::Controls.Droid.Resource.Id.action_bar = global::ServiceDesk.Droid.Resource.Id.action_bar;
+			global::Controls.Droid.Resource.Id.action_bar_activity_content = global::ServiceDesk.Droid.Resource.Id.action_bar_activity_content;
+			global::Controls.Droid.Resource.Id.action_bar_container = global::ServiceDesk.Droid.Resource.Id.action_bar_container;
+			global::Controls.Droid.Resource.Id.action_bar_root = global::ServiceDesk.Droid.Resource.Id.action_bar_root;
+			global::Controls.Droid.Resource.Id.action_bar_spinner = global::ServiceDesk.Droid.Resource.Id.action_bar_spinner;
+			global::Controls.Droid.Resource.Id.action_bar_subtitle = global::ServiceDesk.Droid.Resource.Id.action_bar_subtitle;
+			global::Controls.Droid.Resource.Id.action_bar_title = global::ServiceDesk.Droid.Resource.Id.action_bar_title;
+			global::Controls.Droid.Resource.Id.action_context_bar = global::ServiceDesk.Droid.Resource.Id.action_context_bar;
+			global::Controls.Droid.Resource.Id.action_divider = global::ServiceDesk.Droid.Resource.Id.action_divider;
+			global::Controls.Droid.Resource.Id.action_menu_divider = global::ServiceDesk.Droid.Resource.Id.action_menu_divider;
+			global::Controls.Droid.Resource.Id.action_menu_presenter = global::ServiceDesk.Droid.Resource.Id.action_menu_presenter;
+			global::Controls.Droid.Resource.Id.action_mode_bar = global::ServiceDesk.Droid.Resource.Id.action_mode_bar;
+			global::Controls.Droid.Resource.Id.action_mode_bar_stub = global::ServiceDesk.Droid.Resource.Id.action_mode_bar_stub;
+			global::Controls.Droid.Resource.Id.action_mode_close_button = global::ServiceDesk.Droid.Resource.Id.action_mode_close_button;
+			global::Controls.Droid.Resource.Id.activity_chooser_view_content = global::ServiceDesk.Droid.Resource.Id.activity_chooser_view_content;
+			global::Controls.Droid.Resource.Id.alertTitle = global::ServiceDesk.Droid.Resource.Id.alertTitle;
+			global::Controls.Droid.Resource.Id.bottom = global::ServiceDesk.Droid.Resource.Id.bottom;
+			global::Controls.Droid.Resource.Id.buttonPanel = global::ServiceDesk.Droid.Resource.Id.buttonPanel;
+			global::Controls.Droid.Resource.Id.cancel_action = global::ServiceDesk.Droid.Resource.Id.cancel_action;
+			global::Controls.Droid.Resource.Id.center = global::ServiceDesk.Droid.Resource.Id.center;
+			global::Controls.Droid.Resource.Id.checkbox = global::ServiceDesk.Droid.Resource.Id.checkbox;
+			global::Controls.Droid.Resource.Id.chronometer = global::ServiceDesk.Droid.Resource.Id.chronometer;
+			global::Controls.Droid.Resource.Id.contentPanel = global::ServiceDesk.Droid.Resource.Id.contentPanel;
+			global::Controls.Droid.Resource.Id.custom = global::ServiceDesk.Droid.Resource.Id.custom;
+			global::Controls.Droid.Resource.Id.customPanel = global::ServiceDesk.Droid.Resource.Id.customPanel;
+			global::Controls.Droid.Resource.Id.decor_content_parent = global::ServiceDesk.Droid.Resource.Id.decor_content_parent;
+			global::Controls.Droid.Resource.Id.default_activity_button = global::ServiceDesk.Droid.Resource.Id.default_activity_button;
+			global::Controls.Droid.Resource.Id.edit_query = global::ServiceDesk.Droid.Resource.Id.edit_query;
+			global::Controls.Droid.Resource.Id.end = global::ServiceDesk.Droid.Resource.Id.end;
+			global::Controls.Droid.Resource.Id.end_padder = global::ServiceDesk.Droid.Resource.Id.end_padder;
+			global::Controls.Droid.Resource.Id.expand_activities_button = global::ServiceDesk.Droid.Resource.Id.expand_activities_button;
+			global::Controls.Droid.Resource.Id.expanded_menu = global::ServiceDesk.Droid.Resource.Id.expanded_menu;
+			global::Controls.Droid.Resource.Id.fill = global::ServiceDesk.Droid.Resource.Id.fill;
+			global::Controls.Droid.Resource.Id.@fixed = global::ServiceDesk.Droid.Resource.Id.@fixed;
+			global::Controls.Droid.Resource.Id.home = global::ServiceDesk.Droid.Resource.Id.home;
+			global::Controls.Droid.Resource.Id.icon = global::ServiceDesk.Droid.Resource.Id.icon;
+			global::Controls.Droid.Resource.Id.image = global::ServiceDesk.Droid.Resource.Id.image;
+			global::Controls.Droid.Resource.Id.info = global::ServiceDesk.Droid.Resource.Id.info;
+			global::Controls.Droid.Resource.Id.left = global::ServiceDesk.Droid.Resource.Id.left;
+			global::Controls.Droid.Resource.Id.line1 = global::ServiceDesk.Droid.Resource.Id.line1;
+			global::Controls.Droid.Resource.Id.line3 = global::ServiceDesk.Droid.Resource.Id.line3;
+			global::Controls.Droid.Resource.Id.listMode = global::ServiceDesk.Droid.Resource.Id.listMode;
+			global::Controls.Droid.Resource.Id.list_item = global::ServiceDesk.Droid.Resource.Id.list_item;
+			global::Controls.Droid.Resource.Id.media_actions = global::ServiceDesk.Droid.Resource.Id.media_actions;
+			global::Controls.Droid.Resource.Id.mini = global::ServiceDesk.Droid.Resource.Id.mini;
+			global::Controls.Droid.Resource.Id.multiply = global::ServiceDesk.Droid.Resource.Id.multiply;
+			global::Controls.Droid.Resource.Id.none = global::ServiceDesk.Droid.Resource.Id.none;
+			global::Controls.Droid.Resource.Id.normal = global::ServiceDesk.Droid.Resource.Id.normal;
+			global::Controls.Droid.Resource.Id.parallax = global::ServiceDesk.Droid.Resource.Id.parallax;
+			global::Controls.Droid.Resource.Id.parentPanel = global::ServiceDesk.Droid.Resource.Id.parentPanel;
+			global::Controls.Droid.Resource.Id.pin = global::ServiceDesk.Droid.Resource.Id.pin;
+			global::Controls.Droid.Resource.Id.progress_circular = global::ServiceDesk.Droid.Resource.Id.progress_circular;
+			global::Controls.Droid.Resource.Id.progress_horizontal = global::ServiceDesk.Droid.Resource.Id.progress_horizontal;
+			global::Controls.Droid.Resource.Id.radio = global::ServiceDesk.Droid.Resource.Id.radio;
+			global::Controls.Droid.Resource.Id.right = global::ServiceDesk.Droid.Resource.Id.right;
+			global::Controls.Droid.Resource.Id.screen = global::ServiceDesk.Droid.Resource.Id.screen;
+			global::Controls.Droid.Resource.Id.scrollView = global::ServiceDesk.Droid.Resource.Id.scrollView;
+			global::Controls.Droid.Resource.Id.scrollable = global::ServiceDesk.Droid.Resource.Id.scrollable;
+			global::Controls.Droid.Resource.Id.search_badge = global::ServiceDesk.Droid.Resource.Id.search_badge;
+			global::Controls.Droid.Resource.Id.search_bar = global::ServiceDesk.Droid.Resource.Id.search_bar;
+			global::Controls.Droid.Resource.Id.search_button = global::ServiceDesk.Droid.Resource.Id.search_button;
+			global::Controls.Droid.Resource.Id.search_close_btn = global::ServiceDesk.Droid.Resource.Id.search_close_btn;
+			global::Controls.Droid.Resource.Id.search_edit_frame = global::ServiceDesk.Droid.Resource.Id.search_edit_frame;
+			global::Controls.Droid.Resource.Id.search_go_btn = global::ServiceDesk.Droid.Resource.Id.search_go_btn;
+			global::Controls.Droid.Resource.Id.search_mag_icon = global::ServiceDesk.Droid.Resource.Id.search_mag_icon;
+			global::Controls.Droid.Resource.Id.search_plate = global::ServiceDesk.Droid.Resource.Id.search_plate;
+			global::Controls.Droid.Resource.Id.search_src_text = global::ServiceDesk.Droid.Resource.Id.search_src_text;
+			global::Controls.Droid.Resource.Id.search_voice_btn = global::ServiceDesk.Droid.Resource.Id.search_voice_btn;
+			global::Controls.Droid.Resource.Id.select_dialog_listview = global::ServiceDesk.Droid.Resource.Id.select_dialog_listview;
+			global::Controls.Droid.Resource.Id.shortcut = global::ServiceDesk.Droid.Resource.Id.shortcut;
+			global::Controls.Droid.Resource.Id.snackbar_action = global::ServiceDesk.Droid.Resource.Id.snackbar_action;
+			global::Controls.Droid.Resource.Id.snackbar_text = global::ServiceDesk.Droid.Resource.Id.snackbar_text;
+			global::Controls.Droid.Resource.Id.split_action_bar = global::ServiceDesk.Droid.Resource.Id.split_action_bar;
+			global::Controls.Droid.Resource.Id.src_atop = global::ServiceDesk.Droid.Resource.Id.src_atop;
+			global::Controls.Droid.Resource.Id.src_in = global::ServiceDesk.Droid.Resource.Id.src_in;
+			global::Controls.Droid.Resource.Id.src_over = global::ServiceDesk.Droid.Resource.Id.src_over;
+			global::Controls.Droid.Resource.Id.start = global::ServiceDesk.Droid.Resource.Id.start;
+			global::Controls.Droid.Resource.Id.status_bar_latest_event_content = global::ServiceDesk.Droid.Resource.Id.status_bar_latest_event_content;
+			global::Controls.Droid.Resource.Id.submit_area = global::ServiceDesk.Droid.Resource.Id.submit_area;
+			global::Controls.Droid.Resource.Id.tabMode = global::ServiceDesk.Droid.Resource.Id.tabMode;
+			global::Controls.Droid.Resource.Id.text = global::ServiceDesk.Droid.Resource.Id.text;
+			global::Controls.Droid.Resource.Id.text2 = global::ServiceDesk.Droid.Resource.Id.text2;
+			global::Controls.Droid.Resource.Id.textSpacerNoButtons = global::ServiceDesk.Droid.Resource.Id.textSpacerNoButtons;
+			global::Controls.Droid.Resource.Id.time = global::ServiceDesk.Droid.Resource.Id.time;
+			global::Controls.Droid.Resource.Id.title = global::ServiceDesk.Droid.Resource.Id.title;
+			global::Controls.Droid.Resource.Id.title_template = global::ServiceDesk.Droid.Resource.Id.title_template;
+			global::Controls.Droid.Resource.Id.top = global::ServiceDesk.Droid.Resource.Id.top;
+			global::Controls.Droid.Resource.Id.topPanel = global::ServiceDesk.Droid.Resource.Id.topPanel;
+			global::Controls.Droid.Resource.Id.up = global::ServiceDesk.Droid.Resource.Id.up;
+			global::Controls.Droid.Resource.Id.view_offset_helper = global::ServiceDesk.Droid.Resource.Id.view_offset_helper;
+			global::Controls.Droid.Resource.Id.wrap_content = global::ServiceDesk.Droid.Resource.Id.wrap_content;
+			global::Controls.Droid.Resource.Integer.abc_config_activityDefaultDur = global::ServiceDesk.Droid.Resource.Integer.abc_config_activityDefaultDur;
+			global::Controls.Droid.Resource.Integer.abc_config_activityShortDur = global::ServiceDesk.Droid.Resource.Integer.abc_config_activityShortDur;
+			global::Controls.Droid.Resource.Integer.cancel_button_image_alpha = global::ServiceDesk.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::Controls.Droid.Resource.Integer.design_snackbar_text_max_lines = global::ServiceDesk.Droid.Resource.Integer.design_snackbar_text_max_lines;
+			global::Controls.Droid.Resource.Integer.status_bar_notification_info_maxnum = global::ServiceDesk.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Controls.Droid.Resource.Layout.abc_action_bar_title_item = global::ServiceDesk.Droid.Resource.Layout.abc_action_bar_title_item;
+			global::Controls.Droid.Resource.Layout.abc_action_bar_up_container = global::ServiceDesk.Droid.Resource.Layout.abc_action_bar_up_container;
+			global::Controls.Droid.Resource.Layout.abc_action_menu_item_layout = global::ServiceDesk.Droid.Resource.Layout.abc_action_menu_item_layout;
+			global::Controls.Droid.Resource.Layout.abc_action_menu_layout = global::ServiceDesk.Droid.Resource.Layout.abc_action_menu_layout;
+			global::Controls.Droid.Resource.Layout.abc_action_mode_bar = global::ServiceDesk.Droid.Resource.Layout.abc_action_mode_bar;
+			global::Controls.Droid.Resource.Layout.abc_action_mode_close_item_material = global::ServiceDesk.Droid.Resource.Layout.abc_action_mode_close_item_material;
+			global::Controls.Droid.Resource.Layout.abc_activity_chooser_view = global::ServiceDesk.Droid.Resource.Layout.abc_activity_chooser_view;
+			global::Controls.Droid.Resource.Layout.abc_activity_chooser_view_list_item = global::ServiceDesk.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::Controls.Droid.Resource.Layout.abc_alert_dialog_material = global::ServiceDesk.Droid.Resource.Layout.abc_alert_dialog_material;
+			global::Controls.Droid.Resource.Layout.abc_dialog_title_material = global::ServiceDesk.Droid.Resource.Layout.abc_dialog_title_material;
+			global::Controls.Droid.Resource.Layout.abc_expanded_menu_layout = global::ServiceDesk.Droid.Resource.Layout.abc_expanded_menu_layout;
+			global::Controls.Droid.Resource.Layout.abc_list_menu_item_checkbox = global::ServiceDesk.Droid.Resource.Layout.abc_list_menu_item_checkbox;
+			global::Controls.Droid.Resource.Layout.abc_list_menu_item_icon = global::ServiceDesk.Droid.Resource.Layout.abc_list_menu_item_icon;
+			global::Controls.Droid.Resource.Layout.abc_list_menu_item_layout = global::ServiceDesk.Droid.Resource.Layout.abc_list_menu_item_layout;
+			global::Controls.Droid.Resource.Layout.abc_list_menu_item_radio = global::ServiceDesk.Droid.Resource.Layout.abc_list_menu_item_radio;
+			global::Controls.Droid.Resource.Layout.abc_popup_menu_item_layout = global::ServiceDesk.Droid.Resource.Layout.abc_popup_menu_item_layout;
+			global::Controls.Droid.Resource.Layout.abc_screen_content_include = global::ServiceDesk.Droid.Resource.Layout.abc_screen_content_include;
+			global::Controls.Droid.Resource.Layout.abc_screen_simple = global::ServiceDesk.Droid.Resource.Layout.abc_screen_simple;
+			global::Controls.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode = global::ServiceDesk.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::Controls.Droid.Resource.Layout.abc_screen_toolbar = global::ServiceDesk.Droid.Resource.Layout.abc_screen_toolbar;
+			global::Controls.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line = global::ServiceDesk.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::Controls.Droid.Resource.Layout.abc_search_view = global::ServiceDesk.Droid.Resource.Layout.abc_search_view;
+			global::Controls.Droid.Resource.Layout.abc_select_dialog_material = global::ServiceDesk.Droid.Resource.Layout.abc_select_dialog_material;
+			global::Controls.Droid.Resource.Layout.design_layout_snackbar = global::ServiceDesk.Droid.Resource.Layout.design_layout_snackbar;
+			global::Controls.Droid.Resource.Layout.design_layout_snackbar_include = global::ServiceDesk.Droid.Resource.Layout.design_layout_snackbar_include;
+			global::Controls.Droid.Resource.Layout.design_layout_tab_icon = global::ServiceDesk.Droid.Resource.Layout.design_layout_tab_icon;
+			global::Controls.Droid.Resource.Layout.design_layout_tab_text = global::ServiceDesk.Droid.Resource.Layout.design_layout_tab_text;
+			global::Controls.Droid.Resource.Layout.design_navigation_item = global::ServiceDesk.Droid.Resource.Layout.design_navigation_item;
+			global::Controls.Droid.Resource.Layout.design_navigation_item_header = global::ServiceDesk.Droid.Resource.Layout.design_navigation_item_header;
+			global::Controls.Droid.Resource.Layout.design_navigation_item_separator = global::ServiceDesk.Droid.Resource.Layout.design_navigation_item_separator;
+			global::Controls.Droid.Resource.Layout.design_navigation_item_subheader = global::ServiceDesk.Droid.Resource.Layout.design_navigation_item_subheader;
+			global::Controls.Droid.Resource.Layout.design_navigation_menu = global::ServiceDesk.Droid.Resource.Layout.design_navigation_menu;
+			global::Controls.Droid.Resource.Layout.notification_media_action = global::ServiceDesk.Droid.Resource.Layout.notification_media_action;
+			global::Controls.Droid.Resource.Layout.notification_media_cancel_action = global::ServiceDesk.Droid.Resource.Layout.notification_media_cancel_action;
+			global::Controls.Droid.Resource.Layout.notification_template_big_media = global::ServiceDesk.Droid.Resource.Layout.notification_template_big_media;
+			global::Controls.Droid.Resource.Layout.notification_template_big_media_narrow = global::ServiceDesk.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::Controls.Droid.Resource.Layout.notification_template_media = global::ServiceDesk.Droid.Resource.Layout.notification_template_media;
+			global::Controls.Droid.Resource.Layout.notification_template_part_chronometer = global::ServiceDesk.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::Controls.Droid.Resource.Layout.notification_template_part_time = global::ServiceDesk.Droid.Resource.Layout.notification_template_part_time;
+			global::Controls.Droid.Resource.Layout.select_dialog_item_material = global::ServiceDesk.Droid.Resource.Layout.select_dialog_item_material;
+			global::Controls.Droid.Resource.Layout.select_dialog_multichoice_material = global::ServiceDesk.Droid.Resource.Layout.select_dialog_multichoice_material;
+			global::Controls.Droid.Resource.Layout.select_dialog_singlechoice_material = global::ServiceDesk.Droid.Resource.Layout.select_dialog_singlechoice_material;
+			global::Controls.Droid.Resource.Layout.support_simple_spinner_dropdown_item = global::ServiceDesk.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::Controls.Droid.Resource.String.ApplicationName = global::ServiceDesk.Droid.Resource.String.ApplicationName;
+			global::Controls.Droid.Resource.String.Hello = global::ServiceDesk.Droid.Resource.String.Hello;
+			global::Controls.Droid.Resource.String.abc_action_bar_home_description = global::ServiceDesk.Droid.Resource.String.abc_action_bar_home_description;
+			global::Controls.Droid.Resource.String.abc_action_bar_up_description = global::ServiceDesk.Droid.Resource.String.abc_action_bar_up_description;
+			global::Controls.Droid.Resource.String.abc_action_menu_overflow_description = global::ServiceDesk.Droid.Resource.String.abc_action_menu_overflow_description;
+			global::Controls.Droid.Resource.String.abc_action_mode_done = global::ServiceDesk.Droid.Resource.String.abc_action_mode_done;
+			global::Controls.Droid.Resource.String.abc_activity_chooser_view_see_all = global::ServiceDesk.Droid.Resource.String.abc_activity_chooser_view_see_all;
+			global::Controls.Droid.Resource.String.abc_activitychooserview_choose_application = global::ServiceDesk.Droid.Resource.String.abc_activitychooserview_choose_application;
+			global::Controls.Droid.Resource.String.abc_search_hint = global::ServiceDesk.Droid.Resource.String.abc_search_hint;
+			global::Controls.Droid.Resource.String.abc_searchview_description_clear = global::ServiceDesk.Droid.Resource.String.abc_searchview_description_clear;
+			global::Controls.Droid.Resource.String.abc_searchview_description_query = global::ServiceDesk.Droid.Resource.String.abc_searchview_description_query;
+			global::Controls.Droid.Resource.String.abc_searchview_description_search = global::ServiceDesk.Droid.Resource.String.abc_searchview_description_search;
+			global::Controls.Droid.Resource.String.abc_searchview_description_submit = global::ServiceDesk.Droid.Resource.String.abc_searchview_description_submit;
+			global::Controls.Droid.Resource.String.abc_searchview_description_voice = global::ServiceDesk.Droid.Resource.String.abc_searchview_description_voice;
+			global::Controls.Droid.Resource.String.abc_shareactionprovider_share_with = global::ServiceDesk.Droid.Resource.String.abc_shareactionprovider_share_with;
+			global::Controls.Droid.Resource.String.abc_shareactionprovider_share_with_application = global::ServiceDesk.Droid.Resource.String.abc_shareactionprovider_share_with_application;
+			global::Controls.Droid.Resource.String.abc_toolbar_collapse_description = global::ServiceDesk.Droid.Resource.String.abc_toolbar_collapse_description;
+			global::Controls.Droid.Resource.String.appbar_scrolling_view_behavior = global::ServiceDesk.Droid.Resource.String.appbar_scrolling_view_behavior;
+			global::Controls.Droid.Resource.String.mr_system_route_name = global::ServiceDesk.Droid.Resource.String.mr_system_route_name;
+			global::Controls.Droid.Resource.String.mr_user_route_category_name = global::ServiceDesk.Droid.Resource.String.mr_user_route_category_name;
+			global::Controls.Droid.Resource.String.status_bar_notification_info_overflow = global::ServiceDesk.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::Controls.Droid.Resource.Style.AlertDialog_AppCompat = global::ServiceDesk.Droid.Resource.Style.AlertDialog_AppCompat;
+			global::Controls.Droid.Resource.Style.AlertDialog_AppCompat_Light = global::ServiceDesk.Droid.Resource.Style.AlertDialog_AppCompat_Light;
+			global::Controls.Droid.Resource.Style.Animation_AppCompat_Dialog = global::ServiceDesk.Droid.Resource.Style.Animation_AppCompat_Dialog;
+			global::Controls.Droid.Resource.Style.Animation_AppCompat_DropDownUp = global::ServiceDesk.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::Controls.Droid.Resource.Style.Base_AlertDialog_AppCompat = global::ServiceDesk.Droid.Resource.Style.Base_AlertDialog_AppCompat;
+			global::Controls.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light = global::ServiceDesk.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::Controls.Droid.Resource.Style.Base_Animation_AppCompat_Dialog = global::ServiceDesk.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::Controls.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::ServiceDesk.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::Controls.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat = global::ServiceDesk.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::Controls.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::ServiceDesk.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::Controls.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Controls.Droid.Resource.Style.Base_Theme_AppCompat = global::ServiceDesk.Droid.Resource.Style.Base_Theme_AppCompat;
+			global::Controls.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::ServiceDesk.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::Controls.Droid.Resource.Style.Base_Theme_AppCompat_Dialog = global::ServiceDesk.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::Controls.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::ServiceDesk.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::Controls.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::ServiceDesk.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::Controls.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::ServiceDesk.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::Controls.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::ServiceDesk.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::Controls.Droid.Resource.Style.Base_Theme_AppCompat_Light = global::ServiceDesk.Droid.Resource.Style.Base_Theme_AppCompat_Light;
+			global::Controls.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::ServiceDesk.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::Controls.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::ServiceDesk.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::Controls.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::ServiceDesk.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::Controls.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::ServiceDesk.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::Controls.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::ServiceDesk.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Controls.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::ServiceDesk.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::Controls.Droid.Resource.Style.Base_ThemeOverlay_AppCompat = global::ServiceDesk.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::Controls.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::ServiceDesk.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::Controls.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::ServiceDesk.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::Controls.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::ServiceDesk.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Controls.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::ServiceDesk.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::Controls.Droid.Resource.Style.Base_V11_Theme_AppCompat_Dialog = global::ServiceDesk.Droid.Resource.Style.Base_V11_Theme_AppCompat_Dialog;
+			global::Controls.Droid.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog = global::ServiceDesk.Droid.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog;
+			global::Controls.Droid.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView = global::ServiceDesk.Droid.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView;
+			global::Controls.Droid.Resource.Style.Base_V12_Widget_AppCompat_EditText = global::ServiceDesk.Droid.Resource.Style.Base_V12_Widget_AppCompat_EditText;
+			global::Controls.Droid.Resource.Style.Base_V21_Theme_AppCompat = global::ServiceDesk.Droid.Resource.Style.Base_V21_Theme_AppCompat;
+			global::Controls.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::ServiceDesk.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::Controls.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light = global::ServiceDesk.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::Controls.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::ServiceDesk.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::Controls.Droid.Resource.Style.Base_V22_Theme_AppCompat = global::ServiceDesk.Droid.Resource.Style.Base_V22_Theme_AppCompat;
+			global::Controls.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light = global::ServiceDesk.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::Controls.Droid.Resource.Style.Base_V23_Theme_AppCompat = global::ServiceDesk.Droid.Resource.Style.Base_V23_Theme_AppCompat;
+			global::Controls.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light = global::ServiceDesk.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::Controls.Droid.Resource.Style.Base_V7_Theme_AppCompat = global::ServiceDesk.Droid.Resource.Style.Base_V7_Theme_AppCompat;
+			global::Controls.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::ServiceDesk.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::Controls.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light = global::ServiceDesk.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::Controls.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::ServiceDesk.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::Controls.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::ServiceDesk.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::Controls.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::ServiceDesk.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_Button = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_Button;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_EditText = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_ListView = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_SearchView = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_Spinner = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::Controls.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Controls.Droid.Resource.Style.Base_Widget_Design_TabLayout = global::ServiceDesk.Droid.Resource.Style.Base_Widget_Design_TabLayout;
+			global::Controls.Droid.Resource.Style.CardView = global::ServiceDesk.Droid.Resource.Style.CardView;
+			global::Controls.Droid.Resource.Style.CardView_Dark = global::ServiceDesk.Droid.Resource.Style.CardView_Dark;
+			global::Controls.Droid.Resource.Style.CardView_Light = global::ServiceDesk.Droid.Resource.Style.CardView_Light;
+			global::Controls.Droid.Resource.Style.Platform_AppCompat = global::ServiceDesk.Droid.Resource.Style.Platform_AppCompat;
+			global::Controls.Droid.Resource.Style.Platform_AppCompat_Light = global::ServiceDesk.Droid.Resource.Style.Platform_AppCompat_Light;
+			global::Controls.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat = global::ServiceDesk.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::Controls.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::ServiceDesk.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::Controls.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::ServiceDesk.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::Controls.Droid.Resource.Style.Platform_V11_AppCompat = global::ServiceDesk.Droid.Resource.Style.Platform_V11_AppCompat;
+			global::Controls.Droid.Resource.Style.Platform_V11_AppCompat_Light = global::ServiceDesk.Droid.Resource.Style.Platform_V11_AppCompat_Light;
+			global::Controls.Droid.Resource.Style.Platform_V14_AppCompat = global::ServiceDesk.Droid.Resource.Style.Platform_V14_AppCompat;
+			global::Controls.Droid.Resource.Style.Platform_V14_AppCompat_Light = global::ServiceDesk.Droid.Resource.Style.Platform_V14_AppCompat_Light;
+			global::Controls.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner = global::ServiceDesk.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::Controls.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::ServiceDesk.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::Controls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::ServiceDesk.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::Controls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::ServiceDesk.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::Controls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::ServiceDesk.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::Controls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::ServiceDesk.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::Controls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::ServiceDesk.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::Controls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::ServiceDesk.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::Controls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::ServiceDesk.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::Controls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::ServiceDesk.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::Controls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::ServiceDesk.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::Controls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::ServiceDesk.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::Controls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::ServiceDesk.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Body1 = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Body2 = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Button = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Button;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Caption = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Display1 = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Display2 = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Display3 = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Display4 = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Headline = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Inverse = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Large = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Large;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Medium = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Menu = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Small = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Small;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Subhead = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Title = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Title;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::Controls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Controls.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::ServiceDesk.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
+			global::Controls.Droid.Resource.Style.TextAppearance_Design_Error = global::ServiceDesk.Droid.Resource.Style.TextAppearance_Design_Error;
+			global::Controls.Droid.Resource.Style.TextAppearance_Design_Hint = global::ServiceDesk.Droid.Resource.Style.TextAppearance_Design_Hint;
+			global::Controls.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message = global::ServiceDesk.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message;
+			global::Controls.Droid.Resource.Style.TextAppearance_Design_Tab = global::ServiceDesk.Droid.Resource.Style.TextAppearance_Design_Tab;
+			global::Controls.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::ServiceDesk.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::Controls.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::ServiceDesk.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::Controls.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::ServiceDesk.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Controls.Droid.Resource.Style.Theme_AppCompat = global::ServiceDesk.Droid.Resource.Style.Theme_AppCompat;
+			global::Controls.Droid.Resource.Style.Theme_AppCompat_CompactMenu = global::ServiceDesk.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::Controls.Droid.Resource.Style.Theme_AppCompat_Dialog = global::ServiceDesk.Droid.Resource.Style.Theme_AppCompat_Dialog;
+			global::Controls.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert = global::ServiceDesk.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::Controls.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::ServiceDesk.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::Controls.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::ServiceDesk.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::Controls.Droid.Resource.Style.Theme_AppCompat_Light = global::ServiceDesk.Droid.Resource.Style.Theme_AppCompat_Light;
+			global::Controls.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::ServiceDesk.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::Controls.Droid.Resource.Style.Theme_AppCompat_Light_Dialog = global::ServiceDesk.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::Controls.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::ServiceDesk.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::Controls.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::ServiceDesk.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Controls.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::ServiceDesk.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::Controls.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::ServiceDesk.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::Controls.Droid.Resource.Style.Theme_AppCompat_NoActionBar = global::ServiceDesk.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::Controls.Droid.Resource.Style.Theme_MediaRouter = global::ServiceDesk.Droid.Resource.Style.Theme_MediaRouter;
+			global::Controls.Droid.Resource.Style.Theme_MediaRouter_Light = global::ServiceDesk.Droid.Resource.Style.Theme_MediaRouter_Light;
+			global::Controls.Droid.Resource.Style.ThemeOverlay_AppCompat = global::ServiceDesk.Droid.Resource.Style.ThemeOverlay_AppCompat;
+			global::Controls.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::ServiceDesk.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::Controls.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark = global::ServiceDesk.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::Controls.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::ServiceDesk.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Controls.Droid.Resource.Style.ThemeOverlay_AppCompat_Light = global::ServiceDesk.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_ActionBar = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ActionBar;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_ActionButton = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ActionButton;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_ActionMode = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ActionMode;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_Button = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Button;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_Button_Borderless = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_Button_Colored = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_Button_Small = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Button_Small;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_ButtonBar = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_EditText = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_EditText;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_Light_SearchView = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_ListView = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ListView;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_ListView_Menu = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_PopupMenu = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_PopupWindow = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_ProgressBar = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_RatingBar = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_RatingBar;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_SearchView = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_SearchView;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_Spinner = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Spinner;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_Toolbar = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Toolbar;
+			global::Controls.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Controls.Droid.Resource.Style.Widget_Design_AppBarLayout = global::ServiceDesk.Droid.Resource.Style.Widget_Design_AppBarLayout;
+			global::Controls.Droid.Resource.Style.Widget_Design_CollapsingToolbar = global::ServiceDesk.Droid.Resource.Style.Widget_Design_CollapsingToolbar;
+			global::Controls.Droid.Resource.Style.Widget_Design_CoordinatorLayout = global::ServiceDesk.Droid.Resource.Style.Widget_Design_CoordinatorLayout;
+			global::Controls.Droid.Resource.Style.Widget_Design_FloatingActionButton = global::ServiceDesk.Droid.Resource.Style.Widget_Design_FloatingActionButton;
+			global::Controls.Droid.Resource.Style.Widget_Design_NavigationView = global::ServiceDesk.Droid.Resource.Style.Widget_Design_NavigationView;
+			global::Controls.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::ServiceDesk.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
+			global::Controls.Droid.Resource.Style.Widget_Design_Snackbar = global::ServiceDesk.Droid.Resource.Style.Widget_Design_Snackbar;
+			global::Controls.Droid.Resource.Style.Widget_Design_TabLayout = global::ServiceDesk.Droid.Resource.Style.Widget_Design_TabLayout;
+			global::Controls.Droid.Resource.Style.Widget_Design_TextInputLayout = global::ServiceDesk.Droid.Resource.Style.Widget_Design_TextInputLayout;
+			global::Controls.Droid.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton = global::ServiceDesk.Droid.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton;
+			global::Controls.Droid.Resource.Style.Widget_MediaRouter_MediaRouteButton = global::ServiceDesk.Droid.Resource.Style.Widget_MediaRouter_MediaRouteButton;
+			global::Controls.Droid.Resource.Styleable.ActionBar = global::ServiceDesk.Droid.Resource.Styleable.ActionBar;
+			global::Controls.Droid.Resource.Styleable.ActionBar_background = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_background;
+			global::Controls.Droid.Resource.Styleable.ActionBar_backgroundSplit = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_backgroundSplit;
+			global::Controls.Droid.Resource.Styleable.ActionBar_backgroundStacked = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_backgroundStacked;
+			global::Controls.Droid.Resource.Styleable.ActionBar_contentInsetEnd = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::Controls.Droid.Resource.Styleable.ActionBar_contentInsetLeft = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::Controls.Droid.Resource.Styleable.ActionBar_contentInsetRight = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_contentInsetRight;
+			global::Controls.Droid.Resource.Styleable.ActionBar_contentInsetStart = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_contentInsetStart;
+			global::Controls.Droid.Resource.Styleable.ActionBar_customNavigationLayout = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::Controls.Droid.Resource.Styleable.ActionBar_displayOptions = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_displayOptions;
+			global::Controls.Droid.Resource.Styleable.ActionBar_divider = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_divider;
+			global::Controls.Droid.Resource.Styleable.ActionBar_elevation = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_elevation;
+			global::Controls.Droid.Resource.Styleable.ActionBar_height = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_height;
+			global::Controls.Droid.Resource.Styleable.ActionBar_hideOnContentScroll = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::Controls.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::Controls.Droid.Resource.Styleable.ActionBar_homeLayout = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_homeLayout;
+			global::Controls.Droid.Resource.Styleable.ActionBar_icon = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_icon;
+			global::Controls.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::Controls.Droid.Resource.Styleable.ActionBar_itemPadding = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_itemPadding;
+			global::Controls.Droid.Resource.Styleable.ActionBar_logo = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_logo;
+			global::Controls.Droid.Resource.Styleable.ActionBar_navigationMode = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_navigationMode;
+			global::Controls.Droid.Resource.Styleable.ActionBar_popupTheme = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_popupTheme;
+			global::Controls.Droid.Resource.Styleable.ActionBar_progressBarPadding = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_progressBarPadding;
+			global::Controls.Droid.Resource.Styleable.ActionBar_progressBarStyle = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_progressBarStyle;
+			global::Controls.Droid.Resource.Styleable.ActionBar_subtitle = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_subtitle;
+			global::Controls.Droid.Resource.Styleable.ActionBar_subtitleTextStyle = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::Controls.Droid.Resource.Styleable.ActionBar_title = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_title;
+			global::Controls.Droid.Resource.Styleable.ActionBar_titleTextStyle = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_titleTextStyle;
+			global::Controls.Droid.Resource.Styleable.ActionBarLayout = global::ServiceDesk.Droid.Resource.Styleable.ActionBarLayout;
+			global::Controls.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::ServiceDesk.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::Controls.Droid.Resource.Styleable.ActionMenuItemView = global::ServiceDesk.Droid.Resource.Styleable.ActionMenuItemView;
+			global::Controls.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth = global::ServiceDesk.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::Controls.Droid.Resource.Styleable.ActionMode = global::ServiceDesk.Droid.Resource.Styleable.ActionMode;
+			global::Controls.Droid.Resource.Styleable.ActionMode_background = global::ServiceDesk.Droid.Resource.Styleable.ActionMode_background;
+			global::Controls.Droid.Resource.Styleable.ActionMode_backgroundSplit = global::ServiceDesk.Droid.Resource.Styleable.ActionMode_backgroundSplit;
+			global::Controls.Droid.Resource.Styleable.ActionMode_closeItemLayout = global::ServiceDesk.Droid.Resource.Styleable.ActionMode_closeItemLayout;
+			global::Controls.Droid.Resource.Styleable.ActionMode_height = global::ServiceDesk.Droid.Resource.Styleable.ActionMode_height;
+			global::Controls.Droid.Resource.Styleable.ActionMode_subtitleTextStyle = global::ServiceDesk.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::Controls.Droid.Resource.Styleable.ActionMode_titleTextStyle = global::ServiceDesk.Droid.Resource.Styleable.ActionMode_titleTextStyle;
+			global::Controls.Droid.Resource.Styleable.ActivityChooserView = global::ServiceDesk.Droid.Resource.Styleable.ActivityChooserView;
+			global::Controls.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::ServiceDesk.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::Controls.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount = global::ServiceDesk.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::Controls.Droid.Resource.Styleable.AlertDialog = global::ServiceDesk.Droid.Resource.Styleable.AlertDialog;
+			global::Controls.Droid.Resource.Styleable.AlertDialog_android_layout = global::ServiceDesk.Droid.Resource.Styleable.AlertDialog_android_layout;
+			global::Controls.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::ServiceDesk.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::Controls.Droid.Resource.Styleable.AlertDialog_listItemLayout = global::ServiceDesk.Droid.Resource.Styleable.AlertDialog_listItemLayout;
+			global::Controls.Droid.Resource.Styleable.AlertDialog_listLayout = global::ServiceDesk.Droid.Resource.Styleable.AlertDialog_listLayout;
+			global::Controls.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::ServiceDesk.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::Controls.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::ServiceDesk.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::Controls.Droid.Resource.Styleable.AppBarLayout = global::ServiceDesk.Droid.Resource.Styleable.AppBarLayout;
+			global::Controls.Droid.Resource.Styleable.AppBarLayout_android_background = global::ServiceDesk.Droid.Resource.Styleable.AppBarLayout_android_background;
+			global::Controls.Droid.Resource.Styleable.AppBarLayout_elevation = global::ServiceDesk.Droid.Resource.Styleable.AppBarLayout_elevation;
+			global::Controls.Droid.Resource.Styleable.AppBarLayout_expanded = global::ServiceDesk.Droid.Resource.Styleable.AppBarLayout_expanded;
+			global::Controls.Droid.Resource.Styleable.AppCompatTextView = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTextView;
+			global::Controls.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::Controls.Droid.Resource.Styleable.AppCompatTextView_textAllCaps = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::Controls.Droid.Resource.Styleable.CardView = global::ServiceDesk.Droid.Resource.Styleable.CardView;
+			global::Controls.Droid.Resource.Styleable.CardView_cardBackgroundColor = global::ServiceDesk.Droid.Resource.Styleable.CardView_cardBackgroundColor;
+			global::Controls.Droid.Resource.Styleable.CardView_cardCornerRadius = global::ServiceDesk.Droid.Resource.Styleable.CardView_cardCornerRadius;
+			global::Controls.Droid.Resource.Styleable.CardView_cardElevation = global::ServiceDesk.Droid.Resource.Styleable.CardView_cardElevation;
+			global::Controls.Droid.Resource.Styleable.CardView_cardMaxElevation = global::ServiceDesk.Droid.Resource.Styleable.CardView_cardMaxElevation;
+			global::Controls.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap = global::ServiceDesk.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap;
+			global::Controls.Droid.Resource.Styleable.CardView_cardUseCompatPadding = global::ServiceDesk.Droid.Resource.Styleable.CardView_cardUseCompatPadding;
+			global::Controls.Droid.Resource.Styleable.CardView_contentPadding = global::ServiceDesk.Droid.Resource.Styleable.CardView_contentPadding;
+			global::Controls.Droid.Resource.Styleable.CardView_contentPaddingBottom = global::ServiceDesk.Droid.Resource.Styleable.CardView_contentPaddingBottom;
+			global::Controls.Droid.Resource.Styleable.CardView_contentPaddingLeft = global::ServiceDesk.Droid.Resource.Styleable.CardView_contentPaddingLeft;
+			global::Controls.Droid.Resource.Styleable.CardView_contentPaddingRight = global::ServiceDesk.Droid.Resource.Styleable.CardView_contentPaddingRight;
+			global::Controls.Droid.Resource.Styleable.CardView_contentPaddingTop = global::ServiceDesk.Droid.Resource.Styleable.CardView_contentPaddingTop;
+			global::Controls.Droid.Resource.Styleable.CollapsingToolbarLayout = global::ServiceDesk.Droid.Resource.Styleable.CollapsingToolbarLayout;
+			global::Controls.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::ServiceDesk.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
+			global::Controls.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::ServiceDesk.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
+			global::Controls.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::ServiceDesk.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
+			global::Controls.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::ServiceDesk.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
+			global::Controls.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::ServiceDesk.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
+			global::Controls.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::ServiceDesk.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
+			global::Controls.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::ServiceDesk.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
+			global::Controls.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::ServiceDesk.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
+			global::Controls.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::ServiceDesk.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
+			global::Controls.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::ServiceDesk.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
+			global::Controls.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::ServiceDesk.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
+			global::Controls.Droid.Resource.Styleable.CollapsingToolbarLayout_title = global::ServiceDesk.Droid.Resource.Styleable.CollapsingToolbarLayout_title;
+			global::Controls.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::ServiceDesk.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
+			global::Controls.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::ServiceDesk.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
+			global::Controls.Droid.Resource.Styleable.CompoundButton = global::ServiceDesk.Droid.Resource.Styleable.CompoundButton;
+			global::Controls.Droid.Resource.Styleable.CompoundButton_android_button = global::ServiceDesk.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::Controls.Droid.Resource.Styleable.CompoundButton_buttonTint = global::ServiceDesk.Droid.Resource.Styleable.CompoundButton_buttonTint;
+			global::Controls.Droid.Resource.Styleable.CompoundButton_buttonTintMode = global::ServiceDesk.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::Controls.Droid.Resource.Styleable.CoordinatorLayout = global::ServiceDesk.Droid.Resource.Styleable.CoordinatorLayout;
+			global::Controls.Droid.Resource.Styleable.CoordinatorLayout_keylines = global::ServiceDesk.Droid.Resource.Styleable.CoordinatorLayout_keylines;
+			global::Controls.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::ServiceDesk.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::Controls.Droid.Resource.Styleable.DrawerArrowToggle = global::ServiceDesk.Droid.Resource.Styleable.DrawerArrowToggle;
+			global::Controls.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::ServiceDesk.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::Controls.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::ServiceDesk.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::Controls.Droid.Resource.Styleable.DrawerArrowToggle_barLength = global::ServiceDesk.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::Controls.Droid.Resource.Styleable.DrawerArrowToggle_color = global::ServiceDesk.Droid.Resource.Styleable.DrawerArrowToggle_color;
+			global::Controls.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize = global::ServiceDesk.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::Controls.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::ServiceDesk.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::Controls.Droid.Resource.Styleable.DrawerArrowToggle_spinBars = global::ServiceDesk.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::Controls.Droid.Resource.Styleable.DrawerArrowToggle_thickness = global::ServiceDesk.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::Controls.Droid.Resource.Styleable.FloatingActionButton = global::ServiceDesk.Droid.Resource.Styleable.FloatingActionButton;
+			global::Controls.Droid.Resource.Styleable.FloatingActionButton_backgroundTint = global::ServiceDesk.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
+			global::Controls.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::ServiceDesk.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
+			global::Controls.Droid.Resource.Styleable.FloatingActionButton_borderWidth = global::ServiceDesk.Droid.Resource.Styleable.FloatingActionButton_borderWidth;
+			global::Controls.Droid.Resource.Styleable.FloatingActionButton_elevation = global::ServiceDesk.Droid.Resource.Styleable.FloatingActionButton_elevation;
+			global::Controls.Droid.Resource.Styleable.FloatingActionButton_fabSize = global::ServiceDesk.Droid.Resource.Styleable.FloatingActionButton_fabSize;
+			global::Controls.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::ServiceDesk.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
+			global::Controls.Droid.Resource.Styleable.FloatingActionButton_rippleColor = global::ServiceDesk.Droid.Resource.Styleable.FloatingActionButton_rippleColor;
+			global::Controls.Droid.Resource.Styleable.LinearLayoutCompat = global::ServiceDesk.Droid.Resource.Styleable.LinearLayoutCompat;
+			global::Controls.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::ServiceDesk.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::Controls.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::ServiceDesk.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::Controls.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity = global::ServiceDesk.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::Controls.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation = global::ServiceDesk.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::Controls.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::ServiceDesk.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::Controls.Droid.Resource.Styleable.LinearLayoutCompat_divider = global::ServiceDesk.Droid.Resource.Styleable.LinearLayoutCompat_divider;
+			global::Controls.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::ServiceDesk.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::Controls.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::ServiceDesk.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::Controls.Droid.Resource.Styleable.LinearLayoutCompat_showDividers = global::ServiceDesk.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::Controls.Droid.Resource.Styleable.LinearLayoutCompat_Layout = global::ServiceDesk.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::Controls.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::ServiceDesk.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::Controls.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::ServiceDesk.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::Controls.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::ServiceDesk.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::Controls.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::ServiceDesk.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::Controls.Droid.Resource.Styleable.ListPopupWindow = global::ServiceDesk.Droid.Resource.Styleable.ListPopupWindow;
+			global::Controls.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::ServiceDesk.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::Controls.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::ServiceDesk.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::Controls.Droid.Resource.Styleable.MediaRouteButton = global::ServiceDesk.Droid.Resource.Styleable.MediaRouteButton;
+			global::Controls.Droid.Resource.Styleable.MediaRouteButton_android_minHeight = global::ServiceDesk.Droid.Resource.Styleable.MediaRouteButton_android_minHeight;
+			global::Controls.Droid.Resource.Styleable.MediaRouteButton_android_minWidth = global::ServiceDesk.Droid.Resource.Styleable.MediaRouteButton_android_minWidth;
+			global::Controls.Droid.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable = global::ServiceDesk.Droid.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable;
+			global::Controls.Droid.Resource.Styleable.MenuGroup = global::ServiceDesk.Droid.Resource.Styleable.MenuGroup;
+			global::Controls.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior = global::ServiceDesk.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::Controls.Droid.Resource.Styleable.MenuGroup_android_enabled = global::ServiceDesk.Droid.Resource.Styleable.MenuGroup_android_enabled;
+			global::Controls.Droid.Resource.Styleable.MenuGroup_android_id = global::ServiceDesk.Droid.Resource.Styleable.MenuGroup_android_id;
+			global::Controls.Droid.Resource.Styleable.MenuGroup_android_menuCategory = global::ServiceDesk.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::Controls.Droid.Resource.Styleable.MenuGroup_android_orderInCategory = global::ServiceDesk.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::Controls.Droid.Resource.Styleable.MenuGroup_android_visible = global::ServiceDesk.Droid.Resource.Styleable.MenuGroup_android_visible;
+			global::Controls.Droid.Resource.Styleable.MenuItem = global::ServiceDesk.Droid.Resource.Styleable.MenuItem;
+			global::Controls.Droid.Resource.Styleable.MenuItem_actionLayout = global::ServiceDesk.Droid.Resource.Styleable.MenuItem_actionLayout;
+			global::Controls.Droid.Resource.Styleable.MenuItem_actionProviderClass = global::ServiceDesk.Droid.Resource.Styleable.MenuItem_actionProviderClass;
+			global::Controls.Droid.Resource.Styleable.MenuItem_actionViewClass = global::ServiceDesk.Droid.Resource.Styleable.MenuItem_actionViewClass;
+			global::Controls.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::ServiceDesk.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::Controls.Droid.Resource.Styleable.MenuItem_android_checkable = global::ServiceDesk.Droid.Resource.Styleable.MenuItem_android_checkable;
+			global::Controls.Droid.Resource.Styleable.MenuItem_android_checked = global::ServiceDesk.Droid.Resource.Styleable.MenuItem_android_checked;
+			global::Controls.Droid.Resource.Styleable.MenuItem_android_enabled = global::ServiceDesk.Droid.Resource.Styleable.MenuItem_android_enabled;
+			global::Controls.Droid.Resource.Styleable.MenuItem_android_icon = global::ServiceDesk.Droid.Resource.Styleable.MenuItem_android_icon;
+			global::Controls.Droid.Resource.Styleable.MenuItem_android_id = global::ServiceDesk.Droid.Resource.Styleable.MenuItem_android_id;
+			global::Controls.Droid.Resource.Styleable.MenuItem_android_menuCategory = global::ServiceDesk.Droid.Resource.Styleable.MenuItem_android_menuCategory;
+			global::Controls.Droid.Resource.Styleable.MenuItem_android_numericShortcut = global::ServiceDesk.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::Controls.Droid.Resource.Styleable.MenuItem_android_onClick = global::ServiceDesk.Droid.Resource.Styleable.MenuItem_android_onClick;
+			global::Controls.Droid.Resource.Styleable.MenuItem_android_orderInCategory = global::ServiceDesk.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::Controls.Droid.Resource.Styleable.MenuItem_android_title = global::ServiceDesk.Droid.Resource.Styleable.MenuItem_android_title;
+			global::Controls.Droid.Resource.Styleable.MenuItem_android_titleCondensed = global::ServiceDesk.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::Controls.Droid.Resource.Styleable.MenuItem_android_visible = global::ServiceDesk.Droid.Resource.Styleable.MenuItem_android_visible;
+			global::Controls.Droid.Resource.Styleable.MenuItem_showAsAction = global::ServiceDesk.Droid.Resource.Styleable.MenuItem_showAsAction;
+			global::Controls.Droid.Resource.Styleable.MenuView = global::ServiceDesk.Droid.Resource.Styleable.MenuView;
+			global::Controls.Droid.Resource.Styleable.MenuView_android_headerBackground = global::ServiceDesk.Droid.Resource.Styleable.MenuView_android_headerBackground;
+			global::Controls.Droid.Resource.Styleable.MenuView_android_horizontalDivider = global::ServiceDesk.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::Controls.Droid.Resource.Styleable.MenuView_android_itemBackground = global::ServiceDesk.Droid.Resource.Styleable.MenuView_android_itemBackground;
+			global::Controls.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::ServiceDesk.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::Controls.Droid.Resource.Styleable.MenuView_android_itemTextAppearance = global::ServiceDesk.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::Controls.Droid.Resource.Styleable.MenuView_android_verticalDivider = global::ServiceDesk.Droid.Resource.Styleable.MenuView_android_verticalDivider;
+			global::Controls.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle = global::ServiceDesk.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::Controls.Droid.Resource.Styleable.MenuView_preserveIconSpacing = global::ServiceDesk.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::Controls.Droid.Resource.Styleable.NavigationView = global::ServiceDesk.Droid.Resource.Styleable.NavigationView;
+			global::Controls.Droid.Resource.Styleable.NavigationView_android_background = global::ServiceDesk.Droid.Resource.Styleable.NavigationView_android_background;
+			global::Controls.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::ServiceDesk.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows;
+			global::Controls.Droid.Resource.Styleable.NavigationView_android_maxWidth = global::ServiceDesk.Droid.Resource.Styleable.NavigationView_android_maxWidth;
+			global::Controls.Droid.Resource.Styleable.NavigationView_elevation = global::ServiceDesk.Droid.Resource.Styleable.NavigationView_elevation;
+			global::Controls.Droid.Resource.Styleable.NavigationView_headerLayout = global::ServiceDesk.Droid.Resource.Styleable.NavigationView_headerLayout;
+			global::Controls.Droid.Resource.Styleable.NavigationView_itemBackground = global::ServiceDesk.Droid.Resource.Styleable.NavigationView_itemBackground;
+			global::Controls.Droid.Resource.Styleable.NavigationView_itemIconTint = global::ServiceDesk.Droid.Resource.Styleable.NavigationView_itemIconTint;
+			global::Controls.Droid.Resource.Styleable.NavigationView_itemTextAppearance = global::ServiceDesk.Droid.Resource.Styleable.NavigationView_itemTextAppearance;
+			global::Controls.Droid.Resource.Styleable.NavigationView_itemTextColor = global::ServiceDesk.Droid.Resource.Styleable.NavigationView_itemTextColor;
+			global::Controls.Droid.Resource.Styleable.NavigationView_menu = global::ServiceDesk.Droid.Resource.Styleable.NavigationView_menu;
+			global::Controls.Droid.Resource.Styleable.PopupWindow = global::ServiceDesk.Droid.Resource.Styleable.PopupWindow;
+			global::Controls.Droid.Resource.Styleable.PopupWindow_android_popupBackground = global::ServiceDesk.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::Controls.Droid.Resource.Styleable.PopupWindow_overlapAnchor = global::ServiceDesk.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::Controls.Droid.Resource.Styleable.PopupWindowBackgroundState = global::ServiceDesk.Droid.Resource.Styleable.PopupWindowBackgroundState;
+			global::Controls.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::ServiceDesk.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::Controls.Droid.Resource.Styleable.ScrimInsetsFrameLayout = global::ServiceDesk.Droid.Resource.Styleable.ScrimInsetsFrameLayout;
+			global::Controls.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::ServiceDesk.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
+			global::Controls.Droid.Resource.Styleable.SearchView = global::ServiceDesk.Droid.Resource.Styleable.SearchView;
+			global::Controls.Droid.Resource.Styleable.SearchView_android_focusable = global::ServiceDesk.Droid.Resource.Styleable.SearchView_android_focusable;
+			global::Controls.Droid.Resource.Styleable.SearchView_android_imeOptions = global::ServiceDesk.Droid.Resource.Styleable.SearchView_android_imeOptions;
+			global::Controls.Droid.Resource.Styleable.SearchView_android_inputType = global::ServiceDesk.Droid.Resource.Styleable.SearchView_android_inputType;
+			global::Controls.Droid.Resource.Styleable.SearchView_android_maxWidth = global::ServiceDesk.Droid.Resource.Styleable.SearchView_android_maxWidth;
+			global::Controls.Droid.Resource.Styleable.SearchView_closeIcon = global::ServiceDesk.Droid.Resource.Styleable.SearchView_closeIcon;
+			global::Controls.Droid.Resource.Styleable.SearchView_commitIcon = global::ServiceDesk.Droid.Resource.Styleable.SearchView_commitIcon;
+			global::Controls.Droid.Resource.Styleable.SearchView_defaultQueryHint = global::ServiceDesk.Droid.Resource.Styleable.SearchView_defaultQueryHint;
+			global::Controls.Droid.Resource.Styleable.SearchView_goIcon = global::ServiceDesk.Droid.Resource.Styleable.SearchView_goIcon;
+			global::Controls.Droid.Resource.Styleable.SearchView_iconifiedByDefault = global::ServiceDesk.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::Controls.Droid.Resource.Styleable.SearchView_layout = global::ServiceDesk.Droid.Resource.Styleable.SearchView_layout;
+			global::Controls.Droid.Resource.Styleable.SearchView_queryBackground = global::ServiceDesk.Droid.Resource.Styleable.SearchView_queryBackground;
+			global::Controls.Droid.Resource.Styleable.SearchView_queryHint = global::ServiceDesk.Droid.Resource.Styleable.SearchView_queryHint;
+			global::Controls.Droid.Resource.Styleable.SearchView_searchHintIcon = global::ServiceDesk.Droid.Resource.Styleable.SearchView_searchHintIcon;
+			global::Controls.Droid.Resource.Styleable.SearchView_searchIcon = global::ServiceDesk.Droid.Resource.Styleable.SearchView_searchIcon;
+			global::Controls.Droid.Resource.Styleable.SearchView_submitBackground = global::ServiceDesk.Droid.Resource.Styleable.SearchView_submitBackground;
+			global::Controls.Droid.Resource.Styleable.SearchView_suggestionRowLayout = global::ServiceDesk.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::Controls.Droid.Resource.Styleable.SearchView_voiceIcon = global::ServiceDesk.Droid.Resource.Styleable.SearchView_voiceIcon;
+			global::Controls.Droid.Resource.Styleable.SnackbarLayout = global::ServiceDesk.Droid.Resource.Styleable.SnackbarLayout;
+			global::Controls.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth = global::ServiceDesk.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth;
+			global::Controls.Droid.Resource.Styleable.SnackbarLayout_elevation = global::ServiceDesk.Droid.Resource.Styleable.SnackbarLayout_elevation;
+			global::Controls.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::ServiceDesk.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
+			global::Controls.Droid.Resource.Styleable.Spinner = global::ServiceDesk.Droid.Resource.Styleable.Spinner;
+			global::Controls.Droid.Resource.Styleable.Spinner_android_dropDownWidth = global::ServiceDesk.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::Controls.Droid.Resource.Styleable.Spinner_android_popupBackground = global::ServiceDesk.Droid.Resource.Styleable.Spinner_android_popupBackground;
+			global::Controls.Droid.Resource.Styleable.Spinner_android_prompt = global::ServiceDesk.Droid.Resource.Styleable.Spinner_android_prompt;
+			global::Controls.Droid.Resource.Styleable.Spinner_popupTheme = global::ServiceDesk.Droid.Resource.Styleable.Spinner_popupTheme;
+			global::Controls.Droid.Resource.Styleable.SwitchCompat = global::ServiceDesk.Droid.Resource.Styleable.SwitchCompat;
+			global::Controls.Droid.Resource.Styleable.SwitchCompat_android_textOff = global::ServiceDesk.Droid.Resource.Styleable.SwitchCompat_android_textOff;
+			global::Controls.Droid.Resource.Styleable.SwitchCompat_android_textOn = global::ServiceDesk.Droid.Resource.Styleable.SwitchCompat_android_textOn;
+			global::Controls.Droid.Resource.Styleable.SwitchCompat_android_thumb = global::ServiceDesk.Droid.Resource.Styleable.SwitchCompat_android_thumb;
+			global::Controls.Droid.Resource.Styleable.SwitchCompat_showText = global::ServiceDesk.Droid.Resource.Styleable.SwitchCompat_showText;
+			global::Controls.Droid.Resource.Styleable.SwitchCompat_splitTrack = global::ServiceDesk.Droid.Resource.Styleable.SwitchCompat_splitTrack;
+			global::Controls.Droid.Resource.Styleable.SwitchCompat_switchMinWidth = global::ServiceDesk.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::Controls.Droid.Resource.Styleable.SwitchCompat_switchPadding = global::ServiceDesk.Droid.Resource.Styleable.SwitchCompat_switchPadding;
+			global::Controls.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance = global::ServiceDesk.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::Controls.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding = global::ServiceDesk.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::Controls.Droid.Resource.Styleable.SwitchCompat_track = global::ServiceDesk.Droid.Resource.Styleable.SwitchCompat_track;
+			global::Controls.Droid.Resource.Styleable.TabLayout = global::ServiceDesk.Droid.Resource.Styleable.TabLayout;
+			global::Controls.Droid.Resource.Styleable.TabLayout_tabBackground = global::ServiceDesk.Droid.Resource.Styleable.TabLayout_tabBackground;
+			global::Controls.Droid.Resource.Styleable.TabLayout_tabContentStart = global::ServiceDesk.Droid.Resource.Styleable.TabLayout_tabContentStart;
+			global::Controls.Droid.Resource.Styleable.TabLayout_tabGravity = global::ServiceDesk.Droid.Resource.Styleable.TabLayout_tabGravity;
+			global::Controls.Droid.Resource.Styleable.TabLayout_tabIndicatorColor = global::ServiceDesk.Droid.Resource.Styleable.TabLayout_tabIndicatorColor;
+			global::Controls.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight = global::ServiceDesk.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight;
+			global::Controls.Droid.Resource.Styleable.TabLayout_tabMaxWidth = global::ServiceDesk.Droid.Resource.Styleable.TabLayout_tabMaxWidth;
+			global::Controls.Droid.Resource.Styleable.TabLayout_tabMinWidth = global::ServiceDesk.Droid.Resource.Styleable.TabLayout_tabMinWidth;
+			global::Controls.Droid.Resource.Styleable.TabLayout_tabMode = global::ServiceDesk.Droid.Resource.Styleable.TabLayout_tabMode;
+			global::Controls.Droid.Resource.Styleable.TabLayout_tabPadding = global::ServiceDesk.Droid.Resource.Styleable.TabLayout_tabPadding;
+			global::Controls.Droid.Resource.Styleable.TabLayout_tabPaddingBottom = global::ServiceDesk.Droid.Resource.Styleable.TabLayout_tabPaddingBottom;
+			global::Controls.Droid.Resource.Styleable.TabLayout_tabPaddingEnd = global::ServiceDesk.Droid.Resource.Styleable.TabLayout_tabPaddingEnd;
+			global::Controls.Droid.Resource.Styleable.TabLayout_tabPaddingStart = global::ServiceDesk.Droid.Resource.Styleable.TabLayout_tabPaddingStart;
+			global::Controls.Droid.Resource.Styleable.TabLayout_tabPaddingTop = global::ServiceDesk.Droid.Resource.Styleable.TabLayout_tabPaddingTop;
+			global::Controls.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor = global::ServiceDesk.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor;
+			global::Controls.Droid.Resource.Styleable.TabLayout_tabTextAppearance = global::ServiceDesk.Droid.Resource.Styleable.TabLayout_tabTextAppearance;
+			global::Controls.Droid.Resource.Styleable.TabLayout_tabTextColor = global::ServiceDesk.Droid.Resource.Styleable.TabLayout_tabTextColor;
+			global::Controls.Droid.Resource.Styleable.TextAppearance = global::ServiceDesk.Droid.Resource.Styleable.TextAppearance;
+			global::Controls.Droid.Resource.Styleable.TextAppearance_android_textColor = global::ServiceDesk.Droid.Resource.Styleable.TextAppearance_android_textColor;
+			global::Controls.Droid.Resource.Styleable.TextAppearance_android_textSize = global::ServiceDesk.Droid.Resource.Styleable.TextAppearance_android_textSize;
+			global::Controls.Droid.Resource.Styleable.TextAppearance_android_textStyle = global::ServiceDesk.Droid.Resource.Styleable.TextAppearance_android_textStyle;
+			global::Controls.Droid.Resource.Styleable.TextAppearance_android_typeface = global::ServiceDesk.Droid.Resource.Styleable.TextAppearance_android_typeface;
+			global::Controls.Droid.Resource.Styleable.TextAppearance_textAllCaps = global::ServiceDesk.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::Controls.Droid.Resource.Styleable.TextInputLayout = global::ServiceDesk.Droid.Resource.Styleable.TextInputLayout;
+			global::Controls.Droid.Resource.Styleable.TextInputLayout_android_hint = global::ServiceDesk.Droid.Resource.Styleable.TextInputLayout_android_hint;
+			global::Controls.Droid.Resource.Styleable.TextInputLayout_android_textColorHint = global::ServiceDesk.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
+			global::Controls.Droid.Resource.Styleable.TextInputLayout_errorEnabled = global::ServiceDesk.Droid.Resource.Styleable.TextInputLayout_errorEnabled;
+			global::Controls.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance = global::ServiceDesk.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance;
+			global::Controls.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::ServiceDesk.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
+			global::Controls.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance = global::ServiceDesk.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance;
+			global::Controls.Droid.Resource.Styleable.Toolbar = global::ServiceDesk.Droid.Resource.Styleable.Toolbar;
+			global::Controls.Droid.Resource.Styleable.Toolbar_android_gravity = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_android_gravity;
+			global::Controls.Droid.Resource.Styleable.Toolbar_android_minHeight = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_android_minHeight;
+			global::Controls.Droid.Resource.Styleable.Toolbar_collapseContentDescription = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::Controls.Droid.Resource.Styleable.Toolbar_collapseIcon = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_collapseIcon;
+			global::Controls.Droid.Resource.Styleable.Toolbar_contentInsetEnd = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::Controls.Droid.Resource.Styleable.Toolbar_contentInsetLeft = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::Controls.Droid.Resource.Styleable.Toolbar_contentInsetRight = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_contentInsetRight;
+			global::Controls.Droid.Resource.Styleable.Toolbar_contentInsetStart = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_contentInsetStart;
+			global::Controls.Droid.Resource.Styleable.Toolbar_logo = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_logo;
+			global::Controls.Droid.Resource.Styleable.Toolbar_logoDescription = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_logoDescription;
+			global::Controls.Droid.Resource.Styleable.Toolbar_maxButtonHeight = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::Controls.Droid.Resource.Styleable.Toolbar_navigationContentDescription = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::Controls.Droid.Resource.Styleable.Toolbar_navigationIcon = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_navigationIcon;
+			global::Controls.Droid.Resource.Styleable.Toolbar_popupTheme = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_popupTheme;
+			global::Controls.Droid.Resource.Styleable.Toolbar_subtitle = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_subtitle;
+			global::Controls.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::Controls.Droid.Resource.Styleable.Toolbar_subtitleTextColor = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::Controls.Droid.Resource.Styleable.Toolbar_title = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_title;
+			global::Controls.Droid.Resource.Styleable.Toolbar_titleMarginBottom = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::Controls.Droid.Resource.Styleable.Toolbar_titleMarginEnd = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::Controls.Droid.Resource.Styleable.Toolbar_titleMarginStart = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_titleMarginStart;
+			global::Controls.Droid.Resource.Styleable.Toolbar_titleMarginTop = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_titleMarginTop;
+			global::Controls.Droid.Resource.Styleable.Toolbar_titleMargins = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_titleMargins;
+			global::Controls.Droid.Resource.Styleable.Toolbar_titleTextAppearance = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::Controls.Droid.Resource.Styleable.Toolbar_titleTextColor = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_titleTextColor;
+			global::Controls.Droid.Resource.Styleable.View = global::ServiceDesk.Droid.Resource.Styleable.View;
+			global::Controls.Droid.Resource.Styleable.View_android_focusable = global::ServiceDesk.Droid.Resource.Styleable.View_android_focusable;
+			global::Controls.Droid.Resource.Styleable.View_android_theme = global::ServiceDesk.Droid.Resource.Styleable.View_android_theme;
+			global::Controls.Droid.Resource.Styleable.View_paddingEnd = global::ServiceDesk.Droid.Resource.Styleable.View_paddingEnd;
+			global::Controls.Droid.Resource.Styleable.View_paddingStart = global::ServiceDesk.Droid.Resource.Styleable.View_paddingStart;
+			global::Controls.Droid.Resource.Styleable.View_theme = global::ServiceDesk.Droid.Resource.Styleable.View_theme;
+			global::Controls.Droid.Resource.Styleable.ViewBackgroundHelper = global::ServiceDesk.Droid.Resource.Styleable.ViewBackgroundHelper;
+			global::Controls.Droid.Resource.Styleable.ViewBackgroundHelper_android_background = global::ServiceDesk.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::Controls.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::ServiceDesk.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::Controls.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::ServiceDesk.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::Controls.Droid.Resource.Styleable.ViewStubCompat = global::ServiceDesk.Droid.Resource.Styleable.ViewStubCompat;
+			global::Controls.Droid.Resource.Styleable.ViewStubCompat_android_id = global::ServiceDesk.Droid.Resource.Styleable.ViewStubCompat_android_id;
+			global::Controls.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId = global::ServiceDesk.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::Controls.Droid.Resource.Styleable.ViewStubCompat_android_layout = global::ServiceDesk.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+			global::NGraphics.Android.Resource.String.library_name = global::ServiceDesk.Droid.Resource.String.library_name;
+			global::Xamarin.Forms.Svg.Droid.Resource.Animation.abc_fade_in = global::ServiceDesk.Droid.Resource.Animation.abc_fade_in;
+			global::Xamarin.Forms.Svg.Droid.Resource.Animation.abc_fade_out = global::ServiceDesk.Droid.Resource.Animation.abc_fade_out;
+			global::Xamarin.Forms.Svg.Droid.Resource.Animation.abc_grow_fade_in_from_bottom = global::ServiceDesk.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::Xamarin.Forms.Svg.Droid.Resource.Animation.abc_popup_enter = global::ServiceDesk.Droid.Resource.Animation.abc_popup_enter;
+			global::Xamarin.Forms.Svg.Droid.Resource.Animation.abc_popup_exit = global::ServiceDesk.Droid.Resource.Animation.abc_popup_exit;
+			global::Xamarin.Forms.Svg.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom = global::ServiceDesk.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::Xamarin.Forms.Svg.Droid.Resource.Animation.abc_slide_in_bottom = global::ServiceDesk.Droid.Resource.Animation.abc_slide_in_bottom;
+			global::Xamarin.Forms.Svg.Droid.Resource.Animation.abc_slide_in_top = global::ServiceDesk.Droid.Resource.Animation.abc_slide_in_top;
+			global::Xamarin.Forms.Svg.Droid.Resource.Animation.abc_slide_out_bottom = global::ServiceDesk.Droid.Resource.Animation.abc_slide_out_bottom;
+			global::Xamarin.Forms.Svg.Droid.Resource.Animation.abc_slide_out_top = global::ServiceDesk.Droid.Resource.Animation.abc_slide_out_top;
+			global::Xamarin.Forms.Svg.Droid.Resource.Animation.design_bottom_sheet_slide_in = global::ServiceDesk.Droid.Resource.Animation.design_bottom_sheet_slide_in;
+			global::Xamarin.Forms.Svg.Droid.Resource.Animation.design_bottom_sheet_slide_out = global::ServiceDesk.Droid.Resource.Animation.design_bottom_sheet_slide_out;
+			global::Xamarin.Forms.Svg.Droid.Resource.Animation.design_snackbar_in = global::ServiceDesk.Droid.Resource.Animation.design_snackbar_in;
+			global::Xamarin.Forms.Svg.Droid.Resource.Animation.design_snackbar_out = global::ServiceDesk.Droid.Resource.Animation.design_snackbar_out;
+			global::Xamarin.Forms.Svg.Droid.Resource.Animator.design_appbar_state_list_animator = global::ServiceDesk.Droid.Resource.Animator.design_appbar_state_list_animator;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.actionBarDivider = global::ServiceDesk.Droid.Resource.Attribute.actionBarDivider;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.actionBarItemBackground = global::ServiceDesk.Droid.Resource.Attribute.actionBarItemBackground;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.actionBarPopupTheme = global::ServiceDesk.Droid.Resource.Attribute.actionBarPopupTheme;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.actionBarSize = global::ServiceDesk.Droid.Resource.Attribute.actionBarSize;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.actionBarSplitStyle = global::ServiceDesk.Droid.Resource.Attribute.actionBarSplitStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.actionBarStyle = global::ServiceDesk.Droid.Resource.Attribute.actionBarStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.actionBarTabBarStyle = global::ServiceDesk.Droid.Resource.Attribute.actionBarTabBarStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.actionBarTabStyle = global::ServiceDesk.Droid.Resource.Attribute.actionBarTabStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.actionBarTabTextStyle = global::ServiceDesk.Droid.Resource.Attribute.actionBarTabTextStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.actionBarTheme = global::ServiceDesk.Droid.Resource.Attribute.actionBarTheme;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.actionBarWidgetTheme = global::ServiceDesk.Droid.Resource.Attribute.actionBarWidgetTheme;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.actionButtonStyle = global::ServiceDesk.Droid.Resource.Attribute.actionButtonStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.actionDropDownStyle = global::ServiceDesk.Droid.Resource.Attribute.actionDropDownStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.actionLayout = global::ServiceDesk.Droid.Resource.Attribute.actionLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.actionMenuTextAppearance = global::ServiceDesk.Droid.Resource.Attribute.actionMenuTextAppearance;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.actionMenuTextColor = global::ServiceDesk.Droid.Resource.Attribute.actionMenuTextColor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.actionModeBackground = global::ServiceDesk.Droid.Resource.Attribute.actionModeBackground;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.actionModeCloseButtonStyle = global::ServiceDesk.Droid.Resource.Attribute.actionModeCloseButtonStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.actionModeCloseDrawable = global::ServiceDesk.Droid.Resource.Attribute.actionModeCloseDrawable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.actionModeCopyDrawable = global::ServiceDesk.Droid.Resource.Attribute.actionModeCopyDrawable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.actionModeCutDrawable = global::ServiceDesk.Droid.Resource.Attribute.actionModeCutDrawable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.actionModeFindDrawable = global::ServiceDesk.Droid.Resource.Attribute.actionModeFindDrawable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.actionModePasteDrawable = global::ServiceDesk.Droid.Resource.Attribute.actionModePasteDrawable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.actionModePopupWindowStyle = global::ServiceDesk.Droid.Resource.Attribute.actionModePopupWindowStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.actionModeSelectAllDrawable = global::ServiceDesk.Droid.Resource.Attribute.actionModeSelectAllDrawable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.actionModeShareDrawable = global::ServiceDesk.Droid.Resource.Attribute.actionModeShareDrawable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.actionModeSplitBackground = global::ServiceDesk.Droid.Resource.Attribute.actionModeSplitBackground;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.actionModeStyle = global::ServiceDesk.Droid.Resource.Attribute.actionModeStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.actionModeWebSearchDrawable = global::ServiceDesk.Droid.Resource.Attribute.actionModeWebSearchDrawable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.actionOverflowButtonStyle = global::ServiceDesk.Droid.Resource.Attribute.actionOverflowButtonStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.actionOverflowMenuStyle = global::ServiceDesk.Droid.Resource.Attribute.actionOverflowMenuStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.actionProviderClass = global::ServiceDesk.Droid.Resource.Attribute.actionProviderClass;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.actionViewClass = global::ServiceDesk.Droid.Resource.Attribute.actionViewClass;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.activityChooserViewStyle = global::ServiceDesk.Droid.Resource.Attribute.activityChooserViewStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.alertDialogButtonGroupStyle = global::ServiceDesk.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.alertDialogCenterButtons = global::ServiceDesk.Droid.Resource.Attribute.alertDialogCenterButtons;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.alertDialogStyle = global::ServiceDesk.Droid.Resource.Attribute.alertDialogStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.alertDialogTheme = global::ServiceDesk.Droid.Resource.Attribute.alertDialogTheme;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.allowStacking = global::ServiceDesk.Droid.Resource.Attribute.allowStacking;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.alpha = global::ServiceDesk.Droid.Resource.Attribute.alpha;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.arrowHeadLength = global::ServiceDesk.Droid.Resource.Attribute.arrowHeadLength;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.arrowShaftLength = global::ServiceDesk.Droid.Resource.Attribute.arrowShaftLength;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.autoCompleteTextViewStyle = global::ServiceDesk.Droid.Resource.Attribute.autoCompleteTextViewStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.background = global::ServiceDesk.Droid.Resource.Attribute.background;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.backgroundSplit = global::ServiceDesk.Droid.Resource.Attribute.backgroundSplit;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.backgroundStacked = global::ServiceDesk.Droid.Resource.Attribute.backgroundStacked;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.backgroundTint = global::ServiceDesk.Droid.Resource.Attribute.backgroundTint;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.backgroundTintMode = global::ServiceDesk.Droid.Resource.Attribute.backgroundTintMode;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.barLength = global::ServiceDesk.Droid.Resource.Attribute.barLength;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.behavior_autoHide = global::ServiceDesk.Droid.Resource.Attribute.behavior_autoHide;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.behavior_hideable = global::ServiceDesk.Droid.Resource.Attribute.behavior_hideable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.behavior_overlapTop = global::ServiceDesk.Droid.Resource.Attribute.behavior_overlapTop;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.behavior_peekHeight = global::ServiceDesk.Droid.Resource.Attribute.behavior_peekHeight;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.behavior_skipCollapsed = global::ServiceDesk.Droid.Resource.Attribute.behavior_skipCollapsed;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.borderWidth = global::ServiceDesk.Droid.Resource.Attribute.borderWidth;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.borderlessButtonStyle = global::ServiceDesk.Droid.Resource.Attribute.borderlessButtonStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.bottomSheetDialogTheme = global::ServiceDesk.Droid.Resource.Attribute.bottomSheetDialogTheme;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.bottomSheetStyle = global::ServiceDesk.Droid.Resource.Attribute.bottomSheetStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.buttonBarButtonStyle = global::ServiceDesk.Droid.Resource.Attribute.buttonBarButtonStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.buttonBarNegativeButtonStyle = global::ServiceDesk.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.buttonBarNeutralButtonStyle = global::ServiceDesk.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.buttonBarPositiveButtonStyle = global::ServiceDesk.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.buttonBarStyle = global::ServiceDesk.Droid.Resource.Attribute.buttonBarStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.buttonGravity = global::ServiceDesk.Droid.Resource.Attribute.buttonGravity;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.buttonPanelSideLayout = global::ServiceDesk.Droid.Resource.Attribute.buttonPanelSideLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.buttonStyle = global::ServiceDesk.Droid.Resource.Attribute.buttonStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.buttonStyleSmall = global::ServiceDesk.Droid.Resource.Attribute.buttonStyleSmall;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.buttonTint = global::ServiceDesk.Droid.Resource.Attribute.buttonTint;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.buttonTintMode = global::ServiceDesk.Droid.Resource.Attribute.buttonTintMode;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.cardBackgroundColor = global::ServiceDesk.Droid.Resource.Attribute.cardBackgroundColor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.cardCornerRadius = global::ServiceDesk.Droid.Resource.Attribute.cardCornerRadius;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.cardElevation = global::ServiceDesk.Droid.Resource.Attribute.cardElevation;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.cardMaxElevation = global::ServiceDesk.Droid.Resource.Attribute.cardMaxElevation;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.cardPreventCornerOverlap = global::ServiceDesk.Droid.Resource.Attribute.cardPreventCornerOverlap;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.cardUseCompatPadding = global::ServiceDesk.Droid.Resource.Attribute.cardUseCompatPadding;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.checkboxStyle = global::ServiceDesk.Droid.Resource.Attribute.checkboxStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.checkedTextViewStyle = global::ServiceDesk.Droid.Resource.Attribute.checkedTextViewStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.closeIcon = global::ServiceDesk.Droid.Resource.Attribute.closeIcon;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.closeItemLayout = global::ServiceDesk.Droid.Resource.Attribute.closeItemLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.collapseContentDescription = global::ServiceDesk.Droid.Resource.Attribute.collapseContentDescription;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.collapseIcon = global::ServiceDesk.Droid.Resource.Attribute.collapseIcon;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.collapsedTitleGravity = global::ServiceDesk.Droid.Resource.Attribute.collapsedTitleGravity;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.collapsedTitleTextAppearance = global::ServiceDesk.Droid.Resource.Attribute.collapsedTitleTextAppearance;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.color = global::ServiceDesk.Droid.Resource.Attribute.color;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.colorAccent = global::ServiceDesk.Droid.Resource.Attribute.colorAccent;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.colorBackgroundFloating = global::ServiceDesk.Droid.Resource.Attribute.colorBackgroundFloating;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.colorButtonNormal = global::ServiceDesk.Droid.Resource.Attribute.colorButtonNormal;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.colorControlActivated = global::ServiceDesk.Droid.Resource.Attribute.colorControlActivated;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.colorControlHighlight = global::ServiceDesk.Droid.Resource.Attribute.colorControlHighlight;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.colorControlNormal = global::ServiceDesk.Droid.Resource.Attribute.colorControlNormal;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.colorPrimary = global::ServiceDesk.Droid.Resource.Attribute.colorPrimary;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.colorPrimaryDark = global::ServiceDesk.Droid.Resource.Attribute.colorPrimaryDark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.colorSwitchThumbNormal = global::ServiceDesk.Droid.Resource.Attribute.colorSwitchThumbNormal;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.commitIcon = global::ServiceDesk.Droid.Resource.Attribute.commitIcon;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.contentInsetEnd = global::ServiceDesk.Droid.Resource.Attribute.contentInsetEnd;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.contentInsetEndWithActions = global::ServiceDesk.Droid.Resource.Attribute.contentInsetEndWithActions;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.contentInsetLeft = global::ServiceDesk.Droid.Resource.Attribute.contentInsetLeft;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.contentInsetRight = global::ServiceDesk.Droid.Resource.Attribute.contentInsetRight;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.contentInsetStart = global::ServiceDesk.Droid.Resource.Attribute.contentInsetStart;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.contentInsetStartWithNavigation = global::ServiceDesk.Droid.Resource.Attribute.contentInsetStartWithNavigation;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.contentPadding = global::ServiceDesk.Droid.Resource.Attribute.contentPadding;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.contentPaddingBottom = global::ServiceDesk.Droid.Resource.Attribute.contentPaddingBottom;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.contentPaddingLeft = global::ServiceDesk.Droid.Resource.Attribute.contentPaddingLeft;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.contentPaddingRight = global::ServiceDesk.Droid.Resource.Attribute.contentPaddingRight;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.contentPaddingTop = global::ServiceDesk.Droid.Resource.Attribute.contentPaddingTop;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.contentScrim = global::ServiceDesk.Droid.Resource.Attribute.contentScrim;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.controlBackground = global::ServiceDesk.Droid.Resource.Attribute.controlBackground;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.counterEnabled = global::ServiceDesk.Droid.Resource.Attribute.counterEnabled;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.counterMaxLength = global::ServiceDesk.Droid.Resource.Attribute.counterMaxLength;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.counterOverflowTextAppearance = global::ServiceDesk.Droid.Resource.Attribute.counterOverflowTextAppearance;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.counterTextAppearance = global::ServiceDesk.Droid.Resource.Attribute.counterTextAppearance;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.customNavigationLayout = global::ServiceDesk.Droid.Resource.Attribute.customNavigationLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.defaultQueryHint = global::ServiceDesk.Droid.Resource.Attribute.defaultQueryHint;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.dialogPreferredPadding = global::ServiceDesk.Droid.Resource.Attribute.dialogPreferredPadding;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.dialogTheme = global::ServiceDesk.Droid.Resource.Attribute.dialogTheme;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.displayOptions = global::ServiceDesk.Droid.Resource.Attribute.displayOptions;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.divider = global::ServiceDesk.Droid.Resource.Attribute.divider;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.dividerHorizontal = global::ServiceDesk.Droid.Resource.Attribute.dividerHorizontal;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.dividerPadding = global::ServiceDesk.Droid.Resource.Attribute.dividerPadding;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.dividerVertical = global::ServiceDesk.Droid.Resource.Attribute.dividerVertical;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.drawableSize = global::ServiceDesk.Droid.Resource.Attribute.drawableSize;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.drawerArrowStyle = global::ServiceDesk.Droid.Resource.Attribute.drawerArrowStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.dropDownListViewStyle = global::ServiceDesk.Droid.Resource.Attribute.dropDownListViewStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.dropdownListPreferredItemHeight = global::ServiceDesk.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.editTextBackground = global::ServiceDesk.Droid.Resource.Attribute.editTextBackground;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.editTextColor = global::ServiceDesk.Droid.Resource.Attribute.editTextColor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.editTextStyle = global::ServiceDesk.Droid.Resource.Attribute.editTextStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.elevation = global::ServiceDesk.Droid.Resource.Attribute.elevation;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.errorEnabled = global::ServiceDesk.Droid.Resource.Attribute.errorEnabled;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.errorTextAppearance = global::ServiceDesk.Droid.Resource.Attribute.errorTextAppearance;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable = global::ServiceDesk.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.expanded = global::ServiceDesk.Droid.Resource.Attribute.expanded;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.expandedTitleGravity = global::ServiceDesk.Droid.Resource.Attribute.expandedTitleGravity;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.expandedTitleMargin = global::ServiceDesk.Droid.Resource.Attribute.expandedTitleMargin;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.expandedTitleMarginBottom = global::ServiceDesk.Droid.Resource.Attribute.expandedTitleMarginBottom;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.expandedTitleMarginEnd = global::ServiceDesk.Droid.Resource.Attribute.expandedTitleMarginEnd;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.expandedTitleMarginStart = global::ServiceDesk.Droid.Resource.Attribute.expandedTitleMarginStart;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.expandedTitleMarginTop = global::ServiceDesk.Droid.Resource.Attribute.expandedTitleMarginTop;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.expandedTitleTextAppearance = global::ServiceDesk.Droid.Resource.Attribute.expandedTitleTextAppearance;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.externalRouteEnabledDrawable = global::ServiceDesk.Droid.Resource.Attribute.externalRouteEnabledDrawable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.fabSize = global::ServiceDesk.Droid.Resource.Attribute.fabSize;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.foregroundInsidePadding = global::ServiceDesk.Droid.Resource.Attribute.foregroundInsidePadding;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.gapBetweenBars = global::ServiceDesk.Droid.Resource.Attribute.gapBetweenBars;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.goIcon = global::ServiceDesk.Droid.Resource.Attribute.goIcon;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.headerLayout = global::ServiceDesk.Droid.Resource.Attribute.headerLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.height = global::ServiceDesk.Droid.Resource.Attribute.height;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.hideOnContentScroll = global::ServiceDesk.Droid.Resource.Attribute.hideOnContentScroll;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.hintAnimationEnabled = global::ServiceDesk.Droid.Resource.Attribute.hintAnimationEnabled;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.hintEnabled = global::ServiceDesk.Droid.Resource.Attribute.hintEnabled;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.hintTextAppearance = global::ServiceDesk.Droid.Resource.Attribute.hintTextAppearance;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.homeAsUpIndicator = global::ServiceDesk.Droid.Resource.Attribute.homeAsUpIndicator;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.homeLayout = global::ServiceDesk.Droid.Resource.Attribute.homeLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.icon = global::ServiceDesk.Droid.Resource.Attribute.icon;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.iconifiedByDefault = global::ServiceDesk.Droid.Resource.Attribute.iconifiedByDefault;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.imageButtonStyle = global::ServiceDesk.Droid.Resource.Attribute.imageButtonStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.indeterminateProgressStyle = global::ServiceDesk.Droid.Resource.Attribute.indeterminateProgressStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.initialActivityCount = global::ServiceDesk.Droid.Resource.Attribute.initialActivityCount;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.insetForeground = global::ServiceDesk.Droid.Resource.Attribute.insetForeground;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.isLightTheme = global::ServiceDesk.Droid.Resource.Attribute.isLightTheme;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.itemBackground = global::ServiceDesk.Droid.Resource.Attribute.itemBackground;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.itemIconTint = global::ServiceDesk.Droid.Resource.Attribute.itemIconTint;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.itemPadding = global::ServiceDesk.Droid.Resource.Attribute.itemPadding;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.itemTextAppearance = global::ServiceDesk.Droid.Resource.Attribute.itemTextAppearance;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.itemTextColor = global::ServiceDesk.Droid.Resource.Attribute.itemTextColor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.keylines = global::ServiceDesk.Droid.Resource.Attribute.keylines;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.layout = global::ServiceDesk.Droid.Resource.Attribute.layout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.layoutManager = global::ServiceDesk.Droid.Resource.Attribute.layoutManager;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.layout_anchor = global::ServiceDesk.Droid.Resource.Attribute.layout_anchor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.layout_anchorGravity = global::ServiceDesk.Droid.Resource.Attribute.layout_anchorGravity;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.layout_behavior = global::ServiceDesk.Droid.Resource.Attribute.layout_behavior;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.layout_collapseMode = global::ServiceDesk.Droid.Resource.Attribute.layout_collapseMode;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.layout_collapseParallaxMultiplier = global::ServiceDesk.Droid.Resource.Attribute.layout_collapseParallaxMultiplier;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.layout_dodgeInsetEdges = global::ServiceDesk.Droid.Resource.Attribute.layout_dodgeInsetEdges;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.layout_insetEdge = global::ServiceDesk.Droid.Resource.Attribute.layout_insetEdge;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.layout_keyline = global::ServiceDesk.Droid.Resource.Attribute.layout_keyline;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.layout_scrollFlags = global::ServiceDesk.Droid.Resource.Attribute.layout_scrollFlags;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.layout_scrollInterpolator = global::ServiceDesk.Droid.Resource.Attribute.layout_scrollInterpolator;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.listChoiceBackgroundIndicator = global::ServiceDesk.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.listDividerAlertDialog = global::ServiceDesk.Droid.Resource.Attribute.listDividerAlertDialog;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.listItemLayout = global::ServiceDesk.Droid.Resource.Attribute.listItemLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.listLayout = global::ServiceDesk.Droid.Resource.Attribute.listLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.listMenuViewStyle = global::ServiceDesk.Droid.Resource.Attribute.listMenuViewStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.listPopupWindowStyle = global::ServiceDesk.Droid.Resource.Attribute.listPopupWindowStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.listPreferredItemHeight = global::ServiceDesk.Droid.Resource.Attribute.listPreferredItemHeight;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.listPreferredItemHeightLarge = global::ServiceDesk.Droid.Resource.Attribute.listPreferredItemHeightLarge;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.listPreferredItemHeightSmall = global::ServiceDesk.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.listPreferredItemPaddingLeft = global::ServiceDesk.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.listPreferredItemPaddingRight = global::ServiceDesk.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.logo = global::ServiceDesk.Droid.Resource.Attribute.logo;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.logoDescription = global::ServiceDesk.Droid.Resource.Attribute.logoDescription;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.maxActionInlineWidth = global::ServiceDesk.Droid.Resource.Attribute.maxActionInlineWidth;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.maxButtonHeight = global::ServiceDesk.Droid.Resource.Attribute.maxButtonHeight;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.measureWithLargestChild = global::ServiceDesk.Droid.Resource.Attribute.measureWithLargestChild;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.mediaRouteAudioTrackDrawable = global::ServiceDesk.Droid.Resource.Attribute.mediaRouteAudioTrackDrawable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.mediaRouteButtonStyle = global::ServiceDesk.Droid.Resource.Attribute.mediaRouteButtonStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.mediaRouteCloseDrawable = global::ServiceDesk.Droid.Resource.Attribute.mediaRouteCloseDrawable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.mediaRouteControlPanelThemeOverlay = global::ServiceDesk.Droid.Resource.Attribute.mediaRouteControlPanelThemeOverlay;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.mediaRouteDefaultIconDrawable = global::ServiceDesk.Droid.Resource.Attribute.mediaRouteDefaultIconDrawable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.mediaRoutePauseDrawable = global::ServiceDesk.Droid.Resource.Attribute.mediaRoutePauseDrawable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.mediaRoutePlayDrawable = global::ServiceDesk.Droid.Resource.Attribute.mediaRoutePlayDrawable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.mediaRouteSpeakerGroupIconDrawable = global::ServiceDesk.Droid.Resource.Attribute.mediaRouteSpeakerGroupIconDrawable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.mediaRouteSpeakerIconDrawable = global::ServiceDesk.Droid.Resource.Attribute.mediaRouteSpeakerIconDrawable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.mediaRouteStopDrawable = global::ServiceDesk.Droid.Resource.Attribute.mediaRouteStopDrawable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.mediaRouteTheme = global::ServiceDesk.Droid.Resource.Attribute.mediaRouteTheme;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.mediaRouteTvIconDrawable = global::ServiceDesk.Droid.Resource.Attribute.mediaRouteTvIconDrawable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.menu = global::ServiceDesk.Droid.Resource.Attribute.menu;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.multiChoiceItemLayout = global::ServiceDesk.Droid.Resource.Attribute.multiChoiceItemLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.navigationContentDescription = global::ServiceDesk.Droid.Resource.Attribute.navigationContentDescription;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.navigationIcon = global::ServiceDesk.Droid.Resource.Attribute.navigationIcon;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.navigationMode = global::ServiceDesk.Droid.Resource.Attribute.navigationMode;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.overlapAnchor = global::ServiceDesk.Droid.Resource.Attribute.overlapAnchor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.paddingBottomNoButtons = global::ServiceDesk.Droid.Resource.Attribute.paddingBottomNoButtons;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.paddingEnd = global::ServiceDesk.Droid.Resource.Attribute.paddingEnd;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.paddingStart = global::ServiceDesk.Droid.Resource.Attribute.paddingStart;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.paddingTopNoTitle = global::ServiceDesk.Droid.Resource.Attribute.paddingTopNoTitle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.panelBackground = global::ServiceDesk.Droid.Resource.Attribute.panelBackground;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.panelMenuListTheme = global::ServiceDesk.Droid.Resource.Attribute.panelMenuListTheme;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.panelMenuListWidth = global::ServiceDesk.Droid.Resource.Attribute.panelMenuListWidth;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.passwordToggleContentDescription = global::ServiceDesk.Droid.Resource.Attribute.passwordToggleContentDescription;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.passwordToggleDrawable = global::ServiceDesk.Droid.Resource.Attribute.passwordToggleDrawable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.passwordToggleEnabled = global::ServiceDesk.Droid.Resource.Attribute.passwordToggleEnabled;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.passwordToggleTint = global::ServiceDesk.Droid.Resource.Attribute.passwordToggleTint;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.passwordToggleTintMode = global::ServiceDesk.Droid.Resource.Attribute.passwordToggleTintMode;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.popupMenuStyle = global::ServiceDesk.Droid.Resource.Attribute.popupMenuStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.popupTheme = global::ServiceDesk.Droid.Resource.Attribute.popupTheme;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.popupWindowStyle = global::ServiceDesk.Droid.Resource.Attribute.popupWindowStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.preserveIconSpacing = global::ServiceDesk.Droid.Resource.Attribute.preserveIconSpacing;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.pressedTranslationZ = global::ServiceDesk.Droid.Resource.Attribute.pressedTranslationZ;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.progressBarPadding = global::ServiceDesk.Droid.Resource.Attribute.progressBarPadding;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.progressBarStyle = global::ServiceDesk.Droid.Resource.Attribute.progressBarStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.queryBackground = global::ServiceDesk.Droid.Resource.Attribute.queryBackground;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.queryHint = global::ServiceDesk.Droid.Resource.Attribute.queryHint;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.radioButtonStyle = global::ServiceDesk.Droid.Resource.Attribute.radioButtonStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.ratingBarStyle = global::ServiceDesk.Droid.Resource.Attribute.ratingBarStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.ratingBarStyleIndicator = global::ServiceDesk.Droid.Resource.Attribute.ratingBarStyleIndicator;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.ratingBarStyleSmall = global::ServiceDesk.Droid.Resource.Attribute.ratingBarStyleSmall;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.reverseLayout = global::ServiceDesk.Droid.Resource.Attribute.reverseLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.rippleColor = global::ServiceDesk.Droid.Resource.Attribute.rippleColor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.scrimAnimationDuration = global::ServiceDesk.Droid.Resource.Attribute.scrimAnimationDuration;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.scrimVisibleHeightTrigger = global::ServiceDesk.Droid.Resource.Attribute.scrimVisibleHeightTrigger;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.searchHintIcon = global::ServiceDesk.Droid.Resource.Attribute.searchHintIcon;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.searchIcon = global::ServiceDesk.Droid.Resource.Attribute.searchIcon;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.searchViewStyle = global::ServiceDesk.Droid.Resource.Attribute.searchViewStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.seekBarStyle = global::ServiceDesk.Droid.Resource.Attribute.seekBarStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.selectableItemBackground = global::ServiceDesk.Droid.Resource.Attribute.selectableItemBackground;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.selectableItemBackgroundBorderless = global::ServiceDesk.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.showAsAction = global::ServiceDesk.Droid.Resource.Attribute.showAsAction;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.showDividers = global::ServiceDesk.Droid.Resource.Attribute.showDividers;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.showText = global::ServiceDesk.Droid.Resource.Attribute.showText;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.showTitle = global::ServiceDesk.Droid.Resource.Attribute.showTitle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.singleChoiceItemLayout = global::ServiceDesk.Droid.Resource.Attribute.singleChoiceItemLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.spanCount = global::ServiceDesk.Droid.Resource.Attribute.spanCount;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.spinBars = global::ServiceDesk.Droid.Resource.Attribute.spinBars;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.spinnerDropDownItemStyle = global::ServiceDesk.Droid.Resource.Attribute.spinnerDropDownItemStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.spinnerStyle = global::ServiceDesk.Droid.Resource.Attribute.spinnerStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.splitTrack = global::ServiceDesk.Droid.Resource.Attribute.splitTrack;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.srcCompat = global::ServiceDesk.Droid.Resource.Attribute.srcCompat;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.stackFromEnd = global::ServiceDesk.Droid.Resource.Attribute.stackFromEnd;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.state_above_anchor = global::ServiceDesk.Droid.Resource.Attribute.state_above_anchor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.state_collapsed = global::ServiceDesk.Droid.Resource.Attribute.state_collapsed;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.state_collapsible = global::ServiceDesk.Droid.Resource.Attribute.state_collapsible;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.statusBarBackground = global::ServiceDesk.Droid.Resource.Attribute.statusBarBackground;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.statusBarScrim = global::ServiceDesk.Droid.Resource.Attribute.statusBarScrim;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.subMenuArrow = global::ServiceDesk.Droid.Resource.Attribute.subMenuArrow;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.submitBackground = global::ServiceDesk.Droid.Resource.Attribute.submitBackground;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.subtitle = global::ServiceDesk.Droid.Resource.Attribute.subtitle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.subtitleTextAppearance = global::ServiceDesk.Droid.Resource.Attribute.subtitleTextAppearance;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.subtitleTextColor = global::ServiceDesk.Droid.Resource.Attribute.subtitleTextColor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.subtitleTextStyle = global::ServiceDesk.Droid.Resource.Attribute.subtitleTextStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.suggestionRowLayout = global::ServiceDesk.Droid.Resource.Attribute.suggestionRowLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.switchMinWidth = global::ServiceDesk.Droid.Resource.Attribute.switchMinWidth;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.switchPadding = global::ServiceDesk.Droid.Resource.Attribute.switchPadding;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.switchStyle = global::ServiceDesk.Droid.Resource.Attribute.switchStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.switchTextAppearance = global::ServiceDesk.Droid.Resource.Attribute.switchTextAppearance;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.tabBackground = global::ServiceDesk.Droid.Resource.Attribute.tabBackground;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.tabContentStart = global::ServiceDesk.Droid.Resource.Attribute.tabContentStart;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.tabGravity = global::ServiceDesk.Droid.Resource.Attribute.tabGravity;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.tabIndicatorColor = global::ServiceDesk.Droid.Resource.Attribute.tabIndicatorColor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.tabIndicatorHeight = global::ServiceDesk.Droid.Resource.Attribute.tabIndicatorHeight;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.tabMaxWidth = global::ServiceDesk.Droid.Resource.Attribute.tabMaxWidth;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.tabMinWidth = global::ServiceDesk.Droid.Resource.Attribute.tabMinWidth;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.tabMode = global::ServiceDesk.Droid.Resource.Attribute.tabMode;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.tabPadding = global::ServiceDesk.Droid.Resource.Attribute.tabPadding;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.tabPaddingBottom = global::ServiceDesk.Droid.Resource.Attribute.tabPaddingBottom;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.tabPaddingEnd = global::ServiceDesk.Droid.Resource.Attribute.tabPaddingEnd;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.tabPaddingStart = global::ServiceDesk.Droid.Resource.Attribute.tabPaddingStart;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.tabPaddingTop = global::ServiceDesk.Droid.Resource.Attribute.tabPaddingTop;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.tabSelectedTextColor = global::ServiceDesk.Droid.Resource.Attribute.tabSelectedTextColor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.tabTextAppearance = global::ServiceDesk.Droid.Resource.Attribute.tabTextAppearance;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.tabTextColor = global::ServiceDesk.Droid.Resource.Attribute.tabTextColor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.textAllCaps = global::ServiceDesk.Droid.Resource.Attribute.textAllCaps;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.textAppearanceLargePopupMenu = global::ServiceDesk.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.textAppearanceListItem = global::ServiceDesk.Droid.Resource.Attribute.textAppearanceListItem;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.textAppearanceListItemSecondary = global::ServiceDesk.Droid.Resource.Attribute.textAppearanceListItemSecondary;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.textAppearanceListItemSmall = global::ServiceDesk.Droid.Resource.Attribute.textAppearanceListItemSmall;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.textAppearancePopupMenuHeader = global::ServiceDesk.Droid.Resource.Attribute.textAppearancePopupMenuHeader;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle = global::ServiceDesk.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.textAppearanceSearchResultTitle = global::ServiceDesk.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.textAppearanceSmallPopupMenu = global::ServiceDesk.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.textColorAlertDialogListItem = global::ServiceDesk.Droid.Resource.Attribute.textColorAlertDialogListItem;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.textColorError = global::ServiceDesk.Droid.Resource.Attribute.textColorError;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.textColorSearchUrl = global::ServiceDesk.Droid.Resource.Attribute.textColorSearchUrl;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.theme = global::ServiceDesk.Droid.Resource.Attribute.theme;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.thickness = global::ServiceDesk.Droid.Resource.Attribute.thickness;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.thumbTextPadding = global::ServiceDesk.Droid.Resource.Attribute.thumbTextPadding;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.thumbTint = global::ServiceDesk.Droid.Resource.Attribute.thumbTint;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.thumbTintMode = global::ServiceDesk.Droid.Resource.Attribute.thumbTintMode;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.tickMark = global::ServiceDesk.Droid.Resource.Attribute.tickMark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.tickMarkTint = global::ServiceDesk.Droid.Resource.Attribute.tickMarkTint;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.tickMarkTintMode = global::ServiceDesk.Droid.Resource.Attribute.tickMarkTintMode;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.tint = global::ServiceDesk.Droid.Resource.Attribute.tint;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.tintMode = global::ServiceDesk.Droid.Resource.Attribute.tintMode;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.title = global::ServiceDesk.Droid.Resource.Attribute.title;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.titleEnabled = global::ServiceDesk.Droid.Resource.Attribute.titleEnabled;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.titleMargin = global::ServiceDesk.Droid.Resource.Attribute.titleMargin;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.titleMarginBottom = global::ServiceDesk.Droid.Resource.Attribute.titleMarginBottom;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.titleMarginEnd = global::ServiceDesk.Droid.Resource.Attribute.titleMarginEnd;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.titleMarginStart = global::ServiceDesk.Droid.Resource.Attribute.titleMarginStart;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.titleMarginTop = global::ServiceDesk.Droid.Resource.Attribute.titleMarginTop;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.titleMargins = global::ServiceDesk.Droid.Resource.Attribute.titleMargins;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.titleTextAppearance = global::ServiceDesk.Droid.Resource.Attribute.titleTextAppearance;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.titleTextColor = global::ServiceDesk.Droid.Resource.Attribute.titleTextColor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.titleTextStyle = global::ServiceDesk.Droid.Resource.Attribute.titleTextStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.toolbarId = global::ServiceDesk.Droid.Resource.Attribute.toolbarId;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.toolbarNavigationButtonStyle = global::ServiceDesk.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.toolbarStyle = global::ServiceDesk.Droid.Resource.Attribute.toolbarStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.track = global::ServiceDesk.Droid.Resource.Attribute.track;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.trackTint = global::ServiceDesk.Droid.Resource.Attribute.trackTint;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.trackTintMode = global::ServiceDesk.Droid.Resource.Attribute.trackTintMode;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.useCompatPadding = global::ServiceDesk.Droid.Resource.Attribute.useCompatPadding;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.voiceIcon = global::ServiceDesk.Droid.Resource.Attribute.voiceIcon;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.windowActionBar = global::ServiceDesk.Droid.Resource.Attribute.windowActionBar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.windowActionBarOverlay = global::ServiceDesk.Droid.Resource.Attribute.windowActionBarOverlay;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.windowActionModeOverlay = global::ServiceDesk.Droid.Resource.Attribute.windowActionModeOverlay;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.windowFixedHeightMajor = global::ServiceDesk.Droid.Resource.Attribute.windowFixedHeightMajor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.windowFixedHeightMinor = global::ServiceDesk.Droid.Resource.Attribute.windowFixedHeightMinor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.windowFixedWidthMajor = global::ServiceDesk.Droid.Resource.Attribute.windowFixedWidthMajor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.windowFixedWidthMinor = global::ServiceDesk.Droid.Resource.Attribute.windowFixedWidthMinor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.windowMinWidthMajor = global::ServiceDesk.Droid.Resource.Attribute.windowMinWidthMajor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.windowMinWidthMinor = global::ServiceDesk.Droid.Resource.Attribute.windowMinWidthMinor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Attribute.windowNoTitle = global::ServiceDesk.Droid.Resource.Attribute.windowNoTitle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Boolean.abc_action_bar_embed_tabs = global::ServiceDesk.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::Xamarin.Forms.Svg.Droid.Resource.Boolean.abc_allow_stacked_button_bar = global::ServiceDesk.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::ServiceDesk.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::Xamarin.Forms.Svg.Droid.Resource.Boolean.abc_config_closeDialogWhenTouchOutside = global::ServiceDesk.Droid.Resource.Boolean.abc_config_closeDialogWhenTouchOutside;
+			global::Xamarin.Forms.Svg.Droid.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent = global::ServiceDesk.Droid.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark = global::ServiceDesk.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.abc_background_cache_hint_selector_material_light = global::ServiceDesk.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.abc_btn_colored_borderless_text_material = global::ServiceDesk.Droid.Resource.Color.abc_btn_colored_borderless_text_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.abc_btn_colored_text_material = global::ServiceDesk.Droid.Resource.Color.abc_btn_colored_text_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.abc_color_highlight_material = global::ServiceDesk.Droid.Resource.Color.abc_color_highlight_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.abc_hint_foreground_material_dark = global::ServiceDesk.Droid.Resource.Color.abc_hint_foreground_material_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.abc_hint_foreground_material_light = global::ServiceDesk.Droid.Resource.Color.abc_hint_foreground_material_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.abc_input_method_navigation_guard = global::ServiceDesk.Droid.Resource.Color.abc_input_method_navigation_guard;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.abc_primary_text_disable_only_material_dark = global::ServiceDesk.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.abc_primary_text_disable_only_material_light = global::ServiceDesk.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.abc_primary_text_material_dark = global::ServiceDesk.Droid.Resource.Color.abc_primary_text_material_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.abc_primary_text_material_light = global::ServiceDesk.Droid.Resource.Color.abc_primary_text_material_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.abc_search_url_text = global::ServiceDesk.Droid.Resource.Color.abc_search_url_text;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.abc_search_url_text_normal = global::ServiceDesk.Droid.Resource.Color.abc_search_url_text_normal;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.abc_search_url_text_pressed = global::ServiceDesk.Droid.Resource.Color.abc_search_url_text_pressed;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.abc_search_url_text_selected = global::ServiceDesk.Droid.Resource.Color.abc_search_url_text_selected;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.abc_secondary_text_material_dark = global::ServiceDesk.Droid.Resource.Color.abc_secondary_text_material_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.abc_secondary_text_material_light = global::ServiceDesk.Droid.Resource.Color.abc_secondary_text_material_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.abc_tint_btn_checkable = global::ServiceDesk.Droid.Resource.Color.abc_tint_btn_checkable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.abc_tint_default = global::ServiceDesk.Droid.Resource.Color.abc_tint_default;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.abc_tint_edittext = global::ServiceDesk.Droid.Resource.Color.abc_tint_edittext;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.abc_tint_seek_thumb = global::ServiceDesk.Droid.Resource.Color.abc_tint_seek_thumb;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.abc_tint_spinner = global::ServiceDesk.Droid.Resource.Color.abc_tint_spinner;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.abc_tint_switch_track = global::ServiceDesk.Droid.Resource.Color.abc_tint_switch_track;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.accent_material_dark = global::ServiceDesk.Droid.Resource.Color.accent_material_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.accent_material_light = global::ServiceDesk.Droid.Resource.Color.accent_material_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.background_floating_material_dark = global::ServiceDesk.Droid.Resource.Color.background_floating_material_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.background_floating_material_light = global::ServiceDesk.Droid.Resource.Color.background_floating_material_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.background_material_dark = global::ServiceDesk.Droid.Resource.Color.background_material_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.background_material_light = global::ServiceDesk.Droid.Resource.Color.background_material_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.bright_foreground_disabled_material_dark = global::ServiceDesk.Droid.Resource.Color.bright_foreground_disabled_material_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.bright_foreground_disabled_material_light = global::ServiceDesk.Droid.Resource.Color.bright_foreground_disabled_material_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.bright_foreground_inverse_material_dark = global::ServiceDesk.Droid.Resource.Color.bright_foreground_inverse_material_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.bright_foreground_inverse_material_light = global::ServiceDesk.Droid.Resource.Color.bright_foreground_inverse_material_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.bright_foreground_material_dark = global::ServiceDesk.Droid.Resource.Color.bright_foreground_material_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.bright_foreground_material_light = global::ServiceDesk.Droid.Resource.Color.bright_foreground_material_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.button_material_dark = global::ServiceDesk.Droid.Resource.Color.button_material_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.button_material_light = global::ServiceDesk.Droid.Resource.Color.button_material_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.cardview_dark_background = global::ServiceDesk.Droid.Resource.Color.cardview_dark_background;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.cardview_light_background = global::ServiceDesk.Droid.Resource.Color.cardview_light_background;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.cardview_shadow_end_color = global::ServiceDesk.Droid.Resource.Color.cardview_shadow_end_color;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.cardview_shadow_start_color = global::ServiceDesk.Droid.Resource.Color.cardview_shadow_start_color;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.design_bottom_navigation_shadow_color = global::ServiceDesk.Droid.Resource.Color.design_bottom_navigation_shadow_color;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.design_error = global::ServiceDesk.Droid.Resource.Color.design_error;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.design_fab_shadow_end_color = global::ServiceDesk.Droid.Resource.Color.design_fab_shadow_end_color;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.design_fab_shadow_mid_color = global::ServiceDesk.Droid.Resource.Color.design_fab_shadow_mid_color;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.design_fab_shadow_start_color = global::ServiceDesk.Droid.Resource.Color.design_fab_shadow_start_color;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.design_fab_stroke_end_inner_color = global::ServiceDesk.Droid.Resource.Color.design_fab_stroke_end_inner_color;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.design_fab_stroke_end_outer_color = global::ServiceDesk.Droid.Resource.Color.design_fab_stroke_end_outer_color;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.design_fab_stroke_top_inner_color = global::ServiceDesk.Droid.Resource.Color.design_fab_stroke_top_inner_color;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.design_fab_stroke_top_outer_color = global::ServiceDesk.Droid.Resource.Color.design_fab_stroke_top_outer_color;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.design_snackbar_background_color = global::ServiceDesk.Droid.Resource.Color.design_snackbar_background_color;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.design_tint_password_toggle = global::ServiceDesk.Droid.Resource.Color.design_tint_password_toggle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.dim_foreground_disabled_material_dark = global::ServiceDesk.Droid.Resource.Color.dim_foreground_disabled_material_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.dim_foreground_disabled_material_light = global::ServiceDesk.Droid.Resource.Color.dim_foreground_disabled_material_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.dim_foreground_material_dark = global::ServiceDesk.Droid.Resource.Color.dim_foreground_material_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.dim_foreground_material_light = global::ServiceDesk.Droid.Resource.Color.dim_foreground_material_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.foreground_material_dark = global::ServiceDesk.Droid.Resource.Color.foreground_material_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.foreground_material_light = global::ServiceDesk.Droid.Resource.Color.foreground_material_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.highlighted_text_material_dark = global::ServiceDesk.Droid.Resource.Color.highlighted_text_material_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.highlighted_text_material_light = global::ServiceDesk.Droid.Resource.Color.highlighted_text_material_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.material_blue_grey_800 = global::ServiceDesk.Droid.Resource.Color.material_blue_grey_800;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.material_blue_grey_900 = global::ServiceDesk.Droid.Resource.Color.material_blue_grey_900;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.material_blue_grey_950 = global::ServiceDesk.Droid.Resource.Color.material_blue_grey_950;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.material_deep_teal_200 = global::ServiceDesk.Droid.Resource.Color.material_deep_teal_200;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.material_deep_teal_500 = global::ServiceDesk.Droid.Resource.Color.material_deep_teal_500;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.material_grey_100 = global::ServiceDesk.Droid.Resource.Color.material_grey_100;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.material_grey_300 = global::ServiceDesk.Droid.Resource.Color.material_grey_300;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.material_grey_50 = global::ServiceDesk.Droid.Resource.Color.material_grey_50;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.material_grey_600 = global::ServiceDesk.Droid.Resource.Color.material_grey_600;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.material_grey_800 = global::ServiceDesk.Droid.Resource.Color.material_grey_800;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.material_grey_850 = global::ServiceDesk.Droid.Resource.Color.material_grey_850;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.material_grey_900 = global::ServiceDesk.Droid.Resource.Color.material_grey_900;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.notification_action_color_filter = global::ServiceDesk.Droid.Resource.Color.notification_action_color_filter;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.notification_icon_bg_color = global::ServiceDesk.Droid.Resource.Color.notification_icon_bg_color;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.notification_material_background_media_default_color = global::ServiceDesk.Droid.Resource.Color.notification_material_background_media_default_color;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.primary_dark_material_dark = global::ServiceDesk.Droid.Resource.Color.primary_dark_material_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.primary_dark_material_light = global::ServiceDesk.Droid.Resource.Color.primary_dark_material_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.primary_material_dark = global::ServiceDesk.Droid.Resource.Color.primary_material_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.primary_material_light = global::ServiceDesk.Droid.Resource.Color.primary_material_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.primary_text_default_material_dark = global::ServiceDesk.Droid.Resource.Color.primary_text_default_material_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.primary_text_default_material_light = global::ServiceDesk.Droid.Resource.Color.primary_text_default_material_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.primary_text_disabled_material_dark = global::ServiceDesk.Droid.Resource.Color.primary_text_disabled_material_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.primary_text_disabled_material_light = global::ServiceDesk.Droid.Resource.Color.primary_text_disabled_material_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.ripple_material_dark = global::ServiceDesk.Droid.Resource.Color.ripple_material_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.ripple_material_light = global::ServiceDesk.Droid.Resource.Color.ripple_material_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.secondary_text_default_material_dark = global::ServiceDesk.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.secondary_text_default_material_light = global::ServiceDesk.Droid.Resource.Color.secondary_text_default_material_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.secondary_text_disabled_material_dark = global::ServiceDesk.Droid.Resource.Color.secondary_text_disabled_material_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.secondary_text_disabled_material_light = global::ServiceDesk.Droid.Resource.Color.secondary_text_disabled_material_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.switch_thumb_disabled_material_dark = global::ServiceDesk.Droid.Resource.Color.switch_thumb_disabled_material_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.switch_thumb_disabled_material_light = global::ServiceDesk.Droid.Resource.Color.switch_thumb_disabled_material_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.switch_thumb_material_dark = global::ServiceDesk.Droid.Resource.Color.switch_thumb_material_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.switch_thumb_material_light = global::ServiceDesk.Droid.Resource.Color.switch_thumb_material_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.switch_thumb_normal_material_dark = global::ServiceDesk.Droid.Resource.Color.switch_thumb_normal_material_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Color.switch_thumb_normal_material_light = global::ServiceDesk.Droid.Resource.Color.switch_thumb_normal_material_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_action_bar_content_inset_material = global::ServiceDesk.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::ServiceDesk.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_action_bar_default_height_material = global::ServiceDesk.Droid.Resource.Dimension.abc_action_bar_default_height_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material = global::ServiceDesk.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material = global::ServiceDesk.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_action_bar_elevation_material = global::ServiceDesk.Droid.Resource.Dimension.abc_action_bar_elevation_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::ServiceDesk.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::ServiceDesk.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::ServiceDesk.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_action_bar_progress_bar_size = global::ServiceDesk.Droid.Resource.Dimension.abc_action_bar_progress_bar_size;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_action_bar_stacked_max_height = global::ServiceDesk.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::ServiceDesk.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::ServiceDesk.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::ServiceDesk.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_action_button_min_height_material = global::ServiceDesk.Droid.Resource.Dimension.abc_action_button_min_height_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_action_button_min_width_material = global::ServiceDesk.Droid.Resource.Dimension.abc_action_button_min_width_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material = global::ServiceDesk.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height = global::ServiceDesk.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_button_inset_horizontal_material = global::ServiceDesk.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_button_inset_vertical_material = global::ServiceDesk.Droid.Resource.Dimension.abc_button_inset_vertical_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_button_padding_horizontal_material = global::ServiceDesk.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_button_padding_vertical_material = global::ServiceDesk.Droid.Resource.Dimension.abc_button_padding_vertical_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::ServiceDesk.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_config_prefDialogWidth = global::ServiceDesk.Droid.Resource.Dimension.abc_config_prefDialogWidth;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_control_corner_material = global::ServiceDesk.Droid.Resource.Dimension.abc_control_corner_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_control_inset_material = global::ServiceDesk.Droid.Resource.Dimension.abc_control_inset_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_control_padding_material = global::ServiceDesk.Droid.Resource.Dimension.abc_control_padding_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_dialog_fixed_height_major = global::ServiceDesk.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_dialog_fixed_height_minor = global::ServiceDesk.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_dialog_fixed_width_major = global::ServiceDesk.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_dialog_fixed_width_minor = global::ServiceDesk.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::ServiceDesk.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::ServiceDesk.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_dialog_min_width_major = global::ServiceDesk.Droid.Resource.Dimension.abc_dialog_min_width_major;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_dialog_min_width_minor = global::ServiceDesk.Droid.Resource.Dimension.abc_dialog_min_width_minor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_dialog_padding_material = global::ServiceDesk.Droid.Resource.Dimension.abc_dialog_padding_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_dialog_padding_top_material = global::ServiceDesk.Droid.Resource.Dimension.abc_dialog_padding_top_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_dialog_title_divider_material = global::ServiceDesk.Droid.Resource.Dimension.abc_dialog_title_divider_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_disabled_alpha_material_dark = global::ServiceDesk.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_disabled_alpha_material_light = global::ServiceDesk.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_dropdownitem_icon_width = global::ServiceDesk.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left = global::ServiceDesk.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right = global::ServiceDesk.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material = global::ServiceDesk.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::ServiceDesk.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_edit_text_inset_top_material = global::ServiceDesk.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_floating_window_z = global::ServiceDesk.Droid.Resource.Dimension.abc_floating_window_z;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material = global::ServiceDesk.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_panel_menu_list_width = global::ServiceDesk.Droid.Resource.Dimension.abc_panel_menu_list_width;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_progress_bar_height_material = global::ServiceDesk.Droid.Resource.Dimension.abc_progress_bar_height_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_search_view_preferred_height = global::ServiceDesk.Droid.Resource.Dimension.abc_search_view_preferred_height;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_search_view_preferred_width = global::ServiceDesk.Droid.Resource.Dimension.abc_search_view_preferred_width;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_seekbar_track_background_height_material = global::ServiceDesk.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material = global::ServiceDesk.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_select_dialog_padding_start_material = global::ServiceDesk.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_switch_padding = global::ServiceDesk.Droid.Resource.Dimension.abc_switch_padding;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_text_size_body_1_material = global::ServiceDesk.Droid.Resource.Dimension.abc_text_size_body_1_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_text_size_body_2_material = global::ServiceDesk.Droid.Resource.Dimension.abc_text_size_body_2_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_text_size_button_material = global::ServiceDesk.Droid.Resource.Dimension.abc_text_size_button_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_text_size_caption_material = global::ServiceDesk.Droid.Resource.Dimension.abc_text_size_caption_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_text_size_display_1_material = global::ServiceDesk.Droid.Resource.Dimension.abc_text_size_display_1_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_text_size_display_2_material = global::ServiceDesk.Droid.Resource.Dimension.abc_text_size_display_2_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_text_size_display_3_material = global::ServiceDesk.Droid.Resource.Dimension.abc_text_size_display_3_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_text_size_display_4_material = global::ServiceDesk.Droid.Resource.Dimension.abc_text_size_display_4_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_text_size_headline_material = global::ServiceDesk.Droid.Resource.Dimension.abc_text_size_headline_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_text_size_large_material = global::ServiceDesk.Droid.Resource.Dimension.abc_text_size_large_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_text_size_medium_material = global::ServiceDesk.Droid.Resource.Dimension.abc_text_size_medium_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_text_size_menu_header_material = global::ServiceDesk.Droid.Resource.Dimension.abc_text_size_menu_header_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_text_size_menu_material = global::ServiceDesk.Droid.Resource.Dimension.abc_text_size_menu_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_text_size_small_material = global::ServiceDesk.Droid.Resource.Dimension.abc_text_size_small_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_text_size_subhead_material = global::ServiceDesk.Droid.Resource.Dimension.abc_text_size_subhead_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::ServiceDesk.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_text_size_title_material = global::ServiceDesk.Droid.Resource.Dimension.abc_text_size_title_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.abc_text_size_title_material_toolbar = global::ServiceDesk.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.cardview_compat_inset_shadow = global::ServiceDesk.Droid.Resource.Dimension.cardview_compat_inset_shadow;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.cardview_default_elevation = global::ServiceDesk.Droid.Resource.Dimension.cardview_default_elevation;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.cardview_default_radius = global::ServiceDesk.Droid.Resource.Dimension.cardview_default_radius;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_appbar_elevation = global::ServiceDesk.Droid.Resource.Dimension.design_appbar_elevation;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width = global::ServiceDesk.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_bottom_navigation_active_text_size = global::ServiceDesk.Droid.Resource.Dimension.design_bottom_navigation_active_text_size;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_bottom_navigation_elevation = global::ServiceDesk.Droid.Resource.Dimension.design_bottom_navigation_elevation;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_bottom_navigation_height = global::ServiceDesk.Droid.Resource.Dimension.design_bottom_navigation_height;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_bottom_navigation_item_max_width = global::ServiceDesk.Droid.Resource.Dimension.design_bottom_navigation_item_max_width;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_bottom_navigation_item_min_width = global::ServiceDesk.Droid.Resource.Dimension.design_bottom_navigation_item_min_width;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_bottom_navigation_margin = global::ServiceDesk.Droid.Resource.Dimension.design_bottom_navigation_margin;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_bottom_navigation_shadow_height = global::ServiceDesk.Droid.Resource.Dimension.design_bottom_navigation_shadow_height;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_bottom_navigation_text_size = global::ServiceDesk.Droid.Resource.Dimension.design_bottom_navigation_text_size;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation = global::ServiceDesk.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min = global::ServiceDesk.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_fab_border_width = global::ServiceDesk.Droid.Resource.Dimension.design_fab_border_width;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_fab_elevation = global::ServiceDesk.Droid.Resource.Dimension.design_fab_elevation;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_fab_image_size = global::ServiceDesk.Droid.Resource.Dimension.design_fab_image_size;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_fab_size_mini = global::ServiceDesk.Droid.Resource.Dimension.design_fab_size_mini;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_fab_size_normal = global::ServiceDesk.Droid.Resource.Dimension.design_fab_size_normal;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_fab_translation_z_pressed = global::ServiceDesk.Droid.Resource.Dimension.design_fab_translation_z_pressed;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_navigation_elevation = global::ServiceDesk.Droid.Resource.Dimension.design_navigation_elevation;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_navigation_icon_padding = global::ServiceDesk.Droid.Resource.Dimension.design_navigation_icon_padding;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_navigation_icon_size = global::ServiceDesk.Droid.Resource.Dimension.design_navigation_icon_size;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_navigation_max_width = global::ServiceDesk.Droid.Resource.Dimension.design_navigation_max_width;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_navigation_padding_bottom = global::ServiceDesk.Droid.Resource.Dimension.design_navigation_padding_bottom;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_navigation_separator_vertical_padding = global::ServiceDesk.Droid.Resource.Dimension.design_navigation_separator_vertical_padding;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_snackbar_action_inline_max_width = global::ServiceDesk.Droid.Resource.Dimension.design_snackbar_action_inline_max_width;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_snackbar_background_corner_radius = global::ServiceDesk.Droid.Resource.Dimension.design_snackbar_background_corner_radius;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_snackbar_elevation = global::ServiceDesk.Droid.Resource.Dimension.design_snackbar_elevation;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::ServiceDesk.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_snackbar_max_width = global::ServiceDesk.Droid.Resource.Dimension.design_snackbar_max_width;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_snackbar_min_width = global::ServiceDesk.Droid.Resource.Dimension.design_snackbar_min_width;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_snackbar_padding_horizontal = global::ServiceDesk.Droid.Resource.Dimension.design_snackbar_padding_horizontal;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_snackbar_padding_vertical = global::ServiceDesk.Droid.Resource.Dimension.design_snackbar_padding_vertical;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::ServiceDesk.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_snackbar_text_size = global::ServiceDesk.Droid.Resource.Dimension.design_snackbar_text_size;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_tab_max_width = global::ServiceDesk.Droid.Resource.Dimension.design_tab_max_width;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_tab_scrollable_min_width = global::ServiceDesk.Droid.Resource.Dimension.design_tab_scrollable_min_width;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_tab_text_size = global::ServiceDesk.Droid.Resource.Dimension.design_tab_text_size;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.design_tab_text_size_2line = global::ServiceDesk.Droid.Resource.Dimension.design_tab_text_size_2line;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.disabled_alpha_material_dark = global::ServiceDesk.Droid.Resource.Dimension.disabled_alpha_material_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.disabled_alpha_material_light = global::ServiceDesk.Droid.Resource.Dimension.disabled_alpha_material_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.highlight_alpha_material_colored = global::ServiceDesk.Droid.Resource.Dimension.highlight_alpha_material_colored;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.highlight_alpha_material_dark = global::ServiceDesk.Droid.Resource.Dimension.highlight_alpha_material_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.highlight_alpha_material_light = global::ServiceDesk.Droid.Resource.Dimension.highlight_alpha_material_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.hint_alpha_material_dark = global::ServiceDesk.Droid.Resource.Dimension.hint_alpha_material_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.hint_alpha_material_light = global::ServiceDesk.Droid.Resource.Dimension.hint_alpha_material_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.hint_pressed_alpha_material_dark = global::ServiceDesk.Droid.Resource.Dimension.hint_pressed_alpha_material_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.hint_pressed_alpha_material_light = global::ServiceDesk.Droid.Resource.Dimension.hint_pressed_alpha_material_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::ServiceDesk.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::ServiceDesk.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::ServiceDesk.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.mr_controller_volume_group_list_item_height = global::ServiceDesk.Droid.Resource.Dimension.mr_controller_volume_group_list_item_height;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.mr_controller_volume_group_list_item_icon_size = global::ServiceDesk.Droid.Resource.Dimension.mr_controller_volume_group_list_item_icon_size;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.mr_controller_volume_group_list_max_height = global::ServiceDesk.Droid.Resource.Dimension.mr_controller_volume_group_list_max_height;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.mr_controller_volume_group_list_padding_top = global::ServiceDesk.Droid.Resource.Dimension.mr_controller_volume_group_list_padding_top;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.mr_dialog_fixed_width_major = global::ServiceDesk.Droid.Resource.Dimension.mr_dialog_fixed_width_major;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.mr_dialog_fixed_width_minor = global::ServiceDesk.Droid.Resource.Dimension.mr_dialog_fixed_width_minor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.notification_action_icon_size = global::ServiceDesk.Droid.Resource.Dimension.notification_action_icon_size;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.notification_action_text_size = global::ServiceDesk.Droid.Resource.Dimension.notification_action_text_size;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.notification_big_circle_margin = global::ServiceDesk.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.notification_content_margin_start = global::ServiceDesk.Droid.Resource.Dimension.notification_content_margin_start;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.notification_large_icon_height = global::ServiceDesk.Droid.Resource.Dimension.notification_large_icon_height;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.notification_large_icon_width = global::ServiceDesk.Droid.Resource.Dimension.notification_large_icon_width;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.notification_main_column_padding_top = global::ServiceDesk.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.notification_media_narrow_margin = global::ServiceDesk.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.notification_right_icon_size = global::ServiceDesk.Droid.Resource.Dimension.notification_right_icon_size;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.notification_right_side_padding_top = global::ServiceDesk.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.notification_small_icon_background_padding = global::ServiceDesk.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.notification_small_icon_size_as_large = global::ServiceDesk.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.notification_subtext_size = global::ServiceDesk.Droid.Resource.Dimension.notification_subtext_size;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.notification_top_pad = global::ServiceDesk.Droid.Resource.Dimension.notification_top_pad;
+			global::Xamarin.Forms.Svg.Droid.Resource.Dimension.notification_top_pad_large_text = global::ServiceDesk.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::ServiceDesk.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_action_bar_item_background_material = global::ServiceDesk.Droid.Resource.Drawable.abc_action_bar_item_background_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_btn_borderless_material = global::ServiceDesk.Droid.Resource.Drawable.abc_btn_borderless_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_btn_check_material = global::ServiceDesk.Droid.Resource.Drawable.abc_btn_check_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::ServiceDesk.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::ServiceDesk.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_btn_colored_material = global::ServiceDesk.Droid.Resource.Drawable.abc_btn_colored_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_btn_default_mtrl_shape = global::ServiceDesk.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_btn_radio_material = global::ServiceDesk.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::ServiceDesk.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::ServiceDesk.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::ServiceDesk.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::ServiceDesk.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_cab_background_internal_bg = global::ServiceDesk.Droid.Resource.Drawable.abc_cab_background_internal_bg;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_cab_background_top_material = global::ServiceDesk.Droid.Resource.Drawable.abc_cab_background_top_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::ServiceDesk.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_control_background_material = global::ServiceDesk.Droid.Resource.Drawable.abc_control_background_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_dialog_material_background = global::ServiceDesk.Droid.Resource.Drawable.abc_dialog_material_background;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_edit_text_material = global::ServiceDesk.Droid.Resource.Drawable.abc_edit_text_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_ic_ab_back_material = global::ServiceDesk.Droid.Resource.Drawable.abc_ic_ab_back_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::ServiceDesk.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_ic_clear_material = global::ServiceDesk.Droid.Resource.Drawable.abc_ic_clear_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::ServiceDesk.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_ic_go_search_api_material = global::ServiceDesk.Droid.Resource.Drawable.abc_ic_go_search_api_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::ServiceDesk.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::ServiceDesk.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_ic_menu_overflow_material = global::ServiceDesk.Droid.Resource.Drawable.abc_ic_menu_overflow_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::ServiceDesk.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::ServiceDesk.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::ServiceDesk.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_ic_search_api_material = global::ServiceDesk.Droid.Resource.Drawable.abc_ic_search_api_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_ic_star_black_16dp = global::ServiceDesk.Droid.Resource.Drawable.abc_ic_star_black_16dp;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_ic_star_black_36dp = global::ServiceDesk.Droid.Resource.Drawable.abc_ic_star_black_36dp;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_ic_star_black_48dp = global::ServiceDesk.Droid.Resource.Drawable.abc_ic_star_black_48dp;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_ic_star_half_black_16dp = global::ServiceDesk.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_ic_star_half_black_36dp = global::ServiceDesk.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_ic_star_half_black_48dp = global::ServiceDesk.Droid.Resource.Drawable.abc_ic_star_half_black_48dp;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_ic_voice_search_api_material = global::ServiceDesk.Droid.Resource.Drawable.abc_ic_voice_search_api_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_item_background_holo_dark = global::ServiceDesk.Droid.Resource.Drawable.abc_item_background_holo_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_item_background_holo_light = global::ServiceDesk.Droid.Resource.Drawable.abc_item_background_holo_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha = global::ServiceDesk.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_list_focused_holo = global::ServiceDesk.Droid.Resource.Drawable.abc_list_focused_holo;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_list_longpressed_holo = global::ServiceDesk.Droid.Resource.Drawable.abc_list_longpressed_holo;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_list_pressed_holo_dark = global::ServiceDesk.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_list_pressed_holo_light = global::ServiceDesk.Droid.Resource.Drawable.abc_list_pressed_holo_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::ServiceDesk.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::ServiceDesk.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::ServiceDesk.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light = global::ServiceDesk.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_list_selector_holo_dark = global::ServiceDesk.Droid.Resource.Drawable.abc_list_selector_holo_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_list_selector_holo_light = global::ServiceDesk.Droid.Resource.Drawable.abc_list_selector_holo_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::ServiceDesk.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_popup_background_mtrl_mult = global::ServiceDesk.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_ratingbar_indicator_material = global::ServiceDesk.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_ratingbar_material = global::ServiceDesk.Droid.Resource.Drawable.abc_ratingbar_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_ratingbar_small_material = global::ServiceDesk.Droid.Resource.Drawable.abc_ratingbar_small_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::ServiceDesk.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::ServiceDesk.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::ServiceDesk.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::ServiceDesk.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::ServiceDesk.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_seekbar_thumb_material = global::ServiceDesk.Droid.Resource.Drawable.abc_seekbar_thumb_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_seekbar_tick_mark_material = global::ServiceDesk.Droid.Resource.Drawable.abc_seekbar_tick_mark_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_seekbar_track_material = global::ServiceDesk.Droid.Resource.Drawable.abc_seekbar_track_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::ServiceDesk.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_spinner_textfield_background_material = global::ServiceDesk.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_switch_thumb_material = global::ServiceDesk.Droid.Resource.Drawable.abc_switch_thumb_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha = global::ServiceDesk.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_tab_indicator_material = global::ServiceDesk.Droid.Resource.Drawable.abc_tab_indicator_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::ServiceDesk.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_text_cursor_material = global::ServiceDesk.Droid.Resource.Drawable.abc_text_cursor_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark = global::ServiceDesk.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light = global::ServiceDesk.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark = global::ServiceDesk.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light = global::ServiceDesk.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark = global::ServiceDesk.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light = global::ServiceDesk.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::ServiceDesk.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::ServiceDesk.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::ServiceDesk.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::ServiceDesk.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_textfield_search_material = global::ServiceDesk.Droid.Resource.Drawable.abc_textfield_search_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.abc_vector_test = global::ServiceDesk.Droid.Resource.Drawable.abc_vector_test;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.avd_hide_password = global::ServiceDesk.Droid.Resource.Drawable.avd_hide_password;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.avd_show_password = global::ServiceDesk.Droid.Resource.Drawable.avd_show_password;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.design_bottom_navigation_item_background = global::ServiceDesk.Droid.Resource.Drawable.design_bottom_navigation_item_background;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.design_fab_background = global::ServiceDesk.Droid.Resource.Drawable.design_fab_background;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.design_ic_visibility = global::ServiceDesk.Droid.Resource.Drawable.design_ic_visibility;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.design_ic_visibility_off = global::ServiceDesk.Droid.Resource.Drawable.design_ic_visibility_off;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.design_password_eye = global::ServiceDesk.Droid.Resource.Drawable.design_password_eye;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.design_snackbar_background = global::ServiceDesk.Droid.Resource.Drawable.design_snackbar_background;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_audiotrack_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_audiotrack_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_audiotrack_light = global::ServiceDesk.Droid.Resource.Drawable.ic_audiotrack_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_dialog_close_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_dialog_close_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_dialog_close_light = global::ServiceDesk.Droid.Resource.Drawable.ic_dialog_close_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_group_collapse_00 = global::ServiceDesk.Droid.Resource.Drawable.ic_group_collapse_00;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_group_collapse_01 = global::ServiceDesk.Droid.Resource.Drawable.ic_group_collapse_01;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_group_collapse_02 = global::ServiceDesk.Droid.Resource.Drawable.ic_group_collapse_02;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_group_collapse_03 = global::ServiceDesk.Droid.Resource.Drawable.ic_group_collapse_03;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_group_collapse_04 = global::ServiceDesk.Droid.Resource.Drawable.ic_group_collapse_04;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_group_collapse_05 = global::ServiceDesk.Droid.Resource.Drawable.ic_group_collapse_05;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_group_collapse_06 = global::ServiceDesk.Droid.Resource.Drawable.ic_group_collapse_06;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_group_collapse_07 = global::ServiceDesk.Droid.Resource.Drawable.ic_group_collapse_07;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_group_collapse_08 = global::ServiceDesk.Droid.Resource.Drawable.ic_group_collapse_08;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_group_collapse_09 = global::ServiceDesk.Droid.Resource.Drawable.ic_group_collapse_09;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_group_collapse_10 = global::ServiceDesk.Droid.Resource.Drawable.ic_group_collapse_10;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_group_collapse_11 = global::ServiceDesk.Droid.Resource.Drawable.ic_group_collapse_11;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_group_collapse_12 = global::ServiceDesk.Droid.Resource.Drawable.ic_group_collapse_12;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_group_collapse_13 = global::ServiceDesk.Droid.Resource.Drawable.ic_group_collapse_13;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_group_collapse_14 = global::ServiceDesk.Droid.Resource.Drawable.ic_group_collapse_14;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_group_collapse_15 = global::ServiceDesk.Droid.Resource.Drawable.ic_group_collapse_15;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_group_expand_00 = global::ServiceDesk.Droid.Resource.Drawable.ic_group_expand_00;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_group_expand_01 = global::ServiceDesk.Droid.Resource.Drawable.ic_group_expand_01;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_group_expand_02 = global::ServiceDesk.Droid.Resource.Drawable.ic_group_expand_02;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_group_expand_03 = global::ServiceDesk.Droid.Resource.Drawable.ic_group_expand_03;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_group_expand_04 = global::ServiceDesk.Droid.Resource.Drawable.ic_group_expand_04;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_group_expand_05 = global::ServiceDesk.Droid.Resource.Drawable.ic_group_expand_05;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_group_expand_06 = global::ServiceDesk.Droid.Resource.Drawable.ic_group_expand_06;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_group_expand_07 = global::ServiceDesk.Droid.Resource.Drawable.ic_group_expand_07;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_group_expand_08 = global::ServiceDesk.Droid.Resource.Drawable.ic_group_expand_08;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_group_expand_09 = global::ServiceDesk.Droid.Resource.Drawable.ic_group_expand_09;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_group_expand_10 = global::ServiceDesk.Droid.Resource.Drawable.ic_group_expand_10;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_group_expand_11 = global::ServiceDesk.Droid.Resource.Drawable.ic_group_expand_11;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_group_expand_12 = global::ServiceDesk.Droid.Resource.Drawable.ic_group_expand_12;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_group_expand_13 = global::ServiceDesk.Droid.Resource.Drawable.ic_group_expand_13;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_group_expand_14 = global::ServiceDesk.Droid.Resource.Drawable.ic_group_expand_14;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_group_expand_15 = global::ServiceDesk.Droid.Resource.Drawable.ic_group_expand_15;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_media_pause_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_media_pause_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_media_pause_light = global::ServiceDesk.Droid.Resource.Drawable.ic_media_pause_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_media_play_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_media_play_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_media_play_light = global::ServiceDesk.Droid.Resource.Drawable.ic_media_play_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_media_stop_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_media_stop_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_media_stop_light = global::ServiceDesk.Droid.Resource.Drawable.ic_media_stop_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_00_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_00_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_00_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_00_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_01_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_01_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_01_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_01_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_02_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_02_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_02_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_02_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_03_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_03_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_03_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_03_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_04_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_04_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_04_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_04_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_05_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_05_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_05_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_05_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_06_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_06_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_06_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_06_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_07_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_07_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_07_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_07_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_08_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_08_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_08_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_08_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_09_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_09_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_09_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_09_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_10_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_10_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_10_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_10_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_11_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_11_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_11_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_11_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_12_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_12_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_12_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_12_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_13_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_13_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_13_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_13_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_14_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_14_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_14_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_14_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_15_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_15_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_15_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_15_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_16_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_16_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_16_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_16_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_17_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_17_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_17_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_17_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_18_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_18_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_18_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_18_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_19_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_19_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_19_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_19_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_20_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_20_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_20_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_20_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_21_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_21_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_21_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_21_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_22_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_22_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connected_22_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connected_22_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_00_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_00_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_00_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_00_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_01_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_01_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_01_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_01_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_02_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_02_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_02_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_02_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_03_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_03_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_03_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_03_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_04_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_04_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_04_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_04_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_05_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_05_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_05_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_05_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_06_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_06_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_06_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_06_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_07_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_07_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_07_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_07_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_08_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_08_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_08_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_08_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_09_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_09_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_09_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_09_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_10_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_10_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_10_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_10_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_11_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_11_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_11_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_11_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_12_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_12_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_12_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_12_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_13_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_13_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_13_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_13_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_14_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_14_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_14_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_14_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_15_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_15_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_15_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_15_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_16_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_16_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_16_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_16_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_17_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_17_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_17_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_17_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_18_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_18_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_18_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_18_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_19_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_19_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_19_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_19_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_20_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_20_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_20_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_20_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_21_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_21_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_21_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_21_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_22_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_22_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_connecting_22_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_connecting_22_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_disabled_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_disabled_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_disabled_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_disabled_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_disconnected_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_disconnected_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_disconnected_light = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_disconnected_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_mr_button_grey = global::ServiceDesk.Droid.Resource.Drawable.ic_mr_button_grey;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_vol_type_speaker_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_vol_type_speaker_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_vol_type_speaker_group_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_vol_type_speaker_group_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_vol_type_speaker_group_light = global::ServiceDesk.Droid.Resource.Drawable.ic_vol_type_speaker_group_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_vol_type_speaker_light = global::ServiceDesk.Droid.Resource.Drawable.ic_vol_type_speaker_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_vol_type_tv_dark = global::ServiceDesk.Droid.Resource.Drawable.ic_vol_type_tv_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.ic_vol_type_tv_light = global::ServiceDesk.Droid.Resource.Drawable.ic_vol_type_tv_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.mr_button_connected_dark = global::ServiceDesk.Droid.Resource.Drawable.mr_button_connected_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.mr_button_connected_light = global::ServiceDesk.Droid.Resource.Drawable.mr_button_connected_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.mr_button_connecting_dark = global::ServiceDesk.Droid.Resource.Drawable.mr_button_connecting_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.mr_button_connecting_light = global::ServiceDesk.Droid.Resource.Drawable.mr_button_connecting_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.mr_button_dark = global::ServiceDesk.Droid.Resource.Drawable.mr_button_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.mr_button_light = global::ServiceDesk.Droid.Resource.Drawable.mr_button_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.mr_dialog_close_dark = global::ServiceDesk.Droid.Resource.Drawable.mr_dialog_close_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.mr_dialog_close_light = global::ServiceDesk.Droid.Resource.Drawable.mr_dialog_close_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.mr_dialog_material_background_dark = global::ServiceDesk.Droid.Resource.Drawable.mr_dialog_material_background_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.mr_dialog_material_background_light = global::ServiceDesk.Droid.Resource.Drawable.mr_dialog_material_background_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.mr_group_collapse = global::ServiceDesk.Droid.Resource.Drawable.mr_group_collapse;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.mr_group_expand = global::ServiceDesk.Droid.Resource.Drawable.mr_group_expand;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.mr_media_pause_dark = global::ServiceDesk.Droid.Resource.Drawable.mr_media_pause_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.mr_media_pause_light = global::ServiceDesk.Droid.Resource.Drawable.mr_media_pause_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.mr_media_play_dark = global::ServiceDesk.Droid.Resource.Drawable.mr_media_play_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.mr_media_play_light = global::ServiceDesk.Droid.Resource.Drawable.mr_media_play_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.mr_media_stop_dark = global::ServiceDesk.Droid.Resource.Drawable.mr_media_stop_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.mr_media_stop_light = global::ServiceDesk.Droid.Resource.Drawable.mr_media_stop_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.mr_vol_type_audiotrack_dark = global::ServiceDesk.Droid.Resource.Drawable.mr_vol_type_audiotrack_dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.mr_vol_type_audiotrack_light = global::ServiceDesk.Droid.Resource.Drawable.mr_vol_type_audiotrack_light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.navigation_empty_icon = global::ServiceDesk.Droid.Resource.Drawable.navigation_empty_icon;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.notification_action_background = global::ServiceDesk.Droid.Resource.Drawable.notification_action_background;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.notification_bg = global::ServiceDesk.Droid.Resource.Drawable.notification_bg;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.notification_bg_low = global::ServiceDesk.Droid.Resource.Drawable.notification_bg_low;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.notification_bg_low_normal = global::ServiceDesk.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.notification_bg_low_pressed = global::ServiceDesk.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.notification_bg_normal = global::ServiceDesk.Droid.Resource.Drawable.notification_bg_normal;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.notification_bg_normal_pressed = global::ServiceDesk.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.notification_icon_background = global::ServiceDesk.Droid.Resource.Drawable.notification_icon_background;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.notification_template_icon_bg = global::ServiceDesk.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.notification_template_icon_low_bg = global::ServiceDesk.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.notification_tile_bg = global::ServiceDesk.Droid.Resource.Drawable.notification_tile_bg;
+			global::Xamarin.Forms.Svg.Droid.Resource.Drawable.notify_panel_notification_icon_bg = global::ServiceDesk.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.action0 = global::ServiceDesk.Droid.Resource.Id.action0;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.action_bar = global::ServiceDesk.Droid.Resource.Id.action_bar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.action_bar_activity_content = global::ServiceDesk.Droid.Resource.Id.action_bar_activity_content;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.action_bar_container = global::ServiceDesk.Droid.Resource.Id.action_bar_container;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.action_bar_root = global::ServiceDesk.Droid.Resource.Id.action_bar_root;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.action_bar_spinner = global::ServiceDesk.Droid.Resource.Id.action_bar_spinner;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.action_bar_subtitle = global::ServiceDesk.Droid.Resource.Id.action_bar_subtitle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.action_bar_title = global::ServiceDesk.Droid.Resource.Id.action_bar_title;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.action_container = global::ServiceDesk.Droid.Resource.Id.action_container;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.action_context_bar = global::ServiceDesk.Droid.Resource.Id.action_context_bar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.action_divider = global::ServiceDesk.Droid.Resource.Id.action_divider;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.action_image = global::ServiceDesk.Droid.Resource.Id.action_image;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.action_menu_divider = global::ServiceDesk.Droid.Resource.Id.action_menu_divider;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.action_menu_presenter = global::ServiceDesk.Droid.Resource.Id.action_menu_presenter;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.action_mode_bar = global::ServiceDesk.Droid.Resource.Id.action_mode_bar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.action_mode_bar_stub = global::ServiceDesk.Droid.Resource.Id.action_mode_bar_stub;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.action_mode_close_button = global::ServiceDesk.Droid.Resource.Id.action_mode_close_button;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.action_text = global::ServiceDesk.Droid.Resource.Id.action_text;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.actions = global::ServiceDesk.Droid.Resource.Id.actions;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.activity_chooser_view_content = global::ServiceDesk.Droid.Resource.Id.activity_chooser_view_content;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.add = global::ServiceDesk.Droid.Resource.Id.add;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.alertTitle = global::ServiceDesk.Droid.Resource.Id.alertTitle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.auto = global::ServiceDesk.Droid.Resource.Id.auto;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.bottom = global::ServiceDesk.Droid.Resource.Id.bottom;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.buttonPanel = global::ServiceDesk.Droid.Resource.Id.buttonPanel;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.cancel_action = global::ServiceDesk.Droid.Resource.Id.cancel_action;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.center = global::ServiceDesk.Droid.Resource.Id.center;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.checkbox = global::ServiceDesk.Droid.Resource.Id.checkbox;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.chronometer = global::ServiceDesk.Droid.Resource.Id.chronometer;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.container = global::ServiceDesk.Droid.Resource.Id.container;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.contentPanel = global::ServiceDesk.Droid.Resource.Id.contentPanel;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.coordinator = global::ServiceDesk.Droid.Resource.Id.coordinator;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.custom = global::ServiceDesk.Droid.Resource.Id.custom;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.customPanel = global::ServiceDesk.Droid.Resource.Id.customPanel;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.decor_content_parent = global::ServiceDesk.Droid.Resource.Id.decor_content_parent;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.default_activity_button = global::ServiceDesk.Droid.Resource.Id.default_activity_button;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.design_bottom_sheet = global::ServiceDesk.Droid.Resource.Id.design_bottom_sheet;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.design_menu_item_action_area = global::ServiceDesk.Droid.Resource.Id.design_menu_item_action_area;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.design_menu_item_action_area_stub = global::ServiceDesk.Droid.Resource.Id.design_menu_item_action_area_stub;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.design_menu_item_text = global::ServiceDesk.Droid.Resource.Id.design_menu_item_text;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.design_navigation_view = global::ServiceDesk.Droid.Resource.Id.design_navigation_view;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.edit_query = global::ServiceDesk.Droid.Resource.Id.edit_query;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.end = global::ServiceDesk.Droid.Resource.Id.end;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.end_padder = global::ServiceDesk.Droid.Resource.Id.end_padder;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.expand_activities_button = global::ServiceDesk.Droid.Resource.Id.expand_activities_button;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.expanded_menu = global::ServiceDesk.Droid.Resource.Id.expanded_menu;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.fill = global::ServiceDesk.Droid.Resource.Id.fill;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.@fixed = global::ServiceDesk.Droid.Resource.Id.@fixed;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.home = global::ServiceDesk.Droid.Resource.Id.home;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.icon = global::ServiceDesk.Droid.Resource.Id.icon;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.icon_group = global::ServiceDesk.Droid.Resource.Id.icon_group;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.image = global::ServiceDesk.Droid.Resource.Id.image;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.info = global::ServiceDesk.Droid.Resource.Id.info;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.item_touch_helper_previous_elevation = global::ServiceDesk.Droid.Resource.Id.item_touch_helper_previous_elevation;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.largeLabel = global::ServiceDesk.Droid.Resource.Id.largeLabel;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.left = global::ServiceDesk.Droid.Resource.Id.left;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.line1 = global::ServiceDesk.Droid.Resource.Id.line1;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.line3 = global::ServiceDesk.Droid.Resource.Id.line3;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.listMode = global::ServiceDesk.Droid.Resource.Id.listMode;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.list_item = global::ServiceDesk.Droid.Resource.Id.list_item;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.masked = global::ServiceDesk.Droid.Resource.Id.masked;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.media_actions = global::ServiceDesk.Droid.Resource.Id.media_actions;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.mini = global::ServiceDesk.Droid.Resource.Id.mini;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.mr_art = global::ServiceDesk.Droid.Resource.Id.mr_art;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.mr_chooser_list = global::ServiceDesk.Droid.Resource.Id.mr_chooser_list;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.mr_chooser_route_desc = global::ServiceDesk.Droid.Resource.Id.mr_chooser_route_desc;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.mr_chooser_route_icon = global::ServiceDesk.Droid.Resource.Id.mr_chooser_route_icon;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.mr_chooser_route_name = global::ServiceDesk.Droid.Resource.Id.mr_chooser_route_name;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.mr_chooser_title = global::ServiceDesk.Droid.Resource.Id.mr_chooser_title;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.mr_close = global::ServiceDesk.Droid.Resource.Id.mr_close;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.mr_control_divider = global::ServiceDesk.Droid.Resource.Id.mr_control_divider;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.mr_control_playback_ctrl = global::ServiceDesk.Droid.Resource.Id.mr_control_playback_ctrl;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.mr_control_subtitle = global::ServiceDesk.Droid.Resource.Id.mr_control_subtitle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.mr_control_title = global::ServiceDesk.Droid.Resource.Id.mr_control_title;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.mr_control_title_container = global::ServiceDesk.Droid.Resource.Id.mr_control_title_container;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.mr_custom_control = global::ServiceDesk.Droid.Resource.Id.mr_custom_control;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.mr_default_control = global::ServiceDesk.Droid.Resource.Id.mr_default_control;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.mr_dialog_area = global::ServiceDesk.Droid.Resource.Id.mr_dialog_area;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.mr_expandable_area = global::ServiceDesk.Droid.Resource.Id.mr_expandable_area;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.mr_group_expand_collapse = global::ServiceDesk.Droid.Resource.Id.mr_group_expand_collapse;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.mr_media_main_control = global::ServiceDesk.Droid.Resource.Id.mr_media_main_control;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.mr_name = global::ServiceDesk.Droid.Resource.Id.mr_name;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.mr_playback_control = global::ServiceDesk.Droid.Resource.Id.mr_playback_control;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.mr_title_bar = global::ServiceDesk.Droid.Resource.Id.mr_title_bar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.mr_volume_control = global::ServiceDesk.Droid.Resource.Id.mr_volume_control;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.mr_volume_group_list = global::ServiceDesk.Droid.Resource.Id.mr_volume_group_list;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.mr_volume_item_icon = global::ServiceDesk.Droid.Resource.Id.mr_volume_item_icon;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.mr_volume_slider = global::ServiceDesk.Droid.Resource.Id.mr_volume_slider;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.multiply = global::ServiceDesk.Droid.Resource.Id.multiply;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.navigation_header_container = global::ServiceDesk.Droid.Resource.Id.navigation_header_container;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.none = global::ServiceDesk.Droid.Resource.Id.none;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.normal = global::ServiceDesk.Droid.Resource.Id.normal;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.notification_background = global::ServiceDesk.Droid.Resource.Id.notification_background;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.notification_main_column = global::ServiceDesk.Droid.Resource.Id.notification_main_column;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.notification_main_column_container = global::ServiceDesk.Droid.Resource.Id.notification_main_column_container;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.parallax = global::ServiceDesk.Droid.Resource.Id.parallax;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.parentPanel = global::ServiceDesk.Droid.Resource.Id.parentPanel;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.pin = global::ServiceDesk.Droid.Resource.Id.pin;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.progress_circular = global::ServiceDesk.Droid.Resource.Id.progress_circular;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.progress_horizontal = global::ServiceDesk.Droid.Resource.Id.progress_horizontal;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.radio = global::ServiceDesk.Droid.Resource.Id.radio;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.right = global::ServiceDesk.Droid.Resource.Id.right;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.right_icon = global::ServiceDesk.Droid.Resource.Id.right_icon;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.right_side = global::ServiceDesk.Droid.Resource.Id.right_side;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.screen = global::ServiceDesk.Droid.Resource.Id.screen;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.scrollIndicatorDown = global::ServiceDesk.Droid.Resource.Id.scrollIndicatorDown;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.scrollIndicatorUp = global::ServiceDesk.Droid.Resource.Id.scrollIndicatorUp;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.scrollView = global::ServiceDesk.Droid.Resource.Id.scrollView;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.scrollable = global::ServiceDesk.Droid.Resource.Id.scrollable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.search_badge = global::ServiceDesk.Droid.Resource.Id.search_badge;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.search_bar = global::ServiceDesk.Droid.Resource.Id.search_bar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.search_button = global::ServiceDesk.Droid.Resource.Id.search_button;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.search_close_btn = global::ServiceDesk.Droid.Resource.Id.search_close_btn;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.search_edit_frame = global::ServiceDesk.Droid.Resource.Id.search_edit_frame;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.search_go_btn = global::ServiceDesk.Droid.Resource.Id.search_go_btn;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.search_mag_icon = global::ServiceDesk.Droid.Resource.Id.search_mag_icon;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.search_plate = global::ServiceDesk.Droid.Resource.Id.search_plate;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.search_src_text = global::ServiceDesk.Droid.Resource.Id.search_src_text;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.search_voice_btn = global::ServiceDesk.Droid.Resource.Id.search_voice_btn;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.select_dialog_listview = global::ServiceDesk.Droid.Resource.Id.select_dialog_listview;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.shortcut = global::ServiceDesk.Droid.Resource.Id.shortcut;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.smallLabel = global::ServiceDesk.Droid.Resource.Id.smallLabel;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.snackbar_action = global::ServiceDesk.Droid.Resource.Id.snackbar_action;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.snackbar_text = global::ServiceDesk.Droid.Resource.Id.snackbar_text;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.spacer = global::ServiceDesk.Droid.Resource.Id.spacer;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.split_action_bar = global::ServiceDesk.Droid.Resource.Id.split_action_bar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.src_atop = global::ServiceDesk.Droid.Resource.Id.src_atop;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.src_in = global::ServiceDesk.Droid.Resource.Id.src_in;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.src_over = global::ServiceDesk.Droid.Resource.Id.src_over;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.start = global::ServiceDesk.Droid.Resource.Id.start;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.status_bar_latest_event_content = global::ServiceDesk.Droid.Resource.Id.status_bar_latest_event_content;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.submenuarrow = global::ServiceDesk.Droid.Resource.Id.submenuarrow;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.submit_area = global::ServiceDesk.Droid.Resource.Id.submit_area;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.tabMode = global::ServiceDesk.Droid.Resource.Id.tabMode;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.text = global::ServiceDesk.Droid.Resource.Id.text;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.text2 = global::ServiceDesk.Droid.Resource.Id.text2;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.textSpacerNoButtons = global::ServiceDesk.Droid.Resource.Id.textSpacerNoButtons;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.textSpacerNoTitle = global::ServiceDesk.Droid.Resource.Id.textSpacerNoTitle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.text_input_password_toggle = global::ServiceDesk.Droid.Resource.Id.text_input_password_toggle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.textinput_counter = global::ServiceDesk.Droid.Resource.Id.textinput_counter;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.textinput_error = global::ServiceDesk.Droid.Resource.Id.textinput_error;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.time = global::ServiceDesk.Droid.Resource.Id.time;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.title = global::ServiceDesk.Droid.Resource.Id.title;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.titleDividerNoCustom = global::ServiceDesk.Droid.Resource.Id.titleDividerNoCustom;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.title_template = global::ServiceDesk.Droid.Resource.Id.title_template;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.top = global::ServiceDesk.Droid.Resource.Id.top;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.topPanel = global::ServiceDesk.Droid.Resource.Id.topPanel;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.touch_outside = global::ServiceDesk.Droid.Resource.Id.touch_outside;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.transition_current_scene = global::ServiceDesk.Droid.Resource.Id.transition_current_scene;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.transition_scene_layoutid_cache = global::ServiceDesk.Droid.Resource.Id.transition_scene_layoutid_cache;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.up = global::ServiceDesk.Droid.Resource.Id.up;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.view_offset_helper = global::ServiceDesk.Droid.Resource.Id.view_offset_helper;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.visible = global::ServiceDesk.Droid.Resource.Id.visible;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.volume_item_container = global::ServiceDesk.Droid.Resource.Id.volume_item_container;
+			global::Xamarin.Forms.Svg.Droid.Resource.Id.wrap_content = global::ServiceDesk.Droid.Resource.Id.wrap_content;
+			global::Xamarin.Forms.Svg.Droid.Resource.Integer.abc_config_activityDefaultDur = global::ServiceDesk.Droid.Resource.Integer.abc_config_activityDefaultDur;
+			global::Xamarin.Forms.Svg.Droid.Resource.Integer.abc_config_activityShortDur = global::ServiceDesk.Droid.Resource.Integer.abc_config_activityShortDur;
+			global::Xamarin.Forms.Svg.Droid.Resource.Integer.app_bar_elevation_anim_duration = global::ServiceDesk.Droid.Resource.Integer.app_bar_elevation_anim_duration;
+			global::Xamarin.Forms.Svg.Droid.Resource.Integer.bottom_sheet_slide_duration = global::ServiceDesk.Droid.Resource.Integer.bottom_sheet_slide_duration;
+			global::Xamarin.Forms.Svg.Droid.Resource.Integer.cancel_button_image_alpha = global::ServiceDesk.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::Xamarin.Forms.Svg.Droid.Resource.Integer.design_snackbar_text_max_lines = global::ServiceDesk.Droid.Resource.Integer.design_snackbar_text_max_lines;
+			global::Xamarin.Forms.Svg.Droid.Resource.Integer.hide_password_duration = global::ServiceDesk.Droid.Resource.Integer.hide_password_duration;
+			global::Xamarin.Forms.Svg.Droid.Resource.Integer.mr_controller_volume_group_list_animation_duration_ms = global::ServiceDesk.Droid.Resource.Integer.mr_controller_volume_group_list_animation_duration_ms;
+			global::Xamarin.Forms.Svg.Droid.Resource.Integer.mr_controller_volume_group_list_fade_in_duration_ms = global::ServiceDesk.Droid.Resource.Integer.mr_controller_volume_group_list_fade_in_duration_ms;
+			global::Xamarin.Forms.Svg.Droid.Resource.Integer.mr_controller_volume_group_list_fade_out_duration_ms = global::ServiceDesk.Droid.Resource.Integer.mr_controller_volume_group_list_fade_out_duration_ms;
+			global::Xamarin.Forms.Svg.Droid.Resource.Integer.show_password_duration = global::ServiceDesk.Droid.Resource.Integer.show_password_duration;
+			global::Xamarin.Forms.Svg.Droid.Resource.Integer.status_bar_notification_info_maxnum = global::ServiceDesk.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Xamarin.Forms.Svg.Droid.Resource.Interpolator.mr_fast_out_slow_in = global::ServiceDesk.Droid.Resource.Interpolator.mr_fast_out_slow_in;
+			global::Xamarin.Forms.Svg.Droid.Resource.Interpolator.mr_linear_out_slow_in = global::ServiceDesk.Droid.Resource.Interpolator.mr_linear_out_slow_in;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.abc_action_bar_title_item = global::ServiceDesk.Droid.Resource.Layout.abc_action_bar_title_item;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.abc_action_bar_up_container = global::ServiceDesk.Droid.Resource.Layout.abc_action_bar_up_container;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.abc_action_menu_item_layout = global::ServiceDesk.Droid.Resource.Layout.abc_action_menu_item_layout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.abc_action_menu_layout = global::ServiceDesk.Droid.Resource.Layout.abc_action_menu_layout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.abc_action_mode_bar = global::ServiceDesk.Droid.Resource.Layout.abc_action_mode_bar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.abc_action_mode_close_item_material = global::ServiceDesk.Droid.Resource.Layout.abc_action_mode_close_item_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.abc_activity_chooser_view = global::ServiceDesk.Droid.Resource.Layout.abc_activity_chooser_view;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.abc_activity_chooser_view_list_item = global::ServiceDesk.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.abc_alert_dialog_button_bar_material = global::ServiceDesk.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.abc_alert_dialog_material = global::ServiceDesk.Droid.Resource.Layout.abc_alert_dialog_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.abc_alert_dialog_title_material = global::ServiceDesk.Droid.Resource.Layout.abc_alert_dialog_title_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.abc_dialog_title_material = global::ServiceDesk.Droid.Resource.Layout.abc_dialog_title_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.abc_expanded_menu_layout = global::ServiceDesk.Droid.Resource.Layout.abc_expanded_menu_layout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.abc_list_menu_item_checkbox = global::ServiceDesk.Droid.Resource.Layout.abc_list_menu_item_checkbox;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.abc_list_menu_item_icon = global::ServiceDesk.Droid.Resource.Layout.abc_list_menu_item_icon;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.abc_list_menu_item_layout = global::ServiceDesk.Droid.Resource.Layout.abc_list_menu_item_layout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.abc_list_menu_item_radio = global::ServiceDesk.Droid.Resource.Layout.abc_list_menu_item_radio;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.abc_popup_menu_header_item_layout = global::ServiceDesk.Droid.Resource.Layout.abc_popup_menu_header_item_layout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.abc_popup_menu_item_layout = global::ServiceDesk.Droid.Resource.Layout.abc_popup_menu_item_layout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.abc_screen_content_include = global::ServiceDesk.Droid.Resource.Layout.abc_screen_content_include;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.abc_screen_simple = global::ServiceDesk.Droid.Resource.Layout.abc_screen_simple;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode = global::ServiceDesk.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.abc_screen_toolbar = global::ServiceDesk.Droid.Resource.Layout.abc_screen_toolbar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line = global::ServiceDesk.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.abc_search_view = global::ServiceDesk.Droid.Resource.Layout.abc_search_view;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.abc_select_dialog_material = global::ServiceDesk.Droid.Resource.Layout.abc_select_dialog_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.design_bottom_navigation_item = global::ServiceDesk.Droid.Resource.Layout.design_bottom_navigation_item;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.design_bottom_sheet_dialog = global::ServiceDesk.Droid.Resource.Layout.design_bottom_sheet_dialog;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.design_layout_snackbar = global::ServiceDesk.Droid.Resource.Layout.design_layout_snackbar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.design_layout_snackbar_include = global::ServiceDesk.Droid.Resource.Layout.design_layout_snackbar_include;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.design_layout_tab_icon = global::ServiceDesk.Droid.Resource.Layout.design_layout_tab_icon;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.design_layout_tab_text = global::ServiceDesk.Droid.Resource.Layout.design_layout_tab_text;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.design_menu_item_action_area = global::ServiceDesk.Droid.Resource.Layout.design_menu_item_action_area;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.design_navigation_item = global::ServiceDesk.Droid.Resource.Layout.design_navigation_item;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.design_navigation_item_header = global::ServiceDesk.Droid.Resource.Layout.design_navigation_item_header;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.design_navigation_item_separator = global::ServiceDesk.Droid.Resource.Layout.design_navigation_item_separator;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.design_navigation_item_subheader = global::ServiceDesk.Droid.Resource.Layout.design_navigation_item_subheader;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.design_navigation_menu = global::ServiceDesk.Droid.Resource.Layout.design_navigation_menu;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.design_navigation_menu_item = global::ServiceDesk.Droid.Resource.Layout.design_navigation_menu_item;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.design_text_input_password_icon = global::ServiceDesk.Droid.Resource.Layout.design_text_input_password_icon;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.mr_chooser_dialog = global::ServiceDesk.Droid.Resource.Layout.mr_chooser_dialog;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.mr_chooser_list_item = global::ServiceDesk.Droid.Resource.Layout.mr_chooser_list_item;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.mr_controller_material_dialog_b = global::ServiceDesk.Droid.Resource.Layout.mr_controller_material_dialog_b;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.mr_controller_volume_item = global::ServiceDesk.Droid.Resource.Layout.mr_controller_volume_item;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.mr_playback_control = global::ServiceDesk.Droid.Resource.Layout.mr_playback_control;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.mr_volume_control = global::ServiceDesk.Droid.Resource.Layout.mr_volume_control;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.notification_action = global::ServiceDesk.Droid.Resource.Layout.notification_action;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.notification_action_tombstone = global::ServiceDesk.Droid.Resource.Layout.notification_action_tombstone;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.notification_media_action = global::ServiceDesk.Droid.Resource.Layout.notification_media_action;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.notification_media_cancel_action = global::ServiceDesk.Droid.Resource.Layout.notification_media_cancel_action;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.notification_template_big_media = global::ServiceDesk.Droid.Resource.Layout.notification_template_big_media;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.notification_template_big_media_custom = global::ServiceDesk.Droid.Resource.Layout.notification_template_big_media_custom;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.notification_template_big_media_narrow = global::ServiceDesk.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.notification_template_big_media_narrow_custom = global::ServiceDesk.Droid.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.notification_template_custom_big = global::ServiceDesk.Droid.Resource.Layout.notification_template_custom_big;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.notification_template_icon_group = global::ServiceDesk.Droid.Resource.Layout.notification_template_icon_group;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.notification_template_lines_media = global::ServiceDesk.Droid.Resource.Layout.notification_template_lines_media;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.notification_template_media = global::ServiceDesk.Droid.Resource.Layout.notification_template_media;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.notification_template_media_custom = global::ServiceDesk.Droid.Resource.Layout.notification_template_media_custom;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.notification_template_part_chronometer = global::ServiceDesk.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.notification_template_part_time = global::ServiceDesk.Droid.Resource.Layout.notification_template_part_time;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.select_dialog_item_material = global::ServiceDesk.Droid.Resource.Layout.select_dialog_item_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.select_dialog_multichoice_material = global::ServiceDesk.Droid.Resource.Layout.select_dialog_multichoice_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.select_dialog_singlechoice_material = global::ServiceDesk.Droid.Resource.Layout.select_dialog_singlechoice_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.Layout.support_simple_spinner_dropdown_item = global::ServiceDesk.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.abc_action_bar_home_description = global::ServiceDesk.Droid.Resource.String.abc_action_bar_home_description;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.abc_action_bar_up_description = global::ServiceDesk.Droid.Resource.String.abc_action_bar_up_description;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.abc_action_menu_overflow_description = global::ServiceDesk.Droid.Resource.String.abc_action_menu_overflow_description;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.abc_action_mode_done = global::ServiceDesk.Droid.Resource.String.abc_action_mode_done;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.abc_activity_chooser_view_see_all = global::ServiceDesk.Droid.Resource.String.abc_activity_chooser_view_see_all;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.abc_activitychooserview_choose_application = global::ServiceDesk.Droid.Resource.String.abc_activitychooserview_choose_application;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.abc_capital_off = global::ServiceDesk.Droid.Resource.String.abc_capital_off;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.abc_capital_on = global::ServiceDesk.Droid.Resource.String.abc_capital_on;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.abc_font_family_body_1_material = global::ServiceDesk.Droid.Resource.String.abc_font_family_body_1_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.abc_font_family_body_2_material = global::ServiceDesk.Droid.Resource.String.abc_font_family_body_2_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.abc_font_family_button_material = global::ServiceDesk.Droid.Resource.String.abc_font_family_button_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.abc_font_family_caption_material = global::ServiceDesk.Droid.Resource.String.abc_font_family_caption_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.abc_font_family_display_1_material = global::ServiceDesk.Droid.Resource.String.abc_font_family_display_1_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.abc_font_family_display_2_material = global::ServiceDesk.Droid.Resource.String.abc_font_family_display_2_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.abc_font_family_display_3_material = global::ServiceDesk.Droid.Resource.String.abc_font_family_display_3_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.abc_font_family_display_4_material = global::ServiceDesk.Droid.Resource.String.abc_font_family_display_4_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.abc_font_family_headline_material = global::ServiceDesk.Droid.Resource.String.abc_font_family_headline_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.abc_font_family_menu_material = global::ServiceDesk.Droid.Resource.String.abc_font_family_menu_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.abc_font_family_subhead_material = global::ServiceDesk.Droid.Resource.String.abc_font_family_subhead_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.abc_font_family_title_material = global::ServiceDesk.Droid.Resource.String.abc_font_family_title_material;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.abc_search_hint = global::ServiceDesk.Droid.Resource.String.abc_search_hint;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.abc_searchview_description_clear = global::ServiceDesk.Droid.Resource.String.abc_searchview_description_clear;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.abc_searchview_description_query = global::ServiceDesk.Droid.Resource.String.abc_searchview_description_query;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.abc_searchview_description_search = global::ServiceDesk.Droid.Resource.String.abc_searchview_description_search;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.abc_searchview_description_submit = global::ServiceDesk.Droid.Resource.String.abc_searchview_description_submit;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.abc_searchview_description_voice = global::ServiceDesk.Droid.Resource.String.abc_searchview_description_voice;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.abc_shareactionprovider_share_with = global::ServiceDesk.Droid.Resource.String.abc_shareactionprovider_share_with;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.abc_shareactionprovider_share_with_application = global::ServiceDesk.Droid.Resource.String.abc_shareactionprovider_share_with_application;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.abc_toolbar_collapse_description = global::ServiceDesk.Droid.Resource.String.abc_toolbar_collapse_description;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.appbar_scrolling_view_behavior = global::ServiceDesk.Droid.Resource.String.appbar_scrolling_view_behavior;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.bottom_sheet_behavior = global::ServiceDesk.Droid.Resource.String.bottom_sheet_behavior;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.character_counter_pattern = global::ServiceDesk.Droid.Resource.String.character_counter_pattern;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.library_name = global::ServiceDesk.Droid.Resource.String.library_name;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.mr_button_content_description = global::ServiceDesk.Droid.Resource.String.mr_button_content_description;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.mr_cast_button_connected = global::ServiceDesk.Droid.Resource.String.mr_cast_button_connected;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.mr_cast_button_connecting = global::ServiceDesk.Droid.Resource.String.mr_cast_button_connecting;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.mr_cast_button_disconnected = global::ServiceDesk.Droid.Resource.String.mr_cast_button_disconnected;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.mr_chooser_searching = global::ServiceDesk.Droid.Resource.String.mr_chooser_searching;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.mr_chooser_title = global::ServiceDesk.Droid.Resource.String.mr_chooser_title;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.mr_controller_album_art = global::ServiceDesk.Droid.Resource.String.mr_controller_album_art;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.mr_controller_casting_screen = global::ServiceDesk.Droid.Resource.String.mr_controller_casting_screen;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.mr_controller_close_description = global::ServiceDesk.Droid.Resource.String.mr_controller_close_description;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.mr_controller_collapse_group = global::ServiceDesk.Droid.Resource.String.mr_controller_collapse_group;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.mr_controller_disconnect = global::ServiceDesk.Droid.Resource.String.mr_controller_disconnect;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.mr_controller_expand_group = global::ServiceDesk.Droid.Resource.String.mr_controller_expand_group;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.mr_controller_no_info_available = global::ServiceDesk.Droid.Resource.String.mr_controller_no_info_available;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.mr_controller_no_media_selected = global::ServiceDesk.Droid.Resource.String.mr_controller_no_media_selected;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.mr_controller_pause = global::ServiceDesk.Droid.Resource.String.mr_controller_pause;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.mr_controller_play = global::ServiceDesk.Droid.Resource.String.mr_controller_play;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.mr_controller_stop = global::ServiceDesk.Droid.Resource.String.mr_controller_stop;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.mr_controller_stop_casting = global::ServiceDesk.Droid.Resource.String.mr_controller_stop_casting;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.mr_controller_volume_slider = global::ServiceDesk.Droid.Resource.String.mr_controller_volume_slider;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.mr_system_route_name = global::ServiceDesk.Droid.Resource.String.mr_system_route_name;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.mr_user_route_category_name = global::ServiceDesk.Droid.Resource.String.mr_user_route_category_name;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.password_toggle_content_description = global::ServiceDesk.Droid.Resource.String.password_toggle_content_description;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.path_password_eye = global::ServiceDesk.Droid.Resource.String.path_password_eye;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.path_password_eye_mask_strike_through = global::ServiceDesk.Droid.Resource.String.path_password_eye_mask_strike_through;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.path_password_eye_mask_visible = global::ServiceDesk.Droid.Resource.String.path_password_eye_mask_visible;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.path_password_strike_through = global::ServiceDesk.Droid.Resource.String.path_password_strike_through;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.search_menu_title = global::ServiceDesk.Droid.Resource.String.search_menu_title;
+			global::Xamarin.Forms.Svg.Droid.Resource.String.status_bar_notification_info_overflow = global::ServiceDesk.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.AlertDialog_AppCompat = global::ServiceDesk.Droid.Resource.Style.AlertDialog_AppCompat;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.AlertDialog_AppCompat_Light = global::ServiceDesk.Droid.Resource.Style.AlertDialog_AppCompat_Light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Animation_AppCompat_Dialog = global::ServiceDesk.Droid.Resource.Style.Animation_AppCompat_Dialog;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Animation_AppCompat_DropDownUp = global::ServiceDesk.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Animation_Design_BottomSheetDialog = global::ServiceDesk.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_AlertDialog_AppCompat = global::ServiceDesk.Droid.Resource.Style.Base_AlertDialog_AppCompat;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light = global::ServiceDesk.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Animation_AppCompat_Dialog = global::ServiceDesk.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::ServiceDesk.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_CardView = global::ServiceDesk.Droid.Resource.Style.Base_CardView;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat = global::ServiceDesk.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::ServiceDesk.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::ServiceDesk.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Theme_AppCompat = global::ServiceDesk.Droid.Resource.Style.Base_Theme_AppCompat;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::ServiceDesk.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Theme_AppCompat_Dialog = global::ServiceDesk.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::ServiceDesk.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::ServiceDesk.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::ServiceDesk.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::ServiceDesk.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Theme_AppCompat_Light = global::ServiceDesk.Droid.Resource.Style.Base_Theme_AppCompat_Light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::ServiceDesk.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::ServiceDesk.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::ServiceDesk.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::ServiceDesk.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::ServiceDesk.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::ServiceDesk.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_ThemeOverlay_AppCompat = global::ServiceDesk.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::ServiceDesk.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::ServiceDesk.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::ServiceDesk.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::ServiceDesk.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::ServiceDesk.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::ServiceDesk.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_V11_Theme_AppCompat_Dialog = global::ServiceDesk.Droid.Resource.Style.Base_V11_Theme_AppCompat_Dialog;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog = global::ServiceDesk.Droid.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_V11_ThemeOverlay_AppCompat_Dialog = global::ServiceDesk.Droid.Resource.Style.Base_V11_ThemeOverlay_AppCompat_Dialog;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView = global::ServiceDesk.Droid.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_V12_Widget_AppCompat_EditText = global::ServiceDesk.Droid.Resource.Style.Base_V12_Widget_AppCompat_EditText;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_V21_Theme_AppCompat = global::ServiceDesk.Droid.Resource.Style.Base_V21_Theme_AppCompat;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::ServiceDesk.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light = global::ServiceDesk.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::ServiceDesk.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::ServiceDesk.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_V22_Theme_AppCompat = global::ServiceDesk.Droid.Resource.Style.Base_V22_Theme_AppCompat;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light = global::ServiceDesk.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_V23_Theme_AppCompat = global::ServiceDesk.Droid.Resource.Style.Base_V23_Theme_AppCompat;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light = global::ServiceDesk.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_V7_Theme_AppCompat = global::ServiceDesk.Droid.Resource.Style.Base_V7_Theme_AppCompat;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::ServiceDesk.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light = global::ServiceDesk.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::ServiceDesk.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::ServiceDesk.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::ServiceDesk.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::ServiceDesk.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_Button = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_Button;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_EditText = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_ListView = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_SearchView = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_Spinner = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::ServiceDesk.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_Design_AppBarLayout = global::ServiceDesk.Droid.Resource.Style.Base_Widget_Design_AppBarLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Base_Widget_Design_TabLayout = global::ServiceDesk.Droid.Resource.Style.Base_Widget_Design_TabLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.CardView = global::ServiceDesk.Droid.Resource.Style.CardView;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.CardView_Dark = global::ServiceDesk.Droid.Resource.Style.CardView_Dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.CardView_Light = global::ServiceDesk.Droid.Resource.Style.CardView_Light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Platform_AppCompat = global::ServiceDesk.Droid.Resource.Style.Platform_AppCompat;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Platform_AppCompat_Light = global::ServiceDesk.Droid.Resource.Style.Platform_AppCompat_Light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat = global::ServiceDesk.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::ServiceDesk.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::ServiceDesk.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Platform_V11_AppCompat = global::ServiceDesk.Droid.Resource.Style.Platform_V11_AppCompat;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Platform_V11_AppCompat_Light = global::ServiceDesk.Droid.Resource.Style.Platform_V11_AppCompat_Light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Platform_V14_AppCompat = global::ServiceDesk.Droid.Resource.Style.Platform_V14_AppCompat;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Platform_V14_AppCompat_Light = global::ServiceDesk.Droid.Resource.Style.Platform_V14_AppCompat_Light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Platform_V21_AppCompat = global::ServiceDesk.Droid.Resource.Style.Platform_V21_AppCompat;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Platform_V21_AppCompat_Light = global::ServiceDesk.Droid.Resource.Style.Platform_V21_AppCompat_Light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Platform_V25_AppCompat = global::ServiceDesk.Droid.Resource.Style.Platform_V25_AppCompat;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Platform_V25_AppCompat_Light = global::ServiceDesk.Droid.Resource.Style.Platform_V25_AppCompat_Light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner = global::ServiceDesk.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::ServiceDesk.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::ServiceDesk.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::ServiceDesk.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::ServiceDesk.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::ServiceDesk.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::ServiceDesk.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::ServiceDesk.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::ServiceDesk.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::ServiceDesk.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::ServiceDesk.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::ServiceDesk.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::ServiceDesk.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::ServiceDesk.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::ServiceDesk.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Body1 = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Body2 = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Button = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Button;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Caption = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Display1 = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Display2 = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Display3 = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Display4 = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Headline = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Inverse = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Large = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Large;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Medium = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Menu = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Small = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Small;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Subhead = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Title = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Title;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::ServiceDesk.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::ServiceDesk.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_Design_Counter = global::ServiceDesk.Droid.Resource.Style.TextAppearance_Design_Counter;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow = global::ServiceDesk.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_Design_Error = global::ServiceDesk.Droid.Resource.Style.TextAppearance_Design_Error;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_Design_Hint = global::ServiceDesk.Droid.Resource.Style.TextAppearance_Design_Hint;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message = global::ServiceDesk.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_Design_Tab = global::ServiceDesk.Droid.Resource.Style.TextAppearance_Design_Tab;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_MediaRouter_PrimaryText = global::ServiceDesk.Droid.Resource.Style.TextAppearance_MediaRouter_PrimaryText;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_MediaRouter_SecondaryText = global::ServiceDesk.Droid.Resource.Style.TextAppearance_MediaRouter_SecondaryText;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_MediaRouter_Title = global::ServiceDesk.Droid.Resource.Style.TextAppearance_MediaRouter_Title;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::ServiceDesk.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::ServiceDesk.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::ServiceDesk.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Theme_AppCompat = global::ServiceDesk.Droid.Resource.Style.Theme_AppCompat;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Theme_AppCompat_CompactMenu = global::ServiceDesk.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Theme_AppCompat_DayNight = global::ServiceDesk.Droid.Resource.Style.Theme_AppCompat_DayNight;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::ServiceDesk.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::ServiceDesk.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::ServiceDesk.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::ServiceDesk.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::ServiceDesk.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::ServiceDesk.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Theme_AppCompat_Dialog = global::ServiceDesk.Droid.Resource.Style.Theme_AppCompat_Dialog;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert = global::ServiceDesk.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::ServiceDesk.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::ServiceDesk.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Theme_AppCompat_Light = global::ServiceDesk.Droid.Resource.Style.Theme_AppCompat_Light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::ServiceDesk.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Theme_AppCompat_Light_Dialog = global::ServiceDesk.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::ServiceDesk.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::ServiceDesk.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::ServiceDesk.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::ServiceDesk.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Theme_AppCompat_NoActionBar = global::ServiceDesk.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Theme_Design = global::ServiceDesk.Droid.Resource.Style.Theme_Design;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Theme_Design_BottomSheetDialog = global::ServiceDesk.Droid.Resource.Style.Theme_Design_BottomSheetDialog;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Theme_Design_Light = global::ServiceDesk.Droid.Resource.Style.Theme_Design_Light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::ServiceDesk.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Theme_Design_Light_NoActionBar = global::ServiceDesk.Droid.Resource.Style.Theme_Design_Light_NoActionBar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Theme_Design_NoActionBar = global::ServiceDesk.Droid.Resource.Style.Theme_Design_NoActionBar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Theme_MediaRouter = global::ServiceDesk.Droid.Resource.Style.Theme_MediaRouter;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Theme_MediaRouter_Light = global::ServiceDesk.Droid.Resource.Style.Theme_MediaRouter_Light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Theme_MediaRouter_Light_DarkControlPanel = global::ServiceDesk.Droid.Resource.Style.Theme_MediaRouter_Light_DarkControlPanel;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Theme_MediaRouter_LightControlPanel = global::ServiceDesk.Droid.Resource.Style.Theme_MediaRouter_LightControlPanel;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.ThemeOverlay_AppCompat = global::ServiceDesk.Droid.Resource.Style.ThemeOverlay_AppCompat;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::ServiceDesk.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark = global::ServiceDesk.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::ServiceDesk.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::ServiceDesk.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::ServiceDesk.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.ThemeOverlay_AppCompat_Light = global::ServiceDesk.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.ThemeOverlay_MediaRouter_Dark = global::ServiceDesk.Droid.Resource.Style.ThemeOverlay_MediaRouter_Dark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.ThemeOverlay_MediaRouter_Light = global::ServiceDesk.Droid.Resource.Style.ThemeOverlay_MediaRouter_Light;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_ActionBar = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ActionBar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_ActionButton = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ActionButton;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_ActionMode = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ActionMode;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_Button = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Button;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_Button_Borderless = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_Button_Colored = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_Button_Small = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Button_Small;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_ButtonBar = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_EditText = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_EditText;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_ImageButton = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ImageButton;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_Light_SearchView = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_ListMenuView = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ListMenuView;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_ListView = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ListView;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_ListView_Menu = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_PopupMenu = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_PopupWindow = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_ProgressBar = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_RatingBar = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_RatingBar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_SearchView = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_SearchView;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_SeekBar = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_SeekBar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_Spinner = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Spinner;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_Toolbar = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Toolbar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::ServiceDesk.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_Design_AppBarLayout = global::ServiceDesk.Droid.Resource.Style.Widget_Design_AppBarLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_Design_BottomNavigationView = global::ServiceDesk.Droid.Resource.Style.Widget_Design_BottomNavigationView;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_Design_BottomSheet_Modal = global::ServiceDesk.Droid.Resource.Style.Widget_Design_BottomSheet_Modal;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_Design_CollapsingToolbar = global::ServiceDesk.Droid.Resource.Style.Widget_Design_CollapsingToolbar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_Design_CoordinatorLayout = global::ServiceDesk.Droid.Resource.Style.Widget_Design_CoordinatorLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_Design_FloatingActionButton = global::ServiceDesk.Droid.Resource.Style.Widget_Design_FloatingActionButton;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_Design_NavigationView = global::ServiceDesk.Droid.Resource.Style.Widget_Design_NavigationView;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::ServiceDesk.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_Design_Snackbar = global::ServiceDesk.Droid.Resource.Style.Widget_Design_Snackbar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_Design_TabLayout = global::ServiceDesk.Droid.Resource.Style.Widget_Design_TabLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_Design_TextInputLayout = global::ServiceDesk.Droid.Resource.Style.Widget_Design_TextInputLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton = global::ServiceDesk.Droid.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton;
+			global::Xamarin.Forms.Svg.Droid.Resource.Style.Widget_MediaRouter_MediaRouteButton = global::ServiceDesk.Droid.Resource.Style.Widget_MediaRouter_MediaRouteButton;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionBar = global::ServiceDesk.Droid.Resource.Styleable.ActionBar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionBar_background = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_background;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionBar_backgroundSplit = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_backgroundSplit;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionBar_backgroundStacked = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_backgroundStacked;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionBar_contentInsetEnd = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionBar_contentInsetLeft = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionBar_contentInsetRight = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_contentInsetRight;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionBar_contentInsetStart = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_contentInsetStart;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionBar_customNavigationLayout = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionBar_displayOptions = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_displayOptions;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionBar_divider = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_divider;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionBar_elevation = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_elevation;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionBar_height = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_height;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionBar_hideOnContentScroll = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionBar_homeLayout = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_homeLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionBar_icon = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_icon;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionBar_itemPadding = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_itemPadding;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionBar_logo = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_logo;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionBar_navigationMode = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_navigationMode;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionBar_popupTheme = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_popupTheme;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionBar_progressBarPadding = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_progressBarPadding;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionBar_progressBarStyle = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_progressBarStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionBar_subtitle = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_subtitle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionBar_subtitleTextStyle = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionBar_title = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_title;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionBar_titleTextStyle = global::ServiceDesk.Droid.Resource.Styleable.ActionBar_titleTextStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionBarLayout = global::ServiceDesk.Droid.Resource.Styleable.ActionBarLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::ServiceDesk.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionMenuItemView = global::ServiceDesk.Droid.Resource.Styleable.ActionMenuItemView;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth = global::ServiceDesk.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionMode = global::ServiceDesk.Droid.Resource.Styleable.ActionMode;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionMode_background = global::ServiceDesk.Droid.Resource.Styleable.ActionMode_background;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionMode_backgroundSplit = global::ServiceDesk.Droid.Resource.Styleable.ActionMode_backgroundSplit;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionMode_closeItemLayout = global::ServiceDesk.Droid.Resource.Styleable.ActionMode_closeItemLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionMode_height = global::ServiceDesk.Droid.Resource.Styleable.ActionMode_height;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionMode_subtitleTextStyle = global::ServiceDesk.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActionMode_titleTextStyle = global::ServiceDesk.Droid.Resource.Styleable.ActionMode_titleTextStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActivityChooserView = global::ServiceDesk.Droid.Resource.Styleable.ActivityChooserView;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::ServiceDesk.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount = global::ServiceDesk.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AlertDialog = global::ServiceDesk.Droid.Resource.Styleable.AlertDialog;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AlertDialog_android_layout = global::ServiceDesk.Droid.Resource.Styleable.AlertDialog_android_layout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::ServiceDesk.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AlertDialog_listItemLayout = global::ServiceDesk.Droid.Resource.Styleable.AlertDialog_listItemLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AlertDialog_listLayout = global::ServiceDesk.Droid.Resource.Styleable.AlertDialog_listLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::ServiceDesk.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AlertDialog_showTitle = global::ServiceDesk.Droid.Resource.Styleable.AlertDialog_showTitle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::ServiceDesk.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppBarLayout = global::ServiceDesk.Droid.Resource.Styleable.AppBarLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppBarLayout_android_background = global::ServiceDesk.Droid.Resource.Styleable.AppBarLayout_android_background;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppBarLayout_elevation = global::ServiceDesk.Droid.Resource.Styleable.AppBarLayout_elevation;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppBarLayout_expanded = global::ServiceDesk.Droid.Resource.Styleable.AppBarLayout_expanded;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppBarLayoutStates = global::ServiceDesk.Droid.Resource.Styleable.AppBarLayoutStates;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed = global::ServiceDesk.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible = global::ServiceDesk.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppBarLayout_Layout = global::ServiceDesk.Droid.Resource.Styleable.AppBarLayout_Layout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags = global::ServiceDesk.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator = global::ServiceDesk.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatImageView = global::ServiceDesk.Droid.Resource.Styleable.AppCompatImageView;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatImageView_android_src = global::ServiceDesk.Droid.Resource.Styleable.AppCompatImageView_android_src;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatImageView_srcCompat = global::ServiceDesk.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatImageView_tint = global::ServiceDesk.Droid.Resource.Styleable.AppCompatImageView_tint;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatImageView_tintMode = global::ServiceDesk.Droid.Resource.Styleable.AppCompatImageView_tintMode;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatSeekBar = global::ServiceDesk.Droid.Resource.Styleable.AppCompatSeekBar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb = global::ServiceDesk.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatSeekBar_tickMark = global::ServiceDesk.Droid.Resource.Styleable.AppCompatSeekBar_tickMark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::ServiceDesk.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::ServiceDesk.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTextHelper = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTextHelper;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTextView = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTextView;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTextView_textAllCaps = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_actionBarSize = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_buttonStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_colorAccent = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_colorPrimary = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_controlBackground = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_dialogTheme = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_dividerVertical = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_editTextBackground = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_editTextColor = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_editTextStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_panelBackground = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_switchStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_windowActionBar = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle = global::ServiceDesk.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.BottomNavigationView = global::ServiceDesk.Droid.Resource.Styleable.BottomNavigationView;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.BottomNavigationView_elevation = global::ServiceDesk.Droid.Resource.Styleable.BottomNavigationView_elevation;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.BottomNavigationView_itemBackground = global::ServiceDesk.Droid.Resource.Styleable.BottomNavigationView_itemBackground;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.BottomNavigationView_itemIconTint = global::ServiceDesk.Droid.Resource.Styleable.BottomNavigationView_itemIconTint;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.BottomNavigationView_itemTextColor = global::ServiceDesk.Droid.Resource.Styleable.BottomNavigationView_itemTextColor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.BottomNavigationView_menu = global::ServiceDesk.Droid.Resource.Styleable.BottomNavigationView_menu;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.BottomSheetBehavior_Layout = global::ServiceDesk.Droid.Resource.Styleable.BottomSheetBehavior_Layout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable = global::ServiceDesk.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight = global::ServiceDesk.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed = global::ServiceDesk.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ButtonBarLayout = global::ServiceDesk.Droid.Resource.Styleable.ButtonBarLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ButtonBarLayout_allowStacking = global::ServiceDesk.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CardView = global::ServiceDesk.Droid.Resource.Styleable.CardView;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CardView_android_minHeight = global::ServiceDesk.Droid.Resource.Styleable.CardView_android_minHeight;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CardView_android_minWidth = global::ServiceDesk.Droid.Resource.Styleable.CardView_android_minWidth;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CardView_cardBackgroundColor = global::ServiceDesk.Droid.Resource.Styleable.CardView_cardBackgroundColor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CardView_cardCornerRadius = global::ServiceDesk.Droid.Resource.Styleable.CardView_cardCornerRadius;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CardView_cardElevation = global::ServiceDesk.Droid.Resource.Styleable.CardView_cardElevation;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CardView_cardMaxElevation = global::ServiceDesk.Droid.Resource.Styleable.CardView_cardMaxElevation;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap = global::ServiceDesk.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CardView_cardUseCompatPadding = global::ServiceDesk.Droid.Resource.Styleable.CardView_cardUseCompatPadding;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CardView_contentPadding = global::ServiceDesk.Droid.Resource.Styleable.CardView_contentPadding;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CardView_contentPaddingBottom = global::ServiceDesk.Droid.Resource.Styleable.CardView_contentPaddingBottom;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CardView_contentPaddingLeft = global::ServiceDesk.Droid.Resource.Styleable.CardView_contentPaddingLeft;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CardView_contentPaddingRight = global::ServiceDesk.Droid.Resource.Styleable.CardView_contentPaddingRight;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CardView_contentPaddingTop = global::ServiceDesk.Droid.Resource.Styleable.CardView_contentPaddingTop;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CollapsingToolbarLayout = global::ServiceDesk.Droid.Resource.Styleable.CollapsingToolbarLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::ServiceDesk.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::ServiceDesk.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::ServiceDesk.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::ServiceDesk.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::ServiceDesk.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::ServiceDesk.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::ServiceDesk.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::ServiceDesk.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::ServiceDesk.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::ServiceDesk.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration = global::ServiceDesk.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger = global::ServiceDesk.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::ServiceDesk.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CollapsingToolbarLayout_title = global::ServiceDesk.Droid.Resource.Styleable.CollapsingToolbarLayout_title;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::ServiceDesk.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::ServiceDesk.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout = global::ServiceDesk.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode = global::ServiceDesk.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = global::ServiceDesk.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ColorStateListItem = global::ServiceDesk.Droid.Resource.Styleable.ColorStateListItem;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ColorStateListItem_alpha = global::ServiceDesk.Droid.Resource.Styleable.ColorStateListItem_alpha;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ColorStateListItem_android_alpha = global::ServiceDesk.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ColorStateListItem_android_color = global::ServiceDesk.Droid.Resource.Styleable.ColorStateListItem_android_color;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CompoundButton = global::ServiceDesk.Droid.Resource.Styleable.CompoundButton;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CompoundButton_android_button = global::ServiceDesk.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CompoundButton_buttonTint = global::ServiceDesk.Droid.Resource.Styleable.CompoundButton_buttonTint;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CompoundButton_buttonTintMode = global::ServiceDesk.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CoordinatorLayout = global::ServiceDesk.Droid.Resource.Styleable.CoordinatorLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CoordinatorLayout_keylines = global::ServiceDesk.Droid.Resource.Styleable.CoordinatorLayout_keylines;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::ServiceDesk.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CoordinatorLayout_Layout = global::ServiceDesk.Droid.Resource.Styleable.CoordinatorLayout_Layout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::ServiceDesk.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::ServiceDesk.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::ServiceDesk.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::ServiceDesk.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::ServiceDesk.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::ServiceDesk.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::ServiceDesk.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.DesignTheme = global::ServiceDesk.Droid.Resource.Styleable.DesignTheme;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.DesignTheme_bottomSheetDialogTheme = global::ServiceDesk.Droid.Resource.Styleable.DesignTheme_bottomSheetDialogTheme;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.DesignTheme_bottomSheetStyle = global::ServiceDesk.Droid.Resource.Styleable.DesignTheme_bottomSheetStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.DesignTheme_textColorError = global::ServiceDesk.Droid.Resource.Styleable.DesignTheme_textColorError;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.DrawerArrowToggle = global::ServiceDesk.Droid.Resource.Styleable.DrawerArrowToggle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::ServiceDesk.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::ServiceDesk.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.DrawerArrowToggle_barLength = global::ServiceDesk.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.DrawerArrowToggle_color = global::ServiceDesk.Droid.Resource.Styleable.DrawerArrowToggle_color;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize = global::ServiceDesk.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::ServiceDesk.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.DrawerArrowToggle_spinBars = global::ServiceDesk.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.DrawerArrowToggle_thickness = global::ServiceDesk.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.FloatingActionButton = global::ServiceDesk.Droid.Resource.Styleable.FloatingActionButton;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.FloatingActionButton_backgroundTint = global::ServiceDesk.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::ServiceDesk.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.FloatingActionButton_borderWidth = global::ServiceDesk.Droid.Resource.Styleable.FloatingActionButton_borderWidth;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.FloatingActionButton_elevation = global::ServiceDesk.Droid.Resource.Styleable.FloatingActionButton_elevation;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.FloatingActionButton_fabSize = global::ServiceDesk.Droid.Resource.Styleable.FloatingActionButton_fabSize;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::ServiceDesk.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.FloatingActionButton_rippleColor = global::ServiceDesk.Droid.Resource.Styleable.FloatingActionButton_rippleColor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding = global::ServiceDesk.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout = global::ServiceDesk.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide = global::ServiceDesk.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ForegroundLinearLayout = global::ServiceDesk.Droid.Resource.Styleable.ForegroundLinearLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::ServiceDesk.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::ServiceDesk.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::ServiceDesk.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.LinearLayoutCompat = global::ServiceDesk.Droid.Resource.Styleable.LinearLayoutCompat;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::ServiceDesk.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::ServiceDesk.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity = global::ServiceDesk.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation = global::ServiceDesk.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::ServiceDesk.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.LinearLayoutCompat_divider = global::ServiceDesk.Droid.Resource.Styleable.LinearLayoutCompat_divider;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::ServiceDesk.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::ServiceDesk.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.LinearLayoutCompat_showDividers = global::ServiceDesk.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.LinearLayoutCompat_Layout = global::ServiceDesk.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::ServiceDesk.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::ServiceDesk.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::ServiceDesk.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::ServiceDesk.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ListPopupWindow = global::ServiceDesk.Droid.Resource.Styleable.ListPopupWindow;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::ServiceDesk.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::ServiceDesk.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MediaRouteButton = global::ServiceDesk.Droid.Resource.Styleable.MediaRouteButton;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MediaRouteButton_android_minHeight = global::ServiceDesk.Droid.Resource.Styleable.MediaRouteButton_android_minHeight;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MediaRouteButton_android_minWidth = global::ServiceDesk.Droid.Resource.Styleable.MediaRouteButton_android_minWidth;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable = global::ServiceDesk.Droid.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MenuGroup = global::ServiceDesk.Droid.Resource.Styleable.MenuGroup;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior = global::ServiceDesk.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MenuGroup_android_enabled = global::ServiceDesk.Droid.Resource.Styleable.MenuGroup_android_enabled;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MenuGroup_android_id = global::ServiceDesk.Droid.Resource.Styleable.MenuGroup_android_id;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MenuGroup_android_menuCategory = global::ServiceDesk.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MenuGroup_android_orderInCategory = global::ServiceDesk.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MenuGroup_android_visible = global::ServiceDesk.Droid.Resource.Styleable.MenuGroup_android_visible;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MenuItem = global::ServiceDesk.Droid.Resource.Styleable.MenuItem;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MenuItem_actionLayout = global::ServiceDesk.Droid.Resource.Styleable.MenuItem_actionLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MenuItem_actionProviderClass = global::ServiceDesk.Droid.Resource.Styleable.MenuItem_actionProviderClass;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MenuItem_actionViewClass = global::ServiceDesk.Droid.Resource.Styleable.MenuItem_actionViewClass;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::ServiceDesk.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MenuItem_android_checkable = global::ServiceDesk.Droid.Resource.Styleable.MenuItem_android_checkable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MenuItem_android_checked = global::ServiceDesk.Droid.Resource.Styleable.MenuItem_android_checked;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MenuItem_android_enabled = global::ServiceDesk.Droid.Resource.Styleable.MenuItem_android_enabled;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MenuItem_android_icon = global::ServiceDesk.Droid.Resource.Styleable.MenuItem_android_icon;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MenuItem_android_id = global::ServiceDesk.Droid.Resource.Styleable.MenuItem_android_id;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MenuItem_android_menuCategory = global::ServiceDesk.Droid.Resource.Styleable.MenuItem_android_menuCategory;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MenuItem_android_numericShortcut = global::ServiceDesk.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MenuItem_android_onClick = global::ServiceDesk.Droid.Resource.Styleable.MenuItem_android_onClick;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MenuItem_android_orderInCategory = global::ServiceDesk.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MenuItem_android_title = global::ServiceDesk.Droid.Resource.Styleable.MenuItem_android_title;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MenuItem_android_titleCondensed = global::ServiceDesk.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MenuItem_android_visible = global::ServiceDesk.Droid.Resource.Styleable.MenuItem_android_visible;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MenuItem_showAsAction = global::ServiceDesk.Droid.Resource.Styleable.MenuItem_showAsAction;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MenuView = global::ServiceDesk.Droid.Resource.Styleable.MenuView;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MenuView_android_headerBackground = global::ServiceDesk.Droid.Resource.Styleable.MenuView_android_headerBackground;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MenuView_android_horizontalDivider = global::ServiceDesk.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MenuView_android_itemBackground = global::ServiceDesk.Droid.Resource.Styleable.MenuView_android_itemBackground;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::ServiceDesk.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MenuView_android_itemTextAppearance = global::ServiceDesk.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MenuView_android_verticalDivider = global::ServiceDesk.Droid.Resource.Styleable.MenuView_android_verticalDivider;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle = global::ServiceDesk.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MenuView_preserveIconSpacing = global::ServiceDesk.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.MenuView_subMenuArrow = global::ServiceDesk.Droid.Resource.Styleable.MenuView_subMenuArrow;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.NavigationView = global::ServiceDesk.Droid.Resource.Styleable.NavigationView;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.NavigationView_android_background = global::ServiceDesk.Droid.Resource.Styleable.NavigationView_android_background;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::ServiceDesk.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.NavigationView_android_maxWidth = global::ServiceDesk.Droid.Resource.Styleable.NavigationView_android_maxWidth;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.NavigationView_elevation = global::ServiceDesk.Droid.Resource.Styleable.NavigationView_elevation;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.NavigationView_headerLayout = global::ServiceDesk.Droid.Resource.Styleable.NavigationView_headerLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.NavigationView_itemBackground = global::ServiceDesk.Droid.Resource.Styleable.NavigationView_itemBackground;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.NavigationView_itemIconTint = global::ServiceDesk.Droid.Resource.Styleable.NavigationView_itemIconTint;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.NavigationView_itemTextAppearance = global::ServiceDesk.Droid.Resource.Styleable.NavigationView_itemTextAppearance;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.NavigationView_itemTextColor = global::ServiceDesk.Droid.Resource.Styleable.NavigationView_itemTextColor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.NavigationView_menu = global::ServiceDesk.Droid.Resource.Styleable.NavigationView_menu;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.PopupWindow = global::ServiceDesk.Droid.Resource.Styleable.PopupWindow;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::ServiceDesk.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.PopupWindow_android_popupBackground = global::ServiceDesk.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.PopupWindow_overlapAnchor = global::ServiceDesk.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.PopupWindowBackgroundState = global::ServiceDesk.Droid.Resource.Styleable.PopupWindowBackgroundState;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::ServiceDesk.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.RecycleListView = global::ServiceDesk.Droid.Resource.Styleable.RecycleListView;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::ServiceDesk.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::ServiceDesk.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.RecyclerView = global::ServiceDesk.Droid.Resource.Styleable.RecyclerView;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability = global::ServiceDesk.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.RecyclerView_android_orientation = global::ServiceDesk.Droid.Resource.Styleable.RecyclerView_android_orientation;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.RecyclerView_layoutManager = global::ServiceDesk.Droid.Resource.Styleable.RecyclerView_layoutManager;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.RecyclerView_reverseLayout = global::ServiceDesk.Droid.Resource.Styleable.RecyclerView_reverseLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.RecyclerView_spanCount = global::ServiceDesk.Droid.Resource.Styleable.RecyclerView_spanCount;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.RecyclerView_stackFromEnd = global::ServiceDesk.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ScrimInsetsFrameLayout = global::ServiceDesk.Droid.Resource.Styleable.ScrimInsetsFrameLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::ServiceDesk.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ScrollingViewBehavior_Layout = global::ServiceDesk.Droid.Resource.Styleable.ScrollingViewBehavior_Layout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop = global::ServiceDesk.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SearchView = global::ServiceDesk.Droid.Resource.Styleable.SearchView;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SearchView_android_focusable = global::ServiceDesk.Droid.Resource.Styleable.SearchView_android_focusable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SearchView_android_imeOptions = global::ServiceDesk.Droid.Resource.Styleable.SearchView_android_imeOptions;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SearchView_android_inputType = global::ServiceDesk.Droid.Resource.Styleable.SearchView_android_inputType;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SearchView_android_maxWidth = global::ServiceDesk.Droid.Resource.Styleable.SearchView_android_maxWidth;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SearchView_closeIcon = global::ServiceDesk.Droid.Resource.Styleable.SearchView_closeIcon;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SearchView_commitIcon = global::ServiceDesk.Droid.Resource.Styleable.SearchView_commitIcon;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SearchView_defaultQueryHint = global::ServiceDesk.Droid.Resource.Styleable.SearchView_defaultQueryHint;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SearchView_goIcon = global::ServiceDesk.Droid.Resource.Styleable.SearchView_goIcon;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SearchView_iconifiedByDefault = global::ServiceDesk.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SearchView_layout = global::ServiceDesk.Droid.Resource.Styleable.SearchView_layout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SearchView_queryBackground = global::ServiceDesk.Droid.Resource.Styleable.SearchView_queryBackground;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SearchView_queryHint = global::ServiceDesk.Droid.Resource.Styleable.SearchView_queryHint;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SearchView_searchHintIcon = global::ServiceDesk.Droid.Resource.Styleable.SearchView_searchHintIcon;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SearchView_searchIcon = global::ServiceDesk.Droid.Resource.Styleable.SearchView_searchIcon;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SearchView_submitBackground = global::ServiceDesk.Droid.Resource.Styleable.SearchView_submitBackground;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SearchView_suggestionRowLayout = global::ServiceDesk.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SearchView_voiceIcon = global::ServiceDesk.Droid.Resource.Styleable.SearchView_voiceIcon;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SnackbarLayout = global::ServiceDesk.Droid.Resource.Styleable.SnackbarLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth = global::ServiceDesk.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SnackbarLayout_elevation = global::ServiceDesk.Droid.Resource.Styleable.SnackbarLayout_elevation;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::ServiceDesk.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.Spinner = global::ServiceDesk.Droid.Resource.Styleable.Spinner;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.Spinner_android_dropDownWidth = global::ServiceDesk.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.Spinner_android_entries = global::ServiceDesk.Droid.Resource.Styleable.Spinner_android_entries;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.Spinner_android_popupBackground = global::ServiceDesk.Droid.Resource.Styleable.Spinner_android_popupBackground;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.Spinner_android_prompt = global::ServiceDesk.Droid.Resource.Styleable.Spinner_android_prompt;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.Spinner_popupTheme = global::ServiceDesk.Droid.Resource.Styleable.Spinner_popupTheme;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SwitchCompat = global::ServiceDesk.Droid.Resource.Styleable.SwitchCompat;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SwitchCompat_android_textOff = global::ServiceDesk.Droid.Resource.Styleable.SwitchCompat_android_textOff;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SwitchCompat_android_textOn = global::ServiceDesk.Droid.Resource.Styleable.SwitchCompat_android_textOn;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SwitchCompat_android_thumb = global::ServiceDesk.Droid.Resource.Styleable.SwitchCompat_android_thumb;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SwitchCompat_showText = global::ServiceDesk.Droid.Resource.Styleable.SwitchCompat_showText;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SwitchCompat_splitTrack = global::ServiceDesk.Droid.Resource.Styleable.SwitchCompat_splitTrack;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SwitchCompat_switchMinWidth = global::ServiceDesk.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SwitchCompat_switchPadding = global::ServiceDesk.Droid.Resource.Styleable.SwitchCompat_switchPadding;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance = global::ServiceDesk.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding = global::ServiceDesk.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SwitchCompat_thumbTint = global::ServiceDesk.Droid.Resource.Styleable.SwitchCompat_thumbTint;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SwitchCompat_thumbTintMode = global::ServiceDesk.Droid.Resource.Styleable.SwitchCompat_thumbTintMode;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SwitchCompat_track = global::ServiceDesk.Droid.Resource.Styleable.SwitchCompat_track;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SwitchCompat_trackTint = global::ServiceDesk.Droid.Resource.Styleable.SwitchCompat_trackTint;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.SwitchCompat_trackTintMode = global::ServiceDesk.Droid.Resource.Styleable.SwitchCompat_trackTintMode;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TabItem = global::ServiceDesk.Droid.Resource.Styleable.TabItem;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TabItem_android_icon = global::ServiceDesk.Droid.Resource.Styleable.TabItem_android_icon;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TabItem_android_layout = global::ServiceDesk.Droid.Resource.Styleable.TabItem_android_layout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TabItem_android_text = global::ServiceDesk.Droid.Resource.Styleable.TabItem_android_text;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TabLayout = global::ServiceDesk.Droid.Resource.Styleable.TabLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TabLayout_tabBackground = global::ServiceDesk.Droid.Resource.Styleable.TabLayout_tabBackground;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TabLayout_tabContentStart = global::ServiceDesk.Droid.Resource.Styleable.TabLayout_tabContentStart;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TabLayout_tabGravity = global::ServiceDesk.Droid.Resource.Styleable.TabLayout_tabGravity;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TabLayout_tabIndicatorColor = global::ServiceDesk.Droid.Resource.Styleable.TabLayout_tabIndicatorColor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight = global::ServiceDesk.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TabLayout_tabMaxWidth = global::ServiceDesk.Droid.Resource.Styleable.TabLayout_tabMaxWidth;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TabLayout_tabMinWidth = global::ServiceDesk.Droid.Resource.Styleable.TabLayout_tabMinWidth;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TabLayout_tabMode = global::ServiceDesk.Droid.Resource.Styleable.TabLayout_tabMode;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TabLayout_tabPadding = global::ServiceDesk.Droid.Resource.Styleable.TabLayout_tabPadding;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TabLayout_tabPaddingBottom = global::ServiceDesk.Droid.Resource.Styleable.TabLayout_tabPaddingBottom;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TabLayout_tabPaddingEnd = global::ServiceDesk.Droid.Resource.Styleable.TabLayout_tabPaddingEnd;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TabLayout_tabPaddingStart = global::ServiceDesk.Droid.Resource.Styleable.TabLayout_tabPaddingStart;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TabLayout_tabPaddingTop = global::ServiceDesk.Droid.Resource.Styleable.TabLayout_tabPaddingTop;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor = global::ServiceDesk.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TabLayout_tabTextAppearance = global::ServiceDesk.Droid.Resource.Styleable.TabLayout_tabTextAppearance;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TabLayout_tabTextColor = global::ServiceDesk.Droid.Resource.Styleable.TabLayout_tabTextColor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TextAppearance = global::ServiceDesk.Droid.Resource.Styleable.TextAppearance;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TextAppearance_android_shadowColor = global::ServiceDesk.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TextAppearance_android_shadowDx = global::ServiceDesk.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TextAppearance_android_shadowDy = global::ServiceDesk.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TextAppearance_android_shadowRadius = global::ServiceDesk.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TextAppearance_android_textColor = global::ServiceDesk.Droid.Resource.Styleable.TextAppearance_android_textColor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TextAppearance_android_textColorHint = global::ServiceDesk.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TextAppearance_android_textSize = global::ServiceDesk.Droid.Resource.Styleable.TextAppearance_android_textSize;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TextAppearance_android_textStyle = global::ServiceDesk.Droid.Resource.Styleable.TextAppearance_android_textStyle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TextAppearance_android_typeface = global::ServiceDesk.Droid.Resource.Styleable.TextAppearance_android_typeface;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TextAppearance_textAllCaps = global::ServiceDesk.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TextInputLayout = global::ServiceDesk.Droid.Resource.Styleable.TextInputLayout;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TextInputLayout_android_hint = global::ServiceDesk.Droid.Resource.Styleable.TextInputLayout_android_hint;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TextInputLayout_android_textColorHint = global::ServiceDesk.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TextInputLayout_counterEnabled = global::ServiceDesk.Droid.Resource.Styleable.TextInputLayout_counterEnabled;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TextInputLayout_counterMaxLength = global::ServiceDesk.Droid.Resource.Styleable.TextInputLayout_counterMaxLength;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::ServiceDesk.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance = global::ServiceDesk.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TextInputLayout_errorEnabled = global::ServiceDesk.Droid.Resource.Styleable.TextInputLayout_errorEnabled;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance = global::ServiceDesk.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::ServiceDesk.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TextInputLayout_hintEnabled = global::ServiceDesk.Droid.Resource.Styleable.TextInputLayout_hintEnabled;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance = global::ServiceDesk.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription = global::ServiceDesk.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable = global::ServiceDesk.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled = global::ServiceDesk.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint = global::ServiceDesk.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode = global::ServiceDesk.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.Toolbar = global::ServiceDesk.Droid.Resource.Styleable.Toolbar;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.Toolbar_android_gravity = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_android_gravity;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.Toolbar_android_minHeight = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_android_minHeight;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.Toolbar_buttonGravity = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_buttonGravity;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.Toolbar_collapseContentDescription = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.Toolbar_collapseIcon = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_collapseIcon;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.Toolbar_contentInsetEnd = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.Toolbar_contentInsetLeft = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.Toolbar_contentInsetRight = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_contentInsetRight;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.Toolbar_contentInsetStart = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_contentInsetStart;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.Toolbar_logo = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_logo;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.Toolbar_logoDescription = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_logoDescription;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.Toolbar_maxButtonHeight = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.Toolbar_navigationContentDescription = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.Toolbar_navigationIcon = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_navigationIcon;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.Toolbar_popupTheme = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_popupTheme;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.Toolbar_subtitle = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_subtitle;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.Toolbar_subtitleTextColor = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.Toolbar_title = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_title;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.Toolbar_titleMargin = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_titleMargin;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.Toolbar_titleMarginBottom = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.Toolbar_titleMarginEnd = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.Toolbar_titleMarginStart = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_titleMarginStart;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.Toolbar_titleMarginTop = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_titleMarginTop;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.Toolbar_titleMargins = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_titleMargins;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.Toolbar_titleTextAppearance = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.Toolbar_titleTextColor = global::ServiceDesk.Droid.Resource.Styleable.Toolbar_titleTextColor;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.View = global::ServiceDesk.Droid.Resource.Styleable.View;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.View_android_focusable = global::ServiceDesk.Droid.Resource.Styleable.View_android_focusable;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.View_android_theme = global::ServiceDesk.Droid.Resource.Styleable.View_android_theme;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.View_paddingEnd = global::ServiceDesk.Droid.Resource.Styleable.View_paddingEnd;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.View_paddingStart = global::ServiceDesk.Droid.Resource.Styleable.View_paddingStart;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.View_theme = global::ServiceDesk.Droid.Resource.Styleable.View_theme;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ViewBackgroundHelper = global::ServiceDesk.Droid.Resource.Styleable.ViewBackgroundHelper;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ViewBackgroundHelper_android_background = global::ServiceDesk.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::ServiceDesk.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::ServiceDesk.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ViewStubCompat = global::ServiceDesk.Droid.Resource.Styleable.ViewStubCompat;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ViewStubCompat_android_id = global::ServiceDesk.Droid.Resource.Styleable.ViewStubCompat_android_id;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId = global::ServiceDesk.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::Xamarin.Forms.Svg.Droid.Resource.Styleable.ViewStubCompat_android_layout = global::ServiceDesk.Droid.Resource.Styleable.ViewStubCompat_android_layout;
 			global::Syncfusion.XForms.Android.Core.Resource.Drawable.inputlayout_togglecollapseicon = global::ServiceDesk.Droid.Resource.Drawable.inputlayout_togglecollapseicon;
 			global::Syncfusion.XForms.Android.Core.Resource.Drawable.inputlayout_togglevisibleicon = global::ServiceDesk.Droid.Resource.Drawable.inputlayout_togglevisibleicon;
 			global::Com.Syncfusion.Autocomplete.Resource.Attribute.autocompleteBorderColor = global::ServiceDesk.Droid.Resource.Attribute.autocompleteBorderColor;
@@ -122,44 +3416,6 @@ namespace ServiceDesk.Droid
 			global::Com.Syncfusion.Autocomplete.Resource.Styleable.SfAutoComplete_autocompleteTextSize = global::ServiceDesk.Droid.Resource.Styleable.SfAutoComplete_autocompleteTextSize;
 			global::Com.Syncfusion.Autocomplete.Resource.Styleable.SfAutoComplete_autocompleteWatermark = global::ServiceDesk.Droid.Resource.Styleable.SfAutoComplete_autocompleteWatermark;
 			global::Com.Syncfusion.Autocomplete.Resource.Styleable.SfAutoComplete_autocompleteWatermarkColor = global::ServiceDesk.Droid.Resource.Styleable.SfAutoComplete_autocompleteWatermarkColor;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Attribute.busyIndicatorAnimationTypes = global::ServiceDesk.Droid.Resource.Attribute.busyIndicatorAnimationTypes;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Attribute.busyIndicatorIsBusy = global::ServiceDesk.Droid.Resource.Attribute.busyIndicatorIsBusy;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Attribute.busyIndicatorSecondaryColor = global::ServiceDesk.Droid.Resource.Attribute.busyIndicatorSecondaryColor;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Attribute.busyIndicatorTextColor = global::ServiceDesk.Droid.Resource.Attribute.busyIndicatorTextColor;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Attribute.busyIndicatorTextSize = global::ServiceDesk.Droid.Resource.Attribute.busyIndicatorTextSize;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Attribute.busyIndicatorTitle = global::ServiceDesk.Droid.Resource.Attribute.busyIndicatorTitle;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Attribute.busyIndicatorTitlePlacement = global::ServiceDesk.Droid.Resource.Attribute.busyIndicatorTitlePlacement;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Attribute.busyIndicatorViewBoxHeight = global::ServiceDesk.Droid.Resource.Attribute.busyIndicatorViewBoxHeight;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Attribute.busyIndicatorViewBoxWidth = global::ServiceDesk.Droid.Resource.Attribute.busyIndicatorViewBoxWidth;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Id.ball = global::ServiceDesk.Droid.Resource.Id.ball;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Id.battery = global::ServiceDesk.Droid.Resource.Id.battery;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Id.bottom = global::ServiceDesk.Droid.Resource.Id.bottom;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Id.box = global::ServiceDesk.Droid.Resource.Id.box;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Id.doubleCircle = global::ServiceDesk.Droid.Resource.Id.doubleCircle;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Id.ecg = global::ServiceDesk.Droid.Resource.Id.ecg;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Id.gearBox = global::ServiceDesk.Droid.Resource.Id.gearBox;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Id.globe = global::ServiceDesk.Droid.Resource.Id.globe;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Id.horizontalPulsingBox = global::ServiceDesk.Droid.Resource.Id.horizontalPulsingBox;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Id.movieTimer = global::ServiceDesk.Droid.Resource.Id.movieTimer;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Id.none = global::ServiceDesk.Droid.Resource.Id.none;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Id.print = global::ServiceDesk.Droid.Resource.Id.print;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Id.rectangle = global::ServiceDesk.Droid.Resource.Id.rectangle;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Id.rollingBall = global::ServiceDesk.Droid.Resource.Id.rollingBall;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Id.singleCircle = global::ServiceDesk.Droid.Resource.Id.singleCircle;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Id.slicedCircle = global::ServiceDesk.Droid.Resource.Id.slicedCircle;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Id.top = global::ServiceDesk.Droid.Resource.Id.top;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Id.zoomingTarget = global::ServiceDesk.Droid.Resource.Id.zoomingTarget;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.String.library_name = global::ServiceDesk.Droid.Resource.String.library_name;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Styleable.SfBusyIndicator = global::ServiceDesk.Droid.Resource.Styleable.SfBusyIndicator;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Styleable.SfBusyIndicator_busyIndicatorAnimationTypes = global::ServiceDesk.Droid.Resource.Styleable.SfBusyIndicator_busyIndicatorAnimationTypes;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Styleable.SfBusyIndicator_busyIndicatorIsBusy = global::ServiceDesk.Droid.Resource.Styleable.SfBusyIndicator_busyIndicatorIsBusy;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Styleable.SfBusyIndicator_busyIndicatorSecondaryColor = global::ServiceDesk.Droid.Resource.Styleable.SfBusyIndicator_busyIndicatorSecondaryColor;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Styleable.SfBusyIndicator_busyIndicatorTextColor = global::ServiceDesk.Droid.Resource.Styleable.SfBusyIndicator_busyIndicatorTextColor;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Styleable.SfBusyIndicator_busyIndicatorTextSize = global::ServiceDesk.Droid.Resource.Styleable.SfBusyIndicator_busyIndicatorTextSize;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Styleable.SfBusyIndicator_busyIndicatorTitle = global::ServiceDesk.Droid.Resource.Styleable.SfBusyIndicator_busyIndicatorTitle;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Styleable.SfBusyIndicator_busyIndicatorTitlePlacement = global::ServiceDesk.Droid.Resource.Styleable.SfBusyIndicator_busyIndicatorTitlePlacement;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Styleable.SfBusyIndicator_busyIndicatorViewBoxHeight = global::ServiceDesk.Droid.Resource.Styleable.SfBusyIndicator_busyIndicatorViewBoxHeight;
-			global::Com.Syncfusion.Sfbusyindicator.Resource.Styleable.SfBusyIndicator_busyIndicatorViewBoxWidth = global::ServiceDesk.Droid.Resource.Styleable.SfBusyIndicator_busyIndicatorViewBoxWidth;
 			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.layoutManager = global::ServiceDesk.Droid.Resource.Attribute.layoutManager;
 			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.reverseLayout = global::ServiceDesk.Droid.Resource.Attribute.reverseLayout;
 			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.spanCount = global::ServiceDesk.Droid.Resource.Attribute.spanCount;
@@ -183,26 +3439,6 @@ namespace ServiceDesk.Droid
 			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView_reverseLayout = global::ServiceDesk.Droid.Resource.Styleable.RecyclerView_reverseLayout;
 			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView_spanCount = global::ServiceDesk.Droid.Resource.Styleable.RecyclerView_spanCount;
 			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView_stackFromEnd = global::ServiceDesk.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
-			global::Syncfusion.ListView.XForms.Android.Resource.Attribute.layoutManager = global::ServiceDesk.Droid.Resource.Attribute.layoutManager;
-			global::Syncfusion.ListView.XForms.Android.Resource.Attribute.reverseLayout = global::ServiceDesk.Droid.Resource.Attribute.reverseLayout;
-			global::Syncfusion.ListView.XForms.Android.Resource.Attribute.spanCount = global::ServiceDesk.Droid.Resource.Attribute.spanCount;
-			global::Syncfusion.ListView.XForms.Android.Resource.Attribute.stackFromEnd = global::ServiceDesk.Droid.Resource.Attribute.stackFromEnd;
-			global::Syncfusion.ListView.XForms.Android.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::ServiceDesk.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
-			global::Syncfusion.ListView.XForms.Android.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::ServiceDesk.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
-			global::Syncfusion.ListView.XForms.Android.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::ServiceDesk.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
-			global::Syncfusion.ListView.XForms.Android.Resource.Drawable.inputlayout_togglecollapseicon = global::ServiceDesk.Droid.Resource.Drawable.inputlayout_togglecollapseicon;
-			global::Syncfusion.ListView.XForms.Android.Resource.Drawable.inputlayout_togglevisibleicon = global::ServiceDesk.Droid.Resource.Drawable.inputlayout_togglevisibleicon;
-			global::Syncfusion.ListView.XForms.Android.Resource.Id.item_touch_helper_previous_elevation = global::ServiceDesk.Droid.Resource.Id.item_touch_helper_previous_elevation;
-			global::Syncfusion.ListView.XForms.Android.Resource.String.ApplicationName = global::ServiceDesk.Droid.Resource.String.ApplicationName;
-			global::Syncfusion.ListView.XForms.Android.Resource.String.Hello = global::ServiceDesk.Droid.Resource.String.Hello;
-			global::Syncfusion.ListView.XForms.Android.Resource.String.Load_More = global::ServiceDesk.Droid.Resource.String.Load_More;
-			global::Syncfusion.ListView.XForms.Android.Resource.Styleable.RecyclerView = global::ServiceDesk.Droid.Resource.Styleable.RecyclerView;
-			global::Syncfusion.ListView.XForms.Android.Resource.Styleable.RecyclerView_android_descendantFocusability = global::ServiceDesk.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
-			global::Syncfusion.ListView.XForms.Android.Resource.Styleable.RecyclerView_android_orientation = global::ServiceDesk.Droid.Resource.Styleable.RecyclerView_android_orientation;
-			global::Syncfusion.ListView.XForms.Android.Resource.Styleable.RecyclerView_layoutManager = global::ServiceDesk.Droid.Resource.Styleable.RecyclerView_layoutManager;
-			global::Syncfusion.ListView.XForms.Android.Resource.Styleable.RecyclerView_reverseLayout = global::ServiceDesk.Droid.Resource.Styleable.RecyclerView_reverseLayout;
-			global::Syncfusion.ListView.XForms.Android.Resource.Styleable.RecyclerView_spanCount = global::ServiceDesk.Droid.Resource.Styleable.RecyclerView_spanCount;
-			global::Syncfusion.ListView.XForms.Android.Resource.Styleable.RecyclerView_stackFromEnd = global::ServiceDesk.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.abc_fade_in = global::ServiceDesk.Droid.Resource.Animation.abc_fade_in;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.abc_fade_out = global::ServiceDesk.Droid.Resource.Animation.abc_fade_out;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.abc_grow_fade_in_from_bottom = global::ServiceDesk.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -999,6 +4235,8 @@ namespace ServiceDesk.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Id.expanded_menu = global::ServiceDesk.Droid.Resource.Id.expanded_menu;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.fill = global::ServiceDesk.Droid.Resource.Id.fill;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.@fixed = global::ServiceDesk.Droid.Resource.Id.@fixed;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.flyoutcontent_appbar = global::ServiceDesk.Droid.Resource.Id.flyoutcontent_appbar;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.flyoutcontent_recycler = global::ServiceDesk.Droid.Resource.Id.flyoutcontent_recycler;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.forever = global::ServiceDesk.Droid.Resource.Id.forever;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.ghost_view = global::ServiceDesk.Droid.Resource.Id.ghost_view;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.home = global::ServiceDesk.Droid.Resource.Id.home;
@@ -2181,57 +5419,6 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F01000A
 			public const int abc_slide_out_top = 2130771978;
 			
-			// aapt resource value: 0x7F080002
-			public const int btn_checkbox_indeterminate_to_checked_box_inner_merged_animation = 2131230722;
-			
-			// aapt resource value: 0x7F080003
-			public const int btn_checkbox_indeterminate_to_checked_box_outer_merged_animation = 2131230723;
-			
-			// aapt resource value: 0x7F080004
-			public const int btn_checkbox_indeterminate_to_checked_icon_null_animation = 2131230724;
-			
-			// aapt resource value: 0x7F080005
-			public const int btn_checkbox_to_checked_box_inner_merged_animation = 2131230725;
-			
-			// aapt resource value: 0x7F080006
-			public const int btn_checkbox_to_checked_box_outer_merged_animation = 2131230726;
-			
-			// aapt resource value: 0x7F080007
-			public const int btn_checkbox_to_checked_icon_null_animation = 2131230727;
-			
-			// aapt resource value: 0x7F080008
-			public const int btn_checkbox_to_indeterminate_from_checked_box_inner_merged_animation = 2131230728;
-			
-			// aapt resource value: 0x7F080009
-			public const int btn_checkbox_to_indeterminate_from_checked_icon_null_animation = 2131230729;
-			
-			// aapt resource value: 0x7F080010
-			public const int btn_checkbox_to_indeterminate_from_unchecked_box_inner_merged_animation = 2131230736;
-			
-			// aapt resource value: 0x7F080011
-			public const int btn_checkbox_to_indeterminate_from_unchecked_box_outer_merged_animation = 2131230737;
-			
-			// aapt resource value: 0x7F080012
-			public const int btn_checkbox_to_indeterminate_from_unchecked_icon_null_animation = 2131230738;
-			
-			// aapt resource value: 0x7F080013
-			public const int btn_checkbox_to_unchecked_box_inner_merged_animation = 2131230739;
-			
-			// aapt resource value: 0x7F080014
-			public const int btn_checkbox_to_unchecked_check_path_merged_animation = 2131230740;
-			
-			// aapt resource value: 0x7F080015
-			public const int btn_checkbox_to_unchecked_from_indeterminate_box_inner_merged_animation = 2131230741;
-			
-			// aapt resource value: 0x7F080016
-			public const int btn_checkbox_to_unchecked_from_indeterminate_check_path_merged_animation = 2131230742;
-			
-			// aapt resource value: 0x7F080017
-			public const int btn_checkbox_to_unchecked_from_indeterminate_icon_null_animation = 2131230743;
-			
-			// aapt resource value: 0x7F080018
-			public const int btn_checkbox_to_unchecked_icon_null_animation = 2131230744;
-			
 			// aapt resource value: 0x7F01000B
 			public const int design_bottom_sheet_slide_in = 2130771979;
 			
@@ -2244,17 +5431,17 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F01000E
 			public const int design_snackbar_out = 2130771982;
 			
-			// aapt resource value: 0x7F080035
-			public const int EnterFromLeft = 2131230773;
+			// aapt resource value: 0x7F100018
+			public const int EnterFromLeft = 2131755032;
 			
-			// aapt resource value: 0x7F080036
-			public const int EnterFromRight = 2131230774;
+			// aapt resource value: 0x7F100019
+			public const int EnterFromRight = 2131755033;
 			
-			// aapt resource value: 0x7F080037
-			public const int ExitToLeft = 2131230775;
+			// aapt resource value: 0x7F100020
+			public const int ExitToLeft = 2131755040;
 			
-			// aapt resource value: 0x7F080038
-			public const int ExitToRight = 2131230776;
+			// aapt resource value: 0x7F100021
+			public const int ExitToRight = 2131755041;
 			
 			// aapt resource value: 0x7F01000F
 			public const int tooltip_enter = 2130771983;
@@ -2457,32 +5644,32 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F04002B
 			public const int arrowShaftLength = 2130968619;
 			
-			// aapt resource value: 0x7F100153
-			public const int autocompleteBorderColor = 2131755347;
+			// aapt resource value: 0x7F090137
+			public const int autocompleteBorderColor = 2131296567;
 			
-			// aapt resource value: 0x7F100149
-			public const int autocompleteShowBorder = 2131755337;
+			// aapt resource value: 0x7F090133
+			public const int autocompleteShowBorder = 2131296563;
 			
-			// aapt resource value: 0x7F100150
-			public const int autocompleteShowClearButton = 2131755344;
+			// aapt resource value: 0x7F090134
+			public const int autocompleteShowClearButton = 2131296564;
 			
-			// aapt resource value: 0x7F100155
-			public const int autocompleteText = 2131755349;
+			// aapt resource value: 0x7F090139
+			public const int autocompleteText = 2131296569;
 			
-			// aapt resource value: 0x7F100152
-			public const int autocompleteTextColor = 2131755346;
+			// aapt resource value: 0x7F090136
+			public const int autocompleteTextColor = 2131296566;
 			
-			// aapt resource value: 0x7F100156
-			public const int autocompleteTextSize = 2131755350;
+			// aapt resource value: 0x7F090140
+			public const int autocompleteTextSize = 2131296576;
 			
 			// aapt resource value: 0x7F04002C
 			public const int autoCompleteTextViewStyle = 2130968620;
 			
-			// aapt resource value: 0x7F100154
-			public const int autocompleteWatermark = 2131755348;
+			// aapt resource value: 0x7F090138
+			public const int autocompleteWatermark = 2131296568;
 			
-			// aapt resource value: 0x7F100151
-			public const int autocompleteWatermarkColor = 2131755345;
+			// aapt resource value: 0x7F090135
+			public const int autocompleteWatermarkColor = 2131296565;
 			
 			// aapt resource value: 0x7F04002D
 			public const int autoSizeMaxTextSize = 2130968621;
@@ -2543,33 +5730,6 @@ namespace ServiceDesk.Droid
 			
 			// aapt resource value: 0x7F040040
 			public const int bottomSheetStyle = 2130968640;
-			
-			// aapt resource value: 0x7F100157
-			public const int busyIndicatorAnimationTypes = 2131755351;
-			
-			// aapt resource value: 0x7F100165
-			public const int busyIndicatorIsBusy = 2131755365;
-			
-			// aapt resource value: 0x7F100163
-			public const int busyIndicatorSecondaryColor = 2131755363;
-			
-			// aapt resource value: 0x7F100158
-			public const int busyIndicatorTextColor = 2131755352;
-			
-			// aapt resource value: 0x7F100162
-			public const int busyIndicatorTextSize = 2131755362;
-			
-			// aapt resource value: 0x7F100161
-			public const int busyIndicatorTitle = 2131755361;
-			
-			// aapt resource value: 0x7F100164
-			public const int busyIndicatorTitlePlacement = 2131755364;
-			
-			// aapt resource value: 0x7F100159
-			public const int busyIndicatorViewBoxHeight = 2131755353;
-			
-			// aapt resource value: 0x7F100160
-			public const int busyIndicatorViewBoxWidth = 2131755360;
 			
 			// aapt resource value: 0x7F040041
 			public const int buttonBarButtonStyle = 2130968641;
@@ -2751,9 +5911,6 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F04004C
 			public const int checkboxStyle = 2130968652;
 			
-			// aapt resource value: 0x7F100136
-			public const int @checked = 2131755318;
-			
 			// aapt resource value: 0x7F04004D
 			public const int checkedTextViewStyle = 2130968653;
 			
@@ -2864,9 +6021,6 @@ namespace ServiceDesk.Droid
 			
 			// aapt resource value: 0x7F040034
 			public const int coordinatorLayoutStyle = 2130968628;
-			
-			// aapt resource value: 0x7F100135
-			public const int cornerradius = 2131755317;
 			
 			// aapt resource value: 0x7F040035
 			public const int corpusId = 2130968629;
@@ -3119,9 +6273,6 @@ namespace ServiceDesk.Droid
 			
 			// aapt resource value: 0x7F0400AC
 			public const int isLightTheme = 2130968748;
-			
-			// aapt resource value: 0x7F100134
-			public const int isthreestate = 2131755316;
 			
 			// aapt resource value: 0x7F0400AD
 			public const int itemBackground = 2130968749;
@@ -3465,42 +6616,6 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F0400F6
 			public const int seekBarStyle = 2130968822;
 			
-			// aapt resource value: 0x7F100138
-			public const int segmentBackColor = 2131755320;
-			
-			// aapt resource value: 0x7F100139
-			public const int segmentBorderColor = 2131755321;
-			
-			// aapt resource value: 0x7F100140
-			public const int segmentBorderThickness = 2131755328;
-			
-			// aapt resource value: 0x7F100141
-			public const int segmentColor = 2131755329;
-			
-			// aapt resource value: 0x7F100146
-			public const int segmentCornerRadius = 2131755334;
-			
-			// aapt resource value: 0x7F100148
-			public const int segmentDisplayMode = 2131755336;
-			
-			// aapt resource value: 0x7F100143
-			public const int segmentedHeight = 2131755331;
-			
-			// aapt resource value: 0x7F100142
-			public const int segmentedPadding = 2131755330;
-			
-			// aapt resource value: 0x7F100144
-			public const int segmentedWidth = 2131755332;
-			
-			// aapt resource value: 0x7F100147
-			public const int segmentPosition = 2131755335;
-			
-			// aapt resource value: 0x7F100137
-			public const int segmentSelectedIndex = 2131755319;
-			
-			// aapt resource value: 0x7F100145
-			public const int segmentStrokeThickness = 2131755333;
-			
 			// aapt resource value: 0x7F0400F7
 			public const int selectableItemBackground = 2130968823;
 			
@@ -3560,9 +6675,6 @@ namespace ServiceDesk.Droid
 			
 			// aapt resource value: 0x7F040107
 			public const int state_collapsible = 2130968839;
-			
-			// aapt resource value: 0x7F100133
-			public const int state_indeterminate = 2131755315;
 			
 			// aapt resource value: 0x7F040072
 			public const int statusBarBackground = 2130968690;
@@ -4117,9 +7229,6 @@ namespace ServiceDesk.Droid
 			
 			// aapt resource value: 0x7F06001A
 			public const int common_google_signin_btn_tint = 2131099674;
-			
-			// aapt resource value: 0x7F050059
-			public const int control_checkable_material = 2131034201;
 			
 			// aapt resource value: 0x7F060027
 			public const int design_bottom_navigation_shadow_color = 2131099687;
@@ -4821,9 +7930,6 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F080075
 			public const int design_tab_text_size_2line = 2131230837;
 			
-			// aapt resource value: 0x7F110063
-			public const int disabledAlpha = 2131820643;
-			
 			// aapt resource value: 0x7F080076
 			public const int disabled_alpha_material_dark = 2131230838;
 			
@@ -5254,36 +8360,6 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F090055
 			public const int avd_show_password = 2131296341;
 			
-			// aapt resource value: 0x7F010148
-			public const int btn_checkbox = 2130772296;
-			
-			// aapt resource value: 0x7F010149
-			public const int btn_checkbox_checked = 2130772297;
-			
-			// aapt resource value: 0x7F010150
-			public const int btn_checkbox_checked_to_indeterminate_animation = 2130772304;
-			
-			// aapt resource value: 0x7F010151
-			public const int btn_checkbox_checked_to_unchecked_animation = 2130772305;
-			
-			// aapt resource value: 0x7F010152
-			public const int btn_checkbox_indeterminate = 2130772306;
-			
-			// aapt resource value: 0x7F010153
-			public const int btn_checkbox_indeterminate_to_checked_animation = 2130772307;
-			
-			// aapt resource value: 0x7F010154
-			public const int btn_checkbox_indeterminate_to_unchecked_animation = 2130772308;
-			
-			// aapt resource value: 0x7F010155
-			public const int btn_checkbox_unchecked = 2130772309;
-			
-			// aapt resource value: 0x7F010156
-			public const int btn_checkbox_unchecked_to_checked_animation = 2130772310;
-			
-			// aapt resource value: 0x7F010157
-			public const int btn_checkbox_unchecked_to_indeterminate_animation = 2130772311;
-			
 			// aapt resource value: 0x7F090001
 			public const int cast_abc_scrubber_control_off_mtrl_alpha = 2131296257;
 			
@@ -5521,8 +8597,14 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F09005B
 			public const int design_snackbar_background = 2131296347;
 			
-			// aapt resource value: 0x7F010162
-			public const int dropdownbuttonimage = 2130772322;
+			// aapt resource value: 0x7F010155
+			public const int dropdownbuttonimage = 2130772309;
+			
+			// aapt resource value: 0x7F010007
+			public const int drop_down_arrow = 2130771975;
+			
+			// aapt resource value: 0x7F010008
+			public const int filter = 2130771976;
 			
 			// aapt resource value: 0x7F09004A
 			public const int googleg_disabled_color_18 = 2131296330;
@@ -5530,8 +8612,8 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F09004B
 			public const int googleg_standard_color_18 = 2131296331;
 			
-			// aapt resource value: 0x7F010006
-			public const int ic_attach_file = 2130771974;
+			// aapt resource value: 0x7F010009
+			public const int ic_attach_file = 2130771977;
 			
 			// aapt resource value: 0x7F090054
 			public const int ic_audiotrack_dark = 2131296340;
@@ -5539,8 +8621,8 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F090055
 			public const int ic_audiotrack_light = 2131296341;
 			
-			// aapt resource value: 0x7F010007
-			public const int ic_call = 2130771975;
+			// aapt resource value: 0x7F010010
+			public const int ic_call = 2130771984;
 			
 			// aapt resource value: 0x7F090056
 			public const int ic_dialog_close_dark = 2131296342;
@@ -5548,8 +8630,8 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F090057
 			public const int ic_dialog_close_light = 2131296343;
 			
-			// aapt resource value: 0x7F010008
-			public const int ic_edit = 2130771976;
+			// aapt resource value: 0x7F010011
+			public const int ic_edit = 2130771985;
 			
 			// aapt resource value: 0x7F090058
 			public const int ic_group_collapse_00 = 2131296344;
@@ -6067,11 +9149,11 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F090050
 			public const int ic_plusone_tall_off_client = 2131296336;
 			
-			// aapt resource value: 0x7F010009
-			public const int ic_profile = 2130771977;
+			// aapt resource value: 0x7F010012
+			public const int ic_profile = 2130771986;
 			
-			// aapt resource value: 0x7F010010
-			public const int ic_send = 2130771984;
+			// aapt resource value: 0x7F010013
+			public const int ic_send = 2130771987;
 			
 			// aapt resource value: 0x7F0900FF
 			public const int ic_vol_type_speaker_dark = 2131296511;
@@ -6091,11 +9173,11 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F090104
 			public const int ic_vol_type_tv_light = 2131296516;
 			
-			// aapt resource value: 0x7F010158
-			public const int inputlayout_togglecollapseicon = 2130772312;
+			// aapt resource value: 0x7F010151
+			public const int inputlayout_togglecollapseicon = 2130772305;
 			
-			// aapt resource value: 0x7F010159
-			public const int inputlayout_togglevisibleicon = 2130772313;
+			// aapt resource value: 0x7F010152
+			public const int inputlayout_togglevisibleicon = 2130772306;
 			
 			// aapt resource value: 0x7F090105
 			public const int mr_button_connected_dark = 2131296517;
@@ -6331,20 +9413,17 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F090089
 			public const int quantum_ic_volume_up_white_36 = 2131296393;
 			
-			// aapt resource value: 0x7F010160
-			public const int sfclosebutton = 2130772320;
+			// aapt resource value: 0x7F010153
+			public const int sfclosebutton = 2130772307;
 			
 			// aapt resource value: 0x7F010002
-			public const int splash_logo = 2130771970;
+			public const int splash_screen = 2130771970;
 			
 			// aapt resource value: 0x7F010003
-			public const int splash_screen = 2130771971;
+			public const int StartLabel = 2130771971;
 			
-			// aapt resource value: 0x7F010004
-			public const int StartLabel = 2130771972;
-			
-			// aapt resource value: 0x7F010161
-			public const int styleinfo = 2130772321;
+			// aapt resource value: 0x7F010154
+			public const int styleinfo = 2130772308;
 			
 			// aapt resource value: 0x7F090069
 			public const int tooltip_frame_dark = 2131296361;
@@ -6352,8 +9431,14 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F09006A
 			public const int tooltip_frame_light = 2131296362;
 			
+			// aapt resource value: 0x7F010004
+			public const int vectorLogo = 2130771972;
+			
 			// aapt resource value: 0x7F010005
 			public const int ViewCellBackground = 2130771973;
+			
+			// aapt resource value: 0x7F010006
+			public const int whitelogo = 2130771974;
 			
 			static Drawable()
 			{
@@ -6464,14 +9549,17 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F0C0010
 			public const int android_pay_light_with_border = 2131492880;
 			
-			// aapt resource value: 0x7F020338
-			public const int app_name = 2130838328;
+			// aapt resource value: 0x7F020319
+			public const int APP_NAME = 2130838297;
 			
-			// aapt resource value: 0x7F020339
-			public const int APP_NAME = 2130838329;
+			// aapt resource value: 0x7F020318
+			public const int app_name = 2130838296;
 			
 			// aapt resource value: 0x7F0C0011
 			public const int async = 2131492881;
+			
+			// aapt resource value: 0x1
+			public const int audio_empty_message = 1;
 			
 			// aapt resource value: 0x7F0C0012
 			public const int audio_list_view = 2131492882;
@@ -6485,12 +9573,6 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F0C0015
 			public const int background_place_holder_image_view = 2131492885;
 			
-			// aapt resource value: 0x7F020186
-			public const int ball = 2130837894;
-			
-			// aapt resource value: 0x7F020187
-			public const int battery = 2130837895;
-			
 			// aapt resource value: 0x7F0C0016
 			public const int blocking = 2131492886;
 			
@@ -6500,20 +9582,14 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F0C0018
 			public const int book_now = 2131492888;
 			
-			// aapt resource value: 0x7F020182
-			public const int border = 2130837890;
-			
 			// aapt resource value: 0x7F0C0019
 			public const int bottom = 2131492889;
 			
-			// aapt resource value: 0x7F020327
-			public const int bottomtab.navarea = 2130838311;
+			// aapt resource value: 0x7F020307
+			public const int bottomtab.navarea = 2130838279;
 			
-			// aapt resource value: 0x7F020328
-			public const int bottomtab.tabbar = 2130838312;
-			
-			// aapt resource value: 0x7F020188
-			public const int box = 2130837896;
+			// aapt resource value: 0x7F020308
+			public const int bottomtab.tabbar = 2130838280;
 			
 			// aapt resource value: 0x7F0C001A
 			public const int browser_actions_header_text = 2131492890;
@@ -6611,9 +9687,6 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F0C001E
 			public const int checkbox = 2131492894;
 			
-			// aapt resource value: 0x7F020179
-			public const int @checked = 2130837881;
-			
 			// aapt resource value: 0x7F0C0038
 			public const int chronometer = 2131492920;
 			
@@ -6689,12 +9762,6 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F0C0044
 			public const int donate_with_google = 2131492932;
 			
-			// aapt resource value: 0x7F020189
-			public const int doubleCircle = 2130837897;
-			
-			// aapt resource value: 0x7F020190
-			public const int ecg = 2130837904;
-			
 			// aapt resource value: 0x7F0C002C
 			public const int edit_query = 2131492908;
 			
@@ -6719,29 +9786,23 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F0C002F
 			public const int expand_activities_button = 2131492911;
 			
-			// aapt resource value: 0x7F020181
-			public const int fill = 2130837889;
+			// aapt resource value: 0x7F0C0031
+			public const int fill = 2131492913;
 			
 			// aapt resource value: 0x7F0C0032
 			public const int @fixed = 2131492914;
 			
-			// aapt resource value: 0x7F020329
-			public const int flyoutcontent.appbar = 2130838313;
+			// aapt resource value: 0x7F020309
+			public const int flyoutcontent_appbar = 2130838281;
 			
-			// aapt resource value: 0x7F020330
-			public const int flyoutcontent.recycler = 2130838320;
+			// aapt resource value: 0x7F020310
+			public const int flyoutcontent_recycler = 2130838288;
 			
 			// aapt resource value: 0x7F0C004A
 			public const int forever = 2131492938;
 			
-			// aapt resource value: 0x7F020191
-			public const int gearBox = 2130837905;
-			
 			// aapt resource value: 0x7F0C0034
 			public const int ghost_view = 2131492916;
-			
-			// aapt resource value: 0x7F020192
-			public const int globe = 2130837906;
 			
 			// aapt resource value: 0x7F0C004B
 			public const int googleMaterial2 = 2131492939;
@@ -6767,9 +9828,6 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F0C0035
 			public const int home = 2131492917;
 			
-			// aapt resource value: 0x7F020193
-			public const int horizontalPulsingBox = 2130837907;
-			
 			// aapt resource value: 0x7F0C0052
 			public const int html = 2131492946;
 			
@@ -6791,14 +9849,8 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F0C0058
 			public const int icon_view = 2131492952;
 			
-			// aapt resource value: 0x7F020183
-			public const int image = 2130837891;
-			
-			// aapt resource value: 0x7F020184
-			public const int imagewithtext = 2130837892;
-			
-			// aapt resource value: 0x7F020178
-			public const int indeterminate = 2130837880;
+			// aapt resource value: 0x7F0C0038
+			public const int image = 2131492920;
 			
 			// aapt resource value: 0x7F0C0059
 			public const int index_entity_types = 2131492953;
@@ -6827,8 +9879,8 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F0C0061
 			public const int italic = 2131492961;
 			
-			// aapt resource value: 0x7F020185
-			public const int Itemname = 2130837893;
+			// aapt resource value: 0x7F020178
+			public const int Itemname = 2130837880;
 			
 			// aapt resource value: 0x7F0C003B
 			public const int item_touch_helper_previous_elevation = 2131492923;
@@ -6881,17 +9933,17 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F0C006E
 			public const int logo_only = 2131492974;
 			
-			// aapt resource value: 0x7F020331
-			public const int main.appbar = 2130838321;
+			// aapt resource value: 0x7F020311
+			public const int main.appbar = 2130838289;
 			
-			// aapt resource value: 0x7F020334
-			public const int main.scrollview = 2130838324;
+			// aapt resource value: 0x7F020314
+			public const int main.scrollview = 2130838292;
 			
-			// aapt resource value: 0x7F020333
-			public const int main.tablayout = 2130838323;
+			// aapt resource value: 0x7F020313
+			public const int main.tablayout = 2130838291;
 			
-			// aapt resource value: 0x7F020332
-			public const int main.toolbar = 2130838322;
+			// aapt resource value: 0x7F020312
+			public const int main.toolbar = 2130838290;
 			
 			// aapt resource value: 0x7F0C0042
 			public const int masked = 2131492930;
@@ -6916,9 +9968,6 @@ namespace ServiceDesk.Droid
 			
 			// aapt resource value: 0x7F0C0073
 			public const int monochrome = 2131492979;
-			
-			// aapt resource value: 0x7F020194
-			public const int movieTimer = 2130837908;
 			
 			// aapt resource value: 0x7F0C0033
 			public const int mr_art = 2131492915;
@@ -7079,9 +10128,6 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F0C0089
 			public const int plain = 2131493001;
 			
-			// aapt resource value: 0x7F020195
-			public const int print = 2130837909;
-			
 			// aapt resource value: 0x7F0C008A
 			public const int production = 2131493002;
 			
@@ -7097,9 +10143,6 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F0C008C
 			public const int radio = 2131493004;
 			
-			// aapt resource value: 0x7F020196
-			public const int rectangle = 2130837910;
-			
 			// aapt resource value: 0x7F0C008D
 			public const int rfc822 = 2131493005;
 			
@@ -7111,9 +10154,6 @@ namespace ServiceDesk.Droid
 			
 			// aapt resource value: 0x7F0C0090
 			public const int right_side = 2131493008;
-			
-			// aapt resource value: 0x7F020197
-			public const int rollingBall = 2130837911;
 			
 			// aapt resource value: 0x7F0C0091
 			public const int sandbox = 2131493009;
@@ -7187,23 +10227,17 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F0C0069
 			public const int select_dialog_listview = 2131492969;
 			
-			// aapt resource value: 0x7F020335
-			public const int shellcontent.appbar = 2130838325;
+			// aapt resource value: 0x7F020315
+			public const int shellcontent.appbar = 2130838293;
 			
-			// aapt resource value: 0x7F020337
-			public const int shellcontent.scrollview = 2130838327;
+			// aapt resource value: 0x7F020317
+			public const int shellcontent.scrollview = 2130838295;
 			
-			// aapt resource value: 0x7F020336
-			public const int shellcontent.toolbar = 2130838326;
+			// aapt resource value: 0x7F020316
+			public const int shellcontent.toolbar = 2130838294;
 			
 			// aapt resource value: 0x7F0C006A
 			public const int shortcut = 2131492970;
-			
-			// aapt resource value: 0x7F020198
-			public const int singleCircle = 2130837912;
-			
-			// aapt resource value: 0x7F020199
-			public const int slicedCircle = 2130837913;
 			
 			// aapt resource value: 0x7F0C0096
 			public const int slide = 2131493014;
@@ -7301,6 +10335,9 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F0C00A5
 			public const int textTitle = 2131493029;
 			
+			// aapt resource value: 0x1
+			public const int text_empty_message = 1;
+			
 			// aapt resource value: 0x7F0C007D
 			public const int text_input_password_toggle = 2131492989;
 			
@@ -7352,9 +10389,6 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F0C008B
 			public const int transition_transform = 2131493003;
 			
-			// aapt resource value: 0x7F020180
-			public const int @unchecked = 2130837888;
-			
 			// aapt resource value: 0x7F0C008C
 			public const int uniform = 2131493004;
 			
@@ -7378,9 +10412,6 @@ namespace ServiceDesk.Droid
 			
 			// aapt resource value: 0x7F0C00AF
 			public const int wrap_content = 2131493039;
-			
-			// aapt resource value: 0x7F020200
-			public const int zoomingTarget = 2130838016;
 			
 			static Id()
 			{
@@ -7452,21 +10483,6 @@ namespace ServiceDesk.Droid
 		
 		public partial class Interpolator
 		{
-			
-			// aapt resource value: 0x7F090002
-			public const int btn_checkbox_checked_animation_interpolator_0 = 2131296258;
-			
-			// aapt resource value: 0x7F090003
-			public const int btn_checkbox_checked_animation_interpolator_1 = 2131296259;
-			
-			// aapt resource value: 0x7F090004
-			public const int btn_checkbox_indeterminate_animation_interpolator_1 = 2131296260;
-			
-			// aapt resource value: 0x7F090005
-			public const int btn_checkbox_unchecked_animation_interpolator_0 = 2131296261;
-			
-			// aapt resource value: 0x7F090006
-			public const int btn_checkbox_unchecked_animation_interpolator_1 = 2131296262;
 			
 			// aapt resource value: 0x7F0E0001
 			public const int mr_fast_out_slow_in = 2131623937;
@@ -7913,11 +10929,14 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F15001D
 			public const int abc_toolbar_collapse_description = 2132082717;
 			
+			// aapt resource value: 0x1
+			public const int accept = 1;
+			
 			// aapt resource value: 0x7F15001E
 			public const int appbar_scrolling_view_behavior = 2132082718;
 			
-			// aapt resource value: 0x7F120083
-			public const int ApplicationName = 2131886211;
+			// aapt resource value: 0x7F070003
+			public const int ApplicationName = 2131165187;
 			
 			// aapt resource value: 0x7F15001F
 			public const int bottom_sheet_behavior = 2132082719;
@@ -8036,6 +11055,12 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F150026
 			public const int cast_tracks_chooser_dialog_none = 2132082726;
 			
+			// aapt resource value: 0x1
+			public const int cast_tracks_chooser_dialog_no_audio_tracks = 1;
+			
+			// aapt resource value: 0x1
+			public const int cast_tracks_chooser_dialog_no_text_tracks = 1;
+			
 			// aapt resource value: 0x7F150027
 			public const int cast_tracks_chooser_dialog_ok = 2132082727;
 			
@@ -8102,23 +11127,41 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x7F15003B
 			public const int common_signin_button_text_long = 2132082747;
 			
+			// aapt resource value: 0x1
+			public const int create_calendar_message = 1;
+			
+			// aapt resource value: 0x1
+			public const int create_calendar_title = 1;
+			
+			// aapt resource value: 0x1
+			public const int debug_menu_ad_information = 1;
+			
+			// aapt resource value: 0x1
+			public const int debug_menu_creative_preview = 1;
+			
+			// aapt resource value: 0x1
+			public const int debug_menu_title = 1;
+			
+			// aapt resource value: 0x1
+			public const int debug_menu_troubleshooting = 1;
+			
+			// aapt resource value: 0x1
+			public const int decline = 1;
+			
 			// aapt resource value: 0x7F15003C
 			public const int fcm_fallback_notification_channel_label = 2132082748;
 			
 			// aapt resource value: 0x7F15003D
 			public const int gcm_fallback_notification_channel_label = 2132082749;
 			
-			// aapt resource value: 0x7F120082
-			public const int Hello = 2131886210;
+			// aapt resource value: 0x7F070002
+			public const int Hello = 2131165186;
 			
-			// aapt resource value: 0x7F120081
-			public const int library_name = 2131886209;
+			// aapt resource value: 0x7F070004
+			public const int library_name = 2131165188;
 			
 			// aapt resource value: 0x7F15003E
 			public const int license_content_error = 2132082750;
-			
-			// aapt resource value: 0x7F120084
-			public const int Load_More = 2131886212;
 			
 			// aapt resource value: 0x7F15001E
 			public const int mr_button_content_description = 2132082718;
@@ -8239,6 +11282,12 @@ namespace ServiceDesk.Droid
 			
 			// aapt resource value: 0x7F15004B
 			public const int status_bar_notification_info_overflow = 2132082763;
+			
+			// aapt resource value: 0x1
+			public const int store_picture_message = 1;
+			
+			// aapt resource value: 0x1
+			public const int store_picture_title = 1;
 			
 			// aapt resource value: 0x7F15004C
 			public const int tagmanager_preview_dialog_button = 2132082764;
@@ -9569,11 +12618,11 @@ namespace ServiceDesk.Droid
 			public static int[] ActionBarLayout = new int[] {
 					16842931};
 			
-			// aapt resource value: 0x7F070239
-			public const int ActionBarLayout_android_layout_gravity = 2131165753;
+			// aapt resource value: 0x7F080210
+			public const int ActionBarLayout_android_layout_gravity = 2131231248;
 			
-			// aapt resource value: 0x7F070209
-			public const int ActionBar_background = 2131165705;
+			// aapt resource value: 0x7F080180
+			public const int ActionBar_background = 2131231104;
 			
 			// aapt resource value: 0x1
 			public const int ActionBar_backgroundSplit = 1;
@@ -9662,8 +12711,8 @@ namespace ServiceDesk.Droid
 			public static int[] ActionMenuItemView = new int[] {
 					16843071};
 			
-			// aapt resource value: 0x7F070241
-			public const int ActionMenuItemView_android_minWidth = 2131165761;
+			// aapt resource value: 0x7F080212
+			public const int ActionMenuItemView_android_minWidth = 2131231250;
 			
 			public static int[] ActionMode = new int[] {
 					2130968626,
@@ -9673,8 +12722,8 @@ namespace ServiceDesk.Droid
 					2130968847,
 					2130968901};
 			
-			// aapt resource value: 0x7F070243
-			public const int ActionMode_background = 2131165763;
+			// aapt resource value: 0x7F080214
+			public const int ActionMode_background = 2131231252;
 			
 			// aapt resource value: 0x1
 			public const int ActionMode_backgroundSplit = 1;
@@ -9695,8 +12744,8 @@ namespace ServiceDesk.Droid
 					2130968704,
 					2130968746};
 			
-			// aapt resource value: 0x7F070250
-			public const int ActivityChooserView_expandActivityOverflowButtonDrawable = 2131165776;
+			// aapt resource value: 0x7F080221
+			public const int ActivityChooserView_expandActivityOverflowButtonDrawable = 2131231265;
 			
 			// aapt resource value: 0x1
 			public const int ActivityChooserView_initialActivityCount = 1;
@@ -9706,8 +12755,8 @@ namespace ServiceDesk.Droid
 					2130968578,
 					2130968579};
 			
-			// aapt resource value: 0x7F070003
-			public const int AdsAttrs_adSize = 2131165187;
+			// aapt resource value: 0x7F080003
+			public const int AdsAttrs_adSize = 2131230723;
 			
 			// aapt resource value: 0x1
 			public const int AdsAttrs_adSizes = 1;
@@ -9724,8 +12773,8 @@ namespace ServiceDesk.Droid
 					2130968828,
 					2130968829};
 			
-			// aapt resource value: 0x7F070253
-			public const int AlertDialog_android_layout = 2131165779;
+			// aapt resource value: 0x7F080224
+			public const int AlertDialog_android_layout = 2131231268;
 			
 			// aapt resource value: 0x1
 			public const int AlertDialog_buttonPanelSideLayout = 1;
@@ -9756,14 +12805,14 @@ namespace ServiceDesk.Droid
 					2130968838,
 					2130968839};
 			
-			// aapt resource value: 0x7F070267
-			public const int AppBarLayoutStates_state_collapsed = 2131165799;
+			// aapt resource value: 0x7F080238
+			public const int AppBarLayoutStates_state_collapsed = 2131231288;
 			
 			// aapt resource value: 0x1
 			public const int AppBarLayoutStates_state_collapsible = 1;
 			
-			// aapt resource value: 0x7F070261
-			public const int AppBarLayout_android_background = 2131165793;
+			// aapt resource value: 0x7F080232
+			public const int AppBarLayout_android_background = 2131231282;
 			
 			// aapt resource value: 0x1
 			public const int AppBarLayout_android_keyboardNavigationCluster = 1;
@@ -9781,8 +12830,8 @@ namespace ServiceDesk.Droid
 					2130968765,
 					2130968766};
 			
-			// aapt resource value: 0x7F070270
-			public const int AppBarLayout_Layout_layout_scrollFlags = 2131165808;
+			// aapt resource value: 0x7F080241
+			public const int AppBarLayout_Layout_layout_scrollFlags = 2131231297;
 			
 			// aapt resource value: 0x1
 			public const int AppBarLayout_Layout_layout_scrollInterpolator = 1;
@@ -9793,8 +12842,8 @@ namespace ServiceDesk.Droid
 					2130968889,
 					2130968890};
 			
-			// aapt resource value: 0x7F070273
-			public const int AppCompatImageView_android_src = 2131165811;
+			// aapt resource value: 0x7F080244
+			public const int AppCompatImageView_android_src = 2131231300;
 			
 			// aapt resource value: 0x1
 			public const int AppCompatImageView_srcCompat = 1;
@@ -9811,8 +12860,8 @@ namespace ServiceDesk.Droid
 					2130968887,
 					2130968888};
 			
-			// aapt resource value: 0x7F070278
-			public const int AppCompatSeekBar_android_thumb = 2131165816;
+			// aapt resource value: 0x7F080249
+			public const int AppCompatSeekBar_android_thumb = 2131231305;
 			
 			// aapt resource value: 0x1
 			public const int AppCompatSeekBar_tickMark = 1;
@@ -9832,8 +12881,8 @@ namespace ServiceDesk.Droid
 					16843117,
 					16842804};
 			
-			// aapt resource value: 0x7F070283
-			public const int AppCompatTextHelper_android_drawableBottom = 2131165827;
+			// aapt resource value: 0x7F080254
+			public const int AppCompatTextHelper_android_drawableBottom = 2131231316;
 			
 			// aapt resource value: 0x1
 			public const int AppCompatTextHelper_android_drawableEnd = 1;
@@ -9863,8 +12912,8 @@ namespace ServiceDesk.Droid
 					2130968720,
 					2130968869};
 			
-			// aapt resource value: 0x7F070291
-			public const int AppCompatTextView_android_textAppearance = 2131165841;
+			// aapt resource value: 0x7F080262
+			public const int AppCompatTextView_android_textAppearance = 2131231330;
 			
 			// aapt resource value: 0x1
 			public const int AppCompatTextView_autoSizeMaxTextSize = 1;
@@ -10008,8 +13057,8 @@ namespace ServiceDesk.Droid
 					2130968921,
 					2130968922};
 			
-			// aapt resource value: 0x7F070300
-			public const int AppCompatTheme_actionBarDivider = 2131165952;
+			// aapt resource value: 0x7F080271
+			public const int AppCompatTheme_actionBarDivider = 2131231345;
 			
 			// aapt resource value: 0x1
 			public const int AppCompatTheme_actionBarItemBackground = 1;
@@ -10375,8 +13424,8 @@ namespace ServiceDesk.Droid
 					2130968753,
 					2130968783};
 			
-			// aapt resource value: 0x7F070420
-			public const int BottomNavigationView_elevation = 2131166240;
+			// aapt resource value: 0x7F080391
+			public const int BottomNavigationView_elevation = 2131231633;
 			
 			// aapt resource value: 0x1
 			public const int BottomNavigationView_itemBackground = 1;
@@ -10395,8 +13444,8 @@ namespace ServiceDesk.Droid
 					2130968635,
 					2130968636};
 			
-			// aapt resource value: 0x7F070426
-			public const int BottomSheetBehavior_Layout_behavior_hideable = 2131166246;
+			// aapt resource value: 0x7F080397
+			public const int BottomSheetBehavior_Layout_behavior_hideable = 2131231639;
 			
 			// aapt resource value: 0x1
 			public const int BottomSheetBehavior_Layout_behavior_peekHeight = 1;
@@ -10407,8 +13456,8 @@ namespace ServiceDesk.Droid
 			public static int[] ButtonBarLayout = new int[] {
 					2130968615};
 			
-			// aapt resource value: 0x7F070430
-			public const int ButtonBarLayout_allowStacking = 2131166256;
+			// aapt resource value: 0x7F080401
+			public const int ButtonBarLayout_allowStacking = 2131231745;
 			
 			public static int[] CardView = new int[] {
 					16843072,
@@ -10425,8 +13474,8 @@ namespace ServiceDesk.Droid
 					2130968586,
 					2130968587};
 			
-			// aapt resource value: 0x7F070722
-			public const int CardView_android_minHeight = 2131167010;
+			// aapt resource value: 0x7F080693
+			public const int CardView_android_minHeight = 2131232403;
 			
 			// aapt resource value: 0x1
 			public const int CardView_android_minWidth = 1;
@@ -10479,8 +13528,8 @@ namespace ServiceDesk.Droid
 					2130968621,
 					2130968622};
 			
-			// aapt resource value: 0x7F070007
-			public const int CastExpandedController_castButtonColor = 2131165191;
+			// aapt resource value: 0x7F080007
+			public const int CastExpandedController_castButtonColor = 2131230727;
 			
 			// aapt resource value: 0x1
 			public const int CastExpandedController_castClosedCaptionsButtonDrawable = 1;
@@ -10526,8 +13575,8 @@ namespace ServiceDesk.Droid
 					2130968605,
 					2130968624};
 			
-			// aapt resource value: 0x7F070021
-			public const int CastIntroOverlay_castBackgroundColor = 2131165217;
+			// aapt resource value: 0x7F080021
+			public const int CastIntroOverlay_castBackgroundColor = 2131230753;
 			
 			// aapt resource value: 0x1
 			public const int CastIntroOverlay_castButtonBackgroundColor = 1;
@@ -10565,8 +13614,8 @@ namespace ServiceDesk.Droid
 					2130968623,
 					2130968624};
 			
-			// aapt resource value: 0x7F070028
-			public const int CastMiniController_castBackground = 2131165224;
+			// aapt resource value: 0x7F080028
+			public const int CastMiniController_castBackground = 2131230760;
 			
 			// aapt resource value: 0x1
 			public const int CastMiniController_castButtonColor = 1;
@@ -10640,8 +13689,8 @@ namespace ServiceDesk.Droid
 					2130968892,
 					2130968902};
 			
-			// aapt resource value: 0x7F070432
-			public const int CollapsingToolbarLayout_collapsedTitleGravity = 2131166258;
+			// aapt resource value: 0x7F080403
+			public const int CollapsingToolbarLayout_collapsedTitleGravity = 2131231747;
 			
 			// aapt resource value: 0x1
 			public const int CollapsingToolbarLayout_collapsedTitleTextAppearance = 1;
@@ -10674,8 +13723,8 @@ namespace ServiceDesk.Droid
 					2130968760,
 					2130968761};
 			
-			// aapt resource value: 0x7F070449
-			public const int CollapsingToolbarLayout_Layout_layout_collapseMode = 2131166281;
+			// aapt resource value: 0x7F080420
+			public const int CollapsingToolbarLayout_Layout_layout_collapseMode = 2131231776;
 			
 			// aapt resource value: 0x1
 			public const int CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = 1;
@@ -10703,8 +13752,8 @@ namespace ServiceDesk.Droid
 					16843551,
 					16843173};
 			
-			// aapt resource value: 0x7F070452
-			public const int ColorStateListItem_alpha = 2131166290;
+			// aapt resource value: 0x7F080423
+			public const int ColorStateListItem_alpha = 2131231779;
 			
 			// aapt resource value: 0x1
 			public const int ColorStateListItem_android_alpha = 1;
@@ -10717,8 +13766,8 @@ namespace ServiceDesk.Droid
 					2130968650,
 					2130968651};
 			
-			// aapt resource value: 0x7F070456
-			public const int CompoundButton_android_button = 2131166294;
+			// aapt resource value: 0x7F080427
+			public const int CompoundButton_android_button = 2131231783;
 			
 			// aapt resource value: 0x1
 			public const int CompoundButton_buttonTint = 1;
@@ -10730,8 +13779,8 @@ namespace ServiceDesk.Droid
 					2130968653,
 					2130968690};
 			
-			// aapt resource value: 0x7F070048
-			public const int CoordinatorLayout_keylines = 2131165256;
+			// aapt resource value: 0x7F080048
+			public const int CoordinatorLayout_keylines = 2131230792;
 			
 			public static int[] CoordinatorLayout_Layout = new int[] {
 					16842931,
@@ -10742,8 +13791,8 @@ namespace ServiceDesk.Droid
 					2130968662,
 					2130968663};
 			
-			// aapt resource value: 0x7F070051
-			public const int CoordinatorLayout_Layout_android_layout_gravity = 2131165265;
+			// aapt resource value: 0x7F080051
+			public const int CoordinatorLayout_Layout_android_layout_gravity = 2131230801;
 			
 			// aapt resource value: 0x1
 			public const int CoordinatorLayout_Layout_layout_anchor = 1;
@@ -10776,8 +13825,8 @@ namespace ServiceDesk.Droid
 					2130968687,
 					2130968694};
 			
-			// aapt resource value: 0x7F070059
-			public const int Corpus_contentProviderUri = 2131165273;
+			// aapt resource value: 0x7F080059
+			public const int Corpus_contentProviderUri = 2131230809;
 			
 			// aapt resource value: 0x1
 			public const int Corpus_corpusId = 1;
@@ -10805,8 +13854,8 @@ namespace ServiceDesk.Droid
 					2130968607,
 					2130968611};
 			
-			// aapt resource value: 0x7F070068
-			public const int CustomCastTheme_castExpandedControllerStyle = 2131165288;
+			// aapt resource value: 0x7F080068
+			public const int CustomCastTheme_castExpandedControllerStyle = 2131230824;
 			
 			// aapt resource value: 0x1
 			public const int CustomCastTheme_castIntroOverlayStyle = 1;
@@ -10819,8 +13868,8 @@ namespace ServiceDesk.Droid
 					2130968693,
 					2130968706};
 			
-			// aapt resource value: 0x7F070072
-			public const int CustomWalletTheme_customThemeStyle = 2131165298;
+			// aapt resource value: 0x7F080072
+			public const int CustomWalletTheme_customThemeStyle = 2131230834;
 			
 			// aapt resource value: 0x1
 			public const int CustomWalletTheme_toolbarTextColorStyle = 1;
@@ -10833,20 +13882,14 @@ namespace ServiceDesk.Droid
 					2130968640,
 					2130968879};
 			
-			// aapt resource value: 0x7F070460
-			public const int DesignTheme_bottomSheetDialogTheme = 2131166304;
+			// aapt resource value: 0x7F080431
+			public const int DesignTheme_bottomSheetDialogTheme = 2131231793;
 			
 			// aapt resource value: 0x1
 			public const int DesignTheme_bottomSheetStyle = 1;
 			
 			// aapt resource value: 0x2
 			public const int DesignTheme_textColorError = 2;
-			
-			public static int[] DrawableStates = new int[] {
-					0};
-			
-			// aapt resource value: 0x7F070170
-			public const int DrawableStates_state_indeterminate = 2131165552;
 			
 			public static int[] DrawerArrowToggle = new int[] {
 					2130968618,
@@ -10858,8 +13901,8 @@ namespace ServiceDesk.Droid
 					2130968831,
 					2130968882};
 			
-			// aapt resource value: 0x7F070464
-			public const int DrawerArrowToggle_arrowHeadLength = 2131166308;
+			// aapt resource value: 0x7F080435
+			public const int DrawerArrowToggle_arrowHeadLength = 2131231797;
 			
 			// aapt resource value: 0x1
 			public const int DrawerArrowToggle_arrowShaftLength = 1;
@@ -10886,8 +13929,8 @@ namespace ServiceDesk.Droid
 					2130968674,
 					2130968675};
 			
-			// aapt resource value: 0x7F070076
-			public const int FeatureParam_paramName = 2131165302;
+			// aapt resource value: 0x7F080076
+			public const int FeatureParam_paramName = 2131230838;
 			
 			// aapt resource value: 0x1
 			public const int FeatureParam_paramValue = 1;
@@ -10902,8 +13945,8 @@ namespace ServiceDesk.Droid
 					2130968816,
 					2130968911};
 			
-			// aapt resource value: 0x7F070473
-			public const int FloatingActionButton_backgroundTint = 2131166323;
+			// aapt resource value: 0x7F080444
+			public const int FloatingActionButton_backgroundTint = 2131231812;
 			
 			// aapt resource value: 0x1
 			public const int FloatingActionButton_backgroundTintMode = 1;
@@ -10911,8 +13954,8 @@ namespace ServiceDesk.Droid
 			public static int[] FloatingActionButton_Behavior_Layout = new int[] {
 					2130968632};
 			
-			// aapt resource value: 0x7F070482
-			public const int FloatingActionButton_Behavior_Layout_behavior_autoHide = 2131166338;
+			// aapt resource value: 0x7F080453
+			public const int FloatingActionButton_Behavior_Layout_behavior_autoHide = 2131231827;
 			
 			// aapt resource value: 0x2
 			public const int FloatingActionButton_borderWidth = 2;
@@ -10948,8 +13991,8 @@ namespace ServiceDesk.Droid
 					2130968645,
 					2130968646};
 			
-			// aapt resource value: 0x7F070086
-			public const int FontFamilyFont_android_font = 2131165318;
+			// aapt resource value: 0x7F080086
+			public const int FontFamilyFont_android_font = 2131230854;
 			
 			// aapt resource value: 0x1
 			public const int FontFamilyFont_android_fontStyle = 1;
@@ -10966,8 +14009,8 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x5
 			public const int FontFamilyFont_fontWeight = 5;
 			
-			// aapt resource value: 0x7F070079
-			public const int FontFamily_fontProviderAuthority = 2131165305;
+			// aapt resource value: 0x7F080079
+			public const int FontFamily_fontProviderAuthority = 2131230841;
 			
 			// aapt resource value: 0x1
 			public const int FontFamily_fontProviderCerts = 1;
@@ -10989,8 +14032,8 @@ namespace ServiceDesk.Droid
 					16843264,
 					2130968729};
 			
-			// aapt resource value: 0x7F070484
-			public const int ForegroundLinearLayout_android_foreground = 2131166340;
+			// aapt resource value: 0x7F080455
+			public const int ForegroundLinearLayout_android_foreground = 2131231829;
 			
 			// aapt resource value: 0x1
 			public const int ForegroundLinearLayout_android_foregroundGravity = 1;
@@ -11009,21 +14052,21 @@ namespace ServiceDesk.Droid
 			public static int[] GlobalSearchCorpus = new int[] {
 					2130968580};
 			
-			// aapt resource value: 0x7F070100
-			public const int GlobalSearchCorpus_allowShortcuts = 2131165440;
+			// aapt resource value: 0x7F080100
+			public const int GlobalSearchCorpus_allowShortcuts = 2131230976;
 			
 			public static int[] GlobalSearchSection = new int[] {
 					2130968682,
 					2130968685};
 			
-			// aapt resource value: 0x7F070102
-			public const int GlobalSearchSection_sectionContent = 2131165442;
+			// aapt resource value: 0x7F080102
+			public const int GlobalSearchSection_sectionContent = 2131230978;
 			
 			// aapt resource value: 0x1
 			public const int GlobalSearchSection_sectionType = 1;
 			
-			// aapt resource value: 0x7F070093
-			public const int GlobalSearch_defaultIntentAction = 2131165331;
+			// aapt resource value: 0x7F080093
+			public const int GlobalSearch_defaultIntentAction = 2131230867;
 			
 			// aapt resource value: 0x1
 			public const int GlobalSearch_defaultIntentActivity = 1;
@@ -11048,8 +14091,8 @@ namespace ServiceDesk.Droid
 					2130968704,
 					2130968705};
 			
-			// aapt resource value: 0x7F070105
-			public const int IMECorpus_inputEnabled = 2131165445;
+			// aapt resource value: 0x7F080105
+			public const int IMECorpus_inputEnabled = 2131230981;
 			
 			// aapt resource value: 0x1
 			public const int IMECorpus_sourceClass = 1;
@@ -11077,8 +14120,8 @@ namespace ServiceDesk.Droid
 					2130968782,
 					2130968826};
 			
-			// aapt resource value: 0x7F070488
-			public const int LinearLayoutCompat_android_baselineAligned = 2131166344;
+			// aapt resource value: 0x7F080459
+			public const int LinearLayoutCompat_android_baselineAligned = 2131231833;
 			
 			// aapt resource value: 0x1
 			public const int LinearLayoutCompat_android_baselineAlignedChildIndex = 1;
@@ -11104,8 +14147,8 @@ namespace ServiceDesk.Droid
 					16843137,
 					16842996};
 			
-			// aapt resource value: 0x7F070498
-			public const int LinearLayoutCompat_Layout_android_layout_gravity = 2131166360;
+			// aapt resource value: 0x7F080469
+			public const int LinearLayoutCompat_Layout_android_layout_gravity = 2131231849;
 			
 			// aapt resource value: 0x1
 			public const int LinearLayoutCompat_Layout_android_layout_height = 1;
@@ -11126,8 +14169,8 @@ namespace ServiceDesk.Droid
 					16843436,
 					16843437};
 			
-			// aapt resource value: 0x7F070503
-			public const int ListPopupWindow_android_dropDownHorizontalOffset = 2131166467;
+			// aapt resource value: 0x7F080474
+			public const int ListPopupWindow_android_dropDownHorizontalOffset = 2131231860;
 			
 			// aapt resource value: 0x1
 			public const int ListPopupWindow_android_dropDownVerticalOffset = 1;
@@ -11137,8 +14180,8 @@ namespace ServiceDesk.Droid
 					2130968649,
 					2130968650};
 			
-			// aapt resource value: 0x7F070112
-			public const int LoadingImageView_circleCrop = 2131165458;
+			// aapt resource value: 0x7F080112
+			public const int LoadingImageView_circleCrop = 2131230994;
 			
 			// aapt resource value: 0x1
 			public const int LoadingImageView_imageAspectRatio = 1;
@@ -11171,8 +14214,8 @@ namespace ServiceDesk.Droid
 					2130968702,
 					2130968707};
 			
-			// aapt resource value: 0x7F070116
-			public const int MapAttrs_ambientEnabled = 2131165462;
+			// aapt resource value: 0x7F080116
+			public const int MapAttrs_ambientEnabled = 2131230998;
 			
 			// aapt resource value: 0x1
 			public const int MapAttrs_cameraBearing = 1;
@@ -11246,8 +14289,8 @@ namespace ServiceDesk.Droid
 					2130968688,
 					2130968732};
 			
-			// aapt resource value: 0x7F070736
-			public const int MediaRouteButton_android_minHeight = 2131167030;
+			// aapt resource value: 0x7F080707
+			public const int MediaRouteButton_android_minHeight = 2131232519;
 			
 			// aapt resource value: 0x1
 			public const int MediaRouteButton_android_minWidth = 1;
@@ -11266,8 +14309,8 @@ namespace ServiceDesk.Droid
 					16843231,
 					16843156};
 			
-			// aapt resource value: 0x7F070506
-			public const int MenuGroup_android_checkableBehavior = 2131166470;
+			// aapt resource value: 0x7F080477
+			public const int MenuGroup_android_checkableBehavior = 2131231863;
 			
 			// aapt resource value: 0x1
 			public const int MenuGroup_android_enabled = 1;
@@ -11309,8 +14352,8 @@ namespace ServiceDesk.Droid
 					2130968825,
 					2130968907};
 			
-			// aapt resource value: 0x7F070513
-			public const int MenuItem_actionLayout = 2131166483;
+			// aapt resource value: 0x7F080484
+			public const int MenuItem_actionLayout = 2131231876;
 			
 			// aapt resource value: 0x1
 			public const int MenuItem_actionProviderClass = 1;
@@ -11389,8 +14432,8 @@ namespace ServiceDesk.Droid
 					2130968805,
 					2130968842};
 			
-			// aapt resource value: 0x7F070537
-			public const int MenuView_android_headerBackground = 2131166519;
+			// aapt resource value: 0x7F080508
+			public const int MenuView_android_headerBackground = 2131232008;
 			
 			// aapt resource value: 0x1
 			public const int MenuView_android_horizontalDivider = 1;
@@ -11428,8 +14471,8 @@ namespace ServiceDesk.Droid
 					2130968753,
 					2130968783};
 			
-			// aapt resource value: 0x7F070547
-			public const int NavigationView_android_background = 2131166535;
+			// aapt resource value: 0x7F080518
+			public const int NavigationView_android_background = 2131232024;
 			
 			// aapt resource value: 0x1
 			public const int NavigationView_android_fitsSystemWindows = 1;
@@ -11466,11 +14509,11 @@ namespace ServiceDesk.Droid
 			public static int[] PopupWindowBackgroundState = new int[] {
 					2130968837};
 			
-			// aapt resource value: 0x7F070562
-			public const int PopupWindowBackgroundState_state_above_anchor = 2131166562;
+			// aapt resource value: 0x7F080533
+			public const int PopupWindowBackgroundState_state_above_anchor = 2131232051;
 			
-			// aapt resource value: 0x7F070558
-			public const int PopupWindow_android_popupAnimationStyle = 2131166552;
+			// aapt resource value: 0x7F080529
+			public const int PopupWindow_android_popupAnimationStyle = 2131232041;
 			
 			// aapt resource value: 0x1
 			public const int PopupWindow_android_popupBackground = 1;
@@ -11482,8 +14525,8 @@ namespace ServiceDesk.Droid
 					2130968790,
 					2130968793};
 			
-			// aapt resource value: 0x7F070564
-			public const int RecycleListView_paddingBottomNoButtons = 2131166564;
+			// aapt resource value: 0x7F080535
+			public const int RecycleListView_paddingBottomNoButtons = 2131232053;
 			
 			// aapt resource value: 0x1
 			public const int RecycleListView_paddingTopNoTitle = 1;
@@ -11501,8 +14544,8 @@ namespace ServiceDesk.Droid
 					2130968830,
 					2130968836};
 			
-			// aapt resource value: 0x7F070567
-			public const int RecyclerView_android_descendantFocusability = 2131166567;
+			// aapt resource value: 0x7F080538
+			public const int RecyclerView_android_descendantFocusability = 2131232056;
 			
 			// aapt resource value: 0x1
 			public const int RecyclerView_android_orientation = 1;
@@ -11537,14 +14580,14 @@ namespace ServiceDesk.Droid
 			public static int[] ScrimInsetsFrameLayout = new int[] {
 					2130968747};
 			
-			// aapt resource value: 0x7F070579
-			public const int ScrimInsetsFrameLayout_insetForeground = 2131166585;
+			// aapt resource value: 0x7F080550
+			public const int ScrimInsetsFrameLayout_insetForeground = 2131232080;
 			
 			public static int[] ScrollingViewBehavior_Layout = new int[] {
 					2130968634};
 			
-			// aapt resource value: 0x7F070581
-			public const int ScrollingViewBehavior_Layout_behavior_overlapTop = 2131166593;
+			// aapt resource value: 0x7F080552
+			public const int ScrollingViewBehavior_Layout_behavior_overlapTop = 2131232082;
 			
 			public static int[] SearchView = new int[] {
 					16842970,
@@ -11565,8 +14608,8 @@ namespace ServiceDesk.Droid
 					2130968848,
 					2130968912};
 			
-			// aapt resource value: 0x7F070583
-			public const int SearchView_android_focusable = 2131166595;
+			// aapt resource value: 0x7F080554
+			public const int SearchView_android_focusable = 2131232084;
 			
 			// aapt resource value: 0x1
 			public const int SearchView_android_imeOptions = 1;
@@ -11628,11 +14671,11 @@ namespace ServiceDesk.Droid
 			public static int[] SectionFeature = new int[] {
 					2130968637};
 			
-			// aapt resource value: 0x7F070148
-			public const int SectionFeature_featureType = 2131165512;
+			// aapt resource value: 0x7F080148
+			public const int SectionFeature_featureType = 2131231048;
 			
-			// aapt resource value: 0x7F070140
-			public const int Section_indexPrefixes = 2131165504;
+			// aapt resource value: 0x7F080140
+			public const int Section_indexPrefixes = 2131231040;
 			
 			// aapt resource value: 0x1
 			public const int Section_noIndex = 1;
@@ -11662,139 +14705,37 @@ namespace ServiceDesk.Droid
 					0,
 					0};
 			
-			// aapt resource value: 0x7F070193
-			public const int SfAutoComplete_autocompleteBorderColor = 2131165587;
+			// aapt resource value: 0x7F080174
+			public const int SfAutoComplete_autocompleteBorderColor = 2131231092;
 			
-			// aapt resource value: 0x7F070189
-			public const int SfAutoComplete_autocompleteShowBorder = 2131165577;
+			// aapt resource value: 0x7F080170
+			public const int SfAutoComplete_autocompleteShowBorder = 2131231088;
 			
-			// aapt resource value: 0x7F070190
-			public const int SfAutoComplete_autocompleteShowClearButton = 2131165584;
+			// aapt resource value: 0x7F080171
+			public const int SfAutoComplete_autocompleteShowClearButton = 2131231089;
 			
-			// aapt resource value: 0x7F070195
-			public const int SfAutoComplete_autocompleteText = 2131165589;
+			// aapt resource value: 0x7F080176
+			public const int SfAutoComplete_autocompleteText = 2131231094;
 			
-			// aapt resource value: 0x7F070192
-			public const int SfAutoComplete_autocompleteTextColor = 2131165586;
+			// aapt resource value: 0x7F080173
+			public const int SfAutoComplete_autocompleteTextColor = 2131231091;
 			
-			// aapt resource value: 0x7F070196
-			public const int SfAutoComplete_autocompleteTextSize = 2131165590;
+			// aapt resource value: 0x7F080177
+			public const int SfAutoComplete_autocompleteTextSize = 2131231095;
 			
-			// aapt resource value: 0x7F070194
-			public const int SfAutoComplete_autocompleteWatermark = 2131165588;
+			// aapt resource value: 0x7F080175
+			public const int SfAutoComplete_autocompleteWatermark = 2131231093;
 			
-			// aapt resource value: 0x7F070191
-			public const int SfAutoComplete_autocompleteWatermarkColor = 2131165585;
-			
-			public static int[] SfBusyIndicator = new int[] {
-					0,
-					0,
-					0,
-					0,
-					0,
-					0,
-					0,
-					0,
-					0};
-			
-			// aapt resource value: 0x7F070198
-			public const int SfBusyIndicator_busyIndicatorAnimationTypes = 2131165592;
-			
-			// aapt resource value: 0x7F070206
-			public const int SfBusyIndicator_busyIndicatorIsBusy = 2131165702;
-			
-			// aapt resource value: 0x7F070204
-			public const int SfBusyIndicator_busyIndicatorSecondaryColor = 2131165700;
-			
-			// aapt resource value: 0x7F070199
-			public const int SfBusyIndicator_busyIndicatorTextColor = 2131165593;
-			
-			// aapt resource value: 0x7F070203
-			public const int SfBusyIndicator_busyIndicatorTextSize = 2131165699;
-			
-			// aapt resource value: 0x7F070202
-			public const int SfBusyIndicator_busyIndicatorTitle = 2131165698;
-			
-			// aapt resource value: 0x7F070205
-			public const int SfBusyIndicator_busyIndicatorTitlePlacement = 2131165701;
-			
-			// aapt resource value: 0x7F070200
-			public const int SfBusyIndicator_busyIndicatorViewBoxHeight = 2131165696;
-			
-			// aapt resource value: 0x7F070201
-			public const int SfBusyIndicator_busyIndicatorViewBoxWidth = 2131165697;
-			
-			public static int[] SfCheckBox = new int[] {
-					0,
-					0,
-					0};
-			
-			// aapt resource value: 0x7F070174
-			public const int SfCheckBox_checked = 2131165556;
-			
-			// aapt resource value: 0x7F070173
-			public const int SfCheckBox_cornerradius = 2131165555;
-			
-			// aapt resource value: 0x7F070172
-			public const int SfCheckBox_isthreestate = 2131165554;
-			
-			public static int[] SfSegmentedControl = new int[] {
-					0,
-					0,
-					0,
-					0,
-					0,
-					0,
-					0,
-					0,
-					0,
-					0,
-					0,
-					0};
-			
-			// aapt resource value: 0x7F070177
-			public const int SfSegmentedControl_segmentBackColor = 2131165559;
-			
-			// aapt resource value: 0x7F070178
-			public const int SfSegmentedControl_segmentBorderColor = 2131165560;
-			
-			// aapt resource value: 0x7F070179
-			public const int SfSegmentedControl_segmentBorderThickness = 2131165561;
-			
-			// aapt resource value: 0x7F070180
-			public const int SfSegmentedControl_segmentColor = 2131165568;
-			
-			// aapt resource value: 0x7F070185
-			public const int SfSegmentedControl_segmentCornerRadius = 2131165573;
-			
-			// aapt resource value: 0x7F070187
-			public const int SfSegmentedControl_segmentDisplayMode = 2131165575;
-			
-			// aapt resource value: 0x7F070182
-			public const int SfSegmentedControl_segmentedHeight = 2131165570;
-			
-			// aapt resource value: 0x7F070181
-			public const int SfSegmentedControl_segmentedPadding = 2131165569;
-			
-			// aapt resource value: 0x7F070183
-			public const int SfSegmentedControl_segmentedWidth = 2131165571;
-			
-			// aapt resource value: 0x7F070186
-			public const int SfSegmentedControl_segmentPosition = 2131165574;
-			
-			// aapt resource value: 0x7F070176
-			public const int SfSegmentedControl_segmentSelectedIndex = 2131165558;
-			
-			// aapt resource value: 0x7F070184
-			public const int SfSegmentedControl_segmentStrokeThickness = 2131165572;
+			// aapt resource value: 0x7F080172
+			public const int SfAutoComplete_autocompleteWatermarkColor = 2131231090;
 			
 			public static int[] SignInButton = new int[] {
 					2130968583,
 					2130968626,
 					2130968679};
 			
-			// aapt resource value: 0x7F070150
-			public const int SignInButton_buttonSize = 2131165520;
+			// aapt resource value: 0x7F080150
+			public const int SignInButton_buttonSize = 2131231056;
 			
 			// aapt resource value: 0x1
 			public const int SignInButton_colorScheme = 1;
@@ -11807,8 +14748,8 @@ namespace ServiceDesk.Droid
 					2130968701,
 					2130968780};
 			
-			// aapt resource value: 0x7F070601
-			public const int SnackbarLayout_android_maxWidth = 2131166721;
+			// aapt resource value: 0x7F080572
+			public const int SnackbarLayout_android_maxWidth = 2131232114;
 			
 			// aapt resource value: 0x1
 			public const int SnackbarLayout_elevation = 1;
@@ -11823,8 +14764,8 @@ namespace ServiceDesk.Droid
 					16843131,
 					2130968803};
 			
-			// aapt resource value: 0x7F070605
-			public const int Spinner_android_dropDownWidth = 2131166725;
+			// aapt resource value: 0x7F080576
+			public const int Spinner_android_dropDownWidth = 2131232118;
 			
 			// aapt resource value: 0x1
 			public const int Spinner_android_entries = 1;
@@ -11854,8 +14795,8 @@ namespace ServiceDesk.Droid
 					2130968909,
 					2130968910};
 			
-			// aapt resource value: 0x7F070611
-			public const int SwitchCompat_android_textOff = 2131166737;
+			// aapt resource value: 0x7F080582
+			public const int SwitchCompat_android_textOff = 2131232130;
 			
 			// aapt resource value: 0x1
 			public const int SwitchCompat_android_textOn = 1;
@@ -11901,8 +14842,8 @@ namespace ServiceDesk.Droid
 					16842994,
 					16843087};
 			
-			// aapt resource value: 0x7F070626
-			public const int TabItem_android_icon = 2131166758;
+			// aapt resource value: 0x7F080597
+			public const int TabItem_android_icon = 2131232151;
 			
 			// aapt resource value: 0x1
 			public const int TabItem_android_layout = 1;
@@ -11928,8 +14869,8 @@ namespace ServiceDesk.Droid
 					2130968867,
 					2130968868};
 			
-			// aapt resource value: 0x7F070630
-			public const int TabLayout_tabBackground = 2131166768;
+			// aapt resource value: 0x7F080601
+			public const int TabLayout_tabBackground = 2131232257;
 			
 			// aapt resource value: 0x1
 			public const int TabLayout_tabContentStart = 1;
@@ -11991,8 +14932,8 @@ namespace ServiceDesk.Droid
 					2130968720,
 					2130968869};
 			
-			// aapt resource value: 0x7F070647
-			public const int TextAppearance_android_fontFamily = 2131166791;
+			// aapt resource value: 0x7F080618
+			public const int TextAppearance_android_fontFamily = 2131232280;
 			
 			// aapt resource value: 0x1
 			public const int TextAppearance_android_shadowColor = 1;
@@ -12048,8 +14989,8 @@ namespace ServiceDesk.Droid
 					2130968800,
 					2130968801};
 			
-			// aapt resource value: 0x7F070661
-			public const int TextInputLayout_android_hint = 2131166817;
+			// aapt resource value: 0x7F080632
+			public const int TextInputLayout_android_hint = 2131232306;
 			
 			// aapt resource value: 0x1
 			public const int TextInputLayout_android_textColorHint = 1;
@@ -12127,8 +15068,8 @@ namespace ServiceDesk.Droid
 					2130968899,
 					2130968900};
 			
-			// aapt resource value: 0x7F070678
-			public const int Toolbar_android_gravity = 2131166840;
+			// aapt resource value: 0x7F080649
+			public const int Toolbar_android_gravity = 2131232329;
 			
 			// aapt resource value: 0x1
 			public const int Toolbar_android_minHeight = 1;
@@ -12226,8 +15167,8 @@ namespace ServiceDesk.Droid
 					2130968629,
 					2130968630};
 			
-			// aapt resource value: 0x7F070714
-			public const int ViewBackgroundHelper_android_background = 2131166996;
+			// aapt resource value: 0x7F080685
+			public const int ViewBackgroundHelper_android_background = 2131232389;
 			
 			// aapt resource value: 0x1
 			public const int ViewBackgroundHelper_backgroundTint = 1;
@@ -12240,8 +15181,8 @@ namespace ServiceDesk.Droid
 					16842995,
 					16842994};
 			
-			// aapt resource value: 0x7F070718
-			public const int ViewStubCompat_android_id = 2131167000;
+			// aapt resource value: 0x7F080689
+			public const int ViewStubCompat_android_id = 2131232393;
 			
 			// aapt resource value: 0x1
 			public const int ViewStubCompat_android_inflatedId = 1;
@@ -12249,8 +15190,8 @@ namespace ServiceDesk.Droid
 			// aapt resource value: 0x2
 			public const int ViewStubCompat_android_layout = 2;
 			
-			// aapt resource value: 0x7F070708
-			public const int View_android_focusable = 2131166984;
+			// aapt resource value: 0x7F080679
+			public const int View_android_focusable = 2131232377;
 			
 			// aapt resource value: 0x1
 			public const int View_android_theme = 1;
@@ -12270,8 +15211,8 @@ namespace ServiceDesk.Droid
 					2130968647,
 					2130968648};
 			
-			// aapt resource value: 0x7F070154
-			public const int WalletFragmentOptions_appTheme = 2131165524;
+			// aapt resource value: 0x7F080154
+			public const int WalletFragmentOptions_appTheme = 2131231060;
 			
 			// aapt resource value: 0x1
 			public const int WalletFragmentOptions_environment = 1;
@@ -12295,8 +15236,8 @@ namespace ServiceDesk.Droid
 					2130968671,
 					2130968672};
 			
-			// aapt resource value: 0x7F070159
-			public const int WalletFragmentStyle_buyButtonAppearance = 2131165529;
+			// aapt resource value: 0x7F080159
+			public const int WalletFragmentStyle_buyButtonAppearance = 2131231065;
 			
 			// aapt resource value: 0x1
 			public const int WalletFragmentStyle_buyButtonHeight = 1;

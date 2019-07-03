@@ -13,14 +13,12 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.google.android.gms.auth.api">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.google.android.gms.iid">
     <uses-sdk android:minSdkVersion="14" />
 
-    <application>
-        <activity android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:excludeFromRecents="true" android:exported="false" />
+    <!-- Permissions required for IID -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
-        <!--Service handling Google Sign-In user revocation. For apps that do not integrate with
-            Google Sign-In, this service will never be started.-->
-        <service android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:exported="true" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
-    </application>
+    <application />
 </manifest>

@@ -9,6 +9,7 @@ using Com.OneSignal.Abstractions;
 using System.Collections.Generic;
 using System.Linq;
 
+
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace ServiceDesk
 {
@@ -24,10 +25,10 @@ namespace ServiceDesk
         public App(bool shallNavigate)
         {
             navigating = shallNavigate;
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NzA1MzJAMzEzNjJlMzQyZTMwQ0h1aGdRZ0oybTJ2NDVmU1hvVDkxdkorLzJaZjdWbWlpbGx0M3RUN1dpVT0=");
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MTA5NTk3QDMxMzcyZTMxMmUzMFRlbWtvd1JqMlB1ZW9DKzB5b1JQS2lYSGZFci9yTk92RXhYM1kyK1Q5TFE9");
 
             InitializeComponent();
-
+            
             MainPage = new NavigationPage(new StartPage());
         }
 
@@ -77,77 +78,31 @@ namespace ServiceDesk
                 //MainPage = new NavigationPage(new MenuPage());
             }/*else MainPage = new NavigationPage(new StartPage());*/
         }
-
-        //private async void OnAppStart()
-        //{
-        //    #region PushNotication
-        //    try
-        //    {
-        //        if (navigating == false)
-        //        {
-        //            if (ServiceDeskApi.AccessToken != null)
-        //            {
-        //                if (IsNotified == true)
-        //                {
-        //                    MainPage = new NavigationPage(new MenuPage());
-        //                }
-        //                else
-        //                {
-        //                    if (ServiceDeskApi.AccessToken != null)
-        //                    {
-        //                        MainPage = new NavigationPage(new MenuPage());
-        //                        await App.Current.MainPage.Navigation.PushAsync(new SelectedTaskPage(new ViewModels.TaskViewModel(serviceDesk_TaskListView)));
-        //                        IsNotified = true;
-        //                        serviceDesk_TaskListView = null;
-        //                    }
-        //                    else
-        //                    {
-        //                        MainPage = new NavigationPage(new StartPage());
-        //                    }
-        //                }
-        //            }
-        //            else
-        //            {
-        //                MainPage = new NavigationPage(new StartPage());
-        //            }
-        //        }
-        //        else
-        //        {
-        //            if (ServiceDeskApi.AccessToken != null)
-        //            {
-        //                MainPage = new NavigationPage(new MenuPage());
-        //                await App.Current.MainPage.Navigation.PushAsync(new SelectedTaskPage(new ViewModels.TaskViewModel(serviceDesk_TaskListView)));
-        //                serviceDesk_TaskListView = null;
-        //            }
-        //            else
-        //            {
-        //                MainPage = new NavigationPage(new StartPage());
-        //            }
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw new Exception(ex.Message);
-        //    }
-        //    #endregion
-        //}
-
+       
         private static void HandleNotificationOpened(OSNotificationOpenedResult result)
         {
-            OSNotificationPayload payload = result.notification.payload;
-            Dictionary<string, object> additionalData = payload.additionalData;
-            string taskId = string.Empty;
-
-            if(additionalData != null && additionalData.Count != 0)
+            try
             {
-                foreach (var a in additionalData)
-                {
-                    taskId = a.Value.ToString();
-                }
+                OSNotificationPayload payload = result?.notification.payload;
+                Dictionary<string, object> additionalData = payload?.additionalData;
+                string taskId = string.Empty;
 
-                var d = ServiceDeskApi.GetData<ServiceDesk_TaskListView>(ServiceDeskApi.ApiEnum.GetTasks);
-                serviceDesk_TaskListView = d.Where(x => x.Task_id == int.Parse(taskId)).FirstOrDefault();
+                if (additionalData != null && additionalData.Count != 0)
+                {
+                    foreach (var a in additionalData)
+                    {
+                        taskId = a.Value.ToString();
+                    }
+
+                    var d = ServiceDeskApi.GetData<ServiceDesk_TaskListView>(ServiceDeskApi.ApiEnum.GetTasks);
+                    serviceDesk_TaskListView = d.Where(x => x.Task_id == int.Parse(taskId)).FirstOrDefault();
+                }
             }
+            catch (Exception)
+            {
+
+                
+            }            
                        
         }
     }
