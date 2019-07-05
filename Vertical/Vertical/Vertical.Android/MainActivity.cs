@@ -12,12 +12,10 @@ namespace Vertical.Droid
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
-
             base.Window.RequestFeature(Android.Views.WindowFeatures.ActionBar);
             base.SetTheme(Resource.Style.MainTheme);
 
             base.OnCreate(savedInstanceState);
-            //SetContentView(Resource.Layout.Main);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             
             Xamarin.Forms.Svg.Droid.SvgImage.Init(this);

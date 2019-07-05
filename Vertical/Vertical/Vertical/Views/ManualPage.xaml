@@ -2,8 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:stateContainerDemo="clr-namespace:Xamarin.Forms.Essentials.Controls;assembly=Xamarin.Forms.Essentials.Controls"
+             xmlns:ffSvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
              x:Class="Vertical.Views.ManualPage"
-             x:Name="Page">
+             x:Name="Page"
+             Title="Справочник">
     <stateContainerDemo:StateContainer State ="{Binding States}">
         <stateContainerDemo:StateCondition Is="Normal">
             <RelativeLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
@@ -17,7 +19,7 @@
                     x:Name="listTypesModels" ItemsSource="{Binding SystemObjectModels}" 
                     Margin="7" SelectedItem="{Binding SelectedObject, Mode=TwoWay}"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=titleLabel, Property=Height, Factor=1, Constant=5}"
-                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-100}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-50}"
                     CachingStrategy="RecycleElement" IsEnabled="{Binding IsEnabled}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
@@ -72,6 +74,7 @@
         </stateContainerDemo:StateCondition>
         
         <stateContainerDemo:StateCondition Is="NoData">
+            <!--<ffSvg:SvgCachedImage Source="resource://Vertical.SvgPictures.user.svg"/>-->
             <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
                 <Label Text="Данных пока нет" HorizontalTextAlignment="Center"/>
                 <Button Text="Добавить" Style="{DynamicResource BlueButtonStyle}" Command="{Binding AddNewObjectCommand}" IsEnabled="{Binding IsEnabled}"/>

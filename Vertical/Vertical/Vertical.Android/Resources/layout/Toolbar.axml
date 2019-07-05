@@ -12,5 +12,5 @@
 		android:scaleType="fitCenter"
 		android:src="@mipmap/icon"
 		android:layout_gravity="end"/>
-	
+
 </android.support.v7.widget.Toolbar>

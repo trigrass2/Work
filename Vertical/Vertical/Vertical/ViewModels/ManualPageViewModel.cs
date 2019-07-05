@@ -20,7 +20,7 @@ namespace Vertical.ViewModels
         public ObservableCollection<SystemObjectTypeModel> SystemObjectTypesModels { get; set; }
 
         public INavigation Navigation { get; set; }
-        public States States { get; set; } = States.Loading;
+        public States States { get; set; } = States.NoData;
         public ICommand AddNewObjectCommand => new Command(GoToAddNewObjectPage);
         public ICommand UpdateContentCommand => new Command(UpdateSystemObjects);
         public ICommand EditObjectCommand => new Command(GoToEditObjectPage);
@@ -88,6 +88,7 @@ namespace Vertical.ViewModels
             }
 
             SystemObjectModels?.Clear();
+            
             var items = Api.GetDataFromServer<SystemObjectModel>("GetSystemObjects", new { ParentGUID = ParentObject?.GUID });
 
             foreach (var i in items)
@@ -95,7 +96,7 @@ namespace Vertical.ViewModels
                 SystemObjectModels.Add(i);
             }
 
-            States = SystemObjectModels.Count == 0 ? States.NoData : States.Normal;
+           // States = SystemObjectModels.Count == 0 ? States.NoData : States.Normal;
         }
 
         private async void GoToEditObjectPage(object commandParameter)
@@ -119,9 +120,11 @@ namespace Vertical.ViewModels
         private async void NextPage(SystemObjectModel _selectedObject)
         {
             IsEnabled = false;
-            await Navigation.PushModalAsync(new CheckListPage());
-            //await Navigation.PushAsync(new ManualPage(_selectedObject));
+            States = States.Loading;
 
+            await Navigation.PushAsync(await Task.Run(()=> new ManualPage(_selectedObject)));
+
+            States = States.Normal;
             IsEnabled = true;
         }
     }

@@ -4,7 +4,8 @@
              xmlns:svg="clr-namespace:Xamarin.Forms.Svg;assembly=SvgImageSource"
              x:Class="Vertical.Views.MenuPage"
              xmlns:stateContainerDemo="clr-namespace:Xamarin.Forms.Essentials.Controls;assembly=Xamarin.Forms.Essentials.Controls"
-             BackgroundColor="#fafafa">
+             BackgroundColor="#fafafa"
+             Title="Главная">
     <stateContainerDemo:StateContainer State ="{Binding StatesPage}">        
 
         <stateContainerDemo:StateCondition Is="Normal">

@@ -13,7 +13,7 @@
                 </Grid.RowDefinitions>
                 <StackLayout Grid.Row="0">
                     <Label x:Name="titleLabel" Margin="7,0,7,0" 
-                           Text="Новый Объект" FontSize="Large" FontAttributes="Bold" HeightRequest="40" 
+                           Text="Новый объект" FontSize="Large" FontAttributes="Bold" HeightRequest="40" 
                            Style="{x:StaticResource DefaultLabelStyle}"/>
                     <inputLayout:SfTextInputLayout
                         Style="{x:StaticResource SfTextInputLayoutStyle}"

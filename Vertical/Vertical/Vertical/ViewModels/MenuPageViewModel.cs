@@ -1,4 +1,5 @@
 ﻿using PropertyChanged;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Vertical.Services;
 using Vertical.Views;
@@ -40,7 +41,7 @@ namespace Vertical.ViewModels
         {
             IsEnabled = false;
 
-            await Navigation.PushAsync(new ManualPage());
+            await Navigation.PushAsync(await Task.Run(()=> new ManualPage()));
 
             IsEnabled = true;
            

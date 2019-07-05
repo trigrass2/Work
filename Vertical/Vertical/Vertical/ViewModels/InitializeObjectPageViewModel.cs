@@ -56,12 +56,14 @@ namespace Vertical.ViewModels
             if (!NetworkCheck.IsInternet())
             {
                 await Application.Current.MainPage.DisplayAlert("Сообщение", "Отсутствует интернет-соединение!", "Ок");
+                IsEnabled = true;
                 return;
             }
 
             if (!Api.SendDataToServer(NameMetod, NewObject))
             {
                 await Application.Current.MainPage.DisplayAlert("Сообщение", "Не удалось создать.", "Ок");
+                IsEnabled = true;
                 return;
             }
 

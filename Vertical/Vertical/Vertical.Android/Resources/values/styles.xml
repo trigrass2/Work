@@ -6,9 +6,8 @@
   
   <style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
     <item name="spinBars">true</item>
-    <item name="color">#336DAB</item>
+    <item name="color">#ffff</item>
   </style>
-
  
   <style name="MainTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar"> 
 
@@ -16,13 +15,13 @@
     
     <item name="windowActionBar">false</item>
     
-    <item name="colorPrimary">#fafafa</item>  
+    <item name="colorPrimary">#336dab</item>  
     
-    <item name="colorPrimaryDark">#fafafa</item>
+    <item name="colorPrimaryDark">#336dab</item>
     
     <item name="colorAccent">#cecece</item>
     
-    <item name="android:windowLightStatusBar">true</item>
+    <!--<item name="android:windowLightStatusBar">true</item>-->
     
     <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
     
