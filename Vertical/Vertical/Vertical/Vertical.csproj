@@ -14,7 +14,7 @@
     <None Remove="SvgPictures\agenda.svg" />
     <None Remove="SvgPictures\checklist.svg" />
     <None Remove="SvgPictures\google_logo.svg" />
-    <None Remove="SvgPictures\ic_edit.svg" />
+    <None Remove="SvgPictures\ic_contextMenu.svg" />
     <None Remove="SvgPictures\next.svg" />
     <None Remove="SvgPictures\settings.svg" />
     <None Remove="SvgPictures\user.svg" />
@@ -23,7 +23,7 @@
   <ItemGroup>
     <EmbeddedResource Include="SvgPictures\agenda.svg" />
     <EmbeddedResource Include="SvgPictures\checklist.svg" />
-    <EmbeddedResource Include="SvgPictures\ic_edit.svg" />
+    <EmbeddedResource Include="SvgPictures\ic_contextMenu.svg" />
     <EmbeddedResource Include="SvgPictures\next.svg" />
     <EmbeddedResource Include="SvgPictures\PikGroupLogo.svg" />
     <EmbeddedResource Include="SvgPictures\settings.svg" />

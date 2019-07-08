@@ -20,11 +20,10 @@ namespace Vertical.ViewModels
         public ObservableCollection<SystemObjectTypeModel> SystemObjectTypesModels { get; set; }
 
         public INavigation Navigation { get; set; }
-        public States States { get; set; } = States.NoData;
+        public States States { get; set; } = States.Loading;
         public ICommand AddNewObjectCommand => new Command(GoToAddNewObjectPage);
         public ICommand UpdateContentCommand => new Command(UpdateSystemObjects);
         public ICommand EditObjectCommand => new Command(GoToEditObjectPage);
-        public ImageSource EditButtonImage { get; set; }
 
         private delegate IList<T> GetObjectsDelegate<T>();
 
@@ -64,8 +63,7 @@ namespace Vertical.ViewModels
         public SystemObjectModel ParentObject { get; set; }
 
         public ManualPageViewModel(SystemObjectModel _parentObject)
-        {
-            EditButtonImage = SvgImageSource.FromSvgResource("Vertical.SvgPictures.ic_edit.svg", 20,20);
+        {            
             ParentObject = _parentObject;
             Title = ParentObject?.Name;
             SystemObjectModels = new ObservableCollection<SystemObjectModel>();
@@ -96,14 +94,27 @@ namespace Vertical.ViewModels
                 SystemObjectModels.Add(i);
             }
 
-           // States = SystemObjectModels.Count == 0 ? States.NoData : States.Normal;
+            States = SystemObjectModels.Count == 0 ? States.NoData : States.Normal;
         }
 
         private async void GoToEditObjectPage(object commandParameter)
         {
+            
             IsEnabled = false;
-
-            await Navigation.PushModalAsync(new InitializeObjectPage(IsAddOrEdit.Edit,commandParameter as SystemObjectModel));
+            string action = await Application.Current.MainPage.DisplayActionSheet("Выберите действие", "Cancel", null, "Редактировать", "Информация");
+            
+            switch (action)
+            {
+                case null:
+                    {
+                        IsEnabled = true;
+                        return;
+                    }
+                case "Редактировать":
+                    {
+                        await Navigation.PushModalAsync(new InitializeObjectPage(IsAddOrEdit.Edit, commandParameter as SystemObjectModel));
+                    }break;
+            }
 
             IsEnabled = true;
         }

@@ -39,7 +39,7 @@ namespace Vertical.ViewModels
             
             if(_isAddOrEdit == IsAddOrEdit.Add)
             {
-                NewObject = new AddSystemObjectModel { ParentGUID = InputObject?.GUID, TypeID = InputObject?.TypeID };
+                NewObject = new InputAddSystemObject { ParentGUID = InputObject?.GUID, TypeID = InputObject?.TypeID };
             }
             else
             {

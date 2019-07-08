@@ -2,6 +2,9 @@
 
 namespace Vertical.Models
 {
+    /// <summary>
+    /// Входные данные для редактирования системных объектов
+    /// </summary>
     public class InputEditSystemObject : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;

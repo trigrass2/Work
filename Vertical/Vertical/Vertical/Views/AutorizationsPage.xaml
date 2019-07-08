@@ -61,7 +61,7 @@
                     x:Name="entryLogin"
                     Style="{x:StaticResource SfTextInputLayoutStyle}"
                     Hint="Логин" 
-                    Grid.Row="2" Margin="0,15,0,15">
+                    Grid.Row="2" Margin="0,15,0,10">
                     <Entry Text="{Binding User.Login, Mode=TwoWay}" Style="{StaticResource entryStyle}"/>
                 </inputLayout:SfTextInputLayout>
                 <inputLayout:SfTextInputLayout 
@@ -69,7 +69,7 @@
                     Style="{x:StaticResource SfTextInputLayoutStyle}"
                     Hint="Пароль"                                               
                     EnablePasswordVisibilityToggle="True"
-                    Grid.Row="3" Margin="0,15,0,15">
+                    Grid.Row="3" Margin="0,10,0,15">
                     <Entry Text="{Binding User.Password, Mode=TwoWay}" IsPassword="True" Style="{StaticResource entryStyle}"/>
                 </inputLayout:SfTextInputLayout>
 
