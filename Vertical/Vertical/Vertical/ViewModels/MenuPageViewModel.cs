@@ -1,6 +1,7 @@
 ﻿using PropertyChanged;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Vertical.Models;
 using Vertical.Services;
 using Vertical.Views;
 using Xamarin.Forms;
@@ -40,9 +41,11 @@ namespace Vertical.ViewModels
         private async void MoveToCatalogPage()
         {
             IsEnabled = false;
+            StatesPage = States.Loading;
 
             await Navigation.PushAsync(await Task.Run(()=> new ManualPage()));
 
+            StatesPage = States.Normal;
             IsEnabled = true;
            
         }

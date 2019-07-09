@@ -26,7 +26,8 @@ namespace Vertical
             Normal,
             Error,
             NoInternet,
-            NoData
+            NoData,
+            NoAccess
         }
 
     }

@@ -12,13 +12,13 @@
             <RelativeLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                 <Label 
                     x:Name="titleLabel" Margin="7,0,7,0" 
-                    Text="{Binding Title}" IsVisible="{Binding IsVisibleTitle}" 
+                    Text="{Binding Title}"
                     FontSize="Large" FontAttributes="Bold" Style="{x:StaticResource DefaultLabelStyle}"
                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
                     HeightRequest="50"/>
                 <ListView 
                     x:Name="listTypesModels" ItemsSource="{Binding SystemObjectModels}" 
-                    Margin="7" SelectedItem="{Binding SelectedObject, Mode=TwoWay}"
+                    Margin="7,0,5,7" SelectedItem="{Binding SelectedObject, Mode=TwoWay}"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=titleLabel, Property=Height, Factor=1, Constant=5}"
                     RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-50}"
                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
@@ -37,7 +37,7 @@
                                             Grid.Column="0"/>
                                         <Button                                            
                                             Margin="0,0,5,0"
-                                            Command="{Binding Source={x:Reference Page}, Path = BindingContext.EditObjectCommand}" 
+                                            Command="{Binding Source={x:Reference Page}, Path = BindingContext.GoToEditObjectPageCommand}" 
                                             CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
                                             HorizontalOptions="End"
                                             Grid.Column="1"
@@ -57,7 +57,7 @@
                     x:Name="addNewObjectButton"
                     Text="+" FontAttributes="Bold" FontSize="Medium"
                     Style="{x:StaticResource BlueButtonStyle}" 
-                    Command="{Binding AddNewObjectCommand}"
+                    Command="{Binding GoToAddNewObjectPageCommand}"
                     HeightRequest="50" WidthRequest="50"
                     CornerRadius="30"
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=-55}"
@@ -78,12 +78,15 @@
             </StackLayout>
         </stateContainerDemo:StateCondition>
         
-        <stateContainerDemo:StateCondition Is="NoData">
-            <!--<ffSvg:SvgCachedImage Source="resource://Vertical.SvgPictures.user.svg"/>-->
+        <stateContainerDemo:StateCondition Is="NoData">            
             <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
                 <Label Text="Данных пока нет" HorizontalTextAlignment="Center"/>
-                <Button Text="Добавить" Style="{DynamicResource BlueButtonStyle}" Command="{Binding AddNewObjectCommand}" IsEnabled="{Binding IsEnabled}"/>
+                <Button Text="Добавить" Style="{DynamicResource BlueButtonStyle}" Command="{Binding GoToAddNewObjectPageCommand}" IsEnabled="{Binding IsEnabled}"/>
             </StackLayout>
+        </stateContainerDemo:StateCondition>
+        
+        <stateContainerDemo:StateCondition Is="NoAccess">
+            <Label Text="Нет доступа" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
         </stateContainerDemo:StateCondition>
     </stateContainerDemo:StateContainer>    
 </ContentPage>

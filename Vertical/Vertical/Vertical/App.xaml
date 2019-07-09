@@ -22,9 +22,9 @@
             <Style x:Key="SfTextInputLayoutStyle" TargetType="inputLayout:SfTextInputLayout">
                 <Setter Property="ContainerType" Value="Outlined"/>
                 <Setter Property="OutlineCornerRadius" Value="4"/>
-                <Setter Property="FocusedStrokeWidth" Value="3"/>
+                <Setter Property="FocusedStrokeWidth" Value="2"/>
                 <Setter Property="FocusedColor" Value="#336dab"/>
-                <Setter Property="UnfocusedStrokeWidth" Value="2"/>
+                <Setter Property="UnfocusedStrokeWidth" Value="1"/>
                 <Setter Property="InputViewPadding" Value="10"/>
             </Style>
             <Style x:Key="ActivityIndicatorStyle" TargetType="ActivityIndicator">

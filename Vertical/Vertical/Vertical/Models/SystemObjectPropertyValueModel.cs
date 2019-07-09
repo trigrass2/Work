@@ -1,10 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Text;
 
 namespace Vertical.Models
 {
+    /// <summary>
+    /// Модель значения свойства объекта
+    /// </summary>
     public class SystemObjectPropertyValueModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;

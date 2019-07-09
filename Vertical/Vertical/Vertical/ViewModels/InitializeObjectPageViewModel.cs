@@ -1,9 +1,7 @@
 ﻿using Android.Util;
 using PropertyChanged;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using Vertical.Models;
 using Vertical.Services;
@@ -17,12 +15,37 @@ namespace Vertical.ViewModels
     public class InitializeObjectPageViewModel
     {
         public INavigation Navigation { get; set; }
+
+        /// <summary>
+        /// состояние страницы
+        /// </summary>
         public States States { get; set; } = States.Loading;
+
+        /// <summary>
+        /// добавляет новый объект
+        /// </summary>
         public ICommand AddNewObjectCommand => new Command(AddNewObject);
+
+        /// <summary>
+        /// отмена добавления/редактирования
+        /// </summary>
         public ICommand CancelCommand => new Command(Cancel);
-        public SystemObjectModel InputObject { get; set; }  
+
+        /// <summary>
+        /// объект редактирования
+        /// </summary>
+        public SystemObjectModel InputObject { get; set; }
+        
+        /// <summary>
+        /// результат добавления/редактирования
+        /// </summary>
         public object NewObject { get; set; }
+
         public string TextButton { get; set; } = "Добавить";
+
+        /// <summary>
+        /// имя метода из API
+        /// </summary>
         private string NameMetod { get; set; } = "AddSystemObject";
 
         public bool IsEnabled { get; set; } = true;

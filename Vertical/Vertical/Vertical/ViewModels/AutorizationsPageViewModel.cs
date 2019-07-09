@@ -12,6 +12,7 @@ using System.Net;
 
 namespace Vertical.ViewModels
 {    
+
     public class AutorizationsPageViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
@@ -31,31 +32,48 @@ namespace Vertical.ViewModels
             set => AppSettings.AddOrUpdateValue(nameof(Password), value);
         }
 
+        /// <summary>
+        /// Аккаунт пользователя
+        /// </summary>
         public User User { get; set; }
+
         public ImageSource PikLogoImage { get; set; }
+
+        /// <summary>
+        /// Статус страницы
+        /// </summary>
         public States States { get; set; } = States.Normal;
 
+        /// <summary>
+        /// вкл/выкл кнопки
+        /// </summary>
         public bool IsEnabled { get; set; } = true;
+
+        /// <summary>
+        /// Запуск индикатора активности
+        /// </summary>
         public bool IsRunning { get; set; } = false;
 
+        /// <summary>
+        /// статус авторизации
+        /// </summary>
         private HttpStatusCode _statusAutorization { get; set; }
 
         public AutorizationsPageViewModel()
         {           
             User = new User { Login = Login, Password = Password };
-            PikLogoImage = SvgImageSource.FromSvgResource($"Vertical.SvgPictures.PikGroupLogo.svg", 100, 100);
+            PikLogoImage = SvgImageSource.FromSvgResource($"Vertical.SvgPictures.PikGroupLogo.svg", 150, 150);
             SignInCommand = new Command(SignIn);
         }
 
         /// <summary>
-        /// открывает страницу Меню
+        /// Выполняет вход в приложение
         /// </summary>
         private async void SignIn()
         {
             IsRunning = true;
 
             IsEnabled = false;
-            //States = States.Loading;
 
             await Task.Run(()=> {
 
@@ -98,8 +116,8 @@ namespace Vertical.ViewModels
                     break;
                 default:
                     {
-                        await Application.Current.MainPage.DisplayAlert("!", "Ошибка входа", "Ок");
                         IsEnabled = true;
+                        await Application.Current.MainPage.DisplayAlert("!", "Ошибка входа", "Ок");                        
                     }
                     break;
             }
@@ -108,11 +126,21 @@ namespace Vertical.ViewModels
         }
     }    
     
+    /// <summary>
+    /// Пользователь
+    /// </summary>
     public class User : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
+        /// <summary>
+        /// Логин
+        /// </summary>
         public string Login { get; set; }
+
+        /// <summary>
+        /// Пароль
+        /// </summary>
         public string Password { get; set; }
     }
 }

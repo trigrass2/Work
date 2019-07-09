@@ -7,11 +7,13 @@ using Vertical.Models;
 using Vertical.Services;
 using Vertical.Views;
 using Xamarin.Forms;
-using Xamarin.Forms.Svg;
 using static Vertical.Constants;
 
 namespace Vertical.ViewModels
 {    
+    /// <summary>
+    /// Класс взаимодействия со справочником
+    /// </summary>
     public class ManualPageViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
@@ -20,10 +22,16 @@ namespace Vertical.ViewModels
         public ObservableCollection<SystemObjectTypeModel> SystemObjectTypesModels { get; set; }
 
         public INavigation Navigation { get; set; }
-        public States States { get; set; } = States.Loading;
-        public ICommand AddNewObjectCommand => new Command(GoToAddNewObjectPage);
+        public States States { get; set; } = States.Normal;
+        
+
+        /// <summary>
+        /// Обновляет содержимое страницы
+        /// </summary>
         public ICommand UpdateContentCommand => new Command(UpdateSystemObjects);
-        public ICommand EditObjectCommand => new Command(GoToEditObjectPage);
+
+        public ICommand GoToAddNewObjectPageCommand => new Command(GoToAddNewObjectPage);
+        public ICommand GoToEditObjectPageCommand => new Command(GoToEditObjectPage);
 
         private delegate IList<T> GetObjectsDelegate<T>();
 
@@ -50,14 +58,18 @@ namespace Vertical.ViewModels
             }
             set
             {
-                if(_title != value)
+                if (_title != value)
                 {
                     _title = value;
-                    IsVisibleTitle = string.IsNullOrEmpty(_title) ? false : true;
                 }
+                else _title = "Каталог";
             }
         }        
         public bool IsVisibleTitle { get; set; }
+
+        /// <summary>
+        /// вкл/выкл кнопки
+        /// </summary>
         public bool IsEnabled { get; set; } = true;
 
         public SystemObjectModel ParentObject { get; set; }
@@ -87,21 +99,27 @@ namespace Vertical.ViewModels
 
             SystemObjectModels?.Clear();
             
-            var items = Api.GetDataFromServer<SystemObjectModel>("GetSystemObjects", new { ParentGUID = ParentObject?.GUID });
+            IList<SystemObjectModel> items = Api.GetDataFromServer<SystemObjectModel>("GetSystemObjects", new { ParentGUID = ParentObject?.GUID });
 
-            foreach (var i in items)
+
+           if(items != null)
             {
-                SystemObjectModels.Add(i);
+                foreach (var i in items)
+                {
+                    SystemObjectModels.Add(i);
+                }
+                States = SystemObjectModels.Count > 0 ? States.Normal : States.NoData;
             }
-
-            States = SystemObjectModels.Count == 0 ? States.NoData : States.Normal;
+            else
+            {
+                States = States.NoAccess;
+            }
         }
 
         private async void GoToEditObjectPage(object commandParameter)
-        {
-            
+        {            
             IsEnabled = false;
-            string action = await Application.Current.MainPage.DisplayActionSheet("Выберите действие", "Cancel", null, "Редактировать", "Информация");
+            string action = await Application.Current.MainPage.DisplayActionSheet("Выберите действие", "Отмена", null, "Редактировать", "Информация");
             
             switch (action)
             {
@@ -113,6 +131,11 @@ namespace Vertical.ViewModels
                 case "Редактировать":
                     {
                         await Navigation.PushModalAsync(new InitializeObjectPage(IsAddOrEdit.Edit, commandParameter as SystemObjectModel));
+                    }break;
+                case "Информация":
+                    {
+                        await Navigation.PushModalAsync(new InfoPage(commandParameter as SystemObjectModel));
+                        IsEnabled = true;
                     }break;
             }
 
@@ -129,10 +152,10 @@ namespace Vertical.ViewModels
         }
 
         private async void NextPage(SystemObjectModel _selectedObject)
-        {
+        {            
             IsEnabled = false;
-            States = States.Loading;
-
+            States = States.Loading;            
+            
             await Navigation.PushAsync(await Task.Run(()=> new ManualPage(_selectedObject)));
 
             States = States.Normal;

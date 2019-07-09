@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Vertical.Views.InfoPage">
+    <ContentPage.Resources>
+        <x:String x:Key="formatdatetimelong">0:dd/MM/yy HH:mm:ss</x:String>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Margin="10">
+            <Label Text="{Binding SystemObjectModel.Name, StringFormat='Название: {0}'}"/>
+            <Label Text="{Binding SystemObjectModel.TypeName, StringFormat='Тип: {0}'}"/>
+            <!--<Label Text="{Binding SystemObjectModel.CreationTime, StringFormat={StaticResource formatdatetimelong}}"/>-->
+            <Button Text="Back" Command="{Binding BackCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,35 +1,23 @@
-﻿
-using Android.Util;
+﻿using Android.Util;
 using Newtonsoft.Json;
 using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Net;
-using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using static Vertical.Constants;
 
 namespace Vertical.Services
 {
+    /// <summary>
+    /// Класс для работы с API
+    /// </summary>
     public static class Api
-    {     
-        public static AccessToken Token = new AccessToken();
-
+    {           
         /// <summary>
         /// Токен для авторизации
         /// </summary>
         public static string AccessToken { get; private set; }
-
-        /// <summary>
-        /// Имена методов Api
-        /// </summary>
-        public enum NameMetodsApi
-        {
-            AddSystemObject,
-            GetSystemObjectTypes,
-            GetSystemObjects,
-            EditSystemObjectModel
-        }
 
         /// <summary>
         /// Добавляет новый объект в систему
@@ -37,8 +25,7 @@ namespace Vertical.Services
         /// <typeparam name="T">тип добавляемого объекта</typeparam>
         /// <param name="model">добавляемый объект</param>
         public static bool SendDataToServer<T>(string nameMetod ,T model = default(T))
-        {
-            
+        {            
             try
             {
                 var client = new RestClient(domain + $"/api/{nameMetod}");
@@ -208,8 +195,7 @@ namespace Vertical.Services
                 var restResponse = client.Execute(request);
                 if (restResponse.IsSuccessful)
                 {
-                    Token = JsonConvert.DeserializeObject<AccessToken>(restResponse.Content);
-                    AccessToken = Token.Access_token;
+                    AccessToken = JsonConvert.DeserializeObject<AccessToken>(restResponse.Content).Access_token;                    
                 }
 
                 Log.WriteLine(LogPriority.Info, $"{nameof(GetToken)}", "Авторизация прошла успешно");
