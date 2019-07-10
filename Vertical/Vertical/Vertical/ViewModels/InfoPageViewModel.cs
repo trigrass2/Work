@@ -3,6 +3,7 @@ using PropertyChanged;
 using System.Windows.Input;
 using Xamarin.Forms;
 using System;
+using Vertical.Services;
 
 namespace Vertical.ViewModels
 {
@@ -13,14 +14,16 @@ namespace Vertical.ViewModels
         public ICommand BackCommand => new Command(Back);
         public INavigation Navigation { get; set; }
 
+        
+        public InfoPageViewModel(SystemObjectModel obj)
+        {
+            SystemObjectModel = obj;            
+        }
+
         private async void Back()
         {
             await Navigation.PopModalAsync();
         }
 
-        public InfoPageViewModel(SystemObjectModel obj)
-        {
-            SystemObjectModel = obj;
-        }
     }
 }

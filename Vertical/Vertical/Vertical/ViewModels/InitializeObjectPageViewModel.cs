@@ -46,7 +46,7 @@ namespace Vertical.ViewModels
         /// <summary>
         /// имя метода из API
         /// </summary>
-        private string NameMetod { get; set; } = "AddSystemObject";
+        private string NameMetod { get; set; } = "System/AddSystemObject";
 
         public bool IsEnabled { get; set; } = true;
 
@@ -67,7 +67,7 @@ namespace Vertical.ViewModels
             else
             {
                 TextButton = "Изменить";
-                NameMetod = "EditSystemObject";
+                NameMetod = "System/EditSystemObject";
                 NewObject = new InputEditSystemObject { ObjectGUID = InputObject?.GUID, Name = InputObject?.Name };
             }
         }

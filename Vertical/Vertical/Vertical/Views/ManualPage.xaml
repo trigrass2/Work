@@ -15,7 +15,8 @@
                     Text="{Binding Title}"
                     FontSize="Large" FontAttributes="Bold" Style="{x:StaticResource DefaultLabelStyle}"
                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
-                    HeightRequest="50"/>
+                    HeightRequest="50"
+                    VerticalTextAlignment="Center"/>
                 <ListView 
                     x:Name="listTypesModels" ItemsSource="{Binding SystemObjectModels}" 
                     Margin="7,0,5,7" SelectedItem="{Binding SelectedObject, Mode=TwoWay}"

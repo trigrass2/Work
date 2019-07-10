@@ -5,7 +5,7 @@
              xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
              x:Class="Vertical.Views.CheckListPage">
     <StackLayout>
-        <Label x:Name="titleLabel" Margin="7,5,7,0" Text="Чек-лист" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Large"/>
+        <Label x:Name="titleLabel" Margin="7,5,7,0" Text="{Binding SystemObjectModel.Name}" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Large"/>
         <Grid Margin="7">
             <Grid.RowDefinitions>
                 <RowDefinition/>
@@ -18,18 +18,18 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <inputLayout:SfTextInputLayout 
+            <inputLayout:SfTextInputLayout
                 x:Name="entryPlan" Grid.Row="0" Grid.Column="0"
                 Style="{x:StaticResource SfTextInputLayoutStyle}"
                 Hint="План" 
                 UnfocusedStrokeWidth="1"
                 FocusedStrokeWidth="2"
-                WidthRequest="100" HeightRequest="40"                
+                WidthRequest="100" HeightRequest="40"            
                 >
-                <Entry Text="22" />
+                <Entry Text="{Binding Property.Value, Mode=TwoWay}"/>
             </inputLayout:SfTextInputLayout>
 
-            <inputLayout:SfTextInputLayout 
+            <inputLayout:SfTextInputLayout
                 x:Name="entryFact" Grid.Row="0" Grid.Column="2"
                 Style="{x:StaticResource SfTextInputLayoutStyle}"
                 Hint="Факт" 
@@ -39,51 +39,7 @@
                 >
                 <Entry />
                 </inputLayout:SfTextInputLayout>
+            <Button Grid.Row="2" Text="Create" Command="{Binding CreatePropertiesValuesCommand}" Style="{StaticResource BlueButtonStyle}"/>
         </Grid>
-    </StackLayout>
-    <!--<stateContainerDemo:StateContainer State ="{Binding States}">
-        <stateContainerDemo:StateCondition Is="Normal">
-            <StackLayout>
-                <Label x:Name="titleLabel" Text="Чек-лист" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Large"/>
-                <Grid Margin="7">
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>                        
-                    </Grid.ColumnDefinitions>
-                    <Label 
-                        x:Name="Plan" Grid.Row="0" Grid.Column="0" Text="22" 
-                        Style="{x:StaticResource DefaultLabelStyle}"/>
-                    <Label 
-                        x:Name="Fact" Text="20" Grid.Row="0" Grid.Column="2"
-                        Style="{x:StaticResource DefaultLabelStyle}"/>
-                </Grid>
-            </StackLayout>
-
-        </stateContainerDemo:StateCondition>
-
-        <stateContainerDemo:StateCondition Is="Loading">
-            <ActivityIndicator IsRunning="True" Style="{x:StaticResource ActivityIndicatorStyle}"/>
-        </stateContainerDemo:StateCondition>
-
-        <stateContainerDemo:StateCondition Is="NoInternet">
-            <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
-                <Label Text="Отсутствует интернет-&#10;соединение" HorizontalTextAlignment="Center"/>
-                <Button Text="Повторить" Style="{DynamicResource BlueButtonStyle}"/>
-            </StackLayout>
-        </stateContainerDemo:StateCondition>
-
-        <stateContainerDemo:StateCondition Is="NoData">
-            <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
-                <Label Text="Данных пока нет" HorizontalTextAlignment="Center"/>
-                <Button Text="Добавить" Style="{DynamicResource BlueButtonStyle}"/>
-            </StackLayout>
-        </stateContainerDemo:StateCondition>
-    </stateContainerDemo:StateContainer>-->
+    </StackLayout>    
 </ContentPage>

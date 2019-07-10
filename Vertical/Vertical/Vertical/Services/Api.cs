@@ -24,7 +24,7 @@ namespace Vertical.Services
         /// </summary>
         /// <typeparam name="T">тип добавляемого объекта</typeparam>
         /// <param name="model">добавляемый объект</param>
-        public static bool SendDataToServer<T>(string nameMetod ,T model = default(T))
+        public static bool SendDataToServer<T>(string nameMetod, T model = default(T))
         {            
             try
             {
@@ -104,7 +104,7 @@ namespace Vertical.Services
         /// <param name="nameMetod">имя метода</param>
         /// <param name="callingFunction">вызывающая функция</param>
         /// <returns>коллекцтя объектов</returns>
-        public static IList<T> GetDataFromServer<T>(string nameMetod, object model = default(object))
+        public static T[] GetDataFromServer<T>(string nameMetod, object model = default(object))
         {
             try
             {
@@ -118,19 +118,19 @@ namespace Vertical.Services
                 if (restResponse.IsSuccessful)
                 {
                     Log.WriteLine(LogPriority.Info, $"{nameof(GetDataFromServer)}", "Данные получены");
-                    return JsonConvert.DeserializeObject<IList<T>>(restResponse.Content);
+                    return JsonConvert.DeserializeObject<T[]>(restResponse.Content);
                 }
                 else
                 {
                     Log.WriteLine(LogPriority.Info, $"{nameof(GetDataFromServer)}", $"Данные не получены -> {restResponse.Content}");
-                    return default(IList<T>);
+                    return default(T[]);
                 }
                 
             }
             catch (Exception ex)
             {
                 Log.WriteLine(LogPriority.Error, $"{nameof(GetDataFromServer)}", ex.Message);
-                return default(IList<T>);
+                return default(T[]);
             }                    
         }
 

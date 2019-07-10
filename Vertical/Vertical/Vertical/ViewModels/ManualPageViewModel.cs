@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Vertical.Models;
@@ -99,15 +100,16 @@ namespace Vertical.ViewModels
 
             SystemObjectModels?.Clear();
             
-            IList<SystemObjectModel> items = Api.GetDataFromServer<SystemObjectModel>("GetSystemObjects", new { ParentGUID = ParentObject?.GUID });
+            SystemObjectModel[] items = Api.GetDataFromServer<SystemObjectModel>("System/GetSystemObjects", new { ParentGUID = ParentObject?.GUID });            
 
-
-           if(items != null)
+           
+            if (items != null)
             {
                 foreach (var i in items)
                 {
                     SystemObjectModels.Add(i);
                 }
+
                 States = SystemObjectModels.Count > 0 ? States.Normal : States.NoData;
             }
             else
@@ -146,7 +148,7 @@ namespace Vertical.ViewModels
         {
             IsEnabled = false;
 
-            await Navigation.PushModalAsync(new InitializeObjectPage(IsAddOrEdit.Add,ParentObject));
+            await Navigation.PushModalAsync(new InitializeObjectPage(IsAddOrEdit.Add, ParentObject));
 
             IsEnabled = true;
         }
@@ -155,8 +157,15 @@ namespace Vertical.ViewModels
         {            
             IsEnabled = false;
             States = States.Loading;            
+            if(_selectedObject.TypeName == "Чек-лист мастера")
+            {
+                await Navigation.PushAsync(await Task.Run(() => new CheckListPage(_selectedObject)));
+            }
+            else
+            {
+                await Navigation.PushAsync(await Task.Run(() => new ManualPage(_selectedObject)));
+            }
             
-            await Navigation.PushAsync(await Task.Run(()=> new ManualPage(_selectedObject)));
 
             States = States.Normal;
             IsEnabled = true;

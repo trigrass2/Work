@@ -11,8 +11,7 @@ using System.Threading.Tasks;
 using System.Net;
 
 namespace Vertical.ViewModels
-{    
-
+{
     public class AutorizationsPageViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
