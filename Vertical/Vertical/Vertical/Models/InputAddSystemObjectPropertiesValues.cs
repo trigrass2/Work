@@ -1,12 +1,14 @@
-﻿using PropertyChanged;
+﻿using System.ComponentModel;
+
 namespace Vertical.Models
 {
     /// <summary>
     /// Входные данные для получения значений свойств объекта
-    /// </summary>
-    [AddINotifyPropertyChangedInterface]
-    public class InputAddSystemObjectPropertiesValues
+    /// </summary>   
+    public class InputAddSystemObjectPropertiesValues : INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
         /// <summary>
         /// GUID объекта
         /// </summary>        

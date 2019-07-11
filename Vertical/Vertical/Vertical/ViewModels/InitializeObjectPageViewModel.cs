@@ -94,7 +94,7 @@ namespace Vertical.ViewModels
             {
                 NavigationPage navPage = (NavigationPage)Application.Current.MainPage;
                 IReadOnlyList<Page> navStack = navPage.Navigation.NavigationStack;
-                var manualPage = navStack[navPage.Navigation.NavigationStack.Count - 1] as ManualPage;
+                var manualPage = navStack[navPage.Navigation.NavigationStack.Count - 1] as ManualObjectsPage;
                 manualPage.ViewModel.States = States.Loading;
                 manualPage.ViewModel.UpdateSystemObjects();
             }

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:stateContainerDemo="clr-namespace:Xamarin.Forms.Essentials.Controls;assembly=Xamarin.Forms.Essentials.Controls"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             x:Class="Vertical.Views.CreatePropertyPage">
+    <stateContainerDemo:StateContainer State ="{Binding States}">
+        <stateContainerDemo:StateCondition Is="Normal">
+            <Grid Margin="7">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="0">
+                    <Label x:Name="titleLabel" Margin="7,0,7,0" 
+                           Text="Новое свойство" FontSize="Large" FontAttributes="Bold" HeightRequest="40" 
+                           Style="{x:StaticResource DefaultLabelStyle}"/>
+                    <inputLayout:SfTextInputLayout
+                        Style="{x:StaticResource SfTextInputLayoutStyle}"
+                        Hint="Название"
+                        HelperText="Введите название свойства">
+                        <Entry Text="{Binding , Mode=TwoWay}"/>
+                    </inputLayout:SfTextInputLayout>
+                    <inputLayout:SfTextInputLayout
+                        Style="{x:StaticResource SfTextInputLayoutStyle}"
+                        Hint="Тип"
+                        HelperText="Введите тип свойства">
+                        <Entry Text="{Binding , Mode=TwoWay}"/>
+                    </inputLayout:SfTextInputLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="1">
+                    <Button x:Name="sendObjectButton" Style="{x:StaticResource BlueButtonStyle}" 
+                            Text="{Binding TextButton}" HeightRequest="40" Margin="0,0,0,5" Command="{Binding AddNewObjectCommand}"
+                            IsEnabled="{Binding IsEnabled}"/>
+                    <Button x:Name="cancelButton" Style="{x:StaticResource BlueButtonStyle}"
+                            Text="Отменить" HeightRequest="40" Command="{Binding CancelCommand}"
+                            IsEnabled="{Binding IsEnabled}"/>
+                </StackLayout>
+            </Grid>
+
+        </stateContainerDemo:StateCondition>
+
+        <stateContainerDemo:StateCondition Is="Loading">
+            <ActivityIndicator IsRunning="True" Style="{x:StaticResource ActivityIndicatorStyle}"/>
+        </stateContainerDemo:StateCondition>
+
+    </stateContainerDemo:StateContainer>
+</ContentPage>
