@@ -19,18 +19,18 @@
                         Style="{x:StaticResource SfTextInputLayoutStyle}"
                         Hint="Название"
                         HelperText="Введите название свойства">
-                        <Entry Text="{Binding , Mode=TwoWay}"/>
+                        <Entry Text="{Binding NewProperty.Name, Mode=TwoWay}"/>
                     </inputLayout:SfTextInputLayout>
                     <inputLayout:SfTextInputLayout
                         Style="{x:StaticResource SfTextInputLayoutStyle}"
                         Hint="Тип"
                         HelperText="Введите тип свойства">
-                        <Entry Text="{Binding , Mode=TwoWay}"/>
+                        <Entry Text="{Binding NewProperty.PropertyTypeID, Mode=TwoWay}"/>
                     </inputLayout:SfTextInputLayout>
                 </StackLayout>
                 <StackLayout Grid.Row="1">
                     <Button x:Name="sendObjectButton" Style="{x:StaticResource BlueButtonStyle}" 
-                            Text="{Binding TextButton}" HeightRequest="40" Margin="0,0,0,5" Command="{Binding AddNewObjectCommand}"
+                            Text="{Binding TextButton}" HeightRequest="40" Margin="0,0,0,5" Command="{Binding AddNewPropertyCommand}"
                             IsEnabled="{Binding IsEnabled}"/>
                     <Button x:Name="cancelButton" Style="{x:StaticResource BlueButtonStyle}"
                             Text="Отменить" HeightRequest="40" Command="{Binding CancelCommand}"

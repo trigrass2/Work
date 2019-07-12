@@ -15,7 +15,7 @@ namespace Vertical.Models
         /// <summary>
         /// ID свойства
         /// </summary>
-        public int ID { get; set; }
+        public int? ID { get; set; }
 
         /// <summary>
         /// Название свойства

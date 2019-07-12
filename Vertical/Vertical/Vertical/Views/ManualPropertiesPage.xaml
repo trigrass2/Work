@@ -2,7 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:stateContainerDemo="clr-namespace:Xamarin.Forms.Essentials.Controls;assembly=Xamarin.Forms.Essentials.Controls"
-             x:Class="Vertical.Views.ManualPropertiesPage">
+             xmlns:svg="clr-namespace:Xamarin.Forms.Svg;assembly=SvgImageSource"
+             x:Class="Vertical.Views.ManualPropertiesPage"
+             x:Name="thisPage">
     <stateContainerDemo:StateContainer State ="{Binding States}">
         <stateContainerDemo:StateCondition Is="Normal">
             <RelativeLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
@@ -15,7 +17,7 @@
                     VerticalTextAlignment="Center"/>
                 <ListView 
                     x:Name="listTypesModels" ItemsSource="{Binding SystemPropertyModels}" 
-                    Margin="7,0,5,7"
+                    Margin="7,0,5,7" SelectedItem="{Binding SelectedPropertyModel}"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=titleLabel, Property=Height, Factor=1, Constant=5}"
                     RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-50}"
                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
@@ -24,13 +26,44 @@
                         <DataTemplate>
                             <ViewCell>
                                 <ViewCell.View>
-                                    <StackLayout VerticalOptions="Center">
+                                    <!--<StackLayout VerticalOptions="Center">
                                         <Label Text="{Binding Name}" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Body"  VerticalTextAlignment="Center"/>
                                         <StackLayout Orientation="Horizontal" Spacing="3">
-                                            <Label Text="{Binding PropertyTypeName, StringFormat='Тип: {0}'}" TextColor="#85817e" FontSize="Micro"  VerticalTextAlignment="Center"/>
+                                            <Label Text="{Binding PropertyTypeName, StringFormat='Тип: {0}; '}" TextColor="#85817e" FontSize="Micro"  VerticalTextAlignment="Center"/>
                                             <Label Text="{Binding GroupName, StringFormat='Группа: {0}'}" TextColor="#85817e" FontSize="Micro"  VerticalTextAlignment="Center"/>
                                         </StackLayout>                                        
-                                    </StackLayout>
+                                    </StackLayout>-->
+                                    <Grid x:Name="Item">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition Width="50"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                        </Grid.RowDefinitions>
+                                        <Label 
+                                            Text="{Binding Name}" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Body"  VerticalTextAlignment="Center"
+                                            Grid.Column="0" Grid.Row="0"/>
+                                        <Label Grid.Column="0" Grid.Row="1" HorizontalOptions="Start"
+                                               Text="{Binding PropertyTypeName, StringFormat='Тип: {0}; '}" 
+                                               TextColor="#85817e" FontSize="Micro"  VerticalTextAlignment="Center"/>
+                                        <Label Grid.Column="1" Grid.Row="1" HorizontalOptions="Start"
+                                               Text="{Binding GroupName, StringFormat='Группа: {0}'}" 
+                                               TextColor="#85817e" FontSize="Micro"  VerticalTextAlignment="Center"/>
+                                        <Button        
+                                            Grid.Column="1" Grid.Row="0" Grid.RowSpan="2"
+                                            Margin="0,0,5,0"
+                                            Command="{Binding Source={x:Reference thisPage}, Path = BindingContext.GoToEditPropertyPageCommand}" 
+                                            CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
+                                            HorizontalOptions="End"                                            
+                                            BackgroundColor="#fafafa"
+                                            IsEnabled="{Binding Source={x:Reference thisPage}, Path = BindingContext.IsEnabled}">
+                                            <Button.ImageSource>
+                                                <svg:SvgImageSource Source="Vertical.SvgPictures.ic_contextMenu.svg" Height="20" Width="20"/>
+                                            </Button.ImageSource>
+                                        </Button>
+                                    </Grid>
                                 </ViewCell.View>
                             </ViewCell>
                         </DataTemplate>
@@ -42,7 +75,8 @@
                     HeightRequest="50" WidthRequest="50"
                     CornerRadius="30"
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=-55}"
-                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-55}"/>
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-55}"
+                    Command="{Binding GoToCreatePropertyPageCommand}"/>
             </RelativeLayout>
 
         </stateContainerDemo:StateCondition>

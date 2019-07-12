@@ -4,6 +4,7 @@ using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Net;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using static Vertical.Constants;
 
@@ -226,6 +227,23 @@ namespace Vertical.Services
             request.AddParameter("ConfirmPassword", confirmPassword);
 
             var restResponse = client.Execute(request);
+        }
+
+        public static void SendError(string textMessage, [CallerMemberName] string invokeMetodName = "")
+        {
+            try
+            {
+                string textMsg = $"In {invokeMetodName} {textMessage}";
+                RestClient client = new RestClient($"https://api.telegram.org/bot870858359:AAH0xAUXEm3zNVVFM7buY6Avwvrj_av4Rac/sendMessage?chat_id=@v_error&text={textMsg}");
+                RestRequest restRequest = new RestRequest(Method.POST);
+
+                var responce = client.Execute(restRequest);
+            }
+            catch (Exception ex)
+            {
+                Log.WriteLine(LogPriority.Error, $"{nameof(SendError)} in {invokeMetodName}", $"{ex.Message}");
+            }
+
         }
     }
 
