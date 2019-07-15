@@ -10,7 +10,8 @@ namespace Vertical.Views
 		public ManualPage ()
 		{
 			InitializeComponent ();
-            BindingContext = new ManualPageViewModel { Navigation = this.Navigation };
-		}
+            BindingContext = new ManualPageViewModel { Navigation = this.Navigation};
+
+        }
 	}
 }

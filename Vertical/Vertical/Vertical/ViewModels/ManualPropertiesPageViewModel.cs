@@ -16,22 +16,32 @@ namespace Vertical.ViewModels
         public event PropertyChangedEventHandler PropertyChanged;
 
         public INavigation Navigation { get; set; }
-        public States States { get; set; } = States.Normal;
+        public States States { get; set; } = States.Loading;
 
         public ICommand GoToCreatePropertyPageCommand => new Command(GoToCreatePropertyPage);
         public ICommand GoToEditPropertyPageCommand => new Command(GoToEditPropertyPage);
+        public ICommand RefreshCommand => new Command(UpdateSystemPropertyModels);
 
         public ObservableCollection<SystemPropertyModel> SystemPropertyModels { get; set; }
         public SystemPropertyModel SelectedPropertyModel { get; set; }
+
+        public bool IsEnabled { get; set; } = true;
 
         public ManualPropertiesPageViewModel()
         {
             SystemPropertyModels = new ObservableCollection<SystemPropertyModel>();
             UpdateSystemPropertyModels();
+            States = States.Normal;
         }
 
         public void UpdateSystemPropertyModels()
         {
+            if (!NetworkCheck.IsInternet())
+            {
+                States = States.NoInternet;
+                return;
+            }
+
             SystemPropertyModels.Clear();
             var items = Api.GetDataFromServer<SystemPropertyModel>("SystemManagement/GetSystemProperties", new { });
             try
@@ -45,17 +55,22 @@ namespace Vertical.ViewModels
                 Api.SendError($"{ex.Message}");
                 Log.WriteLine(LogPriority.Error, $"{nameof(UpdateSystemPropertyModels)}", $"{ex.Message}");
             }
-            States = States.Normal;
+            States = SystemPropertyModels.Count > 0 ? States.Normal : States.NoData;
         }
+
 
         private async void GoToCreatePropertyPage()
         {
+            IsEnabled = false;
             await Navigation.PushModalAsync(new CreatePropertyPage("AddSystemProperty", new SystemPropertyModel()));
+            IsEnabled = true;
         }
 
         private async void GoToEditPropertyPage(object commandParameter)
         {
+            IsEnabled = false;
             await Navigation.PushModalAsync(new CreatePropertyPage("EditSystemProperty", commandParameter as SystemPropertyModel));
+            IsEnabled = true;
         }
     }
 }

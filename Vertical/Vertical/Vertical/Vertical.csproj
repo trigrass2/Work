@@ -15,6 +15,7 @@
     <None Remove="SvgPictures\checklist.svg" />
     <None Remove="SvgPictures\google_logo.svg" />
     <None Remove="SvgPictures\ic_contextMenu.svg" />
+    <None Remove="SvgPictures\ic_edit.svg" />
     <None Remove="SvgPictures\next.svg" />
     <None Remove="SvgPictures\settings.svg" />
     <None Remove="SvgPictures\user.svg" />
@@ -24,6 +25,7 @@
     <EmbeddedResource Include="SvgPictures\agenda.svg" />
     <EmbeddedResource Include="SvgPictures\checklist.svg" />
     <EmbeddedResource Include="SvgPictures\ic_contextMenu.svg" />
+    <EmbeddedResource Include="SvgPictures\ic_edit.svg" />
     <EmbeddedResource Include="SvgPictures\next.svg" />
     <EmbeddedResource Include="SvgPictures\PikGroupLogo.svg" />
     <EmbeddedResource Include="SvgPictures\settings.svg" />
@@ -61,6 +63,9 @@
     <Compile Update="Views\ManualObjectsPage.xaml.cs">
       <DependentUpon>ManualObjectsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\ManualTypesObjectsPage.xaml.cs">
+      <DependentUpon>ManualTypesObjectsPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -83,6 +88,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\ManualPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ManualTypesObjectsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\ManualPropertiesPage.xaml">

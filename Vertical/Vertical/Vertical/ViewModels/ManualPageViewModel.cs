@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Text;
-using Vertical.Models;
-using Vertical.Services;
+﻿using System.ComponentModel;
+using System.Windows.Input;
 using Xamarin.Forms;
+using Vertical.Views;
 using static Vertical.Constants;
 
 namespace Vertical.ViewModels
@@ -14,26 +10,51 @@ namespace Vertical.ViewModels
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public ObservableCollection<SystemObjectTypeModel> SystemObjectTypesModels { get; set; }
-
         public INavigation Navigation { get; set; }
         public States States { get; set; } = States.Normal;
 
+        public bool IsEnabled { get; set; } = true;
+
+        public ICommand GoToManualObjectsPageCommand => new Command(GoToManualObjectsPage);
+        public ICommand GoToManualPropertiesPageCommand => new Command(GoToManualPropertiesPage);
+        public ICommand GoToManualTypesObjectsPageCommand => new Command(GoToManualTypesObjectsPage);
+
         public ManualPageViewModel()
         {
-            SystemObjectTypesModels = new ObservableCollection<SystemObjectTypeModel>();
-            UpdateSystemObjectTypesModels();
+
         }
 
-        private void UpdateSystemObjectTypesModels()
+        private async void GoToManualObjectsPage()
         {
-            SystemObjectTypesModels.Clear();
+            States = States.Loading;
+            IsEnabled = false;
+            
+            await Navigation.PushAsync(new ManualObjectsPage());
 
-            foreach(var t in Api.GetDataFromServer<SystemObjectTypeModel>("System/GetSystemObjectTypes"))
-            {
-                SystemObjectTypesModels.Add(t);
-            }
+            IsEnabled = true;
+            States = States.Normal;
         }
 
+        private async void GoToManualPropertiesPage()
+        {
+            States = States.Loading;
+            IsEnabled = false;
+            
+            await Navigation.PushAsync(new ManualTypesObjectsPage());
+
+            IsEnabled = true;
+            States = States.Normal;
+        }
+
+        private async void GoToManualTypesObjectsPage()
+        {
+            States = States.Loading;
+            IsEnabled = false;            
+
+            await Navigation.PushAsync(new ManualPropertiesPage());
+
+            IsEnabled = true;
+            States = States.Normal;
+        }
     }
 }

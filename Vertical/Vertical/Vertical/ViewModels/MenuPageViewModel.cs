@@ -43,7 +43,7 @@ namespace Vertical.ViewModels
             IsEnabled = false;
             StatesPage = States.Loading;
 
-            await Navigation.PushAsync(await Task.Run(()=> new ManualPropertiesPage()));
+            await Navigation.PushAsync(await Task.Run(()=> new ManualPage()));
 
             StatesPage = States.Normal;
             IsEnabled = true;

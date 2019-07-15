@@ -13,7 +13,7 @@ namespace Vertical.ViewModels
         public event PropertyChangedEventHandler PropertyChanged;
 
         public INavigation Navigation { get; set; }
-        public ICommand CreatePropertiesValuesCommand => new Command(CreatePropertiesValues);
+        //public ICommand CreatePropertiesValuesCommand => new Command(CreatePropertiesValues);
         public SystemObjectModel SystemObjectModel { get; set; }
         public ObservableCollection<SystemPropertyModel> SystemPropertyModels { get; set; }
         public InputAddSystemObjectPropertiesValues Property { get; set; }

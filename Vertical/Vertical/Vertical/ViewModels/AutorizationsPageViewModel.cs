@@ -74,15 +74,21 @@ namespace Vertical.ViewModels
 
             IsEnabled = false;
 
-            await Task.Run(()=> {
+            await Task.Run(()=> {                
 
                 if (NetworkCheck.IsInternet())
                 {
+                    if (Api.CheckServerStatus("IsOnline") != HttpStatusCode.OK)
+                    {
+                        Application.Current.MainPage.DisplayAlert("Сообщение", "Сервер временно не доступен", "Ок");
+                        return;
+                    }
                     _statusAutorization = Api.GetToken(User.Login, User.Password);
                 }
                 else
                 {
                     Application.Current.MainPage.DisplayAlert("Ошибка", "Отсутствует интернет-соединение", "Ок");
+                    return;
                 }
             });
 

@@ -26,10 +26,12 @@ namespace Vertical.Services
         /// <typeparam name="T">тип добавляемого объекта</typeparam>
         /// <param name="model">добавляемый объект</param>
         public static bool SendDataToServer<T>(string nameMetod, T model = default(T))
-        {            
+        {
+            var client = new RestClient(domain + $"/api/{nameMetod}");
+
             try
             {
-                var client = new RestClient(domain + $"/api/{nameMetod}");
+                
 
                 var request = new RestRequest(Method.POST);
                 request.AddHeader("authorization", $"Bearer {AccessToken}");
@@ -41,19 +43,19 @@ namespace Vertical.Services
                 var restResponse = client.Execute(request);
                 if (restResponse.IsSuccessful)
                 {
-                    Log.WriteLine(LogPriority.Info, $"{nameof(SendDataToServer)}", "Данные отправлены");
+                    Loger.WriteMessage(LogPriority.Info, $"В запросе {client?.BaseUrl}: Данные отправлены");
                     return true;
                 }
                 else
                 {
-                    Log.WriteLine(LogPriority.Info, $"{nameof(SendDataToServer)}", $"Данные не отправлены -> {restResponse.Content}");
+                    Loger.WriteMessage(LogPriority.Info, $"В запросе {client?.BaseUrl}: Данные не отправлены -> {restResponse.Content}");
                     return false;
                 }
 
             }
             catch (Exception ex)
             {
-                Log.WriteLine(LogPriority.Error, $"{nameof(SendDataToServer)}", ex.Message);
+                Loger.WriteMessage(LogPriority.Error, $"В запросе {client?.BaseUrl} Ошибка при отправке данных на сервер", ex.Message);
                 return false;
             }
         }
@@ -65,10 +67,10 @@ namespace Vertical.Services
         /// <param name="model">добавляемый объект</param>
         public static async Task<bool> SendDataToServerAsync<T>(string nameMetod, T model = default(T))
         {
+            var client = new RestClient(domain + $"/api/{nameMetod}");
+
             try
             {
-                var client = new RestClient(domain + $"/api/{nameMetod}");
-
                 var request = new RestRequest(Method.POST);
                 request.AddHeader("authorization", $"Bearer {AccessToken}");
 
@@ -78,20 +80,20 @@ namespace Vertical.Services
 
                 var restResponse = await client.ExecuteTaskAsync(request);
                 if (restResponse.IsSuccessful)
-                {
-                    Log.WriteLine(LogPriority.Info, $"{nameof(SendDataToServerAsync)}", "Данные отправлены");
+                {                    
+                    Loger.WriteMessage(LogPriority.Info, $"В запросе {client?.BaseUrl}: Данные отправлены");
                     return true;
                 }
                 else
                 {
-                    Log.WriteLine(LogPriority.Info, $"{nameof(SendDataToServerAsync)}", $"Данные не отправлены -> {restResponse.Content}");
+                    Loger.WriteMessage(LogPriority.Info, $"В запросе {client?.BaseUrl}: Данные не отправлены -> {restResponse.Content}");
                     return false;
                 }
 
             }
             catch (Exception ex)
             {
-                Log.WriteLine(LogPriority.Error, $"{nameof(SendDataToServerAsync)}", ex.Message);
+                Loger.WriteMessage(LogPriority.Error, $"В запросе {client?.BaseUrl} Ошибка при отправке данных на сервер", ex.Message);
                 return false;
             }
         }
@@ -107,9 +109,11 @@ namespace Vertical.Services
         /// <returns>коллекцтя объектов</returns>
         public static T[] GetDataFromServer<T>(string nameMetod, object model = default(object))
         {
+            var client = new RestClient(domain + $"/api/{nameMetod}");
+
             try
             {
-                var client = new RestClient(domain + $"/api/{nameMetod}");
+                
 
                 var request = new RestRequest(Method.POST);
                 request.AddHeader("authorization", $"Bearer {AccessToken}");
@@ -118,19 +122,19 @@ namespace Vertical.Services
                 var restResponse = client.Execute(request);
                 if (restResponse.IsSuccessful)
                 {
-                    Log.WriteLine(LogPriority.Info, $"{nameof(GetDataFromServer)}", "Данные получены");
+                    Loger.WriteMessage(LogPriority.Info, $"{client?.BaseUrl} данные получены");
                     return JsonConvert.DeserializeObject<T[]>(restResponse.Content);
                 }
                 else
                 {
-                    Log.WriteLine(LogPriority.Info, $"{nameof(GetDataFromServer)}", $"Данные не получены -> {restResponse.Content}");
+                    Loger.WriteMessage(LogPriority.Info, $"{client?.BaseUrl} данные не получены: {restResponse.Content}");
                     return default(T[]);
                 }
                 
             }
             catch (Exception ex)
             {
-                Log.WriteLine(LogPriority.Error, $"{nameof(GetDataFromServer)}", ex.Message);
+                Loger.WriteMessage(LogPriority.Error, $"В запросе {client?.BaseUrl} Ошибка при получении данных с сервера", ex.Message);
                 return default(T[]);
             }                    
         }
@@ -145,9 +149,11 @@ namespace Vertical.Services
         /// <returns>коллекцтя объектов</returns>
         public async static Task<IList<T>> GetDataFromServerAsync<T>(string nameMetod, object model = default(object))
         {
+            RestClient client = new RestClient(domain + $"/api/{nameMetod}");
+
             try
             {
-                var client = new RestClient(domain + $"/api/{nameMetod}");
+                
 
                 var request = new RestRequest(Method.POST);
                 request.AddHeader("authorization", $"Bearer {AccessToken}");
@@ -156,20 +162,20 @@ namespace Vertical.Services
                 var restResponse = await client.ExecuteTaskAsync(request);
 
                 if (restResponse.IsSuccessful)
-                {
-                    Log.WriteLine(LogPriority.Info, $"{nameof(GetDataFromServerAsync)}", "Данные получены");
+                {                    
+                    Loger.WriteMessage(LogPriority.Info, $"{client?.BaseUrl} данные получены");
                     return JsonConvert.DeserializeObject<IList<T>>(restResponse.Content);
                 }
                 else
                 {
-                    Log.WriteLine(LogPriority.Info, $"{nameof(GetDataFromServerAsync)}", $"Данные не получены -> {restResponse.Content}");
+                    Loger.WriteMessage(LogPriority.Info, $"{client?.BaseUrl} данные не получены: {restResponse.Content}");
                     return default(IList<T>);
                 }
 
             }
             catch (Exception ex)
             {
-                Log.WriteLine(LogPriority.Error, $"{nameof(GetDataFromServerAsync)}", ex.Message);
+                Loger.WriteMessage(LogPriority.Error, $"В запросе {client?.BaseUrl} Ошибка при получении данных с червера", ex.Message);
                 return default(IList<T>);
             }
         }
@@ -199,12 +205,12 @@ namespace Vertical.Services
                     AccessToken = JsonConvert.DeserializeObject<AccessToken>(restResponse.Content).Access_token;                    
                 }
 
-                Log.WriteLine(LogPriority.Info, $"{nameof(GetToken)}", "Авторизация прошла успешно");
+                Loger.WriteMessage(LogPriority.Info, $"Статус авторизации: {restResponse.StatusCode}");
                 return restResponse.StatusCode;
             }
             catch (Exception ex)
             {
-                Log.WriteLine(LogPriority.Error, $"{nameof(GetToken)}", ex.Message);
+                Loger.WriteMessage(LogPriority.Error, "Ошибка при получении токена", ex.Message);
                 return default(HttpStatusCode);
             }
             
@@ -229,21 +235,31 @@ namespace Vertical.Services
             var restResponse = client.Execute(request);
         }
 
-        public static void SendError(string textMessage, [CallerMemberName] string invokeMetodName = "")
+        
+        /// <summary>
+        /// проверяет статус сервера
+        /// </summary>
+        /// <param name="nameMetodApi"></param>
+        /// <returns></returns>
+        public static HttpStatusCode CheckServerStatus(string nameMetodApi)
         {
             try
             {
-                string textMsg = $"In {invokeMetodName} {textMessage}";
-                RestClient client = new RestClient($"https://api.telegram.org/bot870858359:AAH0xAUXEm3zNVVFM7buY6Avwvrj_av4Rac/sendMessage?chat_id=@v_error&text={textMsg}");
-                RestRequest restRequest = new RestRequest(Method.POST);
+                var client = new RestClient(domain + $"/api/ServerStatus/{nameMetodApi}");
 
-                var responce = client.Execute(restRequest);
+                var request = new RestRequest(Method.GET);
+                request.AddHeader("authorization", $"Bearer {AccessToken}");
+
+                var restResponse = client.Execute(request).StatusCode;
+                Loger.WriteMessage(LogPriority.Info, $"Запрос IsOnline -> {restResponse}");
+                return restResponse;
+                
             }
             catch (Exception ex)
             {
-                Log.WriteLine(LogPriority.Error, $"{nameof(SendError)} in {invokeMetodName}", $"{ex.Message}");
+                Loger.WriteMessage(LogPriority.Error, "Ошибка при проверке статуса сервера", ex.Message);
+                return default(HttpStatusCode);
             }
-
         }
     }
 

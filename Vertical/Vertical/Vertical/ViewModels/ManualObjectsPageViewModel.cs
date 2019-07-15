@@ -21,13 +21,9 @@ namespace Vertical.ViewModels
         public ObservableCollection<SystemObjectModel> SystemObjectModels { get; set; }        
 
         public INavigation Navigation { get; set; }
-        public States States { get; set; } = States.Normal;        
-
-        /// <summary>
-        /// Обновляет содержимое страницы
-        /// </summary>
+        public States States { get; set; } = States.Normal;
+        
         public ICommand UpdateContentCommand => new Command(UpdateSystemObjects);
-
         public ICommand GoToAddNewObjectPageCommand => new Command(GoToAddNewObjectPage);
         public ICommand GoToEditObjectPageCommand => new Command(GoToEditObjectPage);
 
@@ -96,7 +92,7 @@ namespace Vertical.ViewModels
 
             SystemObjectModels?.Clear();
             
-            SystemObjectModel[] items = Api.GetDataFromServer<SystemObjectModel>("System/GetSystemObjects", new { ParentGUID = ParentObject?.GUID });            
+            var items = Api.GetDataFromServer<SystemObjectModel>("System/GetSystemObjects", new { ParentGUID = ParentObject?.GUID });            
 
            
             if (items != null)

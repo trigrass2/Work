@@ -21,20 +21,14 @@
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=titleLabel, Property=Height, Factor=1, Constant=5}"
                     RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-50}"
                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
-                    CachingStrategy="RecycleElement" IsEnabled="{Binding IsEnabled}">
+                    CachingStrategy="RecycleElement" IsEnabled="{Binding IsEnabled}" HasUnevenRows="True">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <ViewCell.View>
-                                    <!--<StackLayout VerticalOptions="Center">
-                                        <Label Text="{Binding Name}" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Body"  VerticalTextAlignment="Center"/>
-                                        <StackLayout Orientation="Horizontal" Spacing="3">
-                                            <Label Text="{Binding PropertyTypeName, StringFormat='Тип: {0}; '}" TextColor="#85817e" FontSize="Micro"  VerticalTextAlignment="Center"/>
-                                            <Label Text="{Binding GroupName, StringFormat='Группа: {0}'}" TextColor="#85817e" FontSize="Micro"  VerticalTextAlignment="Center"/>
-                                        </StackLayout>                                        
-                                    </StackLayout>-->
+                                <ViewCell.View>                                 
                                     <Grid x:Name="Item">
                                         <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
                                             <ColumnDefinition/>
                                             <ColumnDefinition Width="50"/>
                                         </Grid.ColumnDefinitions>
@@ -44,7 +38,7 @@
                                         </Grid.RowDefinitions>
                                         <Label 
                                             Text="{Binding Name}" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Body"  VerticalTextAlignment="Center"
-                                            Grid.Column="0" Grid.Row="0"/>
+                                            Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0"/>
                                         <Label Grid.Column="0" Grid.Row="1" HorizontalOptions="Start"
                                                Text="{Binding PropertyTypeName, StringFormat='Тип: {0}; '}" 
                                                TextColor="#85817e" FontSize="Micro"  VerticalTextAlignment="Center"/>
@@ -52,7 +46,7 @@
                                                Text="{Binding GroupName, StringFormat='Группа: {0}'}" 
                                                TextColor="#85817e" FontSize="Micro"  VerticalTextAlignment="Center"/>
                                         <Button        
-                                            Grid.Column="1" Grid.Row="0" Grid.RowSpan="2"
+                                            Grid.Column="2" Grid.Row="0" Grid.RowSpan="2"
                                             Margin="0,0,5,0"
                                             Command="{Binding Source={x:Reference thisPage}, Path = BindingContext.GoToEditPropertyPageCommand}" 
                                             CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
@@ -60,7 +54,7 @@
                                             BackgroundColor="#fafafa"
                                             IsEnabled="{Binding Source={x:Reference thisPage}, Path = BindingContext.IsEnabled}">
                                             <Button.ImageSource>
-                                                <svg:SvgImageSource Source="Vertical.SvgPictures.ic_contextMenu.svg" Height="20" Width="20"/>
+                                                <svg:SvgImageSource Source="Vertical.SvgPictures.ic_edit.svg" Height="20" Width="20"/>
                                             </Button.ImageSource>
                                         </Button>
                                     </Grid>
@@ -76,7 +70,7 @@
                     CornerRadius="30"
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=-55}"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-55}"
-                    Command="{Binding GoToCreatePropertyPageCommand}"/>
+                    Command="{Binding GoToCreatePropertyPageCommand}" IsEnabled="{Binding IsEnabled}"/>
             </RelativeLayout>
 
         </stateContainerDemo:StateCondition>
@@ -87,14 +81,14 @@
         <stateContainerDemo:StateCondition Is="NoInternet">
             <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
                 <Label Text="Отсутствует интернет-&#10;соединение" HorizontalTextAlignment="Center"/>
-                <Button Text="Повторить" Style="{DynamicResource BlueButtonStyle}" />
+                <Button Text="Повторить" Style="{DynamicResource RefreshCommand}" />
             </StackLayout>
         </stateContainerDemo:StateCondition>
 
         <stateContainerDemo:StateCondition Is="NoData">
             <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
                 <Label Text="Данных пока нет" HorizontalTextAlignment="Center"/>
-                <Button Text="Добавить" Style="{DynamicResource BlueButtonStyle}" />
+                <Button Text="Добавить" Style="{DynamicResource GoToCreatePropertyPageCommand}" />
             </StackLayout>
         </stateContainerDemo:StateCondition>
 
