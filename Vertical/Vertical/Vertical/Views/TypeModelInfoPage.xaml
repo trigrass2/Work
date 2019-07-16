@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Vertical.Views.TypeModelInfoPage"
+             x:Name="thisPage">
+    <ContentPage.Content>
+        <StackLayout Margin="10,5">
+            <ListView ItemsSource="{Binding SystemPropertyModels}" SelectedItem="{Binding SelectedSystemObjectTypeModel}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.75"/>
+                                        <ColumnDefinition Width="0.25"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Column="0" Text="{Binding Name}" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Body"/>
+                                    <Button Grid.Column="1" Text="D"/>
+                                </Grid>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Text="Привзать свойство" Style="{x:StaticResource BlueButtonStyle}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

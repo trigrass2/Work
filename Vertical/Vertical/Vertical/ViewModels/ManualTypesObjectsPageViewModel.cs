@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Text;
 using Vertical.Models;
 using Vertical.Services;
+using Vertical.Views;
 using Xamarin.Forms;
 using static Vertical.Constants;
 
@@ -15,6 +13,20 @@ namespace Vertical.ViewModels
         public event PropertyChangedEventHandler PropertyChanged;
 
         public ObservableCollection<SystemObjectTypeModel> SystemObjectTypesModels { get; set; }
+        private SystemObjectTypeModel _selectedObjectTypeModel;
+        public SystemObjectTypeModel SelectedObjectTypeModel
+        {
+            get
+            {
+                return _selectedObjectTypeModel;
+            }
+            set
+            {
+                OpenInfoPage(value);
+                _selectedObjectTypeModel = null;
+                
+            }
+        }
 
         public INavigation Navigation { get; set; }
         public States States { get; set; } = States.Normal;
@@ -35,5 +47,9 @@ namespace Vertical.ViewModels
             }
         }
 
+        private async void OpenInfoPage(SystemObjectTypeModel id)
+        {
+            await Navigation.PushModalAsync(new TypeModelInfoPage(id));
+        }
     }
 }

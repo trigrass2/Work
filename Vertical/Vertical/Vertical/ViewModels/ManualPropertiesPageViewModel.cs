@@ -52,8 +52,8 @@ namespace Vertical.ViewModels
                 }
             }catch(Exception ex)
             {
-                Api.SendError($"{ex.Message}");
-                Log.WriteLine(LogPriority.Error, $"{nameof(UpdateSystemPropertyModels)}", $"{ex.Message}");
+                
+                //Log.WriteLine(LogPriority.Error, $"{nameof(UpdateSystemPropertyModels)}", $"{ex.Message}");
             }
             States = SystemPropertyModels.Count > 0 ? States.Normal : States.NoData;
         }

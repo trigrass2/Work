@@ -15,7 +15,7 @@
                     VerticalTextAlignment="Center"/>
                 <ListView 
                     x:Name="listTypesModels" ItemsSource="{Binding SystemObjectTypesModels}" 
-                    Margin="7,0,5,7"
+                    Margin="7,0,5,7" SelectedItem="{Binding SelectedObjectTypeModel}"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=titleLabel, Property=Height, Factor=1, Constant=5}"
                     RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-50}"
                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"

@@ -37,24 +37,24 @@ namespace Vertical.Models
         /// </summary>
         public bool Hidden { get; set; }
 
-        /// <summary>
-        /// Блокируется ли свойство объекта для записи
-        /// </summary>
-        public bool Lockable { get; set; }
+        ///// <summary>
+        ///// Блокируется ли свойство объекта для записи
+        ///// </summary>
+        //public bool Lockable { get; set; }
 
-        /// <summary>
-        /// Вес свойства
-        /// </summary>
-        public int? Weight { get; set; }
+        ///// <summary>
+        ///// Вес свойства
+        ///// </summary>
+        //public int? Weight { get; set; }
 
-        /// <summary>
-        /// ID Группы к которой принадлежит свойство
-        /// </summary>
-        public int? GroupID { get; set; }
+        ///// <summary>
+        ///// ID Группы к которой принадлежит свойство
+        ///// </summary>
+        //public int? GroupID { get; set; }
 
-        /// <summary>
-        /// Название группы к которой принадлежит свойство
-        /// </summary>
-        public string GroupName { get; set; }
+        ///// <summary>
+        ///// Название группы к которой принадлежит свойство
+        ///// </summary>
+        //public string GroupName { get; set; }
     }
 }
