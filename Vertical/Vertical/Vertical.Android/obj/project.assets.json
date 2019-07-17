@@ -175,10 +175,10 @@
           "lib/MonoAndroid10/Syncfusion.Licensing.dll": {}
         }
       },
-      "Syncfusion.Xamarin.Buttons/17.1.0.53": {
+      "Syncfusion.Xamarin.Buttons/17.2.0.35": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.1.0.53",
+          "Syncfusion.Xamarin.Core": "17.2.0.35",
           "Xamarin.Forms": "3.1.0.697729"
         },
         "compile": {
@@ -204,39 +204,36 @@
           "lib/MonoAndroid10/Syncfusion.Core.XForms.dll": {}
         }
       },
-      "Syncfusion.Xamarin.DataSource/17.2.0.35": {
-        "type": "package",
-        "compile": {
-          "lib/MonoAndroid10/Syncfusion.DataSource.Portable.dll": {}
-        },
-        "runtime": {
-          "lib/MonoAndroid10/Syncfusion.DataSource.Portable.dll": {}
-        }
-      },
-      "Syncfusion.Xamarin.GridCommon/17.2.0.35": {
-        "type": "package",
-        "compile": {
-          "lib/MonoAndroid10/Syncfusion.GridCommon.Portable.dll": {}
-        },
-        "runtime": {
-          "lib/MonoAndroid10/Syncfusion.GridCommon.Portable.dll": {}
-        }
-      },
-      "Syncfusion.Xamarin.SfListView/17.2.0.35": {
+      "Syncfusion.Xamarin.SfAutoComplete/17.2.0.35": {
         "type": "package",
         "dependencies": {
           "Syncfusion.Xamarin.Core": "17.2.0.35",
-          "Syncfusion.Xamarin.DataSource": "17.2.0.35",
-          "Syncfusion.Xamarin.GridCommon": "17.2.0.35",
           "Xamarin.Forms": "3.1.0.697729"
         },
         "compile": {
-          "lib/MonoAndroid10/Syncfusion.SfListView.XForms.Android.dll": {},
-          "lib/MonoAndroid10/Syncfusion.SfListView.XForms.dll": {}
+          "lib/MonoAndroid10/Syncfusion.SfAutoComplete.Android.dll": {},
+          "lib/MonoAndroid10/Syncfusion.SfAutoComplete.XForms.Android.dll": {},
+          "lib/MonoAndroid10/Syncfusion.SfAutoComplete.XForms.dll": {}
         },
         "runtime": {
-          "lib/MonoAndroid10/Syncfusion.SfListView.XForms.Android.dll": {},
-          "lib/MonoAndroid10/Syncfusion.SfListView.XForms.dll": {}
+          "lib/MonoAndroid10/Syncfusion.SfAutoComplete.Android.dll": {},
+          "lib/MonoAndroid10/Syncfusion.SfAutoComplete.XForms.Android.dll": {},
+          "lib/MonoAndroid10/Syncfusion.SfAutoComplete.XForms.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfComboBox/17.2.0.35": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "17.2.0.35",
+          "Xamarin.Forms": "3.1.0.697729"
+        },
+        "compile": {
+          "lib/MonoAndroid10/Syncfusion.SfComboBox.XForms.Android.dll": {},
+          "lib/MonoAndroid10/Syncfusion.SfComboBox.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/Syncfusion.SfComboBox.XForms.Android.dll": {},
+          "lib/MonoAndroid10/Syncfusion.SfComboBox.XForms.dll": {}
         }
       },
       "System.AppContext/4.3.0": {
@@ -1162,8 +1159,9 @@
           "PropertyChanged.Fody": "2.6.1",
           "RestSharp": "106.6.10",
           "Syncfusion.Licensing": "17.2.0.35",
-          "Syncfusion.Xamarin.Buttons": "17.1.0.53",
-          "Syncfusion.Xamarin.SfListView": "17.2.0.35",
+          "Syncfusion.Xamarin.Buttons": "17.2.0.35",
+          "Syncfusion.Xamarin.SfAutoComplete": "17.2.0.35",
+          "Syncfusion.Xamarin.SfComboBox": "17.2.0.35",
           "Xam.Plugin.Connectivity": "3.2.0",
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.Forms": "4.1.0.581479",
@@ -1222,6 +1220,7 @@
       "path": "microsoft.netcore.platforms/1.1.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -1236,6 +1235,7 @@
       "path": "microsoft.win32.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1273,6 +1273,7 @@
       "path": "netstandard.library/1.6.1",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "netstandard.library.1.6.1.nupkg.sha512",
@@ -1475,10 +1476,10 @@
         "syncfusion.licensing.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.Buttons/17.1.0.53": {
-      "sha512": "JX0HNhiD07hvhzvznAuE6UTpUHgGzO9Qp17sRno0+VyKm1fKeXVMQrGk04IrorruwTSxGQb+qcqTCoV/BJSVWg==",
+    "Syncfusion.Xamarin.Buttons/17.2.0.35": {
+      "sha512": "t8ICWUy3KBlkhdFRvSE7Pbk9Q3I5XafO2253SxX3qjZFxdGhqvtQyUjXI1Nm+7kPijCOhsA3bm59nYE1JJa1IA==",
       "type": "package",
-      "path": "syncfusion.xamarin.buttons/17.1.0.53",
+      "path": "syncfusion.xamarin.buttons/17.2.0.35",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1488,10 +1489,11 @@
         "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.dll",
         "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.iOS.dll",
         "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.xml",
-        "lib/netstandard1.0/Syncfusion.Buttons.XForms.dll",
-        "lib/netstandard1.0/Syncfusion.Buttons.XForms.xml",
+        "lib/netstandard2.0/Syncfusion.Buttons.XForms.dll",
+        "lib/netstandard2.0/Syncfusion.Buttons.XForms.xml",
         "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Buttons.XForms.dll",
         "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Buttons.XForms.xml",
+        "lib/uap10.0/Syncfusion.Buttons.XForms.UWP.XML",
         "lib/uap10.0/Syncfusion.Buttons.XForms.UWP.dll",
         "lib/uap10.0/Syncfusion.Buttons.XForms.UWP.pri",
         "lib/uap10.0/Syncfusion.Buttons.XForms.UWP/Assets/SfButton.ttf",
@@ -1501,7 +1503,7 @@
         "lib/uap10.0/Syncfusion.Buttons.XForms.UWP/Themes/Generic.xaml",
         "lib/uap10.0/Syncfusion.Buttons.XForms.dll",
         "lib/uap10.0/Syncfusion.Buttons.XForms.xml",
-        "syncfusion.xamarin.buttons.17.1.0.53.nupkg.sha512",
+        "syncfusion.xamarin.buttons.17.2.0.35.nupkg.sha512",
         "syncfusion.xamarin.buttons.nuspec"
       ]
     },
@@ -1536,75 +1538,64 @@
         "syncfusion.xamarin.core.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.DataSource/17.2.0.35": {
-      "sha512": "Tj/6OvKYDyP5bN/OGMp8LH3vszntd0Yiai8vJbnCPiQfwDLZILsGNwQww9V+s3hhb9i0q02q/HNETRczLyHvSg==",
+    "Syncfusion.Xamarin.SfAutoComplete/17.2.0.35": {
+      "sha512": "GCA+xdiCfJ2qvj6TcAUDsxtozJFEe54nVIk/6+S3am0Pr+nD8aG463trJexwfgv2GrOHKSPuAlNyd4PKFvXqXA==",
       "type": "package",
-      "path": "syncfusion.xamarin.datasource/17.2.0.35",
+      "path": "syncfusion.xamarin.sfautocomplete/17.2.0.35",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/MonoAndroid10/Syncfusion.DataSource.Portable.XML",
-        "lib/MonoAndroid10/Syncfusion.DataSource.Portable.dll",
-        "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.XML",
-        "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll",
-        "lib/netstandard2.0/Syncfusion.DataSource.Portable.XML",
-        "lib/netstandard2.0/Syncfusion.DataSource.Portable.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.DataSource.Portable.XML",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.DataSource.Portable.dll",
-        "lib/uap10.0/Syncfusion.DataSource.Portable.XML",
-        "lib/uap10.0/Syncfusion.DataSource.Portable.dll",
-        "syncfusion.xamarin.datasource.17.2.0.35.nupkg.sha512",
-        "syncfusion.xamarin.datasource.nuspec"
+        "lib/MonoAndroid10/Syncfusion.SfAutoComplete.Android.XML",
+        "lib/MonoAndroid10/Syncfusion.SfAutoComplete.Android.dll",
+        "lib/MonoAndroid10/Syncfusion.SfAutoComplete.XForms.Android.dll",
+        "lib/MonoAndroid10/Syncfusion.SfAutoComplete.XForms.XML",
+        "lib/MonoAndroid10/Syncfusion.SfAutoComplete.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfAutoComplete.XForms.XML",
+        "lib/Xamarin.iOS10/Syncfusion.SfAutoComplete.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfAutoComplete.XForms.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfAutoComplete.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfAutoComplete.iOS.xml",
+        "lib/netstandard2.0/Syncfusion.SfAutoComplete.XForms.XML",
+        "lib/netstandard2.0/Syncfusion.SfAutoComplete.XForms.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfAutoComplete.XForms.XML",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfAutoComplete.XForms.dll",
+        "lib/uap10.0/Syncfusion.SfAutoComplete.XForms.UWP.XML",
+        "lib/uap10.0/Syncfusion.SfAutoComplete.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.SfAutoComplete.XForms.XML",
+        "lib/uap10.0/Syncfusion.SfAutoComplete.XForms.dll",
+        "syncfusion.xamarin.sfautocomplete.17.2.0.35.nupkg.sha512",
+        "syncfusion.xamarin.sfautocomplete.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.GridCommon/17.2.0.35": {
-      "sha512": "4c0wvV6zofNp1x2RMRKP+Hczp/MDh2dVjkmTyFPiNP351grWq1AJHYDJAa5GDVxfebfQuvxsE8euxRP5wvxj7g==",
+    "Syncfusion.Xamarin.SfComboBox/17.2.0.35": {
+      "sha512": "EgWQIAboPeDvHmI6sSaLsTp9jIAq/IXPJQ1bqyskrsKud7qEACPhezLn6HBqPrJzB1FcijDx0iIHk9EBC9HdAg==",
       "type": "package",
-      "path": "syncfusion.xamarin.gridcommon/17.2.0.35",
+      "path": "syncfusion.xamarin.sfcombobox/17.2.0.35",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/MonoAndroid10/Syncfusion.GridCommon.Portable.XML",
-        "lib/MonoAndroid10/Syncfusion.GridCommon.Portable.dll",
-        "lib/Xamarin.Mac/Syncfusion.GridCommon.Portable.XML",
-        "lib/Xamarin.Mac/Syncfusion.GridCommon.Portable.dll",
-        "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.XML",
-        "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll",
-        "lib/netstandard2.0/Syncfusion.GridCommon.Portable.XML",
-        "lib/netstandard2.0/Syncfusion.GridCommon.Portable.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.GridCommon.Portable.XML",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.GridCommon.Portable.dll",
-        "lib/uap10.0/Syncfusion.GridCommon.Portable.XML",
-        "lib/uap10.0/Syncfusion.GridCommon.Portable.dll",
-        "syncfusion.xamarin.gridcommon.17.2.0.35.nupkg.sha512",
-        "syncfusion.xamarin.gridcommon.nuspec"
-      ]
-    },
-    "Syncfusion.Xamarin.SfListView/17.2.0.35": {
-      "sha512": "G4c4AwBxDdGPaPdWFiByTXi18MGCF5BoeXIHC8GFbSVWBLhVGCCcVmyHbtCO1XNLltVeatMuaMnRqevcMdyI3g==",
-      "type": "package",
-      "path": "syncfusion.xamarin.sflistview/17.2.0.35",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/MonoAndroid10/Syncfusion.SfListView.XForms.Android.dll",
-        "lib/MonoAndroid10/Syncfusion.SfListView.XForms.dll",
-        "lib/MonoAndroid10/Syncfusion.SfListView.XForms.xml",
-        "lib/Xamarin.Mac/Syncfusion.SfListView.XForms.dll",
-        "lib/Xamarin.Mac/Syncfusion.SfListView.XForms.macOS.dll",
-        "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.dll",
-        "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.iOS.dll",
-        "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.xml",
-        "lib/netstandard2.0/Syncfusion.SfListView.XForms.dll",
-        "lib/netstandard2.0/Syncfusion.SfListView.XForms.xml",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfListView.XForms.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfListView.XForms.xml",
-        "lib/uap10.0/Syncfusion.SfListView.XForms.UWP.XML",
-        "lib/uap10.0/Syncfusion.SfListView.XForms.UWP.dll",
-        "lib/uap10.0/Syncfusion.SfListView.XForms.dll",
-        "lib/uap10.0/Syncfusion.SfListView.XForms.xml",
-        "syncfusion.xamarin.sflistview.17.2.0.35.nupkg.sha512",
-        "syncfusion.xamarin.sflistview.nuspec"
+        "lib/MonoAndroid10/Syncfusion.SfComboBox.XForms.Android.dll",
+        "lib/MonoAndroid10/Syncfusion.SfComboBox.XForms.XML",
+        "lib/MonoAndroid10/Syncfusion.SfComboBox.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.XML",
+        "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.iOS.dll",
+        "lib/netstandard2.0/Syncfusion.SfComboBox.XForms.XML",
+        "lib/netstandard2.0/Syncfusion.SfComboBox.XForms.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfComboBox.XForms.XML",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfComboBox.XForms.dll",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP.XML",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP.pri",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/Properties/Syncfusion.SfComboBox.XForms.UWP.rd.xml",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/Syncfusion.SfComboBox.XForms.UWP.xr.xml",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/Themes/Generic.xaml",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/darkthemeimage.png",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/dropdownbuttonimage.png",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.XML",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.dll",
+        "syncfusion.xamarin.sfcombobox.17.2.0.35.nupkg.sha512",
+        "syncfusion.xamarin.sfcombobox.nuspec"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -1613,6 +1604,7 @@
       "path": "system.appcontext/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1667,6 +1659,7 @@
       "path": "system.collections/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1734,6 +1727,7 @@
       "path": "system.collections.concurrent/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1801,6 +1795,7 @@
       "path": "system.console/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1838,6 +1833,7 @@
       "path": "system.diagnostics.debug/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1905,6 +1901,7 @@
       "path": "system.diagnostics.tools/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1961,6 +1958,7 @@
       "path": "system.diagnostics.tracing/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2050,6 +2048,7 @@
       "path": "system.globalization/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2117,6 +2116,7 @@
       "path": "system.globalization.calendars/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2154,6 +2154,7 @@
       "path": "system.io/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2234,6 +2235,7 @@
       "path": "system.io.compression/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2304,6 +2306,7 @@
       "path": "system.io.compression.zipfile/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2342,6 +2345,7 @@
       "path": "system.io.filesystem/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2379,6 +2383,7 @@
       "path": "system.io.filesystem.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2417,6 +2422,7 @@
       "path": "system.linq/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2488,6 +2494,7 @@
       "path": "system.linq.expressions/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2571,6 +2578,7 @@
       "path": "system.net.http/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/Xamarinmac20/_._",
@@ -2652,6 +2660,7 @@
       "path": "system.net.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2730,6 +2739,7 @@
       "path": "system.net.sockets/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2767,6 +2777,7 @@
       "path": "system.objectmodel/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2836,6 +2847,7 @@
       "path": "system.reflection/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2916,6 +2928,7 @@
       "path": "system.reflection.extensions/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2972,6 +2985,7 @@
       "path": "system.reflection.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3028,6 +3042,7 @@
       "path": "system.resources.resourcemanager/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3084,6 +3099,7 @@
       "path": "system.runtime/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3175,6 +3191,7 @@
       "path": "system.runtime.extensions/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3255,6 +3272,7 @@
       "path": "system.runtime.handles/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3292,6 +3310,7 @@
       "path": "system.runtime.interopservices/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3384,6 +3403,7 @@
       "path": "system.runtime.interopservices.runtimeinformation/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3418,6 +3438,7 @@
       "path": "system.runtime.numerics/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3474,6 +3495,7 @@
       "path": "system.runtime.serialization.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3546,6 +3568,7 @@
       "path": "system.security.cryptography.algorithms/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3586,6 +3609,7 @@
       "path": "system.security.cryptography.encoding/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3626,6 +3650,7 @@
       "path": "system.security.cryptography.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3654,6 +3679,7 @@
       "path": "system.security.cryptography.x509certificates/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3709,6 +3735,7 @@
       "path": "system.text.encoding/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3776,6 +3803,7 @@
       "path": "system.text.encoding.extensions/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3843,6 +3871,7 @@
       "path": "system.text.regularexpressions/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3926,6 +3955,7 @@
       "path": "system.threading/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3996,6 +4026,7 @@
       "path": "system.threading.tasks/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4063,6 +4094,7 @@
       "path": "system.threading.timer/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4117,6 +4149,7 @@
       "path": "system.xml.readerwriter/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4188,6 +4221,7 @@
       "path": "system.xml.xdocument/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4390,7 +4424,7 @@
       ]
     },
     "Xamarin.Android.Arch.Core.Common/1.1.1.1": {
-      "sha512": "3ijpoWgfyNeyUgbhLz4V/xAuizoz3h1Myg8Ioe1sCkl27Vl3lDN9SR30sFDDKcGgqQXJ4gtPOr9POCfvdPc63Q==",
+      "sha512": "KuubEy2Ve5TLdAWkaa5L4Ud36FClJEQR5a9JRi/mwk8mRxUZ27zly65kpg/Mi/npfZxEotq4MCKIj88lW6Nqhg==",
       "type": "package",
       "path": "xamarin.android.arch.core.common/1.1.1.1",
       "files": [
@@ -4410,7 +4444,7 @@
       ]
     },
     "Xamarin.Android.Arch.Lifecycle.Common/1.1.1.1": {
-      "sha512": "1r89dmuYDlEzUT0e7WLKBYR8FbBm9hj2c/geDlSA4voCJnnWMCkQz2fO6VYnlygpIGLGE9VyKe0DcvNCIuZmvA==",
+      "sha512": "6BiurQ1KGWOU6qizRrmSpskNdaOnfpgO3SbtHEcUDn4PkmZ3lCqTGfPzeNaVFKpT3ZV2r3HQMvFFuNOilolWrQ==",
       "type": "package",
       "path": "xamarin.android.arch.lifecycle.common/1.1.1.1",
       "files": [
@@ -4430,7 +4464,7 @@
       ]
     },
     "Xamarin.Android.Arch.Lifecycle.Runtime/1.1.1.1": {
-      "sha512": "wNXPIo6PbxPuDdVjezZgbJVG2obPaIESa3tumft1xlDCWyTTQC/NAcOMXi7hZAoZpOYCbXGCttStuAp3jNqMcQ==",
+      "sha512": "VCHW18NpC/LoH6dJBuio4ypnv9wpn36OPbDU+xiutc0ydFZ1fRb4nm4d52zTiwpouS83cJURzrIISGbWj6RZpg==",
       "type": "package",
       "path": "xamarin.android.arch.lifecycle.runtime/1.1.1.1",
       "files": [
@@ -4452,7 +4486,7 @@
       ]
     },
     "Xamarin.Android.Support.Animated.Vector.Drawable/28.0.0.1": {
-      "sha512": "g2Cd95pNziHzTM5ChCNYGiUboZK5OfdWGv5EHa7H6GZqYWXbW7mM6WfNFIrt4MtBgfrABu3ecD5w+QdwXJBaFQ==",
+      "sha512": "6J6mp9j+vseKZ5QZQxuOSlpXb7PSRLA/8cmkC1ShqUIc/AzXh19EEcu4EpUda9WbnhOObmI7pHAMAjpjVWf6zA==",
       "type": "package",
       "path": "xamarin.android.support.animated.vector.drawable/28.0.0.1",
       "files": [
@@ -4476,7 +4510,7 @@
       ]
     },
     "Xamarin.Android.Support.Annotations/28.0.0.1": {
-      "sha512": "SSbE6B9G/DxaZaxEqUWIhmmNWup27gMfEs4lPoqr2kLlQb81KBOeWo0PDCJpRYNPzQxmgGs3WKhPomYA+hZbDg==",
+      "sha512": "BM3qTB9SPVdwRKV5d0hmfsuTh3zZycEr/2CMXOKCdNZAOXHWpmkMJqTJ7m9QybALWcKID04uDxgfatM0uFOgpw==",
       "type": "package",
       "path": "xamarin.android.support.annotations/28.0.0.1",
       "files": [
@@ -4497,7 +4531,7 @@
       ]
     },
     "Xamarin.Android.Support.Compat/28.0.0.1": {
-      "sha512": "HuOh5SGC5U487NJzv9lCwlVOdPEKjlqW7s/tHCRfaoJ8qtOXzJ9UZzmmPJnwgOnSx75BkSA7H39OVwmxo3WGNA==",
+      "sha512": "5DY2Xxpq2aMnp0OBqxxYgullg8GMJGMDd1toDsW2E1PysDR07zERor5nVKdkA8/tOXDmdrzjYnKA5vYKue0+pQ==",
       "type": "package",
       "path": "xamarin.android.support.compat/28.0.0.1",
       "files": [
@@ -4518,7 +4552,7 @@
       ]
     },
     "Xamarin.Android.Support.Core.UI/28.0.0.1": {
-      "sha512": "Eutx87/y/Rh2wFTfDsOwm2x6YgLABG4C4HepjJhO3xKhbhwdB1c3YOtfYwLGjoa8q2CWIzZ7WKnF8EkGj6rEew==",
+      "sha512": "ZdQ3dNnqINhlARTZJ3Ietlyp1M6fY2eFOuyCb1p7SafdfCpo1m74H5CViIHwXpLSGBeEYKVlb//TyrQ6gZTxtQ==",
       "type": "package",
       "path": "xamarin.android.support.core.ui/28.0.0.1",
       "files": [
@@ -4542,7 +4576,7 @@
       ]
     },
     "Xamarin.Android.Support.Core.Utils/28.0.0.1": {
-      "sha512": "eHCDHOQVQP557K6mB7wGw/MYvP24cO6bw8k9ZYUAsT7eDZwkN5cL0srEuasuw9QC1XrEtwuE4C6G34QOigV3aA==",
+      "sha512": "wG+KVTyct2GMUrsdJAFxkSE6LTO1ItGwkKeuE8MO3i160UUnoHsI8b/nm8mIlVr9GPfNsRCtLh0mHsK1P0+33Q==",
       "type": "package",
       "path": "xamarin.android.support.core.utils/28.0.0.1",
       "files": [
@@ -4563,7 +4597,7 @@
       ]
     },
     "Xamarin.Android.Support.CustomTabs/28.0.0.1": {
-      "sha512": "5qlW03KaJDkixyHNjAR4LKuWMGXU48mtHvDFFkdghDtyYskcH0uePXs+B4UUQErFmmJexR8NcIusI2BN6E5HUA==",
+      "sha512": "INbnBbSWwClVztNUkpyruXXkWWawbtOV6RxW0q7htqRWSUeLK8JhN6tboyhTGW3lV0iy8IebPyNyniNLOVVVFw==",
       "type": "package",
       "path": "xamarin.android.support.customtabs/28.0.0.1",
       "files": [
@@ -4584,7 +4618,7 @@
       ]
     },
     "Xamarin.Android.Support.Design/28.0.0.1": {
-      "sha512": "dIlputDvYwGEtS4DX5C4JeCetn5adeytsEN2MmY7JpS0QuQ6O8Of/XBNdgezvSgAFAQa4otpEcGAvzpdzkTY9Q==",
+      "sha512": "+wqsjk/GhDNtjZVEqHUUJSO5n9/Cr1ZKMOsbGIF9QvJS3UYOD/bD978bjwgjMmA/Pf43pxoP8sK10DQjQIc9Tw==",
       "type": "package",
       "path": "xamarin.android.support.design/28.0.0.1",
       "files": [
@@ -4608,7 +4642,7 @@
       ]
     },
     "Xamarin.Android.Support.Fragment/28.0.0.1": {
-      "sha512": "6ECFrKhslOVnvz70sHdhL4WqlmqoVkPbOh/T0tCZ5tj/pMJtasuQhF0JrQHcOCquEAS+pR9qi4nYPAXxyjdjiw==",
+      "sha512": "9CAHbSzb2Bu3nBHE3mOa7TsStPbSl0DFAPimhGbuFttCginDH5UaFtynwirojoiYOXnL5tPQhdMiT78ETRM9yw==",
       "type": "package",
       "path": "xamarin.android.support.fragment/28.0.0.1",
       "files": [
@@ -4629,7 +4663,7 @@
       ]
     },
     "Xamarin.Android.Support.Media.Compat/28.0.0.1": {
-      "sha512": "ltZcXL0COKRNj3aCiq3V8Xgynp50UUDCNEGH1TIkL9fGgQsUYmBzGY3cHYPo5aM/6a55am2shj4Sr4cLhx6iIg==",
+      "sha512": "9BWAR4kwdPE6nP3EJEq+B1t1INphxbYuRhP1z7EKBcos+3/i/d1vpaMFveAbieO7u/CF+qP/s8HmIcCblHxkgg==",
       "type": "package",
       "path": "xamarin.android.support.media.compat/28.0.0.1",
       "files": [
@@ -4652,7 +4686,7 @@
       ]
     },
     "Xamarin.Android.Support.Transition/28.0.0.1": {
-      "sha512": "pkBJTXvfvwSC5ddtK+pSsfLzYQ8FmW3zgjObF1OE4nkx+fn2HFYE4nOy/EdQdh5PU7JsqrV80fOCUv83Q0U+2A==",
+      "sha512": "bwEOyMgA1YBbihwKEd/yjwN9tsJKb060VItPc5DDAc3yjz/Ly8kBqEyEcYKekwTEsh7MgDxOqBuTUrnEDq6MXw==",
       "type": "package",
       "path": "xamarin.android.support.transition/28.0.0.1",
       "files": [
@@ -4674,7 +4708,7 @@
       ]
     },
     "Xamarin.Android.Support.v4/28.0.0.1": {
-      "sha512": "xvsqO9dqjP7v8rqEYXr/v/KELH597nCdMwROIDqHtIsCMWeNeY33CmmBA2bRzfLpgZICvdCrg/T1v0+4BFU8Ag==",
+      "sha512": "sKMHm0capUzlhFJSwW3fIh/IwOOVjn5mGNf7TVBzsorsSmrV9GIRv2NGHDGEbaUzJcM1ZkadUOn5vCeKy7KLZw==",
       "type": "package",
       "path": "xamarin.android.support.v4/28.0.0.1",
       "files": [
@@ -4695,7 +4729,7 @@
       ]
     },
     "Xamarin.Android.Support.v7.AppCompat/28.0.0.1": {
-      "sha512": "MEkm7hZNa/nxnZ3a7E6HcpaFL07scQbbFNZ+btCNIS2cfzWKRHpxwjXJ2JhZr2GEknfbgwrxmOILmrbt6QlLlA==",
+      "sha512": "7tF7B0ez0KZrOSEsky65CufGHtjAgR59jNXHq8nnXZhPYZE/3gtHnUpdwU7Ppn+s04OLQK8RkOCXAgZ7n9eN4Q==",
       "type": "package",
       "path": "xamarin.android.support.v7.appcompat/28.0.0.1",
       "files": [
@@ -4716,7 +4750,7 @@
       ]
     },
     "Xamarin.Android.Support.v7.CardView/28.0.0.1": {
-      "sha512": "cQxnwu8OWrGRz0Z300TA3NPr7ofsQ4I7tMw1NLFdKbfgPscLmPmiJiJsMcchCL/T9SVz4/3eRoUh6V1fg8iAqA==",
+      "sha512": "TpR/hIJiEhjdQCoessaitAKXnHI4p3J0uWfk9XqZhtvmOv7WobQQV7Di+MaYlsg+FHSipbl/d3GoocGtQaMIrA==",
       "type": "package",
       "path": "xamarin.android.support.v7.cardview/28.0.0.1",
       "files": [
@@ -4737,7 +4771,7 @@
       ]
     },
     "Xamarin.Android.Support.v7.MediaRouter/28.0.0.1": {
-      "sha512": "uoe/dRihug7V/SkR3v+c/3R45YjT3bevGKFt6ZB+vPPtN4rvbM+9ypNHfgi3pxX4ldvEla4cOjLnzaS/F1r/8Q==",
+      "sha512": "IGJnCLd3D9+9t6F8dlsF0BjH2ylTDXqF1lbAwHtLszVyr9B9Hd8S/eJ8xEdWRiuqTVD2iWCtCo0J2jqoIs5WNw==",
       "type": "package",
       "path": "xamarin.android.support.v7.mediarouter/28.0.0.1",
       "files": [
@@ -4758,7 +4792,7 @@
       ]
     },
     "Xamarin.Android.Support.v7.Palette/28.0.0.1": {
-      "sha512": "EM0sfN+Nyp/SrocJF6dysaWULbY+rDn2rYNT4MIQhxaZDB71G2tD+Y08+KboyAmegDo6Iz3BhAMf5rHEoTuO4A==",
+      "sha512": "GH0+acwQnBghcCK++RMZhbwvyKQFcRNoH4zoBwWat9T8KufJyuaX5WN2MG5Dzy+qSsbmDi9iH9YtM2xtszxaHg==",
       "type": "package",
       "path": "xamarin.android.support.v7.palette/28.0.0.1",
       "files": [
@@ -4779,7 +4813,7 @@
       ]
     },
     "Xamarin.Android.Support.v7.RecyclerView/28.0.0.1": {
-      "sha512": "tLMRB4+6pGI6wDEju+agdX3QSUsgzh0EBoXNV517Zy3FMhxF9SAOvLr5u4b2RNaF8E0JdNfzDKBORn116FgGYw==",
+      "sha512": "JdZStP71IBHVcFBzjyNa9CMQA09Dqkab5ZfmsZ0YU7I9YEIbDexCd4oFVDbe1ajoKLkwdU81cywDCGI3AdkC7A==",
       "type": "package",
       "path": "xamarin.android.support.v7.recyclerview/28.0.0.1",
       "files": [
@@ -4803,7 +4837,7 @@
       ]
     },
     "Xamarin.Android.Support.Vector.Drawable/28.0.0.1": {
-      "sha512": "e3mmsuYkgcbNqrxCD7wnlVagoBRhVfHsxEmROr8cp+rGKKqC/KaorsToqiQfDIHLK/ZfqgmE+wdOAPv3Rv0jVA==",
+      "sha512": "pGCJ4zbXLIrQm63flSIVUmoIizdI42ZbFVdVUGSXaYu+YZ3qUbYcFMAfMXHkzpzhjckQIXzMAxC6xifqcziA8w==",
       "type": "package",
       "path": "xamarin.android.support.vector.drawable/28.0.0.1",
       "files": [
@@ -5310,7 +5344,9 @@
       "PropertyChanged.Fody >= 2.6.1",
       "RestSharp >= 106.6.10",
       "Syncfusion.Licensing >= 17.2.0.35",
-      "Syncfusion.Xamarin.Buttons >= 17.1.0.53",
+      "Syncfusion.Xamarin.Buttons >= 17.2.0.35",
+      "Syncfusion.Xamarin.SfAutoComplete >= 17.2.0.35",
+      "Syncfusion.Xamarin.SfComboBox >= 17.2.0.35",
       "Vertical >= 1.0.0",
       "Xam.Plugin.Connectivity >= 3.2.0",
       "Xam.Plugins.Settings >= 3.1.1",
@@ -5326,21 +5362,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ильгар\\.nuget\\packages\\": {}
+    "C:\\Users\\Mamis\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Work\\Vertical\\Vertical\\Vertical.Android\\Vertical.Android.csproj",
+      "projectUniqueName": "D:\\SmartGit\\bin\\WorkPik\\Vertical\\Vertical\\Vertical.Android\\Vertical.Android.csproj",
       "projectName": "Vertical.Android",
-      "projectPath": "C:\\Work\\Vertical\\Vertical\\Vertical.Android\\Vertical.Android.csproj",
-      "packagesPath": "C:\\Users\\Ильгар\\.nuget\\packages\\",
-      "outputPath": "C:\\Work\\Vertical\\Vertical\\Vertical.Android\\obj\\",
+      "projectPath": "D:\\SmartGit\\bin\\WorkPik\\Vertical\\Vertical\\Vertical.Android\\Vertical.Android.csproj",
+      "packagesPath": "C:\\Users\\Mamis\\.nuget\\packages\\",
+      "outputPath": "D:\\SmartGit\\bin\\WorkPik\\Vertical\\Vertical\\Vertical.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Ильгар\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Mamis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "monoandroid81"
@@ -5352,8 +5393,8 @@
       "frameworks": {
         "monoandroid81": {
           "projectReferences": {
-            "C:\\Work\\Vertical\\Vertical\\Vertical\\Vertical.csproj": {
-              "projectPath": "C:\\Work\\Vertical\\Vertical\\Vertical\\Vertical.csproj"
+            "D:\\SmartGit\\bin\\WorkPik\\Vertical\\Vertical\\Vertical\\Vertical.csproj": {
+              "projectPath": "D:\\SmartGit\\bin\\WorkPik\\Vertical\\Vertical\\Vertical\\Vertical.csproj"
             }
           }
         }
@@ -5384,7 +5425,15 @@
           },
           "Syncfusion.Xamarin.Buttons": {
             "target": "Package",
-            "version": "[17.1.0.53, )"
+            "version": "[17.2.0.35, )"
+          },
+          "Syncfusion.Xamarin.SfAutoComplete": {
+            "target": "Package",
+            "version": "[17.2.0.35, )"
+          },
+          "Syncfusion.Xamarin.SfComboBox": {
+            "target": "Package",
+            "version": "[17.2.0.35, )"
           },
           "Xam.Plugin.Connectivity": {
             "target": "Package",

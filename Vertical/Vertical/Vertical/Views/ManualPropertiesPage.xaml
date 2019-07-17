@@ -34,7 +34,7 @@
                                         </Grid.ColumnDefinitions>
                                         <StackLayout Spacing="3" Grid.Column="0" VerticalOptions="Center">
                                             <Label 
-                                                Text="{Binding PropertyName}" FontSize="Caption" TextColor="Black"/>
+                                                Text="{Binding Name}" FontSize="Caption" TextColor="Black"/>
                                             <Label
                                                 Text="{Binding PropertyTypeName, StringFormat='Тип: {0}'}"
                                                 Style="{x:StaticResource DefaultLabelStyle}" FontSize="Micro"/>                                            

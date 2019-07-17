@@ -18,11 +18,10 @@ namespace Vertical.ViewModels
     {
         public event PropertyChangedEventHandler PropertyChanged;
                 
-        public ObservableCollection<SystemObjectModel> SystemObjectModels { get; set; }        
+        public ObservableCollection<SystemObjectModel> SystemObjectModels { get; set; }         
 
         public INavigation Navigation { get; set; }
-        public States States { get; set; } = States.Normal;
-        
+        public States States { get; set; } = States.Normal;        
         public ICommand UpdateContentCommand => new Command(UpdateSystemObjects);
         public ICommand GoToAddNewObjectPageCommand => new Command(GoToAddNewObjectPage);
         public ICommand GoToEditObjectPageCommand => new Command(GoToEditObjectPage);
@@ -72,15 +71,11 @@ namespace Vertical.ViewModels
             ParentObject = _parentObject;
             Title = ParentObject?.Name;
             SystemObjectModels = new ObservableCollection<SystemObjectModel>();
+            
             UpdateSystemObjects();
         }
 
-        /// <summary>
-        /// Обновляет коллекцию объектов входной коллекции
-        /// </summary>
-        /// <typeparam name="T">тип элементов коллекции</typeparam>
-        /// <param name="listObjects">обновляемая коллекция</param>
-        /// <param name="getObjectsApiFunc">функция для получения нового списка объектов</param>
+        
         public void UpdateSystemObjects()
         {
             if (!NetworkCheck.IsInternet())
@@ -117,12 +112,12 @@ namespace Vertical.ViewModels
             {
                 case null:
                     {
-                        IsEnabled = true;
+                        IsEnabled = true; 
                         return;
                     }
                 case "Редактировать":
                     {
-                        await Navigation.PushModalAsync(new InitializeObjectPage(IsAddOrEdit.Edit, commandParameter as SystemObjectModel));
+                        await Navigation.PushModalAsync(new EditObjectPage(commandParameter as SystemObjectModel));
                     }break;
                 case "Информация":
                     {
@@ -138,7 +133,7 @@ namespace Vertical.ViewModels
         {
             IsEnabled = false;
 
-            await Navigation.PushModalAsync(new InitializeObjectPage(IsAddOrEdit.Add, ParentObject));
+            await Navigation.PushModalAsync(new InitializeObjectPage(ParentObject));
 
             IsEnabled = true;
         }
@@ -147,7 +142,7 @@ namespace Vertical.ViewModels
         {            
             IsEnabled = false;
             States = States.Loading;            
-            if(_selectedObject.TypeName == "Чек-лист мастера")
+            if(_selectedObject.TypeID == 2)
             {
                 await Navigation.PushAsync(await Task.Run(() => new CheckListPage(_selectedObject)));
             }

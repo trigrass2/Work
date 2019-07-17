@@ -3,8 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
 using System.Text;
 using System.Windows.Input;
+using Vertical.CustomViews;
 using Vertical.Models;
 using Vertical.Services;
 using Xamarin.Forms;
@@ -20,6 +22,7 @@ namespace Vertical.ViewModels
         public States States { get; set; } = States.Normal;
         public ICommand GoBackCommand => new Command(GoBack);
         public ICommand UnBindSystemPropertyFromObjectTypeCommand => new Command(UnBindSystemPropertyFromObjectType);
+        public ICommand BindSystemPropertyToObjectTypeCommand => new Command(BindSystemPropertyToObjectType);
 
         private SystemObjectTypeModel _selectedSystemObjectTypeModel;
         public SystemObjectTypeModel SelectedSystemObjectTypeModel
@@ -35,24 +38,26 @@ namespace Vertical.ViewModels
                 
             }
         }
-        public ObservableCollection<SystemObjectTypePropertyModel> SystemPropertyModels { get; set; }
+        public ObservableCollection<Grouping<SystemObjectTypePropertyModel>> SystemPropertyModels { get; set; }
         
         public int ObjectTypeID { get; set; }
 
         public TypeModelInfoPageViewModel(int idTypeObject)
         {
             ObjectTypeID = idTypeObject;
-            SystemPropertyModels = new ObservableCollection<SystemObjectTypePropertyModel>();
+            SystemPropertyModels = new ObservableCollection<Grouping<SystemObjectTypePropertyModel>>();
             UpdateSystemPropertyModel();
         }
 
         public void UpdateSystemPropertyModel()
         {
             SystemPropertyModels.Clear();
+            var items = Api.GetDataFromServer<SystemObjectTypePropertyModel>("SystemManagement/GetSystemObjectTypeProperties", new { ObjectTypeID });
+            var groups = items.GroupBy(p => p.GroupName).Select(g => new Grouping<SystemObjectTypePropertyModel>(g.Key, g));
 
             try
             {
-                foreach (var s in Api.GetDataFromServer<SystemObjectTypePropertyModel>("SystemManagement/GetSystemObjectTypeProperties", new { ObjectTypeID }))
+                foreach (var s in groups)
                 {
                     SystemPropertyModels.Add(s);
                 }
@@ -64,17 +69,45 @@ namespace Vertical.ViewModels
             
         }
 
-        //private async void BindSystemPropertyToObjectType()
-        //{
+        /// <summary>
+        /// Привязывает новое свойство
+        /// </summary>
+        /// <param name="commandParameter"></param>
+        private async void BindSystemPropertyToObjectType(object commandParameter)
+        {
+            var groupId = commandParameter as ObservableCollection<SystemObjectTypePropertyModel>;
+            var items = await Api.GetDataFromServerAsync<SystemPropertyModel>("SystemManagement/GetSystemProperties", new { });
             
-        //}
+            var action = await Application.Current.MainPage
+                                                  .DisplayActionSheet(
+                                                  "Новое свойство свойство",
+                                                  "Cancel",
+                                                  null,
+                                                  items.Select(x => x.Name).ToArray());
 
+            if (action != null)
+            {
+                var newProperty = items.SingleOrDefault(i => i.Name == action);
+                if (await Api.SendDataToServerAsync("SystemManagement/BindSystemPropertyToObjectType", new { PropertyID = newProperty.ID, ObjectTypeID, groupId[0].GroupID }) == true)
+                {
+                    UpdateSystemPropertyModel();
+                    await Application.Current.MainPage.DisplayAlert("Сообщение", "Свойство добавлено", "Ок");                    
+                }
+            }
+            
+        }
+
+        /// <summary>
+        /// Отвязывает свойство
+        /// </summary>
+        /// <param name="commandParameter"></param>
         private async void UnBindSystemPropertyFromObjectType(object commandParameter)
         {
             if (await Application.Current.MainPage.DisplayAlert("Подтвердите действие", "Отвязать свойство?", "Да", "Нет") == true)
             {
                 var model = commandParameter as SystemObjectTypePropertyModel;
-                await Api.SendDataToServerAsync("UnBindSystemPropertyFromObjectType", new { model.PropertyID, model.PropertyNum, ObjectTypeID });
+                await Api.SendDataToServerAsync("SystemManagement/UnBindSystemPropertyFromObjectType", new { model.PropertyID, model.PropertyNum, ObjectTypeID });
+                UpdateSystemPropertyModel();
             }
         }
 

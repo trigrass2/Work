@@ -131,17 +131,17 @@
           "lib/netstandard2.0/Syncfusion.Licensing.dll": {}
         }
       },
-      "Syncfusion.Xamarin.Buttons/17.1.0.53": {
+      "Syncfusion.Xamarin.Buttons/17.2.0.35": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.1.0.53",
+          "Syncfusion.Xamarin.Core": "17.2.0.35",
           "Xamarin.Forms": "3.1.0.697729"
         },
         "compile": {
-          "lib/netstandard1.0/Syncfusion.Buttons.XForms.dll": {}
+          "lib/netstandard2.0/Syncfusion.Buttons.XForms.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.0/Syncfusion.Buttons.XForms.dll": {}
+          "lib/netstandard2.0/Syncfusion.Buttons.XForms.dll": {}
         }
       },
       "Syncfusion.Xamarin.Core/17.2.0.35": {
@@ -156,37 +156,30 @@
           "lib/netstandard2.0/Syncfusion.Core.XForms.dll": {}
         }
       },
-      "Syncfusion.Xamarin.DataSource/17.2.0.35": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Syncfusion.DataSource.Portable.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Syncfusion.DataSource.Portable.dll": {}
-        }
-      },
-      "Syncfusion.Xamarin.GridCommon/17.2.0.35": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Syncfusion.GridCommon.Portable.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Syncfusion.GridCommon.Portable.dll": {}
-        }
-      },
-      "Syncfusion.Xamarin.SfListView/17.2.0.35": {
+      "Syncfusion.Xamarin.SfAutoComplete/17.2.0.35": {
         "type": "package",
         "dependencies": {
           "Syncfusion.Xamarin.Core": "17.2.0.35",
-          "Syncfusion.Xamarin.DataSource": "17.2.0.35",
-          "Syncfusion.Xamarin.GridCommon": "17.2.0.35",
           "Xamarin.Forms": "3.1.0.697729"
         },
         "compile": {
-          "lib/netstandard2.0/Syncfusion.SfListView.XForms.dll": {}
+          "lib/netstandard2.0/Syncfusion.SfAutoComplete.XForms.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Syncfusion.SfListView.XForms.dll": {}
+          "lib/netstandard2.0/Syncfusion.SfAutoComplete.XForms.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfComboBox/17.2.0.35": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "17.2.0.35",
+          "Xamarin.Forms": "3.1.0.697729"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.SfComboBox.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.SfComboBox.XForms.dll": {}
         }
       },
       "System.Globalization/4.3.0": {
@@ -407,6 +400,7 @@
       "path": "microsoft.netcore.platforms/1.1.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -421,7 +415,6 @@
       "path": "microsoft.netcore.targets/1.1.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -751,10 +744,10 @@
         "syncfusion.licensing.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.Buttons/17.1.0.53": {
-      "sha512": "JX0HNhiD07hvhzvznAuE6UTpUHgGzO9Qp17sRno0+VyKm1fKeXVMQrGk04IrorruwTSxGQb+qcqTCoV/BJSVWg==",
+    "Syncfusion.Xamarin.Buttons/17.2.0.35": {
+      "sha512": "t8ICWUy3KBlkhdFRvSE7Pbk9Q3I5XafO2253SxX3qjZFxdGhqvtQyUjXI1Nm+7kPijCOhsA3bm59nYE1JJa1IA==",
       "type": "package",
-      "path": "syncfusion.xamarin.buttons/17.1.0.53",
+      "path": "syncfusion.xamarin.buttons/17.2.0.35",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -764,10 +757,11 @@
         "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.dll",
         "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.iOS.dll",
         "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.xml",
-        "lib/netstandard1.0/Syncfusion.Buttons.XForms.dll",
-        "lib/netstandard1.0/Syncfusion.Buttons.XForms.xml",
+        "lib/netstandard2.0/Syncfusion.Buttons.XForms.dll",
+        "lib/netstandard2.0/Syncfusion.Buttons.XForms.xml",
         "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Buttons.XForms.dll",
         "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Buttons.XForms.xml",
+        "lib/uap10.0/Syncfusion.Buttons.XForms.UWP.XML",
         "lib/uap10.0/Syncfusion.Buttons.XForms.UWP.dll",
         "lib/uap10.0/Syncfusion.Buttons.XForms.UWP.pri",
         "lib/uap10.0/Syncfusion.Buttons.XForms.UWP/Assets/SfButton.ttf",
@@ -777,7 +771,7 @@
         "lib/uap10.0/Syncfusion.Buttons.XForms.UWP/Themes/Generic.xaml",
         "lib/uap10.0/Syncfusion.Buttons.XForms.dll",
         "lib/uap10.0/Syncfusion.Buttons.XForms.xml",
-        "syncfusion.xamarin.buttons.17.1.0.53.nupkg.sha512",
+        "syncfusion.xamarin.buttons.17.2.0.35.nupkg.sha512",
         "syncfusion.xamarin.buttons.nuspec"
       ]
     },
@@ -812,75 +806,64 @@
         "syncfusion.xamarin.core.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.DataSource/17.2.0.35": {
-      "sha512": "Tj/6OvKYDyP5bN/OGMp8LH3vszntd0Yiai8vJbnCPiQfwDLZILsGNwQww9V+s3hhb9i0q02q/HNETRczLyHvSg==",
+    "Syncfusion.Xamarin.SfAutoComplete/17.2.0.35": {
+      "sha512": "GCA+xdiCfJ2qvj6TcAUDsxtozJFEe54nVIk/6+S3am0Pr+nD8aG463trJexwfgv2GrOHKSPuAlNyd4PKFvXqXA==",
       "type": "package",
-      "path": "syncfusion.xamarin.datasource/17.2.0.35",
+      "path": "syncfusion.xamarin.sfautocomplete/17.2.0.35",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/MonoAndroid10/Syncfusion.DataSource.Portable.XML",
-        "lib/MonoAndroid10/Syncfusion.DataSource.Portable.dll",
-        "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.XML",
-        "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll",
-        "lib/netstandard2.0/Syncfusion.DataSource.Portable.XML",
-        "lib/netstandard2.0/Syncfusion.DataSource.Portable.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.DataSource.Portable.XML",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.DataSource.Portable.dll",
-        "lib/uap10.0/Syncfusion.DataSource.Portable.XML",
-        "lib/uap10.0/Syncfusion.DataSource.Portable.dll",
-        "syncfusion.xamarin.datasource.17.2.0.35.nupkg.sha512",
-        "syncfusion.xamarin.datasource.nuspec"
+        "lib/MonoAndroid10/Syncfusion.SfAutoComplete.Android.XML",
+        "lib/MonoAndroid10/Syncfusion.SfAutoComplete.Android.dll",
+        "lib/MonoAndroid10/Syncfusion.SfAutoComplete.XForms.Android.dll",
+        "lib/MonoAndroid10/Syncfusion.SfAutoComplete.XForms.XML",
+        "lib/MonoAndroid10/Syncfusion.SfAutoComplete.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfAutoComplete.XForms.XML",
+        "lib/Xamarin.iOS10/Syncfusion.SfAutoComplete.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfAutoComplete.XForms.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfAutoComplete.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfAutoComplete.iOS.xml",
+        "lib/netstandard2.0/Syncfusion.SfAutoComplete.XForms.XML",
+        "lib/netstandard2.0/Syncfusion.SfAutoComplete.XForms.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfAutoComplete.XForms.XML",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfAutoComplete.XForms.dll",
+        "lib/uap10.0/Syncfusion.SfAutoComplete.XForms.UWP.XML",
+        "lib/uap10.0/Syncfusion.SfAutoComplete.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.SfAutoComplete.XForms.XML",
+        "lib/uap10.0/Syncfusion.SfAutoComplete.XForms.dll",
+        "syncfusion.xamarin.sfautocomplete.17.2.0.35.nupkg.sha512",
+        "syncfusion.xamarin.sfautocomplete.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.GridCommon/17.2.0.35": {
-      "sha512": "4c0wvV6zofNp1x2RMRKP+Hczp/MDh2dVjkmTyFPiNP351grWq1AJHYDJAa5GDVxfebfQuvxsE8euxRP5wvxj7g==",
+    "Syncfusion.Xamarin.SfComboBox/17.2.0.35": {
+      "sha512": "EgWQIAboPeDvHmI6sSaLsTp9jIAq/IXPJQ1bqyskrsKud7qEACPhezLn6HBqPrJzB1FcijDx0iIHk9EBC9HdAg==",
       "type": "package",
-      "path": "syncfusion.xamarin.gridcommon/17.2.0.35",
+      "path": "syncfusion.xamarin.sfcombobox/17.2.0.35",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/MonoAndroid10/Syncfusion.GridCommon.Portable.XML",
-        "lib/MonoAndroid10/Syncfusion.GridCommon.Portable.dll",
-        "lib/Xamarin.Mac/Syncfusion.GridCommon.Portable.XML",
-        "lib/Xamarin.Mac/Syncfusion.GridCommon.Portable.dll",
-        "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.XML",
-        "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll",
-        "lib/netstandard2.0/Syncfusion.GridCommon.Portable.XML",
-        "lib/netstandard2.0/Syncfusion.GridCommon.Portable.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.GridCommon.Portable.XML",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.GridCommon.Portable.dll",
-        "lib/uap10.0/Syncfusion.GridCommon.Portable.XML",
-        "lib/uap10.0/Syncfusion.GridCommon.Portable.dll",
-        "syncfusion.xamarin.gridcommon.17.2.0.35.nupkg.sha512",
-        "syncfusion.xamarin.gridcommon.nuspec"
-      ]
-    },
-    "Syncfusion.Xamarin.SfListView/17.2.0.35": {
-      "sha512": "G4c4AwBxDdGPaPdWFiByTXi18MGCF5BoeXIHC8GFbSVWBLhVGCCcVmyHbtCO1XNLltVeatMuaMnRqevcMdyI3g==",
-      "type": "package",
-      "path": "syncfusion.xamarin.sflistview/17.2.0.35",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/MonoAndroid10/Syncfusion.SfListView.XForms.Android.dll",
-        "lib/MonoAndroid10/Syncfusion.SfListView.XForms.dll",
-        "lib/MonoAndroid10/Syncfusion.SfListView.XForms.xml",
-        "lib/Xamarin.Mac/Syncfusion.SfListView.XForms.dll",
-        "lib/Xamarin.Mac/Syncfusion.SfListView.XForms.macOS.dll",
-        "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.dll",
-        "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.iOS.dll",
-        "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.xml",
-        "lib/netstandard2.0/Syncfusion.SfListView.XForms.dll",
-        "lib/netstandard2.0/Syncfusion.SfListView.XForms.xml",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfListView.XForms.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfListView.XForms.xml",
-        "lib/uap10.0/Syncfusion.SfListView.XForms.UWP.XML",
-        "lib/uap10.0/Syncfusion.SfListView.XForms.UWP.dll",
-        "lib/uap10.0/Syncfusion.SfListView.XForms.dll",
-        "lib/uap10.0/Syncfusion.SfListView.XForms.xml",
-        "syncfusion.xamarin.sflistview.17.2.0.35.nupkg.sha512",
-        "syncfusion.xamarin.sflistview.nuspec"
+        "lib/MonoAndroid10/Syncfusion.SfComboBox.XForms.Android.dll",
+        "lib/MonoAndroid10/Syncfusion.SfComboBox.XForms.XML",
+        "lib/MonoAndroid10/Syncfusion.SfComboBox.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.XML",
+        "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.iOS.dll",
+        "lib/netstandard2.0/Syncfusion.SfComboBox.XForms.XML",
+        "lib/netstandard2.0/Syncfusion.SfComboBox.XForms.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfComboBox.XForms.XML",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfComboBox.XForms.dll",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP.XML",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP.pri",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/Properties/Syncfusion.SfComboBox.XForms.UWP.rd.xml",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/Syncfusion.SfComboBox.XForms.UWP.xr.xml",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/Themes/Generic.xaml",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/darkthemeimage.png",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/dropdownbuttonimage.png",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.XML",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.dll",
+        "syncfusion.xamarin.sfcombobox.17.2.0.35.nupkg.sha512",
+        "syncfusion.xamarin.sfcombobox.nuspec"
       ]
     },
     "System.Globalization/4.3.0": {
@@ -889,6 +872,7 @@
       "path": "system.globalization/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -956,6 +940,7 @@
       "path": "system.io/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1036,6 +1021,7 @@
       "path": "system.reflection/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1116,6 +1102,7 @@
       "path": "system.reflection.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1172,6 +1159,7 @@
       "path": "system.resources.resourcemanager/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1228,6 +1216,7 @@
       "path": "system.runtime/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1319,6 +1308,7 @@
       "path": "system.runtime.serialization.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1391,6 +1381,7 @@
       "path": "system.text.encoding/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1458,6 +1449,7 @@
       "path": "system.threading.tasks/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1962,8 +1954,9 @@
       "PropertyChanged.Fody >= 2.6.1",
       "RestSharp >= 106.6.10",
       "Syncfusion.Licensing >= 17.2.0.35",
-      "Syncfusion.Xamarin.Buttons >= 17.1.0.53",
-      "Syncfusion.Xamarin.SfListView >= 17.2.0.35",
+      "Syncfusion.Xamarin.Buttons >= 17.2.0.35",
+      "Syncfusion.Xamarin.SfAutoComplete >= 17.2.0.35",
+      "Syncfusion.Xamarin.SfComboBox >= 17.2.0.35",
       "Xam.Plugin.Connectivity >= 3.2.0",
       "Xam.Plugins.Settings >= 3.1.1",
       "Xamarin.Forms >= 4.1.0.581479",
@@ -1972,24 +1965,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ильгар\\.nuget\\packages\\": {},
+    "C:\\Users\\Mamis\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Work\\Vertical\\Vertical\\Vertical\\Vertical.csproj",
+      "projectUniqueName": "D:\\SmartGit\\bin\\WorkPik\\Vertical\\Vertical\\Vertical\\Vertical.csproj",
       "projectName": "Vertical",
-      "projectPath": "C:\\Work\\Vertical\\Vertical\\Vertical\\Vertical.csproj",
-      "packagesPath": "C:\\Users\\Ильгар\\.nuget\\packages\\",
-      "outputPath": "C:\\Work\\Vertical\\Vertical\\Vertical\\obj\\",
+      "projectPath": "D:\\SmartGit\\bin\\WorkPik\\Vertical\\Vertical\\Vertical\\Vertical.csproj",
+      "packagesPath": "C:\\Users\\Mamis\\.nuget\\packages\\",
+      "outputPath": "D:\\SmartGit\\bin\\WorkPik\\Vertical\\Vertical\\Vertical\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Ильгар\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Mamis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
@@ -2040,9 +2036,13 @@
           },
           "Syncfusion.Xamarin.Buttons": {
             "target": "Package",
-            "version": "[17.1.0.53, )"
+            "version": "[17.2.0.35, )"
           },
-          "Syncfusion.Xamarin.SfListView": {
+          "Syncfusion.Xamarin.SfAutoComplete": {
+            "target": "Package",
+            "version": "[17.2.0.35, )"
+          },
+          "Syncfusion.Xamarin.SfComboBox": {
             "target": "Package",
             "version": "[17.2.0.35, )"
           },

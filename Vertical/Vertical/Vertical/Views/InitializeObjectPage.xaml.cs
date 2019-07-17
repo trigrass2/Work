@@ -9,10 +9,10 @@ namespace Vertical.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class InitializeObjectPage : ContentPage
 	{
-		public InitializeObjectPage (IsAddOrEdit isAddOrEdit, SystemObjectModel _inputObject = default(SystemObjectModel))
+		public InitializeObjectPage (SystemObjectModel _inputObject = default(SystemObjectModel))
 		{
 			InitializeComponent ();
-            BindingContext = new InitializeObjectPageViewModel(isAddOrEdit,_inputObject) { Navigation = this.Navigation };
+            BindingContext = new InitializeObjectPageViewModel(_inputObject) { Navigation = this.Navigation };
 		}
 	}
 }

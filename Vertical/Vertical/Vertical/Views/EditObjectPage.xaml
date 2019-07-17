@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:stateContainerDemo="clr-namespace:Xamarin.Forms.Essentials.Controls;assembly=Xamarin.Forms.Essentials.Controls"
              xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
-             xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
-             xmlns:autocomplete="clr-namespace:Syncfusion.SfAutoComplete.XForms;assembly=Syncfusion.SfAutoComplete.XForms"
-             x:Class="Vertical.Views.InitializeObjectPage">
+             mc:Ignorable="d"
+             x:Class="Vertical.Views.EditObjectPage">
     <stateContainerDemo:StateContainer State ="{Binding States}">
         <stateContainerDemo:StateCondition Is="Normal">
             <Grid Margin="7">
@@ -15,31 +16,23 @@
                 </Grid.RowDefinitions>
                 <StackLayout Grid.Row="0">
                     <Label x:Name="titleLabel" Margin="7,0,7,0" 
-                           Text="Новый объект" FontSize="Title" FontAttributes="Bold" HeightRequest="40" 
+                           Text="Объект" FontSize="Title" FontAttributes="Bold" HeightRequest="40" 
                            Style="{x:StaticResource DefaultLabelStyle}"/>
                     <inputLayout:SfTextInputLayout
                         Style="{x:StaticResource SfTextInputLayoutStyle}"
                         Hint="Название"
-                        HelperText="Введите название нового объекта">
+                        HelperText="Введите новое название объекта">
                         <Entry Text="{Binding NewObject.Name, Mode=TwoWay}"/>
-                    </inputLayout:SfTextInputLayout>
-                    <inputLayout:SfTextInputLayout IsVisible="{Binding IsVisiblePicker}"
-                        Hint="Тип" 
-                        Style="{x:StaticResource SfTextInputLayoutStyle}"
-                        HelperText="Введите название нового объекта">
-                        <Picker ItemsSource="{Binding SystemObjectTypeModels}" 
-                                ItemDisplayBinding="{Binding Name}"
-                                SelectedItem="{Binding SelectedSystemObjectTypeModel, Mode=TwoWay}"/>
                     </inputLayout:SfTextInputLayout>                    
-                </StackLayout>                
+                </StackLayout>
                 <StackLayout Grid.Row="1">
                     <Button x:Name="sendObjectButton" Style="{x:StaticResource BlueButtonStyle}" 
-                            Text="Добавить" HeightRequest="40" Margin="0,0,0,5" Command="{Binding AddNewObjectCommand}"
+                            Text="Изменить" HeightRequest="40" Margin="0,0,0,5" Command="{Binding EditObjectCommand}"
                             IsEnabled="{Binding IsEnabled}"/>
                     <Button x:Name="cancelButton" Style="{x:StaticResource BlueButtonStyle}"
                             Text="Отменить" HeightRequest="40" Command="{Binding CancelCommand}"
                             IsEnabled="{Binding IsEnabled}"/>
-                </StackLayout>                
+                </StackLayout>
             </Grid>
 
         </stateContainerDemo:StateCondition>

@@ -13,7 +13,7 @@ using static Vertical.Constants;
 namespace Vertical.ViewModels
 {
     [AddINotifyPropertyChangedInterface]
-    public class InitializeObjectPageViewModel
+    public class EditObjectPageViewModel
     {
         public INavigation Navigation { get; set; }
 
@@ -25,7 +25,7 @@ namespace Vertical.ViewModels
         /// <summary>
         /// добавляет новый объект
         /// </summary>
-        public ICommand AddNewObjectCommand => new Command(AddNewObject);
+        public ICommand EditObjectCommand => new Command(EditObject);
 
         /// <summary>
         /// отмена добавления/редактирования
@@ -37,38 +37,18 @@ namespace Vertical.ViewModels
         /// </summary>
         public SystemObjectModel InputObject { get; set; }
 
-        public ObservableCollection<SystemObjectTypeModel> SystemObjectTypeModels { get; set; }
-        
-        public SystemObjectTypeModel SelectedSystemObjectTypeModel { get; set; }
-        
-        /// <summary>
-        /// результат добавления/редактирования
-        /// </summary>
-        public InputAddSystemObject NewObject { get; set; }
+        public InputEditSystemObject NewObject { get; set; }
         public bool IsEnabled { get; set; } = true;
-        public InitializeObjectPageViewModel(SystemObjectModel _inputObject = default(SystemObjectModel))
+
+        public EditObjectPageViewModel(SystemObjectModel _inputObject)
         {
-            
-            SystemObjectTypeModels = new ObservableCollection<SystemObjectTypeModel>();
-            InputObject = _inputObject;            
-            UpdateTypes();
-            NewObject = new InputAddSystemObject { ParentGUID = InputObject?.GUID };
+            InputObject = _inputObject;
+            NewObject = new InputEditSystemObject { ObjectGUID = InputObject?.GUID, Name = InputObject?.Name };
             States = States.Normal;
         }
 
-        private void UpdateTypes()
-        {
-            SystemObjectTypeModels.Clear();
-
-            foreach (var t in Api.GetDataFromServer<SystemObjectTypeModel>("System/GetSystemObjectTypes"))
-            {
-                SystemObjectTypeModels.Add(t);
-            }
-        }
-
-        private async void AddNewObject()
-        {
-            NewObject.TypeID = SelectedSystemObjectTypeModel?.ID;
+        private async void EditObject()
+        {            
             IsEnabled = false;
 
             if (!NetworkCheck.IsInternet())
@@ -78,7 +58,7 @@ namespace Vertical.ViewModels
                 return;
             }
 
-            if (!Api.SendDataToServer("System/AddSystemObject", NewObject))
+            if (!Api.SendDataToServer("System/EditSystemObject", NewObject))
             {
                 await Application.Current.MainPage.DisplayAlert("Сообщение", "Не удалось создать.", "Ок");
                 IsEnabled = true;
@@ -95,11 +75,11 @@ namespace Vertical.ViewModels
             }
             catch (Exception ex)
             {
-                Log.WriteLine(LogPriority.Error, $"{nameof(AddNewObject)}", $"{ex.Message}");
-            }            
+                Log.WriteLine(LogPriority.Error, $"{nameof(EditObject)}", $"{ex.Message}");
+            }
 
             await Navigation.PopModalAsync();
-        } 
+        }
 
         private async void Cancel()
         {
