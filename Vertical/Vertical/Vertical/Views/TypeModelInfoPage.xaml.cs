@@ -14,10 +14,10 @@ namespace Vertical.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class TypeModelInfoPage : ContentPage
 	{
-		public TypeModelInfoPage (SystemObjectTypeModel idTypeObj)
+		public TypeModelInfoPage (int idTypeObj)
 		{
 			InitializeComponent ();
-            BindingContext = new TypeModelInfoPageViewModel(idTypeObj.ID) { Navigation = this.Navigation };
+            BindingContext = new TypeModelInfoPageViewModel(idTypeObj) { Navigation = this.Navigation };
 		}
 	}
 }

@@ -55,3 +55,7 @@ netstandard
 System.Resources.ResourceManager
 System.Reflection.Extensions
 System.Diagnostics.Tools
+Syncfusion.DataSource.Portable
+Syncfusion.GridCommon.Portable
+Syncfusion.SfListView.XForms.Android
+Syncfusion.SfListView.XForms

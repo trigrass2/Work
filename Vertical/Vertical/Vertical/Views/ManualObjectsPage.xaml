@@ -5,19 +5,19 @@
              xmlns:svg="clr-namespace:Xamarin.Forms.Svg;assembly=SvgImageSource"
              x:Class="Vertical.Views.ManualObjectsPage"
              x:Name="Page"
-             Title="Справочник">
+             Title="Объекты">
     <stateContainerDemo:StateContainer State ="{Binding States}">
         <stateContainerDemo:StateCondition Is="Normal">
             <RelativeLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                 <Label 
-                    x:Name="titleLabel" Margin="7,0,7,0" 
+                    x:Name="titleLabel" Margin="7,0,7,0"
                     Text="{Binding Title}"
-                    FontSize="Large" FontAttributes="Bold" Style="{x:StaticResource DefaultLabelStyle}"
+                    FontSize="Title" TextColor="Black"
                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
                     HeightRequest="50"
                     VerticalTextAlignment="Center"/>
                 <ListView 
-                    x:Name="listTypesModels" ItemsSource="{Binding SystemObjectModels}" 
+                    x:Name="listTypesModels" ItemsSource="{Binding SystemObjectModels}"
                     Margin="7,0,5,7" SelectedItem="{Binding SelectedObject, Mode=TwoWay}"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=titleLabel, Property=Height, Factor=1, Constant=5}"
                     RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-50}"
@@ -33,7 +33,7 @@
                                             <ColumnDefinition Width="50"/>
                                         </Grid.ColumnDefinitions>
                                         <Label 
-                                            x:Name="nameObjectLabel" Text="{Binding Name}" VerticalTextAlignment="Center" FontSize="Medium" Style="{x:StaticResource DefaultLabelStyle}"
+                                            x:Name="nameObjectLabel" Text="{Binding Name}" TextColor="Black" VerticalTextAlignment="Center" FontSize="Body"
                                             Grid.Column="0"/>
                                         <Button                                            
                                             Margin="0,0,5,0"

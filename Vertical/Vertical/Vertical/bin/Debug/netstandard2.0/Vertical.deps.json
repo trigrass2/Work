@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "53cb9a8abb46224e7c013087750310a6802402f6"
+    "signature": "2955a295f868efc6b8c52eb17083ded14f82c5ec"
   },
   "compilationOptions": {},
   "targets": {
@@ -14,12 +14,11 @@
           "Newtonsoft.Json": "12.0.2",
           "PropertyChanged.Fody": "2.6.1",
           "RestSharp": "106.6.10",
-          "Syncfusion.Licensing": "17.1.0.53",
+          "Syncfusion.Licensing": "17.2.0.35",
           "Syncfusion.Xamarin.Buttons": "17.1.0.53",
           "Xam.Plugin.Connectivity": "3.2.0",
           "Xam.Plugins.Settings": "3.1.1",
-          "Xamarin.FFImageLoading.Svg.Forms": "2.4.11.982",
-          "Xamarin.Forms": "4.1.0.555618",
+          "Xamarin.Forms": "4.1.0.581479",
           "Xamarin.Forms.Essentials.Controls": "1.1.1",
           "Xamarin.Forms.Svg": "1.0.0-pre4",
           "Mono.Android": "0.0.0.0"
@@ -75,17 +74,17 @@
           }
         }
       },
-      "SkiaSharp/1.68.0": {
+      "SkiaSharp/1.60.0": {
         "runtime": {
           "lib/netstandard1.3/SkiaSharp.dll": {
-            "assemblyVersion": "1.68.0.0",
-            "fileVersion": "1.68.0.0"
+            "assemblyVersion": "1.60.0.0",
+            "fileVersion": "1.60.0.0"
           }
         }
       },
       "SkiaSharp.Svg/1.60.0": {
         "dependencies": {
-          "SkiaSharp": "1.68.0"
+          "SkiaSharp": "1.60.0"
         },
         "runtime": {
           "lib/netstandard2.0/SkiaSharp.Extended.Svg.dll": {
@@ -94,18 +93,18 @@
           }
         }
       },
-      "Syncfusion.Licensing/17.1.0.53": {
+      "Syncfusion.Licensing/17.2.0.35": {
         "runtime": {
           "lib/netstandard2.0/Syncfusion.Licensing.dll": {
-            "assemblyVersion": "17.1.0.53",
-            "fileVersion": "17.1.0.53"
+            "assemblyVersion": "17.2.0.35",
+            "fileVersion": "17.2.0.35"
           }
         }
       },
       "Syncfusion.Xamarin.Buttons/17.1.0.53": {
         "dependencies": {
           "Syncfusion.Xamarin.Core": "17.1.0.53",
-          "Xamarin.Forms": "4.1.0.555618"
+          "Xamarin.Forms": "4.1.0.581479"
         },
         "runtime": {
           "lib/netstandard1.0/Syncfusion.Buttons.XForms.dll": {
@@ -116,7 +115,7 @@
       },
       "Syncfusion.Xamarin.Core/17.1.0.53": {
         "dependencies": {
-          "Syncfusion.Licensing": "17.1.0.53"
+          "Syncfusion.Licensing": "17.2.0.35"
         },
         "runtime": {
           "lib/netstandard1.0/Syncfusion.Core.XForms.dll": {
@@ -228,67 +227,19 @@
           }
         }
       },
-      "Xamarin.FFImageLoading/2.4.11.982": {
-        "runtime": {
-          "lib/netstandard1.0/FFImageLoading.Platform.dll": {
-            "assemblyVersion": "2.4.11.982",
-            "fileVersion": "2.4.11.982"
-          },
-          "lib/netstandard1.0/FFImageLoading.dll": {
-            "assemblyVersion": "2.4.11.982",
-            "fileVersion": "2.4.11.982"
-          }
-        }
-      },
-      "Xamarin.FFImageLoading.Forms/2.4.11.982": {
-        "dependencies": {
-          "Xamarin.FFImageLoading": "2.4.11.982",
-          "Xamarin.Forms": "4.1.0.555618"
-        },
-        "runtime": {
-          "lib/netstandard1.0/FFImageLoading.Forms.dll": {
-            "assemblyVersion": "2.4.11.982",
-            "fileVersion": "2.4.11.982"
-          }
-        }
-      },
-      "Xamarin.FFImageLoading.Svg/2.4.11.982": {
-        "dependencies": {
-          "SkiaSharp": "1.68.0",
-          "Xamarin.FFImageLoading": "2.4.11.982"
-        },
-        "runtime": {
-          "lib/netstandard1.0/FFImageLoading.Svg.Platform.dll": {
-            "assemblyVersion": "2.4.11.982",
-            "fileVersion": "2.4.11.982"
-          }
-        }
-      },
-      "Xamarin.FFImageLoading.Svg.Forms/2.4.11.982": {
-        "dependencies": {
-          "Xamarin.FFImageLoading.Forms": "2.4.11.982",
-          "Xamarin.FFImageLoading.Svg": "2.4.11.982"
-        },
-        "runtime": {
-          "lib/netstandard1.0/FFImageLoading.Svg.Forms.dll": {
-            "assemblyVersion": "2.4.11.982",
-            "fileVersion": "2.4.11.982"
-          }
-        }
-      },
-      "Xamarin.Forms/4.1.0.555618": {
+      "Xamarin.Forms/4.1.0.581479": {
         "runtime": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "4.1.0.267"
+            "fileVersion": "4.1.0.287"
           },
           "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "4.1.0.267"
+            "fileVersion": "4.1.0.287"
           },
           "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "4.1.0.267"
+            "fileVersion": "4.1.0.287"
           }
         }
       },
@@ -303,7 +254,7 @@
       "Xamarin.Forms.Svg/1.0.0-pre4": {
         "dependencies": {
           "SkiaSharp.Svg": "1.60.0",
-          "Xamarin.Forms": "4.1.0.555618"
+          "Xamarin.Forms": "4.1.0.581479"
         },
         "runtime": {
           "lib/netstandard2.0/SvgImageSource.dll": {
@@ -384,12 +335,12 @@
       "path": "restsharp/106.6.10",
       "hashPath": "restsharp.106.6.10.nupkg.sha512"
     },
-    "SkiaSharp/1.68.0": {
+    "SkiaSharp/1.60.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ptuxAKk9FiClNnAgWM8hVMCYw/B0hUJWZ8W6efnIAtJmJn/Xl4jvxxDF5WOqfQYCLVzxXw5gvBPVxvTLblFp0g==",
-      "path": "skiasharp/1.68.0",
-      "hashPath": "skiasharp.1.68.0.nupkg.sha512"
+      "sha512": "sha512-HoSNIZH54rinevEhLUWdeclr+H/QdmOp252+Tt07HTXwQyvRl9eW32ga/X7T56wsR855SKprb0RcnBPRCzlqSA==",
+      "path": "skiasharp/1.60.0",
+      "hashPath": "skiasharp.1.60.0.nupkg.sha512"
     },
     "SkiaSharp.Svg/1.60.0": {
       "type": "package",
@@ -398,12 +349,12 @@
       "path": "skiasharp.svg/1.60.0",
       "hashPath": "skiasharp.svg.1.60.0.nupkg.sha512"
     },
-    "Syncfusion.Licensing/17.1.0.53": {
+    "Syncfusion.Licensing/17.2.0.35": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-7S0bWG7iG3Z19cTAtFQvuYNE/6foBSEkh9Ye5D7mAvEXp7y2943DXVwmq3CfyWGO1b1ien+DgEKf72vWZB/59w==",
-      "path": "syncfusion.licensing/17.1.0.53",
-      "hashPath": "syncfusion.licensing.17.1.0.53.nupkg.sha512"
+      "sha512": "sha512-Inwbn7dQJP+xV/TcL6g7bO72GhoJqf1B1si+jY++/IHwkdMX/x9QYAkh6DDYriu0kxhyg7FjbAmH4zDZKCCU+g==",
+      "path": "syncfusion.licensing/17.2.0.35",
+      "hashPath": "syncfusion.licensing.17.2.0.35.nupkg.sha512"
     },
     "Syncfusion.Xamarin.Buttons/17.1.0.53": {
       "type": "package",
@@ -496,40 +447,12 @@
       "path": "xam.plugins.settings/3.1.1",
       "hashPath": "xam.plugins.settings.3.1.1.nupkg.sha512"
     },
-    "Xamarin.FFImageLoading/2.4.11.982": {
+    "Xamarin.Forms/4.1.0.581479": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-M0sNIQgUPs+le6C2TS4RmZQAURnzaRVizRtnZIZ6/1//qGcEAtEXAGt/tBJz6I1zlP6XlMxq8io6b4sjFP5N9Q==",
-      "path": "xamarin.ffimageloading/2.4.11.982",
-      "hashPath": "xamarin.ffimageloading.2.4.11.982.nupkg.sha512"
-    },
-    "Xamarin.FFImageLoading.Forms/2.4.11.982": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-7X4t3J1wJj0/0o8+vd91hzSYlrqEeMFC7Mj+0T8O+fcbRSHo/c+QbWscEQiT4AaKCwyO709xq+7aY2XXbK/H7g==",
-      "path": "xamarin.ffimageloading.forms/2.4.11.982",
-      "hashPath": "xamarin.ffimageloading.forms.2.4.11.982.nupkg.sha512"
-    },
-    "Xamarin.FFImageLoading.Svg/2.4.11.982": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-acXrd+afkdQTXy24+/ZPY4W2z3/Yb3LyvQy/I+yeaV0X6bDWQ+niAUvxfyd3/ulbLvvPJzI2QT+bAcRXZo0Ztw==",
-      "path": "xamarin.ffimageloading.svg/2.4.11.982",
-      "hashPath": "xamarin.ffimageloading.svg.2.4.11.982.nupkg.sha512"
-    },
-    "Xamarin.FFImageLoading.Svg.Forms/2.4.11.982": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-CniN9JB2/iKZivEbHIZaiueoxwxML0fmmiPlw2AnmjzJE8Dcth23Hl++BG7Y61FZMuEqkfsntGsrG9w6PsAt6w==",
-      "path": "xamarin.ffimageloading.svg.forms/2.4.11.982",
-      "hashPath": "xamarin.ffimageloading.svg.forms.2.4.11.982.nupkg.sha512"
-    },
-    "Xamarin.Forms/4.1.0.555618": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-eZHy/yCrKhu3WUI1oszz8Hvq8iC+wQyokEVkzlSmNJD6xa2pGLq5UjOgpXEWu7zKPaoZ5c70SrTv1BBZE+Je1A==",
-      "path": "xamarin.forms/4.1.0.555618",
-      "hashPath": "xamarin.forms.4.1.0.555618.nupkg.sha512"
+      "sha512": "sha512-wrO8AOW1xsFoGgT1SUvJ9OEeqAduJOm0xezZGNe0rCiAv2N9Qc/n5uywhlSia1s1k+Zy/hOrhZ4b7/EM6z9oog==",
+      "path": "xamarin.forms/4.1.0.581479",
+      "hashPath": "xamarin.forms.4.1.0.581479.nupkg.sha512"
     },
     "Xamarin.Forms.Essentials.Controls/1.1.1": {
       "type": "package",

@@ -87,7 +87,7 @@
           "lib/netstandard2.0/RestSharp.dll": {}
         }
       },
-      "SkiaSharp/1.68.0": {
+      "SkiaSharp/1.60.0": {
         "type": "package",
         "compile": {
           "lib/netstandard1.3/SkiaSharp.dll": {}
@@ -100,21 +100,13 @@
             "assetType": "native",
             "rid": "osx"
           },
-          "runtimes/tizen-armel/native/libSkiaSharp.so": {
+          "runtimes/win7-x64/native/libSkiaSharp.dll": {
             "assetType": "native",
-            "rid": "tizen-armel"
+            "rid": "win7-x64"
           },
-          "runtimes/tizen-x86/native/libSkiaSharp.so": {
+          "runtimes/win7-x86/native/libSkiaSharp.dll": {
             "assetType": "native",
-            "rid": "tizen-x86"
-          },
-          "runtimes/win-x64/native/libSkiaSharp.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x86/native/libSkiaSharp.dll": {
-            "assetType": "native",
-            "rid": "win-x86"
+            "rid": "win7-x86"
           }
         }
       },
@@ -130,7 +122,7 @@
           "lib/netstandard2.0/SkiaSharp.Extended.Svg.dll": {}
         }
       },
-      "Syncfusion.Licensing/17.1.0.53": {
+      "Syncfusion.Licensing/17.2.0.35": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Syncfusion.Licensing.dll": {}
@@ -152,16 +144,49 @@
           "lib/netstandard1.0/Syncfusion.Buttons.XForms.dll": {}
         }
       },
-      "Syncfusion.Xamarin.Core/17.1.0.53": {
+      "Syncfusion.Xamarin.Core/17.2.0.35": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Licensing": "17.1.0.53"
+          "Syncfusion.Licensing": "17.2.0.35"
         },
         "compile": {
-          "lib/netstandard1.0/Syncfusion.Core.XForms.dll": {}
+          "lib/netstandard2.0/Syncfusion.Core.XForms.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.0/Syncfusion.Core.XForms.dll": {}
+          "lib/netstandard2.0/Syncfusion.Core.XForms.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.DataSource/17.2.0.35": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.DataSource.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.DataSource.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.GridCommon/17.2.0.35": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.GridCommon.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.GridCommon.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfListView/17.2.0.35": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "17.2.0.35",
+          "Syncfusion.Xamarin.DataSource": "17.2.0.35",
+          "Syncfusion.Xamarin.GridCommon": "17.2.0.35",
+          "Xamarin.Forms": "3.1.0.697729"
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.SfListView.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.SfListView.XForms.dll": {}
         }
       },
       "System.Globalization/4.3.0": {
@@ -298,57 +323,7 @@
           "lib/netstandard1.0/Plugin.Settings.dll": {}
         }
       },
-      "Xamarin.FFImageLoading/2.4.11.982": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard1.0/FFImageLoading.Platform.dll": {},
-          "lib/netstandard1.0/FFImageLoading.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.0/FFImageLoading.Platform.dll": {},
-          "lib/netstandard1.0/FFImageLoading.dll": {}
-        }
-      },
-      "Xamarin.FFImageLoading.Forms/2.4.11.982": {
-        "type": "package",
-        "dependencies": {
-          "Xamarin.FFImageLoading": "2.4.11.982",
-          "Xamarin.Forms": "3.3.0.912540"
-        },
-        "compile": {
-          "lib/netstandard1.0/FFImageLoading.Forms.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.0/FFImageLoading.Forms.dll": {}
-        }
-      },
-      "Xamarin.FFImageLoading.Svg/2.4.11.982": {
-        "type": "package",
-        "dependencies": {
-          "SkiaSharp": "1.68.0",
-          "Xamarin.FFImageLoading": "2.4.11.982"
-        },
-        "compile": {
-          "lib/netstandard1.0/FFImageLoading.Svg.Platform.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.0/FFImageLoading.Svg.Platform.dll": {}
-        }
-      },
-      "Xamarin.FFImageLoading.Svg.Forms/2.4.11.982": {
-        "type": "package",
-        "dependencies": {
-          "Xamarin.FFImageLoading.Forms": "2.4.11.982",
-          "Xamarin.FFImageLoading.Svg": "2.4.11.982"
-        },
-        "compile": {
-          "lib/netstandard1.0/FFImageLoading.Svg.Forms.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.0/FFImageLoading.Svg.Forms.dll": {}
-        }
-      },
-      "Xamarin.Forms/4.1.0.555618": {
+      "Xamarin.Forms/4.1.0.581479": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {},
@@ -690,40 +665,35 @@
         "restsharp.nuspec"
       ]
     },
-    "SkiaSharp/1.68.0": {
-      "sha512": "ptuxAKk9FiClNnAgWM8hVMCYw/B0hUJWZ8W6efnIAtJmJn/Xl4jvxxDF5WOqfQYCLVzxXw5gvBPVxvTLblFp0g==",
+    "SkiaSharp/1.60.0": {
+      "sha512": "HoSNIZH54rinevEhLUWdeclr+H/QdmOp252+Tt07HTXwQyvRl9eW32ga/X7T56wsR855SKprb0RcnBPRCzlqSA==",
       "type": "package",
-      "path": "skiasharp/1.68.0",
+      "path": "skiasharp/1.60.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "LICENSE.txt",
-        "THIRD-PARTY-NOTICES.txt",
+        "build/net45/SkiaSharp.dll.config",
         "build/net45/SkiaSharp.targets",
-        "build/tizen40/SkiaSharp.targets",
         "lib/MonoAndroid/SkiaSharp.dll",
         "lib/MonoAndroid/SkiaSharp.xml",
-        "lib/Xamarin.Mac20/SkiaSharp.dll",
-        "lib/Xamarin.Mac20/SkiaSharp.xml",
-        "lib/Xamarin.TVOS/SkiaSharp.dll",
-        "lib/Xamarin.TVOS/SkiaSharp.xml",
-        "lib/Xamarin.WatchOS/SkiaSharp.dll",
-        "lib/Xamarin.WatchOS/SkiaSharp.xml",
-        "lib/Xamarin.iOS/SkiaSharp.dll",
-        "lib/Xamarin.iOS/SkiaSharp.xml",
+        "lib/XamarinMac/SkiaSharp.dll",
+        "lib/XamarinMac/SkiaSharp.xml",
+        "lib/XamariniOS/SkiaSharp.dll",
+        "lib/XamariniOS/SkiaSharp.xml",
+        "lib/XamarintvOS/SkiaSharp.dll",
+        "lib/XamarintvOS/SkiaSharp.xml",
+        "lib/XamarinwatchOS/SkiaSharp.dll",
+        "lib/XamarinwatchOS/SkiaSharp.xml",
         "lib/net45/SkiaSharp.dll",
+        "lib/net45/SkiaSharp.dll.config",
         "lib/net45/SkiaSharp.xml",
         "lib/netstandard1.3/SkiaSharp.dll",
         "lib/netstandard1.3/SkiaSharp.xml",
-        "lib/tizen40/SkiaSharp.dll",
-        "lib/tizen40/SkiaSharp.xml",
+        "lib/portable-net45+win8+wpa81+wp8/SkiaSharp.dll",
+        "lib/portable-net45+win8+wpa81+wp8/SkiaSharp.xml",
         "lib/uap10.0/SkiaSharp.dll",
         "lib/uap10.0/SkiaSharp.xml",
         "runtimes/osx/native/libSkiaSharp.dylib",
-        "runtimes/tizen-armel/native/libSkiaSharp.so",
-        "runtimes/tizen-x86/native/libSkiaSharp.so",
-        "runtimes/win-x64/native/libSkiaSharp.dll",
-        "runtimes/win-x86/native/libSkiaSharp.dll",
         "runtimes/win10-arm/nativeassets/uap10.0/libEGL.dll",
         "runtimes/win10-arm/nativeassets/uap10.0/libGLESv2.dll",
         "runtimes/win10-arm/nativeassets/uap10.0/libSkiaSharp.dll",
@@ -733,7 +703,9 @@
         "runtimes/win10-x86/nativeassets/uap10.0/libEGL.dll",
         "runtimes/win10-x86/nativeassets/uap10.0/libGLESv2.dll",
         "runtimes/win10-x86/nativeassets/uap10.0/libSkiaSharp.dll",
-        "skiasharp.1.68.0.nupkg.sha512",
+        "runtimes/win7-x64/native/libSkiaSharp.dll",
+        "runtimes/win7-x86/native/libSkiaSharp.dll",
+        "skiasharp.1.60.0.nupkg.sha512",
         "skiasharp.nuspec",
         "xamarin.interactive/SkiaSharp.Workbooks.dll"
       ]
@@ -752,10 +724,10 @@
         "skiasharp.svg.nuspec"
       ]
     },
-    "Syncfusion.Licensing/17.1.0.53": {
-      "sha512": "7S0bWG7iG3Z19cTAtFQvuYNE/6foBSEkh9Ye5D7mAvEXp7y2943DXVwmq3CfyWGO1b1ien+DgEKf72vWZB/59w==",
+    "Syncfusion.Licensing/17.2.0.35": {
+      "sha512": "Inwbn7dQJP+xV/TcL6g7bO72GhoJqf1B1si+jY++/IHwkdMX/x9QYAkh6DDYriu0kxhyg7FjbAmH4zDZKCCU+g==",
       "type": "package",
-      "path": "syncfusion.licensing/17.1.0.53",
+      "path": "syncfusion.licensing/17.2.0.35",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -775,7 +747,7 @@
         "lib/netstandard2.0/Syncfusion.Licensing.dll",
         "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Licensing.dll",
         "lib/uap10.0/Syncfusion.Licensing.dll",
-        "syncfusion.licensing.17.1.0.53.nupkg.sha512",
+        "syncfusion.licensing.17.2.0.35.nupkg.sha512",
         "syncfusion.licensing.nuspec"
       ]
     },
@@ -809,10 +781,10 @@
         "syncfusion.xamarin.buttons.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.Core/17.1.0.53": {
-      "sha512": "ue7wsU49Hxsj4QfanQbvmv6gwROiLaacij/XnKVqFuZW7gVOPtFb5qYLy26LHnt45aj8RcCRTBPUQzkD/7QXrA==",
+    "Syncfusion.Xamarin.Core/17.2.0.35": {
+      "sha512": "0CBP6jxRuVZBKxbXskjZsibtgoPpypIphx20JfDOdfRAhRCBGCR/faSO2rGMFILE0bC+vZw2PyTTX7GvwTqdMA==",
       "type": "package",
-      "path": "syncfusion.xamarin.core/17.1.0.53",
+      "path": "syncfusion.xamarin.core/17.2.0.35",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -824,19 +796,91 @@
         "lib/Xamarin.iOS10/Syncfusion.Core.XForms.dll",
         "lib/Xamarin.iOS10/Syncfusion.Core.XForms.iOS.dll",
         "lib/Xamarin.iOS10/Syncfusion.Core.XForms.xml",
-        "lib/netstandard1.0/Syncfusion.Core.XForms.dll",
-        "lib/netstandard1.0/Syncfusion.Core.XForms.xml",
+        "lib/netstandard2.0/Syncfusion.Core.XForms.dll",
+        "lib/netstandard2.0/Syncfusion.Core.XForms.xml",
         "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Core.XForms.dll",
         "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Core.XForms.xml",
         "lib/uap10.0/Syncfusion.Core.XForms.UWP.dll",
         "lib/uap10.0/Syncfusion.Core.XForms.UWP.pri",
         "lib/uap10.0/Syncfusion.Core.XForms.UWP/Syncfusion.Core.XForms.UWP.xr.xml",
-        "lib/uap10.0/Syncfusion.Core.XForms.UWP/ToggleIcons/ToggleCollapsedIcon.xaml",
-        "lib/uap10.0/Syncfusion.Core.XForms.UWP/ToggleIcons/ToggleVisibleIcon.xaml",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP/TILRenderer/ToggleIcons/DropDownIcon.xaml",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP/TILRenderer/ToggleIcons/ToggleCollapsedIcon.xaml",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP/TILRenderer/ToggleIcons/ToggleVisibleIcon.xaml",
         "lib/uap10.0/Syncfusion.Core.XForms.dll",
         "lib/uap10.0/Syncfusion.Core.XForms.xml",
-        "syncfusion.xamarin.core.17.1.0.53.nupkg.sha512",
+        "syncfusion.xamarin.core.17.2.0.35.nupkg.sha512",
         "syncfusion.xamarin.core.nuspec"
+      ]
+    },
+    "Syncfusion.Xamarin.DataSource/17.2.0.35": {
+      "sha512": "Tj/6OvKYDyP5bN/OGMp8LH3vszntd0Yiai8vJbnCPiQfwDLZILsGNwQww9V+s3hhb9i0q02q/HNETRczLyHvSg==",
+      "type": "package",
+      "path": "syncfusion.xamarin.datasource/17.2.0.35",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/Syncfusion.DataSource.Portable.XML",
+        "lib/MonoAndroid10/Syncfusion.DataSource.Portable.dll",
+        "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.XML",
+        "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll",
+        "lib/netstandard2.0/Syncfusion.DataSource.Portable.XML",
+        "lib/netstandard2.0/Syncfusion.DataSource.Portable.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.DataSource.Portable.XML",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.DataSource.Portable.dll",
+        "lib/uap10.0/Syncfusion.DataSource.Portable.XML",
+        "lib/uap10.0/Syncfusion.DataSource.Portable.dll",
+        "syncfusion.xamarin.datasource.17.2.0.35.nupkg.sha512",
+        "syncfusion.xamarin.datasource.nuspec"
+      ]
+    },
+    "Syncfusion.Xamarin.GridCommon/17.2.0.35": {
+      "sha512": "4c0wvV6zofNp1x2RMRKP+Hczp/MDh2dVjkmTyFPiNP351grWq1AJHYDJAa5GDVxfebfQuvxsE8euxRP5wvxj7g==",
+      "type": "package",
+      "path": "syncfusion.xamarin.gridcommon/17.2.0.35",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/Syncfusion.GridCommon.Portable.XML",
+        "lib/MonoAndroid10/Syncfusion.GridCommon.Portable.dll",
+        "lib/Xamarin.Mac/Syncfusion.GridCommon.Portable.XML",
+        "lib/Xamarin.Mac/Syncfusion.GridCommon.Portable.dll",
+        "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.XML",
+        "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll",
+        "lib/netstandard2.0/Syncfusion.GridCommon.Portable.XML",
+        "lib/netstandard2.0/Syncfusion.GridCommon.Portable.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.GridCommon.Portable.XML",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.GridCommon.Portable.dll",
+        "lib/uap10.0/Syncfusion.GridCommon.Portable.XML",
+        "lib/uap10.0/Syncfusion.GridCommon.Portable.dll",
+        "syncfusion.xamarin.gridcommon.17.2.0.35.nupkg.sha512",
+        "syncfusion.xamarin.gridcommon.nuspec"
+      ]
+    },
+    "Syncfusion.Xamarin.SfListView/17.2.0.35": {
+      "sha512": "G4c4AwBxDdGPaPdWFiByTXi18MGCF5BoeXIHC8GFbSVWBLhVGCCcVmyHbtCO1XNLltVeatMuaMnRqevcMdyI3g==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sflistview/17.2.0.35",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/Syncfusion.SfListView.XForms.Android.dll",
+        "lib/MonoAndroid10/Syncfusion.SfListView.XForms.dll",
+        "lib/MonoAndroid10/Syncfusion.SfListView.XForms.xml",
+        "lib/Xamarin.Mac/Syncfusion.SfListView.XForms.dll",
+        "lib/Xamarin.Mac/Syncfusion.SfListView.XForms.macOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.xml",
+        "lib/netstandard2.0/Syncfusion.SfListView.XForms.dll",
+        "lib/netstandard2.0/Syncfusion.SfListView.XForms.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfListView.XForms.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfListView.XForms.xml",
+        "lib/uap10.0/Syncfusion.SfListView.XForms.UWP.XML",
+        "lib/uap10.0/Syncfusion.SfListView.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.SfListView.XForms.dll",
+        "lib/uap10.0/Syncfusion.SfListView.XForms.xml",
+        "syncfusion.xamarin.sflistview.17.2.0.35.nupkg.sha512",
+        "syncfusion.xamarin.sflistview.nuspec"
       ]
     },
     "System.Globalization/4.3.0": {
@@ -1613,180 +1657,10 @@
         "xam.plugins.settings.nuspec"
       ]
     },
-    "Xamarin.FFImageLoading/2.4.11.982": {
-      "sha512": "M0sNIQgUPs+le6C2TS4RmZQAURnzaRVizRtnZIZ6/1//qGcEAtEXAGt/tBJz6I1zlP6XlMxq8io6b4sjFP5N9Q==",
+    "Xamarin.Forms/4.1.0.581479": {
+      "sha512": "wrO8AOW1xsFoGgT1SUvJ9OEeqAduJOm0xezZGNe0rCiAv2N9Qc/n5uywhlSia1s1k+Zy/hOrhZ4b7/EM6z9oog==",
       "type": "package",
-      "path": "xamarin.ffimageloading/2.4.11.982",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/MonoAndroid10/FFImageLoading.Platform.dll",
-        "lib/MonoAndroid10/FFImageLoading.Platform.pdb",
-        "lib/MonoAndroid10/FFImageLoading.Platform.xml",
-        "lib/MonoAndroid10/FFImageLoading.dll",
-        "lib/MonoAndroid10/FFImageLoading.pdb",
-        "lib/MonoAndroid10/FFImageLoading.xml",
-        "lib/Xamarin.Mac20/FFImageLoading.Platform.dll",
-        "lib/Xamarin.Mac20/FFImageLoading.Platform.pdb",
-        "lib/Xamarin.Mac20/FFImageLoading.Platform.xml",
-        "lib/Xamarin.Mac20/FFImageLoading.dll",
-        "lib/Xamarin.Mac20/FFImageLoading.pdb",
-        "lib/Xamarin.Mac20/FFImageLoading.xml",
-        "lib/Xamarin.iOS10/FFImageLoading.Platform.dll",
-        "lib/Xamarin.iOS10/FFImageLoading.Platform.pdb",
-        "lib/Xamarin.iOS10/FFImageLoading.Platform.xml",
-        "lib/Xamarin.iOS10/FFImageLoading.dll",
-        "lib/Xamarin.iOS10/FFImageLoading.pdb",
-        "lib/Xamarin.iOS10/FFImageLoading.xml",
-        "lib/netstandard1.0/FFImageLoading.Platform.dll",
-        "lib/netstandard1.0/FFImageLoading.Platform.xml",
-        "lib/netstandard1.0/FFImageLoading.dll",
-        "lib/netstandard1.0/FFImageLoading.pdb",
-        "lib/netstandard1.0/FFImageLoading.xml",
-        "lib/portable-win+net45+wp80+win81+wpa81/FFImageLoading.Platform.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/FFImageLoading.Platform.xml",
-        "lib/portable-win+net45+wp80+win81+wpa81/FFImageLoading.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/FFImageLoading.pdb",
-        "lib/portable-win+net45+wp80+win81+wpa81/FFImageLoading.xml",
-        "lib/tizen40/FFImageLoading.Platform.dll",
-        "lib/tizen40/FFImageLoading.Platform.pdb",
-        "lib/tizen40/FFImageLoading.Platform.xml",
-        "lib/tizen40/FFImageLoading.dll",
-        "lib/tizen40/FFImageLoading.pdb",
-        "lib/tizen40/FFImageLoading.xml",
-        "lib/uap/FFImageLoading.Platform.dll",
-        "lib/uap/FFImageLoading.Platform.pdb",
-        "lib/uap/FFImageLoading.Platform.xml",
-        "lib/uap/FFImageLoading.dll",
-        "lib/uap/FFImageLoading.pdb",
-        "lib/uap/FFImageLoading.xml",
-        "lib/win81/FFImageLoading.Platform.dll",
-        "lib/win81/FFImageLoading.Platform.pdb",
-        "lib/win81/FFImageLoading.Platform.xml",
-        "lib/win81/FFImageLoading.dll",
-        "lib/win81/FFImageLoading.pdb",
-        "lib/win81/FFImageLoading.xml",
-        "lib/wpa81/FFImageLoading.Platform.dll",
-        "lib/wpa81/FFImageLoading.Platform.pdb",
-        "lib/wpa81/FFImageLoading.Platform.xml",
-        "lib/wpa81/FFImageLoading.dll",
-        "lib/wpa81/FFImageLoading.pdb",
-        "lib/wpa81/FFImageLoading.xml",
-        "xamarin.ffimageloading.2.4.11.982.nupkg.sha512",
-        "xamarin.ffimageloading.nuspec"
-      ]
-    },
-    "Xamarin.FFImageLoading.Forms/2.4.11.982": {
-      "sha512": "7X4t3J1wJj0/0o8+vd91hzSYlrqEeMFC7Mj+0T8O+fcbRSHo/c+QbWscEQiT4AaKCwyO709xq+7aY2XXbK/H7g==",
-      "type": "package",
-      "path": "xamarin.ffimageloading.forms/2.4.11.982",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/MonoAndroid10/FFImageLoading.Forms.Platform.dll",
-        "lib/MonoAndroid10/FFImageLoading.Forms.Platform.pdb",
-        "lib/MonoAndroid10/FFImageLoading.Forms.Platform.xml",
-        "lib/MonoAndroid10/FFImageLoading.Forms.dll",
-        "lib/MonoAndroid10/FFImageLoading.Forms.pdb",
-        "lib/MonoAndroid10/FFImageLoading.Forms.xml",
-        "lib/Xamarin.Mac20/FFImageLoading.Forms.Platform.dll",
-        "lib/Xamarin.Mac20/FFImageLoading.Forms.Platform.pdb",
-        "lib/Xamarin.Mac20/FFImageLoading.Forms.Platform.xml",
-        "lib/Xamarin.Mac20/FFImageLoading.Forms.dll",
-        "lib/Xamarin.Mac20/FFImageLoading.Forms.pdb",
-        "lib/Xamarin.Mac20/FFImageLoading.Forms.xml",
-        "lib/Xamarin.iOS10/FFImageLoading.Forms.Platform.dll",
-        "lib/Xamarin.iOS10/FFImageLoading.Forms.Platform.pdb",
-        "lib/Xamarin.iOS10/FFImageLoading.Forms.Platform.xml",
-        "lib/Xamarin.iOS10/FFImageLoading.Forms.dll",
-        "lib/Xamarin.iOS10/FFImageLoading.Forms.pdb",
-        "lib/Xamarin.iOS10/FFImageLoading.Forms.xml",
-        "lib/netstandard1.0/FFImageLoading.Forms.dll",
-        "lib/netstandard1.0/FFImageLoading.Forms.pdb",
-        "lib/netstandard1.0/FFImageLoading.Forms.xml",
-        "lib/portable-win+net45+wp80+win81+wpa81/FFImageLoading.Forms.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/FFImageLoading.Forms.pdb",
-        "lib/portable-win+net45+wp80+win81+wpa81/FFImageLoading.Forms.xml",
-        "lib/tizen40/FFImageLoading.Forms.Platform.dll",
-        "lib/tizen40/FFImageLoading.Forms.Platform.pdb",
-        "lib/tizen40/FFImageLoading.Forms.Platform.xml",
-        "lib/tizen40/FFImageLoading.Forms.dll",
-        "lib/tizen40/FFImageLoading.Forms.pdb",
-        "lib/tizen40/FFImageLoading.Forms.xml",
-        "lib/uap/FFImageLoading.Forms.Platform.dll",
-        "lib/uap/FFImageLoading.Forms.Platform.pdb",
-        "lib/uap/FFImageLoading.Forms.Platform.xml",
-        "lib/uap/FFImageLoading.Forms.dll",
-        "lib/uap/FFImageLoading.Forms.pdb",
-        "lib/uap/FFImageLoading.Forms.xml",
-        "xamarin.ffimageloading.forms.2.4.11.982.nupkg.sha512",
-        "xamarin.ffimageloading.forms.nuspec"
-      ]
-    },
-    "Xamarin.FFImageLoading.Svg/2.4.11.982": {
-      "sha512": "acXrd+afkdQTXy24+/ZPY4W2z3/Yb3LyvQy/I+yeaV0X6bDWQ+niAUvxfyd3/ulbLvvPJzI2QT+bAcRXZo0Ztw==",
-      "type": "package",
-      "path": "xamarin.ffimageloading.svg/2.4.11.982",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/MonoAndroid10/FFImageLoading.Svg.Platform.dll",
-        "lib/MonoAndroid10/FFImageLoading.Svg.Platform.pdb",
-        "lib/MonoAndroid10/FFImageLoading.Svg.Platform.xml",
-        "lib/Xamarin.Mac20/FFImageLoading.Svg.Platform.dll",
-        "lib/Xamarin.Mac20/FFImageLoading.Svg.Platform.pdb",
-        "lib/Xamarin.Mac20/FFImageLoading.Svg.Platform.xml",
-        "lib/Xamarin.iOS10/FFImageLoading.Svg.Platform.dll",
-        "lib/Xamarin.iOS10/FFImageLoading.Svg.Platform.pdb",
-        "lib/Xamarin.iOS10/FFImageLoading.Svg.Platform.xml",
-        "lib/netstandard1.0/FFImageLoading.Svg.Platform.dll",
-        "lib/netstandard1.0/FFImageLoading.Svg.Platform.xml",
-        "lib/portable-win+net45+wp80+win81+wpa81/FFImageLoading.Svg.Platform.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/FFImageLoading.Svg.Platform.xml",
-        "lib/tizen40/FFImageLoading.Svg.Platform.dll",
-        "lib/tizen40/FFImageLoading.Svg.Platform.pdb",
-        "lib/tizen40/FFImageLoading.Svg.Platform.xml",
-        "lib/uap/FFImageLoading.Svg.Platform.dll",
-        "lib/uap/FFImageLoading.Svg.Platform.pdb",
-        "lib/uap/FFImageLoading.Svg.Platform.xml",
-        "xamarin.ffimageloading.svg.2.4.11.982.nupkg.sha512",
-        "xamarin.ffimageloading.svg.nuspec"
-      ]
-    },
-    "Xamarin.FFImageLoading.Svg.Forms/2.4.11.982": {
-      "sha512": "CniN9JB2/iKZivEbHIZaiueoxwxML0fmmiPlw2AnmjzJE8Dcth23Hl++BG7Y61FZMuEqkfsntGsrG9w6PsAt6w==",
-      "type": "package",
-      "path": "xamarin.ffimageloading.svg.forms/2.4.11.982",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/MonoAndroid10/FFImageLoading.Svg.Forms.dll",
-        "lib/MonoAndroid10/FFImageLoading.Svg.Forms.pdb",
-        "lib/MonoAndroid10/FFImageLoading.Svg.Forms.xml",
-        "lib/Xamarin.Mac20/FFImageLoading.Svg.Forms.dll",
-        "lib/Xamarin.Mac20/FFImageLoading.Svg.Forms.pdb",
-        "lib/Xamarin.Mac20/FFImageLoading.Svg.Forms.xml",
-        "lib/Xamarin.iOS10/FFImageLoading.Svg.Forms.dll",
-        "lib/Xamarin.iOS10/FFImageLoading.Svg.Forms.pdb",
-        "lib/Xamarin.iOS10/FFImageLoading.Svg.Forms.xml",
-        "lib/netstandard1.0/FFImageLoading.Svg.Forms.dll",
-        "lib/netstandard1.0/FFImageLoading.Svg.Forms.xml",
-        "lib/portable-win+net45+wp80+win81+wpa81/FFImageLoading.Svg.Forms.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/FFImageLoading.Svg.Forms.xml",
-        "lib/tizen40/FFImageLoading.Svg.Forms.dll",
-        "lib/tizen40/FFImageLoading.Svg.Forms.pdb",
-        "lib/tizen40/FFImageLoading.Svg.Forms.xml",
-        "lib/uap/FFImageLoading.Svg.Forms.dll",
-        "lib/uap/FFImageLoading.Svg.Forms.pdb",
-        "lib/uap/FFImageLoading.Svg.Forms.xml",
-        "xamarin.ffimageloading.svg.forms.2.4.11.982.nupkg.sha512",
-        "xamarin.ffimageloading.svg.forms.nuspec"
-      ]
-    },
-    "Xamarin.Forms/4.1.0.555618": {
-      "sha512": "eZHy/yCrKhu3WUI1oszz8Hvq8iC+wQyokEVkzlSmNJD6xa2pGLq5UjOgpXEWu7zKPaoZ5c70SrTv1BBZE+Je1A==",
-      "type": "package",
-      "path": "xamarin.forms/4.1.0.555618",
+      "path": "xamarin.forms/4.1.0.581479",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2025,7 +1899,7 @@
         "lib/uap10.0/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.4.1.0.555618.nupkg.sha512",
+        "xamarin.forms.4.1.0.581479.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
@@ -2087,12 +1961,12 @@
       "Newtonsoft.Json >= 12.0.2",
       "PropertyChanged.Fody >= 2.6.1",
       "RestSharp >= 106.6.10",
-      "Syncfusion.Licensing >= 17.1.0.53",
+      "Syncfusion.Licensing >= 17.2.0.35",
       "Syncfusion.Xamarin.Buttons >= 17.1.0.53",
+      "Syncfusion.Xamarin.SfListView >= 17.2.0.35",
       "Xam.Plugin.Connectivity >= 3.2.0",
       "Xam.Plugins.Settings >= 3.1.1",
-      "Xamarin.FFImageLoading.Svg.Forms >= 2.4.11.982",
-      "Xamarin.Forms >= 4.1.0.555618",
+      "Xamarin.Forms >= 4.1.0.581479",
       "Xamarin.Forms.Essentials.Controls >= 1.1.1",
       "Xamarin.Forms.Svg >= 1.0.0-pre4"
     ]
@@ -2162,11 +2036,15 @@
           },
           "Syncfusion.Licensing": {
             "target": "Package",
-            "version": "[17.1.0.53, )"
+            "version": "[17.2.0.35, )"
           },
           "Syncfusion.Xamarin.Buttons": {
             "target": "Package",
             "version": "[17.1.0.53, )"
+          },
+          "Syncfusion.Xamarin.SfListView": {
+            "target": "Package",
+            "version": "[17.2.0.35, )"
           },
           "Xam.Plugin.Connectivity": {
             "target": "Package",
@@ -2176,13 +2054,9 @@
             "target": "Package",
             "version": "[3.1.1, )"
           },
-          "Xamarin.FFImageLoading.Svg.Forms": {
-            "target": "Package",
-            "version": "[2.4.11.982, )"
-          },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[4.1.0.555618, )"
+            "version": "[4.1.0.581479, )"
           },
           "Xamarin.Forms.Essentials.Controls": {
             "target": "Package",

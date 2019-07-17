@@ -20,8 +20,6 @@ C:\Work\Vertical\Vertical\Vertical\obj\Debug\netstandard2.0\Views\TypeModelInfoP
 C:\Work\Vertical\Vertical\Vertical\obj\Debug\netstandard2.0\Vertical.csproj.CoreCompileInputs.cache
 C:\Work\Vertical\Vertical\Vertical\obj\Debug\netstandard2.0\Vertical.AssemblyInfoInputs.cache
 C:\Work\Vertical\Vertical\Vertical\obj\Debug\netstandard2.0\Vertical.AssemblyInfo.cs
-C:\Work\Vertical\Vertical\Vertical\obj\Debug\netstandard2.0\Vertical.csproj.Fody.CopyLocal.cache
-C:\Work\Vertical\Vertical\Vertical\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Work\Vertical\Vertical\Vertical\obj\Debug\netstandard2.0\Vertical.csproj.CopyComplete
 C:\Work\Vertical\Vertical\Vertical\obj\Debug\netstandard2.0\Vertical.dll
 C:\Work\Vertical\Vertical\Vertical\obj\Debug\netstandard2.0\Vertical.pdb

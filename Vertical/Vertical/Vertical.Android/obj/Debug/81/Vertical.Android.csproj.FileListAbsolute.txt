@@ -157,6 +157,8 @@ C:\Work\Vertical\Vertical\Vertical.Android\obj\Debug\81\android\assets\Vertical.
 C:\Work\Vertical\Vertical\Vertical.Android\obj\Debug\81\android\assets\Xamarin.Forms.Core.pdb
 C:\Work\Vertical\Vertical\Vertical.Android\obj\Debug\81\android\assets\Xamarin.Forms.Platform.Android.pdb
 C:\Work\Vertical\Vertical\Vertical.Android\obj\Debug\81\android\assets\Xamarin.Forms.Xaml.pdb
+C:\Work\Vertical\Vertical\Vertical\bin\Debug\netstandard2.0\Vertical.dll
+C:\Work\Vertical\Vertical\Vertical.Android\bin\Debug\Vertical.dll.mdb
 C:\Work\Vertical\Vertical\Vertical.Android\obj\Debug\81\linksrc\Plugin.Connectivity.dll.mdb
 C:\Work\Vertical\Vertical\Vertical.Android\obj\Debug\81\linksrc\Plugin.Settings.Abstractions.dll.mdb
 C:\Work\Vertical\Vertical\Vertical.Android\obj\Debug\81\linksrc\Plugin.Settings.dll.mdb

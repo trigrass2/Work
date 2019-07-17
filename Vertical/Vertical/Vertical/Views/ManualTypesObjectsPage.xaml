@@ -8,8 +8,8 @@
             <RelativeLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                 <Label 
                     x:Name="titleLabel" Margin="7,0,7,0" 
-                    Text="Типы объектов"
-                    FontSize="Large" FontAttributes="Bold" Style="{x:StaticResource DefaultLabelStyle}"
+                    Text="Типы объектов" TextColor="Black"
+                    FontSize="Large" Style="{x:StaticResource DefaultLabelStyle}"
                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
                     HeightRequest="50"
                     VerticalTextAlignment="Center"/>
@@ -24,7 +24,7 @@
                         <DataTemplate>
                             <ViewCell>
                                 <ViewCell.View>
-                                    <Label Text="{Binding Name}" Style="{x:StaticResource DefaultLabelStyle}" VerticalOptions="Center" VerticalTextAlignment="Center"/>
+                                    <Label Text="{Binding Name}" Style="{x:StaticResource DefaultLabelStyle}" TextColor="Black" VerticalOptions="Center" VerticalTextAlignment="Center"/>
                                 </ViewCell.View>
                             </ViewCell>
                         </DataTemplate>

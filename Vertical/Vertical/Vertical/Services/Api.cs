@@ -113,8 +113,6 @@ namespace Vertical.Services
 
             try
             {
-                
-
                 var request = new RestRequest(Method.POST);
                 request.AddHeader("authorization", $"Bearer {AccessToken}");
                 request.AddParameter("application/json", JsonConvert.SerializeObject(model), ParameterType.RequestBody);

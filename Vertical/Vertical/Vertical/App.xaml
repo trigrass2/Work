@@ -16,7 +16,6 @@
             <Style x:Key="BlueButtonStyle" TargetType="Button">
                 <Setter Property="BackgroundColor" Value="#336DAB"/>
                 <Setter Property="TextColor" Value="White"/>
-                <Setter Property="FontFamily" Value="Graphik"/>
                 <Setter Property="CornerRadius" Value="5"/>
             </Style>
             <Style x:Key="SfTextInputLayoutStyle" TargetType="inputLayout:SfTextInputLayout">
@@ -35,7 +34,6 @@
                 <Setter Property="HorizontalOptions" Value="Center"/>
             </Style>
             <Style x:Key="DefaultLabelStyle" TargetType="Label">
-                <Setter Property="FontFamily" Value="Graphik"/>
                 <Setter Property="TextColor" Value="#737373"/>
             </Style>
         </ResourceDictionary>

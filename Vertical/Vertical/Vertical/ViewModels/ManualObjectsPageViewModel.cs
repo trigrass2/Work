@@ -56,11 +56,10 @@ namespace Vertical.ViewModels
                 {
                     _title = value;
                 }
-                else _title = "Каталог";
+                else _title = "";
             }
-        }        
-        public bool IsVisibleTitle { get; set; }
-
+        }
+        
         /// <summary>
         /// вкл/выкл кнопки
         /// </summary>
@@ -94,10 +93,9 @@ namespace Vertical.ViewModels
             
             var items = Api.GetDataFromServer<SystemObjectModel>("System/GetSystemObjects", new { ParentGUID = ParentObject?.GUID });            
 
-           
             if (items != null)
             {
-                foreach (var i in items)
+                foreach(var i in items)
                 {
                     SystemObjectModels.Add(i);
                 }

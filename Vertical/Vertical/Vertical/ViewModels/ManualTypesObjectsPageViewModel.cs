@@ -22,9 +22,9 @@ namespace Vertical.ViewModels
             }
             set
             {
-                OpenInfoPage(value);
+                var temp = value.ID;
                 _selectedObjectTypeModel = null;
-                
+                OpenInfoPage(temp);                               
             }
         }
 
@@ -47,7 +47,7 @@ namespace Vertical.ViewModels
             }
         }
 
-        private async void OpenInfoPage(SystemObjectTypeModel id)
+        private async void OpenInfoPage(int id)
         {
             await Navigation.PushModalAsync(new TypeModelInfoPage(id));
         }
