@@ -12,7 +12,7 @@ namespace Vertical.CustomViews
         public Grouping(string name, IEnumerable<T> items)
         {
 
-            Name = name == default ? "Без группы" : name;
+            Name = name == default(string) ? "Без группы" : name;
             foreach (T item in items)
                 Items.Add(item);
         }

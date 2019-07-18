@@ -1965,27 +1965,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Mamis\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Users\\Ильгар\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SmartGit\\bin\\WorkPik\\Vertical\\Vertical\\Vertical\\Vertical.csproj",
+      "projectUniqueName": "C:\\Work\\Vertical\\Vertical\\Vertical\\Vertical.csproj",
       "projectName": "Vertical",
-      "projectPath": "D:\\SmartGit\\bin\\WorkPik\\Vertical\\Vertical\\Vertical\\Vertical.csproj",
-      "packagesPath": "C:\\Users\\Mamis\\.nuget\\packages\\",
-      "outputPath": "D:\\SmartGit\\bin\\WorkPik\\Vertical\\Vertical\\Vertical\\obj\\",
+      "projectPath": "C:\\Work\\Vertical\\Vertical\\Vertical\\Vertical.csproj",
+      "packagesPath": "C:\\Users\\Ильгар\\.nuget\\packages\\",
+      "outputPath": "C:\\Work\\Vertical\\Vertical\\Vertical\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Mamis\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Ильгар\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"

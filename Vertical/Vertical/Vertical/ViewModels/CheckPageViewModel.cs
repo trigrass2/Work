@@ -1,7 +1,9 @@
 ﻿using PropertyChanged;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
 using System.Windows.Input;
+using Vertical.CustomViews;
 using Vertical.Models;
 using Vertical.Services;
 using Xamarin.Forms;
@@ -15,14 +17,14 @@ namespace Vertical.ViewModels
         public INavigation Navigation { get; set; }
         //public ICommand CreatePropertiesValuesCommand => new Command(CreatePropertiesValues);
         public SystemObjectModel SystemObjectModel { get; set; }
-        public ObservableCollection<SystemPropertyModel> SystemPropertyModels { get; set; }
+        public ObservableCollection<Grouping<SystemObjectTypePropertyModel>> SystemPropertyModels { get; set; }
         public InputAddSystemObjectPropertiesValues Property { get; set; }
 
         public CheckPageViewModel(SystemObjectModel obj)
         {
             SystemObjectModel = obj;
             Property = new InputAddSystemObjectPropertiesValues();
-            SystemPropertyModels = new ObservableCollection<SystemPropertyModel>();
+            SystemPropertyModels = new ObservableCollection<Grouping<SystemObjectTypePropertyModel>>();
             UpdateSystemPropertyModels();
             Property = new InputAddSystemObjectPropertiesValues { ObjectGUID = SystemObjectModel?.GUID };
         }
@@ -31,10 +33,12 @@ namespace Vertical.ViewModels
         {
             SystemPropertyModels.Clear();
 
-            var values = Api.GetDataFromServer<SystemPropertyModel>("SystemManagement/GetSystemProperties", new { ObjectTypeID = SystemObjectModel.TypeID });
-            var propert = Api.GetDataFromServer<SystemObjectPropertyValueModel>("System/GetSystemObjectPropertiesValues", new { ObjectGUID = SystemObjectModel?.GUID });
+            var properties = Api.GetDataFromServer<SystemObjectTypePropertyModel>("SystemManagement/GetSystemObjectTypeProperties", new { ObjectTypeID = SystemObjectModel.TypeID });
+            //var values = Api.GetDataFromServer<SystemObjectPropertyValueModel>("System/GetSystemObjectPropertiesValues", new { ObjectGUID = SystemObjectModel?.GUID });
             
-            foreach (var v in values)
+            var groups = properties.GroupBy(p => p.GroupName).Select(g => new Grouping<SystemObjectTypePropertyModel>(g.Key, g));
+
+            foreach (var v in groups)
             {
                 SystemPropertyModels.Add(v);
             }            

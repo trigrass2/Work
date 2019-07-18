@@ -9,7 +9,7 @@ namespace Vertical
         /// <summary>
         /// адрес для api
         /// </summary>
-        public static readonly string domain = "http://34.90.63.119";
+        public static readonly string domain = "http://34.90.63.119:88";
 
         public enum IsAddOrEdit
         {

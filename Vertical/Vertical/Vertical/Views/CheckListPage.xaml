@@ -3,43 +3,82 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:stateContainerDemo="clr-namespace:Xamarin.Forms.Essentials.Controls;assembly=Xamarin.Forms.Essentials.Controls"
              xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:local="clr-namespace:Vertical.CustomViews"
              x:Class="Vertical.Views.CheckListPage">
-    <StackLayout>
-        <Label x:Name="titleLabel" Margin="7,5,7,0" Text="{Binding SystemObjectModel.Name}" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Large"/>
-        <Grid Margin="7">
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <inputLayout:SfTextInputLayout
-                x:Name="entryPlan" Grid.Row="0" Grid.Column="0"
-                Style="{x:StaticResource SfTextInputLayoutStyle}"
-                Hint="План" 
-                UnfocusedStrokeWidth="1"
-                FocusedStrokeWidth="2"
-                WidthRequest="100" HeightRequest="40"            
-                >
-                <Entry Text="{Binding Property.Value, Mode=TwoWay}"/>
-            </inputLayout:SfTextInputLayout>
-
-            <inputLayout:SfTextInputLayout
-                x:Name="entryFact" Grid.Row="0" Grid.Column="2"
-                Style="{x:StaticResource SfTextInputLayoutStyle}"
-                Hint="Факт" 
-                UnfocusedStrokeWidth="1"
-                FocusedStrokeWidth="2"
-                WidthRequest="100" HeightRequest="40"                
-                >
-                <Entry />
-                </inputLayout:SfTextInputLayout>
-            <Button Grid.Row="2" Text="Create" Command="{Binding CreatePropertiesValuesCommand}" Style="{StaticResource BlueButtonStyle}"/>
-        </Grid>
-    </StackLayout>    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="boolTemplate">
+                <ViewCell>
+                    <ViewCell.View>
+                        <Label Text="{Binding PropertyName}"/>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="dateTimeTemplate">
+                <ViewCell>
+                    <ViewCell.View>
+                        <Label Text="{Binding PropertyName}"/>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="floatTemplate">
+                <ViewCell>
+                    <ViewCell.View>
+                        <Label Text="{Binding PropertyName}"/>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="intTemplate">
+                <ViewCell>
+                    <ViewCell.View>
+                        <Label Text="{Binding PropertyName}"/>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="objectTemplate">
+                <ViewCell>
+                    <ViewCell.View>
+                        <Label Text="{Binding PropertyName}"/>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="stringTemplate">
+                <ViewCell>
+                    <ViewCell.View>
+                        <Label Text="{Binding PropertyName}"/>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="humanTemplate">
+                <ViewCell>
+                    <ViewCell.View>
+                        <Label Text="{Binding PropertyName}"/>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+        </ResourceDictionary>
+        <local:ChecklistDataTemplateSelector x:Key="checklistDataTemplateSelector"
+                                             BoolTemplate="{StaticResource boolTemplate}"
+                                             DateTimeTemplate="{StaticResource dateTimeTemplate}"
+                                             FloatTemplate="{StaticResource floatTemplate}"
+                                             IntTemplate="{StaticResource intTemplate}"
+                                             ObjectTemplate="{StaticResource objectTemplate}"
+                                             StringTemplate="{StaticResource stringTemplate}"
+                                             HumanTemplate="{StaticResource humanTemplate}"/>
+    </ContentPage.Resources>
+    <ListView ItemsSource="{Binding SystemPropertyModels}" ItemTemplate="{StaticResource checklistDataTemplateSelector}">
+        <ListView.GroupHeaderTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid x:Name="Item">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="6*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Text="{Binding Name}" FontAttributes="Bold" FontSize="Subtitle" VerticalTextAlignment="Center"/>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.GroupHeaderTemplate>
+    </ListView>
 </ContentPage>
