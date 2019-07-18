@@ -33,13 +33,11 @@
                                             <ColumnDefinition Width="5*"/>
                                             <ColumnDefinition Width="1*"/>
                                         </Grid.ColumnDefinitions>
-                                        <Image Grid.Column="0" BackgroundColor="#fafafa">
-                                            <Image.Source>
-                                                <FontImageSource Glyph="&#xf30c;"
-                                                    FontFamily="{OnPlatform Android=fontawesome-webfont.ttf#}"
-                                                    />
-                                            </Image.Source>
-                                        </Image>
+                                        <Button Grid.Column="0" BackgroundColor="#fafafa">
+                                            <Button.ImageSource>
+                                                <svg:SvgImageSource Source="Vertical.SvgPictures.folder.svg" Height="20" Width="20"/>
+                                            </Button.ImageSource>
+                                        </Button>
                                         <Label 
                                             x:Name="nameObjectLabel" Text="{Binding Name}" TextColor="Black" VerticalTextAlignment="Center" FontSize="Body"
                                             Grid.Column="1"/>
