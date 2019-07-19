@@ -107,7 +107,7 @@ namespace Vertical.Services
         /// <param name="nameMetod">имя метода</param>
         /// <param name="callingFunction">вызывающая функция</param>
         /// <returns>коллекцтя объектов</returns>
-        public static T[] GetDataFromServer<T>(string nameMetod, object model = default(object))
+        public static IList<T> GetDataFromServer<T>(string nameMetod, object model = default(object))
         {
             var client = new RestClient(domain + $"/api/{nameMetod}");
 
@@ -121,12 +121,12 @@ namespace Vertical.Services
                 if (restResponse.IsSuccessful)
                 {
                     Loger.WriteMessage(LogPriority.Info, $"{client?.BaseUrl} данные получены");
-                    return JsonConvert.DeserializeObject<T[]>(restResponse.Content);
+                    return JsonConvert.DeserializeObject<IList<T>>(restResponse.Content);
                 }
                 else
                 {
                     Loger.WriteMessage(LogPriority.Info, $"{client?.BaseUrl} данные не получены: {restResponse.Content}");
-                    return default(T[]);
+                    return default(IList<T>);
                 }
                 
             }
@@ -187,11 +187,8 @@ namespace Vertical.Services
         public static HttpStatusCode GetToken(string login, string password)
         {
             try
-            {                
-                var client = new RestClient(domain + "/Token")
-                {
-                    Timeout = 5000
-                };
+            {
+                var client = new RestClient(domain + "/Token");
 
                 var request = new RestRequest(Method.POST);
                 request.AddParameter("grant_type", "password");

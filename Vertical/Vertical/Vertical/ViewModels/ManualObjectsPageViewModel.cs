@@ -118,7 +118,9 @@ namespace Vertical.ViewModels
                 case "Редактировать":
                     {
                         await Navigation.PushModalAsync(new EditObjectPage(commandParameter as SystemObjectModel));
-                    }break;
+                        IsEnabled = true;
+                    }
+                    break;
                 case "Информация":
                     {
                         await Navigation.PushModalAsync(new InfoPage(commandParameter as SystemObjectModel));

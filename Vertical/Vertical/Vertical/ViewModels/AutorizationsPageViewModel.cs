@@ -78,11 +78,11 @@ namespace Vertical.ViewModels
 
                 if (NetworkCheck.IsInternet())
                 {
-                    if (Api.CheckServerStatus("IsOnline") != HttpStatusCode.OK)
-                    {
-                        Application.Current.MainPage.DisplayAlert("Сообщение", "Сервер временно не доступен", "Ок");
-                        return;
-                    }
+                    //if (Api.CheckServerStatus("IsOnline") != HttpStatusCode.OK)
+                    //{
+                    //    Application.Current.MainPage.DisplayAlert("Сообщение", "Сервер временно не доступен", "Ок");
+                    //    return;
+                    //}
                     _statusAutorization = Api.GetToken(User.Login, User.Password);
                 }
                 else

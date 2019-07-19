@@ -3,56 +3,92 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:stateContainerDemo="clr-namespace:Xamarin.Forms.Essentials.Controls;assembly=Xamarin.Forms.Essentials.Controls"
              xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:sfbuttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:stateContainerDemo="clr-namespace:Xamarin.Forms.Essentials.Controls;assembly=Xamarin.Forms.Essentials.Controls"
              xmlns:local="clr-namespace:Vertical.CustomViews"
              x:Class="Vertical.Views.CheckListPage">
     <ContentPage.Resources>
-        <ResourceDictionary>
+        <ResourceDictionary>            
             <DataTemplate x:Key="boolTemplate">
                 <ViewCell>
                     <ViewCell.View>
-                        <Label Text="{Binding PropertyName}"/>
+                        <Grid Margin="0,10,0,10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="6*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="{Binding PropertyName}" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption" VerticalOptions="Center"/>
+                            <sfbuttons:SfCheckBox Grid.Column="1" CheckedColor="#ff4114" BackgroundColor="#fafafa" VerticalOptions="Center"/>
+                        </Grid>                        
                     </ViewCell.View>
                 </ViewCell>
             </DataTemplate>
             <DataTemplate x:Key="dateTimeTemplate">
                 <ViewCell>
                     <ViewCell.View>
-                        <Label Text="{Binding PropertyName}"/>
+                        <StackLayout>
+                            <Label Text="{Binding PropertyName}" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption"/>
+                            <Label Text="19.07.2019" FontSize="Micro"/>
+                        </StackLayout>                        
                     </ViewCell.View>
                 </ViewCell>
             </DataTemplate>
             <DataTemplate x:Key="floatTemplate">
                 <ViewCell>
                     <ViewCell.View>
-                        <Label Text="{Binding PropertyName}"/>
+                        <inputLayout:SfTextInputLayout                                     
+                            Style="{x:StaticResource SfTextInputLayoutStyle}"
+                            UnfocusedColor="Black"
+                            HelperText="{Binding PropertyName}"
+                            Margin="0,0,0,10"
+                            >
+                            <Entry Text="43.5" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption"/>
+                        </inputLayout:SfTextInputLayout>
                     </ViewCell.View>
                 </ViewCell>
             </DataTemplate>
             <DataTemplate x:Key="intTemplate">
                 <ViewCell>
                     <ViewCell.View>
-                        <Label Text="{Binding PropertyName}"/>
+                        <inputLayout:SfTextInputLayout                            
+                            Style="{x:StaticResource SfTextInputLayoutStyle}"
+                            HelperText="{Binding PropertyName}"
+                            UnfocusedColor="Black"
+                            >
+                            <Entry Text="22" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption"/>
+                        </inputLayout:SfTextInputLayout>
                     </ViewCell.View>
                 </ViewCell>
             </DataTemplate>
             <DataTemplate x:Key="objectTemplate">
                 <ViewCell>
                     <ViewCell.View>
-                        <Label Text="{Binding PropertyName}"/>
+                        <StackLayout>
+                            <Label Text="{Binding PropertyName}" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption"/>
+                            <Label Text="Object"/>
+                        </StackLayout>                        
                     </ViewCell.View>
                 </ViewCell>
             </DataTemplate>
             <DataTemplate x:Key="stringTemplate">
                 <ViewCell>
                     <ViewCell.View>
-                        <Label Text="{Binding PropertyName}"/>
+                        <StackLayout>
+                            <Label Text="{Binding PropertyName}" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption"/>
+                            <Label Text="Text" FontSize="Micro"/>
+                        </StackLayout>
+                        
                     </ViewCell.View>
                 </ViewCell>
             </DataTemplate>
             <DataTemplate x:Key="humanTemplate">
                 <ViewCell>
                     <ViewCell.View>
-                        <Label Text="{Binding PropertyName}"/>
+                        <StackLayout>
+                            <Label Text="{Binding PropertyName}" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption"/>
+                            <Label Text="Human" FontSize="Micro"/>
+                        </StackLayout>
+                        
                     </ViewCell.View>
                 </ViewCell>
             </DataTemplate>
@@ -66,19 +102,46 @@
                                              StringTemplate="{StaticResource stringTemplate}"
                                              HumanTemplate="{StaticResource humanTemplate}"/>
     </ContentPage.Resources>
-    <ListView ItemsSource="{Binding SystemPropertyModels}" ItemTemplate="{StaticResource checklistDataTemplateSelector}">
-        <ListView.GroupHeaderTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <Grid x:Name="Item">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="6*"/>
-                            <ColumnDefinition Width="1*"/>
-                        </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" Text="{Binding Name}" FontAttributes="Bold" FontSize="Subtitle" VerticalTextAlignment="Center"/>
-                    </Grid>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.GroupHeaderTemplate>
-    </ListView>
+    <stateContainerDemo:StateContainer State ="{Binding States}">
+        <stateContainerDemo:StateCondition Is="Normal">
+            <ListView ItemsSource="{Binding SystemPropertyModels}" 
+              ItemTemplate="{StaticResource checklistDataTemplateSelector}"
+              IsGroupingEnabled="true"              
+              HasUnevenRows="True"              
+              Margin="7">
+                <ListView.GroupHeaderTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label Text="{Binding Name}" FontSize="Subtitle" FontAttributes="Bold" TextColor="Black"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.GroupHeaderTemplate>
+            </ListView>
+
+        </stateContainerDemo:StateCondition>
+
+        <stateContainerDemo:StateCondition Is="Loading">
+            <ActivityIndicator IsRunning="True" Style="{x:StaticResource ActivityIndicatorStyle}"/>
+        </stateContainerDemo:StateCondition>
+
+        <stateContainerDemo:StateCondition Is="NoInternet">
+            <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
+                <Label Text="Отсутствует интернет-&#10;соединение" HorizontalTextAlignment="Center"/>
+                <Button Text="Повторить" Command="{Binding UpdateContentCommand}" Style="{DynamicResource BlueButtonStyle}" IsEnabled="{Binding IsEnabled}"/>
+            </StackLayout>
+        </stateContainerDemo:StateCondition>
+
+        <stateContainerDemo:StateCondition Is="NoData">
+            <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
+                <Label Text="Данных пока нет" HorizontalTextAlignment="Center"/>
+                <Button Text="Добавить" Style="{DynamicResource BlueButtonStyle}" Command="{Binding GoToAddNewObjectPageCommand}" IsEnabled="{Binding IsEnabled}"/>
+            </StackLayout>
+        </stateContainerDemo:StateCondition>
+
+        <stateContainerDemo:StateCondition Is="NoAccess">
+            <Label Text="Нет доступа" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
+        </stateContainerDemo:StateCondition>
+    </stateContainerDemo:StateContainer>
 </ContentPage>

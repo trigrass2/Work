@@ -38,29 +38,31 @@ namespace Vertical.ViewModels
                 
             }
         }
-        public ObservableCollection<Grouping<SystemObjectTypePropertyModel>> SystemPropertyModels { get; set; }
+        public ObservableCollection<GroupingModel> SystemPropertyModels { get; set; }
         
         public int ObjectTypeID { get; set; }
 
         public TypeModelInfoPageViewModel(int idTypeObject)
         {
             ObjectTypeID = idTypeObject;
-            SystemPropertyModels = new ObservableCollection<Grouping<SystemObjectTypePropertyModel>>();
+            SystemPropertyModels = new ObservableCollection<GroupingModel>();
             UpdateSystemPropertyModel();
         }
 
         public void UpdateSystemPropertyModel()
         {
             SystemPropertyModels.Clear();
-            var items = Api.GetDataFromServer<SystemObjectTypePropertyModel>("SystemManagement/GetSystemObjectTypeProperties", new { ObjectTypeID });
-            var groups = items.GroupBy(p => p.GroupName).Select(g => new Grouping<SystemObjectTypePropertyModel>(g.Key, g));
-
+            var items = Api.GetDataFromServer<SystemObjectTypePropertyModel>("SystemManagement/GetSystemObjectTypeProperties", new { ObjectTypeID });                     
+            var groups = items.Select(x => x.GroupName).Distinct();
+            
             try
             {
-                foreach (var s in groups)
+                
+                foreach(var s in groups.AsParallel().Select(x => GetGroup(x, items)))
                 {
                     SystemPropertyModels.Add(s);
                 }
+                
             }
             catch (Exception ex)
             {
@@ -68,7 +70,16 @@ namespace Vertical.ViewModels
             }
             
         }
+        private GroupingModel GetGroup(string nameGroup, IList<SystemObjectTypePropertyModel> items)
+        {
+            GroupingModel groupProperties = new GroupingModel(nameGroup);
 
+            foreach(var i in items.Where(x => x.GroupName == nameGroup))
+            {
+                groupProperties.Add(i);
+            }
+            return groupProperties;
+        }
         /// <summary>
         /// Привязывает новое свойство
         /// </summary>

@@ -33,11 +33,11 @@
                                             <ColumnDefinition Width="5*"/>
                                             <ColumnDefinition Width="1*"/>
                                         </Grid.ColumnDefinitions>
-                                        <Button Grid.Column="0" BackgroundColor="#fafafa">
-                                            <Button.ImageSource>
+                                        <Image x:Name="objImage" Grid.Column="0" BackgroundColor="#fafafa" Margin="10">
+                                            <Image.Source>
                                                 <svg:SvgImageSource Source="Vertical.SvgPictures.folder.svg" Height="20" Width="20"/>
-                                            </Button.ImageSource>
-                                        </Button>
+                                            </Image.Source>
+                                        </Image>
                                         <Label 
                                             x:Name="nameObjectLabel" Text="{Binding Name}" TextColor="Black" VerticalTextAlignment="Center" FontSize="Body"
                                             Grid.Column="1"/>

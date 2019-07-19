@@ -17,8 +17,9 @@ namespace Vertical.CustomViews
         public DataTemplate HumanTemplate { get; set; }
 
         protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
-        {            
-            switch ((item as SystemObjectTypePropertyModel).PropertyID)
+        {
+            var id = item as SystemObjectTypePropertyModel;
+            switch (id.PropertyTypeID)
             {
                 case 1: return BoolTemplate;
                 case 2: return DateTimeTemplate;
@@ -29,8 +30,6 @@ namespace Vertical.CustomViews
                 case 7: return HumanTemplate;
                     default: return ObjectTemplate;
             }
-
-           // return ((Person)item).DateOfBirth.Year >= 1980 ? ValidTemplate : InvalidTemplate;
         }
     }
 }

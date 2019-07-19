@@ -1,4 +1,6 @@
 ﻿using PropertyChanged;
+using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
@@ -7,6 +9,7 @@ using Vertical.CustomViews;
 using Vertical.Models;
 using Vertical.Services;
 using Xamarin.Forms;
+using static Vertical.Constants;
 
 namespace Vertical.ViewModels
 {    
@@ -15,16 +18,18 @@ namespace Vertical.ViewModels
         public event PropertyChangedEventHandler PropertyChanged;
 
         public INavigation Navigation { get; set; }
-        //public ICommand CreatePropertiesValuesCommand => new Command(CreatePropertiesValues);
+        public States States { get; set; } = States.Normal;
+        public ICommand CreatePropertiesValuesCommand => new Command(CreatePropertiesValues);        
+
         public SystemObjectModel SystemObjectModel { get; set; }
-        public ObservableCollection<Grouping<SystemObjectTypePropertyModel>> SystemPropertyModels { get; set; }
+        public ObservableCollection<GroupingModel<SystemObjectPropertyValueModel>> SystemPropertyModels { get; set; }
         public InputAddSystemObjectPropertiesValues Property { get; set; }
 
         public CheckPageViewModel(SystemObjectModel obj)
         {
             SystemObjectModel = obj;
             Property = new InputAddSystemObjectPropertiesValues();
-            SystemPropertyModels = new ObservableCollection<Grouping<SystemObjectTypePropertyModel>>();
+            SystemPropertyModels = new ObservableCollection<GroupingModel<SystemObjectPropertyValueModel>>();
             UpdateSystemPropertyModels();
             Property = new InputAddSystemObjectPropertiesValues { ObjectGUID = SystemObjectModel?.GUID };
         }
@@ -33,20 +38,30 @@ namespace Vertical.ViewModels
         {
             SystemPropertyModels.Clear();
 
-            var properties = Api.GetDataFromServer<SystemObjectTypePropertyModel>("SystemManagement/GetSystemObjectTypeProperties", new { ObjectTypeID = SystemObjectModel.TypeID });
-            //var values = Api.GetDataFromServer<SystemObjectPropertyValueModel>("System/GetSystemObjectPropertiesValues", new { ObjectGUID = SystemObjectModel?.GUID });
-            
-            var groups = properties.GroupBy(p => p.GroupName).Select(g => new Grouping<SystemObjectTypePropertyModel>(g.Key, g));
+            var values = Api.GetDataFromServer<SystemObjectPropertyValueModel>("System/GetSystemObjectPropertiesValues", new { ObjectGUID = SystemObjectModel?.GUID });
+            //var properties = Api.GetDataFromServer<SystemObjectTypePropertyModel>("SystemManagement/GetSystemObjectTypeProperties", new { ObjectTypeID = SystemObjectModel.TypeID });            
+            var groups = values?.OrderBy(o => o.GroupID).Select(x => x.GroupName).Distinct();
 
-            foreach (var v in groups)
+            foreach (var s in groups?.AsParallel().Select(x => GroupingModel<SystemObjectPropertyValueModel>.GetGroup(x, values)))
             {
-                SystemPropertyModels.Add(v);
-            }            
-        }      
-        
-        private void CreatePropertiesValues()
-        {
-
+                SystemPropertyModels.Add(s);
+            }           
         }
+
+        private void CreatePropertiesValues(object obj)
+        {
+            throw new NotImplementedException();
+        }
+        //private GroupingModel<SystemObjectPropertyValueModel> GetGroup(string nameGroup, IList<SystemObjectPropertyValueModel> items)
+        //{            
+        //    GroupingModel<SystemObjectPropertyValueModel> groupProperties = new GroupingModel<SystemObjectPropertyValueModel>(nameGroup);
+
+        //    foreach (var i in items.Where(x => x.GroupName == nameGroup))
+        //    {
+        //        groupProperties.Add(i);
+        //    }
+        //    return groupProperties;
+        //}
+
     }
 }
