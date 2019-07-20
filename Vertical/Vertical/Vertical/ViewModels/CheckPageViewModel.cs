@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Vertical.CustomViews;
 using Vertical.Models;
@@ -18,50 +19,131 @@ namespace Vertical.ViewModels
         public event PropertyChangedEventHandler PropertyChanged;
 
         public INavigation Navigation { get; set; }
-        public States States { get; set; } = States.Normal;
-        public ICommand CreatePropertiesValuesCommand => new Command(CreatePropertiesValues);        
-
+        public States States { get; set; } = States.Loading;
+        public ICommand SavePropertiesValuesCommand => new Command(SavePropertiesValuesAsync);
+        public ICommand AddNewObjectInPropertyCommand => new Command(AddNewObjectInPropperty);
+        public bool IsEnabled { get; set; } = true;
+        public bool IsVisibleSaveButton { get; set; }
+         
         public SystemObjectModel SystemObjectModel { get; set; }
         public ObservableCollection<GroupingModel<SystemObjectPropertyValueModel>> SystemPropertyModels { get; set; }
-        public InputAddSystemObjectPropertiesValues Property { get; set; }
+        public ObservableCollection<AddSystemObjectPropertyValueModel> NewValues { get; set; }
 
         public CheckPageViewModel(SystemObjectModel obj)
-        {
-            SystemObjectModel = obj;
-            Property = new InputAddSystemObjectPropertiesValues();
+        {            
+            SystemObjectModel = obj;            
+            NewValues = new ObservableCollection<AddSystemObjectPropertyValueModel>();
             SystemPropertyModels = new ObservableCollection<GroupingModel<SystemObjectPropertyValueModel>>();
-            UpdateSystemPropertyModels();
-            Property = new InputAddSystemObjectPropertiesValues { ObjectGUID = SystemObjectModel?.GUID };
+            UpdateSystemPropertyModels();           
+            
+        }
+
+        private async void AddNewObjectInPropperty(object commandParameter)
+        {
+            var prop = commandParameter as SystemObjectPropertyValueModel;
+            //var neqw = SystemPropertyModels.Select(x => x.Where(k => k.GroupID == prop.GroupID));
+            if (prop.SourceObjectGUID != null)
+            {
+                var objects = Api.GetDataFromServer<SystemObjectModel>("System/GetSystemObjects", new { ParentGUID = prop.SourceObjectGUID });
+            }
+            var types = Api.GetDataFromServer<SystemObjectTypeModel>("System/GetSystemObjectTypes");
+            var action = await Application.Current.MainPage
+                                                  .DisplayActionSheet(
+                                                  "Тип нового объекта",
+                                                  "отмена",
+                                                  null,
+                                                  types.Select(x => x.Name).ToArray());
+            if(action != null && action != "отмена")
+            {
+                States = States.Loading;
+                int typeId = types.Where(x => x.Name == action).Select(x => x.ID).FirstOrDefault();
+                Api.SendDataToServer("System/AddSystemObject", new { Name = "Коля", TypeID = typeId, ParentGUID = prop.SystemObjectGUID });
+                UpdateSystemPropertyModels();
+            }
+            
         }
 
         private void UpdateSystemPropertyModels()
         {
+            
             SystemPropertyModels.Clear();
 
             var values = Api.GetDataFromServer<SystemObjectPropertyValueModel>("System/GetSystemObjectPropertiesValues", new { ObjectGUID = SystemObjectModel?.GUID });
-            //var properties = Api.GetDataFromServer<SystemObjectTypePropertyModel>("SystemManagement/GetSystemObjectTypeProperties", new { ObjectTypeID = SystemObjectModel.TypeID });            
-            var groups = values?.OrderBy(o => o.GroupID).Select(x => x.GroupName).Distinct();
-
-            foreach (var s in groups?.AsParallel().Select(x => GroupingModel<SystemObjectPropertyValueModel>.GetGroup(x, values)))
+            if(values.Count == 0)
             {
-                SystemPropertyModels.Add(s);
-            }           
+                States = States.NoData;
+                return;
+            }
+                      
+            var groups = values?.OrderBy(o => o.GroupID).Select(x => x.GroupName).Distinct();
+            
+            //foreach (var s in groups?.AsParallel().Select(x => GetGroup(x, values)))
+            //{
+            //    SystemPropertyModels.Add(s);
+            //}
+
+            foreach (var s in groups)
+            {
+                SystemPropertyModels.Add(GetGroup(s, values));
+            }
+
+            States = States.Normal;
         }
 
-        private void CreatePropertiesValues(object obj)
+        private async void SavePropertiesValuesAsync(object obj)
         {
-            throw new NotImplementedException();
+            IsEnabled = false;
+            await Task.Run(() => {
+                
+                for (int i = NewValues.Count-1; i > 0; i--)
+                {
+                    if (NewValues[i].Value == null) NewValues.Remove(NewValues[i]);
+                }
+                
+                foreach (var n in NewValues)
+                {
+                    Api.SendDataToServer("System/AddSystemObjectPropertyValue", n);
+                }
+                NewValues.Clear();
+            });
+            
+            IsVisibleSaveButton = false;
         }
-        //private GroupingModel<SystemObjectPropertyValueModel> GetGroup(string nameGroup, IList<SystemObjectPropertyValueModel> items)
-        //{            
-        //    GroupingModel<SystemObjectPropertyValueModel> groupProperties = new GroupingModel<SystemObjectPropertyValueModel>(nameGroup);
 
-        //    foreach (var i in items.Where(x => x.GroupName == nameGroup))
-        //    {
-        //        groupProperties.Add(i);
-        //    }
-        //    return groupProperties;
-        //}
+        public void CreateNewValue(SystemObjectPropertyValueModel property, object value)
+        {            
+            var item = new AddSystemObjectPropertyValueModel
+            {
+                ObjectGUID = SystemObjectModel?.GUID,
+                PropertyID = property?.ID,
+                PropertyNum = property?.Num,
+                Value = value,
+                ValueNum = property.ValueNum
+            };
+            
+            if (NewValues.Any(x => x.PropertyID == item.PropertyID && x.Value != item.Value))
+            {
+                NewValues[NewValues.IndexOf(NewValues.Where(x => x.PropertyID == item.PropertyID).FirstOrDefault())] = item;
+                
+                IsVisibleSaveButton = true;
+            }
+            else if(value != null)
+            {
+                NewValues.Add(item);
+                IsVisibleSaveButton = true;
+            }
 
+        }
+
+        private GroupingModel<SystemObjectPropertyValueModel> GetGroup(string nameGroup, IList<SystemObjectPropertyValueModel> items)
+        {
+            GroupingModel<SystemObjectPropertyValueModel> groupProperties = new GroupingModel<SystemObjectPropertyValueModel>(nameGroup);
+
+            foreach (var i in items.Where(x => x.GroupName == nameGroup))
+            {
+                groupProperties.Add(i);
+            }
+            return groupProperties;
+        }
     }
 }

@@ -38,14 +38,14 @@ namespace Vertical.ViewModels
                 
             }
         }
-        public ObservableCollection<GroupingModel> SystemPropertyModels { get; set; }
+        public ObservableCollection<GroupingModel<SystemObjectTypePropertyModel>> SystemPropertyModels { get; set; }
         
         public int ObjectTypeID { get; set; }
 
         public TypeModelInfoPageViewModel(int idTypeObject)
         {
             ObjectTypeID = idTypeObject;
-            SystemPropertyModels = new ObservableCollection<GroupingModel>();
+            SystemPropertyModels = new ObservableCollection<GroupingModel<SystemObjectTypePropertyModel>>();
             UpdateSystemPropertyModel();
         }
 
@@ -70,9 +70,9 @@ namespace Vertical.ViewModels
             }
             
         }
-        private GroupingModel GetGroup(string nameGroup, IList<SystemObjectTypePropertyModel> items)
+        private GroupingModel<SystemObjectTypePropertyModel> GetGroup(string nameGroup, IList<SystemObjectTypePropertyModel> items)
         {
-            GroupingModel groupProperties = new GroupingModel(nameGroup);
+            GroupingModel<SystemObjectTypePropertyModel> groupProperties = new GroupingModel<SystemObjectTypePropertyModel>(nameGroup);
 
             foreach(var i in items.Where(x => x.GroupName == nameGroup))
             {

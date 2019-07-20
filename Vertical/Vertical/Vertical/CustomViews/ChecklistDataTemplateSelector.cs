@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Vertical.Models;
+﻿using Vertical.Models;
 using Xamarin.Forms;
 
 namespace Vertical.CustomViews
@@ -18,8 +15,8 @@ namespace Vertical.CustomViews
 
         protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
         {
-            var id = item as SystemObjectTypePropertyModel;
-            switch (id.PropertyTypeID)
+            var id = item as SystemObjectPropertyValueModel;
+            switch (id.TypeID)
             {
                 case 1: return BoolTemplate;
                 case 2: return DateTimeTemplate;

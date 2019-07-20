@@ -13,15 +13,15 @@ namespace Vertical.CustomViews
             Name = name == default(string) ? "Без группы" : name;
         }
 
-        public static GroupingModel<T> GetGroup(string nameGroup, IList<T> items)
-        {
-            GroupingModel<T> groupProperties = new GroupingModel<T>(nameGroup);
+        //public static GroupingModel<T> GetGroup(string nameGroup, IList<T> items)
+        //{
+        //    GroupingModel<T> groupProperties = new GroupingModel<T>(nameGroup);
 
-            foreach (var i in items.Where(x => x.GroupName == nameGroup))
-            {
-                groupProperties.Add(i);
-            }
-            return groupProperties;
-        }
+        //    foreach (var i in items.Where(x => x.GroupName == nameGroup))
+        //    {
+        //        groupProperties.Add(i);
+        //    }
+        //    return groupProperties;
+        //}
     }
 }

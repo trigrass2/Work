@@ -21,6 +21,7 @@
     <None Remove="SvgPictures\ic_edit.svg" />
     <None Remove="SvgPictures\next.svg" />
     <None Remove="SvgPictures\round-add.svg" />
+    <None Remove="SvgPictures\save.svg" />
     <None Remove="SvgPictures\settings.svg" />
     <None Remove="SvgPictures\user.svg" />
   </ItemGroup>
@@ -36,6 +37,7 @@
     <EmbeddedResource Include="SvgPictures\next.svg" />
     <EmbeddedResource Include="SvgPictures\PikGroupLogo.svg" />
     <EmbeddedResource Include="SvgPictures\round-add.svg" />
+    <EmbeddedResource Include="SvgPictures\save.svg" />
     <EmbeddedResource Include="SvgPictures\settings.svg" />
     <EmbeddedResource Include="SvgPictures\user.svg" />
   </ItemGroup>

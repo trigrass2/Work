@@ -16,6 +16,11 @@ namespace Vertical.Models
         public int ID { get; set; }
 
         /// <summary>
+        /// Номер привязки cвойства объекта
+        /// </summary>
+        public int Num { get; set; }
+
+        /// <summary>
         /// Название свойства объекта
         /// </summary>
         public string Name { get; set; }
@@ -24,6 +29,11 @@ namespace Vertical.Models
         /// Значение свойства
         /// </summary>
         public object Value { get; set; }
+
+        /// <summary>
+        /// Номер значения свойства объекта
+        /// </summary>
+        public int ValueNum { get; set; }
 
         /// <summary>
         /// GUID Объекта к которому принадлежит свойство
@@ -75,5 +85,9 @@ namespace Vertical.Models
         /// </summary>
         public string GroupName { get; set; }
 
+        /// <summary>
+        /// GUID Объекта-источника
+        /// </summary>
+        public string SourceObjectGUID { get; set; }
     }
 }
