@@ -92,11 +92,11 @@ namespace Vertical.ViewModels
             var action = await Application.Current.MainPage
                                                   .DisplayActionSheet(
                                                   "Новое свойство свойство",
-                                                  "Cancel",
+                                                  "Отмена",
                                                   null,
                                                   items.Select(x => x.Name).ToArray());
 
-            if (action != null)
+            if (action != null && action != "Отмена")
             {
                 var newProperty = items.SingleOrDefault(i => i.Name == action);
                 if (await Api.SendDataToServerAsync("SystemManagement/BindSystemPropertyToObjectType", new { PropertyID = newProperty.ID, ObjectTypeID, groupId[0].GroupID }) == true)
