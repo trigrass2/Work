@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:stateContainerDemo="clr-namespace:Xamarin.Forms.Essentials.Controls;assembly=Xamarin.Forms.Essentials.Controls"
              xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
-             xmlns:sfbuttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"        
+             xmlns:sfbuttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              xmlns:svg="clr-namespace:Xamarin.Forms.Svg;assembly=SvgImageSource"
              xmlns:local="clr-namespace:Vertical.CustomViews"
              x:Class="Vertical.Views.CheckListPage"
@@ -13,17 +13,19 @@
             <DataTemplate x:Key="boolTemplate">
                 <ViewCell>
                     <ViewCell.View>
-                        <!--<Grid Margin="0,10,0,10">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="6*"/>
-                                <ColumnDefinition Width="1*"/>
-                            </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0" Text="{Binding Name}" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption" VerticalOptions="Center"/>
-                            <sfbuttons:SfCheckBox Grid.Column="1" CheckedColor="#ff4114" BackgroundColor="#fafafa" VerticalOptions="Center" IsChecked="{Binding Value}" PropertyChanged="SfCheckBox_PropertyChanged" />
-                        </Grid>-->
-                        <sfbuttons:SfCheckBox Grid.Column="1" Text="{Binding Name}" BindingContext="{Binding}" CheckedColor="#ff4114" 
-                                              BackgroundColor="#fafafa" VerticalOptions="Center" IsChecked="{Binding Value}" StateChanged="SfCheckBox_StateChanged"
-                                             />
+                        <StackLayout Orientation="Horizontal">
+
+                            <sfbuttons:SfCheckBox Grid.Column="1" Text="{Binding Name}" BindingContext="{Binding}" CheckedColor="#ff4114" StateChanged="SfCheckBox_StateChanged" 
+                                                  FontSize="12" 
+                                                  BackgroundColor="#fafafa" VerticalOptions="Center" IsChecked="{Binding Value, Mode=TwoWay}"
+                                             >
+                                <!--<sfbuttons:SfCheckBox.Triggers>
+                                <Trigger TargetType="sfbuttons:SfCheckBox" Property="IsChecked" Value="{x:Null}">
+                                    <Setter Property="IsChecked" Value="False"/>
+                                </Trigger>
+                            </sfbuttons:SfCheckBox.Triggers>-->
+                            </sfbuttons:SfCheckBox>
+                        </StackLayout>                        
                     </ViewCell.View>
                 </ViewCell>
             </DataTemplate>
@@ -46,7 +48,7 @@
                             HelperText="{Binding Name}"
                             Margin="0,0,0,10"
                             >
-                            <Entry Text="{Binding Value}" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption"/>
+                            <Entry Text="{Binding Value, Mode=TwoWay}" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption" BindingContext="{Binding}" Completed="Entry_Completed_float"/>
                         </inputLayout:SfTextInputLayout>
                     </ViewCell.View>
                 </ViewCell>
@@ -59,7 +61,7 @@
                             HelperText="{Binding Name}"
                             UnfocusedColor="Black"
                             >
-                            <Entry Text="{Binding Value}" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption"/>
+                            <Entry Text="{Binding Value}" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption" BindingContext="{Binding}" Completed="Entry_Completed_int"/>
                         </inputLayout:SfTextInputLayout>
                     </ViewCell.View>
                 </ViewCell>
@@ -69,7 +71,22 @@
                     <ViewCell.View>
                         <StackLayout x:Name="Item">
                             <Label Text="{Binding Name}" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption"/>
-                            <Button Text="добавить"
+                            <ListView ItemsSource="{Binding Source={x:Reference Item}, Path=BindingContext}" 
+                                      BackgroundColor="#8c9ba8"
+                                      ItemTemplate="{StaticResource checklistDataTemplateSelector}"
+                                      IsGroupingEnabled="true"              
+                                      HasUnevenRows="True" Margin="7" HeightRequest="150">
+                                <ListView.GroupHeaderTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <StackLayout>
+                                                <Label Text="{Binding Name}" FontSize="Small" FontAttributes="Bold" TextColor="Black" Margin="0,7,0,0"/>
+                                            </StackLayout>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.GroupHeaderTemplate>
+                            </ListView>
+                            <Button Text="добавить" TextColor="White" FontSize="Body" BackgroundColor="#41a32e"
                                     Command="{Binding Source={x:Reference thisPage}, Path = BindingContext.AddNewObjectInPropertyCommand}" 
                                     CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"/>
                         </StackLayout>                        
@@ -80,8 +97,15 @@
                 <ViewCell>
                     <ViewCell.View>
                         <StackLayout>
-                            <Label Text="{Binding Name}" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption"/>
-                            <Label Text="{Binding Value}" FontSize="Micro"/>
+                            <!--<Label Text="{Binding Name}" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption"/>-->
+                            <!--<Label Text="{Binding Value}" FontSize="Micro"/>-->
+                            <inputLayout:SfTextInputLayout                            
+                                Style="{x:StaticResource SfTextInputLayoutStyle}"
+                                HelperText="{Binding Name}"
+                                UnfocusedColor="Black"
+                                >
+                                <Entry Text="{Binding Value}" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption" BindingContext="{Binding}" Completed="Entry_Completed_string"/>
+                            </inputLayout:SfTextInputLayout>
                         </StackLayout>
                         
                     </ViewCell.View>

@@ -9,6 +9,7 @@ using System.ComponentModel;
 using static Vertical.Constants;
 using System.Threading.Tasks;
 using System.Net;
+using Acr.UserDialogs;
 
 namespace Vertical.ViewModels
 {
@@ -70,64 +71,63 @@ namespace Vertical.ViewModels
         /// </summary>
         private async void SignIn()
         {
-            IsRunning = true;
+            //IsRunning = true;
 
             IsEnabled = false;
 
-            await Task.Run(()=> {                
-
-                if (NetworkCheck.IsInternet())
-                {
-                    //if (Api.CheckServerStatus("IsOnline") != HttpStatusCode.OK)
-                    //{
-                    //    Application.Current.MainPage.DisplayAlert("Сообщение", "Сервер временно не доступен", "Ок");
-                    //    return;
-                    //}
-                    _statusAutorization = Api.GetToken(User.Login, User.Password);
-                }
-                else
-                {
-                    Application.Current.MainPage.DisplayAlert("Ошибка", "Отсутствует интернет-соединение", "Ок");
-                    return;
-                }
-            });
-
-            switch (_statusAutorization)
+            using(UserDialogs.Instance.Loading("Авторизация", null, null, true, MaskType.Black))
             {
-                case HttpStatusCode.OK:
-                    {
-                        Login = User?.Login;
-                        Password = User?.Password;
-                        await Navigation.PushAsync(new MenuPage());
-                        States = States.Normal;
-                        IsEnabled = true;
-                    }
-                    break;
+                await Task.Run(() => {
 
-                case HttpStatusCode.InternalServerError:
+                    if (NetworkCheck.IsInternet())
                     {
-                        await Application.Current.MainPage.DisplayAlert("Ошибка", "Сервер временно не доступен", "Ок");
-                        States = States.Normal;
-                        IsEnabled = true;
+                        _statusAutorization = Api.GetToken(User.Login, User.Password);
                     }
-                    break;
+                    else
+                    {
+                        Application.Current.MainPage.DisplayAlert("Ошибка", "Отсутствует интернет-соединение", "Ок");
+                        return;
+                    }
+                });
 
-                case HttpStatusCode.BadRequest:
-                    {
-                        await Application.Current.MainPage.DisplayAlert("Ошибка", "Неверный логин или пароль", "Ок");
-                        States = States.Normal;
-                        IsEnabled = true;
-                    }
-                    break;
-                default:
-                    {
-                        IsEnabled = true;
-                        await Application.Current.MainPage.DisplayAlert("!", "Ошибка входа", "Ок");                        
-                    }
-                    break;
+                switch (_statusAutorization)
+                {
+                    case HttpStatusCode.OK:
+                        {
+                            Login = User?.Login;
+                            Password = User?.Password;
+                            await Navigation.PushAsync(new MenuPage());
+                            States = States.Normal;
+                            IsEnabled = true;
+                        }
+                        break;
+
+                    case HttpStatusCode.InternalServerError:
+                        {
+                            await Application.Current.MainPage.DisplayAlert("Ошибка", "Сервер временно не доступен", "Ок");
+                            States = States.Normal;
+                            IsEnabled = true;
+                        }
+                        break;
+
+                    case HttpStatusCode.BadRequest:
+                        {
+                            await Application.Current.MainPage.DisplayAlert("Ошибка", "Неверный логин или пароль", "Ок");
+                            States = States.Normal;
+                            IsEnabled = true;
+                        }
+                        break;
+                    default:
+                        {
+                            IsEnabled = true;
+                            await Application.Current.MainPage.DisplayAlert("!", "Ошибка входа", "Ок");
+                        }
+                        break;
+                }
             }
+            
 
-            IsRunning = false;
+            //IsRunning = false;
         }
     }    
     

@@ -1,4 +1,5 @@
-﻿using Android.App;
+﻿using Acr.UserDialogs;
+using Android.App;
 using Android.Content.PM;
 using Android.OS;
 
@@ -17,7 +18,7 @@ namespace Vertical.Droid
 
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            
+            UserDialogs.Init(this);
             Xamarin.Forms.Svg.Droid.SvgImage.Init(this);
 
             LoadApplication(new App());

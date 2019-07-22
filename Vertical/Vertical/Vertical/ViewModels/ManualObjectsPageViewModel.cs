@@ -21,7 +21,7 @@ namespace Vertical.ViewModels
         public ObservableCollection<SystemObjectModel> SystemObjectModels { get; set; }         
 
         public INavigation Navigation { get; set; }
-        public States States { get; set; } = States.Normal;        
+        public States States { get; set; } = States.Loading;        
         public ICommand UpdateContentCommand => new Command(UpdateSystemObjects);
         public ICommand GoToAddNewObjectPageCommand => new Command(GoToAddNewObjectPage);
         public ICommand GoToEditObjectPageCommand => new Command(GoToEditObjectPage);
