@@ -62,7 +62,7 @@ namespace Vertical.ViewModels
         public AutorizationsPageViewModel()
         {           
             User = new User { Login = Login, Password = Password };
-            PikLogoImage = SvgImageSource.FromSvgResource($"Vertical.SvgPictures.PikGroupLogo.svg", 150, 150);
+            PikLogoImage = SvgImageSource.FromSvgResource("Vertical.SvgPictures.PikGroupLogo.svg", 150, 150);
             SignInCommand = new Command(SignIn);
         }
 

@@ -6,9 +6,16 @@
              xmlns:sfbuttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              xmlns:svg="clr-namespace:Xamarin.Forms.Svg;assembly=SvgImageSource"
              xmlns:local="clr-namespace:Vertical.CustomViews"
+             xmlns:views="clr-namespace:Vertical.Views"
              x:Class="Vertical.Views.CheckListPage"
              x:Name="thisPage">
-    <ContentPage.Resources>
+    <!--<ContentPage.Content>
+        <StackLayout>
+            <views:CheckListView ViewModel="{Binding Source={x:Reference thisPage}, Path=BindingContext}"/>
+        </StackLayout>
+    </ContentPage.Content>-->
+    
+    <!--<ContentPage.Resources>
         <ResourceDictionary>            
             <DataTemplate x:Key="boolTemplate">
                 <ViewCell>
@@ -17,13 +24,7 @@
 
                             <sfbuttons:SfCheckBox Grid.Column="1" Text="{Binding Name}" BindingContext="{Binding}" CheckedColor="#ff4114" StateChanged="SfCheckBox_StateChanged" 
                                                   FontSize="12" 
-                                                  BackgroundColor="#fafafa" VerticalOptions="Center" IsChecked="{Binding Value, Mode=TwoWay}"
-                                             >
-                                <!--<sfbuttons:SfCheckBox.Triggers>
-                                <Trigger TargetType="sfbuttons:SfCheckBox" Property="IsChecked" Value="{x:Null}">
-                                    <Setter Property="IsChecked" Value="False"/>
-                                </Trigger>
-                            </sfbuttons:SfCheckBox.Triggers>-->
+                                                  BackgroundColor="#fafafa" VerticalOptions="Center" IsChecked="{Binding Value, Mode=TwoWay}">
                             </sfbuttons:SfCheckBox>
                         </StackLayout>                        
                     </ViewCell.View>
@@ -97,8 +98,8 @@
                 <ViewCell>
                     <ViewCell.View>
                         <StackLayout>
-                            <!--<Label Text="{Binding Name}" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption"/>-->
-                            <!--<Label Text="{Binding Value}" FontSize="Micro"/>-->
+                            --><!--<Label Text="{Binding Name}" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption"/>-->
+                            <!--<Label Text="{Binding Value}" FontSize="Micro"/>--><!--
                             <inputLayout:SfTextInputLayout                            
                                 Style="{x:StaticResource SfTextInputLayoutStyle}"
                                 HelperText="{Binding Name}"
@@ -149,7 +150,8 @@
                     ItemsSource="{Binding SystemPropertyModels}" 
                     ItemTemplate="{StaticResource checklistDataTemplateSelector}"
                     IsGroupingEnabled="true"              
-                    HasUnevenRows="True"              
+                    CachingStrategy="RecycleElement"     
+                          HasUnevenRows="True"
                     Margin="7">
                     <ListView.GroupHeaderTemplate>
                         <DataTemplate>
@@ -201,5 +203,5 @@
         <stateContainerDemo:StateCondition Is="NoAccess">
             <Label Text="Нет доступа" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
         </stateContainerDemo:StateCondition>
-    </stateContainerDemo:StateContainer>
+    </stateContainerDemo:StateContainer>-->
 </ContentPage>

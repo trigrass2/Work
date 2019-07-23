@@ -7,6 +7,7 @@ using Vertical.Models;
 using Vertical.Services;
 using Vertical.Views;
 using Xamarin.Forms;
+using Xamarin.Forms.Svg;
 using static Vertical.Constants;
 
 namespace Vertical.ViewModels
@@ -26,7 +27,10 @@ namespace Vertical.ViewModels
         public ICommand GoToAddNewObjectPageCommand => new Command(GoToAddNewObjectPage);
         public ICommand GoToEditObjectPageCommand => new Command(GoToEditObjectPage);
 
-        private delegate IList<T> GetObjectsDelegate<T>();
+        /// <summary>
+        /// папка/файл
+        /// </summary>
+        public ImageSource ObjectImage { get; set; }
 
         private SystemObjectModel _selectedObject;
         public SystemObjectModel SelectedObject
@@ -67,7 +71,8 @@ namespace Vertical.ViewModels
         public SystemObjectModel ParentObject { get; set; }
 
         public ManualObjectsPageViewModel(SystemObjectModel _parentObject)
-        {            
+        {
+            //ObjectImage = SvgImageSource.FromSvgResource("Vertical.SvgPictures.folder.svg");
             ParentObject = _parentObject;
             Title = ParentObject?.Name;
             SystemObjectModels = new ObservableCollection<SystemObjectModel>();

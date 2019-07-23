@@ -30,6 +30,8 @@ namespace Vertical.ViewModels
         public ObservableCollection<AddSystemObjectPropertyValueModel> NewValues { get; set; }
         public ObservableCollection<AddSystemObjectPropertyValueModel> StartValues { get; set; }
 
+        public CheckPageViewModel() { }
+
         public CheckPageViewModel(SystemObjectModel obj)
         {            
             SystemObjectModel = obj;            
@@ -40,6 +42,10 @@ namespace Vertical.ViewModels
             
         }
 
+        /// <summary>
+        /// добавляет новый объект в качестве свойства
+        /// </summary>
+        /// <param name="commandParameter"></param>
         private async void AddNewObjectInPropperty(object commandParameter)
         {
             var prop = commandParameter as SystemObjectPropertyValueModel;
@@ -60,14 +66,28 @@ namespace Vertical.ViewModels
                     {
                         InputType = InputType.Name,
                         OkText = "Создать",
-                        Title = "Создание объекта",
+                        Title = "Создание объекта"                        
                     });
 
                     using (UserDialogs.Instance.Loading("Создание объекта...", null, null, true, MaskType.Black))
                     {
                         if (pResult.Ok && !string.IsNullOrWhiteSpace(pResult.Text))
                         {
-                            Api.SendDataToServer("System/AddSystemObject", new { Name = pResult.Text, TypeID = typeId, ParentGUID = prop.SystemObjectGUID });
+                            string guidNewItem = Api.AddSystemObject(new { Name = pResult.Text, TypeID = typeId, ParentGUID = prop.SystemObjectGUID });
+                            if(guidNewItem != default(string))
+                            {
+                                prop.Value = guidNewItem;
+                                await Api.SendDataToServerAsync("System/AddSystemObjectPropertyValue",
+                                    new
+                                    {
+                                        ObjectGUID = SystemObjectModel?.GUID,
+                                        PropertyID = prop.ID,
+                                        PropertyNum = prop.Num,
+                                        Value = prop.Value,
+                                        ValueNum = prop.ValueNum
+                                    });
+
+                            }
                             UpdateSystemPropertyModels();
                         }
                     }                                         
@@ -152,12 +172,16 @@ namespace Vertical.ViewModels
 
                     foreach (var n in items)
                     {
-                        Api.SendDataToServer("System/AddSystemObjectPropertyValue", n);
+                        if(Api.SendDataToServer("System/AddSystemObjectPropertyValue", n) == false)
+                        {
+                            UserDialogs.Instance.Alert("Не удалось создать", null, "Ок");
+                            return;
+                        }
+                        
                     }
-
-                    //UpdateSystemPropertyModels();
+                    Device.BeginInvokeOnMainThread(() => UpdateSystemPropertyModels());
                 });
-
+                
                 IsVisibleSaveButton = false;
                 IsEnabled = true;
             }

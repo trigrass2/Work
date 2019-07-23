@@ -20,6 +20,41 @@ namespace Vertical.Services
         /// </summary>
         public static string AccessToken { get; private set; }
 
+        public static string AddSystemObject<T>(T model = default(T))
+        {
+            var client = new RestClient(domain + $"/api/System/AddSystemObject");
+
+            try
+            {
+                var request = new RestRequest(Method.POST);
+                request.AddHeader("authorization", $"Bearer {AccessToken}");
+
+                var jsonModel = JsonConvert.SerializeObject(model);
+
+                request.AddParameter("application/json", jsonModel, ParameterType.RequestBody);
+
+                var restResponse = client.Execute(request);
+                var res = JsonConvert.DeserializeObject<string>(restResponse.Content);
+
+                if (restResponse.IsSuccessful)
+                {
+                    Loger.WriteMessage(LogPriority.Info, $"В запросе {client?.BaseUrl}: Данные отправлены");
+                    return res;
+                }
+                else
+                {
+                    Loger.WriteMessage(LogPriority.Info, $"В запросе {client?.BaseUrl}: Данные не отправлены -> {restResponse.Content}");
+                    return default(string);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Loger.WriteMessage(LogPriority.Error, $"В запросе {client?.BaseUrl} Ошибка при отправке данных на сервер", ex.Message);
+                return default(string);
+            }
+        }
+
         /// <summary>
         /// Добавляет новый объект в систему
         /// </summary>
@@ -31,8 +66,6 @@ namespace Vertical.Services
 
             try
             {
-                
-
                 var request = new RestRequest(Method.POST);
                 request.AddHeader("authorization", $"Bearer {AccessToken}");
 
@@ -41,6 +74,7 @@ namespace Vertical.Services
                 request.AddParameter("application/json", jsonModel, ParameterType.RequestBody);
 
                 var restResponse = client.Execute(request);
+                
                 if (restResponse.IsSuccessful)
                 {
                     Loger.WriteMessage(LogPriority.Info, $"В запросе {client?.BaseUrl}: Данные отправлены");
