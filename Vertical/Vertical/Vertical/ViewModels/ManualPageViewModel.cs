@@ -3,6 +3,7 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using Vertical.Views;
 using static Vertical.Constants;
+using System.Threading.Tasks;
 
 namespace Vertical.ViewModels
 {
@@ -29,7 +30,7 @@ namespace Vertical.ViewModels
             States = States.Loading;
             IsEnabled = false;
             
-            await Navigation.PushAsync(new ManualObjectsPage());
+            await Navigation.PushAsync(await Task.Run(() => new ManualObjectsPage()));
 
             IsEnabled = true;
             States = States.Normal;
@@ -40,7 +41,7 @@ namespace Vertical.ViewModels
             States = States.Loading;
             IsEnabled = false;
             
-            await Navigation.PushAsync(new ManualTypesObjectsPage());
+            await Navigation.PushAsync(await Task.Run(() => new ManualTypesObjectsPage()));
 
             IsEnabled = true;
             States = States.Normal;
@@ -51,7 +52,7 @@ namespace Vertical.ViewModels
             States = States.Loading;
             IsEnabled = false;            
 
-            await Navigation.PushAsync(new ManualPropertiesPage());
+            await Navigation.PushAsync(await Task.Run(() => new ManualPropertiesPage()));
 
             IsEnabled = true;
             States = States.Normal;

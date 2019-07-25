@@ -12,12 +12,14 @@ namespace Vertical.CustomViews
         public DataTemplate ObjectTemplate { get; set; }
         public DataTemplate StringTemplate { get; set; }
         public DataTemplate HumanTemplate { get; set; }
+        public DataTemplate GroupTemplate { get; set; }
 
         protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
         {
-            var id = item as SystemObjectPropertyValueModel;
-            switch (id.TypeID)
-            {
+            var id = (item as SystemObjectPropertyValueModel)?.TypeID;
+
+            switch (id)
+            {                
                 case 1: return BoolTemplate;
                 case 2: return DateTimeTemplate;
                 case 3: return FloatTemplate;

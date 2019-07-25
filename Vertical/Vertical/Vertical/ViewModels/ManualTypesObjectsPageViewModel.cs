@@ -29,7 +29,7 @@ namespace Vertical.ViewModels
         }
 
         public INavigation Navigation { get; set; }
-        public States States { get; set; } = States.Normal;
+        public States States { get; set; } = States.Loading;
 
         public ManualTypesObjectsPageViewModel()
         {
@@ -45,6 +45,8 @@ namespace Vertical.ViewModels
             {
                 SystemObjectTypesModels.Add(t);
             }
+
+            States = SystemObjectTypesModels.Count > 0 ? States.Normal : States.NoData;
         }
 
         private async void OpenInfoPage(int id)

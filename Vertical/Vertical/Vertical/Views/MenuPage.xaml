@@ -23,7 +23,7 @@
                 <Button 
                     x:Name="startWorkButton" Grid.Row="0" Grid.Column="0" 
                     Text="Начать работу" Style="{DynamicResource MenuButtonStyle}"
-                    IsEnabled="{Binding IsEnabled}">
+                    IsEnabled="False">
                     <Button.ImageSource>
                         <svg:SvgImageSource Source="Vertical.SvgPictures.next.svg" Height="50" Width="50"/>
                     </Button.ImageSource>
@@ -43,7 +43,7 @@
                     x:Name="openChecklistButton" Grid.Row="0" Grid.Column="2"                    
                     Command="{Binding MoveToChekPageCommand}"
                     Text="Чеклисты" Style="{DynamicResource MenuButtonStyle}"
-                    IsEnabled="{Binding IsEnabled}">
+                    IsEnabled="False">
                     <Button.ImageSource>
                         <svg:SvgImageSource Source="Vertical.SvgPictures.checklist.svg" Height="50" Width="50"/>
                     </Button.ImageSource>
@@ -53,7 +53,7 @@
                     x:Name="openRequestsButton" Grid.Row="1" Grid.Column="0"
                     Command="{Binding MoveToRequestPageCommand}"
                     Text="Заявки" Style="{DynamicResource MenuButtonStyle}"
-                    IsEnabled="{Binding IsEnabled}">
+                    IsEnabled="False">
                     <Button.ImageSource>
                         <svg:SvgImageSource Source="Vertical.SvgPictures.user.svg" Height="50" Width="50"/>
                     </Button.ImageSource>
@@ -62,7 +62,7 @@
                 <Button 
                     x:Name="openSettingsButton" Grid.Row="1" Grid.Column="1"
                     Text="Настройки" Style="{DynamicResource MenuButtonStyle}"
-                    IsEnabled="{Binding IsEnabled}">
+                    IsEnabled="False">
                     <Button.ImageSource>
                         <svg:SvgImageSource Source="Vertical.SvgPictures.settings.svg" Height="50" Width="50"/>
                     </Button.ImageSource>

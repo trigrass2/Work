@@ -11,6 +11,7 @@ using Xamarin.Forms;
 using static Vertical.Constants;
 using Acr.UserDialogs;
 using System;
+using Syncfusion.DataSource;
 
 namespace Vertical.ViewModels
 {    
@@ -24,16 +25,21 @@ namespace Vertical.ViewModels
         public ICommand AddNewObjectInPropertyCommand => new Command(AddNewObjectInPropperty);
         public bool IsEnabled { get; set; } = true;
         public bool IsVisibleSaveButton { get; set; }
-         
+        public bool IsRefreshing { get; set; } = false;
+
+
         public SystemObjectModel SystemObjectModel { get; set; }
         public ObservableCollection<GroupingModel<SystemObjectPropertyValueModel>> SystemPropertyModels { get; set; }
         public ObservableCollection<AddSystemObjectPropertyValueModel> NewValues { get; set; }
         public ObservableCollection<AddSystemObjectPropertyValueModel> StartValues { get; set; }
 
+        public DataSource SourceObjects { get; set; }
+
         public CheckPageViewModel() { }
 
         public CheckPageViewModel(SystemObjectModel obj)
-        {            
+        {
+            SourceObjects = new DataSource();
             SystemObjectModel = obj;            
             NewValues = new ObservableCollection<AddSystemObjectPropertyValueModel>();
             StartValues = new ObservableCollection<AddSystemObjectPropertyValueModel>();
@@ -52,6 +58,7 @@ namespace Vertical.ViewModels
             
             if (string.IsNullOrEmpty(prop.SourceObjectGUID)){
 
+
                 var types = Api.GetDataFromServer<SystemObjectTypeModel>("System/GetSystemObjectTypes");
                 var action = await Application.Current.MainPage
                                                   .DisplayActionSheet(
@@ -69,28 +76,39 @@ namespace Vertical.ViewModels
                         Title = "Создание объекта"                        
                     });
 
-                    using (UserDialogs.Instance.Loading("Создание объекта...", null, null, true, MaskType.Black))
-                    {
-                        if (pResult.Ok && !string.IsNullOrWhiteSpace(pResult.Text))
+                    await Task.Run(async ()=> {
+                        using (UserDialogs.Instance.Loading("Создание объекта...", null, null, true, MaskType.Black))
                         {
-                            string guidNewItem = Api.AddSystemObject(new { Name = pResult.Text, TypeID = typeId, ParentGUID = prop.SystemObjectGUID });
-                            if(guidNewItem != default(string))
+                            if (pResult.Ok && !string.IsNullOrWhiteSpace(pResult.Text))
                             {
-                                prop.Value = guidNewItem;
-                                await Api.SendDataToServerAsync("System/AddSystemObjectPropertyValue",
-                                    new
+                                
+                                string guidNewItem = Api.AddSystemObject(new { Name = pResult.Text, TypeID = typeId, ParentGUID = prop.SystemObjectGUID });
+                                if (guidNewItem != default(string))
+                                {
+                                    int valueNum = 0;
+                                    if(prop.Value != null)
                                     {
-                                        ObjectGUID = SystemObjectModel?.GUID,
-                                        PropertyID = prop.ID,
-                                        PropertyNum = prop.Num,
-                                        Value = prop.Value,
-                                        ValueNum = prop.ValueNum
-                                    });
+                                        valueNum = Api.GetDataFromServer<SystemObjectPropertyValueModel>("System/GetSystemObjectPropertiesValues", new { ObjectGUID = SystemObjectModel?.GUID }).Max(x => x.ValueNum);
+                                        
+                                    }
+                                    
+                                    prop.Value = guidNewItem;
+                                    await Api.SendDataToServerAsync("System/AddSystemObjectPropertyValue",
+                                        new
+                                        {
+                                            ObjectGUID = SystemObjectModel?.GUID,
+                                            PropertyID = prop.ID,
+                                            PropertyNum = prop.Num,
+                                            Value = prop.Value,
+                                            ValueNum = valueNum++
+                                        });
 
+                                }
+                                Device.BeginInvokeOnMainThread(() => UpdateSystemPropertyModels());
                             }
-                            UpdateSystemPropertyModels();
                         }
-                    }                                         
+                    });
+                                                           
                 }
             }
             else
@@ -139,9 +157,10 @@ namespace Vertical.ViewModels
                 NewValues.Add(item);
                 StartValues.Add(item);
             }
-            
+
             var groups = values?.OrderBy(o => o.GroupID).Select(x => x.GroupName).Distinct();
 
+            
             try
             {
                 foreach (var s in groups)
@@ -154,8 +173,8 @@ namespace Vertical.ViewModels
                 Loger.WriteMessage(Android.Util.LogPriority.Error, "In foreach (var s in groups){} ->", ex.Message);
             }
             
-
             States = States.Normal;
+            IsRefreshing = false;
         }
 
         /// <summary>
@@ -179,7 +198,7 @@ namespace Vertical.ViewModels
                         }
                         
                     }
-                    Device.BeginInvokeOnMainThread(() => UpdateSystemPropertyModels());
+                    //Device.BeginInvokeOnMainThread(() => UpdateSystemPropertyModels());
                 });
                 
                 IsVisibleSaveButton = false;

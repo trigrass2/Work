@@ -4,6 +4,7 @@ using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 using Vertical.Models;
 using Vertical.Services;
 using Vertical.ViewModels;
@@ -18,7 +19,7 @@ namespace Vertical.Views
         public event PropertyChangedEventHandler PropertyChanged;
 
         public CheckPageViewModel ViewModel { get; set; }
-        //public SystemObjectModel SystemObjectModel { get; set; }
+
         public static BindableProperty ObjectGUIDProperty =
             BindableProperty.Create(
                 propertyName: "ObjectGUID", 
@@ -43,10 +44,7 @@ namespace Vertical.Views
 
         public CheckListView()
         {
-            InitializeComponent();
-            
-            //ViewModel = new CheckPageViewModel(Api.GetDataFromServer<SystemObjectModel>("System/GetSystemObjects", new { ObjectGUID.Value }).FirstOrDefault()) { Navigation = this.Navigation };
-            //BindingContext = ViewModel;
+            InitializeComponent();            
         }
 
         public CheckListView (CheckPageViewModel viewModel)
@@ -62,7 +60,7 @@ namespace Vertical.Views
             ViewModel.CreateNewValue(model, e.IsChecked);
         }
 
-        private async void Entry_Completed_float(object sender, System.EventArgs e)
+        private async void Entry_Completed_float(object sender, EventArgs e)
         {
             var model = (sender as Entry).BindingContext as SystemObjectPropertyValueModel;
             if (double.TryParse(model.Value as string, out double d) == false)
@@ -73,7 +71,7 @@ namespace Vertical.Views
             ViewModel.CreateNewValue(model, d);
         }
 
-        private async void Entry_Completed_int(object sender, System.EventArgs e)
+        private async void Entry_Completed_int(object sender, EventArgs e)
         {
             var model = (sender as Entry).BindingContext as SystemObjectPropertyValueModel;
             if (int.TryParse(model.Value as string, out int i) == false)
@@ -84,7 +82,7 @@ namespace Vertical.Views
             ViewModel.CreateNewValue(model, i);
         }
 
-        private void Entry_Completed_string(object sender, System.EventArgs e)
+        private void Entry_Completed_string(object sender, EventArgs e)
         {
             var model = (sender as Entry).BindingContext as SystemObjectPropertyValueModel;
             ViewModel.CreateNewValue(model, model.Value);
@@ -98,8 +96,8 @@ namespace Vertical.Views
                 var i = Api.GetDataFromServer<SystemObjectModel>("System/GetSystemObjects", new { ObjectGUID = ObjectGUID.Value }).FirstOrDefault();
                 ViewModel = new CheckPageViewModel(i) { Navigation = this.Navigation };
                 BindingContext = ViewModel;
-                
             }
         }
+ 
     }
 }

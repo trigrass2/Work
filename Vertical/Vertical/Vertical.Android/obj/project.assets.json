@@ -229,6 +229,15 @@
           "lib/MonoAndroid10/Syncfusion.Core.XForms.dll": {}
         }
       },
+      "Syncfusion.Xamarin.DataSource/17.2.0.36": {
+        "type": "package",
+        "compile": {
+          "lib/MonoAndroid10/Syncfusion.DataSource.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/Syncfusion.DataSource.Portable.dll": {}
+        }
+      },
       "Syncfusion.Xamarin.SfAutoComplete/17.2.0.35": {
         "type": "package",
         "dependencies": {
@@ -1186,6 +1195,7 @@
           "RestSharp": "106.6.10",
           "Syncfusion.Licensing": "17.2.0.35",
           "Syncfusion.Xamarin.Buttons": "17.2.0.35",
+          "Syncfusion.Xamarin.DataSource": "17.2.0.36",
           "Syncfusion.Xamarin.SfAutoComplete": "17.2.0.35",
           "Syncfusion.Xamarin.SfComboBox": "17.2.0.35",
           "Xam.Plugin.Connectivity": "3.2.0",
@@ -1214,6 +1224,7 @@
         "acr.userdialogs.7.0.4.nupkg.sha512",
         "acr.userdialogs.nuspec",
         "lib/monoandroid81/Acr.UserDialogs.dll",
+        "lib/monoandroid81/Acr.UserDialogs.dll.mdb",
         "lib/monoandroid81/Acr.UserDialogs.pdb",
         "lib/monoandroid90/Acr.UserDialogs.dll",
         "lib/monoandroid90/Acr.UserDialogs.pdb",
@@ -1599,6 +1610,27 @@
         "lib/uap10.0/Syncfusion.Core.XForms.xml",
         "syncfusion.xamarin.core.17.2.0.35.nupkg.sha512",
         "syncfusion.xamarin.core.nuspec"
+      ]
+    },
+    "Syncfusion.Xamarin.DataSource/17.2.0.36": {
+      "sha512": "AYq4psbU2qWmI/GDj9wjKVo/6piAWYCSdE3BhF1NKoFrOyNXG9ZenIdwXYfctjc/KGUUcoi2AoAfG1vLKWR/yg==",
+      "type": "package",
+      "path": "syncfusion.xamarin.datasource/17.2.0.36",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/Syncfusion.DataSource.Portable.XML",
+        "lib/MonoAndroid10/Syncfusion.DataSource.Portable.dll",
+        "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.XML",
+        "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll",
+        "lib/netstandard2.0/Syncfusion.DataSource.Portable.XML",
+        "lib/netstandard2.0/Syncfusion.DataSource.Portable.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.DataSource.Portable.XML",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.DataSource.Portable.dll",
+        "lib/uap10.0/Syncfusion.DataSource.Portable.XML",
+        "lib/uap10.0/Syncfusion.DataSource.Portable.dll",
+        "syncfusion.xamarin.datasource.17.2.0.36.nupkg.sha512",
+        "syncfusion.xamarin.datasource.nuspec"
       ]
     },
     "Syncfusion.Xamarin.SfAutoComplete/17.2.0.35": {
@@ -5366,6 +5398,7 @@
       "RestSharp >= 106.6.10",
       "Syncfusion.Licensing >= 17.2.0.35",
       "Syncfusion.Xamarin.Buttons >= 17.2.0.35",
+      "Syncfusion.Xamarin.DataSource >= 17.2.0.36",
       "Syncfusion.Xamarin.SfAutoComplete >= 17.2.0.35",
       "Syncfusion.Xamarin.SfComboBox >= 17.2.0.35",
       "Vertical >= 1.0.0",
@@ -5446,6 +5479,10 @@
           "Syncfusion.Xamarin.Buttons": {
             "target": "Package",
             "version": "[17.2.0.35, )"
+          },
+          "Syncfusion.Xamarin.DataSource": {
+            "target": "Package",
+            "version": "[17.2.0.36, )"
           },
           "Syncfusion.Xamarin.SfAutoComplete": {
             "target": "Package",

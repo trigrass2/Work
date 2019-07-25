@@ -30,14 +30,6 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                <Button
-                    Text="+" FontAttributes="Bold" FontSize="Medium"
-                    Style="{x:StaticResource BlueButtonStyle}" 
-                    HeightRequest="50" WidthRequest="50"
-                    CornerRadius="30"
-                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=-55}"
-                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-55}"
-                    IsEnabled="{Binding IsEnabled}"/>
             </RelativeLayout>
 
         </stateContainerDemo:StateCondition>

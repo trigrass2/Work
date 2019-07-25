@@ -72,7 +72,6 @@ namespace Vertical.ViewModels
 
         public ManualObjectsPageViewModel(SystemObjectModel _parentObject)
         {
-            //ObjectImage = SvgImageSource.FromSvgResource("Vertical.SvgPictures.folder.svg");
             ParentObject = _parentObject;
             Title = ParentObject?.Name;
             SystemObjectModels = new ObservableCollection<SystemObjectModel>();
