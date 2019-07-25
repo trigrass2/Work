@@ -1,6 +1,8 @@
-﻿using System.ComponentModel;
+﻿using Syncfusion.XForms.Buttons;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Vertical.Models;
+using Vertical.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -31,9 +33,13 @@ namespace Vertical.Views
                 SetValue(ObjectGUIDProperty, value);
             }
         }
+        public CheckPageViewModel ViewModel { get; set; }
 
-        public NestedObjectView()
+        public StackLayout MainStack;
+        public SfCheckBox sfCheckBox;
+        public NestedObjectView(CheckPageViewModel viewModel)
         {
+            ViewModel = viewModel;
             BackgroundColor = Color.LightGray;
         }
 
@@ -49,55 +55,11 @@ namespace Vertical.Views
             }
         }
 
-        
+        private void SetContent()
+        {
+            var items = ViewModel.SystemPropertyModels;
 
-        //public StateContainer stateContainer = new StateContainer
-        //{
-        //    State = _states,
-        //    Conditions =
-        //    {
-        //        new StateCondition
-        //        {
-        //            Is = "Loading",
-        //            Content = new ActivityIndicator
-        //            {
-        //                IsRunning = true, 
-        //                Color = Color.FromHex("#ff4114"),
-        //                HeightRequest = 50,
-        //                WidthRequest = 50,
-        //                HorizontalOptions = new LayoutOptions(LayoutAlignment.Center, true),
-        //                VerticalOptions = new LayoutOptions(LayoutAlignment.Center, true)
-        //            }
-        //        },
-        //        new StateCondition
-        //        {
-        //            Is = "Normal",
-        //            Content = new StackLayout
-        //            {
-        //                Children =
-        //                {
-        //                    new Label
-        //                    {
-        //                        Text = ObjectGUID.Name,
-        //                        FontSize = 12
-        //                    },
-        //                    new CheckListView()
-        //                    {
-        //                        ObjectGUID = ObjectGUID
-        //                    },
-        //                    new Button {
-        //                        Text = "добавить объект",
-        //                        TextColor = Color.Black,                                
-        //                        FontSize = 10,
-        //                        BackgroundColor = Color.FromHex("#43B05C"),
-        //                        CornerRadius = 5,
-        //                        WidthRequest = 100,
-        //                        Padding = new Thickness(1)                                
-        //                    }
-        //                }
-        //            }
-        //        }
-        //    }
-        //};
+        }
+        
     }
 }

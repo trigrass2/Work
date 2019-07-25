@@ -7,116 +7,91 @@
              xmlns:stateContainerDemo="clr-namespace:Xamarin.Forms.Essentials.Controls;assembly=Xamarin.Forms.Essentials.Controls"
              xmlns:svg="clr-namespace:Xamarin.Forms.Svg;assembly=SvgImageSource"
              xmlns:views="clr-namespace:Vertical.Views"
-             xmlns:datagrid="clr-namespace:DevExpress.Mobile.DataGrid;assembly=DevExpress.Mobile.Grid.v18.2"
              x:Class="Vertical.Views.CheckListView"
              x:Name="thisPage">
     <ContentView.Resources>
         <ResourceDictionary>
-            
+            <DataTemplate x:Key="groupTemplate">
+                <Label Text="{Binding Key}" FontSize="Subtitle" TextColor="Black"/>
+            </DataTemplate>
             <DataTemplate x:Key="boolTemplate">
-                <ViewCell>
-                    <ViewCell.View>
-                        <StackLayout Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal">
 
-                            <sfbuttons:SfCheckBox Grid.Column="1" Text="{Binding Name}" BindingContext="{Binding}" CheckedColor="#ff4114" StateChanged="SfCheckBox_StateChanged" 
+                    <sfbuttons:SfCheckBox Grid.Column="1" Text="{Binding Name}" BindingContext="{Binding}" CheckedColor="#ff4114" StateChanged="SfCheckBox_StateChanged" 
                                                   FontSize="12" 
                                                   BackgroundColor="#fafafa" VerticalOptions="Center" IsChecked="{Binding Value, Mode=TwoWay}">
-                            </sfbuttons:SfCheckBox>
-                        </StackLayout>
-                    </ViewCell.View>
-                </ViewCell>
+                    </sfbuttons:SfCheckBox>
+                </StackLayout>                
             </DataTemplate>
             <DataTemplate x:Key="dateTimeTemplate">
-                <ViewCell>
-                    <ViewCell.View>
-                        <StackLayout>
-                            <Label Text="{Binding Name}" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption"/>
-                            <Label Text="{Binding Value}" FontSize="Micro"/>
-                        </StackLayout>
-                    </ViewCell.View>
-                </ViewCell>
+                <StackLayout>
+                    <Label Text="{Binding Name}" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption"/>
+                    <Label Text="{Binding Value}" FontSize="Micro"/>
+                </StackLayout>
             </DataTemplate>
             <DataTemplate x:Key="floatTemplate">
-                <ViewCell>
-                    <ViewCell.View>
-                        <inputLayout:SfTextInputLayout
+                <inputLayout:SfTextInputLayout
                             Style="{x:StaticResource SfTextInputLayoutStyle}"
                             UnfocusedColor="Black"
                             HelperText="{Binding Name}"
                             Margin="0,0,0,10">
-                            <Entry Text="{Binding Value, Mode=TwoWay}" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption" BindingContext="{Binding}" Completed="Entry_Completed_float"/>
-                        </inputLayout:SfTextInputLayout>
-                    </ViewCell.View>
-                </ViewCell>
+                    <Entry Text="{Binding Value, Mode=TwoWay}" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption" BindingContext="{Binding}" Completed="Entry_Completed_float"/>
+                </inputLayout:SfTextInputLayout>
             </DataTemplate>
             <DataTemplate x:Key="intTemplate">
-                <ViewCell>
-                    <ViewCell.View>
-                        <inputLayout:SfTextInputLayout                            
+                <inputLayout:SfTextInputLayout                            
                             Style="{x:StaticResource SfTextInputLayoutStyle}"
                             HelperText="{Binding Name}"
                             UnfocusedColor="Black">
-                            <Entry Text="{Binding Value}" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption" BindingContext="{Binding}" Completed="Entry_Completed_int"/>
-                        </inputLayout:SfTextInputLayout>
-                    </ViewCell.View>
-                </ViewCell>
+                    <Entry Text="{Binding Value}" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption" BindingContext="{Binding}" Completed="Entry_Completed_int"/>
+                </inputLayout:SfTextInputLayout>
             </DataTemplate>
             <DataTemplate x:Key="objectTemplate">
-                <ViewCell>
-                    <Frame Padding="0" BorderColor="Gray">
-                        <Grid x:Name="Item" Margin="5">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="20"/>
-                                <RowDefinition Height="Auto"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
+                <Frame Padding="0" BorderColor="Gray">
+                    <Grid x:Name="Item" Margin="5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
 
-                            </Grid.ColumnDefinitions>
+                        </Grid.ColumnDefinitions>
 
-                            <StackLayout Orientation="Horizontal" Grid.Column="0" Grid.Row="0">
-                                <Label Text="{Binding Name}" TextColor="Black" />
-                                <Button Text="+" Style="{StaticResource BlueButtonStyle}"
+                        <StackLayout Orientation="Horizontal" Grid.Column="0" Grid.Row="0">
+                            <Label Text="{Binding Name}" TextColor="Black" />
+                            <Button Text="+" Style="{StaticResource BlueButtonStyle}"
                                 BackgroundColor="#fafafa" Padding="0" TextColor="Green" FontAttributes="Bold"
                                 Command="{Binding Source={x:Reference thisPage}, Path = BindingContext.AddNewObjectInPropertyCommand}" 
                                 CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
                                 HeightRequest="30" WidthRequest="30"/>
-                            </StackLayout>
-                            <views:CheckListView ObjectGUID="{Binding}" Grid.Column="0" Grid.Row="1" MinimumHeightRequest="100"/>
-                        </Grid>
-                    </Frame>
-                                     
-                </ViewCell>
+                        </StackLayout>
+                        <views:CheckListView ObjectGUID="{Binding}" Grid.Column="0" Grid.Row="1" MinimumHeightRequest="100"/>
+                    </Grid>
+                </Frame>
             </DataTemplate>
             <DataTemplate x:Key="stringTemplate">
-                <ViewCell>
-                    <ViewCell.View>
-                        <StackLayout>
-                            <inputLayout:SfTextInputLayout                            
+                <StackLayout>
+                    <inputLayout:SfTextInputLayout                            
                                 Style="{x:StaticResource SfTextInputLayoutStyle}"
                                 HelperText="{Binding Name}"
                                 UnfocusedColor="Black"
                                 >
-                                <Entry Text="{Binding Value}" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption" BindingContext="{Binding}" Completed="Entry_Completed_string"/>
-                            </inputLayout:SfTextInputLayout>
-                        </StackLayout>
-
-                    </ViewCell.View>
-                </ViewCell>
+                        <Entry Text="{Binding Value}" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption" BindingContext="{Binding}" Completed="Entry_Completed_string"/>
+                    </inputLayout:SfTextInputLayout>
+                </StackLayout>
+                
             </DataTemplate>
             <DataTemplate x:Key="humanTemplate">
-                <ViewCell>
-                    <ViewCell.View>
-                        <StackLayout>
-                            <Label Text="{Binding Name}" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption"/>
-                            <Label Text="{Binding Value}" FontSize="Micro"/>
-                        </StackLayout>
-
-                    </ViewCell.View>
-                </ViewCell>
+                <StackLayout>
+                    <Label Text="{Binding Name}" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption"/>
+                    <Label Text="{Binding Value}" FontSize="Micro"/>
+                </StackLayout>
+                
             </DataTemplate>
         </ResourceDictionary>
         <local:ChecklistDataTemplateSelector x:Key="checklistDataTemplateSelector"
+                                             GroupTemplate="{StaticResource groupTemplate}"
                                              BoolTemplate="{StaticResource boolTemplate}"
                                              DateTimeTemplate="{StaticResource dateTimeTemplate}"
                                              FloatTemplate="{StaticResource floatTemplate}"
@@ -127,54 +102,43 @@
     </ContentView.Resources>
     <stateContainerDemo:StateContainer State ="{Binding States}">
         <stateContainerDemo:StateCondition Is="Normal">
-            <RelativeLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                
-                <Label 
-                    x:Name="titleLabel" Margin="7,0,7,0"
-                    Text="{Binding SystemObjectModel.Name}"
-                    FontSize="Title" TextColor="Black"
-                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"                    
-                    />
-                <ListView x:Name="listViewProperties"
-                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=titleLabel, Property=Height, Factor=1, Constant=5}"
-                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
-                    
-                    ItemsSource="{Binding SystemPropertyModels}" 
-                    ItemTemplate="{StaticResource checklistDataTemplateSelector}"
-                    HeaderTemplate="{Binding Name}"
-                    IsGroupingEnabled="true"              
-                    
-                    HasUnevenRows="True"
-                    Margin="7">
-                    <ListView.GroupHeaderTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <StackLayout>
-                                    <Label Text="{Binding Name}" FontSize="Subtitle" FontAttributes="Bold" TextColor="Black" Margin="0,7,0,0"/>
-                                </StackLayout>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.GroupHeaderTemplate>
-                    
-                </ListView>
-                
-                <Button                    
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <ScrollView Grid.Row="0">
+                    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="7">
+                        <Label 
+                                x:Name="titleLabel" Margin="7,0,7,0"
+                                Text="{Binding SystemObjectModel.Name}"
+                                FontSize="Title" TextColor="Black"                    
+                                />
+                        <StackLayout 
+                                
+                                BindableLayout.ItemsSource="{Binding SourceObjects.DisplayItems}"
+                                BindableLayout.ItemTemplateSelector="{StaticResource checklistDataTemplateSelector}">
+                        </StackLayout>
+
+                    </StackLayout>
+
+                </ScrollView>
+                <Button 
+                    Grid.Row="1"
+                    Margin="5"
                     x:Name="addNewObjectButton"                    
                     BackgroundColor="#41a32e"
                     Command="{Binding SavePropertiesValuesCommand}"
                     HeightRequest="50" WidthRequest="50"
                     CornerRadius="30"
-                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=-60}"
-                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-60}"
                     IsEnabled="{Binding IsEnabled}"
-                    IsVisible="{Binding IsVisibleSaveButton, Mode=TwoWay}">
-                    <Button.ImageSource>
-                        <svg:SvgImageSource Source="Vertical.SvgPictures.save.svg" Height="30" Width="30"/>
-                    </Button.ImageSource>
-                </Button>
-            </RelativeLayout>
+                    IsVisible="{Binding IsVisibleSaveButton, Mode=TwoWay}"
+                    Text="Сохранить"
+                    TextColor="White"
+                    FontAttributes="Bold"/>
 
 
+            </Grid>
         </stateContainerDemo:StateCondition>
 
         <stateContainerDemo:StateCondition Is="Loading">

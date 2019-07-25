@@ -3,9 +3,84 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:stateContainerDemo="clr-namespace:Xamarin.Forms.Essentials.Controls;assembly=Xamarin.Forms.Essentials.Controls"
              xmlns:svg="clr-namespace:Xamarin.Forms.Svg;assembly=SvgImageSource"
+             xmlns:local="clr-namespace:Vertical.CustomViews"
              x:Class="Vertical.Views.ManualObjectsPage"
              x:Name="Page"
              Title="Объекты">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="checkListDataTemplate">
+                <ViewCell>
+                    <ViewCell.View>
+                        <Grid x:Name="Item">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="5*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image x:Name="objImage" Grid.Column="0" BackgroundColor="#fafafa" Margin="10">
+                                <Image.Source>
+                                    <svg:SvgImageSource Source="Vertical.SvgPictures.file.svg" Height="20" Width="20"/>
+                                </Image.Source>
+                            </Image>
+                            <Label 
+                                            x:Name="nameObjectLabel" Text="{Binding Name}" TextColor="Black" VerticalTextAlignment="Center" FontSize="Body"
+                                            Grid.Column="1"/>
+                            <Button                                            
+                                            Margin="0,0,5,0"
+                                            Command="{Binding Source={x:Reference Page}, Path = BindingContext.GoToEditObjectPageCommand}" 
+                                            CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
+                                            HorizontalOptions="End"
+                                            Grid.Column="2"
+                                            BackgroundColor="#fafafa"
+                                            IsEnabled="{Binding Source={x:Reference Page}, Path = BindingContext.IsEnabled}">
+                                <Button.ImageSource>
+                                    <svg:SvgImageSource Source="Vertical.SvgPictures.ic_contextMenu.svg" Height="20" Width="20"/>
+                                </Button.ImageSource>
+                            </Button>
+                        </Grid>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="folderDataTemplate">
+                <ViewCell>
+                    <ViewCell.View>
+                        <Grid x:Name="Item">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="5*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image x:Name="objImage" Grid.Column="0" BackgroundColor="#fafafa" Margin="10">
+                                <Image.Source>
+                                    <svg:SvgImageSource Source="Vertical.SvgPictures.folder.svg" Height="20" Width="20"/>
+                                </Image.Source>
+                            </Image>
+                            <Label 
+                                            x:Name="nameObjectLabel" Text="{Binding Name}" TextColor="Black" VerticalTextAlignment="Center" FontSize="Body"
+                                            Grid.Column="1"/>
+                            <Button                                            
+                                            Margin="0,0,5,0"
+                                            Command="{Binding Source={x:Reference Page}, Path = BindingContext.GoToEditObjectPageCommand}" 
+                                            CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
+                                            HorizontalOptions="End"
+                                            Grid.Column="2"
+                                            BackgroundColor="#fafafa"
+                                            IsEnabled="{Binding Source={x:Reference Page}, Path = BindingContext.IsEnabled}">
+                                <Button.ImageSource>
+                                    <svg:SvgImageSource Source="Vertical.SvgPictures.ic_contextMenu.svg" Height="20" Width="20"/>
+                                </Button.ImageSource>
+                            </Button>
+                        </Grid>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+            <local:ImageObjectDataTemplateSelector x:Key="imageObjectDataTemplateSelector"
+                                             CheckListDataTemplate="{StaticResource checkListDataTemplate}"
+                                             FolderDataTemplate="{StaticResource folderDataTemplate}"
+                                             />
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <stateContainerDemo:StateContainer State ="{Binding States}">
         <stateContainerDemo:StateCondition Is="Normal">
             <RelativeLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
@@ -22,42 +97,9 @@
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=titleLabel, Property=Height, Factor=1, Constant=5}"
                     RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-50}"
                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
-                    CachingStrategy="RecycleElement" IsEnabled="{Binding IsEnabled}">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <ViewCell.View>
-                                    <Grid x:Name="Item">
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="1*"/>
-                                            <ColumnDefinition Width="5*"/>
-                                            <ColumnDefinition Width="1*"/>
-                                        </Grid.ColumnDefinitions>
-                                        <Image x:Name="objImage" Grid.Column="0" BackgroundColor="#fafafa" Margin="10">
-                                            <Image.Source>
-                                                <svg:SvgImageSource Source="Vertical.SvgPictures.folder.svg" Height="20" Width="20"/>
-                                            </Image.Source>
-                                        </Image>
-                                        <Label 
-                                            x:Name="nameObjectLabel" Text="{Binding Name}" TextColor="Black" VerticalTextAlignment="Center" FontSize="Body"
-                                            Grid.Column="1"/>
-                                        <Button                                            
-                                            Margin="0,0,5,0"
-                                            Command="{Binding Source={x:Reference Page}, Path = BindingContext.GoToEditObjectPageCommand}" 
-                                            CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
-                                            HorizontalOptions="End"
-                                            Grid.Column="2"
-                                            BackgroundColor="#fafafa"
-                                            IsEnabled="{Binding Source={x:Reference Page}, Path = BindingContext.IsEnabled}">
-                                            <Button.ImageSource>
-                                                <svg:SvgImageSource Source="Vertical.SvgPictures.ic_contextMenu.svg" Height="20" Width="20"/>
-                                            </Button.ImageSource>                                            
-                                        </Button>
-                                    </Grid>
-                                </ViewCell.View>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
+                    CachingStrategy="RecycleElement" IsEnabled="{Binding IsEnabled}"
+                    ItemTemplate="{StaticResource imageObjectDataTemplateSelector }">
+                    
                 </ListView>
                 <Button                    
                     x:Name="addNewObjectButton"

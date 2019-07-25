@@ -19,7 +19,8 @@ namespace Vertical.CustomViews
             var id = (item as SystemObjectPropertyValueModel)?.TypeID;
 
             switch (id)
-            {                
+            {
+                case null: return GroupTemplate;
                 case 1: return BoolTemplate;
                 case 2: return DateTimeTemplate;
                 case 3: return FloatTemplate;

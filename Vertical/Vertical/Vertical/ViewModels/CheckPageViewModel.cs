@@ -29,7 +29,7 @@ namespace Vertical.ViewModels
 
 
         public SystemObjectModel SystemObjectModel { get; set; }
-        public ObservableCollection<GroupingModel<SystemObjectPropertyValueModel>> SystemPropertyModels { get; set; }
+        public ObservableCollection<SystemObjectPropertyValueModel> SystemPropertyModels { get; set; }
         public ObservableCollection<AddSystemObjectPropertyValueModel> NewValues { get; set; }
         public ObservableCollection<AddSystemObjectPropertyValueModel> StartValues { get; set; }
 
@@ -40,10 +40,11 @@ namespace Vertical.ViewModels
         public CheckPageViewModel(SystemObjectModel obj)
         {
             SourceObjects = new DataSource();
+            SourceObjects.GroupDescriptors.Add(new GroupDescriptor("GroupName"));
             SystemObjectModel = obj;            
             NewValues = new ObservableCollection<AddSystemObjectPropertyValueModel>();
             StartValues = new ObservableCollection<AddSystemObjectPropertyValueModel>();
-            SystemPropertyModels = new ObservableCollection<GroupingModel<SystemObjectPropertyValueModel>>();
+            SystemPropertyModels = new ObservableCollection<SystemObjectPropertyValueModel>();
             UpdateSystemPropertyModels();           
             
         }
@@ -75,23 +76,22 @@ namespace Vertical.ViewModels
                         OkText = "Создать",
                         Title = "Создание объекта"                        
                     });
-
-                    await Task.Run(async ()=> {
-                        using (UserDialogs.Instance.Loading("Создание объекта...", null, null, true, MaskType.Black))
-                        {
+                    using (UserDialogs.Instance.Loading("Создание объекта...", null, null, true, MaskType.Black))
+                    {
+                        await Task.Run(async () => {
                             if (pResult.Ok && !string.IsNullOrWhiteSpace(pResult.Text))
                             {
-                                
+
                                 string guidNewItem = Api.AddSystemObject(new { Name = pResult.Text, TypeID = typeId, ParentGUID = prop.SystemObjectGUID });
                                 if (guidNewItem != default(string))
                                 {
                                     int valueNum = 0;
-                                    if(prop.Value != null)
+                                    if (prop.Value != null)
                                     {
                                         valueNum = Api.GetDataFromServer<SystemObjectPropertyValueModel>("System/GetSystemObjectPropertiesValues", new { ObjectGUID = SystemObjectModel?.GUID }).Max(x => x.ValueNum);
-                                        
+
                                     }
-                                    
+
                                     prop.Value = guidNewItem;
                                     await Api.SendDataToServerAsync("System/AddSystemObjectPropertyValue",
                                         new
@@ -100,14 +100,16 @@ namespace Vertical.ViewModels
                                             PropertyID = prop.ID,
                                             PropertyNum = prop.Num,
                                             Value = prop.Value,
-                                            ValueNum = valueNum++
+                                            ValueNum = valueNum+1
                                         });
 
                                 }
                                 Device.BeginInvokeOnMainThread(() => UpdateSystemPropertyModels());
                             }
-                        }
-                    });
+
+                        });
+                    }
+                    
                                                            
                 }
             }
@@ -126,7 +128,8 @@ namespace Vertical.ViewModels
             SystemPropertyModels.Clear();
 
             var values = Api.GetDataFromServer<SystemObjectPropertyValueModel>("System/GetSystemObjectPropertiesValues", new { ObjectGUID = SystemObjectModel?.GUID });
-            if(values.Count == 0)
+
+            if (values.Count == 0)
             {
                 States = States.NoData;
                 return;
@@ -157,21 +160,19 @@ namespace Vertical.ViewModels
                 NewValues.Add(item);
                 StartValues.Add(item);
             }
-
-            var groups = values?.OrderBy(o => o.GroupID).Select(x => x.GroupName).Distinct();
-
             
             try
             {
-                foreach (var s in groups)
+                foreach (var s in values?.OrderBy(o => o.GroupID))
                 {
-                    SystemPropertyModels.Add(GetGroup(s, values));
+                    SystemPropertyModels.Add(s);
                 }
             }
             catch (Exception ex)
             {
                 Loger.WriteMessage(Android.Util.LogPriority.Error, "In foreach (var s in groups){} ->", ex.Message);
             }
+            SourceObjects.Source = SystemPropertyModels;
             
             States = States.Normal;
             IsRefreshing = false;
@@ -221,7 +222,7 @@ namespace Vertical.ViewModels
 
             if(property.TypeID == 1)
             {
-                if (NewValues.Any(x => x.PropertyID == item.PropertyID && !x.Value.Equals(item.Value)))
+                if (NewValues.Any(x => x.PropertyID == item.PropertyID && (x?.Value == null | !x.Value.Equals(item.Value))))
                 {
                     NewValues[NewValues.IndexOf(NewValues.Where(x => x.PropertyID.Equals(item.PropertyID)).First())] = item;
                 }

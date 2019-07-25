@@ -56,8 +56,16 @@ namespace Vertical.Views
 
         private void SfCheckBox_StateChanged(object sender, StateChangedEventArgs e)
         {
-            var model = (sender as SfCheckBox).BindingContext as SystemObjectPropertyValueModel;
-            ViewModel.CreateNewValue(model, e.IsChecked);
+            try
+            {
+                var model = (sender as SfCheckBox).BindingContext as SystemObjectPropertyValueModel;
+                ViewModel.CreateNewValue(model, e.IsChecked);
+            }
+            catch (Exception ex)
+            {
+                
+            }
+            
         }
 
         private async void Entry_Completed_float(object sender, EventArgs e)
