@@ -11,14 +11,9 @@ namespace Vertical.ViewModels
 {   
     [AddINotifyPropertyChangedInterface]
     public class MenuPageViewModel
-    {        
-        public ICommand MoveToChekPageCommand => new Command(MoveToChekPage);
+    {
         public ICommand MoveToCatalogPageCommand => new Command(MoveToCatalogPage);
-        public ICommand MoveToRequestPageCommand => new Command(MoveToRequestPage);
-        public ICommand UpdateContentCommand => new Command(UpdateContent);
-
         public INavigation Navigation { get; set; }
-
         public States StatesPage { get; set; } = States.Loading;
         public bool IsEnabled { get; set; } = true;
 
@@ -26,14 +21,6 @@ namespace Vertical.ViewModels
         {
             StatesPage = States.Normal;
         }        
-
-        /// <summary>
-        /// Открывает страницу с чеклистами
-        /// </summary>
-        private async void MoveToChekPage()
-        {
-           
-        }
 
         /// <summary>
         /// Открывает страницу со справочниками
@@ -46,24 +33,8 @@ namespace Vertical.ViewModels
             await Navigation.PushAsync(await Task.Run(()=> new ManualPage()));
 
             StatesPage = States.Normal;
-            IsEnabled = true;
-           
+            IsEnabled = true;           
         }
 
-        /// <summary>
-        /// Открывает страницу с заявками
-        /// </summary>
-        private async void MoveToRequestPage()
-        {
-            
-        }
-        
-        /// <summary>
-        /// Обновление страницы
-        /// </summary>
-        private void UpdateContent()
-        {
-
-        }
     }
 }

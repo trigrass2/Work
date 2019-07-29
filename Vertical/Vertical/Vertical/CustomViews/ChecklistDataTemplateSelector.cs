@@ -1,4 +1,8 @@
-﻿using Vertical.Models;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Vertical.Models;
+using Vertical.Services;
 using Xamarin.Forms;
 
 namespace Vertical.CustomViews
@@ -13,6 +17,12 @@ namespace Vertical.CustomViews
         public DataTemplate StringTemplate { get; set; }
         public DataTemplate HumanTemplate { get; set; }
         public DataTemplate GroupTemplate { get; set; }
+        public DataTemplate ArrangementDataTemplate { get; set; }
+        public DataTemplate PostDataTemplate { get; set; }
+        public DataTemplate HumanWithProfiDataTemplate { get; set; }
+        public DataTemplate ProfiDataTemplate { get; set; }
+        public DataTemplate CraneDataTemplate { get; set; }
+        public DataTemplate CatalogDataTemplate { get; set; }
 
         protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
         {
@@ -25,7 +35,22 @@ namespace Vertical.CustomViews
                 case 2: return DateTimeTemplate;
                 case 3: return FloatTemplate;
                 case 4: return IntTemplate;
-                case 5: return ObjectTemplate;
+                case 5:
+                    {
+                        var objectType = Api.GetDataFromServer<SystemObjectModel>("System/GetSystemObjects", new { ObjectGUID = (item as SystemObjectPropertyValueModel).Value });
+                        
+                        switch (objectType?.FirstOrDefault().TypeID)
+                        {
+                            case 1: return CatalogDataTemplate;
+                            case 3: return ArrangementDataTemplate;
+                            //case 4: return HumanWithProfiDataTemplate;
+                            case 5: return PostDataTemplate;
+                            case 6: return ProfiDataTemplate;
+                            case 9: return CraneDataTemplate;
+                                default: return ObjectTemplate;
+                        }
+                        
+                    }
                 case 6: return StringTemplate;
                 case 7: return HumanTemplate;
                     default: return ObjectTemplate;

@@ -10,6 +10,7 @@ namespace Vertical
     {
         public App()
         {
+            
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MTIxODUxQDMxMzcyZTMyMmUzMGF5QTk0L0pZM2RxL0NKWDhtT3JySjZMU2QxY2lrcFNpTVEyL1E0OG9mUnc9");
             InitializeComponent();
             

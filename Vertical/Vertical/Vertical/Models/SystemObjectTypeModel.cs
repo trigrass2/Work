@@ -17,5 +17,20 @@ namespace Vertical.Models
         /// Название типа объекта
         /// </summary>
         public string Name { get; set; }
+
+        /// <summary>
+        /// Видимость объекта
+        /// </summary>
+        public bool Hidden { get; set; }
+
+        /// <summary>
+        /// ID прототипа
+        /// </summary>
+        public int PrototipeID { get; set; }
+
+        /// <summary>
+        /// Имя прототипа
+        /// </summary>
+        public string PrototypeName { get; set; }
     }
 }

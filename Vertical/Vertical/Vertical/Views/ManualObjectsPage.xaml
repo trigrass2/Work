@@ -18,9 +18,12 @@
                                 <ColumnDefinition Width="5*"/>
                                 <ColumnDefinition Width="1*"/>
                             </Grid.ColumnDefinitions>
-                            <Image x:Name="objImage" Grid.Column="0" BackgroundColor="#fafafa" Margin="10">
+                            <Image x:Name="checklistImage" Grid.Column="0" BackgroundColor="#fafafa" Margin="10">
                                 <Image.Source>
-                                    <svg:SvgImageSource Source="Vertical.SvgPictures.file.svg" Height="20" Width="20"/>
+                                    <FontImageSource
+                                        FontFamily="{DynamicResource MaterialFontFamily}"
+                                        Glyph="{StaticResource IconFile}"
+                                        Color="{StaticResource GreyColor}"/>
                                 </Image.Source>
                             </Image>
                             <Label 
@@ -53,7 +56,10 @@
                             </Grid.ColumnDefinitions>
                             <Image x:Name="objImage" Grid.Column="0" BackgroundColor="#fafafa" Margin="10">
                                 <Image.Source>
-                                    <svg:SvgImageSource Source="Vertical.SvgPictures.folder.svg" Height="20" Width="20"/>
+                                    <FontImageSource
+                                        FontFamily="{DynamicResource MaterialFontFamily}"
+                                        Glyph="{StaticResource IconFolder}"
+                                        Color="Wheat"/>
                                 </Image.Source>
                             </Image>
                             <Label 

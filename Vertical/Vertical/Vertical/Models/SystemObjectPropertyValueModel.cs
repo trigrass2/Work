@@ -88,6 +88,11 @@ namespace Vertical.Models
         /// <summary>
         /// GUID Объекта-источника
         /// </summary>
-        public string SourceObjectGUID { get; set; }
+        public string SourceObjectParentGUID { get; set; }
+
+        /// <summary>
+        /// ID типа объекта-источника
+        /// </summary>
+        public int? SourceObjectTypeID { get; set; }
     }
 }

@@ -4,7 +4,6 @@ using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Threading.Tasks;
 using Vertical.Models;
 using Vertical.Services;
 using Vertical.ViewModels;
@@ -45,8 +44,9 @@ namespace Vertical.Views
         public CheckListView()
         {
             InitializeComponent();            
-        }
+        } 
 
+        #region Events
         public CheckListView (CheckPageViewModel viewModel)
 		{
 			InitializeComponent ();
@@ -106,6 +106,6 @@ namespace Vertical.Views
                 BindingContext = ViewModel;
             }
         }
- 
+        #endregion
     }
 }

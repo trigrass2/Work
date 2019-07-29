@@ -25,13 +25,13 @@ namespace Vertical.ViewModels
         public ICommand AddNewObjectInPropertyCommand => new Command(AddNewObjectInPropperty);
         public bool IsEnabled { get; set; } = true;
         public bool IsVisibleSaveButton { get; set; }
-        public bool IsRefreshing { get; set; } = false;
-
 
         public SystemObjectModel SystemObjectModel { get; set; }
         public ObservableCollection<SystemObjectPropertyValueModel> SystemPropertyModels { get; set; }
+        public ObservableCollection<SystemObjectPropertyValueModel> Objects { get; set; }
         public ObservableCollection<AddSystemObjectPropertyValueModel> NewValues { get; set; }
         public ObservableCollection<AddSystemObjectPropertyValueModel> StartValues { get; set; }
+        public ObservableCollection<SystemObjectModel> Posts { get; set; }
 
         public DataSource SourceObjects { get; set; }
 
@@ -41,11 +41,14 @@ namespace Vertical.ViewModels
         {
             SourceObjects = new DataSource();
             SourceObjects.GroupDescriptors.Add(new GroupDescriptor("GroupName"));
-            SystemObjectModel = obj;            
+            SourceObjects.GroupDescriptors.Add(new GroupDescriptor("ID"));
+            SystemObjectModel = obj;
+            Objects = new ObservableCollection<SystemObjectPropertyValueModel>();
             NewValues = new ObservableCollection<AddSystemObjectPropertyValueModel>();
             StartValues = new ObservableCollection<AddSystemObjectPropertyValueModel>();
             SystemPropertyModels = new ObservableCollection<SystemObjectPropertyValueModel>();
-            UpdateSystemPropertyModels();           
+            Posts = new ObservableCollection<SystemObjectModel>();
+            UpdateSystemPropertyModels();
             
         }
 
@@ -57,7 +60,7 @@ namespace Vertical.ViewModels
         {
             var prop = commandParameter as SystemObjectPropertyValueModel;
             
-            if (string.IsNullOrEmpty(prop.SourceObjectGUID)){
+            if (string.IsNullOrEmpty(prop.SourceObjectParentGUID)){
 
 
                 var types = Api.GetDataFromServer<SystemObjectTypeModel>("System/GetSystemObjectTypes");
@@ -89,7 +92,6 @@ namespace Vertical.ViewModels
                                     if (prop.Value != null)
                                     {
                                         valueNum = Api.GetDataFromServer<SystemObjectPropertyValueModel>("System/GetSystemObjectPropertiesValues", new { ObjectGUID = SystemObjectModel?.GUID }).Max(x => x.ValueNum);
-
                                     }
 
                                     prop.Value = guidNewItem;
@@ -115,9 +117,59 @@ namespace Vertical.ViewModels
             }
             else
             {
-                var objects = Api.GetDataFromServer<SystemObjectModel>("System/GetSystemObjects", new { ParentGUID = prop.SourceObjectGUID });
+                var objects = Api.GetDataFromServer<SystemObjectModel>("System/GetSystemObjects", new { ParentGUID = prop.SourceObjectParentGUID }).ToArray();
+                var action = await Application.Current.MainPage
+                                                  .DisplayActionSheet(
+                                                  "",
+                                                  "отмена",
+                                                  null,
+                                                  objects.Select(x => x.Name).ToArray());
+                if (!string.IsNullOrEmpty(action))
+                {
+                    using (UserDialogs.Instance.Loading("Создание объекта...", null, null, true, MaskType.Black))
+                    {
+                        var item = objects.Where(x => x.Name == action).FirstOrDefault();
+                        int valueNum = 0;
+                        if (prop.Value != null)
+                        {
+                            valueNum = Api.GetDataFromServer<SystemObjectPropertyValueModel>("System/GetSystemObjectPropertiesValues", new { ObjectGUID = SystemObjectModel?.GUID }).Max(x => x.ValueNum);
+                        }
+                        prop.Value = item.GUID;
+                        Api.SendDataToServer("System/AddSystemObjectPropertyValue",
+                                    new
+                                    {
+                                        ObjectGUID = SystemObjectModel?.GUID,
+                                        PropertyID = prop.ID,
+                                        PropertyNum = prop.Num,
+                                        Value = prop.Value,
+                                        ValueNum = valueNum + 1
+                                    });
+                        UpdateSystemPropertyModels();
+                        //Device.BeginInvokeOnMainThread(() => UpdateSystemPropertyModels());
+                        //await Task.Run( ()=> {
+
+                        //});
+                    }
+                }
             }
             
+        }
+
+        
+        private SystemObjectModel _selectedPost;
+        public SystemObjectModel SelectedPost
+        {
+            get
+            {
+                return _selectedPost;
+            }
+            set
+            {
+                if(_selectedPost != value)
+                {
+
+                }
+            }
         }
 
         /// <summary>
@@ -127,7 +179,12 @@ namespace Vertical.ViewModels
         {            
             SystemPropertyModels.Clear();
 
+            //if(SystemObjectModel?.TypeID == 1)
+            //{
+            //    Posts = new ObservableCollection<SystemObjectModel>(Api.GetDataFromServer<SystemObjectModel>("System/GetSystemObjects", new { ParentGUID = SystemObjectModel?.GUID }));
+            //}
             var values = Api.GetDataFromServer<SystemObjectPropertyValueModel>("System/GetSystemObjectPropertiesValues", new { ObjectGUID = SystemObjectModel?.GUID });
+            
 
             if (values.Count == 0)
             {
@@ -166,16 +223,20 @@ namespace Vertical.ViewModels
                 foreach (var s in values?.OrderBy(o => o.GroupID))
                 {
                     SystemPropertyModels.Add(s);
+                    if (s.TypeID == 5)
+                    {
+                        Objects.Add(s);
+                    }
                 }
             }
             catch (Exception ex)
             {
                 Loger.WriteMessage(Android.Util.LogPriority.Error, "In foreach (var s in groups){} ->", ex.Message);
             }
+            
             SourceObjects.Source = SystemPropertyModels;
             
             States = States.Normal;
-            IsRefreshing = false;
         }
 
         /// <summary>
@@ -199,7 +260,6 @@ namespace Vertical.ViewModels
                         }
                         
                     }
-                    //Device.BeginInvokeOnMainThread(() => UpdateSystemPropertyModels());
                 });
                 
                 IsVisibleSaveButton = false;
@@ -235,24 +295,24 @@ namespace Vertical.ViewModels
             IsVisibleSaveButton = StartValues.SequenceEqual(NewValues) == true ? false : true;
         }
 
-        private GroupingModel<SystemObjectPropertyValueModel> GetGroup(string nameGroup, IList<SystemObjectPropertyValueModel> items)
-        {
-            try
-            {
-                GroupingModel<SystemObjectPropertyValueModel> groupProperties = new GroupingModel<SystemObjectPropertyValueModel>(nameGroup);
+        //private GroupingModel<SystemObjectPropertyValueModel> GetGroup(string nameGroup, IList<SystemObjectPropertyValueModel> items)
+        //{
+        //    try
+        //    {
+        //        GroupingModel<SystemObjectPropertyValueModel> groupProperties = new GroupingModel<SystemObjectPropertyValueModel>(nameGroup);
 
-                foreach (var i in items.Where(x => x.GroupName == nameGroup))
-                {
-                    groupProperties.Add(i);
-                }
-                return groupProperties;
-            }
-            catch (Exception ex)
-            {
-                Loger.WriteMessage(Android.Util.LogPriority.Error, "In GetGroup ->", ex.Message);
-                return default(GroupingModel<SystemObjectPropertyValueModel>);
-            }
+        //        foreach (var i in items.Where(x => x.GroupName == nameGroup))
+        //        {
+        //            groupProperties.Add(i);
+        //        }
+        //        return groupProperties;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Loger.WriteMessage(Android.Util.LogPriority.Error, "In GetGroup ->", ex.Message);
+        //        return default(GroupingModel<SystemObjectPropertyValueModel>);
+        //    }
             
-        }
+        //}
     }
 }

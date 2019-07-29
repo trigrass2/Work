@@ -5,6 +5,20 @@
              x:Class="Vertical.App">
     <Application.Resources>
         <ResourceDictionary>
+
+            <OnPlatform x:Key="MaterialFontFamily" x:TypeArguments="x:String">
+                <On Platform="Android" Value="fontawesome-webfont.ttf#Material Design Icons"/>
+            </OnPlatform>
+
+            <Color x:Key="GreyColor">#ccc</Color>
+            <Color x:Key="BlueColor">#336dab</Color>
+            <Color x:Key="OrangeColor">#ff4114</Color>
+            <Color x:Key="BackgroundColor">#fafafa</Color>
+
+            <x:String x:Key="IconFolder">&#xf07b;</x:String>
+            <x:String x:Key="IconFile">&#xf0f6;</x:String>
+            <x:String x:Key="IconQuestion">&#xf128;</x:String>
+            
             <Style x:Key="MenuButtonStyle" TargetType="Button">
                 <Setter Property="Padding" Value="5,10,5,5"/>
                 <Setter Property="BackgroundColor" Value="White"/>
