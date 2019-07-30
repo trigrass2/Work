@@ -8,9 +8,9 @@
     <stateContainerDemo:StateContainer State ="{Binding States}">
         <stateContainerDemo:StateCondition Is="Normal">
             <StackLayout Spacing="5" Margin="10">
-                <Button Text="Объекты" Style="{x:StaticResource MenuButtonStyle}" FontSize="Body" Padding="5" Command="{Binding GoToManualObjectsPageCommand}"/>
-                <Button Text="Типы Объектов" Style="{x:StaticResource MenuButtonStyle}" FontSize="Body" Padding="5" Command="{Binding GoToManualPropertiesPageCommand}"/>
-                <Button Text="Свойства" Style="{x:StaticResource MenuButtonStyle}" FontSize="Body" Padding="5" Command="{Binding GoToManualTypesObjectsPageCommand}"/>
+                <Button Text="Объекты" Style="{x:StaticResource MenuButtonStyle}" BorderColor="#ccc" FontSize="Body" Padding="5" Command="{Binding GoToManualObjectsPageCommand}"/>
+                <Button Text="Типы Объектов" Style="{x:StaticResource MenuButtonStyle}" BorderColor="#ccc" FontSize="Body" Padding="5" Command="{Binding GoToManualPropertiesPageCommand}"/>
+                <Button Text="Свойства" Style="{x:StaticResource MenuButtonStyle}" BorderColor="#ccc" FontSize="Body" Padding="5" Command="{Binding GoToManualTypesObjectsPageCommand}"/>
             </StackLayout>
         </stateContainerDemo:StateCondition>
 

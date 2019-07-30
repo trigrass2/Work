@@ -27,7 +27,7 @@
             <DataTemplate x:Key="dateTimeTemplate">
                 <StackLayout>
                     <Label Text="{Binding Name}" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption"/>
-                    <Label Text="{Binding Value, StringFormat='{}{0:MM/dd/yyyy a\\t h:mm tt}'}" FontSize="Micro"/>
+                    <Label Text="{Binding Value, StringFormat='{}{0:yyyy-MM-dd HH:MM }'}" FontSize="Caption"/>
                 </StackLayout>
             </DataTemplate>
             <DataTemplate x:Key="floatTemplate">
@@ -110,7 +110,7 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <StackLayout Orientation="Horizontal" Grid.Column="0" Grid.Row="0">
-                            <Label Text="{Binding Name}" TextColor="Black" BackgroundColor="{StaticResource BackgroundColor}"/>
+                            <!--<Label Text="{Binding Name}" TextColor="Black" BackgroundColor="{StaticResource BackgroundColor}"/>-->
                             <Button Text="+" Style="{StaticResource BlueButtonStyle}"
                                 BackgroundColor="{StaticResource BackgroundColor}" Padding="0" TextColor="Green" FontAttributes="Bold"
                                 Command="{Binding Source={x:Reference thisPage}, Path = BindingContext.AddNewObjectInPropertyCommand}" 
@@ -206,7 +206,12 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <StackLayout Orientation="Horizontal" Grid.Column="0" Grid.Row="0">
-                            <Label Text="{Binding Name}" TextColor="Black" BackgroundColor="{StaticResource BackgroundColor}"/>                            
+                            <Label Text="{Binding Name}" TextColor="Black" BackgroundColor="{StaticResource BackgroundColor}"/>
+                            <Button Text="+" Style="{StaticResource BlueButtonStyle}"
+                                BackgroundColor="{StaticResource BackgroundColor}" Padding="0" TextColor="Green" FontAttributes="Bold"
+                                Command="{Binding Source={x:Reference thisPage}, Path = BindingContext.AddNewObjectInPropertyCommand}" 
+                                CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
+                                HeightRequest="30" WidthRequest="30"/>
                         </StackLayout>
                         <views:CheckListView ObjectGUID="{Binding}" Grid.Column="0" Grid.Row="1" MinimumHeightRequest="100"/>
                     </Grid>

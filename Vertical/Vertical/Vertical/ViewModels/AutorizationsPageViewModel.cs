@@ -13,13 +13,10 @@ using Acr.UserDialogs;
 
 namespace Vertical.ViewModels
 {
-    public class AutorizationsPageViewModel : INotifyPropertyChanged
-    {
-        public event PropertyChangedEventHandler PropertyChanged;
-
+    public class AutorizationsPageViewModel : BaseViewModel
+    {        
         public static ISettings AppSettings => CrossSettings.Current;
         public ICommand SignInCommand { get; set; }
-        public INavigation Navigation { get; set; }
         
         public static string Login
         {
@@ -37,17 +34,7 @@ namespace Vertical.ViewModels
         /// </summary>
         public User User { get; set; }
 
-        public ImageSource PikLogoImage { get; set; }
-
-        /// <summary>
-        /// Статус страницы
-        /// </summary>
-        public States States { get; set; } = States.Normal;
-
-        /// <summary>
-        /// вкл/выкл кнопки
-        /// </summary>
-        public bool IsEnabled { get; set; } = true;
+        public ImageSource PikLogoImage { get; set; } = SvgImageSource.FromSvgResource("Vertical.SvgPictures.PikGroupLogo.svg", 120, 120);
 
         /// <summary>
         /// Запуск индикатора активности
@@ -60,9 +47,9 @@ namespace Vertical.ViewModels
         private HttpStatusCode _statusAutorization { get; set; }
 
         public AutorizationsPageViewModel()
-        {           
+        {
+            States = States.Normal;
             User = new User { Login = Login, Password = Password };
-            PikLogoImage = SvgImageSource.FromSvgResource("Vertical.SvgPictures.PikGroupLogo.svg", 150, 150);
             SignInCommand = new Command(SignIn);
         }
 
@@ -70,9 +57,7 @@ namespace Vertical.ViewModels
         /// Выполняет вход в приложение
         /// </summary>
         private async void SignIn()
-        {
-            //IsRunning = true;
-
+        {            
             IsEnabled = false;
 
             using(UserDialogs.Instance.Loading("Авторизация", null, null, true, MaskType.Black))
@@ -96,7 +81,7 @@ namespace Vertical.ViewModels
                         {
                             Login = User?.Login;
                             Password = User?.Password;
-                            await Navigation.PushAsync(new MenuPage());
+                            await Navigation.PushAsync(new ManualPage());//new MenuPage());
                             States = States.Normal;
                             IsEnabled = true;
                         }
@@ -125,9 +110,6 @@ namespace Vertical.ViewModels
                         break;
                 }
             }
-            
-
-            //IsRunning = false;
         }
     }    
     

@@ -20,7 +20,7 @@ namespace Vertical.Services
         /// </summary>
         public static string AccessToken { get; private set; }
 
-        public static string AddSystemObject<T>(T model = default(T))
+        public async static Task<string> AddSystemObjectAsync<T>(T model = default(T))
         {
             var client = new RestClient(domain + $"/api/System/AddSystemObject");
 
@@ -33,7 +33,7 @@ namespace Vertical.Services
 
                 request.AddParameter("application/json", jsonModel, ParameterType.RequestBody);
 
-                var restResponse = client.Execute(request);
+                var restResponse = await client.ExecuteTaskAsync(request);
                 var res = JsonConvert.DeserializeObject<string>(restResponse.Content);
 
                 if (restResponse.IsSuccessful)

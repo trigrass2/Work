@@ -14,13 +14,11 @@ namespace Vertical.CustomViews
         public DataTemplate FolderDataTemplate { get; set; }
         public DataTemplate ObjectDataTemplate { get; set; }
 
-        IList<SystemObjectTypeModel> types = Api.GetDataFromServer<SystemObjectTypeModel>("System/GetSystemObjectTypes");
+        IList<SystemObjectTypeModel> types = Api.GetDataFromServer<SystemObjectTypeModel>("System/GetSystemObjectTypes", new { ShowHidden = true});
                           
         protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
         {            
             var prototypeId = types.Where(x => x.ID == (item as SystemObjectModel)?.TypeID).Select(p => p.PrototypeID);
-
-
             switch (prototypeId.FirstOrDefault())
             {
                 case 1: return FolderDataTemplate;
