@@ -26,7 +26,7 @@ namespace Vertical.Models
         /// <summary>
         /// ID прототипа
         /// </summary>
-        public int PrototipeID { get; set; }
+        public int PrototypeID { get; set; }
 
         /// <summary>
         /// Имя прототипа

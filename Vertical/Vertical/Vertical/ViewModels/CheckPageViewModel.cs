@@ -31,14 +31,14 @@ namespace Vertical.ViewModels
         public ObservableCollection<SystemObjectPropertyValueModel> Objects { get; set; }
         public ObservableCollection<AddSystemObjectPropertyValueModel> NewValues { get; set; }
         public ObservableCollection<AddSystemObjectPropertyValueModel> StartValues { get; set; }
-        public ObservableCollection<SystemObjectModel> Posts { get; set; }
+        public ObservableCollection<SystemObjectModel> ObjectModels { get; set; }
 
         public DataSource SourceObjects { get; set; }
 
         public CheckPageViewModel() { }
 
         public CheckPageViewModel(SystemObjectModel obj)
-        {
+        {            
             SourceObjects = new DataSource();
             SourceObjects.GroupDescriptors.Add(new GroupDescriptor("GroupName"));
             SourceObjects.GroupDescriptors.Add(new GroupDescriptor("ID"));
@@ -47,7 +47,7 @@ namespace Vertical.ViewModels
             NewValues = new ObservableCollection<AddSystemObjectPropertyValueModel>();
             StartValues = new ObservableCollection<AddSystemObjectPropertyValueModel>();
             SystemPropertyModels = new ObservableCollection<SystemObjectPropertyValueModel>();
-            Posts = new ObservableCollection<SystemObjectModel>();
+            ObjectModels = new ObservableCollection<SystemObjectModel>();
             UpdateSystemPropertyModels();
             
         }
@@ -59,83 +59,30 @@ namespace Vertical.ViewModels
         private async void AddNewObjectInPropperty(object commandParameter)
         {
             var prop = commandParameter as SystemObjectPropertyValueModel;
-            
-            if (string.IsNullOrEmpty(prop.SourceObjectParentGUID)){
-
-
-                var types = Api.GetDataFromServer<SystemObjectTypeModel>("System/GetSystemObjectTypes");
-                var action = await Application.Current.MainPage
-                                                  .DisplayActionSheet(
-                                                  "Тип нового объекта",
-                                                  "отмена",
-                                                  null,
-                                                  types.Select(x => x.Name).ToArray());
-                if (!string.IsNullOrEmpty(action) && action != "отмена")
-                {                    
-                    int typeId = types.Where(x => x.Name == action).Select(x => x.ID).FirstOrDefault();
-                    PromptResult pResult = await UserDialogs.Instance.PromptAsync(new PromptConfig
-                    {
-                        InputType = InputType.Name,
-                        OkText = "Создать",
-                        Title = "Создание объекта"                        
-                    });
-                    using (UserDialogs.Instance.Loading("Создание объекта...", null, null, true, MaskType.Black))
-                    {
-                        await Task.Run(async () => {
-                            if (pResult.Ok && !string.IsNullOrWhiteSpace(pResult.Text))
-                            {
-
-                                string guidNewItem = Api.AddSystemObject(new { Name = pResult.Text, TypeID = typeId, ParentGUID = prop.SystemObjectGUID });
-                                if (guidNewItem != default(string))
-                                {
-                                    int valueNum = 0;
-                                    if (prop.Value != null)
-                                    {
-                                        valueNum = Api.GetDataFromServer<SystemObjectPropertyValueModel>("System/GetSystemObjectPropertiesValues", new { ObjectGUID = SystemObjectModel?.GUID }).Max(x => x.ValueNum);
-                                    }
-
-                                    prop.Value = guidNewItem;
-                                    await Api.SendDataToServerAsync("System/AddSystemObjectPropertyValue",
-                                        new
-                                        {
-                                            ObjectGUID = SystemObjectModel?.GUID,
-                                            PropertyID = prop.ID,
-                                            PropertyNum = prop.Num,
-                                            Value = prop.Value,
-                                            ValueNum = valueNum+1
-                                        });
-
-                                }
-                                Device.BeginInvokeOnMainThread(() => UpdateSystemPropertyModels());
-                            }
-
-                        });
-                    }
-                    
-                                                           
-                }
-            }
-            else
+            if(prop.SourceObjectTypeID != null)
             {
-                var objects = Api.GetDataFromServer<SystemObjectModel>("System/GetSystemObjects", new { ParentGUID = prop.SourceObjectParentGUID }).ToArray();
-                var action = await Application.Current.MainPage
-                                                  .DisplayActionSheet(
-                                                  "",
-                                                  "отмена",
-                                                  null,
-                                                  objects.Select(x => x.Name).ToArray());
-                if (!string.IsNullOrEmpty(action))
+                PromptResult pResult = await UserDialogs.Instance.PromptAsync(new PromptConfig
                 {
-                    using (UserDialogs.Instance.Loading("Создание объекта...", null, null, true, MaskType.Black))
-                    {
-                        var item = objects.Where(x => x.Name == action).FirstOrDefault();
-                        int valueNum = 0;
-                        if (prop.Value != null)
+                    InputType = InputType.Name,
+                    OkText = "Создать",
+                    Title = "Новая расстановка"
+                });
+                using (UserDialogs.Instance.Loading("Создание объекта...",null,null,true, MaskType.Black))
+                {
+                    await Task.Run(() => {
+                        if (pResult.Ok && !string.IsNullOrWhiteSpace(pResult.Text))
                         {
-                            valueNum = Api.GetDataFromServer<SystemObjectPropertyValueModel>("System/GetSystemObjectPropertiesValues", new { ObjectGUID = SystemObjectModel?.GUID }).Max(x => x.ValueNum);
-                        }
-                        prop.Value = item.GUID;
-                        Api.SendDataToServer("System/AddSystemObjectPropertyValue",
+                            string guidNewItem = Api.AddSystemObject(new { Name = pResult.Text, TypeID = prop.SourceObjectTypeID, ParentGUID = prop.SystemObjectGUID });
+                            if (guidNewItem != default(string))
+                            {
+                                int valueNum = 0;
+                                if (prop.Value != null)
+                                {
+                                    valueNum = Api.GetDataFromServer<SystemObjectPropertyValueModel>("System/GetSystemObjectPropertiesValues", new { ObjectGUID = SystemObjectModel?.GUID }).Max(x => x.ValueNum);
+                                }
+
+                                prop.Value = guidNewItem;
+                                Api.SendDataToServer("System/AddSystemObjectPropertyValue",
                                     new
                                     {
                                         ObjectGUID = SystemObjectModel?.GUID,
@@ -144,33 +91,116 @@ namespace Vertical.ViewModels
                                         Value = prop.Value,
                                         ValueNum = valueNum + 1
                                     });
-                        UpdateSystemPropertyModels();
-                        //Device.BeginInvokeOnMainThread(() => UpdateSystemPropertyModels());
-                        //await Task.Run( ()=> {
 
-                        //});
+                            }
+                            
+                            
+                        } 
+
+                    });
+                }
+                Device.BeginInvokeOnMainThread(() => UpdateSystemPropertyModels());
+
+            }
+            else
+            {
+                if (string.IsNullOrEmpty(prop.SourceObjectParentGUID))
+                {
+
+
+                    var types = Api.GetDataFromServer<SystemObjectTypeModel>("System/GetSystemObjectTypes");
+                    var action = await Application.Current.MainPage
+                                                      .DisplayActionSheet(
+                                                      "Тип нового объекта",
+                                                      "отмена",
+                                                      null,
+                                                      types.Select(x => x.Name).ToArray());
+                    if (!string.IsNullOrEmpty(action) && action != "отмена")
+                    {
+                        int typeId = types.Where(x => x.Name == action).Select(x => x.ID).FirstOrDefault();
+                        PromptResult pResult = await UserDialogs.Instance.PromptAsync(new PromptConfig
+                        {
+                            InputType = InputType.Name,
+                            OkText = "Создать",
+                            Title = "Создание объекта"
+                        });
+                        using (UserDialogs.Instance.Loading("Создание объекта...", null, null, true, MaskType.Black))
+                        {
+                            await Task.Run(async () => {
+                                if (pResult.Ok && !string.IsNullOrWhiteSpace(pResult.Text))
+                                {
+
+                                    string guidNewItem = Api.AddSystemObject(new { Name = pResult.Text, TypeID = typeId, ParentGUID = prop.SystemObjectGUID });
+                                    if (guidNewItem != default(string))
+                                    {
+                                        int valueNum = 0;
+                                        if (prop.Value != null)
+                                        {
+                                            valueNum = Api.GetDataFromServer<SystemObjectPropertyValueModel>("System/GetSystemObjectPropertiesValues", new { ObjectGUID = SystemObjectModel?.GUID }).Max(x => x.ValueNum);
+                                        }
+
+                                        prop.Value = guidNewItem;
+                                        await Api.SendDataToServerAsync("System/AddSystemObjectPropertyValue",
+                                            new
+                                            {
+                                                ObjectGUID = SystemObjectModel?.GUID,
+                                                PropertyID = prop.ID,
+                                                PropertyNum = prop.Num,
+                                                Value = prop.Value,
+                                                ValueNum = valueNum + 1
+                                            });
+
+                                    }
+                                    
+                                }
+
+                            });
+                        }
+                        Device.BeginInvokeOnMainThread(() => UpdateSystemPropertyModels());
+                    }
+                }
+                else
+                {
+                    var objects = Api.GetDataFromServer<SystemObjectModel>("System/GetSystemObjects", new { ParentGUID = prop.SourceObjectParentGUID }).ToArray();
+                    var action = await Application.Current.MainPage
+                                                      .DisplayActionSheet(
+                                                      "",
+                                                      "отмена",
+                                                      null,
+                                                      objects.Select(x => x.Name).ToArray());
+                    if (!string.IsNullOrEmpty(action) && action != "отмена")
+                    {
+                        using (UserDialogs.Instance.Loading("Создание объекта...", null, null, true, MaskType.Black))
+                        {
+                            var item = objects.Where(x => x.Name == action).FirstOrDefault();
+                            int valueNum = 0;
+                            if (prop.Value != null)
+                            {
+                                valueNum = Api.GetDataFromServer<SystemObjectPropertyValueModel>("System/GetSystemObjectPropertiesValues", new { ObjectGUID = SystemObjectModel?.GUID }).Max(x => x.ValueNum);
+                            }
+                            prop.Value = item.GUID;
+                            Api.SendDataToServer("System/AddSystemObjectPropertyValue",
+                                        new
+                                        {
+                                            ObjectGUID = SystemObjectModel?.GUID,
+                                            PropertyID = prop.ID,
+                                            PropertyNum = prop.Num,
+                                            Value = prop.Value,
+                                            ValueNum = valueNum + 1
+                                        });
+                            UpdateSystemPropertyModels();
+                            //Device.BeginInvokeOnMainThread(() => UpdateSystemPropertyModels());
+                            //await Task.Run( ()=> {
+
+                            //});
+                        }
                     }
                 }
             }
             
+            
         }
 
-        
-        private SystemObjectModel _selectedPost;
-        public SystemObjectModel SelectedPost
-        {
-            get
-            {
-                return _selectedPost;
-            }
-            set
-            {
-                if(_selectedPost != value)
-                {
-
-                }
-            }
-        }
 
         /// <summary>
         /// Обновляет источник данных
@@ -179,13 +209,8 @@ namespace Vertical.ViewModels
         {            
             SystemPropertyModels.Clear();
 
-            //if(SystemObjectModel?.TypeID == 1)
-            //{
-            //    Posts = new ObservableCollection<SystemObjectModel>(Api.GetDataFromServer<SystemObjectModel>("System/GetSystemObjects", new { ParentGUID = SystemObjectModel?.GUID }));
-            //}
             var values = Api.GetDataFromServer<SystemObjectPropertyValueModel>("System/GetSystemObjectPropertiesValues", new { ObjectGUID = SystemObjectModel?.GUID });
             
-
             if (values.Count == 0)
             {
                 States = States.NoData;
@@ -279,10 +304,14 @@ namespace Vertical.ViewModels
                 Value = value,
                 ValueNum = property.ValueNum
             };
-
+            NewValues.Where(x => x?.Value is null).AsParallel().ForAll(x => x.Value = false);
             if(property.TypeID == 1)
             {
-                if (NewValues.Any(x => x.PropertyID == item.PropertyID && (x?.Value == null | !x.Value.Equals(item.Value))))
+                if (NewValues.Any(x => x.PropertyID == item.PropertyID && x?.Value is null))
+                {
+                    NewValues[NewValues.IndexOf(NewValues.Where(x => x.PropertyID == item.PropertyID).First())] = item;
+                }
+                else if(NewValues.Any(x => x.PropertyID == item.PropertyID &&  !x.Value.Equals(item.Value)))
                 {
                     NewValues[NewValues.IndexOf(NewValues.Where(x => x.PropertyID.Equals(item.PropertyID)).First())] = item;
                 }

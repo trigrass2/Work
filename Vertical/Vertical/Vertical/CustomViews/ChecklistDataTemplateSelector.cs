@@ -43,7 +43,7 @@ namespace Vertical.CustomViews
                         {
                             case 1: return CatalogDataTemplate;
                             case 3: return ArrangementDataTemplate;
-                            //case 4: return HumanWithProfiDataTemplate;
+                            case 4: return HumanWithProfiDataTemplate;
                             case 5: return PostDataTemplate;
                             case 6: return ProfiDataTemplate;
                             case 9: return CraneDataTemplate;

@@ -83,8 +83,14 @@
             </DataTemplate>
             <DataTemplate x:Key="humanTemplate">
                 <StackLayout>
-                    <Label Text="{Binding Name}" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption"/>
-                    <Label Text="{Binding Value}" FontSize="Micro"/>
+                    
+                    <inputLayout:SfTextInputLayout
+                                Style="{x:StaticResource SfTextInputLayoutStyle}"
+                                HelperText="{Binding Name}"
+                                UnfocusedColor="Black"
+                                >
+                        <Entry  Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption" />
+                    </inputLayout:SfTextInputLayout>
                 </StackLayout>
                 
             </DataTemplate>
@@ -104,20 +110,16 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <StackLayout Orientation="Horizontal" Grid.Column="0" Grid.Row="0">
-                            <!--<Label Text="{Binding Name}" TextColor="Black" BackgroundColor="{StaticResource BackgroundColor}"/>-->
-                            <!--<Button Text="+" Style="{StaticResource BlueButtonStyle}"
+                            <Label Text="{Binding Name}" TextColor="Black" BackgroundColor="{StaticResource BackgroundColor}"/>
+                            <Button Text="+" Style="{StaticResource BlueButtonStyle}"
                                 BackgroundColor="{StaticResource BackgroundColor}" Padding="0" TextColor="Green" FontAttributes="Bold"
                                 Command="{Binding Source={x:Reference thisPage}, Path = BindingContext.AddNewObjectInPropertyCommand}" 
                                 CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
-                                HeightRequest="30" WidthRequest="30"/>-->
-                            <inputLayout:SfTextInputLayout                            
-                            Style="{x:StaticResource SfTextInputLayoutStyle}"
-                            HelperText="{Binding Name}"
-                            UnfocusedColor="Black">
-                                <Picker ItemsSource="{Binding Posts}" ItemDisplayBinding="{Binding Name}" SelectedItem="{Binding SelectedPost}"/>
-                            </inputLayout:SfTextInputLayout>
+                                HeightRequest="30" WidthRequest="30"/>
                         </StackLayout>
-                        <views:CheckListView ObjectGUID="{Binding}" Grid.Column="0" Grid.Row="1" MinimumHeightRequest="100"/>
+
+                        <Label Text="{Binding Value, Converter={converters:ObjectConverter}}" Grid.Column="0" Grid.Row="1"
+                               BackgroundColor="{StaticResource BackgroundColor}"/>
                     </Grid>
                 </Frame>
                 
@@ -164,7 +166,9 @@
                                 CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
                                 HeightRequest="30" WidthRequest="30"/>
                         </StackLayout>
-                        <views:CheckListView ObjectGUID="{Binding}" Grid.Column="0" Grid.Row="1" MinimumHeightRequest="100"/>
+
+                        <Label Text="{Binding Value, Converter={converters:ObjectConverter}}" Grid.Column="0" Grid.Row="1"
+                               BackgroundColor="{StaticResource BackgroundColor}"/>
                     </Grid>
                 </Frame>
             </DataTemplate>
@@ -191,6 +195,23 @@
                     </Grid>
                 </Frame>
             </DataTemplate>
+            <DataTemplate x:Key="humanWithProfiDataTemplate">
+                <Frame Padding="0" BorderColor="Gray" BackgroundColor="{StaticResource BackgroundColor}">
+                    <Grid x:Name="Item" Margin="5" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <StackLayout Orientation="Horizontal" Grid.Column="0" Grid.Row="0">
+                            <Label Text="{Binding Name}" TextColor="Black" BackgroundColor="{StaticResource BackgroundColor}"/>                            
+                        </StackLayout>
+                        <views:CheckListView ObjectGUID="{Binding}" Grid.Column="0" Grid.Row="1" MinimumHeightRequest="100"/>
+                    </Grid>
+                </Frame>
+            </DataTemplate>
 
         </ResourceDictionary>
         <local:ChecklistDataTemplateSelector x:Key="checklistDataTemplateSelector"
@@ -206,7 +227,8 @@
                                              PostDataTemplate="{StaticResource postDataTemplate}"
                                              CatalogDataTemplate="{StaticResource catalogDataTemplate}"
                                              ProfiDataTemplate="{StaticResource profiDataTemplate}"
-                                             CraneDataTemplate="{StaticResource craneDataTemplate}"/>
+                                             CraneDataTemplate="{StaticResource craneDataTemplate}"
+                                             HumanWithProfiDataTemplate="{StaticResource humanWithProfiDataTemplate}"/>
         
     </ContentView.Resources>
     <stateContainerDemo:StateContainer State ="{Binding States}">
