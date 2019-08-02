@@ -18,6 +18,7 @@ namespace Vertical.ViewModels
         public ICommand AddNewObjectInPropertyCommand => new Command(AddNewObjectInPropperty);
 
         public bool IsVisibleSaveButton { get; set; }
+        public bool IsVisibleButtons { get; set; }
 
         public SystemObjectModel SystemObjectModel { get; set; }
         public ObservableCollection<SystemObjectPropertyValueModel> SystemPropertyModels { get; set; }
@@ -33,13 +34,12 @@ namespace Vertical.ViewModels
         {
             SystemObjectModel = obj;
             SourceObjects = new DataSource();
-            SourceObjects.GroupDescriptors.Add(new GroupDescriptor("GroupName"));
-            SourceObjects.GroupDescriptors.Add(new GroupDescriptor("ID"));            
+            SourceObjects.GroupDescriptors.Add(new GroupDescriptor("GroupName"));        
             NewValues = new ObservableCollection<AddSystemObjectPropertyValueModel>();
             StartValues = new ObservableCollection<AddSystemObjectPropertyValueModel>();
             SystemPropertyModels = new ObservableCollection<SystemObjectPropertyValueModel>();
             ObjectModels = new ObservableCollection<SystemObjectModel>();
-            UpdateSystemPropertyModels();            
+            UpdateSystemPropertyModels();
         }
 
         private async Task CreateArrangement(SystemObjectPropertyValueModel property)
@@ -177,38 +177,8 @@ namespace Vertical.ViewModels
                     }
                 }
             }
-            
-
-            //if(prop.SourceObjectTypeID != null)
-            //{
-            //    PromptResult pResult = await UserDialogs.Instance.PromptAsync(new PromptConfig
-            //    {
-            //        InputType = InputType.Name,
-            //        OkText = "Создать",
-            //        Title = "Новый объект"
-            //    });
-            //    if (pResult.Ok)
-            //    {
-            //        using (UserDialogs.Instance.Loading("Создание объекта...", null, null, true, MaskType.Black))
-            //        {
-            //            await CreateArrangement(pResult.Text, prop).ContinueWith((task) => UserDialogs.Instance.HideLoading());
-            //        }
-            //    }
-
-
-            //}
-            //else
-            //{
-
-            //}
-
-
         }
-
-        private async Task UpdateSystemPropertyModelsAsync()
-        {
-            await Task.Run(()=> UpdateSystemPropertyModels());
-        }
+        
         /// <summary>
         /// Обновляет источник данных
         /// </summary>

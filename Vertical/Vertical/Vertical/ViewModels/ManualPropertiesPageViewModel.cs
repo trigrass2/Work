@@ -34,7 +34,7 @@ namespace Vertical.ViewModels
             States = States.Normal;
         }
 
-        public void UpdateSystemPropertyModels()
+        public async void UpdateSystemPropertyModels()
         {
             if (!NetworkCheck.IsInternet())
             {
@@ -43,7 +43,7 @@ namespace Vertical.ViewModels
             }
 
             SystemPropertyModels.Clear();
-            var items = Api.GetDataFromServer<SystemPropertyModel>("SystemManagement/GetSystemProperties", new { });
+            var items = await Api.GetDataFromServerAsync<SystemPropertyModel>("SystemManagement/GetSystemProperties", new { ShowHidden  = true});
             try
             {
                 foreach (var s in items)
@@ -53,7 +53,7 @@ namespace Vertical.ViewModels
             }catch(Exception ex)
             {
                 
-                //Log.WriteLine(LogPriority.Error, $"{nameof(UpdateSystemPropertyModels)}", $"{ex.Message}");
+                Log.WriteLine(LogPriority.Error, $"{nameof(UpdateSystemPropertyModels)}", $"{ex.Message}");
             }
             States = SystemPropertyModels.Count > 0 ? States.Normal : States.NoData;
         }

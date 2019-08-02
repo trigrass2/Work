@@ -16,7 +16,6 @@
     <None Remove="SvgPictures\google_logo.svg" />
     <None Remove="SvgPictures\ic_close.svg" />
     <None Remove="SvgPictures\ic_contextMenu.svg" />
-    <None Remove="SvgPictures\ic_edit.svg" />
     <None Remove="SvgPictures\next.svg" />
     <None Remove="SvgPictures\round-add.svg" />
     <None Remove="SvgPictures\save.svg" />
@@ -29,7 +28,6 @@
     <EmbeddedResource Include="SvgPictures\checklist.svg" />
     <EmbeddedResource Include="SvgPictures\ic_close.svg" />
     <EmbeddedResource Include="SvgPictures\ic_contextMenu.svg" />
-    <EmbeddedResource Include="SvgPictures\ic_edit.svg" />
     <EmbeddedResource Include="SvgPictures\next.svg" />
     <EmbeddedResource Include="SvgPictures\PikGroupLogo.svg" />
     <EmbeddedResource Include="SvgPictures\round-add.svg" />
@@ -133,7 +131,13 @@
     <None Update="Views\CheckListPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
+    <None Update="Views\CheckListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
     <None Update="Views\CreatePropertyPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Views\EditObjectPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
     <None Update="Views\InfoPage.xaml">

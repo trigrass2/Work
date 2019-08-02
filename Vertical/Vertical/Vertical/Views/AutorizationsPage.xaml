@@ -18,7 +18,7 @@
     <stateContainerDemo:StateContainer State="{Binding States}">        
         <stateContainerDemo:StateCondition Is="Normal">
             <Frame BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center" HasShadow="True" Margin="10,0" BorderColor="White">
-                <StackLayout Spacing="4" Margin="10,0,10,0">
+                <StackLayout Margin="7,0">
                     <Image x:Name="svgLogo"                       
                        HorizontalOptions="Center"
                        Source="{Binding PikLogoImage}"/>
@@ -28,19 +28,21 @@
                         Style="{x:StaticResource SfTextInputLayoutStyle}">
                         <Entry Placeholder="Логин" Text="{Binding User.Login, Mode=TwoWay}" Style="{StaticResource entryStyle}"/>
                     </inputLayout:SfTextInputLayout>
-                    <inputLayout:SfTextInputLayout 
+                    <inputLayout:SfTextInputLayout
                         x:Name="passwordEntry"
                         Style="{x:StaticResource SfTextInputLayoutStyle}"        
                         EnablePasswordVisibilityToggle="True">
                         <Entry Placeholder="Пароль" Text="{Binding User.Password, Mode=TwoWay}" IsPassword="True" Style="{StaticResource entryStyle}"/>
                     </inputLayout:SfTextInputLayout>
+                    
 
                     <Button x:Name="sighInButton" 
                             Text="Войти" TextColor="Black" FontSize="Body"
                             Command="{Binding SignInCommand}" 
                             IsEnabled="{Binding IsEnabled}" 
                             CornerRadius="5" 
-                            BackgroundColor="White" BorderColor="#ccc" BorderWidth="1"/>
+                            BackgroundColor="White" BorderColor="#ccc" BorderWidth="1"
+                            />
                     <Grid HeightRequest="45" HorizontalOptions="FillAndExpand">
                         <ActivityIndicator IsRunning="{Binding IsRunning, Mode=TwoWay}" IsVisible="{Binding IsRunning}" 
                                    HorizontalOptions="Center" VerticalOptions="Center"

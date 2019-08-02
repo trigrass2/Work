@@ -45,9 +45,13 @@
                                             Command="{Binding Source={x:Reference thisPage}, Path = BindingContext.GoToEditPropertyPageCommand}" 
                                             CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"                                                                                        
                                             BackgroundColor="#fafafa"
-                                            IsEnabled="{Binding Source={x:Reference thisPage}, Path = BindingContext.IsEnabled}">
+                                            IsEnabled="{Binding Source={x:Reference thisPage}, Path = BindingContext.IsEnabled}"
+                                            Padding="7">
                                             <Button.ImageSource>
-                                                <svg:SvgImageSource Source="Vertical.SvgPictures.ic_edit.svg" Height="20" Width="20"/>
+                                                <FontImageSource
+                                                    FontFamily="{DynamicResource MaterialFontFamily}"
+                                                    Glyph="{StaticResource IconPencil}"
+                                                    Color="{StaticResource GreyColor}"/>
                                             </Button.ImageSource>
                                         </Button>
                                     </Grid>

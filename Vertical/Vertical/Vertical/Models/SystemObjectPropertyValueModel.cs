@@ -68,7 +68,7 @@ namespace Vertical.Models
         /// <summary>
         /// Имя пользователя сделавшего изменение
         /// </summary>
-        public string UserName { get; set; }
+        public string UserName { get; set; }        
 
         /// <summary>
         /// Вес параметра
@@ -94,5 +94,21 @@ namespace Vertical.Models
         /// ID типа объекта-источника
         /// </summary>
         public int? SourceObjectTypeID { get; set; }
+
+        private bool _locked;
+        /// <summary>
+        /// Заблокирован для редактирования
+        /// </summary>
+        public bool Locked
+        {
+            get
+            {
+                return _locked;
+            }
+            set
+            {
+                _locked = !value;
+            }
+        }
     }
 }

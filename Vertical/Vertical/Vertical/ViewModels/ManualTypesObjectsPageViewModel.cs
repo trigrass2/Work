@@ -41,7 +41,7 @@ namespace Vertical.ViewModels
         {
             SystemObjectTypesModels.Clear();
 
-            foreach(var t in Api.GetDataFromServer<SystemObjectTypeModel>("System/GetSystemObjectTypes"))
+            foreach(var t in Api.GetDataFromServer<SystemObjectTypeModel>("System/GetSystemObjectTypes", new { ShowHidden = true }))
             {
                 SystemObjectTypesModels.Add(t);
             }

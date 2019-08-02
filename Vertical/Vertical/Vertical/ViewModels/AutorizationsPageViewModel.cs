@@ -81,7 +81,7 @@ namespace Vertical.ViewModels
                         {
                             Login = User?.Login;
                             Password = User?.Password;
-                            await Navigation.PushAsync(new ManualPage());//new MenuPage());
+                            await Navigation.PushAsync(new ManualObjectsPage());//new MenuPage());
                             States = States.Normal;
                             IsEnabled = true;
                         }

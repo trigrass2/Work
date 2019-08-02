@@ -12,17 +12,8 @@ using static Vertical.Constants;
 namespace Vertical.ViewModels
 {
     
-    public class CreatePropertyPageViewModel : INotifyPropertyChanged
-    {
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        public INavigation Navigation { get; set; }
-
-        /// <summary>
-        /// состояние страницы
-        /// </summary>
-        public States States { get; set; } = States.Normal;
-
+    public class CreatePropertyPageViewModel : BaseViewModel
+    {        
         /// <summary>
         /// добавляет новый объект
         /// </summary>
@@ -38,7 +29,6 @@ namespace Vertical.ViewModels
         /// </summary>
         public SystemPropertyModel NewProperty { get; set; }
 
-        public bool IsEnabled { get; set; } = true;
         public string TextButton { get; set; } = "Добавить";
         private string _nameMetod;
 
@@ -58,9 +48,7 @@ namespace Vertical.ViewModels
                 return;
             }
             
-
-
-            if (!Api.SendDataToServer($"SystemManagement/{_nameMetod}", new { ID = NewProperty?.ID, Name=NewProperty?.Name, TypeID = NewProperty?.PropertyTypeID}))
+            if (!Api.SendDataToServer($"SystemManagement/{_nameMetod}", new { NewProperty?.ID, NewProperty?.Name, TypeID = NewProperty?.PropertyTypeID }))
             {
                 await Application.Current.MainPage.DisplayAlert("Сообщение", "Не удалось создать.", "Ок");
                 IsEnabled = true;

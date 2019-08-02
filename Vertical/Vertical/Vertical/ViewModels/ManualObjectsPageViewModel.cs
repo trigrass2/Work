@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Vertical.Models;
@@ -90,7 +91,7 @@ namespace Vertical.ViewModels
 
             SystemObjectModels?.Clear();
             
-            var items = Api.GetDataFromServer<SystemObjectModel>("System/GetSystemObjects", new { ParentGUID = ParentObject?.GUID });            
+            var items = Api.GetDataFromServer<SystemObjectModel>("System/GetSystemObjects", new { ParentGUID = ParentObject?.GUID });
 
             if (items != null)
             {
@@ -147,8 +148,10 @@ namespace Vertical.ViewModels
         private async void NextPage(SystemObjectModel _selectedObject)
         {            
             IsEnabled = false;
-            States = States.Loading;            
-            if(_selectedObject.TypeID == 2)
+            States = States.Loading;
+            var types = await Api.GetDataFromServerAsync<SystemObjectTypeModel>("System/GetSystemObjectTypes", new { ShowHidden = true });
+            
+            if(types.FirstOrDefault(x => x.ID == _selectedObject.TypeID).PrototypeID > 1)
             {
                 await Navigation.PushAsync(await Task.Run(() => new CheckListPage(_selectedObject)));
             }
