@@ -17,46 +17,42 @@ namespace Vertical.Views
             ViewModel = new CheckPageViewModel(systemObjectModel) { Navigation = this.Navigation };
             contextMenuButton.Clicked += ContextMenuButton_Clicked;
             #region temp
+            headerGrid.Children.Add(new Label
+            {
+                Text = "Информация",
+                TextColor = Color.Black,
+                FontSize = Device.GetNamedSize(NamedSize.Subtitle, typeof(Label)),
+                FontAttributes = FontAttributes.Bold
+            },0,0);
 
-            mainGrid.Children.Add(new StackLayout {
-                BackgroundColor = Color.White,
-                Margin = new Thickness(0, 0, 0, 0.5),
-                Padding = new Thickness(5,0,0,5),
-                Children =
-                {
-                    new Label
-                    {
-                        Text = "Информация",
-                        TextColor = Color.Black,
-                        FontSize = Device.GetNamedSize(NamedSize.Subtitle, typeof(Label)),
-                        FontAttributes = FontAttributes.Bold
-                    },
+            headerGrid.Children.Add(contextMenuButton, 1,0);
 
-                    new Label
-                    {
-                        Text = systemObjectModel.Name,
-                        FontSize = Device.GetNamedSize(NamedSize.Caption, typeof(Label))
-                    },
-                    new Label
-                    {
-                        Text = systemObjectModel.TypeName,
-                        FontSize = Device.GetNamedSize(NamedSize.Caption, typeof(Label))
-                    },
-                    new Label
-                    {
-                        Text = systemObjectModel.CreationTime.ToString("yyyy-MM-dd HH:MM"),
-                        FontSize = Device.GetNamedSize(NamedSize.Caption, typeof(Label))
-                    },
-                    new Label
-                    {
-                        Text = systemObjectModel.UserName,
-                        FontSize = Device.GetNamedSize(NamedSize.Caption, typeof(Label))
-                    }
-                }
-            }, 0, 0);
+            headerGrid.Children.Add(new Label
+            {
+                Text = systemObjectModel.Name,
+                FontSize = Device.GetNamedSize(NamedSize.Caption, typeof(Label))
+            },0,1);
+
+            headerGrid.Children.Add(new Label
+            {
+                Text = systemObjectModel.TypeName,
+                FontSize = Device.GetNamedSize(NamedSize.Caption, typeof(Label))
+            },0,2);
+
+            headerGrid.Children.Add(new Label
+            {
+                Text = systemObjectModel.CreationTime.ToString("yyyy-MM-dd HH:MM"),
+                FontSize = Device.GetNamedSize(NamedSize.Caption, typeof(Label))
+            },0,3);
+
+            headerGrid.Children.Add(new Label
+            {
+                Text = systemObjectModel.UserName,
+                FontSize = Device.GetNamedSize(NamedSize.Caption, typeof(Label))
+            },0,4);
             
-            mainGrid.Children.Add(contextMenuButton, 1, 0);
-
+            mainGrid.Children.Add(headerGrid, 0, 0);
+            Grid.SetColumnSpan(headerGrid, 2);
             var label = new Label
             {
                 Text = " Параметры",
@@ -93,7 +89,7 @@ namespace Vertical.Views
         }
 
         public Grid backGroundGrid = new Grid
-        {
+        {            
             RowDefinitions = new RowDefinitionCollection
             {
                 new RowDefinition(),
@@ -111,28 +107,46 @@ namespace Vertical.Views
                 new RowDefinition(){ Height = GridLength.Auto},
                 new RowDefinition()
             },
-            ColumnDefinitions = new ColumnDefinitionCollection
-            {
-                new ColumnDefinition(),
-                new ColumnDefinition(){ Width = 40 }
-            },
             BackgroundColor = Color.FromHex("#6c757d"),
             RowSpacing = 0,
             ColumnSpacing = 0
         };
+
+        public Grid headerGrid = new Grid
+        {
+            Padding = new Thickness(5, 0, 0, 5),
+            BackgroundColor = Color.White,
+            Margin = new Thickness(0, 0, 0, 0.5),
+            RowSpacing = 0, ColumnSpacing = 0,
+            RowDefinitions = new RowDefinitionCollection
+            {
+                new RowDefinition{ Height=35 },
+                new RowDefinition{ Height=35 },
+                new RowDefinition{ Height=35 },
+                new RowDefinition{ Height=35 },
+                new RowDefinition{ Height=35 }
+            },
+            ColumnDefinitions = new ColumnDefinitionCollection
+            {
+                new ColumnDefinition(),
+                new ColumnDefinition(){ Width = 35}
+            }
+        };
+
         public Button savePropertiesButton = new Button
         {
-            BackgroundColor = Color.FromHex("#41a32e"),
+            BackgroundColor = Color.FromHex("#3cb371"),
             HeightRequest = 50,
             CornerRadius = 5,
             Text = "Сохранить",
             TextColor = Color.White,
             FontAttributes = FontAttributes.Bold,
-            Margin = new Thickness(5, 0)
+            Margin = new Thickness(5, 0, 5, 3)
         };
 
         public Button contextMenuButton = new Button
         {
+            AnchorX = 0, AnchorY = 0,
             ImageSource = new FontImageSource()
             {
                 Glyph = "\uf141",

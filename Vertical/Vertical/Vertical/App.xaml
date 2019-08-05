@@ -10,6 +10,7 @@
                 <On Platform="Android" Value="fontawesome-webfont.ttf#Material Design Icons"/>
             </OnPlatform>
 
+            <Color x:Key="GreenColor">#3cb371</Color>
             <Color x:Key="LightGreyColor">#ccc</Color>
             <Color x:Key="DarkGreyColor">#6c757d</Color>
             <Color x:Key="BlueColor">#336dab</Color>

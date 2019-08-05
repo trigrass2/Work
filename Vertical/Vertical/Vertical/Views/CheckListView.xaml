@@ -19,7 +19,7 @@
             </DataTemplate>
             <DataTemplate x:Key="boolTemplate">
                 <StackLayout Orientation="Horizontal">
-                    <sfbuttons:SfCheckBox Text="{Binding Name}" BindingContext="{Binding}" CheckedColor="{StaticResource OrangeColor}" StateChanged="SfCheckBox_StateChanged"
+                    <sfbuttons:SfCheckBox Text="{Binding Name}" BindingContext="{Binding}" CheckedColor="{StaticResource GreenColor}" StateChanged="SfCheckBox_StateChanged"
                                           FontSize="12" IsChecked="{Binding Value, Mode=TwoWay}" IsEnabled="{Binding Locked}">
                     </sfbuttons:SfCheckBox>
                 </StackLayout>                
