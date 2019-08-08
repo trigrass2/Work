@@ -22,7 +22,12 @@ namespace Vertical.Models
         /// <summary>
         /// Видимость
         /// </summary>
-        public bool Hidden { get; set; } = false;
+        public bool? Hidden { get; set; }
+
+        /// <summary>
+        /// Является ли шаблоном
+        /// </summary>
+        public bool? Template { get; set; }
 
         
     }

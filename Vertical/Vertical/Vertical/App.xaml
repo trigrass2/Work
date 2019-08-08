@@ -10,13 +10,17 @@
                 <On Platform="Android" Value="fontawesome-webfont.ttf#Material Design Icons"/>
             </OnPlatform>
 
+             <!--Colorts-->
             <Color x:Key="GreenColor">#3cb371</Color>
             <Color x:Key="LightGreyColor">#ccc</Color>
             <Color x:Key="DarkGreyColor">#6c757d</Color>
             <Color x:Key="BlueColor">#336dab</Color>
             <Color x:Key="OrangeColor">#ff4114</Color>
             <Color x:Key="BackgroundColor">#fafafa</Color>
+            <Color x:Key="BackgroundObjectColorRGBA">#f0f3f3</Color>
+            <Color x:Key="ControlsBackgrounColor">Transparent</Color>
 
+            <!--Icons-->
             <x:String x:Key="IconFolder">&#xf07b;</x:String>
             <x:String x:Key="IconFile">&#xf0f6;</x:String>
             <x:String x:Key="IconQuestion">&#xf128;</x:String>
@@ -25,6 +29,7 @@
             <x:String x:Key="IconTrash">&#xf014;</x:String>
             <x:String x:Key="IconClose">&#xf00d;</x:String>
             
+            <!--Styles-->
             <Style x:Key="MenuButtonStyle" TargetType="Button">
                 <Setter Property="Padding" Value="5,10,5,5"/>
                 <Setter Property="BackgroundColor" Value="White"/>

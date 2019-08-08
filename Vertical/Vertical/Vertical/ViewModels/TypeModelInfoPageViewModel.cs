@@ -99,7 +99,7 @@ namespace Vertical.ViewModels
             if (action != null && action != "Отмена")
             {
                 var newProperty = items.SingleOrDefault(i => i.Name == action);
-                if (await Api.SendDataToServerAsync("SystemManagement/BindSystemPropertyToObjectType", new { PropertyID = newProperty.ID, ObjectTypeID, groupId[0].GroupID }) == true)
+                if (await Api.SendDataToServerAsync("SystemManagement/BindSystemPropertyToObjectType", new { PropertyID = newProperty.ID, ObjectTypeID, groupId[0].GroupID }) == System.Net.HttpStatusCode.OK)
                 {
                     UpdateSystemPropertyModel();
                     await Application.Current.MainPage.DisplayAlert("Сообщение", "Свойство добавлено", "Ок");                    

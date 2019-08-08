@@ -14,12 +14,22 @@ namespace Vertical.Views.Converters
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             if (value == null) return null;
-            return Api.GetDataFromServer<SystemObjectModel>("System/GetSystemObjects", new { ObjectGUID = value }).Select(x => x.Name).FirstOrDefault() ;
+            try
+            {
+                
+                return Api.GetDataFromServer<SystemObjectModel>("System/GetSystemObjects", new { ObjectGUID = value }).Select(x => x.Name).FirstOrDefault();
+            }
+            catch (Exception)
+            {
+
+                return value;
+            }
+            
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return value;
+            return value as SystemObjectModel;
         }
     }
 }

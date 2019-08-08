@@ -99,7 +99,7 @@ namespace Vertical.Services
         /// </summary>
         /// <typeparam name="T">тип добавляемого объекта</typeparam>
         /// <param name="model">добавляемый объект</param>
-        public static async Task<bool> SendDataToServerAsync<T>(string nameMetod, T model = default(T))
+        public static async Task<HttpStatusCode> SendDataToServerAsync<T>(string nameMetod, T model = default(T))
         {
             var client = new RestClient(domain + $"/api/{nameMetod}");
 
@@ -113,22 +113,13 @@ namespace Vertical.Services
                 request.AddParameter("application/json", jsonModel, ParameterType.RequestBody);
 
                 var restResponse = await client.ExecuteTaskAsync(request);
-                if (restResponse.IsSuccessful)
-                {                    
-                    Loger.WriteMessage(LogPriority.Info, $"В запросе {client?.BaseUrl}: Данные отправлены");
-                    return true;
-                }
-                else
-                {
-                    Loger.WriteMessage(LogPriority.Info, $"В запросе {client?.BaseUrl}: Данные не отправлены -> {restResponse.Content}");
-                    return false;
-                }
-
+                Loger.WriteMessage(LogPriority.Info, $"Запрос {client?.BaseUrl}: {restResponse.StatusCode}");
+                return restResponse.StatusCode;
             }
             catch (Exception ex)
             {
                 Loger.WriteMessage(LogPriority.Error, $"В запросе {client?.BaseUrl} Ошибка при отправке данных на сервер", ex.Message);
-                return false;
+                return default(HttpStatusCode);
             }
         }
 

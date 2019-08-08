@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:sfbuttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
              xmlns:local="clr-namespace:Vertical.CustomViews"
              xmlns:stateContainerDemo="clr-namespace:Xamarin.Forms.Essentials.Controls;assembly=Xamarin.Forms.Essentials.Controls"
              xmlns:views="clr-namespace:Vertical.Views"
              xmlns:converters="clr-namespace:Vertical.Views.Converters"
+             xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
              x:Class="Vertical.Views.CheckListView"
              BackgroundColor="White"
              x:Name="thisPage">
@@ -18,17 +18,35 @@
                        Text="{Binding Key}" FontSize="Subtitle" FontAttributes="Bold" TextColor="Black" />
             </DataTemplate>
             <DataTemplate x:Key="boolTemplate">
-                <StackLayout Orientation="Horizontal">
-                    <sfbuttons:SfCheckBox Text="{Binding Name}" BindingContext="{Binding}" CheckedColor="{StaticResource GreenColor}" StateChanged="SfCheckBox_StateChanged"
-                                          FontSize="12" IsChecked="{Binding Value, Mode=TwoWay}" IsEnabled="{Binding Locked}">
-                    </sfbuttons:SfCheckBox>
-                </StackLayout>                
+                <Frame x:Name="Item" Padding="1" HasShadow="False" BorderColor="{StaticResource LightGreyColor}" CornerRadius="0">
+                    <StackLayout Spacing="0">
+                        <Label Text="{Binding Name}" TextColor="Black" FontSize="Caption" Margin="5"/>
+                        <input:CheckBox Margin="5,3" BoxSizeRequest="40"
+                                        CheckChangedCommand="{Binding Source={x:Reference thisPage}, Path = BindingContext.IsCheckedCommand}" 
+                                        CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
+                                        Color="{StaticResource GreenColor}" BorderColor="{StaticResource LightGreyColor}"
+                                        Type="Material"
+                                        IsChecked="{Binding Value}" IsEnabled="{Binding Locked}"
+                                        />
+                    </StackLayout>
+                </Frame>
             </DataTemplate>
             <DataTemplate x:Key="dateTimeTemplate">
                 <StackLayout>
-                    <Label Text="{Binding Name}" Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption"/>
-                    <Label Text="{Binding Value, StringFormat='{}{0:yyyy-MM-dd HH:MM }'}" FontSize="Caption"/>
+                    <inputLayout:SfTextInputLayout
+                            Style="{x:StaticResource SfTextInputLayoutStyle}"
+                            UnfocusedColor="Black"
+                            HelperText="{Binding Name}"
+                            Margin="0,0,0,10">
+                        <DatePicker MinimumDate="{Binding Source={x:Reference thisPage}, Path = BindingContext.MinDate }"
+                                MaximumDate="{Binding Source={x:Reference thisPage}, Path = BindingContext.MaxDate}"
+                                Date="{Binding Value}"
+                                Format="dd.MM.yyyy"
+                                FontSize="Caption" TextColor="#737373"/>
+                    </inputLayout:SfTextInputLayout>
+                    
                 </StackLayout>
+                
             </DataTemplate>
             <DataTemplate x:Key="floatTemplate">
                 <inputLayout:SfTextInputLayout
@@ -49,25 +67,25 @@
                            FontSize="Caption" BindingContext="{Binding}" Completed="Entry_Completed_int" IsEnabled="{Binding Locked}"/>
                 </inputLayout:SfTextInputLayout>
             </DataTemplate>
-            <DataTemplate x:Key="arrangementDataTemplate">
-                <Frame Padding="0" BorderColor="Gray" BackgroundColor="White">
-                    <Grid x:Name="Item" Margin="5" >
+            <DataTemplate x:Key="arrayTemplate">
+                <Frame Padding="0" BorderColor="{StaticResource LightGreyColor}" BackgroundColor="White">
+                    <Grid x:Name="Item" Margin="5" RowSpacing="0" >
                         <Grid.RowDefinitions>
                             <RowDefinition Height="20"/>
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
-                        <StackLayout Orientation="Horizontal" Grid.Column="0" Grid.Row="0">
-                            <Label Text="{Binding Name}" TextColor="Black" BackgroundColor="White"/>
-                            <Button Text="+" Style="{StaticResource BlueButtonStyle}"
-                                BackgroundColor="White" Padding="0" TextColor="Green" FontAttributes="Bold"
-                                Command="{Binding Source={x:Reference thisPage}, Path = BindingContext.AddNewObjectInPropertyCommand}"
-                                CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
-                                HeightRequest="30" WidthRequest="30" IsEnabled="{Binding Locked}"/>
+                        <StackLayout Orientation="Horizontal" Grid.Row="0" Spacing="0">
+                            <Label Text="{Binding Name}" TextColor="Black"/>
+                            <Button Text="+"
+                                    TextColor="#555"
+                                    FontAttributes="Bold"
+                                    BackgroundColor="{StaticResource ControlsBackgrounColor}"
+                                    Command="{Binding Source={x:Reference thisPage}, Path = BindingContext.AddNewObjectInPropertyCommand}"
+                                    CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
+                                    IsEnabled="{Binding Locked}"
+                                    Padding="0" WidthRequest="25"/>
                         </StackLayout>
-                        <views:CheckListView ObjectGUID="{Binding}" Grid.Column="0" Grid.Row="1" MinimumHeightRequest="100"/>
+                        <views:CheckListView ObjectGUID="{Binding}" Grid.Row="1" MinimumHeightRequest="100"/>
                     </Grid>
                 </Frame>
             </DataTemplate>
@@ -85,7 +103,6 @@
             </DataTemplate>
             <DataTemplate x:Key="humanTemplate">
                 <StackLayout>
-                    
                     <inputLayout:SfTextInputLayout
                                 Style="{x:StaticResource SfTextInputLayoutStyle}"
                                 HelperText="{Binding Name}"
@@ -94,131 +111,38 @@
                         <Entry  Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption" IsEnabled="{Binding Locked}"/>
                     </inputLayout:SfTextInputLayout>
                 </StackLayout>
-                
+            </DataTemplate>
+
+            <DataTemplate x:Key="notArrayTemplate">
+                <Frame x:Name="Item" Padding="0" BackgroundColor="White">
+                    <Grid Margin="5" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <StackLayout Orientation="Horizontal" Grid.Row="0">
+                            <Label Text="{Binding Name}" TextColor="Black"/>
+                            <Button WidthRequest="30" HeightRequest="30" IsEnabled="{Binding Locked}" Padding="1" BackgroundColor="{StaticResource ControlsBackgrounColor}"
+                                    Command="{Binding Source={x:Reference thisPage}, Path = BindingContext.EditObject}" 
+                                    CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}">
+                                <Button.ImageSource>
+                                    <FontImageSource
+                                        FontFamily="{DynamicResource MaterialFontFamily}"
+                                        Glyph="{StaticResource IconPencil}"
+                                        Color="{StaticResource LightGreyColor}"
+                                        Size="17"/>
+                                </Button.ImageSource>
+                            </Button>
+                        </StackLayout>
+                        <Label Text="{Binding Value, Converter={converters:ObjectConverter}}" Grid.Row="1"/>
+                    </Grid>
+                </Frame>
+
             </DataTemplate>
 
             <DataTemplate x:Key="objectTemplate">
                 <Label Text="{Binding Name}"/>
             </DataTemplate>
-            
-            <DataTemplate x:Key="postDataTemplate">
-                <Frame Padding="0" BorderColor="Gray" BackgroundColor="White">
-                    <Grid x:Name="Item" Margin="5" >
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="20"/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
-                        <StackLayout Orientation="Horizontal" Grid.Column="0" Grid.Row="0">
-                            <Button Text="+" Style="{StaticResource BlueButtonStyle}"
-                                BackgroundColor="White" Padding="0" TextColor="Green" FontAttributes="Bold"
-                                Command="{Binding Source={x:Reference thisPage}, Path = BindingContext.AddNewObjectInPropertyCommand}" 
-                                CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
-                                HeightRequest="30" WidthRequest="30" IsEnabled="{Binding Locked}"/>
-                        </StackLayout>
-
-                        <Label Text="{Binding Value, Converter={converters:ObjectConverter}}" Grid.Column="0" Grid.Row="1"
-                               BackgroundColor="White"/>
-                    </Grid>
-                </Frame>
-                
-            </DataTemplate>
-
-            <DataTemplate x:Key="catalogDataTemplate">
-                <Frame Padding="0" BorderColor="Gray" BackgroundColor="White">
-                    <Grid x:Name="Item" Margin="5" >
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="20"/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
-                        <StackLayout Orientation="Horizontal" Grid.Column="0" Grid.Row="0">
-                            <Label Text="{Binding Name}" TextColor="Black" BackgroundColor="White"/>
-                            <Button Text="+" Style="{StaticResource BlueButtonStyle}"
-                                BackgroundColor="White" Padding="0" TextColor="Green" FontAttributes="Bold"
-                                Command="{Binding Source={x:Reference thisPage}, Path = BindingContext.AddNewObjectInPropertyCommand}" 
-                                CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
-                                HeightRequest="30" WidthRequest="30" IsEnabled="{Binding Locked}"/>
-                        </StackLayout>
-                        <views:CheckListView ObjectGUID="{Binding}" Grid.Column="0" Grid.Row="1" MinimumHeightRequest="100"/>
-                    </Grid>
-                </Frame>
-            </DataTemplate>
-
-            <DataTemplate x:Key="profiDataTemplate">
-                <Frame Padding="0" BorderColor="Gray" BackgroundColor="White">
-                    <Grid x:Name="Item" Margin="5" >
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="20"/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
-                        <StackLayout Orientation="Horizontal" Grid.Column="0" Grid.Row="0">
-                            <Label Text="{Binding Name}" TextColor="Black" BackgroundColor="White"/>
-                            <Button Text="+" Style="{StaticResource BlueButtonStyle}"
-                                BackgroundColor="White" Padding="0" TextColor="Green" FontAttributes="Bold"
-                                Command="{Binding Source={x:Reference thisPage}, Path = BindingContext.AddNewObjectInPropertyCommand}" 
-                                CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
-                                HeightRequest="30" WidthRequest="30" IsEnabled="{Binding Locked}"/>
-                        </StackLayout>
-
-                        <Label Text="{Binding Value, Converter={converters:ObjectConverter}}" Grid.Column="0" Grid.Row="1"
-                               BackgroundColor="White"/>
-                    </Grid>
-                </Frame>
-            </DataTemplate>
-
-            <DataTemplate x:Key="craneDataTemplate">
-                <Frame Padding="0" BorderColor="Gray" BackgroundColor="White">
-                    <Grid x:Name="Item" Margin="5" >
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="20"/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
-                        <StackLayout Orientation="Horizontal" Grid.Column="0" Grid.Row="0">
-                            <Label Text="{Binding Name}" TextColor="Black" BackgroundColor="White"/>
-                            <Button Text="+" Style="{StaticResource BlueButtonStyle}"
-                                BackgroundColor="White" Padding="0" TextColor="Green" FontAttributes="Bold"
-                                Command="{Binding Source={x:Reference thisPage}, Path = BindingContext.AddNewObjectInPropertyCommand}" 
-                                CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
-                                HeightRequest="30" WidthRequest="30" IsEnabled="{Binding Locked}"/>
-                        </StackLayout>
-                        <views:CheckListView ObjectGUID="{Binding}" Grid.Column="0" Grid.Row="1" MinimumHeightRequest="100"/>
-                    </Grid>
-                </Frame>
-            </DataTemplate>
-            <DataTemplate x:Key="humanWithProfiDataTemplate">
-                <Frame Padding="0" BorderColor="Gray" BackgroundColor="White">
-                    <Grid x:Name="Item" Margin="5" >
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="20"/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
-                        <StackLayout Orientation="Horizontal" Grid.Column="0" Grid.Row="0">
-                            <Label Text="{Binding Name}" TextColor="Black" BackgroundColor="White"/>
-                            <Button Text="+" Style="{StaticResource BlueButtonStyle}"
-                                BackgroundColor="White" Padding="0" TextColor="Green" FontAttributes="Bold"
-                                Command="{Binding Source={x:Reference thisPage}, Path = BindingContext.AddNewObjectInPropertyCommand}" 
-                                CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
-                                HeightRequest="30" WidthRequest="30" IsEnabled="{Binding Locked}"/>
-                        </StackLayout>
-                        <views:CheckListView ObjectGUID="{Binding}" Grid.Column="0" Grid.Row="1" MinimumHeightRequest="100"/>
-                    </Grid>
-                </Frame>
-            </DataTemplate>
-
         </ResourceDictionary>
         <local:ChecklistDataTemplateSelector x:Key="checklistDataTemplateSelector"
                                              GroupTemplate="{StaticResource groupTemplate}"
@@ -229,12 +153,9 @@
                                              ObjectTemplate="{StaticResource objectTemplate}"
                                              StringTemplate="{StaticResource stringTemplate}"
                                              HumanTemplate="{StaticResource humanTemplate}"
-                                             ArrangementDataTemplate="{StaticResource arrangementDataTemplate}"
-                                             PostDataTemplate="{StaticResource postDataTemplate}"
-                                             CatalogDataTemplate="{StaticResource catalogDataTemplate}"
-                                             ProfiDataTemplate="{StaticResource profiDataTemplate}"
-                                             CraneDataTemplate="{StaticResource craneDataTemplate}"
-                                             HumanWithProfiDataTemplate="{StaticResource humanWithProfiDataTemplate}"/>
+                                             ArrayTemplate="{StaticResource arrayTemplate}"
+                                             NotArrayTemplate ="{StaticResource notArrayTemplate}"
+                                             />
         
     </ContentView.Resources>
     <stateContainerDemo:StateContainer State ="{Binding States}">
@@ -242,77 +163,8 @@
             <StackLayout
                 Padding="5"
                 BindableLayout.ItemsSource="{Binding SourceObjects.DisplayItems}"
-                BindableLayout.ItemTemplateSelector="{StaticResource checklistDataTemplateSelector}">
-            </StackLayout>
-            <!--<Grid Margin="5">
-                <Grid.RowDefinitions>
-                    <RowDefinition />
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                --><!--<ScrollView Grid.Row="0">
-                    
-<Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition />
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition Width="85"/>
-                        </Grid.ColumnDefinitions>
-                        <Label
-                            x:Name="titleLabel"
-                            Text="{Binding SystemObjectModel.Name}"
-                            FontSize="Title" TextColor="Black"
-                            HeightRequest="35"
-                            Grid.Column="0" Grid.Row="0"
-                            IsVisible="{Binding IsVisibleButtons}"/>
-                        <StackLayout Orientation="Horizontal" Spacing="1" Grid.Row="0" Grid.Column="1" IsVisible="{Binding IsVisibleButtons}">
-                            <Button BackgroundColor="{StaticResource BackgroundColor}"
-                                    BorderWidth="1" BorderColor="{StaticResource DarkGreyColor}"
-                                    HeightRequest="35" WidthRequest="40">
-                                <Button.ImageSource>
-                                    <FontImageSource
-                                        FontFamily="{DynamicResource MaterialFontFamily}"
-                                        Glyph="{StaticResource IconTrash}"
-                                        Color="{StaticResource DarkGreyColor}"
-                                        Size="17"/>
-                                </Button.ImageSource>
-                            </Button>
-                            <Button BackgroundColor="{StaticResource BackgroundColor}" 
-                                    BorderWidth="1" BorderColor="{StaticResource DarkGreyColor}" 
-                                    HeightRequest="35" WidthRequest="40">
-                                <Button.ImageSource>
-                                    <FontImageSource
-                                        FontFamily="{DynamicResource MaterialFontFamily}"
-                                        Glyph="{StaticResource IconCopy}"
-                                        Color="{StaticResource DarkGreyColor}"
-                                        Size="17"/>
-                                </Button.ImageSource>
-                            </Button>
-                        </StackLayout>
-                        <StackLayout
-                            Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1"
-                            BindableLayout.ItemsSource="{Binding SourceObjects.DisplayItems}"
-                            BindableLayout.ItemTemplateSelector="{StaticResource checklistDataTemplateSelector}">
-                        </StackLayout>
-                    </Grid>
-                    
-                </ScrollView>-->
-                
-                <!--<Button 
-                    Grid.Row="1"
-                    x:Name="addNewObjectButton"                    
-                    BackgroundColor="#41a32e"
-                    Command="{Binding SavePropertiesValuesCommand}"
-                    HeightRequest="50" WidthRequest="50"
-                    CornerRadius="30"
-                    IsEnabled="{Binding IsEnabled}"
-                    IsVisible="{Binding IsVisibleSaveButton, Mode=TwoWay}"
-                    Text="Сохранить"
-                    TextColor="White"
-                    FontAttributes="Bold"/>--><!--
-            </Grid>-->
+                BindableLayout.ItemTemplateSelector="{StaticResource checklistDataTemplateSelector}">                
+            </StackLayout>            
         </stateContainerDemo:StateCondition>
 
         <stateContainerDemo:StateCondition Is="Loading">
@@ -320,15 +172,15 @@
         </stateContainerDemo:StateCondition>
 
         <stateContainerDemo:StateCondition Is="NoInternet">
-            <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
+            <StackLayout VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Spacing="10">
                 <Label Text="Отсутствует интернет-&#10;соединение" HorizontalTextAlignment="Center"/>
-                <Button Text="Повторить" Command="{Binding UpdateContentCommand}" Style="{DynamicResource BlueButtonStyle}" IsEnabled="{Binding IsEnabled}"/>
+                <Button Text="Повторить" Style="{DynamicResource BlueButtonStyle}" IsEnabled="{Binding IsEnabled}"/>
             </StackLayout>
         </stateContainerDemo:StateCondition>
 
-        <stateContainerDemo:StateCondition Is="NoData" >
-            <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
-                <Label Text="Данных пока нет" HorizontalTextAlignment="Center" HeightRequest="100"/>
+        <stateContainerDemo:StateCondition Is="NoData">
+            <StackLayout Spacing="10">
+                <Label Text="Данных пока нет" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="100"/>
             </StackLayout>
         </stateContainerDemo:StateCondition>
 

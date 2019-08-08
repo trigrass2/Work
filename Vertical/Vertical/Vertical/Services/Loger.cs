@@ -21,7 +21,10 @@ namespace Vertical.Services
             try
             {
                 string textMsg = $"In {invokeMethod} -> {textMessage}";
-                RestClient client = new RestClient($"https://api.telegram.org/bot870858359:AAH0xAUXEm3zNVVFM7buY6Avwvrj_av4Rac/sendMessage?chat_id=@v_error&text={textMsg}");
+                RestClient client = new RestClient($"https://api.telegram.org/bot870858359:AAH0xAUXEm3zNVVFM7buY6Avwvrj_av4Rac/sendMessage?chat_id=@v_error&text={textMsg}")
+                {
+                    Timeout = 5000
+                };
                 RestRequest restRequest = new RestRequest(Method.POST);
 
                 var responce = client.Execute(restRequest);

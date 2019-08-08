@@ -43,7 +43,7 @@ namespace Vertical.ViewModels
         public EditObjectPageViewModel(SystemObjectModel _inputObject)
         {
             InputObject = _inputObject;
-            NewObject = new InputEditSystemObject { ObjectGUID = InputObject?.GUID, Name = InputObject?.Name };
+            NewObject = new InputEditSystemObject { ObjectGUID = InputObject?.GUID, Name = InputObject?.Name, Hidden = InputObject?.Hidden, Template = InputObject?.Template };
             States = States.Normal;
         }
 

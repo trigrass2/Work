@@ -36,6 +36,11 @@ namespace Vertical.Models
         public string TypeName { get; set; }
 
         /// <summary>
+        /// Скрыт или нет
+        /// </summary>
+        public bool? Hidden { get; set; }
+
+        /// <summary>
         /// Дата создания объекта
         /// </summary>
         public DateTime CreationTime { get; set; }
@@ -49,5 +54,10 @@ namespace Vertical.Models
         /// Имя пользователя создавшего объект
         /// </summary>
         public string UserName { get; set; }
+
+        /// <summary>
+        /// Является ли шаблоном
+        /// </summary>
+        public bool? Template { get; set; }
     }
 }

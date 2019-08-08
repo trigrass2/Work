@@ -110,5 +110,7 @@ namespace Vertical.Models
                 _locked = !value;
             }
         }
+
+        public bool Array { get; set; }
     }
 }

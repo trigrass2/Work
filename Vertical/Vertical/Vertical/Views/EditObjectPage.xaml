@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:stateContainerDemo="clr-namespace:Xamarin.Forms.Essentials.Controls;assembly=Xamarin.Forms.Essentials.Controls"
              xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
-             mc:Ignorable="d"
+             xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
              x:Class="Vertical.Views.EditObjectPage">
     <stateContainerDemo:StateContainer State ="{Binding States}">
         <stateContainerDemo:StateCondition Is="Normal">
@@ -23,7 +23,9 @@
                         Hint="Название"
                         HelperText="Введите новое название объекта">
                         <Entry Text="{Binding NewObject.Name, Mode=TwoWay}"/>
-                    </inputLayout:SfTextInputLayout>                    
+                    </inputLayout:SfTextInputLayout>
+                    <input:CheckBox Type="Material" Color="{StaticResource GreenColor}" Text="Скрытый" IsChecked="{Binding NewObject.Hidden, Mode=TwoWay}"/>
+                    <input:CheckBox Type="Material" Color="{StaticResource GreenColor}" Text="Шаблон" IsChecked="{Binding NewObject.Template, Mode=TwoWay}"/>
                 </StackLayout>
                 <StackLayout Grid.Row="1">
                     <Button x:Name="sendObjectButton" Style="{x:StaticResource BlueButtonStyle}" 

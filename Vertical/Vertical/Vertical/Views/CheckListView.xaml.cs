@@ -1,5 +1,4 @@
 ﻿using Acr.UserDialogs;
-using Syncfusion.XForms.Buttons;
 using System;
 using System.ComponentModel;
 using System.Linq;
@@ -54,40 +53,30 @@ namespace Vertical.Views
             BindingContext = ViewModel;
         }
 
-        private void SfCheckBox_StateChanged(object sender, StateChangedEventArgs e)
-        {
-            try
-            {
-                var model = (sender as SfCheckBox).BindingContext as SystemObjectPropertyValueModel;
-                ViewModel.CreateNewValue(model, e.IsChecked);
-            }
-            catch (Exception ex)
-            {
-                
-            }
-            
-        }
-
         private async void Entry_Completed_float(object sender, EventArgs e)
         {
             var model = (sender as Entry).BindingContext as SystemObjectPropertyValueModel;
-            if (double.TryParse(model.Value as string, out double d) == false)
+            if (double.TryParse(model.Value as string, out double d) == false && !(model.Value is null) && model.Value as string != "")
             {
                 await UserDialogs.Instance.AlertAsync($"Не верный формат данных! Необходимо {model.Typename}", "Ошибка", "Ок");
                 return;
             }
-            ViewModel.CreateNewValue(model, d);
+
+            ViewModel.CreateNewValue(model, model.Value);
+
         }
 
         private async void Entry_Completed_int(object sender, EventArgs e)
         {
             var model = (sender as Entry).BindingContext as SystemObjectPropertyValueModel;
-            if (int.TryParse(model.Value as string, out int i) == false)
+            if (int.TryParse(model.Value as string, out int i) == false && !(model.Value is null) &&  model.Value as string != "")
             {
                 await UserDialogs.Instance.AlertAsync($"Не верный формат данных! Необходимо {model.Typename}", "Ошибка", "Ок");
                 return;
             }
-            ViewModel.CreateNewValue(model, i);
+
+            ViewModel.CreateNewValue(model, model.Value);
+
         }
 
         private void Entry_Completed_string(object sender, EventArgs e)
@@ -107,5 +96,6 @@ namespace Vertical.Views
             }
         }
         #endregion
+
     }
 }

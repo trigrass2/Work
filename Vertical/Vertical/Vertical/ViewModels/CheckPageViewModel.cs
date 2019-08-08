@@ -9,6 +9,8 @@ using static Vertical.Constants;
 using Acr.UserDialogs;
 using System;
 using Syncfusion.DataSource;
+using System.Collections.Generic;
+using System.Net;
 
 namespace Vertical.ViewModels
 {    
@@ -16,36 +18,89 @@ namespace Vertical.ViewModels
     {
         public ICommand SavePropertiesValuesCommand => new Command(SavePropertiesValuesAsync);
         public ICommand AddNewObjectInPropertyCommand => new Command(AddNewObjectInPropperty);
+        public ICommand EditObject => new Command(Edit);
+        public ICommand IsCheckedCommand => new Command(IsChecked);
 
         public bool IsVisibleSaveButton { get; set; }
         public bool IsVisibleButtons { get; set; }
 
         public SystemObjectModel SystemObjectModel { get; set; }
-        public ObservableCollection<SystemObjectPropertyValueModel> SystemPropertyModels { get; set; }
-        public ObservableCollection<AddSystemObjectPropertyValueModel> NewValues { get; set; }
-        public ObservableCollection<AddSystemObjectPropertyValueModel> StartValues { get; set; }
+        public List<SystemObjectPropertyValueModel> SystemPropertyModels { get; set; }
+        public List<AddSystemObjectPropertyValueModel> NewValues { get; set; }
+        public List<AddSystemObjectPropertyValueModel> StartValues { get; set; }
         public ObservableCollection<SystemObjectModel> ObjectModels { get; set; }
 
         public DataSource SourceObjects { get; set; }
+
+        public DateTime MinDate { get; set; }
+        public DateTime MaxDate { get; set; }
+        public DateTime SelectedDate { get; set; }
 
         public CheckPageViewModel() { }
 
         public CheckPageViewModel(SystemObjectModel obj)
         {
+            MinDate = DateTime.Now.AddYears(-1);
+            MaxDate = DateTime.Now.AddYears(1);
             SystemObjectModel = obj;
             SourceObjects = new DataSource();
             SourceObjects.GroupDescriptors.Add(new GroupDescriptor("GroupName"));        
-            NewValues = new ObservableCollection<AddSystemObjectPropertyValueModel>();
-            StartValues = new ObservableCollection<AddSystemObjectPropertyValueModel>();
-            SystemPropertyModels = new ObservableCollection<SystemObjectPropertyValueModel>();
+            NewValues = new List<AddSystemObjectPropertyValueModel>();
+            StartValues = new List<AddSystemObjectPropertyValueModel>();
+            SystemPropertyModels = new List<SystemObjectPropertyValueModel>();
             ObjectModels = new ObservableCollection<SystemObjectModel>();
             UpdateSystemPropertyModels();
         }
 
+        private async void IsChecked(object obj)
+        {
+            var model = obj as SystemObjectPropertyValueModel;
+            await Api.SendDataToServerAsync("System/AddSystemObjectPropertyValue", 
+                                            new {
+                                                ObjectGUID  = SystemObjectModel?.GUID,
+                                                PropertyID  = model?.ID,
+                                                PropertyNum = model?.Num,
+                                                Value = model?.Value,
+                                                ValueNum = model?.ValueNum}
+                                            );
+        }
+
+        private async void Edit(object param)
+        {
+            var item = param as SystemObjectPropertyValueModel;
+            var items = await Api.GetDataFromServerAsync<SystemObjectModel>("System/GetSystemObjects", new { ParentGUID = item.SourceObjectParentGUID });
+            var action = await App.Current.MainPage.DisplayActionSheet(null, null, null, items.Select(x => x.Name).ToArray());
+            if(action != null)
+            {
+                using (UserDialogs.Instance.Loading("Внесение изменений...", null, null, true, MaskType.Black))
+                {
+                    switch (await Api.SendDataToServerAsync("System/AddSystemObjectPropertyValue", 
+                        new
+                        {
+                            ObjectGUID = item.SystemObjectGUID,
+                            PropertyID = item.ID,
+                            PropertyNum = item.Num,
+                            Value = items.Where(x => x.Name == action).Select(q => q.GUID).FirstOrDefault(),
+                            ValueNum = item.ValueNum
+                        })
+                    )
+                    {
+                        case HttpStatusCode.Forbidden: await App.Current.MainPage.DisplayAlert(null, "Нет доступа.", "Oк");break;
+                        case HttpStatusCode.BadRequest: await App.Current.MainPage.DisplayAlert(null, "Не удалось редактировать", "Oк"); break;
+                            default: Device.BeginInvokeOnMainThread(UpdateSystemPropertyModels); break;
+                    };
+
+                    
+                }
+                 
+            }
+            
+        }
+
         private async Task CreateArrangement(SystemObjectPropertyValueModel property)
         {
-            var typeName = Api.GetDataFromServer<SystemObjectModel>("System/GetSystemObjects", new { ParentGUID = property.SystemObjectGUID})
-                .Where(x => x.TypeID == property.SourceObjectTypeID).Select(n => n.TypeName).FirstOrDefault();
+            var typeName = Api.GetDataFromServer<SystemObjectTypeModel>("System/GetSystemObjectTypes", new { ShowHidden = true})
+                .Where(x => x.ID == property.SourceObjectTypeID).Select(n => n.Name).FirstOrDefault();
             
             string guidNewItem = await Api.AddSystemObjectAsync(new { Name = typeName, TypeID = property.SourceObjectTypeID, ParentGUID = property.SystemObjectGUID });
             if (guidNewItem != default(string))
@@ -77,7 +132,6 @@ namespace Vertical.ViewModels
         /// <param name="commandParameter"></param>
         private async void AddNewObjectInPropperty(object commandParameter)
         {
-            
             var prop = commandParameter as SystemObjectPropertyValueModel;
             if(prop.SourceObjectTypeID != null)
             {
@@ -178,7 +232,7 @@ namespace Vertical.ViewModels
                 }
             }
         }
-        
+       
         /// <summary>
         /// Обновляет источник данных
         /// </summary>
@@ -186,45 +240,25 @@ namespace Vertical.ViewModels
         {            
             SystemPropertyModels.Clear();
 
-            var values = Api.GetDataFromServer<SystemObjectPropertyValueModel>("System/GetSystemObjectPropertiesValues", new { ObjectGUID = SystemObjectModel?.GUID });
+            var values = Api.GetDataFromServer<SystemObjectPropertyValueModel>("System/GetSystemObjectPropertiesValues", new{ ObjectGUID = SystemObjectModel?.GUID });
             
-            if (values.Count == 0)
+            if (values == null || values?.Count == 0)
             {
                 States = States.NoData;
                 return;
             }
-            var nullsBool = values.Where(x => x?.TypeID == 1);            
-
-            if(nullsBool.Where(x => x?.Value == null).Count() > 0)
-            {
-                foreach (var n in nullsBool)
-                {
-                    Api.SendDataToServer("System/AddSystemObjectPropertyValue", new { ObjectGUID = SystemObjectModel?.GUID, PropertyID = n?.ID, PropertyNum = n?.Num, Value = false, n?.ValueNum });
-                }
-                values = Api.GetDataFromServer<SystemObjectPropertyValueModel>("System/GetSystemObjectPropertiesValues", new { ObjectGUID = SystemObjectModel?.GUID });
-            }
             
-            NewValues.Clear();
-            StartValues.Clear();
-            foreach (var n in nullsBool)
-            {
-                var item = new AddSystemObjectPropertyValueModel
-                {
-                    ObjectGUID = SystemObjectModel?.GUID,
-                    PropertyID = n.ID,
-                    PropertyNum = n.Num,
-                    Value = n?.Value,
-                    ValueNum = n.ValueNum
-                };
-                NewValues.Add(item);
-                StartValues.Add(item);
-            }
-            
+           
             try
-            {
-                foreach (var s in values?.OrderBy(o => o.GroupID))
+            {                
+                foreach (var s in values.OrderBy(o => o.GroupID))
                 {
-                    SystemPropertyModels.Add(s);                    
+                    SystemPropertyModels.Add(s);
+                }
+
+                if(SystemPropertyModels.Any(x => x.TypeID == 5 && x.Array && !string.IsNullOrEmpty(x.Value as string)))
+                {
+                    SystemPropertyModels.RemoveAll(x => string.IsNullOrEmpty(x.Value as string));
                 }
             }
             catch (Exception ex)
@@ -235,7 +269,6 @@ namespace Vertical.ViewModels
             SourceObjects.Source = SystemPropertyModels;
             
             States = States.Normal;
-            
         }
 
         /// <summary>
@@ -243,30 +276,29 @@ namespace Vertical.ViewModels
         /// </summary>
         private async void SavePropertiesValuesAsync()
         {
-            IsEnabled = false;
+            IsEnabled = false;            
+            
             using (UserDialogs.Instance.Loading("Сохранение изменений...", null, null, true, MaskType.Black))
             {
-                var items = NewValues.Except(StartValues.Intersect(NewValues));
-
-                foreach (var n in items)
+                foreach (var n in NewValues)
                 {
-                    if (await Api.SendDataToServerAsync("System/AddSystemObjectPropertyValue", n) == false)
+                    if (await Api.SendDataToServerAsync("System/AddSystemObjectPropertyValue", n) != HttpStatusCode.OK)
                     {
-                        UserDialogs.Instance.Alert("Не удалось создать", null, "Ок");
+                        UserDialogs.Instance.Alert("Не удалось сохранить", null, "Ок");
                         return;
                     }
 
                 }
-
                 IsVisibleSaveButton = false;
                 IsEnabled = true;
+                NewValues.Clear();
+
+                Device.BeginInvokeOnMainThread(UpdateSystemPropertyModels);
             }
-            
         }
 
         public void CreateNewValue(SystemObjectPropertyValueModel property, object value)
-        {
-            var objectForDelete = NewValues;
+        {            
             var item = new AddSystemObjectPropertyValueModel
             {
                 ObjectGUID = SystemObjectModel?.GUID,
@@ -275,24 +307,38 @@ namespace Vertical.ViewModels
                 Value = value,
                 ValueNum = property.ValueNum
             };
-            NewValues.Where(x => x?.Value is null).AsParallel().ForAll(x => x.Value = false);
-            if(property.TypeID == 1)
+           
+            if (NewValues.Any(x => x.PropertyID == item.PropertyID))
             {
-                if (NewValues.Any(x => x.PropertyID == item.PropertyID && x?.Value is null))
+                for (int i = NewValues.Count - 1; i >= 0; i--)
                 {
-                    NewValues[NewValues.IndexOf(NewValues.Where(x => x.PropertyID == item.PropertyID).First())] = item;
-                }
-                else if(NewValues.Any(x => x.PropertyID == item.PropertyID &&  !x.Value.Equals(item.Value)))
-                {
-                    NewValues[NewValues.IndexOf(NewValues.Where(x => x.PropertyID.Equals(item.PropertyID)).First())] = item;
+                    if (item.Value is null || item.Value as string == "")
+                    {
+                        NewValues.Remove(NewValues[i]);
+                        break;
+                    }
+                    else
+                    {
+                        NewValues[i] = item;
+                        break;
+                    }
                 }
             }
-            else
+            else if(item.Value != null && item.Value as string != "")
             {
                 NewValues.Add(item);
             }
 
-            IsVisibleSaveButton = StartValues.SequenceEqual(NewValues) == true ? false : true;
-        }        
+            
+            if (NewValues.Count > 0)
+            {
+                IsVisibleSaveButton = true;
+            }
+            else
+            {
+                IsVisibleSaveButton = false;
+            }
+            
+        }
     }
 }

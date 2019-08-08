@@ -1169,6 +1169,18 @@
           "lib/MonoAndroid/Xamarin.Forms.Essentials.Controls.dll": {}
         }
       },
+      "Xamarin.Forms.InputKit/3.0.12": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "3.2.0.839982"
+        },
+        "compile": {
+          "lib/monoandroid81/Plugin.InputKit.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid81/Plugin.InputKit.dll": {}
+        }
+      },
       "Xamarin.Forms.Svg/1.0.0-pre4": {
         "type": "package",
         "dependencies": {
@@ -1202,6 +1214,7 @@
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.Forms": "4.1.0.618606",
           "Xamarin.Forms.Essentials.Controls": "1.1.1",
+          "Xamarin.Forms.InputKit": "3.0.12",
           "Xamarin.Forms.Svg": "1.0.0-pre4"
         },
         "compile": {
@@ -5351,6 +5364,28 @@
         "xamarin.forms.essentials.controls.nuspec"
       ]
     },
+    "Xamarin.Forms.InputKit/3.0.12": {
+      "sha512": "fcfRUEUn+C6cEWA5iBYIZFn7G13WaYY5GgIEMNBk2H/pw9i94ouDtzvjFZ2JpXeZ/QjAHKLUVEz5ZOnFndlExQ==",
+      "type": "package",
+      "path": "xamarin.forms.inputkit/3.0.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid81/Plugin.InputKit.dll",
+        "lib/monoandroid81/Plugin.InputKit.xml",
+        "lib/monoandroid90/Plugin.InputKit.dll",
+        "lib/monoandroid90/Plugin.InputKit.xml",
+        "lib/netstandard1.0/Plugin.InputKit.dll",
+        "lib/netstandard1.0/Plugin.InputKit.xml",
+        "lib/netstandard2.0/Plugin.InputKit.dll",
+        "lib/netstandard2.0/Plugin.InputKit.xml",
+        "lib/xamarin.ios10/Plugin.InputKit.dll",
+        "lib/xamarin.ios10/Plugin.InputKit.xml",
+        "readme.txt",
+        "xamarin.forms.inputkit.3.0.12.nupkg.sha512",
+        "xamarin.forms.inputkit.nuspec"
+      ]
+    },
     "Xamarin.Forms.Svg/1.0.0-pre4": {
       "sha512": "PhLLVd3V9AOgWKzlsafGJWEqKGYm+xCUjWKXT+ok1ZLs4S4ghfpWnCt9BC5jEgNBVlFjeP4pm4Z7QSgmewDGNQ==",
       "type": "package",
@@ -5414,6 +5449,7 @@
       "Xamarin.FFImageLoading.Svg.Forms >= 2.4.11.982",
       "Xamarin.Forms >= 4.1.0.618606",
       "Xamarin.Forms.Essentials.Controls >= 1.1.1",
+      "Xamarin.Forms.InputKit >= 3.0.12",
       "Xamarin.Forms.Svg >= 1.0.0-pre4"
     ]
   },
@@ -5542,6 +5578,10 @@
           "Xamarin.Forms.Essentials.Controls": {
             "target": "Package",
             "version": "[1.1.1, )"
+          },
+          "Xamarin.Forms.InputKit": {
+            "target": "Package",
+            "version": "[3.0.12, )"
           },
           "Xamarin.Forms.Svg": {
             "target": "Package",

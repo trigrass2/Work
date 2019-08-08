@@ -91,7 +91,7 @@ namespace Vertical.ViewModels
 
             SystemObjectModels?.Clear();
             
-            var items = Api.GetDataFromServer<SystemObjectModel>("System/GetSystemObjects", new { ParentGUID = ParentObject?.GUID });
+            var items = Api.GetDataFromServer<SystemObjectModel>("System/GetSystemObjects", new { ParentGUID = ParentObject?.GUID, ShowTemplates = true });
 
             if (items != null)
             {
@@ -111,27 +111,29 @@ namespace Vertical.ViewModels
         private async void GoToEditObjectPage(object commandParameter)
         {            
             IsEnabled = false;
-            string action = await Application.Current.MainPage.DisplayActionSheet("Выберите действие", "Отмена", null, "Редактировать", "Информация");
-            
-            switch (action)
-            {
-                case null:
-                    {
-                        IsEnabled = true; 
-                        return;
-                    }
-                case "Редактировать":
-                    {
-                        await Navigation.PushModalAsync(new EditObjectPage(commandParameter as SystemObjectModel));
-                        IsEnabled = true;
-                    }
-                    break;
-                case "Информация":
-                    {
-                        await Navigation.PushModalAsync(new InfoPage(commandParameter as SystemObjectModel));
-                        IsEnabled = true;
-                    }break;
-            }
+            await Navigation.PushModalAsync(new EditObjectPage(commandParameter as SystemObjectModel));
+
+            //string action = await Application.Current.MainPage.DisplayActionSheet("Выберите действие", "Отмена", null, "Редактировать", "Информация");
+
+            //switch (action)
+            //{
+            //    case null:
+            //        {
+            //            IsEnabled = true; 
+            //            return;
+            //        }
+            //    case "Редактировать":
+            //        {
+            //            await Navigation.PushModalAsync(new EditObjectPage(commandParameter as SystemObjectModel));
+            //            IsEnabled = true;
+            //        }
+            //        break;
+            //    case "Информация":
+            //        {
+            //            await Navigation.PushModalAsync(new InfoPage(commandParameter as SystemObjectModel));
+            //            IsEnabled = true;
+            //        }break;
+            //}
 
             IsEnabled = true;
         }
@@ -150,15 +152,23 @@ namespace Vertical.ViewModels
             IsEnabled = false;
             States = States.Loading;
             var types = await Api.GetDataFromServerAsync<SystemObjectTypeModel>("System/GetSystemObjectTypes", new { ShowHidden = true });
-            
-            if(types.FirstOrDefault(x => x.ID == _selectedObject.TypeID).PrototypeID > 1)
+
+            try
+            {
+                if (types.FirstOrDefault(x => x.ID == _selectedObject.TypeID).PrototypeID > 1)
+                {
+                    await Navigation.PushAsync(await Task.Run(() => new CheckListPage(_selectedObject)));
+                }
+                else
+                {
+                    await Navigation.PushAsync(await Task.Run(() => new ManualObjectsPage(_selectedObject)));
+                }
+            }
+            catch (System.Exception)
             {
                 await Navigation.PushAsync(await Task.Run(() => new CheckListPage(_selectedObject)));
             }
-            else
-            {
-                await Navigation.PushAsync(await Task.Run(() => new ManualObjectsPage(_selectedObject)));
-            }            
+                     
 
             States = States.Normal;
             IsEnabled = true;
