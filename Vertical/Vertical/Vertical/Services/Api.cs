@@ -20,9 +20,9 @@ namespace Vertical.Services
         /// </summary>
         public static string AccessToken { get; private set; }
 
-        public async static Task<string> AddSystemObjectAsync<T>(T model = default(T))
+        public async static Task<string> AddSystemObjectAsync<T>(string nameMetod, T model = default(T))
         {
-            var client = new RestClient(domain + $"/api/System/AddSystemObject");
+            var client = new RestClient(domain + $"/api/{nameMetod}");
 
             try
             {

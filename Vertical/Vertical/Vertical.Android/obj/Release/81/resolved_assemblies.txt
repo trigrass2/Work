@@ -17,6 +17,7 @@ C:\Work\Vertical\Vertical\Vertical.Android\obj\Release\81\android\assets\NGraphi
 C:\Work\Vertical\Vertical\Vertical.Android\obj\Release\81\android\assets\NGraphics.dll
 C:\Work\Vertical\Vertical\Vertical.Android\obj\Release\81\android\assets\Plugin.Connectivity.Abstractions.dll
 C:\Work\Vertical\Vertical\Vertical.Android\obj\Release\81\android\assets\Plugin.Connectivity.dll
+C:\Work\Vertical\Vertical\Vertical.Android\obj\Release\81\android\assets\Plugin.InputKit.dll
 C:\Work\Vertical\Vertical\Vertical.Android\obj\Release\81\android\assets\Plugin.Settings.Abstractions.dll
 C:\Work\Vertical\Vertical\Vertical.Android\obj\Release\81\android\assets\Plugin.Settings.dll
 C:\Work\Vertical\Vertical\Vertical.Android\obj\Release\81\android\assets\PropertyChanged.dll

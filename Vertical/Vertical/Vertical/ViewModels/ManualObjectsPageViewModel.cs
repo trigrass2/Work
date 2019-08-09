@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Acr.UserDialogs;
+using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
@@ -70,9 +72,11 @@ namespace Vertical.ViewModels
         public bool IsEnabled { get; set; } = true;
 
         public SystemObjectModel ParentObject { get; set; }
+        private string TypePage { get; set; }
 
-        public ManualObjectsPageViewModel(SystemObjectModel _parentObject)
+        public ManualObjectsPageViewModel(SystemObjectModel _parentObject, string typePage)
         {
+            TypePage = typePage;
             ParentObject = _parentObject;
             Title = ParentObject?.Name;
             SystemObjectModels = new ObservableCollection<SystemObjectModel>();
@@ -80,7 +84,6 @@ namespace Vertical.ViewModels
             UpdateSystemObjects();
         }
 
-        
         public void UpdateSystemObjects()
         {
             if (!NetworkCheck.IsInternet())
@@ -90,8 +93,17 @@ namespace Vertical.ViewModels
             }
 
             SystemObjectModels?.Clear();
-            
-            var items = Api.GetDataFromServer<SystemObjectModel>("System/GetSystemObjects", new { ParentGUID = ParentObject?.GUID, ShowTemplates = true });
+
+            IList<SystemObjectModel> items = default(IList<SystemObjectModel>);
+
+            if(TypePage == "Шаблоны")
+            {
+               items = Api.GetDataFromServer<SystemObjectModel>("System/GetSystemObjects", new { ParentGUID = ParentObject?.GUID, ShowTemplates = true });
+            }
+            else
+            {
+                Api.GetDataFromServer<SystemObjectModel>("System/GetSystemObjects", new { ParentGUID = ParentObject?.GUID});
+            }
 
             if (items != null)
             {
@@ -113,28 +125,6 @@ namespace Vertical.ViewModels
             IsEnabled = false;
             await Navigation.PushModalAsync(new EditObjectPage(commandParameter as SystemObjectModel));
 
-            //string action = await Application.Current.MainPage.DisplayActionSheet("Выберите действие", "Отмена", null, "Редактировать", "Информация");
-
-            //switch (action)
-            //{
-            //    case null:
-            //        {
-            //            IsEnabled = true; 
-            //            return;
-            //        }
-            //    case "Редактировать":
-            //        {
-            //            await Navigation.PushModalAsync(new EditObjectPage(commandParameter as SystemObjectModel));
-            //            IsEnabled = true;
-            //        }
-            //        break;
-            //    case "Информация":
-            //        {
-            //            await Navigation.PushModalAsync(new InfoPage(commandParameter as SystemObjectModel));
-            //            IsEnabled = true;
-            //        }break;
-            //}
-
             IsEnabled = true;
         }
         
@@ -142,7 +132,7 @@ namespace Vertical.ViewModels
         {
             IsEnabled = false;
 
-            await Navigation.PushModalAsync(new InitializeObjectPage(ParentObject));
+            await Navigation.PushAsync(new ManualObjectsPage(null,"Архив"));
 
             IsEnabled = true;
         }
@@ -157,16 +147,109 @@ namespace Vertical.ViewModels
             {
                 if (types.FirstOrDefault(x => x.ID == _selectedObject.TypeID).PrototypeID > 1)
                 {
-                    await Navigation.PushAsync(await Task.Run(() => new CheckListPage(_selectedObject)));
+                    if (_selectedObject?.Template == true)
+                    {
+                        //switch (TypePage)
+                        //{
+                        //    case "Шаблон":
+                        //        {
+                        //            PromptResult pResult = await UserDialogs.Instance.PromptAsync(new PromptConfig
+                        //            {
+                        //                InputType = InputType.Name,
+                        //                Text = $"{_selectedObject.Name} {DateTime.Now}",
+                        //                OkText = "Создать",
+                        //                Title = "Создание объекта"
+                        //            });
+                        //            if (pResult.Ok)
+                        //            {
+                        //                string guidNewObject = await Api.AddSystemObjectAsync("System/CloneSystemObject", new { ObjectGUID = _selectedObject?.GUID, Name = pResult?.Text, ParentObject = _selectedObject?.ParentGUID, TypeID = _selectedObject?.TypeID });
+                        //                var obj = await Api.GetDataFromServerAsync<SystemObjectModel>("System/GetSystemObjects", new { ObjectGUID = guidNewObject });
+                        //                await Navigation.PushAsync(await Task.Run(() => new CheckListPage(obj.FirstOrDefault())));
+                        //            }
+                        //        }break;
+                        //}
+                        string action = await App.Current.MainPage.DisplayActionSheet("Выберите действие", "Отмена", null, "Создать", "Архив");
+                        switch (action)
+                        {
+                            case "Создать":
+                                {
+                                    PromptResult pResult = await UserDialogs.Instance.PromptAsync(new PromptConfig
+                                    {
+                                        InputType = InputType.Name,
+                                        Text = $"{_selectedObject.Name} {DateTime.Now}",
+                                        OkText = "Создать",
+                                        Title = "Создание объекта"
+                                    });
+                                    if (pResult.Ok)
+                                    {
+                                        string guidNewObject = await Api.AddSystemObjectAsync("System/CloneSystemObject", new { ObjectGUID = _selectedObject?.GUID, Name = pResult?.Text, ParentObject = _selectedObject?.ParentGUID, TypeID = _selectedObject?.TypeID });
+                                        var obj = await Api.GetDataFromServerAsync<SystemObjectModel>("System/GetSystemObjects", new { ObjectGUID = guidNewObject });
+                                        await Navigation.PushAsync(await Task.Run(() => new CheckListPage(obj.FirstOrDefault())));
+                                    }
+                                }
+                                break;
+                            case "Архив":
+                                {
+                                    var item = Api.GetDataFromServer<SystemObjectModel>("System/GetSystemObjects", new { ObjectGUID = _selectedObject.ParentGUID }).FirstOrDefault();
+                                    await Navigation.PushAsync(await Task.Run(() => new ManualObjectsPage(
+                                        item,
+                                        "Архив"))
+                                        );
+                                }
+                                break;
+                        }
+
+                    }
+                    else
+                    {
+                        await Navigation.PushAsync(await Task.Run(() => new CheckListPage(_selectedObject)));
+                    }
                 }
                 else
                 {
-                    await Navigation.PushAsync(await Task.Run(() => new ManualObjectsPage(_selectedObject)));
+                    await Navigation.PushAsync(await Task.Run(() => new ManualObjectsPage(_selectedObject, "Архив")));
                 }
             }
             catch (System.Exception)
             {
-                await Navigation.PushAsync(await Task.Run(() => new CheckListPage(_selectedObject)));
+                if (_selectedObject?.Template == true)
+                {
+                    string action = await App.Current.MainPage.DisplayActionSheet("Выберите действие", "Отмена", null, "Создать", "Архив");
+                    switch (action)
+                    {
+                        case "Создать":
+                            {
+                                PromptResult pResult = await UserDialogs.Instance.PromptAsync(new PromptConfig
+                                {
+                                    InputType = InputType.Name,
+                                    Text = $"{_selectedObject.Name} {DateTime.Now}",
+                                    OkText = "Создать",
+                                    Title = "Создание объекта"
+                                });
+                                if (pResult.Ok)
+                                {
+                                    string guidNewObject = await Api.AddSystemObjectAsync("System/CloneSystemObject", new { ObjectGUID = _selectedObject?.GUID, Name = pResult?.Text, ParentObject = _selectedObject?.ParentGUID, TypeID = _selectedObject?.TypeID });
+                                    var obj = await Api.GetDataFromServerAsync<SystemObjectModel>("System/GetSystemObjects", new { ObjectGUID = guidNewObject });
+                                    await Navigation.PushAsync(await Task.Run(() => new CheckListPage(obj.FirstOrDefault())));
+                                }
+                            }
+                            break;
+                        case "Архив":
+                            {
+
+                                await Navigation.PushAsync(await Task.Run(() => new ManualObjectsPage(
+                                    Api.GetDataFromServer<SystemObjectModel>("System/GetSystemObjects", new { ObjectGUID = _selectedObject.ParentGUID }).FirstOrDefault(),
+                                    "Архив"))
+                                    );
+                            }
+                            break;
+                    }
+
+                }
+                else
+                {
+                    await Navigation.PushAsync(await Task.Run(() => new CheckListPage(_selectedObject)));
+                }
             }
                      
 

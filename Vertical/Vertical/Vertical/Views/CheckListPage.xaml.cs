@@ -160,29 +160,3 @@ namespace Vertical.Views
         };
     }
 }
-//mainGrid.Children.Add(new StackLayout
-//{
-//    Orientation = StackOrientation.Horizontal,
-//    Spacing = 1,
-//    Children =
-//    {
-//        new Button
-//        {
-//            BackgroundColor = Color.FromHex("#fafafa"),
-//            BorderColor = Color.FromHex("#6c757d"),
-//            BorderWidth = 1,
-//            HeightRequest = 35, WidthRequest = 40,
-//            ImageSource = new FontImageSource(){ FontFamily = "fontawesome-webfont.ttf#Material Design Icons", Glyph = "\uf014", Color = Color.FromHex("#6c757d"), Size = 17 }
-
-//        },
-//        new Button
-//        {
-//            BackgroundColor = Color.FromHex("#fafafa"),
-//            BorderColor = Color.FromHex("#6c757d"),
-//            BorderWidth = 1,
-//            HeightRequest = 35, WidthRequest = 40,
-//            ImageSource = new FontImageSource(){ FontFamily = "fontawesome-webfont.ttf#Material Design Icons", Glyph = "\uf24d", Color = Color.FromHex("#6c757d"), Size = 17 }
-
-//        }
-//    }
-//}, 1, 0);

@@ -1,9 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Paths>
   <ManifestDocuments>
-    <ManifestDocument>obj\Release\81\lp\38\jl\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\Release\81\lp\39\jl\AndroidManifest.xml</ManifestDocument>
-    <ManifestDocument>obj\Release\81\lp\41\jl\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\Release\81\lp\40\jl\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\Release\81\lp\42\jl\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\Release\81\lp\43\jl\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\Release\81\lp\44\jl\AndroidManifest.xml</ManifestDocument>
@@ -18,15 +17,15 @@
     <ManifestDocument>obj\Release\81\lp\53\jl\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\Release\81\lp\54\jl\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\Release\81\lp\55\jl\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\Release\81\lp\56\jl\AndroidManifest.xml</ManifestDocument>
   </ManifestDocuments>
   <NativeLibraries />
   <Jars>
-    <Jar>obj\Release\81\lp\36\jl\arch-core-common.jar</Jar>
-    <Jar>obj\Release\81\lp\37\jl\arch-lifecycle-common.jar</Jar>
-    <Jar>obj\Release\81\lp\38\jl\bin\classes.jar</Jar>
+    <Jar>obj\Release\81\lp\37\jl\arch-core-common.jar</Jar>
+    <Jar>obj\Release\81\lp\38\jl\arch-lifecycle-common.jar</Jar>
     <Jar>obj\Release\81\lp\39\jl\bin\classes.jar</Jar>
-    <Jar>obj\Release\81\lp\40\jl\support-annotations.jar</Jar>
-    <Jar>obj\Release\81\lp\41\jl\bin\classes.jar</Jar>
+    <Jar>obj\Release\81\lp\40\jl\bin\classes.jar</Jar>
+    <Jar>obj\Release\81\lp\41\jl\support-annotations.jar</Jar>
     <Jar>obj\Release\81\lp\42\jl\bin\classes.jar</Jar>
     <Jar>obj\Release\81\lp\43\jl\bin\classes.jar</Jar>
     <Jar>obj\Release\81\lp\44\jl\bin\classes.jar</Jar>
@@ -41,6 +40,7 @@
     <Jar>obj\Release\81\lp\53\jl\bin\classes.jar</Jar>
     <Jar>obj\Release\81\lp\54\jl\bin\classes.jar</Jar>
     <Jar>obj\Release\81\lp\55\jl\bin\classes.jar</Jar>
+    <Jar>obj\Release\81\lp\56\jl\bin\classes.jar</Jar>
     <Jar>obj\Release\81\lp\9\jl\formsviewgroup.jar</Jar>
   </Jars>
 </Paths>

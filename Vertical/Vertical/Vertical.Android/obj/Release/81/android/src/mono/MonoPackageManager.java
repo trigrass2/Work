@@ -122,6 +122,7 @@ class MonoPackageManager_Resources {
 		"NGraphics.dll",
 		"Plugin.Connectivity.Abstractions.dll",
 		"Plugin.Connectivity.dll",
+		"Plugin.InputKit.dll",
 		"Plugin.Settings.Abstractions.dll",
 		"Plugin.Settings.dll",
 		"PropertyChanged.dll",

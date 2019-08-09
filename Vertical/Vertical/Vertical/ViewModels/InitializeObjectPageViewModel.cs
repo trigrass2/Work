@@ -44,7 +44,8 @@ namespace Vertical.ViewModels
         /// <summary>
         /// результат добавления/редактирования
         /// </summary>
-        public InputAddSystemObject NewObject { get; set; }
+        public AddSystemObjectModel NewObject { get; set; }
+
         public bool IsEnabled { get; set; } = true;
         public InitializeObjectPageViewModel(SystemObjectModel _inputObject = default(SystemObjectModel))
         {
@@ -52,7 +53,7 @@ namespace Vertical.ViewModels
             SystemObjectTypeModels = new ObservableCollection<SystemObjectTypeModel>();
             InputObject = _inputObject;            
             UpdateTypes();
-            NewObject = new InputAddSystemObject { ParentGUID = InputObject?.GUID };
+            NewObject = new AddSystemObjectModel { ParentGUID = InputObject?.GUID };
             States = States.Normal;
         }
 

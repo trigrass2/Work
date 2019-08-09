@@ -39,10 +39,9 @@ namespace Vertical.Views
             }
         }
 
-
         public CheckListView()
         {
-            InitializeComponent();            
+            InitializeComponent();
         } 
 
         #region Events
@@ -90,8 +89,8 @@ namespace Vertical.Views
             base.OnPropertyChanged(propertyName);
             if(propertyName == ObjectGUIDProperty.PropertyName)
             {
-                var i = Api.GetDataFromServer<SystemObjectModel>("System/GetSystemObjects", new { ObjectGUID = ObjectGUID.Value }).FirstOrDefault();
-                ViewModel = new CheckPageViewModel(i) { Navigation = this.Navigation };
+                var item = Api.GetDataFromServer<SystemObjectModel>("System/GetSystemObjects", new { ObjectGUID = ObjectGUID.Value }).FirstOrDefault();
+                ViewModel = new CheckPageViewModel(item) { Navigation = this.Navigation };
                 BindingContext = ViewModel;
             }
         }

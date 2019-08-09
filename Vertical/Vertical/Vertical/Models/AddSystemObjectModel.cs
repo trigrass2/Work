@@ -5,7 +5,7 @@ namespace Vertical.Models
     /// <summary>
     /// Входные данные для добавления системных объектов
     /// </summary>
-    public class InputAddSystemObject : INotifyPropertyChanged
+    public class AddSystemObjectModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

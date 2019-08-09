@@ -80,9 +80,17 @@
                                 <ColumnDefinition Width="6*"/>
                                 <ColumnDefinition Width="1*"/>
                             </Grid.ColumnDefinitions>
-                            
+
                             <Label Grid.Column="0" Text="{StaticResource IconQuestion}" FontFamily="{DynamicResource MaterialFontFamily}" 
-                                   TextColor="{StaticResource LightGreyColor}" FontSize="Large" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                                   TextColor="{StaticResource LightGreyColor}" FontSize="Large" VerticalTextAlignment="Center" HorizontalTextAlignment="Center">
+                                <Label.Triggers>
+                                    <DataTrigger Binding="{Binding Template}" TargetType="Label" Value="true">
+                                        <Setter Property="Text" Value="{StaticResource IconTemplate}"/>
+                                        <Setter Property="TextColor" Value="{StaticResource DarkGreyColor}"/>
+                                    </DataTrigger>
+                                </Label.Triggers>
+                            </Label>
+                            
                             <Label  x:Name="nameObjectLabel" Text="{Binding Name}" 
                                     TextColor="Black" VerticalTextAlignment="Center" FontSize="Body"
                                     HorizontalTextAlignment="Start"
@@ -110,7 +118,15 @@
     </ContentPage.Resources>
     <stateContainerDemo:StateContainer State ="{Binding States}">
         <stateContainerDemo:StateCondition Is="Normal">
-            <RelativeLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <ListView 
+                    x:Name="listTypesModels" ItemsSource="{Binding SystemObjectModels}"
+                    Margin="3,0,5,7" SelectedItem="{Binding SelectedObject, Mode=TwoWay}"                    
+                    CachingStrategy="RecycleElement" IsEnabled="{Binding IsEnabled}"
+                    ItemTemplate="{StaticResource imageObjectDataTemplateSelector }"
+                    Header="{Binding Title}"
+                    SeparatorVisibility="None">
+            </ListView>
+            <!--<RelativeLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                 <ListView 
                     x:Name="listTypesModels" ItemsSource="{Binding SystemObjectModels}"
                     Margin="3,0,5,7" SelectedItem="{Binding SelectedObject, Mode=TwoWay}"
@@ -124,15 +140,17 @@
                 </ListView>
                 <Button                    
                     x:Name="addNewObjectButton"
-                    Text="+" FontAttributes="Bold" FontSize="Medium"
-                    Style="{x:StaticResource BlueButtonStyle}" 
+                    IsVisible="{Binding IsVisible}"
+                    Padding="0"
+                    Text="Архив" TextColor="{StaticResource DarkGreyColor}"
+                    FontSize="Caption"
+                    BackgroundColor="Transparent"                    
                     Command="{Binding GoToAddNewObjectPageCommand}"
-                    HeightRequest="50" WidthRequest="50"
-                    CornerRadius="30"
-                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=-55}"
-                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-55}"
+                    HeightRequest="35" WidthRequest="50"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-25}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-45}"
                     IsEnabled="{Binding IsEnabled}"/>
-            </RelativeLayout>
+            </RelativeLayout>-->
             
         </stateContainerDemo:StateCondition>
 

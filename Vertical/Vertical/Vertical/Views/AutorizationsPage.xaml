@@ -19,11 +19,11 @@
         <stateContainerDemo:StateCondition Is="Normal">
             <Frame BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center" HasShadow="True" Margin="10,0" BorderColor="White">
                 <StackLayout Margin="7,0">
-                    <Image x:Name="svgLogo"                       
+                    <Image x:Name="svgLogo"
                        HorizontalOptions="Center"
                        Source="{Binding PikLogoImage}"/>
 
-                    <inputLayout:SfTextInputLayout 
+                    <inputLayout:SfTextInputLayout
                         x:Name="entryLogin"                        
                         Style="{x:StaticResource SfTextInputLayoutStyle}">
                         <Entry Placeholder="Логин" Text="{Binding User.Login, Mode=TwoWay}" Style="{StaticResource entryStyle}"/>

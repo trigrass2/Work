@@ -17,6 +17,7 @@ namespace Vertical.CustomViews
         public DataTemplate GroupTemplate { get; set; }
         public DataTemplate ArrayTemplate { get; set; }
         public DataTemplate NotArrayTemplate { get; set; }
+        public DataTemplate GibridObjectTemplate { get; set; }
 
         protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
         {
@@ -34,7 +35,13 @@ namespace Vertical.CustomViews
                         {
                             return ArrayTemplate;
                         }
-                        else return NotArrayTemplate;
+                        else if(!string.IsNullOrEmpty(property.SourceObjectParentGUID) && property.SourceObjectTypeID != null){
+                            return GibridObjectTemplate;
+                        }
+                        else
+                        {
+                            return NotArrayTemplate;
+                        }
                     }
                 case 6: return StringTemplate;
                 case 7: return HumanTemplate;

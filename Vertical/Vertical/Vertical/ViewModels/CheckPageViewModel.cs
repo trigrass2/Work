@@ -20,6 +20,7 @@ namespace Vertical.ViewModels
         public ICommand AddNewObjectInPropertyCommand => new Command(AddNewObjectInPropperty);
         public ICommand EditObject => new Command(Edit);
         public ICommand IsCheckedCommand => new Command(IsChecked);
+        public ICommand DeletePropertyCommand => new Command(DeleteObjectProperty);
 
         public bool IsVisibleSaveButton { get; set; }
         public bool IsVisibleButtons { get; set; }
@@ -89,11 +90,20 @@ namespace Vertical.ViewModels
                         case HttpStatusCode.BadRequest: await App.Current.MainPage.DisplayAlert(null, "Не удалось редактировать", "Oк"); break;
                             default: Device.BeginInvokeOnMainThread(UpdateSystemPropertyModels); break;
                     };
-
-                    
                 }
                  
             }
+            
+        }
+
+        private async void DeleteObjectProperty(object commandParameter)
+        {
+            using(UserDialogs.Instance.Loading("Удаление...", null, null, true, MaskType.Black))
+            await Task.Run(() => {
+                var property = commandParameter as SystemObjectPropertyValueModel;
+                Api.SendDataToServer("System/AddSystemObjectPropertyValue", new { ObjectGUID = property.SystemObjectGUID, PropertyID = property.ID, PropertyNum = property.Num, Value = default(string), ValueNum = property.ValueNum });
+                Device.BeginInvokeOnMainThread(UpdateSystemPropertyModels);
+            });
             
         }
 
@@ -102,7 +112,7 @@ namespace Vertical.ViewModels
             var typeName = Api.GetDataFromServer<SystemObjectTypeModel>("System/GetSystemObjectTypes", new { ShowHidden = true})
                 .Where(x => x.ID == property.SourceObjectTypeID).Select(n => n.Name).FirstOrDefault();
             
-            string guidNewItem = await Api.AddSystemObjectAsync(new { Name = typeName, TypeID = property.SourceObjectTypeID, ParentGUID = property.SystemObjectGUID });
+            string guidNewItem = await Api.AddSystemObjectAsync("System/AddSystemObject", new { Name = typeName, TypeID = property.SourceObjectTypeID, ParentGUID = property.SystemObjectGUID });
             if (guidNewItem != default(string))
             {
                 int valueNum = 0;
@@ -165,7 +175,7 @@ namespace Vertical.ViewModels
                         {
                             if (pResult.Ok && !string.IsNullOrWhiteSpace(pResult.Text))
                             {
-                                string guidNewItem = await Api.AddSystemObjectAsync(new { Name = pResult.Text, TypeID = typeId, ParentGUID = prop.SystemObjectGUID });
+                                string guidNewItem = await Api.AddSystemObjectAsync("System/AddSystemObject", new { Name = pResult.Text, TypeID = typeId, ParentGUID = prop.SystemObjectGUID });
                                 if (guidNewItem != default(string))
                                 {
                                     int valueNum = 0;
@@ -250,15 +260,19 @@ namespace Vertical.ViewModels
             
            
             try
-            {                
-                foreach (var s in values.OrderBy(o => o.GroupID))
+            {
+                foreach (var s in values.OrderByDescending(q => q.TypeID).OrderBy(o => o.GroupID))
                 {
                     SystemPropertyModels.Add(s);
                 }
 
-                if(SystemPropertyModels.Any(x => x.TypeID == 5 && x.Array && !string.IsNullOrEmpty(x.Value as string)))
+                if(SystemPropertyModels.Any(x => x.TypeID == 5 && !string.IsNullOrEmpty(x.Value as string)))
                 {
-                    SystemPropertyModels.RemoveAll(x => string.IsNullOrEmpty(x.Value as string));
+                    SystemPropertyModels.RemoveAll(x => x.TypeID == 5 && string.IsNullOrEmpty(x.Value as string));
+                }
+                else
+                {
+                    SystemPropertyModels.RemoveAll(x => x.TypeID == 5 && string.IsNullOrEmpty(x.Value as string) && x.ValueNum > 1);
                 }
             }
             catch (Exception ex)
@@ -266,7 +280,7 @@ namespace Vertical.ViewModels
                 Loger.WriteMessage(Android.Util.LogPriority.Error, "In foreach (var s in groups){} ->", ex.Message);
             }
             
-            SourceObjects.Source = SystemPropertyModels;
+            SourceObjects.Source = new ObservableCollection<SystemObjectPropertyValueModel>(SystemPropertyModels);
             
             States = States.Normal;
         }
@@ -312,7 +326,7 @@ namespace Vertical.ViewModels
             {
                 for (int i = NewValues.Count - 1; i >= 0; i--)
                 {
-                    if (item.Value is null || item.Value as string == "")
+                    if (string.IsNullOrEmpty(item.Value as string))
                     {
                         NewValues.Remove(NewValues[i]);
                         break;
@@ -324,7 +338,7 @@ namespace Vertical.ViewModels
                     }
                 }
             }
-            else if(item.Value != null && item.Value as string != "")
+            else if(!string.IsNullOrEmpty(item.Value as string))
             {
                 NewValues.Add(item);
             }

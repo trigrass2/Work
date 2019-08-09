@@ -28,6 +28,7 @@
             <x:String x:Key="IconCopy">&#xf24d;</x:String>
             <x:String x:Key="IconTrash">&#xf014;</x:String>
             <x:String x:Key="IconClose">&#xf00d;</x:String>
+            <x:String x:Key="IconTemplate">&#xf02e;</x:String>
             
             <!--Styles-->
             <Style x:Key="MenuButtonStyle" TargetType="Button">

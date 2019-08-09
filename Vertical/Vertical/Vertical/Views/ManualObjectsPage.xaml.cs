@@ -11,10 +11,10 @@ namespace Vertical.Views
 	{
         public ManualObjectsPageViewModel ViewModel { get; set; }
         
-		public ManualObjectsPage (SystemObjectModel obj = default(SystemObjectModel))
+		public ManualObjectsPage (SystemObjectModel obj = default(SystemObjectModel), string typePage = "Шаблоны")
 		{
 			InitializeComponent ();
-            ViewModel = new ManualObjectsPageViewModel(obj) { Navigation = this.Navigation };
+            ViewModel = new ManualObjectsPageViewModel(obj, typePage) { Navigation = this.Navigation };
             BindingContext = ViewModel;
 		}
 	}
