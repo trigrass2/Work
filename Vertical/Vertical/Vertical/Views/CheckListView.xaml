@@ -127,7 +127,7 @@
                                 Style="{x:StaticResource SfTextInputLayoutStyle}"
                                 HelperText="{Binding Name}"
                                 UnfocusedColor="Black"
-                                >
+                                IsEnabled="{Binding Source={x:Reference thisPage}, Path = BindingContext.Locked}">
                         <Entry  Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption" IsEnabled="{Binding Locked}"/>
                     </inputLayout:SfTextInputLayout>
                 </StackLayout>
@@ -145,7 +145,7 @@
                             <Button WidthRequest="30" HeightRequest="30" 
                                     IsEnabled="{Binding Source={x:Reference thisPage}, Path = BindingContext.Locked}"
                                     IsVisible="{Binding Source={x:Reference thisPage}, Path = BindingContext.Locked}" Padding="1" BackgroundColor="{StaticResource ControlsBackgrounColor}"
-                                    Command="{Binding Source={x:Reference thisPage}, Path = BindingContext.EditObject}"
+                                    Command="{Binding Source={x:Reference thisPage}, Path = BindingContext.EditObjectCommand}"
                                     CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}">
                                 <Button.ImageSource>
                                     <FontImageSource
@@ -169,11 +169,11 @@
                         </Grid.RowDefinitions>
                         <StackLayout Orientation="Horizontal" Grid.Row="0">
                             <Label Text="{Binding Name}" TextColor="Black"/>
-                            <Button WidthRequest="30" HeightRequest="30" 
+                            <Button WidthRequest="30" HeightRequest="30"
                                     IsEnabled="{Binding Source={x:Reference thisPage}, Path = BindingContext.Locked}"
                                     IsVisible="{Binding Source={x:Reference thisPage}, Path = BindingContext.Locked}"
                                     Padding="1" BackgroundColor="{StaticResource ControlsBackgrounColor}"
-                                    Command="{Binding Source={x:Reference thisPage}, Path = BindingContext.EditObject}"
+                                    Command="{Binding Source={x:Reference thisPage}, Path = BindingContext.EditObjectCommand}"
                                     CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}">
                                 <Button.ImageSource>
                                     <FontImageSource
@@ -215,8 +215,8 @@
         <stateContainerDemo:StateCondition Is="Normal">
             <StackLayout
                 Padding="5"
-                BindableLayout.ItemsSource="{Binding SourceObjects.DisplayItems}"
-                BindableLayout.ItemTemplateSelector="{StaticResource checklistDataTemplateSelector}">                
+                BindableLayout.ItemsSource="{Binding Source.Result.DisplayItems}"
+                BindableLayout.ItemTemplateSelector="{StaticResource checklistDataTemplateSelector}">
             </StackLayout>            
         </stateContainerDemo:StateCondition>
 

@@ -107,10 +107,13 @@ namespace Vertical.Models
             }
             set
             {
-                _locked = !value;
+                _locked = value;
             }
         }
 
+        /// <summary>
+        /// Is Array
+        /// </summary>
         public bool Array { get; set; }
     }
 }

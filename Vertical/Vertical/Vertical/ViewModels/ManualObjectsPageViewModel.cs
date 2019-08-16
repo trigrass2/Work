@@ -29,12 +29,7 @@ namespace Vertical.ViewModels
         public ICommand UpdateContentCommand => new Command(UpdateSystemObjects);
         public ICommand GoToAddNewObjectPageCommand => new Command(GoToAddNewObjectPage);
         public ICommand GoToEditObjectPageCommand => new Command(GoToEditObjectPage);
-
-        /// <summary>
-        /// папка/файл
-        /// </summary>
-        public ImageSource ObjectImage { get; set; }
-
+        
         private SystemObjectModel _selectedObject;
         public SystemObjectModel SelectedObject
         {
@@ -102,7 +97,7 @@ namespace Vertical.ViewModels
             }
             else
             {
-                Api.GetDataFromServer<SystemObjectModel>("System/GetSystemObjects", new { ParentGUID = ParentObject?.GUID});
+                items = Api.GetDataFromServer<SystemObjectModel>("System/GetSystemObjects", new { ParentGUID = ParentObject?.GUID});
             }
 
             if (items != null)
