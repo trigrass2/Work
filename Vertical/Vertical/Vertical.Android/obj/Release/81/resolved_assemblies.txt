@@ -10,6 +10,7 @@ C:\Work\Vertical\Vertical\Vertical.Android\obj\Release\81\android\assets\FFImage
 C:\Work\Vertical\Vertical\Vertical.Android\obj\Release\81\android\assets\FFImageLoading.Svg.Platform.dll
 C:\Work\Vertical\Vertical\Vertical.Android\obj\Release\81\android\assets\FormsViewGroup.dll
 C:\Work\Vertical\Vertical\Vertical.Android\obj\Release\81\android\assets\Java.Interop.dll
+C:\Work\Vertical\Vertical\Vertical.Android\obj\Release\81\android\assets\Microsoft.CSharp.dll
 C:\Work\Vertical\Vertical\Vertical.Android\obj\Release\81\android\assets\Mono.Android.dll
 C:\Work\Vertical\Vertical\Vertical.Android\obj\Release\81\android\assets\mscorlib.dll
 C:\Work\Vertical\Vertical\Vertical.Android\obj\Release\81\android\assets\Newtonsoft.Json.dll
@@ -73,5 +74,4 @@ C:\Work\Vertical\Vertical\Vertical.Android\obj\Release\81\android\assets\System.
 C:\Work\Vertical\Vertical\Vertical.Android\obj\Release\81\android\assets\System.Data.dll
 C:\Work\Vertical\Vertical\Vertical.Android\obj\Release\81\android\assets\System.Numerics.dll
 C:\Work\Vertical\Vertical\Vertical.Android\obj\Release\81\android\assets\System.Web.Services.dll
-C:\Work\Vertical\Vertical\Vertical.Android\obj\Release\81\android\assets\Microsoft.CSharp.dll
 C:\Work\Vertical\Vertical\Vertical.Android\obj\Release\81\android\assets\Mono.Security.dll

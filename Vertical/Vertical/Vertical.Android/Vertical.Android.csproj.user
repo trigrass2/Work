@@ -3,7 +3,7 @@
   <PropertyGroup>
     <SelectedDevice>OnePlus A0001</SelectedDevice>
     <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
-    <AndroidDesignerPreferredTheme>Theme.DeviceDefault</AndroidDesignerPreferredTheme>
+    <AndroidDesignerPreferredTheme>Theme.DeviceDefault.NoActionBar.Fullscreen</AndroidDesignerPreferredTheme>
     <DefaultDevice>my_device</DefaultDevice>
   </PropertyGroup>
 </Project>

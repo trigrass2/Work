@@ -53,7 +53,7 @@ namespace Vertical.Models
         /// <summary>
         /// Название типа свойства объекта
         /// </summary>
-        public string Typename { get; set; }
+        public string TypeName { get; set; }
 
         /// <summary>
         /// Дата изменения
@@ -107,7 +107,7 @@ namespace Vertical.Models
             }
             set
             {
-                _locked = value;
+                _locked = !value;
             }
         }
 

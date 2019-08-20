@@ -27,7 +27,7 @@
                                         Color="{StaticResource GreenColor}" BorderColor="{StaticResource LightGreyColor}"
                                         Type="Material"
                                         IsChecked="{Binding Value}" 
-                                        IsEnabled="{Binding Source={x:Reference thisPage}, Path = BindingContext.Locked}"
+                                        IsEnabled="{Binding Locked}"
                                         />
                     </StackLayout>
                 </Frame>
@@ -39,7 +39,7 @@
                             UnfocusedColor="Black"
                             HelperText="{Binding Name}"
                             Margin="0,0,0,10"
-                        IsEnabled="{Binding Source={x:Reference thisPage}, Path = BindingContext.Locked}">
+                        IsEnabled="{Binding Locked}">
                         <DatePicker MinimumDate="{Binding Source={x:Reference thisPage}, Path = BindingContext.MinDate }"
                                 MaximumDate="{Binding Source={x:Reference thisPage}, Path = BindingContext.MaxDate}"
                                 Date="{Binding Value}"
@@ -56,8 +56,8 @@
                             UnfocusedColor="Black"
                             HelperText="{Binding Name}"
                             Margin="0,0,0,10"
-                    IsEnabled="{Binding Source={x:Reference thisPage}, Path = BindingContext.Locked}">
-                    <Entry Text="{Binding Value, Mode=TwoWay}" Style="{x:StaticResource DefaultLabelStyle}" 
+                    IsEnabled="{Binding Locked}">
+                    <Entry Text="{Binding Value, Mode=TwoWay}" Style="{x:StaticResource DefaultLabelStyle}"
                            FontSize="Caption" BindingContext="{Binding}" Completed="Entry_Completed_float"/>
                 </inputLayout:SfTextInputLayout>
             </DataTemplate>
@@ -90,8 +90,8 @@
                                     BackgroundColor="{StaticResource ControlsBackgrounColor}"
                                     Command="{Binding Source={x:Reference thisPage}, Path = BindingContext.AddNewObjectInPropertyCommand}"
                                     CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
-                                    IsEnabled="{Binding Source={x:Reference thisPage}, Path = BindingContext.Locked}"
-                                    IsVisible="{Binding Source={x:Reference thisPage}, Path = BindingContext.Locked}"
+                                    IsEnabled="{Binding Locked}"
+                                    IsVisible="{Binding Locked}"
                                     Padding="0" WidthRequest="25"/>
                         </StackLayout>
                         <Button Grid.Row="0" Grid.Column="1"
@@ -101,36 +101,30 @@
                                 CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
                                 BackgroundColor="Transparent"
                                 Padding="0"
-                                IsEnabled="{Binding Source={x:Reference thisPage}, Path = BindingContext.Locked}"
-                                IsVisible="{Binding Source={x:Reference thisPage}, Path = BindingContext.Locked}"/>
-                        <views:CheckListView ObjectGUID="{Binding}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" MinimumHeightRequest="100"/>
+                                IsEnabled="{Binding Locked}"
+                                IsVisible="{Binding Locked}"/>
+                        <views:CheckListView ObjectGUID="{Binding }" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" MinimumHeightRequest="100"/>
                     </Grid>
                 </Frame>
             </DataTemplate>
             <DataTemplate x:Key="stringTemplate">
-                <StackLayout>
-                    <inputLayout:SfTextInputLayout
+                <inputLayout:SfTextInputLayout
                                 Style="{x:StaticResource SfTextInputLayoutStyle}"
                                 HelperText="{Binding Name}"
                                 UnfocusedColor="Black"
-                        IsEnabled="{Binding Source={x:Reference thisPage}, Path = BindingContext.Locked}"
-                        IsVisible="{Binding Source={x:Reference thisPage}, Path = BindingContext.Locked}" Padding="1" BackgroundColor="{StaticResource ControlsBackgrounColor}">
-                        <Entry Text="{Binding Value}" Style="{x:StaticResource DefaultLabelStyle}" 
+                        IsEnabled="{Binding Source={x:Reference thisPage}, Path = BindingContext.Locked}">
+                    <Entry Text="{Binding Value}" Style="{x:StaticResource DefaultLabelStyle}" 
                                FontSize="Caption" BindingContext="{Binding}" Completed="Entry_Completed_string"/>
-                    </inputLayout:SfTextInputLayout>
-                </StackLayout>
-                
+                </inputLayout:SfTextInputLayout>
             </DataTemplate>
             <DataTemplate x:Key="humanTemplate">
-                <StackLayout>
-                    <inputLayout:SfTextInputLayout
+                <inputLayout:SfTextInputLayout
                                 Style="{x:StaticResource SfTextInputLayoutStyle}"
                                 HelperText="{Binding Name}"
                                 UnfocusedColor="Black"
-                                IsEnabled="{Binding Source={x:Reference thisPage}, Path = BindingContext.Locked}">
-                        <Entry  Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption" IsEnabled="{Binding Locked}"/>
-                    </inputLayout:SfTextInputLayout>
-                </StackLayout>
+                                IsEnabled="{Binding Locked}">
+                    <Entry  Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption" IsEnabled="{Binding Locked}"/>
+                </inputLayout:SfTextInputLayout>
             </DataTemplate>
 
             <DataTemplate x:Key="notArrayTemplate">
@@ -143,8 +137,8 @@
                         <StackLayout Orientation="Horizontal" Grid.Row="0">
                             <Label Text="{Binding Name}" TextColor="Black"/>
                             <Button WidthRequest="30" HeightRequest="30" 
-                                    IsEnabled="{Binding Source={x:Reference thisPage}, Path = BindingContext.Locked}"
-                                    IsVisible="{Binding Source={x:Reference thisPage}, Path = BindingContext.Locked}" Padding="1" BackgroundColor="{StaticResource ControlsBackgrounColor}"
+                                    IsEnabled="{Binding Locked}"
+                                    IsVisible="{Binding Locked}" Padding="1" BackgroundColor="{StaticResource ControlsBackgrounColor}"
                                     Command="{Binding Source={x:Reference thisPage}, Path = BindingContext.EditObjectCommand}"
                                     CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}">
                                 <Button.ImageSource>
@@ -170,8 +164,8 @@
                         <StackLayout Orientation="Horizontal" Grid.Row="0">
                             <Label Text="{Binding Name}" TextColor="Black"/>
                             <Button WidthRequest="30" HeightRequest="30"
-                                    IsEnabled="{Binding Source={x:Reference thisPage}, Path = BindingContext.Locked}"
-                                    IsVisible="{Binding Source={x:Reference thisPage}, Path = BindingContext.Locked}"
+                                    IsEnabled="{Binding Locked}"
+                                    IsVisible="{Binding Locked}"
                                     Padding="1" BackgroundColor="{StaticResource ControlsBackgrounColor}"
                                     Command="{Binding Source={x:Reference thisPage}, Path = BindingContext.EditObjectCommand}"
                                     CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}">
@@ -185,8 +179,8 @@
                             </Button>
                         </StackLayout>
                         <StackLayout Grid.Row="1">
-                            <Label Text="{Binding Value, Converter={converters:ObjectConverter}}" Grid.Row="1"/>
-                            <views:CheckListView ObjectGUID="{Binding}" Grid.Row="1" MinimumHeightRequest="100"/>
+                            <Label Text="{Binding Value, Converter={converters:ObjectConverter}}"/>
+                            <views:CheckListView ObjectGUID="{Binding}" MinimumHeightRequest="100"/>
                         </StackLayout>
                         
                     </Grid>

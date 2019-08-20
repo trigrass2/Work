@@ -36,6 +36,8 @@ namespace Vertical.ViewModels
         public DateTime MaxDate { get; set; }
         public DateTime SelectedDate { get; set; }
 
+        private int? PropertyID { get; set; }
+
         public CheckPageViewModel() { }
 
         public CheckPageViewModel(SystemObjectModel obj)
@@ -45,6 +47,20 @@ namespace Vertical.ViewModels
             SystemObjectModel = obj;
             SourceObjects = new DataSource();
             SourceObjects.GroupDescriptors.Add(new GroupDescriptor("GroupName"));        
+            NewValues = new List<AddSystemObjectPropertyValueModel>();
+            SystemPropertyModels = new ObservableCollection<SystemObjectPropertyValueModel>();
+            MainSource = new ObservableCollection<MainSourceClass>();
+            Source = new NotifyTaskCompletion<DataSource>(UpdateSystemPropertyModels());
+        }
+
+        public CheckPageViewModel(IList<string> items, string systemObjectGUID, int id)
+        {
+            MinDate = DateTime.Now.AddYears(-1);
+            MaxDate = DateTime.Now.AddYears(1);
+            SystemObjectModel = new SystemObjectModel() { GUID = systemObjectGUID };
+            PropertyID = id;
+            SourceObjects = new DataSource();
+            SourceObjects.GroupDescriptors.Add(new GroupDescriptor("GroupName"));
             NewValues = new List<AddSystemObjectPropertyValueModel>();
             SystemPropertyModels = new ObservableCollection<SystemObjectPropertyValueModel>();
             MainSource = new ObservableCollection<MainSourceClass>();
@@ -121,7 +137,7 @@ namespace Vertical.ViewModels
                 }
 
                 property.Value = guidNewItem;
-                await Api.SendDataToServerAsync("System/AddSystemObjectPropertyValue",
+                if(await Api.SendDataToServerAsync("System/AddSystemObjectPropertyValue",
                     new
                     {
                         ObjectGUID = SystemObjectModel?.GUID,
@@ -129,8 +145,11 @@ namespace Vertical.ViewModels
                         PropertyNum = property.Num,
                         Value = property.Value,
                         ValueNum = valueNum + 1
-                    });
-                Source = new NotifyTaskCompletion<DataSource>(UpdateSystemPropertyModels());
+                    }) == HttpStatusCode.OK)
+                {
+                    Source = new NotifyTaskCompletion<DataSource>(UpdateSystemPropertyModels());
+                }
+                
             }
         }
 
@@ -255,15 +274,13 @@ namespace Vertical.ViewModels
         private async Task<DataSource> UpdateSystemPropertyModels()
         {            
             SystemPropertyModels.Clear();
-
-            var values = await Api.GetDataFromServerAsync<SystemObjectPropertyValueModel>("System/GetSystemObjectPropertiesValues", new{ ObjectGUID = SystemObjectModel?.GUID });
             
-            if (values == null || values?.Count == 0)
+            
+            var values = await Api.GetDataFromServerAsync<SystemObjectPropertyValueModel>("System/GetSystemObjectPropertiesValues", new { ObjectGUID = SystemObjectModel?.GUID });
+            if(PropertyID != null)
             {
-                States = States.NoData;
-                return default(DataSource);
+                values = values.Where(x => x.ID == PropertyID).ToList();
             }
-            
             try
             {
                 foreach (var s in values.OrderByDescending(q => q.TypeID).OrderBy(o => o.GroupID))
@@ -271,7 +288,7 @@ namespace Vertical.ViewModels
                     SystemPropertyModels.Add(s);
                 }
 
-                if(SystemPropertyModels.Last(x => x.TypeID == 5 && !string.IsNullOrEmpty(x.Value as string)) != null)
+                if (SystemPropertyModels.Last(x => x.TypeID == 5 && !string.IsNullOrEmpty(x.Value as string)) != null)
                 {
                     for(int i = SystemPropertyModels.Count-1; i >= 0; i--)
                     {
@@ -292,32 +309,41 @@ namespace Vertical.ViewModels
                     }
                 }
 
-                for(int i = 0; i < SystemPropertyModels.Count; i++)
+                for (int j = 0, k = 0; j < SystemPropertyModels.Count; j++)
                 {
-                    if (!MainSource.Select(x => x.ID).Contains(SystemPropertyModels[i].ID))
+                    if (!MainSource.Select(x => x.ID).Contains(SystemPropertyModels[j].ID))
                     {
-                        MainSource.Add(new MainSourceClass(SystemPropertyModels[i]));
-                        if (SystemPropertyModels[i].Array)
+                        MainSource.Add(new MainSourceClass(SystemPropertyModels[j]));
+                        if (SystemPropertyModels[j].Array)
                         {
-                            MainSource[SystemPropertyModels[i].ID].ArrayValue = SystemPropertyModels.Where(x => x.ID == SystemPropertyModels[i].ID).Select(v => v.Value);///////////////ТУТ
+                            MainSource[k].ArrayValue = new ObservableCollection<string>(SystemPropertyModels.Where(x => x.ID == SystemPropertyModels[j].ID).Select(q => q?.Value as string));
+
                         }
+                        k++;
+                        //else
+                        //{
+                        //    MainSource[k].ArrayValue = SystemPropertyModels[j];
+                        //    k++;
+                        //}
                     }
-                    
-                    
+
+
                 }
+
             }
             catch (Exception ex)
             {
                 Loger.WriteMessage(Android.Util.LogPriority.Error, "In foreach (var s in groups){} ->", ex.Message);
             }
-            
-            
-            SourceObjects.Source = SystemPropertyModels;
-            
+
+
+            SourceObjects.Source = SystemPropertyModels;//MainSource;
+
+
             States = States.Normal;
             return SourceObjects;
         }
-
+        
         /// <summary>
         /// Отправляет изменения на сервер
         /// </summary>

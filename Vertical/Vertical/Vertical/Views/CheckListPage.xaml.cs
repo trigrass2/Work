@@ -65,7 +65,7 @@ namespace Vertical.Views
             mainGrid.Children.Add(label, 0,1);
             Grid.SetColumnSpan(label, 2);
 
-            var view = new CheckListView(ViewModel);
+            var view = new ObjectView(ViewModel);
             mainGrid.Children.Add(view, 0, 2);
             Grid.SetColumnSpan(view, 2);
 
