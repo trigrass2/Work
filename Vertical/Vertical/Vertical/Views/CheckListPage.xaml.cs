@@ -120,11 +120,11 @@ namespace Vertical.Views
             RowSpacing = 0, ColumnSpacing = 0,
             RowDefinitions = new RowDefinitionCollection
             {
-                new RowDefinition{ Height=35 },
-                new RowDefinition{ Height=35 },
-                new RowDefinition{ Height=35 },
-                new RowDefinition{ Height=35 },
-                new RowDefinition{ Height=35 }
+                new RowDefinition{ Height=25 },
+                new RowDefinition{ Height=25 },
+                new RowDefinition{ Height=25 },
+                new RowDefinition{ Height=25 },
+                new RowDefinition{ Height=25 }
             },
             ColumnDefinitions = new ColumnDefinitionCollection
             {

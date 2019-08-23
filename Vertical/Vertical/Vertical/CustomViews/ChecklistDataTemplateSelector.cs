@@ -32,7 +32,7 @@ namespace Vertical.CustomViews
                 case 4: return IntTemplate;
                 case 5: {
                         if (property.Array == true)
-                        {
+                        { 
                             return ArrayTemplate;
                         }
                         else if(!string.IsNullOrEmpty(property.SourceObjectParentGUID) && property.SourceObjectTypeID != null){

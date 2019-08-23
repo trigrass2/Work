@@ -50,8 +50,7 @@
                 <Setter Property="FocusedStrokeWidth" Value="2"/>
                 <Setter Property="FocusedColor" Value="#336dab"/>
                 <Setter Property="UnfocusedStrokeWidth" Value="1"/>
-                <Setter Property="UnfocusedColor" Value="Black"/>
-                <Setter Property="InputViewPadding" Value="10"/>
+                <Setter Property="InputViewPadding" Value="10"/>                
             </Style>
             <Style x:Key="ActivityIndicatorStyle" TargetType="ActivityIndicator">
                 <Setter Property="HeightRequest" Value="50"/>

@@ -11,7 +11,7 @@ namespace Vertical
         public App()
         {
             
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MTI2NjA3QDMxMzcyZTMyMmUzMEhDTERkazVSSTB1VW8vVFpheGF0VXNYMS93by9JM2E5TVVrQStRc21mR1k9");
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MTM0NzM0QDMxMzcyZTMyMmUzMEdvWk1ZSGp2R2hiY2NSWnR1emlrWVNmTXRKbVNVWDgvLzBYMGNHS2Q0NjA9");
             InitializeComponent();
             
             MainPage = new NavigationPage(new AutorizationsPage());

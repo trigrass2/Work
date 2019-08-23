@@ -113,7 +113,7 @@
                                 HelperText="{Binding Name}"
                                 UnfocusedColor="Black"
                         IsEnabled="{Binding Source={x:Reference thisPage}, Path = BindingContext.Locked}">
-                    <Entry Text="{Binding Value}" Style="{x:StaticResource DefaultLabelStyle}" 
+                    <Entry Text="{Binding Value}"
                                FontSize="Caption" BindingContext="{Binding}" Completed="Entry_Completed_string"/>
                 </inputLayout:SfTextInputLayout>
             </DataTemplate>

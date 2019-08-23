@@ -299,7 +299,7 @@ namespace Vertical.ViewModels
                     }
                 }
                 else
-                {                   
+                {
                     for (int i = SystemPropertyModels.Count-1; i >= 0; i--)
                     {
                         if (SystemPropertyModels[i].TypeID == 5 && string.IsNullOrEmpty(SystemPropertyModels[i].Value as string) && SystemPropertyModels[i].ValueNum > 1)
@@ -308,36 +308,38 @@ namespace Vertical.ViewModels
                         }
                     }
                 }
-
-                for (int j = 0, k = 0; j < SystemPropertyModels.Count; j++)
+                
+                Dictionary<int?, ObservableCollection<SystemObjectPropertyValueModel>> properties = new Dictionary<int?, ObservableCollection<SystemObjectPropertyValueModel>>();
+                foreach(var j in SystemPropertyModels.Select(x => x.GroupID).Distinct())
                 {
-                    if (!MainSource.Select(x => x.ID).Contains(SystemPropertyModels[j].ID))
-                    {
-                        MainSource.Add(new MainSourceClass(SystemPropertyModels[j]));
-                        if (SystemPropertyModels[j].Array)
-                        {
-                            MainSource[k].ArrayValue = new ObservableCollection<string>(SystemPropertyModels.Where(x => x.ID == SystemPropertyModels[j].ID).Select(q => q?.Value as string));
-
-                        }
-                        k++;
-                        //else
-                        //{
-                        //    MainSource[k].ArrayValue = SystemPropertyModels[j];
-                        //    k++;
-                        //}
-                    }
-
-
+                    properties.Add(j == null ? 0 : j, new ObservableCollection<SystemObjectPropertyValueModel>(SystemPropertyModels.Where(x => x.GroupID == j)));
                 }
+                //for (int j = 0, k = 0; j < SystemPropertyModels.Count; j++)
+                //{
+                //    if (!MainSource.Select(x => x.ID).Contains(SystemPropertyModels[j].ID))
+                //    {
+                //        MainSource.Add(new MainSourceClass(SystemPropertyModels[j]));
+                //        if (SystemPropertyModels[j].Array)
+                //        {
+                //            MainSource[k].ArrayValue = new ObservableCollection<string>(SystemPropertyModels.Where(x => x.ID == SystemPropertyModels[j].ID).Select(q => q?.Value as string));
 
+                //        }
+                //        k++;
+                //        //else
+                //        //{
+                //        //    MainSource[k].ArrayValue = SystemPropertyModels[j];
+                //        //    k++;
+                //        //}
+                //    }
+                //}
+                SourceObjects.Source = SystemPropertyModels;//MainSource;
             }
             catch (Exception ex)
             {
                 Loger.WriteMessage(Android.Util.LogPriority.Error, "In foreach (var s in groups){} ->", ex.Message);
             }
 
-
-            SourceObjects.Source = SystemPropertyModels;//MainSource;
+            
 
 
             States = States.Normal;
@@ -365,7 +367,7 @@ namespace Vertical.ViewModels
                 IsEnabled = true;
                 NewValues.Clear();
 
-                Source = new NotifyTaskCompletion<DataSource>(UpdateSystemPropertyModels());
+                //Source = new NotifyTaskCompletion<DataSource>(UpdateSystemPropertyModels());
             }
         }
 
@@ -411,6 +413,24 @@ namespace Vertical.ViewModels
                 IsVisibleSaveButton = false;
             }
             
+        }
+
+        public async Task Savedate(SystemObjectPropertyValueModel property)
+        {
+            var item = new AddSystemObjectPropertyValueModel
+            {
+                ObjectGUID = SystemObjectModel?.GUID,
+                PropertyID = property?.ID,
+                PropertyNum = property?.Num,
+                Value = property?.Value,
+                ValueNum = property.ValueNum
+            };
+
+            if (await Api.SendDataToServerAsync("System/AddSystemObjectPropertyValue", item) != HttpStatusCode.OK)
+            {
+                UserDialogs.Instance.Alert("Не удалось сохранить", null, "Ок");
+                return;
+            }
         }
     }
 }
