@@ -31,11 +31,16 @@ namespace Vertical.CustomViews
                 case 3: return FloatTemplate;
                 case 4: return IntTemplate;
                 case 5: {
+
                         if (property.Array == true)
                         { 
                             return ArrayTemplate;
                         }
                         else if(!string.IsNullOrEmpty(property.SourceObjectParentGUID) && property.SourceObjectTypeID != null){
+                            return GibridObjectTemplate;
+                        }
+                        else if(string.IsNullOrEmpty(property.SourceObjectParentGUID) && property.SourceObjectTypeID == null)
+                        {
                             return GibridObjectTemplate;
                         }
                         else

@@ -44,22 +44,34 @@
                                 MaximumDate="{Binding Source={x:Reference thisPage}, Path = BindingContext.MaxDate}"
                                 Date="{Binding Value}"
                                 Format="dd.MM.yyyy"
-                                FontSize="Caption" TextColor="#737373"/>
+                                FontSize="Caption" TextColor="#737373"
+                                    DateSelected="DatePicker_DateSelected"/>
                     </inputLayout:SfTextInputLayout>
                     
                 </StackLayout>
                 
             </DataTemplate>
             <DataTemplate x:Key="floatTemplate">
-                <inputLayout:SfTextInputLayout
-                            Style="{x:StaticResource SfTextInputLayoutStyle}"
-                            UnfocusedColor="Black"
-                            HelperText="{Binding Name}"
-                            Margin="0,0,0,10"
+                <!--<inputLayout:SfTextInputLayout
+                    Style="{x:StaticResource SfTextInputLayoutStyle}"
+                    UnfocusedColor="Black"
+                    HelperText="{Binding Name}"
+                    Margin="0,0,0,10"
                     IsEnabled="{Binding Locked}">
-                    <Entry Text="{Binding Value, Mode=TwoWay}" Style="{x:StaticResource DefaultLabelStyle}"
-                           FontSize="Caption" BindingContext="{Binding}" Completed="Entry_Completed_float"/>
-                </inputLayout:SfTextInputLayout>
+                    <Entry Text="{Binding Value, Mode=TwoWay}"
+                           FontSize="Caption" BindingContext="{Binding}" TextChanged="Entry_TextChanged_float"/>
+                </inputLayout:SfTextInputLayout>-->
+                <input:AdvancedEntry
+                    Text="{Binding Value}"
+                    TextColor="Black"
+                    Title="{Binding Name}"
+                    Margin="0,0,0,10"
+                    IsEnabled="{Binding Locked}"
+                    Annotation="Decimal"
+                    Completed="AdvancedEntry_Completed"
+                    TextChanged="Entry_TextChanged_float"
+                    BindingContext="{Binding}"
+                    />
             </DataTemplate>
             <DataTemplate x:Key="intTemplate">
                 <inputLayout:SfTextInputLayout                            
@@ -67,8 +79,8 @@
                     HelperText="{Binding Name}"
                     UnfocusedColor="Black"
                     IsEnabled="{Binding Source={x:Reference thisPage}, Path = BindingContext.Locked}">
-                    <Entry Text="{Binding Value}" Style="{x:StaticResource DefaultLabelStyle}" 
-                           FontSize="Caption" BindingContext="{Binding}" Completed="Entry_Completed_int"/>
+                    <Entry Text="{Binding Value}" 
+                           FontSize="Caption" BindingContext="{Binding}"/>
                 </inputLayout:SfTextInputLayout>
             </DataTemplate>
             <DataTemplate x:Key="arrayTemplate">
@@ -103,7 +115,7 @@
                                 Padding="0"
                                 IsEnabled="{Binding Locked}"
                                 IsVisible="{Binding Locked}"/>
-                        <views:CheckListView ObjectGUID="{Binding }" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" MinimumHeightRequest="100"/>
+                        <views:CheckListView ObjectGUID="{Binding}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" MinimumHeightRequest="100"/>
                     </Grid>
                 </Frame>
             </DataTemplate>
@@ -114,7 +126,7 @@
                                 UnfocusedColor="Black"
                         IsEnabled="{Binding Source={x:Reference thisPage}, Path = BindingContext.Locked}">
                     <Entry Text="{Binding Value}"
-                               FontSize="Caption" BindingContext="{Binding}" Completed="Entry_Completed_string"/>
+                               FontSize="Caption" BindingContext="{Binding}"/>
                 </inputLayout:SfTextInputLayout>
             </DataTemplate>
             <DataTemplate x:Key="humanTemplate">
@@ -123,10 +135,9 @@
                                 HelperText="{Binding Name}"
                                 UnfocusedColor="Black"
                                 IsEnabled="{Binding Locked}">
-                    <Entry  Style="{x:StaticResource DefaultLabelStyle}" FontSize="Caption" IsEnabled="{Binding Locked}"/>
+                    <Entry  FontSize="Caption" IsEnabled="{Binding Locked}"/>
                 </inputLayout:SfTextInputLayout>
             </DataTemplate>
-
             <DataTemplate x:Key="notArrayTemplate">
                 <Frame x:Name="Item" Padding="0" BackgroundColor="White" BorderColor="{StaticResource LightGreyColor}">
                     <Grid Margin="5" >
@@ -155,7 +166,7 @@
                 </Frame>
             </DataTemplate>
             <DataTemplate x:Key="gibridObjectTemplate">
-                <Frame x:Name="Item" Padding="0" BackgroundColor="White">
+                <Frame x:Name="Item" Padding="0" BackgroundColor="White" BorderColor="{StaticResource LightGreyColor}">
                     <Grid Margin="5" >
                         <Grid.RowDefinitions>
                             <RowDefinition Height="20"/>
@@ -207,11 +218,11 @@
     </ContentView.Resources>
     <stateContainerDemo:StateContainer State ="{Binding States}">
         <stateContainerDemo:StateCondition Is="Normal">
-            <StackLayout
+            <StackLayout                
                 Padding="5"
                 BindableLayout.ItemsSource="{Binding Source.Result.DisplayItems}"
                 BindableLayout.ItemTemplateSelector="{StaticResource checklistDataTemplateSelector}">
-            </StackLayout>            
+            </StackLayout>
         </stateContainerDemo:StateCondition>
 
         <stateContainerDemo:StateCondition Is="Loading">

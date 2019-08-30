@@ -26,10 +26,10 @@ namespace Vertical.ViewModels
         public bool IsVisibleButtons { get; set; }
 
         public SystemObjectModel SystemObjectModel { get; set; }
-        public ObservableCollection<SystemObjectPropertyValueModel> SystemPropertyModels { get; set; }
-        public ObservableCollection<MainSourceClass> MainSource { get; set; }
+        //public ObservableCollection<SystemObjectPropertyValueModel> SystemPropertyModels { get; set; }
         public List<AddSystemObjectPropertyValueModel> NewValues { get; set; }
         public NotifyTaskCompletion<DataSource> Source { get; set; }
+        public NotifyTaskCompletion<DataSource> SourceObj { get; set; }
         public DataSource SourceObjects { get; set; }
 
         public DateTime MinDate { get; set; }
@@ -45,38 +45,25 @@ namespace Vertical.ViewModels
             MinDate = DateTime.Now.AddYears(-1);
             MaxDate = DateTime.Now.AddYears(1);
             SystemObjectModel = obj;
-            SourceObjects = new DataSource();
-            SourceObjects.GroupDescriptors.Add(new GroupDescriptor("GroupName"));        
+                    
             NewValues = new List<AddSystemObjectPropertyValueModel>();
-            SystemPropertyModels = new ObservableCollection<SystemObjectPropertyValueModel>();
-            MainSource = new ObservableCollection<MainSourceClass>();
+            //SystemPropertyModels = new ObservableCollection<SystemObjectPropertyValueModel>();
             Source = new NotifyTaskCompletion<DataSource>(UpdateSystemPropertyModels());
+            //SourceObj = new NotifyTaskCompletion<DataSource>(UpdateSystemPropertyModels(2));
         }
-
-        public CheckPageViewModel(IList<string> items, string systemObjectGUID, int id)
-        {
-            MinDate = DateTime.Now.AddYears(-1);
-            MaxDate = DateTime.Now.AddYears(1);
-            SystemObjectModel = new SystemObjectModel() { GUID = systemObjectGUID };
-            PropertyID = id;
-            SourceObjects = new DataSource();
-            SourceObjects.GroupDescriptors.Add(new GroupDescriptor("GroupName"));
-            NewValues = new List<AddSystemObjectPropertyValueModel>();
-            SystemPropertyModels = new ObservableCollection<SystemObjectPropertyValueModel>();
-            MainSource = new ObservableCollection<MainSourceClass>();
-            Source = new NotifyTaskCompletion<DataSource>(UpdateSystemPropertyModels());
-        }
-
+        
         private async void IsChecked(object obj)
         {
             var model = obj as SystemObjectPropertyValueModel;
-            await Api.SendDataToServerAsync("System/AddSystemObjectPropertyValue", 
-                                            new {
-                                                ObjectGUID  = SystemObjectModel?.GUID,
-                                                PropertyID  = model?.ID,
+            await Api.SendDataToServerAsync("System/AddSystemObjectPropertyValue",
+                                            new
+                                            {
+                                                ObjectGUID = SystemObjectModel?.GUID,
+                                                PropertyID = model?.ID,
                                                 PropertyNum = model?.Num,
                                                 Value = model?.Value,
-                                                ValueNum = model?.ValueNum}
+                                                ValueNum = model?.ValueNum
+                                            }
                                             );
         }
 
@@ -273,74 +260,50 @@ namespace Vertical.ViewModels
         /// </summary>
         private async Task<DataSource> UpdateSystemPropertyModels()
         {            
-            SystemPropertyModels.Clear();
-            
-            
+            var SystemPropertyModels = new ObservableCollection<SystemObjectPropertyValueModel>();
+
             var values = await Api.GetDataFromServerAsync<SystemObjectPropertyValueModel>("System/GetSystemObjectPropertiesValues", new { ObjectGUID = SystemObjectModel?.GUID });
-            if(PropertyID != null)
-            {
-                values = values.Where(x => x.ID == PropertyID).ToList();
-            }
+            var SourceObjects = new DataSource();
+            SourceObjects.GroupDescriptors.Add(new GroupDescriptor("GroupName"));
+
             try
             {
+                
                 foreach (var s in values.OrderByDescending(q => q.TypeID).OrderBy(o => o.GroupID))
                 {
                     SystemPropertyModels.Add(s);
                 }
 
-                if (SystemPropertyModels.Last(x => x.TypeID == 5 && !string.IsNullOrEmpty(x.Value as string)) != null)
-                {
-                    for(int i = SystemPropertyModels.Count-1; i >= 0; i--)
+                foreach (int? groupId in values.Select(x => x.GroupID))
+                {                    
+                    if (SystemPropertyModels.LastOrDefault(x => x.TypeID == 5 && !string.IsNullOrEmpty(x.Value as string) && x.GroupID == groupId) != null)
                     {
-                        if(SystemPropertyModels[i].TypeID == 5 && string.IsNullOrEmpty(SystemPropertyModels[i].Value as string))
+                        for (int i = SystemPropertyModels.Count - 1; i >= 0; i--)
                         {
-                            SystemPropertyModels.RemoveAt(i);
+                            if (SystemPropertyModels[i].TypeID == 5 && string.IsNullOrEmpty(SystemPropertyModels[i].Value as string) && SystemPropertyModels[i].GroupID == groupId)
+                            {
+                                SystemPropertyModels.RemoveAt(i);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        for (int j = SystemPropertyModels.Count - 1; j >= 0; j--)
+                        {
+                            if (SystemPropertyModels[j].TypeID == 5 && string.IsNullOrEmpty(SystemPropertyModels[j].Value as string) && SystemPropertyModels[j].ValueNum > 1 && SystemPropertyModels[j].GroupID == groupId)
+                            {
+                                SystemPropertyModels.RemoveAt(j);
+                            }
                         }
                     }
                 }
-                else
-                {
-                    for (int i = SystemPropertyModels.Count-1; i >= 0; i--)
-                    {
-                        if (SystemPropertyModels[i].TypeID == 5 && string.IsNullOrEmpty(SystemPropertyModels[i].Value as string) && SystemPropertyModels[i].ValueNum > 1)
-                        {
-                            SystemPropertyModels.RemoveAt(i);
-                        }
-                    }
-                }
-                
-                Dictionary<int?, ObservableCollection<SystemObjectPropertyValueModel>> properties = new Dictionary<int?, ObservableCollection<SystemObjectPropertyValueModel>>();
-                foreach(var j in SystemPropertyModels.Select(x => x.GroupID).Distinct())
-                {
-                    properties.Add(j == null ? 0 : j, new ObservableCollection<SystemObjectPropertyValueModel>(SystemPropertyModels.Where(x => x.GroupID == j)));
-                }
-                //for (int j = 0, k = 0; j < SystemPropertyModels.Count; j++)
-                //{
-                //    if (!MainSource.Select(x => x.ID).Contains(SystemPropertyModels[j].ID))
-                //    {
-                //        MainSource.Add(new MainSourceClass(SystemPropertyModels[j]));
-                //        if (SystemPropertyModels[j].Array)
-                //        {
-                //            MainSource[k].ArrayValue = new ObservableCollection<string>(SystemPropertyModels.Where(x => x.ID == SystemPropertyModels[j].ID).Select(q => q?.Value as string));
 
-                //        }
-                //        k++;
-                //        //else
-                //        //{
-                //        //    MainSource[k].ArrayValue = SystemPropertyModels[j];
-                //        //    k++;
-                //        //}
-                //    }
-                //}
-                SourceObjects.Source = SystemPropertyModels;//MainSource;
+                SourceObjects.Source = SystemPropertyModels;
             }
             catch (Exception ex)
             {
                 Loger.WriteMessage(Android.Util.LogPriority.Error, "In foreach (var s in groups){} ->", ex.Message);
             }
-
-            
-
 
             States = States.Normal;
             return SourceObjects;
@@ -367,6 +330,7 @@ namespace Vertical.ViewModels
                 IsEnabled = true;
                 NewValues.Clear();
 
+                await Navigation.PopAsync();
                 //Source = new NotifyTaskCompletion<DataSource>(UpdateSystemPropertyModels());
             }
         }
@@ -415,7 +379,7 @@ namespace Vertical.ViewModels
             
         }
 
-        public async Task Savedate(SystemObjectPropertyValueModel property)
+        public async Task SaveDate(SystemObjectPropertyValueModel property)
         {
             var item = new AddSystemObjectPropertyValueModel
             {

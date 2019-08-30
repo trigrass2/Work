@@ -65,22 +65,19 @@ namespace Vertical.Views
             mainGrid.Children.Add(label, 0,1);
             Grid.SetColumnSpan(label, 2);
 
-            var view = new ObjectView(ViewModel);
+            var view = new CheckListView(ViewModel);//new ObjectView(ViewModel);
             mainGrid.Children.Add(view, 0, 2);
             Grid.SetColumnSpan(view, 2);
 
             savePropertiesButton.BindingContext = ViewModel;
-            savePropertiesButton.Command = ViewModel.SavePropertiesValuesCommand;
-            savePropertiesButton.SetBinding(IsEnabledProperty, "IsEnabled");
-            savePropertiesButton.SetBinding(IsVisibleProperty, "IsVisibleSaveButton", BindingMode.TwoWay);
-            Grid.SetColumnSpan(savePropertiesButton, 2);
+            savePropertiesButton.Command = ViewModel.SavePropertiesValuesCommand;                      
 
-            backGroundGrid.Children.Add(new ScrollView() { Content = mainGrid }, 0, 0);
-            backGroundGrid.Children.Add(savePropertiesButton, 0, 1);
-            
+            //mainGrid.Children.Add(new ScrollView() { Content = mainGrid }, 0, 0);
+            mainGrid.Children.Add(savePropertiesButton, 0, 3);
+            Grid.SetColumnSpan(savePropertiesButton, 2);
             #endregion region
 
-            Content = backGroundGrid;
+            Content = new ScrollView() { Content = mainGrid };
         }
 
         private async void ContextMenuButton_Clicked(object sender, System.EventArgs e)
@@ -88,16 +85,16 @@ namespace Vertical.Views
             await DisplayActionSheet(null, null, null,"Копировать","Удалить");
         }
 
-        public Grid backGroundGrid = new Grid
-        {            
-            RowDefinitions = new RowDefinitionCollection
-            {
-                new RowDefinition(),
-                new RowDefinition(){ Height = GridLength.Auto }
-            },
-            RowSpacing = 0,
-            BackgroundColor = Color.FromRgba(0,0,0,0)
-        };
+        //public Grid backGroundGrid = new Grid
+        //{            
+        //    RowDefinitions = new RowDefinitionCollection
+        //    {
+        //        new RowDefinition(),
+        //        new RowDefinition(){ Height = GridLength.Auto }
+        //    },
+        //    RowSpacing = 0,
+        //    BackgroundColor = Color.FromRgba(0,0,0,0)
+        //};
 
         public Grid mainGrid = new Grid
         {
@@ -105,7 +102,8 @@ namespace Vertical.Views
             {
                 new RowDefinition(){ Height = GridLength.Auto},
                 new RowDefinition(){ Height = GridLength.Auto},
-                new RowDefinition()
+                new RowDefinition(),
+                new RowDefinition(){ Height = 50 }
             },
             BackgroundColor = Color.FromHex("#6c757d"),
             RowSpacing = 0,
@@ -136,12 +134,11 @@ namespace Vertical.Views
         public Button savePropertiesButton = new Button
         {
             BackgroundColor = Color.FromHex("#3cb371"),
-            HeightRequest = 50,
-            CornerRadius = 5,
-            Text = "Сохранить",
+            HeightRequest = 50,            
+            Text = "OK",
             TextColor = Color.White,
             FontAttributes = FontAttributes.Bold,
-            Margin = new Thickness(5, 0, 5, 3)
+            Margin = new Thickness(0, 0.5, 0, 0.5)
         };
 
         public Button contextMenuButton = new Button

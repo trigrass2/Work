@@ -10,17 +10,17 @@ namespace Vertical.Services
         {
             if(logPriority == LogPriority.Error)
             {
-                SendError(text, invokeMetodName);
+                SendError(text, errorMessage, invokeMetodName);
             }           
             
             Log.WriteLine(logPriority, $"In {invokeMetodName}", $"{errorMessage}");
         }
 
-        private static void SendError(string textMessage, string invokeMethod)
+        private static void SendError(string textMessage, string error, string invokeMethod)
         {
             try
             {
-                string textMsg = $"In {invokeMethod} -> {textMessage}";
+                string textMsg = $"In {invokeMethod} -> {textMessage} -> Error: {error}";
                 RestClient client = new RestClient($"https://api.telegram.org/bot870858359:AAH0xAUXEm3zNVVFM7buY6Avwvrj_av4Rac/sendMessage?chat_id=-1001483917651&text={textMsg}")
                 {
                     Timeout = 5000

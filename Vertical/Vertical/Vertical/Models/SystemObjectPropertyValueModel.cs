@@ -95,11 +95,11 @@ namespace Vertical.Models
         /// </summary>
         public int? SourceObjectTypeID { get; set; }
 
-        private bool _locked;
+        private bool? _locked;
         /// <summary>
         /// Заблокирован для редактирования
         /// </summary>
-        public bool Locked
+        public bool? Locked
         {
             get
             {
@@ -114,6 +114,6 @@ namespace Vertical.Models
         /// <summary>
         /// Is Array
         /// </summary>
-        public bool Array { get; set; }
+        public bool? Array { get; set; }
     }
 }

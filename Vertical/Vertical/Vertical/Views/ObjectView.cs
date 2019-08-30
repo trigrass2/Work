@@ -28,8 +28,22 @@ namespace Vertical.Views
 
         private static string _fontFamily = "fontawesome-webfont.ttf#Material Design Icons";
 
-        private StackLayout mainStack = new StackLayout { Padding = 5 };
+        private StackLayout _mainStack = new StackLayout { Padding = 5 };
+        
         public ChecklistDataTemplateSelector templateSelector;
+
+        private Grid _mainGrid = new Grid {
+            Padding = 5,
+            ColumnDefinitions = new ColumnDefinitionCollection
+            {
+                new ColumnDefinition()
+            },
+            RowSpacing = 2,
+            RowDefinitions = new RowDefinitionCollection
+            {
+                new RowDefinition(),
+                new RowDefinition()
+            } };
 
         public static BindableProperty ObjectGUIDProperty =
             BindableProperty.Create(
@@ -68,24 +82,35 @@ namespace Vertical.Views
         private void Init()
         {
             CreateSelectors();
-            SetBindings();
-            stateContainer.Conditions[0].Content = mainStack;
+            SetBindings();            
             this.Content = stateContainer;
         }
 
         private void SetBindings()
         {
-            stateContainer.SetBinding(StateContainer.StateProperty, "States");
-            BindableLayout.SetItemsSource(mainStack, (BindingContext as CheckPageViewModel).Source.Result.DisplayItems);//если не работают кнопки то obs
-            BindableLayout.SetItemTemplateSelector(mainStack, templateSelector);
+            try
+            {
+                var stack1 = new StackLayout();
+                var stack2 = new StackLayout();
+                stateContainer.SetBinding(StateContainer.StateProperty, "States");
+
+                BindableLayout.SetItemsSource(stack1, (BindingContext as CheckPageViewModel)?.Source?.Result?.DisplayItems);
+                BindableLayout.SetItemTemplateSelector(stack1, templateSelector);
+
+                BindableLayout.SetItemsSource(stack2, (BindingContext as CheckPageViewModel)?.SourceObj?.Result?.DisplayItems);
+                BindableLayout.SetItemTemplateSelector(stack2, templateSelector);
+
+                _mainGrid.Children.Add(stack1, 0, 0);
+                _mainGrid.Children.Add(stack2, 0, 1);
+                stateContainer.Conditions[0].Content = _mainGrid;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
         }
 
-        private void UpdateUI()
-        {
-            Grid mainGrid = new Grid();
-            //var items = (BindingContext as CheckPageViewModel).Source.Result.DisplayItems as Dictionary<int?, ObservableCollection<SystemObjectPropertyValueModel>>;
-        }
-
+        
         private StateContainer stateContainer = new StateContainer
         {
             Conditions = new List<StateCondition>
@@ -158,6 +183,9 @@ namespace Vertical.Views
                 Loger.WriteMessage(Android.Util.LogPriority.Error, ex.Message);
             }
 
+            //Grid.SetColumn(label, 0);
+            //Grid.SetRow(label, idRowGrid1);
+            //idRowGrid1++;
 
             return label;
         }
@@ -197,11 +225,15 @@ namespace Vertical.Views
                 {
                     Spacing = 0,
                     Children =
-                {
-                    label,
-                    checkBox
-                }
+                    {
+                        label,
+                        checkBox
+                    }
                 };
+
+                //Grid.SetColumn(frame, 0);
+                //Grid.SetRow(frame, idRowGrid1);
+                //idRowGrid1++;
 
                 return frame;
             }
@@ -237,6 +269,10 @@ namespace Vertical.Views
                 inputLayout.SetBinding(SfTextInputLayout.HelperTextProperty, "Name");
                 inputLayout.SetBinding(SfTextInputLayout.IsEnabledProperty, "Locked");
 
+                //Grid.SetColumn(inputLayout, 0);
+                //Grid.SetRow(inputLayout, idRowGrid1);
+                //idRowGrid1++;
+
                 return inputLayout;
             }
             catch (Exception ex)
@@ -269,6 +305,10 @@ namespace Vertical.Views
                 entry.SetBinding(Entry.BindingContextProperty, new Binding("BindingContext", source:inputLayout));
                 entry.Completed += Entry_Completed_float;
 
+                //Grid.SetColumn(inputLayout, 0);
+                //Grid.SetRow(inputLayout, idRowGrid1);
+                //idRowGrid1++;
+
                 return inputLayout;
             }
             catch (Exception ex)
@@ -300,7 +340,11 @@ namespace Vertical.Views
                 entry.SetBinding(Entry.TextProperty, "Value");
                 entry.SetBinding(Entry.BindingContextProperty, new Binding("BindingContext", source: inputLayout));
                 entry.Completed += Entry_Completed_int;
-                
+
+                //Grid.SetColumn(inputLayout, 0);
+                //Grid.SetRow(inputLayout, idRowGrid1);
+                //idRowGrid1++;
+
                 return inputLayout;
             }
             catch (Exception ex)
@@ -390,6 +434,11 @@ namespace Vertical.Views
                 Grid.SetColumnSpan(objectView, 2);
 
                 frame.Content = grid;
+
+                //Grid.SetColumn(frame, 0);
+                //Grid.SetRow(frame, idRowGrid2);
+                //idRowGrid2++;
+
                 return frame;
             }
             catch (Exception ex)
@@ -421,6 +470,10 @@ namespace Vertical.Views
                 entry.SetBinding(Entry.BindingContextProperty, new Binding("BindingContext", source: inputLayout));
                 entry.Completed += Entry_Completed_string;
 
+                //Grid.SetColumn(inputLayout, 0);
+                //Grid.SetRow(inputLayout, idRowGrid1);
+                //idRowGrid1++;
+
                 return inputLayout;
             }
             catch (Exception ex)
@@ -450,6 +503,10 @@ namespace Vertical.Views
                 inputLayout.SetBinding(SfTextInputLayout.HelperTextProperty, "Name");
                 inputLayout.SetBinding(SfTextInputLayout.IsEnabledProperty, "Locked");
 
+                //Grid.SetColumn(inputLayout, 0);
+                //Grid.SetRow(inputLayout, idRowGrid1);
+                //idRowGrid1++;
+
                 return inputLayout;
             }
             catch (Exception ex)
@@ -465,6 +522,10 @@ namespace Vertical.Views
             {
                 Label label = new Label();
                 label.SetBinding(Label.TextProperty, "Name");
+
+                //Grid.SetColumn(label, 0);
+                //Grid.SetRow(label, idRowGrid2);
+                //idRowGrid2++;
 
                 return label;
             }
@@ -494,7 +555,13 @@ namespace Vertical.Views
                 buttonPencil.SetBinding(Button.CommandParameterProperty, new Binding("BindingContext", source: buttonPencil?.Parent));
                 buttonPencil.SetBinding(Button.IsVisibleProperty, "Locked");
 
-                return CreateNestedObjectView(labelObject, buttonPencil);
+                var frame = CreateNestedObjectView(labelObject, buttonPencil);
+
+                //Grid.SetColumn(frame, 0);
+                //Grid.SetRow(frame, idRowGrid2);
+                //idRowGrid2++;
+
+                return frame;
 
             }
             catch (Exception ex)
@@ -516,6 +583,10 @@ namespace Vertical.Views
                 };
                 objectView.SetBinding(ObjectView.ObjectGUIDProperty, new Binding("BindingContext", source: Parent));
                 var frame = CreateNestedObjectView(new StackLayout { Children = { labelObject, objectView } }, buttonPencil);
+
+                //Grid.SetColumn(frame, 0);
+                //Grid.SetRow(frame, idRowGrid2);
+                //idRowGrid2++;
 
                 return frame;
             }
@@ -567,6 +638,7 @@ namespace Vertical.Views
                 grid.Children.Add(view, 0, 1);
 
                 frame.Content = grid;
+                                
                 return frame;
             }
             catch (Exception ex)
@@ -617,7 +689,7 @@ namespace Vertical.Views
             if(firstTime)
             if(e.OldDate != e.NewDate)
             {                
-               await _viewModel?.Savedate((sender as DatePicker).BindingContext as SystemObjectPropertyValueModel);
+               await _viewModel?.SaveDate((sender as DatePicker).BindingContext as SystemObjectPropertyValueModel);
             }
             firstTime = true;
         }

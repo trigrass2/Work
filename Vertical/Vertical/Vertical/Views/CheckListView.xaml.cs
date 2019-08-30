@@ -1,10 +1,12 @@
 ﻿using Acr.UserDialogs;
+using Plugin.InputKit.Shared.Controls;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 using Vertical.Models;
 using Vertical.Services;
 using Vertical.ViewModels;
@@ -17,6 +19,10 @@ namespace Vertical.Views
 	public partial class CheckListView : ContentView, INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
+        
+        private int _entryValueInt { get; set; }
+        private double _entryValueDouble { get; set; }
+        private string _entryValueString { get; set; }
 
         public CheckPageViewModel ViewModel { get; set; }
 
@@ -41,27 +47,6 @@ namespace Vertical.Views
             }
         }
 
-        public static BindableProperty ArrayValuesProperty =
-            BindableProperty.Create(
-                propertyName: "ArrayValues",
-                returnType: typeof(MainSourceClass),
-                declaringType: typeof(CheckListView),
-                defaultValue: default(string),
-                defaultBindingMode: BindingMode.TwoWay
-                );
-
-        public MainSourceClass ArrayValues
-        {
-            get
-            {
-                return (MainSourceClass)GetValue(ArrayValuesProperty);
-            }
-            set
-            {
-                SetValue(ArrayValuesProperty, value);
-            }
-        }
-
         public CheckListView()
         {
             InitializeComponent();
@@ -75,52 +60,84 @@ namespace Vertical.Views
             BindingContext = ViewModel;
         }
 
-        private async void Entry_Completed_float(object sender, EventArgs e)
+        private async void Entry_TextChanged_int(object sender, TextChangedEventArgs e)
         {
-            var model = (sender as Entry).BindingContext as SystemObjectPropertyValueModel;
-            if (double.TryParse(model.Value as string, out double d) == false && !(model.Value is null) && model.Value as string != "")
+             await SaveChange<int>((sender as Entry).BindingContext as SystemObjectPropertyValueModel, e.OldTextValue, e.NewTextValue);
+        }
+
+        private async void Entry_TextChanged_string(object sender, TextChangedEventArgs e)
+        {
+             await SaveChange<string>((sender as Entry).BindingContext as SystemObjectPropertyValueModel, e.OldTextValue, e.NewTextValue);
+        }
+
+        private async void Entry_TextChanged_float(object sender, TextChangedEventArgs e)
+        {
+             await SaveChange<double>((sender as Entry).BindingContext as SystemObjectPropertyValueModel, e.OldTextValue, e.NewTextValue);
+        }
+
+        bool firstTime = false;
+        private async void DatePicker_DateSelected(object sender, DateChangedEventArgs e)
+        {
+            if (firstTime)
+                if (e.OldDate != e.NewDate)
+                {
+                    await ViewModel?.SaveDate((sender as DatePicker).BindingContext as SystemObjectPropertyValueModel);
+                }
+            firstTime = true;
+        }        
+
+        private async Task SaveChange<T>(SystemObjectPropertyValueModel model, string oldValue, object newValue)
+        {
+            if (oldValue != null && oldValue != newValue as string)
             {
-                await UserDialogs.Instance.AlertAsync($"Не верный формат данных! Необходимо {model.TypeName}", "Ошибка", "Ок");
-                return;
+                if (newValue is T)
+                {
+                    //ViewModel.CreateNewValue(model, newValue);
+                }
+                else
+                {
+                    await UserDialogs.Instance.AlertAsync($"Не верный формат данных! Необходимо {model.TypeName}", "Ошибка", "Ок");
+                    return;
+                }
             }
-
-            ViewModel.CreateNewValue(model, model.Value);
-
-        }
-
-        private async void Entry_Completed_int(object sender, EventArgs e)
-        {
-            var model = (sender as Entry).BindingContext as SystemObjectPropertyValueModel;
-            if (int.TryParse(model.Value as string, out int i) == false && !(model.Value is null) &&  model.Value as string != "")
-            {
-                await UserDialogs.Instance.AlertAsync($"Не верный формат данных! Необходимо {model.TypeName}", "Ошибка", "Ок");
-                return;
-            }
-
-            ViewModel.CreateNewValue(model, model.Value);
+            
+            
 
         }
-
-        private void Entry_Completed_string(object sender, EventArgs e)
-        {
-            var model = (sender as Entry).BindingContext as SystemObjectPropertyValueModel;
-            ViewModel.CreateNewValue(model, model.Value);
-        }
+        //private async void Entry_Completed_string(object sender, EventArgs e)
+        //{            
+        //    //var model = (sender as Entry).BindingContext as SystemObjectPropertyValueModel;
+        //    //ViewModel.CreateNewValue(model, model.Value);
+        //}
 
         protected override void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             base.OnPropertyChanged(propertyName);
             if(propertyName == ObjectGUIDProperty.PropertyName)
             {
-                var item = Api.GetDataFromServer<SystemObjectModel>("System/GetSystemObjects", new { ObjectGUID = ObjectGUID.Value }).FirstOrDefault();
-                ViewModel = new CheckPageViewModel(item) { Navigation = this.Navigation };
-                BindingContext = ViewModel;
-            }else if(propertyName == ArrayValuesProperty.PropertyName)
-            {                
-                ViewModel = new CheckPageViewModel(ArrayValues.ArrayValue, ArrayValues.SystemObjectGUID, ArrayValues.ID) { Navigation = this.Navigation};
+                if(!string.IsNullOrEmpty(ObjectGUID.Value as string))
+                {
+                    var item = Api.GetDataFromServer<SystemObjectModel>("System/GetSystemObjects", new { ObjectGUID = ObjectGUID.Value, ShowHidden = true }).FirstOrDefault();
+                    ViewModel = new CheckPageViewModel(item) { Navigation = this.Navigation };
+                    BindingContext = ViewModel;
+                }
+                
             }
         }
+
+
+
         #endregion
 
+        private void Entry_Unfocused_string(object sender, FocusEventArgs e)
+        {
+            ViewModel.CreateNewValue((sender as Entry).BindingContext as SystemObjectPropertyValueModel, _entryValueString);
+        }
+
+        private void AdvancedEntry_Completed(object sender, EventArgs e)
+        {
+            var model = (sender as AdvancedEntry).BindingContext as SystemObjectPropertyValueModel;
+            ViewModel.CreateNewValue(model, model.Value);
+        }
     }
 }
