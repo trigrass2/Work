@@ -168,19 +168,27 @@ namespace Vertical.ViewModels
                         {
                             case "Создать":
                                 {
-                                    PromptResult pResult = await UserDialogs.Instance.PromptAsync(new PromptConfig
+                                    try
                                     {
-                                        InputType = InputType.Name,
-                                        Text = $"{_selectedObject.Name} {DateTime.Now}",
-                                        OkText = "Создать",
-                                        Title = "Создание объекта"
-                                    });
-                                    if (pResult.Ok)
-                                    {
-                                        string guidNewObject = await Api.AddSystemObjectAsync("System/CloneSystemObject", new { ObjectGUID = _selectedObject?.GUID, Name = pResult?.Text, ParentObject = _selectedObject?.ParentGUID, TypeID = _selectedObject?.TypeID });
-                                        var obj = await Api.GetDataFromServerAsync<SystemObjectModel>("System/GetSystemObjects", new { ObjectGUID = guidNewObject });
-                                        await Navigation.PushAsync(await Task.Run(() => new CheckListPage(obj.FirstOrDefault())));
+                                        PromptResult pResult = await UserDialogs.Instance.PromptAsync(new PromptConfig
+                                        {
+                                            InputType = InputType.Name,
+                                            Text = $"{_selectedObject.Name} {DateTime.Now}",
+                                            OkText = "Создать",
+                                            Title = "Создание объекта"
+                                        });
+                                        if (pResult.Ok)
+                                        {
+                                            string guidNewObject = await Api.AddSystemObjectAsync("System/CloneSystemObject", new { ObjectGUID = _selectedObject?.GUID, Name = pResult?.Text, ParentObject = _selectedObject?.ParentGUID, TypeID = _selectedObject?.TypeID });
+                                            var obj = await Api.GetDataFromServerAsync<SystemObjectModel>("System/GetSystemObjects", new { ObjectGUID = guidNewObject });
+                                            await Navigation.PushAsync(await Task.Run(() => new CheckListPage(obj.FirstOrDefault())));
+                                        }
                                     }
+                                    catch (Exception ex)
+                                    {
+                                        Loger.WriteMessage(Android.Util.LogPriority.Error, "При создании объекта", ex.Message);                                        
+                                    }
+                                    
                                 }
                                 break;
                             case "Архив":

@@ -1,3 +1,1 @@
-drawable/inputlayout_togglecollapseicon.png;drawable/inputlayout_togglecollapseicon.png
-drawable/inputlayout_togglevisibleicon.png;drawable/inputlayout_togglevisibleicon.png
-drawable/input_layout_drop_down_icon.png;drawable/input_layout_drop_down_icon.png
+values/Strings.xml;values/strings.xml

@@ -1,5 +1,8 @@
+System.Runtime
+Vertical
 Acr.UserDialogs
 AndHUD
+Behaviors
 Controls.Droid
 FormsViewGroup
 Newtonsoft.Json
@@ -27,8 +30,6 @@ Syncfusion.SfAutoComplete.XForms.Android
 Syncfusion.SfAutoComplete.XForms
 Syncfusion.SfComboBox.XForms.Android
 Syncfusion.SfComboBox.XForms
-System.Runtime
-Vertical
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Core.Runtime
 Xamarin.Android.Arch.Lifecycle.Common
@@ -73,8 +74,3 @@ Xamarin.Forms.Essentials.Controls
 Xamarin.Forms.Platform.Android
 Xamarin.Forms.Platform
 Xamarin.Forms.Xaml
-netstandard
-System.Resources.ResourceManager
-System.Reflection.Extensions
-System.Linq.Queryable
-System.ComponentModel

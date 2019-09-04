@@ -16,11 +16,12 @@ namespace Vertical.ViewModels
 {    
     public class CheckPageViewModel : BaseViewModel
     {
-        public ICommand SavePropertiesValuesCommand => new Command(SavePropertiesValuesAsync);
+        //public ICommand SavePropertiesValuesCommand => new Command(SavePropertiesValuesAsync);
         public ICommand AddNewObjectInPropertyCommand => new Command(AddNewObjectInPropperty);
         public ICommand EditObjectCommand => new Command(EditObject);
         public ICommand IsCheckedCommand => new Command(IsChecked);
         public ICommand DeletePropertyCommand => new Command(DeleteObjectProperty);
+        //public ICommand ChangeTextCommand => new Command(CreateNewValue);
 
         public bool IsVisibleSaveButton { get; set; }
         public bool IsVisibleButtons { get; set; }
@@ -52,6 +53,7 @@ namespace Vertical.ViewModels
             //SourceObj = new NotifyTaskCompletion<DataSource>(UpdateSystemPropertyModels(2));
         }
         
+
         private async void IsChecked(object obj)
         {
             var model = obj as SystemObjectPropertyValueModel;
@@ -267,8 +269,7 @@ namespace Vertical.ViewModels
             SourceObjects.GroupDescriptors.Add(new GroupDescriptor("GroupName"));
 
             try
-            {
-                
+            {                
                 foreach (var s in values.OrderByDescending(q => q.TypeID).OrderBy(o => o.GroupID))
                 {
                     SystemPropertyModels.Add(s);
@@ -312,7 +313,7 @@ namespace Vertical.ViewModels
         /// <summary>
         /// Отправляет изменения на сервер
         /// </summary>
-        private async void SavePropertiesValuesAsync()
+        public async void SavePropertiesValuesAsync()
         {
             IsEnabled = false;            
             

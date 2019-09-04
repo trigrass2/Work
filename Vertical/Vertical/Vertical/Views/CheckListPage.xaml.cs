@@ -70,16 +70,16 @@ namespace Vertical.Views
             Grid.SetColumnSpan(view, 2);
 
             savePropertiesButton.BindingContext = ViewModel;
-            savePropertiesButton.Command = ViewModel.SavePropertiesValuesCommand;                      
-
-            //mainGrid.Children.Add(new ScrollView() { Content = mainGrid }, 0, 0);
+            //savePropertiesButton.Command = ViewModel.SavePropertiesValuesCommand;
+            //savePropertiesButton.SetBinding(Button.CommandProperty, new Binding("SavePropertiesValuesCommand", source: BindingContext));
             mainGrid.Children.Add(savePropertiesButton, 0, 3);
             Grid.SetColumnSpan(savePropertiesButton, 2);
+
             #endregion region
 
             Content = new ScrollView() { Content = mainGrid };
         }
-
+        
         private async void ContextMenuButton_Clicked(object sender, System.EventArgs e)
         {
             await DisplayActionSheet(null, null, null,"Копировать","Удалить");
@@ -149,8 +149,9 @@ namespace Vertical.Views
                 Glyph = "\uf141",
                 FontFamily = "fontawesome-webfont.ttf#Material Design Icons",
                 Color = Color.FromHex("#ccc"),
-                Size = 17
+                Size = 17                
             },
+            IsVisible = false,
             BackgroundColor = Color.White,
             CornerRadius = 0,
             Margin = new Thickness(0, 0, 0, 0.5)

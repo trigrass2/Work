@@ -10,14 +10,14 @@
                 <On Platform="Android" Value="fontawesome-webfont.ttf#Material Design Icons"/>
             </OnPlatform>
 
-             <!--Colorts-->
+             <!--Colors-->
             <Color x:Key="GreenColor">#3cb371</Color>
             <Color x:Key="LightGreyColor">#ccc</Color>
             <Color x:Key="DarkGreyColor">#6c757d</Color>
             <Color x:Key="BlueColor">#336dab</Color>
             <Color x:Key="OrangeColor">#ff4114</Color>
             <Color x:Key="BackgroundColor">#fafafa</Color>
-            <Color x:Key="BackgroundObjectColorRGBA">#f0f3f3</Color>
+            <Color x:Key="BackgroundObjectColorRGBA">#648282</Color>
             <Color x:Key="ControlsBackgrounColor">Transparent</Color>
 
             <!--Icons-->

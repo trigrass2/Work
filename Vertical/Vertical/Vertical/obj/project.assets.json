@@ -11,6 +11,19 @@
           "lib/netstandard2.0/Acr.UserDialogs.dll": {}
         }
       },
+      "Behaviors.Forms/1.4.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Xamarin.Forms": "3.0.0.482510"
+        },
+        "compile": {
+          "lib/netstandard1.0/Behaviors.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/Behaviors.dll": {}
+        }
+      },
       "Fody/4.2.1": {
         "type": "package",
         "build": {
@@ -425,6 +438,19 @@
         "lib/uap10.0.16299/Acr.UserDialogs/Platforms/Uwp/TimePickerControl.xbf",
         "lib/xamarinios10/Acr.UserDialogs.dll",
         "lib/xamarinios10/Acr.UserDialogs.pdb"
+      ]
+    },
+    "Behaviors.Forms/1.4.0": {
+      "sha512": "z0D3U3LgiezsF+uKqG9KJdBTPpfjCZ+gG+ctRHLxC98WCVumBmPhCvBKwFVafMR0Ez87x617BQsgzK5ARu853g==",
+      "type": "package",
+      "path": "behaviors.forms/1.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "behaviors.forms.1.4.0.nupkg.sha512",
+        "behaviors.forms.nuspec",
+        "lib/netstandard1.0/Behaviors.dll",
+        "lib/netstandard1.0/Behaviors.pdb"
       ]
     },
     "Fody/4.2.1": {
@@ -2120,6 +2146,7 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "Acr.UserDialogs >= 7.0.4",
+      "Behaviors.Forms >= 1.4.0",
       "Microsoft.CSharp >= 4.5.0",
       "NETStandard.Library >= 2.0.3",
       "NGraphics >= 0.5.0",
@@ -2184,6 +2211,10 @@
           "Acr.UserDialogs": {
             "target": "Package",
             "version": "[7.0.4, )"
+          },
+          "Behaviors.Forms": {
+            "target": "Package",
+            "version": "[1.4.0, )"
           },
           "Microsoft.CSharp": {
             "target": "Package",
