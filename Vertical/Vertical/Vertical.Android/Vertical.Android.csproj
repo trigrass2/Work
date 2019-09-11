@@ -39,6 +39,7 @@
     <Debugger>Xamarin</Debugger>
     <RegisterForComInterop>false</RegisterForComInterop>
     <AndroidEnableMultiDex>false</AndroidEnableMultiDex>
+    <LangVersion>7.1</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>false</DebugSymbols>
@@ -61,6 +62,7 @@
     <AndroidCreatePackagePerAbi>false</AndroidCreatePackagePerAbi>
     <DefineConstants>
     </DefineConstants>
+    <LangVersion>7.1</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />

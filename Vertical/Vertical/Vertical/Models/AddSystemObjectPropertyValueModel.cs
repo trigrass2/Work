@@ -20,15 +20,18 @@ namespace Vertical.Models
         {
             try
             {
-                var item = obj as AddSystemObjectPropertyValueModel;
-                if (ObjectGUID == item.ObjectGUID && PropertyID == item?.PropertyID && PropertyNum == item?.PropertyNum && Value.Equals(item.Value) && ValueNum == item.ValueNum)
+                if(obj is AddSystemObjectPropertyValueModel item)
                 {
-                    return true;
+                    if (ObjectGUID == item.ObjectGUID && PropertyID == item?.PropertyID && PropertyNum == item?.PropertyNum && Value == item?.Value && ValueNum == item?.ValueNum)
+                    {
+                        return true;
+                    }
                 }
+                
             }
             catch (Exception ex)
             {
-                Loger.WriteMessage(Android.Util.LogPriority.Error, "При сравнении двух свойств -> ",ex.Message);
+                Loger.WriteMessageAsync(Android.Util.LogPriority.Error, "При сравнении двух свойств -> ",ex.Message);
             }
 
             return false;

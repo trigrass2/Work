@@ -66,7 +66,7 @@ namespace Vertical.ViewModels
             }
             catch (Exception ex)
             {
-                Loger.WriteMessage(LogPriority.Error, "При получении списка свойств -> ", ex.Message);
+                Loger.WriteMessageAsync(LogPriority.Error, "При получении списка свойств -> ", ex.Message);
             }
             
         }

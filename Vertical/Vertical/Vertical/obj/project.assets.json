@@ -2300,7 +2300,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Xamarin.Forms.Essentials.Controls 1.1.1' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
+      "message": "Пакет \"Xamarin.Forms.Essentials.Controls 1.1.1\" был восстановлен с помощью \".NETFramework,Version=v4.6.1\", а не целевой платформы проекта \".NETStandard,Version=v2.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
       "libraryId": "Xamarin.Forms.Essentials.Controls",
       "targetGraphs": [
         ".NETStandard,Version=v2.0"

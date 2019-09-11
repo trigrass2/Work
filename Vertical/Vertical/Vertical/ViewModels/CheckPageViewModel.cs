@@ -11,26 +11,21 @@ using System;
 using Syncfusion.DataSource;
 using System.Collections.Generic;
 using System.Net;
+using System.Collections.Specialized;
 
 namespace Vertical.ViewModels
 {    
     public class CheckPageViewModel : BaseViewModel
-    {
-        //public ICommand SavePropertiesValuesCommand => new Command(SavePropertiesValuesAsync);
+    {        
         public ICommand AddNewObjectInPropertyCommand => new Command(AddNewObjectInPropperty);
         public ICommand EditObjectCommand => new Command(EditObject);
         public ICommand IsCheckedCommand => new Command(IsChecked);
         public ICommand DeletePropertyCommand => new Command(DeleteObjectProperty);
-        //public ICommand ChangeTextCommand => new Command(CreateNewValue);
 
-        public bool IsVisibleSaveButton { get; set; }
-        public bool IsVisibleButtons { get; set; }
-
+        private ObservableCollection<SystemObjectPropertyValueModel> SystemPropertyModels { get; set; }
         public SystemObjectModel SystemObjectModel { get; set; }
-        //public ObservableCollection<SystemObjectPropertyValueModel> SystemPropertyModels { get; set; }
         public List<AddSystemObjectPropertyValueModel> NewValues { get; set; }
-        public NotifyTaskCompletion<DataSource> Source { get; set; }
-        public NotifyTaskCompletion<DataSource> SourceObj { get; set; }
+        public NotifyTaskCompletion<ObservableCollection<Grouping<string, SystemObjectPropertyValueModel>>> Source { get; set; }
         public DataSource SourceObjects { get; set; }
 
         public DateTime MinDate { get; set; }
@@ -38,21 +33,20 @@ namespace Vertical.ViewModels
         public DateTime SelectedDate { get; set; }
 
         private int? PropertyID { get; set; }
+        public bool IsChanged { get; set; } = false;
 
         public CheckPageViewModel() { }
 
         public CheckPageViewModel(SystemObjectModel obj)
         {
+            SystemPropertyModels = new ObservableCollection<SystemObjectPropertyValueModel>();
             MinDate = DateTime.Now.AddYears(-1);
             MaxDate = DateTime.Now.AddYears(1);
             SystemObjectModel = obj;
-                    
+
             NewValues = new List<AddSystemObjectPropertyValueModel>();
-            //SystemPropertyModels = new ObservableCollection<SystemObjectPropertyValueModel>();
-            Source = new NotifyTaskCompletion<DataSource>(UpdateSystemPropertyModels());
-            //SourceObj = new NotifyTaskCompletion<DataSource>(UpdateSystemPropertyModels(2));
+            Source = new NotifyTaskCompletion<ObservableCollection<Grouping<string, SystemObjectPropertyValueModel>>>(UpdateSystemPropertyModels());
         }
-        
 
         private async void IsChecked(object obj)
         {
@@ -91,7 +85,7 @@ namespace Vertical.ViewModels
                     {
                         case HttpStatusCode.Forbidden: await App.Current.MainPage.DisplayAlert(null, "Нет доступа.", "Oк");break;
                         case HttpStatusCode.BadRequest: await App.Current.MainPage.DisplayAlert(null, "Не удалось редактировать", "Oк"); break;
-                            default: Source = new NotifyTaskCompletion<DataSource>(UpdateSystemPropertyModels()); break;
+                            //default: Source = new NotifyTaskCompletion<ObservableCollection<IGrouping<string, SystemObjectPropertyValueModel>>>(UpdateSystemPropertyModels()); break;
                     };
                 }
                  
@@ -102,43 +96,36 @@ namespace Vertical.ViewModels
         private async void DeleteObjectProperty(object commandParameter)
         {
             using(UserDialogs.Instance.Loading("Удаление...", null, null, true, MaskType.Black))
-            await Task.Run(() => {
-                var property = commandParameter as SystemObjectPropertyValueModel;
-                Api.SendDataToServer("System/AddSystemObjectPropertyValue", new { ObjectGUID = property.SystemObjectGUID, PropertyID = property.ID, PropertyNum = property.Num, Value = default(string), ValueNum = property.ValueNum });
-                Source = new NotifyTaskCompletion<DataSource>(UpdateSystemPropertyModels());
-            });
+            {
+                await Task.Run(() => {
+                    var property = commandParameter as SystemObjectPropertyValueModel;
+                    
+                    //Api.SendDataToServer("System/AddSystemObjectPropertyValue", new { ObjectGUID = property.SystemObjectGUID, PropertyID = property.ID, PropertyNum = property.Num, Value = default(string), ValueNum = property.ValueNum });
+                    //Source = new NotifyTaskCompletion<ObservableCollection<IGrouping<string, SystemObjectPropertyValueModel>>>(UpdateSystemPropertyModels());
+                });
+            }            
             
         }
 
         private async Task CreateArrangement(SystemObjectPropertyValueModel property)
         {
-            var typeName = Api.GetDataFromServer<SystemObjectTypeModel>("System/GetSystemObjectTypes", new { ShowHidden = true})
-                .Where(x => x.ID == property.SourceObjectTypeID).Select(n => n.Name).FirstOrDefault();
+            var typeName = await Api.GetDataFromServerAsync<SystemObjectTypeModel>("System/GetSystemObjectTypes", new { ShowHidden = true });                
             
-            string guidNewItem = await Api.AddSystemObjectAsync("System/AddSystemObject", new { Name = typeName, TypeID = property.SourceObjectTypeID, ParentGUID = property.SystemObjectGUID });
-            if (guidNewItem != default(string))
+            string guidNewItem = await Api.AddSystemObjectAsync("System/AddSystemObject", 
+                                                                new {
+                                                                    Name = typeName.Where(x => x.ID == property.SourceObjectTypeID).Select(n => n.Name).FirstOrDefault(),
+                                                                    TypeID = property.SourceObjectTypeID,
+                                                                    ParentGUID = property.SystemObjectGUID });
+            if (guidNewItem != default)
             {
                 int valueNum = 0;
                 if (property.Value != null)
                 {
                     var v = await Api.GetDataFromServerAsync<SystemObjectPropertyValueModel>("System/GetSystemObjectPropertiesValues", new { ObjectGUID = SystemObjectModel?.GUID });
-                    valueNum = v.Max(x => x.ValueNum);
+                    valueNum = v.Where(q => q?.ID == property?.ID).Max(x => x.ValueNum);
                 }
-
-                property.Value = guidNewItem;
-                if(await Api.SendDataToServerAsync("System/AddSystemObjectPropertyValue",
-                    new
-                    {
-                        ObjectGUID = SystemObjectModel?.GUID,
-                        PropertyID = property.ID,
-                        PropertyNum = property.Num,
-                        Value = property.Value,
-                        ValueNum = valueNum + 1
-                    }) == HttpStatusCode.OK)
-                {
-                    Source = new NotifyTaskCompletion<DataSource>(UpdateSystemPropertyModels());
-                }
-                
+                property.ValueNum = valueNum + 1;
+                SystemPropertyModels.Add(property);                
             }
         }
 
@@ -206,7 +193,7 @@ namespace Vertical.ViewModels
                                             ValueNum = valueNum + 1
                                         });
 
-                                    await Device.InvokeOnMainThreadAsync(() => UpdateSystemPropertyModels());
+                                    //Source = new NotifyTaskCompletion<ObservableCollection<IGrouping<string, SystemObjectPropertyValueModel>>>(UpdateSystemPropertyModels());
                                 }
 
                             }
@@ -249,91 +236,141 @@ namespace Vertical.ViewModels
                                              ValueNum = valueNum + 1
                                          });
 
-                            await Device.InvokeOnMainThreadAsync(() => UpdateSystemPropertyModels());
-
+                            //Source = new NotifyTaskCompletion<ObservableCollection<IGrouping<string, SystemObjectPropertyValueModel>>>(UpdateSystemPropertyModels());
                         }
                     }
                 }
             }
         }
-       
+
+        private async Task DeleteNullValues(IEnumerable<SystemObjectPropertyValueModel> values, int? groupId)
+        {
+            await Task.Run(()=> {
+                if (SystemPropertyModels.LastOrDefault(x => x.TypeID == 5 && !string.IsNullOrEmpty(x.Value as string) && x.GroupID == groupId) != null)
+                {
+                    for (int i = SystemPropertyModels.Count - 1; i >= 0; i--)
+                    {
+                        if (SystemPropertyModels[i].GroupID == groupId && SystemPropertyModels[i].TypeID == 5 && string.IsNullOrEmpty(SystemPropertyModels[i].Value as string))
+                        {
+                            SystemPropertyModels.RemoveAt(i);
+                        }
+                    }
+                }
+                else
+                {
+                    for (int j = SystemPropertyModels.Count - 1; j >= 0; j--)
+                    {
+                        if (SystemPropertyModels[j].GroupID == groupId && SystemPropertyModels[j].TypeID == 5 && string.IsNullOrEmpty(SystemPropertyModels[j].Value as string) && SystemPropertyModels[j].ValueNum > 1)
+                        {
+                            SystemPropertyModels.RemoveAt(j);
+                        }
+                    }
+                }
+                //if (values.LastOrDefault(x => x.TypeID == 5 && !string.IsNullOrEmpty(x.Value as string) && x.GroupID == groupId) != null)
+                //{
+                //    for (int i = DictionaryProperties.Values.Count() - 1; i >= 0; i--)
+                //    {
+                //        var item = DictionaryProperties.Values.ElementAt(i);
+                //        for (int j = item.Count - 1; j >= 0; j--)
+                //        {
+                //            if (item[j].TypeID == 5 && string.IsNullOrEmpty(item[j].Value as string) && item[j].GroupID == groupId)
+                //            {
+                //                item.RemoveAt(j);
+                //            }
+                //        }
+                //    }
+                //}
+                //else
+                //{
+                //    for (int k = DictionaryProperties.Values.Count() - 1; k >= 0; k--)
+                //    {
+                //        var item = DictionaryProperties.Values.ElementAt(k);
+                //        for (int l = item.Count - 1; l >= 0; l--)
+                //        {
+                //            if (item[l].TypeID == 5 && string.IsNullOrEmpty(item[l].Value as string) && item[l].ValueNum > 1 && item[l].GroupID == groupId)
+                //            {
+                //                item.RemoveAt(l);
+                //            }
+                //        }
+                //    }
+                //}
+            });            
+        }
+
         /// <summary>
         /// Обновляет источник данных
         /// </summary>
-        private async Task<DataSource> UpdateSystemPropertyModels()
-        {            
-            var SystemPropertyModels = new ObservableCollection<SystemObjectPropertyValueModel>();
-
+        private async Task<ObservableCollection<Grouping<string, SystemObjectPropertyValueModel>>> UpdateSystemPropertyModels()
+        {
+            States = States.Loading;
+            SystemPropertyModels.Clear();
             var values = await Api.GetDataFromServerAsync<SystemObjectPropertyValueModel>("System/GetSystemObjectPropertiesValues", new { ObjectGUID = SystemObjectModel?.GUID });
-            var SourceObjects = new DataSource();
-            SourceObjects.GroupDescriptors.Add(new GroupDescriptor("GroupName"));
-
+            
             try
-            {                
-                foreach (var s in values.OrderByDescending(q => q.TypeID).OrderBy(o => o.GroupID))
+            {
+                //foreach(string groupName in values.OrderByDescending(q => q.TypeID).Select(x => x.GroupName).Distinct())
+                //{
+                //    DictionaryProperties.Add(
+                //        string.IsNullOrEmpty(groupName) ? "" : groupName,
+                //        new ObservableCollection<SystemObjectPropertyValueModel>(values.Where(g => g.GroupName == groupName).ToList())
+                //        );
+                //}
+
+                //foreach (int? groupId in values.Select(x => x.GroupID))
+                //{
+                //    await DeleteNullValues(values, groupId);
+                //}
+
+                foreach (var s in values.OrderByDescending(q => q.TypeID))
                 {
                     SystemPropertyModels.Add(s);
                 }
 
                 foreach (int? groupId in values.Select(x => x.GroupID))
-                {                    
-                    if (SystemPropertyModels.LastOrDefault(x => x.TypeID == 5 && !string.IsNullOrEmpty(x.Value as string) && x.GroupID == groupId) != null)
-                    {
-                        for (int i = SystemPropertyModels.Count - 1; i >= 0; i--)
-                        {
-                            if (SystemPropertyModels[i].TypeID == 5 && string.IsNullOrEmpty(SystemPropertyModels[i].Value as string) && SystemPropertyModels[i].GroupID == groupId)
-                            {
-                                SystemPropertyModels.RemoveAt(i);
-                            }
-                        }
-                    }
-                    else
-                    {
-                        for (int j = SystemPropertyModels.Count - 1; j >= 0; j--)
-                        {
-                            if (SystemPropertyModels[j].TypeID == 5 && string.IsNullOrEmpty(SystemPropertyModels[j].Value as string) && SystemPropertyModels[j].ValueNum > 1 && SystemPropertyModels[j].GroupID == groupId)
-                            {
-                                SystemPropertyModels.RemoveAt(j);
-                            }
-                        }
-                    }
+                {
+                    await DeleteNullValues(values, groupId);
                 }
-
-                SourceObjects.Source = SystemPropertyModels;
             }
             catch (Exception ex)
             {
-                Loger.WriteMessage(Android.Util.LogPriority.Error, "In foreach (var s in groups){} ->", ex.Message);
+               await Loger.WriteMessageAsync(Android.Util.LogPriority.Error, "In foreach (var s in groups){} ->", ex.Message);
             }
-
+                        
+            //var gr = new ObservableCollection<IGrouping<string, SystemObjectPropertyValueModel>>(SystemPropertyModels.GroupBy(x => x.GroupName));
+            SystemPropertyModels.CollectionChanged += UpdateSource;
             States = States.Normal;
-            return SourceObjects;
+            
+            return new ObservableCollection<Grouping<string, SystemObjectPropertyValueModel>>(SystemPropertyModels.GroupBy(x => x.GroupName).Select(g => new Grouping<string, SystemObjectPropertyValueModel>(g.Key, g))); ;
         }
-        
+
+        private void UpdateSource(object sender, NotifyCollectionChangedEventArgs e)
+        {            
+            var item = (e.NewItems[0] as SystemObjectPropertyValueModel);
+            var sourceCollection = Source.Result;
+
+            Source.Result[sourceCollection.IndexOf(sourceCollection.Where(x => x.Key == item?.GroupName).Single())].Values.Add(item);
+
+            CreateNewValue(item, item?.Value);
+        }
+
         /// <summary>
         /// Отправляет изменения на сервер
         /// </summary>
-        public async void SavePropertiesValuesAsync()
+        public async Task SavePropertiesValuesAsync()
         {
-            IsEnabled = false;            
+            IsEnabled = false;
             
-            using (UserDialogs.Instance.Loading("Сохранение изменений...", null, null, true, MaskType.Black))
+            foreach (var n in NewValues.AsParallel())
             {
-                foreach (var n in NewValues)
+                if (await Api.SendDataToServerAsync("System/AddSystemObjectPropertyValue", n) != HttpStatusCode.OK)
                 {
-                    if (await Api.SendDataToServerAsync("System/AddSystemObjectPropertyValue", n) != HttpStatusCode.OK)
-                    {
-                        UserDialogs.Instance.Alert("Не удалось сохранить", null, "Ок");
-                        return;
-                    }
+                    UserDialogs.Instance.Alert("Не удалось сохранить", null, "Ок");
+                    return;
                 }
-                IsVisibleSaveButton = false;
-                IsEnabled = true;
-                NewValues.Clear();
-
-                await Navigation.PopAsync();
-                //Source = new NotifyTaskCompletion<DataSource>(UpdateSystemPropertyModels());
             }
+
+            IsEnabled = true;
+            NewValues.Clear();
         }
 
         public void CreateNewValue(SystemObjectPropertyValueModel property, object value)
@@ -346,38 +383,18 @@ namespace Vertical.ViewModels
                 Value = value,
                 ValueNum = property.ValueNum
             };
-           
-            if (NewValues.Any(x => x.PropertyID == item.PropertyID))
-            {
-                for (int i = NewValues.Count - 1; i >= 0; i--)
-                {
-                    if (string.IsNullOrEmpty(item.Value as string))
-                    {
-                        NewValues.Remove(NewValues[i]);
-                        break;
-                    }
-                    else
-                    {
-                        NewValues[i] = item;
-                        break;
-                    }
-                }
-            }
-            else if(!string.IsNullOrEmpty(item.Value as string))
-            {
-                NewValues.Add(item);
-            }
 
-            
-            if (NewValues.Count > 0)
-            {
-                IsVisibleSaveButton = true;
+            var prop = NewValues.FirstOrDefault(x => x.PropertyID == item?.PropertyID);
+            if (prop != null)
+            {                
+                NewValues[NewValues.IndexOf(prop)] = item;
+                IsChanged = true;
             }
             else
             {
-                IsVisibleSaveButton = false;
-            }
-            
+                NewValues.Add(item);
+                IsChanged = true;
+            }            
         }
 
         public async Task SaveDate(SystemObjectPropertyValueModel property)

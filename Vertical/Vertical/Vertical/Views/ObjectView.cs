@@ -94,11 +94,11 @@ namespace Vertical.Views
                 var stack2 = new StackLayout();
                 stateContainer.SetBinding(StateContainer.StateProperty, "States");
 
-                BindableLayout.SetItemsSource(stack1, (BindingContext as CheckPageViewModel)?.Source?.Result?.DisplayItems);
-                BindableLayout.SetItemTemplateSelector(stack1, templateSelector);
+                //BindableLayout.SetItemsSource(stack1, (BindingContext as CheckPageViewModel)?.Source?.Result?.DisplayItems);
+                //BindableLayout.SetItemTemplateSelector(stack1, templateSelector);
 
-                BindableLayout.SetItemsSource(stack2, (BindingContext as CheckPageViewModel)?.SourceObj?.Result?.DisplayItems);
-                BindableLayout.SetItemTemplateSelector(stack2, templateSelector);
+                //BindableLayout.SetItemsSource(stack2, (BindingContext as CheckPageViewModel)?.SourceObj?.Result?.DisplayItems);
+                //BindableLayout.SetItemTemplateSelector(stack2, templateSelector);
 
                 _mainGrid.Children.Add(stack1, 0, 0);
                 _mainGrid.Children.Add(stack2, 0, 1);
@@ -150,7 +150,7 @@ namespace Vertical.Views
             
             templateSelector = new ChecklistDataTemplateSelector
             {
-                GroupTemplate = new DataTemplate(() => CreateGroupDataTemplate()),
+                //GroupTemplate = new DataTemplate(() => CreateGroupDataTemplate()),
                 BoolTemplate = new DataTemplate(() => CreateBoolTemplate()),
                 DateTimeTemplate = new DataTemplate(() => CreateDateTimeTemplate()),
                 FloatTemplate = new DataTemplate(() => CreateFloatDataTemplate()),
@@ -180,7 +180,7 @@ namespace Vertical.Views
             }
             catch (Exception ex)
             {
-                Loger.WriteMessage(Android.Util.LogPriority.Error, ex.Message);
+                Loger.WriteMessageAsync(Android.Util.LogPriority.Error, ex.Message);
             }
 
             //Grid.SetColumn(label, 0);
@@ -239,7 +239,7 @@ namespace Vertical.Views
             }
             catch (Exception ex)
             {
-                Loger.WriteMessage(Android.Util.LogPriority.Error, ex.Message);
+                Loger.WriteMessageAsync(Android.Util.LogPriority.Error, ex.Message);
                 return default(Frame);
             }
 
@@ -277,7 +277,7 @@ namespace Vertical.Views
             }
             catch (Exception ex)
             {
-                Loger.WriteMessage(Android.Util.LogPriority.Error, ex.Message);
+                Loger.WriteMessageAsync(Android.Util.LogPriority.Error, ex.Message);
                 return default(SfTextInputLayout);
             }
         }
@@ -313,7 +313,7 @@ namespace Vertical.Views
             }
             catch (Exception ex)
             {
-                Loger.WriteMessage(Android.Util.LogPriority.Error, ex.Message);
+                Loger.WriteMessageAsync(Android.Util.LogPriority.Error, ex.Message);
                 return default(SfTextInputLayout);
             }
 
@@ -349,7 +349,7 @@ namespace Vertical.Views
             }
             catch (Exception ex)
             {
-                Loger.WriteMessage(Android.Util.LogPriority.Error, ex.Message);
+                Loger.WriteMessageAsync(Android.Util.LogPriority.Error, ex.Message);
                 return default(SfTextInputLayout);
             }
         }
@@ -443,7 +443,7 @@ namespace Vertical.Views
             }
             catch (Exception ex)
             {
-                Loger.WriteMessage(Android.Util.LogPriority.Error, ex.Message);
+                Loger.WriteMessageAsync(Android.Util.LogPriority.Error, ex.Message);
                 return default(Frame);
             }
         }
@@ -478,7 +478,7 @@ namespace Vertical.Views
             }
             catch (Exception ex)
             {
-                Loger.WriteMessage(Android.Util.LogPriority.Error, ex.Message);
+                Loger.WriteMessageAsync(Android.Util.LogPriority.Error, ex.Message);
                 return default(SfTextInputLayout);
             }
         }
@@ -511,7 +511,7 @@ namespace Vertical.Views
             }
             catch (Exception ex)
             {
-                Loger.WriteMessage(Android.Util.LogPriority.Error, ex.Message);
+                Loger.WriteMessageAsync(Android.Util.LogPriority.Error, ex.Message);
                 return default(SfTextInputLayout);
             }
 
@@ -531,7 +531,7 @@ namespace Vertical.Views
             }
             catch (Exception ex)
             {
-                Loger.WriteMessage(Android.Util.LogPriority.Error, ex.Message);
+                Loger.WriteMessageAsync(Android.Util.LogPriority.Error, ex.Message);
                 return default(Label);
             }
         }
@@ -566,7 +566,7 @@ namespace Vertical.Views
             }
             catch (Exception ex)
             {
-                Loger.WriteMessage(Android.Util.LogPriority.Error, ex.Message);
+                Loger.WriteMessageAsync(Android.Util.LogPriority.Error, ex.Message);
                 return default(Frame);
             }
 
@@ -592,7 +592,7 @@ namespace Vertical.Views
             }
             catch (Exception ex)
             {
-                Loger.WriteMessage(Android.Util.LogPriority.Error, ex.Message);
+                Loger.WriteMessageAsync(Android.Util.LogPriority.Error, ex.Message);
                 return default(Frame);
             }
 
@@ -643,7 +643,7 @@ namespace Vertical.Views
             }
             catch (Exception ex)
             {
-                Loger.WriteMessage(Android.Util.LogPriority.Error, ex.Message);
+                Loger.WriteMessageAsync(Android.Util.LogPriority.Error, ex.Message);
                 return default(Frame);
             }
 

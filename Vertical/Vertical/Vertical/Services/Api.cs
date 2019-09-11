@@ -38,19 +38,19 @@ namespace Vertical.Services
 
                 if (restResponse.IsSuccessful)
                 {
-                    Loger.WriteMessage(LogPriority.Info, $"В запросе {client?.BaseUrl}: Данные отправлены");
+                    Loger.WriteMessageAsync(LogPriority.Info, $"В запросе {client?.BaseUrl}: Данные отправлены");
                     return res;
                 }
                 else
                 {
-                    Loger.WriteMessage(LogPriority.Info, $"В запросе {client?.BaseUrl}: Данные не отправлены -> {restResponse.Content}");
+                    Loger.WriteMessageAsync(LogPriority.Info, $"В запросе {client?.BaseUrl}: Данные не отправлены -> {restResponse.Content}");
                     return default(string);
                 }
 
             }
             catch (Exception ex)
             {
-                Loger.WriteMessage(LogPriority.Error, $"В запросе {client?.BaseUrl} Ошибка при отправке данных на сервер", ex.Message);
+                Loger.WriteMessageAsync(LogPriority.Error, $"В запросе {client?.BaseUrl} Ошибка при отправке данных на сервер", ex.Message);
                 return default(string);
             }
         }
@@ -77,19 +77,19 @@ namespace Vertical.Services
                 
                 if (restResponse.IsSuccessful)
                 {
-                    Loger.WriteMessage(LogPriority.Info, $"В запросе {client?.BaseUrl}: Данные отправлены");
+                    Loger.WriteMessageAsync(LogPriority.Info, $"В запросе {client?.BaseUrl}: Данные отправлены");
                     return true;
                 }
                 else
                 {
-                    Loger.WriteMessage(LogPriority.Info, $"В запросе {client?.BaseUrl}: Данные не отправлены -> {restResponse.Content}");
+                    Loger.WriteMessageAsync(LogPriority.Info, $"В запросе {client?.BaseUrl}: Данные не отправлены -> {restResponse.Content}");
                     return false;
                 }
 
             }
             catch (Exception ex)
             {
-                Loger.WriteMessage(LogPriority.Error, $"В запросе {client?.BaseUrl} Ошибка при отправке данных на сервер", ex.Message);
+                Loger.WriteMessageAsync(LogPriority.Error, $"В запросе {client?.BaseUrl} Ошибка при отправке данных на сервер", ex.Message);
                 return false;
             }
         }
@@ -113,12 +113,12 @@ namespace Vertical.Services
                 request.AddParameter("application/json", jsonModel, ParameterType.RequestBody);
 
                 var restResponse = await client.ExecuteTaskAsync(request);
-                Loger.WriteMessage(LogPriority.Info, $"Запрос {client?.BaseUrl}: {restResponse.StatusCode}");
+                Loger.WriteMessageAsync(LogPriority.Info, $"Запрос {client?.BaseUrl}: {restResponse.StatusCode}");
                 return restResponse.StatusCode;
             }
             catch (Exception ex)
             {
-                Loger.WriteMessage(LogPriority.Error, $"В запросе {client?.BaseUrl} Ошибка при отправке данных на сервер", ex.Message);
+                Loger.WriteMessageAsync(LogPriority.Error, $"В запросе {client?.BaseUrl} Ошибка при отправке данных на сервер", ex.Message);
                 return default(HttpStatusCode);
             }
         }
@@ -145,19 +145,19 @@ namespace Vertical.Services
                 var restResponse = client.Execute(request);
                 if (restResponse.IsSuccessful)
                 {
-                    Loger.WriteMessage(LogPriority.Info, $"{client?.BaseUrl} данные получены");
+                    Loger.WriteMessageAsync(LogPriority.Info, $"{client?.BaseUrl} данные получены");
                     return JsonConvert.DeserializeObject<IList<T>>(restResponse.Content);
                 }
                 else
                 {
-                    Loger.WriteMessage(LogPriority.Info, $"{client?.BaseUrl} данные не получены: {restResponse.Content}");
+                    Loger.WriteMessageAsync(LogPriority.Info, $"{client?.BaseUrl} данные не получены: {restResponse.Content}");
                     return default(IList<T>);
                 }
                 
             }
             catch (Exception ex)
             {
-                Loger.WriteMessage(LogPriority.Error, $"В запросе {client?.BaseUrl} Ошибка при получении данных с сервера", ex.Message);
+                Loger.WriteMessageAsync(LogPriority.Error, $"В запросе {client?.BaseUrl} Ошибка при получении данных с сервера", ex.Message);
                 return default(T[]);
             }                    
         }
@@ -186,19 +186,19 @@ namespace Vertical.Services
 
                 if (restResponse.IsSuccessful)
                 {                    
-                    Loger.WriteMessage(LogPriority.Info, $"{client?.BaseUrl} данные получены");
+                    Loger.WriteMessageAsync(LogPriority.Info, $"{client?.BaseUrl} данные получены");
                     return JsonConvert.DeserializeObject<IList<T>>(restResponse.Content);
                 }
                 else
                 {
-                    Loger.WriteMessage(LogPriority.Info, $"{client?.BaseUrl} данные не получены: {restResponse.Content}");
+                    Loger.WriteMessageAsync(LogPriority.Info, $"{client?.BaseUrl} данные не получены: {restResponse.Content}");
                     return default(IList<T>);
                 }
 
             }
             catch (Exception ex)
             {
-                Loger.WriteMessage(LogPriority.Error, $"В запросе {client?.BaseUrl} Ошибка при получении данных с червера", ex.Message);
+                Loger.WriteMessageAsync(LogPriority.Error, $"В запросе {client?.BaseUrl} Ошибка при получении данных с червера", ex.Message);
                 return default(IList<T>);
             }
         }
@@ -225,12 +225,12 @@ namespace Vertical.Services
                     AccessToken = JsonConvert.DeserializeObject<AccessToken>(restResponse.Content).Access_token;                    
                 }
 
-                Loger.WriteMessage(LogPriority.Info, $"Статус авторизации: {restResponse.StatusCode}");
+                Loger.WriteMessageAsync(LogPriority.Info, $"Статус авторизации: {restResponse.StatusCode}");
                 return restResponse.StatusCode;
             }
             catch (Exception ex)
             {
-                Loger.WriteMessage(LogPriority.Error, "Ошибка при получении токена", ex.Message);
+                Loger.WriteMessageAsync(LogPriority.Error, "Ошибка при получении токена", ex.Message);
                 return default(HttpStatusCode);
             }
             
@@ -271,13 +271,13 @@ namespace Vertical.Services
                 request.AddHeader("authorization", $"Bearer {AccessToken}");
 
                 var restResponse = client.Execute(request).StatusCode;
-                Loger.WriteMessage(LogPriority.Info, $"Запрос IsOnline -> {restResponse}");
+                Loger.WriteMessageAsync(LogPriority.Info, $"Запрос IsOnline -> {restResponse}");
                 return restResponse;
                 
             }
             catch (Exception ex)
             {
-                Loger.WriteMessage(LogPriority.Error, "Ошибка при проверке статуса сервера", ex.Message);
+                Loger.WriteMessageAsync(LogPriority.Error, "Ошибка при проверке статуса сервера", ex.Message);
                 return default(HttpStatusCode);
             }
         }

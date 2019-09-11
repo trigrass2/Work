@@ -7,32 +7,30 @@
              xmlns:views="clr-namespace:Vertical.Views"
              xmlns:converters="clr-namespace:Vertical.Views.Converters"
              xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
-             xmlns:behaviors="clr-namespace:Vertical.Views.Behaviors"
              x:Class="Vertical.Views.CheckListView"
              BackgroundColor="White"
              x:Name="thisPage">
     <ContentView.Resources>        
         <ResourceDictionary>
-            <DataTemplate x:Key="groupTemplate">
+            <!--<DataTemplate x:Key="groupTemplate">
                 <Label x:Name="groupNamelabel" 
                        IsVisible="{Binding Key, Converter={converters:GroupNameVisibleConverter}}"
                        Text="{Binding Key}" FontSize="Subtitle" FontAttributes="Bold" TextColor="Black" />
-            </DataTemplate>
+            </DataTemplate>-->
             <DataTemplate x:Key="boolTemplate">
                 <Grid Padding="0">
                     <Grid BackgroundColor="{StaticResource BackgroundObjectColorRGBA}" Opacity="0.1"/>
                     <StackLayout Spacing="0">
                         <Label Text="{Binding Name}" TextColor="Black" FontSize="Caption" Margin="5" BackgroundColor="Transparent"/>
-                        <input:CheckBox Margin="5,3" BoxSizeRequest="40"
-                                            CheckChangedCommand="{Binding Source={x:Reference thisPage}, Path = BindingContext.IsCheckedCommand}" 
-                                            CommandParameter="{Binding }"
-                                            Color="{StaticResource GreenColor}" BorderColor="{StaticResource LightGreyColor}"
-                                            Type="Material"
-                                            IsChecked="{Binding Value}" 
-                                            IsEnabled="{Binding Locked}"
-                                            BackgroundColor="Transparent"
-                                            BoxBackgroundColor="White"
-                                        />
+                        <input:CheckBox 
+                            Margin="5,3" BoxSizeRequest="40"
+                            CheckChangedCommand="{Binding Source={x:Reference thisPage}, Path = BindingContext.IsCheckedCommand}" 
+                            CommandParameter="{Binding }"
+                            Color="{StaticResource GreenColor}" BorderColor="{StaticResource LightGreyColor}"
+                            Type="Material"
+                            IsChecked="{Binding Value}" 
+                            IsEnabled="{Binding Locked}"
+                            BoxBackgroundColor="White"/>
                     </StackLayout>
                 </Grid>
                 
@@ -66,10 +64,8 @@
                         IsEnabled="{Binding Locked}"
                         ContainerBackgroundColor="White">
                         <Entry Text="{Binding Value, Mode=TwoWay}"
-                               FontSize="Caption" BindingContext="{Binding}" TextChanged="Entry_TextChanged_float">
-                            <!--<Entry.Behaviors>
-                                <behaviors:ChangeProppertyBehavior/>
-                            </Entry.Behaviors>-->
+                               FontSize="Caption" BindingContext="{Binding}" TextChanged="Entry_TextChanged_float"
+                               Keyboard="Numeric">
                         </Entry>
                     </inputLayout:SfTextInputLayout>
                 </Grid>
@@ -84,12 +80,27 @@
                     IsEnabled="{Binding Locked}"
                         ContainerBackgroundColor="White">
                         <Entry Text="{Binding Value}" 
-                           FontSize="Caption" BindingContext="{Binding}" Completed="Entry_Completed_int"/>
+                               FontSize="Caption" BindingContext="{Binding}" TextChanged="Entry_TextChanged_int"
+                               Keyboard="Numeric"/>
                     </inputLayout:SfTextInputLayout>
                 </Grid>                                
             </DataTemplate>
-            <DataTemplate x:Key="arrayTemplate">
+            <DataTemplate x:Key="stringTemplate">
                 <Grid Padding="0">
+                    <Grid BackgroundColor="{StaticResource BackgroundObjectColorRGBA}" Opacity="0.1"/>
+                    <inputLayout:SfTextInputLayout
+                        Style="{x:StaticResource SfTextInputLayoutStyle}"
+                        HelperText="{Binding Name}"
+                        Margin="5,0,5,10"                    
+                        IsEnabled="{Binding Locked}"
+                        ContainerBackgroundColor="White">
+                        <Entry Text="{Binding Value}"
+                               FontSize="Caption" BindingContext="{Binding}" TextChanged="Entry_TextChanged_string"/>
+                    </inputLayout:SfTextInputLayout>
+                </Grid>
+            </DataTemplate>
+            <DataTemplate x:Key="arrayTemplate">
+                <Grid x:Name="arrayGrid" Padding="0">
                     <Grid BackgroundColor="{StaticResource BackgroundObjectColorRGBA}" Opacity="0.1"/>
                     <Grid x:Name="Item" Margin="5" RowSpacing="0" >
                         <Grid.RowDefinitions>
@@ -121,25 +132,11 @@
                                 Padding="0"
                                 IsEnabled="{Binding Locked}"
                                 IsVisible="{Binding Locked}"/>
-                        <views:CheckListView ObjectGUID="{Binding}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Transparent"/>
+                        <views:CheckListView x:Name="nestedObject" ObjectGUID="{Binding}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Transparent"/>
                     </Grid>
                 </Grid>
                 
-            </DataTemplate>
-            <DataTemplate x:Key="stringTemplate">
-                <Grid Padding="0">
-                    <Grid BackgroundColor="{StaticResource BackgroundObjectColorRGBA}" Opacity="0.1"/>
-                    <inputLayout:SfTextInputLayout
-                        Style="{x:StaticResource SfTextInputLayoutStyle}"
-                        HelperText="{Binding Name}"
-                        Margin="5,0,5,10"                    
-                        IsEnabled="{Binding Locked}"
-                        ContainerBackgroundColor="White">
-                        <Entry Text="{Binding Value}"
-                               FontSize="Caption" BindingContext="{Binding}" Completed="Entry_Completed_string"/>
-                    </inputLayout:SfTextInputLayout>
-                </Grid>                                
-            </DataTemplate>
+            </DataTemplate>            
             <DataTemplate x:Key="humanTemplate">
                 <Grid Padding="0">
                     <Grid BackgroundColor="{StaticResource BackgroundObjectColorRGBA}" Opacity="0.1"/>
@@ -220,8 +217,7 @@
                 <Label Text="{Binding Name}"/>
             </DataTemplate>
         </ResourceDictionary>
-        <local:ChecklistDataTemplateSelector x:Key="checklistDataTemplateSelector"
-                                             GroupTemplate="{StaticResource groupTemplate}"
+        <local:ChecklistDataTemplateSelector x:Key="checklistDataTemplateSelector"                                             
                                              BoolTemplate="{StaticResource boolTemplate}"
                                              DateTimeTemplate="{StaticResource dateTimeTemplate}"
                                              FloatTemplate="{StaticResource floatTemplate}"
@@ -233,14 +229,28 @@
                                              NotArrayTemplate ="{StaticResource notArrayTemplate}"
                                              GibridObjectTemplate="{StaticResource gibridObjectTemplate}"
                                              />
-        
     </ContentView.Resources>
     <stateContainerDemo:StateContainer State ="{Binding States}">
         <stateContainerDemo:StateCondition Is="Normal">
             <StackLayout                
                 Padding="5"
-                BindableLayout.ItemsSource="{Binding Source.Result.DisplayItems}"
-                BindableLayout.ItemTemplateSelector="{StaticResource checklistDataTemplateSelector}">
+                BindableLayout.ItemsSource="{Binding Source.Result}">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Label Grid.Row="0"
+                                   IsVisible="{Binding Key, Converter={converters:GroupNameVisibleConverter}}"
+                                   Text="{Binding Key}" FontSize="Subtitle" FontAttributes="Bold" TextColor="Black"/>
+                            <StackLayout Grid.Row="1"
+                                         BindableLayout.ItemsSource="{Binding}"
+                                         BindableLayout.ItemTemplateSelector="{StaticResource checklistDataTemplateSelector}"/>
+                        </Grid>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
             </StackLayout>
         </stateContainerDemo:StateCondition>
 

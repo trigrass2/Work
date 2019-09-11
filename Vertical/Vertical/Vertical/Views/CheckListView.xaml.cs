@@ -17,6 +17,7 @@ namespace Vertical.Views
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
+        public bool IsChange { get; set; } = false;
         public CheckPageViewModel ViewModel { get; set; }
 
         public static BindableProperty ObjectGUIDProperty =
@@ -50,38 +51,90 @@ namespace Vertical.Views
 		{
 			InitializeComponent ();
             ViewModel = viewModel;
-            BindingContext = ViewModel;
+            BindingContext = ViewModel;            
         }
-
 
         #region Events
 
-        //private async void Entry_TextChanged_int(object sender, TextChangedEventArgs e)
-        //{
-        //     await SaveChange<int>((sender as Entry).BindingContext as SystemObjectPropertyValueModel, e.OldTextValue, e.NewTextValue);
-        //}
+        private async void Entry_TextChanged_int(object sender, TextChangedEventArgs e)
+        {
+            try
+            {
+                int? oldV;
+                int? newV;
 
-        //private async void Entry_TextChanged_string(object sender, TextChangedEventArgs e)
-        //{
-        //     await SaveChange<string>((sender as Entry).BindingContext as SystemObjectPropertyValueModel, e.OldTextValue, e.NewTextValue);
-        //}
+                if (int.TryParse(e.OldTextValue, out int o))
+                {
+                    oldV = o;
+                }
+                else oldV = null;
+
+                if (int.TryParse(e.NewTextValue, out int n))
+                {
+                    newV = n;
+                }
+                else newV = null;
+
+                await SaveChange<int?>((sender as Entry).BindingContext as SystemObjectPropertyValueModel, oldV, newV);
+            }
+            catch (Exception ex)
+            {
+                await Loger.WriteMessageAsync(Android.Util.LogPriority.Error, errorMessage: ex.Message);
+            }
+            
+        }
+
+        private async void Entry_TextChanged_string(object sender, TextChangedEventArgs e)
+        {
+            try
+            {
+                await SaveChange<string>((sender as Entry).BindingContext as SystemObjectPropertyValueModel, e.OldTextValue, e.NewTextValue);
+            }
+            catch (Exception ex)
+            {
+                await Loger.WriteMessageAsync(Android.Util.LogPriority.Error, errorMessage: ex.Message);
+            }
+            
+        }
 
         private async void Entry_TextChanged_float(object sender, TextChangedEventArgs e)
         {
-            var t = e.NewTextValue.GetType();
-            await SaveChange<double>((sender as Entry).BindingContext as SystemObjectPropertyValueModel, e.OldTextValue, e.NewTextValue);
-        }
+            try
+            {
+                double? oldV;
+                double? newV;
 
-        //
-
-
-        private async Task SaveChange<T>(SystemObjectPropertyValueModel model, string oldValue, string newValue)
-        {
-            if (oldValue != null && !oldValue.Equals(newValue))
-            {                
-                if (newValue is T v)
+                if (double.TryParse(e.OldTextValue, out double o))
                 {
-                    ViewModel.CreateNewValue(model, v);
+                    oldV = o;
+                }
+                else oldV = null;
+
+                if (double.TryParse(e.NewTextValue, out double n))
+                {
+                    newV = n;
+                }
+                else newV = null;
+
+                await SaveChange<double?>((sender as Entry).BindingContext as SystemObjectPropertyValueModel, oldV, newV);
+            }
+            catch (Exception ex)
+            {
+                await Loger.WriteMessageAsync(Android.Util.LogPriority.Error, errorMessage: ex.Message);
+            }
+            
+        }
+                
+        private async Task SaveChange<T>(SystemObjectPropertyValueModel model, object oldValue, object newValue)
+        {
+            
+            if (oldValue != newValue)
+            {
+                
+                if (string.IsNullOrEmpty(newValue?.ToString()) || newValue is T)
+                {
+                    ViewModel.CreateNewValue(model, newValue);
+                    IsChange = true;
                 }
                 else
                 {
@@ -89,51 +142,18 @@ namespace Vertical.Views
                     return;
                 }
             }
-
-
-
         }
 
         bool firstTime = false;
         private async void DatePicker_DateSelected(object sender, DateChangedEventArgs e)
         {
-            if (firstTime)
-                if (e.OldDate != e.NewDate)
+            //if (firstTime)
+                if (e?.OldDate != e?.NewDate)
                 {
                     await ViewModel?.SaveDate((sender as DatePicker).BindingContext as SystemObjectPropertyValueModel);
+                    IsChange = true;
                 }
-            firstTime = true;
-        }
-
-        private async void Entry_Completed_float(object sender, EventArgs e)
-        {
-            var model = (sender as Entry).BindingContext as SystemObjectPropertyValueModel;
-            if (double.TryParse(model.Value as string, out double d) == false && !(model.Value is null) && model.Value as string != "")
-            {
-                await UserDialogs.Instance.AlertAsync($"Не верный формат данных! Необходимо {model.TypeName}", "Ошибка", "Ок");
-                return;
-            }
-
-            ViewModel.CreateNewValue(model, model.Value);
-        }
-
-        private async void Entry_Completed_int(object sender, EventArgs e)
-        {
-            var model = (sender as Entry).BindingContext as SystemObjectPropertyValueModel;
-            if (int.TryParse(model.Value as string, out int i) == false && !(model.Value is null) && model.Value as string != "")
-            {
-                await UserDialogs.Instance.AlertAsync($"Не верный формат данных! Необходимо {model.TypeName}", "Ошибка", "Ок");
-                return;
-            }
-
-            ViewModel.CreateNewValue(model, model.Value);
-
-        }
-
-        private void Entry_Completed_string(object sender, EventArgs e)
-        {
-            var model = (sender as Entry).BindingContext as SystemObjectPropertyValueModel;
-            ViewModel.CreateNewValue(model, model.Value);
+            //firstTime = true;
         }
 
         protected override void OnPropertyChanged([CallerMemberName] string propertyName = null)
@@ -147,20 +167,9 @@ namespace Vertical.Views
                     ViewModel = new CheckPageViewModel(item) { Navigation = this.Navigation };
                     BindingContext = ViewModel;
                 }
-                
             }
         }
+
         #endregion
-
-        //private void Entry_Unfocused_string(object sender, FocusEventArgs e)
-        //{
-        //    ViewModel.CreateNewValue((sender as Entry).BindingContext as SystemObjectPropertyValueModel, _entryValueString);
-        //}
-
-        //private void AdvancedEntry_Completed(object sender, EventArgs e)
-        //{
-        //    var model = (sender as AdvancedEntry).BindingContext as SystemObjectPropertyValueModel;
-        //    ViewModel.CreateNewValue(model, model.Value);
-        //}
     }
 }

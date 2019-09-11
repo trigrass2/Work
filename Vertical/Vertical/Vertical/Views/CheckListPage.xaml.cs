@@ -2,6 +2,13 @@
 using Xamarin.Forms.Xaml;
 using Vertical.Models;
 using Vertical.ViewModels;
+using System.Linq;
+using System.Threading.Tasks;
+using Xamarin.Forms.Essentials.Controls;
+using System.Collections.Generic;
+using System;
+using Vertical.Services;
+using Acr.UserDialogs;
 
 namespace Vertical.Views
 {
@@ -70,32 +77,91 @@ namespace Vertical.Views
             Grid.SetColumnSpan(view, 2);
 
             savePropertiesButton.BindingContext = ViewModel;
-            //savePropertiesButton.Command = ViewModel.SavePropertiesValuesCommand;
-            //savePropertiesButton.SetBinding(Button.CommandProperty, new Binding("SavePropertiesValuesCommand", source: BindingContext));
+                        
             mainGrid.Children.Add(savePropertiesButton, 0, 3);
             Grid.SetColumnSpan(savePropertiesButton, 2);
 
             #endregion region
 
             Content = new ScrollView() { Content = mainGrid };
+
+            savePropertiesButton.Clicked += async (sender, e) =>
+            {
+                using (UserDialogs.Instance.Loading("Сохранение изменений...", null, null, true, MaskType.Black))
+                {
+                    await SaveChanges((CheckListView)mainGrid.Children.FirstOrDefault(x => x.GetType() == typeof(CheckListView)));
+                    await Navigation.PopAsync();
+                }
+                
+            };
         }
         
-        private async void ContextMenuButton_Clicked(object sender, System.EventArgs e)
-        {
+        private async void ContextMenuButton_Clicked(object sender, EventArgs e)
+        {            
             await DisplayActionSheet(null, null, null,"Копировать","Удалить");
         }
+        private async Task SaveChanges(CheckListView viewObj)
+        {
+            try
+            {
+                if (viewObj?.ViewModel == null) return;
+                await (viewObj.BindingContext as CheckPageViewModel).SavePropertiesValuesAsync();
+                var vs = ((viewObj.Children.FirstOrDefault(x => x.GetType() == typeof(StateContainer)) as StateContainer).Conditions[0].Content as StackLayout).Children;
 
-        //public Grid backGroundGrid = new Grid
-        //{            
-        //    RowDefinitions = new RowDefinitionCollection
-        //    {
-        //        new RowDefinition(),
-        //        new RowDefinition(){ Height = GridLength.Auto }
-        //    },
-        //    RowSpacing = 0,
-        //    BackgroundColor = Color.FromRgba(0,0,0,0)
-        //};
+                if (vs == null)
+                {
+                    return;
+                }
+                foreach (var view in vs.AsParallel())
+                {
+                    await GetView(view);
+                }
+            }
+            catch (Exception ex)
+            {
+                await Loger.WriteMessageAsync(Android.Util.LogPriority.Error, errorMessage: ex.Message);
+            }
 
+        }
+
+        private async Task GetView(View v)
+        {
+            try
+            {
+                switch (v.GetType().Name)
+                {
+                    case "StackLayout":
+                        {
+                            foreach (var s in (v as StackLayout).Children.AsParallel())
+                            {
+                                await GetView(s);
+                            }
+                        }; break;
+
+                    case "Grid":
+                        {
+                            foreach (var s in (v as Grid).Children.AsParallel())
+                            {
+                                await GetView(s);
+                            }
+                        }; break;
+
+                    case "CheckListView":
+                        {
+                            await SaveChanges(v as CheckListView);
+                        }; break;
+
+                    default: return;
+                }
+            }
+            catch (Exception ex)
+            {
+                await Loger.WriteMessageAsync(Android.Util.LogPriority.Error, errorMessage: ex.Message);
+            }
+            
+            
+        }
+        
         public Grid mainGrid = new Grid
         {
             RowDefinitions = new RowDefinitionCollection

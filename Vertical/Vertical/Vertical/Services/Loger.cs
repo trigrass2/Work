@@ -2,21 +2,23 @@
 using RestSharp;
 using System;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
+
 namespace Vertical.Services
 {
     public static class Loger
     {
-        public static void WriteMessage(LogPriority logPriority, string text, string errorMessage = default(string), [CallerMemberName] string invokeMetodName = "")
+        public async static Task WriteMessageAsync(LogPriority logPriority, string text = default(string), string errorMessage = default(string), [CallerMemberName] string invokeMetodName = "")
         {
             if(logPriority == LogPriority.Error)
             {
-                SendError(text, errorMessage, invokeMetodName);
+                await SendError(text, errorMessage, invokeMetodName);
             }           
             
             Log.WriteLine(logPriority, $"In {invokeMetodName}", $"{errorMessage}");
         }
 
-        private static void SendError(string textMessage, string error, string invokeMethod)
+        private async static Task SendError(string textMessage, string error, string invokeMethod)
         {
             try
             {
@@ -27,11 +29,11 @@ namespace Vertical.Services
                 };
                 RestRequest restRequest = new RestRequest(Method.POST);
 
-                var responce = client.Execute(restRequest);
+                var responce = await client.ExecuteTaskAsync(restRequest);
             }
             catch (Exception ex)
             {                        
-                WriteMessage(LogPriority.Error, "Error in send", ex.Message);
+                WriteMessageAsync(LogPriority.Error, "Error in send", ex.Message);
             }
 
         }

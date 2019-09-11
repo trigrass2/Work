@@ -143,26 +143,7 @@ namespace Vertical.ViewModels
                 if (types.FirstOrDefault(x => x.ID == _selectedObject.TypeID).PrototypeID > 1)
                 {
                     if (_selectedObject?.Template == true)
-                    {
-                        //switch (TypePage)
-                        //{
-                        //    case "Шаблон":
-                        //        {
-                        //            PromptResult pResult = await UserDialogs.Instance.PromptAsync(new PromptConfig
-                        //            {
-                        //                InputType = InputType.Name,
-                        //                Text = $"{_selectedObject.Name} {DateTime.Now}",
-                        //                OkText = "Создать",
-                        //                Title = "Создание объекта"
-                        //            });
-                        //            if (pResult.Ok)
-                        //            {
-                        //                string guidNewObject = await Api.AddSystemObjectAsync("System/CloneSystemObject", new { ObjectGUID = _selectedObject?.GUID, Name = pResult?.Text, ParentObject = _selectedObject?.ParentGUID, TypeID = _selectedObject?.TypeID });
-                        //                var obj = await Api.GetDataFromServerAsync<SystemObjectModel>("System/GetSystemObjects", new { ObjectGUID = guidNewObject });
-                        //                await Navigation.PushAsync(await Task.Run(() => new CheckListPage(obj.FirstOrDefault())));
-                        //            }
-                        //        }break;
-                        //}
+                    {                        
                         string action = await App.Current.MainPage.DisplayActionSheet("Выберите действие", "Отмена", null, "Создать", "Архив");
                         switch (action)
                         {
@@ -186,7 +167,7 @@ namespace Vertical.ViewModels
                                     }
                                     catch (Exception ex)
                                     {
-                                        Loger.WriteMessage(Android.Util.LogPriority.Error, "При создании объекта", ex.Message);                                        
+                                        Loger.WriteMessageAsync(Android.Util.LogPriority.Error, "При создании объекта", ex.Message);                                        
                                     }
                                     
                                 }
