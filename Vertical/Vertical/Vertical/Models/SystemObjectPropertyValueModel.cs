@@ -10,6 +10,34 @@ namespace Vertical.Models
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
+        public SystemObjectPropertyValueModel()
+        {
+
+        }
+
+        public SystemObjectPropertyValueModel(SystemObjectPropertyValueModel model)
+        {
+            ID = model.ID;
+            Num = model.Num;
+            Name = model?.Name;
+            Value = model?.Value;
+            ValueNum = model.ValueNum;
+            SystemObjectGUID = model?.SystemObjectGUID;
+            SystemObjectName = model?.SystemObjectName;
+            TypeID = model.TypeID;
+            TypeName = model?.TypeName;
+            Timestamp = model?.Timestamp;
+            UserGUID = model?.UserGUID;
+            UserName = model?.UserName;
+            Weight = model?.Weight;
+            GroupID = model?.GroupID;
+            GroupName = model?.GroupName;
+            SourceObjectParentGUID = model?.SourceObjectParentGUID;
+            SourceObjectTypeID = model?.SourceObjectTypeID;
+            Locked = !model?.Locked;
+            Array = model?.Array;
+        }
+
         /// <summary>
         /// ID Свойства объекта
         /// </summary>
@@ -58,7 +86,7 @@ namespace Vertical.Models
         /// <summary>
         /// Дата изменения
         /// </summary>
-        public DateTime Timestamp { get; set; }
+        public DateTime? Timestamp { get; set; }
 
         /// <summary>
         /// GUID Пользователя сделавшего изменение

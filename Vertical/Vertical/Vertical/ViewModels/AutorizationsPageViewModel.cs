@@ -62,15 +62,16 @@ namespace Vertical.ViewModels
 
             using(UserDialogs.Instance.Loading("Авторизация", null, null, true, MaskType.Black))
             {
-                await Task.Run(() => {
+                await Task.Run(async () =>
+                {
 
                     if (NetworkCheck.IsInternet())
                     {
-                        _statusAutorization = Api.GetToken(User.Login, User.Password);
+                        _statusAutorization = await Api.GetToken(User.Login, User.Password);
                     }
                     else
-                    {
-                        Application.Current.MainPage.DisplayAlert("Ошибка", "Отсутствует интернет-соединение", "Ок");
+                    {                        
+                        await UserDialogs.Instance.AlertAsync("Отсутствует интернет-соединение");
                         return;
                     }
                 });
@@ -81,7 +82,7 @@ namespace Vertical.ViewModels
                         {
                             Login = User?.Login;
                             Password = User?.Password;
-                            await Navigation.PushAsync(new ManualObjectsPage());//new MenuPage());
+                            await Navigation.PushAsync(new ManualObjectsPage()); 
                             States = States.Normal;
                             IsEnabled = true;
                         }
@@ -89,7 +90,7 @@ namespace Vertical.ViewModels
 
                     case HttpStatusCode.InternalServerError:
                         {
-                            await Application.Current.MainPage.DisplayAlert("Ошибка", "Сервер временно не доступен", "Ок");
+                            await UserDialogs.Instance.AlertAsync("Сервер временно не доступен");
                             States = States.Normal;
                             IsEnabled = true;
                         }
@@ -97,15 +98,18 @@ namespace Vertical.ViewModels
 
                     case HttpStatusCode.BadRequest:
                         {
-                            await Application.Current.MainPage.DisplayAlert("Ошибка", "Неверный логин или пароль", "Ок");
+                            await UserDialogs.Instance.AlertAsync("Неверный логин или пароль");
                             States = States.Normal;
                             IsEnabled = true;
                         }
                         break;
+
+                    case 0: IsEnabled = true; break;
+
                     default:
                         {
                             IsEnabled = true;
-                            await Application.Current.MainPage.DisplayAlert("!", "Ошибка входа", "Ок");
+                            await UserDialogs.Instance.AlertAsync("Ошибка входа");
                         }
                         break;
                 }

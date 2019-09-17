@@ -49,6 +49,7 @@ namespace Vertical.Models
             }
         }
         public Task<TResult> Task { get; private set; }
+
         public TResult Result
         {
             get

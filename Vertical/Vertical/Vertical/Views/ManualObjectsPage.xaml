@@ -132,32 +132,7 @@
                     ItemTemplate="{StaticResource imageObjectDataTemplateSelector }"
                     Header="{Binding Title}"
                     SeparatorVisibility="None">
-            </ListView>
-            <!--<RelativeLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                <ListView 
-                    x:Name="listTypesModels" ItemsSource="{Binding SystemObjectModels}"
-                    Margin="3,0,5,7" SelectedItem="{Binding SelectedObject, Mode=TwoWay}"
-                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=5}"
-                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-50}"
-                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
-                    CachingStrategy="RecycleElement" IsEnabled="{Binding IsEnabled}"
-                    ItemTemplate="{StaticResource imageObjectDataTemplateSelector }"
-                    Header="{Binding Title}"
-                    SeparatorVisibility="None">
-                </ListView>
-                <Button                    
-                    x:Name="addNewObjectButton"
-                    IsVisible="{Binding IsVisible}"
-                    Padding="0"
-                    Text="Архив" TextColor="{StaticResource DarkGreyColor}"
-                    FontSize="Caption"
-                    BackgroundColor="Transparent"                    
-                    Command="{Binding GoToAddNewObjectPageCommand}"
-                    HeightRequest="35" WidthRequest="50"
-                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-25}"
-                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-45}"
-                    IsEnabled="{Binding IsEnabled}"/>
-            </RelativeLayout>-->
+            </ListView>            
             
         </stateContainerDemo:StateCondition>
 

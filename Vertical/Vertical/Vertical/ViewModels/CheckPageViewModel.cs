@@ -25,7 +25,7 @@ namespace Vertical.ViewModels
         private ObservableCollection<SystemObjectPropertyValueModel> SystemPropertyModels { get; set; }
         public SystemObjectModel SystemObjectModel { get; set; }
         public List<AddSystemObjectPropertyValueModel> NewValues { get; set; }
-        public NotifyTaskCompletion<ObservableCollection<Grouping<string, SystemObjectPropertyValueModel>>> Source { get; set; }
+        public NotifyTaskCompletion<DataSource> Source { get; set; }
         public DataSource SourceObjects { get; set; }
 
         public DateTime MinDate { get; set; }
@@ -43,9 +43,9 @@ namespace Vertical.ViewModels
             MinDate = DateTime.Now.AddYears(-1);
             MaxDate = DateTime.Now.AddYears(1);
             SystemObjectModel = obj;
-
+                        
             NewValues = new List<AddSystemObjectPropertyValueModel>();
-            Source = new NotifyTaskCompletion<ObservableCollection<Grouping<string, SystemObjectPropertyValueModel>>>(UpdateSystemPropertyModels());
+            Source = new NotifyTaskCompletion<DataSource>(UpdateSystemPropertyModels());
         }
 
         private async void IsChecked(object obj)
@@ -65,50 +65,27 @@ namespace Vertical.ViewModels
 
         private async void EditObject(object param)
         {
-            var item = param as SystemObjectPropertyValueModel;
+            var item = new SystemObjectPropertyValueModel(param as SystemObjectPropertyValueModel);
             var items = await Api.GetDataFromServerAsync<SystemObjectModel>("System/GetSystemObjects", new { ParentGUID = item.SourceObjectParentGUID });
             var action = await App.Current.MainPage.DisplayActionSheet(null, null, null, items.Select(x => x.Name).ToArray());
             if(action != null)
             {
-                using (UserDialogs.Instance.Loading("Внесение изменений...", null, null, true, MaskType.Black))
-                {
-                    switch (await Api.SendDataToServerAsync("System/AddSystemObjectPropertyValue", 
-                        new
-                        {
-                            ObjectGUID = item.SystemObjectGUID,
-                            PropertyID = item.ID,
-                            PropertyNum = item.Num,
-                            Value = items.Where(x => x.Name == action).Select(q => q.GUID).FirstOrDefault(),
-                            ValueNum = item.ValueNum
-                        })
-                    )
-                    {
-                        case HttpStatusCode.Forbidden: await App.Current.MainPage.DisplayAlert(null, "Нет доступа.", "Oк");break;
-                        case HttpStatusCode.BadRequest: await App.Current.MainPage.DisplayAlert(null, "Не удалось редактировать", "Oк"); break;
-                            //default: Source = new NotifyTaskCompletion<ObservableCollection<IGrouping<string, SystemObjectPropertyValueModel>>>(UpdateSystemPropertyModels()); break;
-                    };
-                }
-                 
+                item.Value = items.Where(x => x.Name == action).Select(q => q.GUID).FirstOrDefault();
+                int index = SystemPropertyModels.Where(x => x.ID == item.ID).Select(x => SystemPropertyModels.IndexOf(x)).Single();
+                SystemPropertyModels[index].Value = item.Value;
+                CreateNewValue(item, item.Value);
             }
-            
         }
 
-        private async void DeleteObjectProperty(object commandParameter)
+        private void DeleteObjectProperty(object commandParameter)
         {
-            using(UserDialogs.Instance.Loading("Удаление...", null, null, true, MaskType.Black))
-            {
-                await Task.Run(() => {
-                    var property = commandParameter as SystemObjectPropertyValueModel;
-                    
-                    //Api.SendDataToServer("System/AddSystemObjectPropertyValue", new { ObjectGUID = property.SystemObjectGUID, PropertyID = property.ID, PropertyNum = property.Num, Value = default(string), ValueNum = property.ValueNum });
-                    //Source = new NotifyTaskCompletion<ObservableCollection<IGrouping<string, SystemObjectPropertyValueModel>>>(UpdateSystemPropertyModels());
-                });
-            }            
-            
+            var property = commandParameter as SystemObjectPropertyValueModel;
+            SystemPropertyModels.Remove(property);
         }
 
         private async Task CreateArrangement(SystemObjectPropertyValueModel property)
         {
+            var newProperty = new SystemObjectPropertyValueModel(property);
             var typeName = await Api.GetDataFromServerAsync<SystemObjectTypeModel>("System/GetSystemObjectTypes", new { ShowHidden = true });                
             
             string guidNewItem = await Api.AddSystemObjectAsync("System/AddSystemObject", 
@@ -119,13 +96,14 @@ namespace Vertical.ViewModels
             if (guidNewItem != default)
             {
                 int valueNum = 0;
-                if (property.Value != null)
+                if (newProperty.Value != null)
                 {
-                    var v = await Api.GetDataFromServerAsync<SystemObjectPropertyValueModel>("System/GetSystemObjectPropertiesValues", new { ObjectGUID = SystemObjectModel?.GUID });
-                    valueNum = v.Where(q => q?.ID == property?.ID).Max(x => x.ValueNum);
+                    //var v = await Api.GetDataFromServerAsync<SystemObjectPropertyValueModel>("System/GetSystemObjectPropertiesValues", new { ObjectGUID = SystemObjectModel?.GUID });
+                    valueNum = SystemPropertyModels.Where(q => q?.ID == newProperty?.ID).Max(x => x.ValueNum);
                 }
-                property.ValueNum = valueNum + 1;
-                SystemPropertyModels.Add(property);                
+                newProperty.ValueNum = valueNum + 1;
+                newProperty.Value = guidNewItem;
+                SystemPropertyModels.Add(newProperty);
             }
         }
 
@@ -300,57 +278,61 @@ namespace Vertical.ViewModels
         /// <summary>
         /// Обновляет источник данных
         /// </summary>
-        private async Task<ObservableCollection<Grouping<string, SystemObjectPropertyValueModel>>> UpdateSystemPropertyModels()
+        private async Task<DataSource> UpdateSystemPropertyModels()
         {
             States = States.Loading;
             SystemPropertyModels.Clear();
             var values = await Api.GetDataFromServerAsync<SystemObjectPropertyValueModel>("System/GetSystemObjectPropertiesValues", new { ObjectGUID = SystemObjectModel?.GUID });
-            
+
+            SourceObjects = new DataSource();
+            SourceObjects.GroupDescriptors.Add(new GroupDescriptor("GroupName"));
+
             try
-            {
-                //foreach(string groupName in values.OrderByDescending(q => q.TypeID).Select(x => x.GroupName).Distinct())
-                //{
-                //    DictionaryProperties.Add(
-                //        string.IsNullOrEmpty(groupName) ? "" : groupName,
-                //        new ObservableCollection<SystemObjectPropertyValueModel>(values.Where(g => g.GroupName == groupName).ToList())
-                //        );
-                //}
-
-                //foreach (int? groupId in values.Select(x => x.GroupID))
-                //{
-                //    await DeleteNullValues(values, groupId);
-                //}
-
-                foreach (var s in values.OrderByDescending(q => q.TypeID))
+            {                
+                foreach (var s in values.OrderByDescending(q => q.TypeID).OrderBy(f => f.GroupID))
                 {
-                    SystemPropertyModels.Add(s);
+                    SystemPropertyModels.Add(s);                    
                 }
 
                 foreach (int? groupId in values.Select(x => x.GroupID))
                 {
                     await DeleteNullValues(values, groupId);
                 }
+
             }
             catch (Exception ex)
             {
                await Loger.WriteMessageAsync(Android.Util.LogPriority.Error, "In foreach (var s in groups){} ->", ex.Message);
             }
-                        
-            //var gr = new ObservableCollection<IGrouping<string, SystemObjectPropertyValueModel>>(SystemPropertyModels.GroupBy(x => x.GroupName));
+ 
             SystemPropertyModels.CollectionChanged += UpdateSource;
             States = States.Normal;
+            SourceObjects.Source = SystemPropertyModels;
             
-            return new ObservableCollection<Grouping<string, SystemObjectPropertyValueModel>>(SystemPropertyModels.GroupBy(x => x.GroupName).Select(g => new Grouping<string, SystemObjectPropertyValueModel>(g.Key, g))); ;
+            return SourceObjects;            
         }
 
-        private void UpdateSource(object sender, NotifyCollectionChangedEventArgs e)
-        {            
-            var item = (e.NewItems[0] as SystemObjectPropertyValueModel);
-            var sourceCollection = Source.Result;
+        private async void UpdateSource(object sender, NotifyCollectionChangedEventArgs e)
+        {
+            try
+            {
+                SystemObjectPropertyValueModel item = new SystemObjectPropertyValueModel();
+                if (e.OldItems != null)
+                {
+                    item = e.OldItems[0] as SystemObjectPropertyValueModel;
+                    item.Value = null;
+                }
+                else
+                {
+                    item = e.NewItems[0] as SystemObjectPropertyValueModel;
+                }
 
-            Source.Result[sourceCollection.IndexOf(sourceCollection.Where(x => x.Key == item?.GroupName).Single())].Values.Add(item);
-
-            CreateNewValue(item, item?.Value);
+                CreateNewValue(item, item?.Value);
+            }
+            catch (Exception ex)
+            {
+                await Loger.WriteMessageAsync(Android.Util.LogPriority.Error, errorMessage: ex.Message);
+            }            
         }
 
         /// <summary>
@@ -387,13 +369,19 @@ namespace Vertical.ViewModels
             var prop = NewValues.FirstOrDefault(x => x.PropertyID == item?.PropertyID);
             if (prop != null)
             {                
-                NewValues[NewValues.IndexOf(prop)] = item;
-                IsChanged = true;
+                if(prop.ValueNum == item.ValueNum)
+                {
+                    NewValues[NewValues.IndexOf(prop)] = item;
+                }
+                else
+                {
+                    NewValues.Add(item);
+                }
+                
             }
             else
             {
                 NewValues.Add(item);
-                IsChanged = true;
             }            
         }
 

@@ -17,34 +17,22 @@
 
   <ItemGroup>
     <None Remove="PikGroupLogo.svg" />
-    <None Remove="SvgPictures\agenda.svg" />
-    <None Remove="SvgPictures\checklist.svg" />
     <None Remove="SvgPictures\google_logo.svg" />
     <None Remove="SvgPictures\ic_close.svg" />
     <None Remove="SvgPictures\ic_contextMenu.svg" />
-    <None Remove="SvgPictures\next.svg" />
-    <None Remove="SvgPictures\round-add.svg" />
-    <None Remove="SvgPictures\save.svg" />
-    <None Remove="SvgPictures\settings.svg" />
-    <None Remove="SvgPictures\user.svg" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="SvgPictures\agenda.svg" />
-    <EmbeddedResource Include="SvgPictures\checklist.svg" />
     <EmbeddedResource Include="SvgPictures\ic_close.svg" />
     <EmbeddedResource Include="SvgPictures\ic_contextMenu.svg" />
-    <EmbeddedResource Include="SvgPictures\next.svg" />
     <EmbeddedResource Include="SvgPictures\PikGroupLogo.svg" />
-    <EmbeddedResource Include="SvgPictures\round-add.svg" />
-    <EmbeddedResource Include="SvgPictures\save.svg" />
-    <EmbeddedResource Include="SvgPictures\settings.svg" />
-    <EmbeddedResource Include="SvgPictures\user.svg" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Acr.UserDialogs" Version="7.0.4" />
-    <PackageReference Include="Behaviors.Forms" Version="1.4.0" />
+    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AppCenter.Distribute" Version="2.1.1" />
     <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
     <PackageReference Include="NGraphics" Version="0.5.0" />
@@ -53,8 +41,6 @@
     <PackageReference Include="Syncfusion.Licensing" Version="17.2.0.47" />
     <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="17.2.0.47" />
     <PackageReference Include="Syncfusion.Xamarin.DataSource" Version="17.2.0.47" />
-    <PackageReference Include="Syncfusion.Xamarin.SfAutoComplete" Version="17.2.0.47" />
-    <PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="17.2.0.47" />
     <PackageReference Include="Xam.Plugin.Connectivity" Version="3.2.0" />
     <PackageReference Include="Xam.Plugins.Settings" Version="3.1.1" />
     <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />
@@ -71,17 +57,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Views\InitializeObjectPage.xaml.cs">
-      <DependentUpon>InitializeObjectPage.xaml</DependentUpon>
-    </Compile>
     <Compile Update="Views\AutorizationsPage.xaml.cs">
       <DependentUpon>AutorizationsPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\ManualObjectsPage.xaml.cs">
       <DependentUpon>ManualObjectsPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\ManualTypesObjectsPage.xaml.cs">
-      <DependentUpon>ManualTypesObjectsPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -92,40 +72,13 @@
     <EmbeddedResource Update="Views\CheckListView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\CreatePropertyPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Views\EditObjectPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\InfoPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\InitializeObjectPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\AutorizationsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\ManualObjectsPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\ManualPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\ManualTypesObjectsPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\ManualPropertiesPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\MenuPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\SettingsPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\TypeModelInfoPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

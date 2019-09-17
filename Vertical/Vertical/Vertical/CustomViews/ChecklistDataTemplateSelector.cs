@@ -14,7 +14,7 @@ namespace Vertical.CustomViews
         public DataTemplate ObjectTemplate { get; set; }
         public DataTemplate StringTemplate { get; set; }
         public DataTemplate HumanTemplate { get; set; }
-        //public DataTemplate GroupTemplate { get; set; }
+        public DataTemplate GroupTemplate { get; set; }
         public DataTemplate ArrayTemplate { get; set; }
         public DataTemplate NotArrayTemplate { get; set; }
         public DataTemplate GibridObjectTemplate { get; set; }
@@ -25,7 +25,7 @@ namespace Vertical.CustomViews
 
             switch (property?.TypeID)
             {
-                //case null: return GroupTemplate;
+                case null: return GroupTemplate;
                 case 1: return BoolTemplate;
                 case 2: return DateTimeTemplate;
                 case 3: return FloatTemplate;

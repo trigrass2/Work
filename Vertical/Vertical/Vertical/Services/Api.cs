@@ -209,7 +209,7 @@ namespace Vertical.Services
         /// <param name="login"></param>
         /// <param name="password"></param>
         /// <returns></returns>
-        public static HttpStatusCode GetToken(string login, string password)
+        public static async Task<HttpStatusCode> GetToken(string login, string password)
         {
             try
             {
@@ -219,7 +219,9 @@ namespace Vertical.Services
                 request.AddParameter("grant_type", "password");
                 request.AddParameter("username", login);
                 request.AddParameter("password", password);
-                var restResponse = client.Execute(request);
+
+                var restResponse = await client.ExecuteTaskAsync(request);
+
                 if (restResponse.IsSuccessful)
                 {
                     AccessToken = JsonConvert.DeserializeObject<AccessToken>(restResponse.Content).Access_token;                    

@@ -12,11 +12,11 @@
              x:Name="thisPage">
     <ContentView.Resources>        
         <ResourceDictionary>
-            <!--<DataTemplate x:Key="groupTemplate">
+            <DataTemplate x:Key="groupTemplate">
                 <Label x:Name="groupNamelabel" 
                        IsVisible="{Binding Key, Converter={converters:GroupNameVisibleConverter}}"
                        Text="{Binding Key}" FontSize="Subtitle" FontAttributes="Bold" TextColor="Black" />
-            </DataTemplate>-->
+            </DataTemplate>
             <DataTemplate x:Key="boolTemplate">
                 <Grid Padding="0">
                     <Grid BackgroundColor="{StaticResource BackgroundObjectColorRGBA}" Opacity="0.1"/>
@@ -26,14 +26,14 @@
                             Margin="5,3" BoxSizeRequest="40"
                             CheckChangedCommand="{Binding Source={x:Reference thisPage}, Path = BindingContext.IsCheckedCommand}" 
                             CommandParameter="{Binding }"
-                            Color="{StaticResource GreenColor}" BorderColor="{StaticResource LightGreyColor}"
+                            Color="{StaticResource GreenColor}" 
+                            BorderColor="{StaticResource LightGreyColor}"
                             Type="Material"
                             IsChecked="{Binding Value}" 
                             IsEnabled="{Binding Locked}"
                             BoxBackgroundColor="White"/>
                     </StackLayout>
                 </Grid>
-                
             </DataTemplate>
             <DataTemplate x:Key="dateTimeTemplate">
                 <Grid Padding="0">
@@ -116,6 +116,7 @@
                             <Button Text="+"
                                     TextColor="#555"
                                     FontAttributes="Bold"
+                                    FontSize="Body"
                                     BackgroundColor="{StaticResource ControlsBackgrounColor}"
                                     Command="{Binding Source={x:Reference thisPage}, Path = BindingContext.AddNewObjectInPropertyCommand}"
                                     CommandParameter="{Binding}"
@@ -228,14 +229,16 @@
                                              ArrayTemplate="{StaticResource arrayTemplate}"
                                              NotArrayTemplate ="{StaticResource notArrayTemplate}"
                                              GibridObjectTemplate="{StaticResource gibridObjectTemplate}"
+                                             GroupTemplate ="{StaticResource groupTemplate}"
                                              />
     </ContentView.Resources>
     <stateContainerDemo:StateContainer State ="{Binding States}">
         <stateContainerDemo:StateCondition Is="Normal">
             <StackLayout                
                 Padding="5"
-                BindableLayout.ItemsSource="{Binding Source.Result}">
-                <BindableLayout.ItemTemplate>
+                BindableLayout.ItemsSource="{Binding Source.Result.DisplayItems}"
+                BindableLayout.ItemTemplateSelector="{StaticResource checklistDataTemplateSelector}">
+                <!--<BindableLayout.ItemTemplate>
                     <DataTemplate>
                         <Grid>
                             <Grid.RowDefinitions>
@@ -250,7 +253,7 @@
                                          BindableLayout.ItemTemplateSelector="{StaticResource checklistDataTemplateSelector}"/>
                         </Grid>
                     </DataTemplate>
-                </BindableLayout.ItemTemplate>
+                </BindableLayout.ItemTemplate>-->
             </StackLayout>
         </stateContainerDemo:StateCondition>
 
