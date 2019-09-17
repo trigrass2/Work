@@ -10,7 +10,7 @@ namespace Vertical
         /// адрес для api
         /// </summary>
         public static readonly string domain = "https://obt.pik-industry.ru:444";
-        public static readonly string AndroidSecret = "android=4d3b3c3d-483f-479e-96d2-00c7cc2ac038;";
+        public static readonly string AndroidSecret = "android=3ef5a6e3-874d-44b7-a40f-c1410aadb92d";
         public enum IsAddOrEdit
         {
             Add,

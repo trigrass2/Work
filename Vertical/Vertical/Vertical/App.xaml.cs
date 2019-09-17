@@ -24,9 +24,8 @@ namespace Vertical
         {
             SvgImageSource.RegisterAssembly();
             AppCenter.Start($"{Constants.AndroidSecret}",
-                  typeof(Analytics), typeof(Crashes));
+                  typeof(Analytics), typeof(Crashes), typeof(Distribute));
 
-            AppCenter.Start($"{Constants.AndroidSecret}", typeof(Distribute));
         }
 
         protected override void OnSleep()

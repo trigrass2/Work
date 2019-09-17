@@ -76,3 +76,8 @@ Xamarin.Forms.Essentials.Controls
 Xamarin.Forms.Platform.Android
 Xamarin.Forms.Platform
 Xamarin.Forms.Xaml
+netstandard
+System.Resources.ResourceManager
+System.Reflection.Extensions
+System.Linq.Queryable
+System.ComponentModel
