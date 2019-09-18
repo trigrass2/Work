@@ -111,7 +111,7 @@ namespace Vertical.ViewModels
                         default:
                             {
                                 IsEnabled = true;
-                                await UserDialogs.Instance.AlertAsync("Ошибка входа");
+                                await UserDialogs.Instance.AlertAsync("Ошибка входа!");
                             }
                             break;
                     }
