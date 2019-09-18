@@ -60,60 +60,68 @@ namespace Vertical.ViewModels
         {            
             IsEnabled = false;
 
-            using(UserDialogs.Instance.Loading("Авторизация", null, null, true, MaskType.Black))
+            try
             {
-                await Task.Run(async () =>
+                using (UserDialogs.Instance.Loading("Авторизация", null, null, true, MaskType.Black))
                 {
-
-                    if (NetworkCheck.IsInternet())
+                    await Task.Run(async () =>
                     {
-                        _statusAutorization = await Api.GetToken(User.Login, User.Password);
+
+                        if (NetworkCheck.IsInternet())
+                        {
+                            _statusAutorization = await Api.GetToken(User.Login, User.Password);
+                        }
+                        else
+                        {
+                            await UserDialogs.Instance.AlertAsync("Отсутствует интернет-соединение");
+                            return;
+                        }
+                    });
+
+                    switch (_statusAutorization)
+                    {
+                        case HttpStatusCode.OK:
+                            {
+                                Login = User?.Login;
+                                Password = User?.Password;
+                                await Navigation.PushAsync(new ManualObjectsPage());
+                                States = States.Normal;
+                                IsEnabled = true;
+                            }
+                            break;
+
+                        case HttpStatusCode.InternalServerError:
+                            {
+                                await UserDialogs.Instance.AlertAsync("Сервер временно не доступен");
+                                States = States.Normal;
+                                IsEnabled = true;
+                            }
+                            break;
+
+                        case HttpStatusCode.BadRequest:
+                            {
+                                await UserDialogs.Instance.AlertAsync("Неверный логин или пароль");
+                                States = States.Normal;
+                                IsEnabled = true;
+                            }
+                            break;
+
+                        case 0: IsEnabled = true; break;
+
+                        default:
+                            {
+                                IsEnabled = true;
+                                await UserDialogs.Instance.AlertAsync("Ошибка входа");
+                            }
+                            break;
                     }
-                    else
-                    {                        
-                        await UserDialogs.Instance.AlertAsync("Отсутствует интернет-соединение");
-                        return;
-                    }
-                });
-
-                switch (_statusAutorization)
-                {
-                    case HttpStatusCode.OK:
-                        {
-                            Login = User?.Login;
-                            Password = User?.Password;
-                            await Navigation.PushAsync(new ManualObjectsPage()); 
-                            States = States.Normal;
-                            IsEnabled = true;
-                        }
-                        break;
-
-                    case HttpStatusCode.InternalServerError:
-                        {
-                            await UserDialogs.Instance.AlertAsync("Сервер временно не доступен");
-                            States = States.Normal;
-                            IsEnabled = true;
-                        }
-                        break;
-
-                    case HttpStatusCode.BadRequest:
-                        {
-                            await UserDialogs.Instance.AlertAsync("Неверный логин или пароль");
-                            States = States.Normal;
-                            IsEnabled = true;
-                        }
-                        break;
-
-                    case 0: IsEnabled = true; break;
-
-                    default:
-                        {
-                            IsEnabled = true;
-                            await UserDialogs.Instance.AlertAsync("Ошибка входа");
-                        }
-                        break;
                 }
             }
+            catch (System.Exception ex)
+            {
+                await Loger.WriteMessageAsync(Android.Util.LogPriority.Error, errorMessage: ex.Message);
+            }
+            
         }
     }    
     

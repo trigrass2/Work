@@ -22,7 +22,8 @@ namespace Vertical.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             UserDialogs.Init(this);
             Xamarin.Forms.Svg.Droid.SvgImage.Init(this);
-            Distribute.SetEnabledForDebuggableBuild(true);
+
+            Distribute.SetEnabledForDebuggableBuild(false);
 
             LoadApplication(new App());
         }

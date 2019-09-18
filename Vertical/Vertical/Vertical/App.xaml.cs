@@ -23,7 +23,7 @@ namespace Vertical
         protected override void OnStart()
         {
             SvgImageSource.RegisterAssembly();
-            AppCenter.Start($"{Constants.AndroidSecret}",
+            AppCenter.Start($"{Constants.IOSSecret} {Constants.AndroidSecret}",
                   typeof(Analytics), typeof(Crashes), typeof(Distribute));
 
         }

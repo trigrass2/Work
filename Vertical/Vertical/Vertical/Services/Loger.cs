@@ -33,7 +33,7 @@ namespace Vertical.Services
             }
             catch (Exception ex)
             {                        
-                WriteMessageAsync(LogPriority.Error, "Error in send", ex.Message);
+                await WriteMessageAsync(LogPriority.Error, "Error in send", ex.Message);
             }
 
         }

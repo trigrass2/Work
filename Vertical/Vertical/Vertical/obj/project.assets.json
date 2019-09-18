@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
-      "Acr.UserDialogs/7.0.4": {
+      "Acr.UserDialogs/7.0.27": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Acr.UserDialogs.dll": {}
@@ -199,7 +199,7 @@
           "lib/netstandard2.0/SkiaSharp.Extended.Svg.dll": {}
         }
       },
-      "Syncfusion.Licensing/17.2.0.47": {
+      "Syncfusion.Licensing/17.2.0.51": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Syncfusion.Licensing.dll": {}
@@ -208,10 +208,10 @@
           "lib/netstandard2.0/Syncfusion.Licensing.dll": {}
         }
       },
-      "Syncfusion.Xamarin.Buttons/17.2.0.47": {
+      "Syncfusion.Xamarin.Buttons/17.2.0.51": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.2.0.47",
+          "Syncfusion.Xamarin.Core": "17.2.0.51",
           "Xamarin.Forms": "3.1.0.697729"
         },
         "compile": {
@@ -221,10 +221,10 @@
           "lib/netstandard2.0/Syncfusion.Buttons.XForms.dll": {}
         }
       },
-      "Syncfusion.Xamarin.Core/17.2.0.47": {
+      "Syncfusion.Xamarin.Core/17.2.0.51": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Licensing": "17.2.0.47"
+          "Syncfusion.Licensing": "17.2.0.51"
         },
         "compile": {
           "lib/netstandard2.0/Syncfusion.Core.XForms.dll": {}
@@ -233,7 +233,7 @@
           "lib/netstandard2.0/Syncfusion.Core.XForms.dll": {}
         }
       },
-      "Syncfusion.Xamarin.DataSource/17.2.0.47": {
+      "Syncfusion.Xamarin.DataSource/17.2.0.51": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Syncfusion.DataSource.Portable.dll": {}
@@ -376,7 +376,7 @@
           "lib/netstandard1.0/Plugin.Settings.dll": {}
         }
       },
-      "Xamarin.Forms/4.2.0.709249": {
+      "Xamarin.Forms/4.2.0.778463": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {},
@@ -430,34 +430,42 @@
     }
   },
   "libraries": {
-    "Acr.UserDialogs/7.0.4": {
-      "sha512": "J+3+rSVtAAUqvaXC0NGZ6HAcSXMaMyqvKsV1sMoraT7g+Zv/r4QmgUUITPu875n0uO57Y87Xn6IbLVDPje6tlw==",
+    "Acr.UserDialogs/7.0.27": {
+      "sha512": "u+rbzB8Xh1nBj0jBOpgxMzyuycBrHY5y50aF4VMoE9oAosDiZtIgh0lpnGGn83KpnBDYRjm2kUP4CROv7wE9mw==",
       "type": "package",
-      "path": "acr.userdialogs/7.0.4",
+      "path": "acr.userdialogs/7.0.27",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "acr.userdialogs.7.0.4.nupkg.sha512",
+        "acr.userdialogs.7.0.27.nupkg.sha512",
         "acr.userdialogs.nuspec",
         "lib/monoandroid81/Acr.UserDialogs.dll",
-        "lib/monoandroid81/Acr.UserDialogs.dll.mdb",
         "lib/monoandroid81/Acr.UserDialogs.pdb",
+        "lib/monoandroid81/Acr.UserDialogs.xml",
         "lib/monoandroid90/Acr.UserDialogs.dll",
         "lib/monoandroid90/Acr.UserDialogs.dll.mdb",
         "lib/monoandroid90/Acr.UserDialogs.pdb",
+        "lib/monoandroid90/Acr.UserDialogs.xml",
         "lib/netstandard2.0/Acr.UserDialogs.dll",
         "lib/netstandard2.0/Acr.UserDialogs.pdb",
+        "lib/netstandard2.0/Acr.UserDialogs.xml",
         "lib/uap10.0.16299/Acr.UserDialogs.dll",
         "lib/uap10.0.16299/Acr.UserDialogs.pdb",
         "lib/uap10.0.16299/Acr.UserDialogs.pri",
+        "lib/uap10.0.16299/Acr.UserDialogs.xml",
         "lib/uap10.0.16299/Acr.UserDialogs/Acr.UserDialogs.xr.xml",
-        "lib/uap10.0.16299/Acr.UserDialogs/Platforms/Uwp/ActionSheetContentDialog.xbf",
-        "lib/uap10.0.16299/Acr.UserDialogs/Platforms/Uwp/DatePickerControl.xbf",
-        "lib/uap10.0.16299/Acr.UserDialogs/Platforms/Uwp/LoginContentDialog.xbf",
-        "lib/uap10.0.16299/Acr.UserDialogs/Platforms/Uwp/ProgressContentDialog.xbf",
-        "lib/uap10.0.16299/Acr.UserDialogs/Platforms/Uwp/TimePickerControl.xbf",
+        "lib/uap10.0.16299/Acr.UserDialogs/Platforms/Uwp/ActionSheetContentDialog.xaml",
+        "lib/uap10.0.16299/Acr.UserDialogs/Platforms/Uwp/DatePickerControl.xaml",
+        "lib/uap10.0.16299/Acr.UserDialogs/Platforms/Uwp/LoginContentDialog.xaml",
+        "lib/uap10.0.16299/Acr.UserDialogs/Platforms/Uwp/ProgressContentDialog.xaml",
+        "lib/uap10.0.16299/Acr.UserDialogs/Platforms/Uwp/TimePickerControl.xaml",
         "lib/xamarinios10/Acr.UserDialogs.dll",
-        "lib/xamarinios10/Acr.UserDialogs.pdb"
+        "lib/xamarinios10/Acr.UserDialogs.pdb",
+        "lib/xamarinios10/Acr.UserDialogs.xml",
+        "lib/xamarinmac20/Acr.UserDialogs.dll",
+        "lib/xamarinmac20/Acr.UserDialogs.pdb",
+        "lib/xamarinmac20/Acr.UserDialogs.xml",
+        "readme.txt"
       ]
     },
     "Fody/4.2.1": {
@@ -702,6 +710,7 @@
       "path": "netstandard.library/2.0.3",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/netstandard2.0/NETStandard.Library.targets",
@@ -990,10 +999,10 @@
         "skiasharp.svg.nuspec"
       ]
     },
-    "Syncfusion.Licensing/17.2.0.47": {
-      "sha512": "AZrvRdJ8uEHVGlXudQLGtgagjZoqkQvnNkf8s5Isgzhasxrrf5o7pChZRl4u4XrztYUL1dIMDTJTFL/5EYA3Sg==",
+    "Syncfusion.Licensing/17.2.0.51": {
+      "sha512": "luFCV+5Ja6gLwu4s8WelqX02vQtta5+k1znD2zabiRsamjFSwsga2LDe0nbI7hVDCygD58FIdJF6slmwrYktPQ==",
       "type": "package",
-      "path": "syncfusion.licensing/17.2.0.47",
+      "path": "syncfusion.licensing/17.2.0.51",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1013,14 +1022,14 @@
         "lib/netstandard2.0/Syncfusion.Licensing.dll",
         "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Licensing.dll",
         "lib/uap10.0/Syncfusion.Licensing.dll",
-        "syncfusion.licensing.17.2.0.47.nupkg.sha512",
+        "syncfusion.licensing.17.2.0.51.nupkg.sha512",
         "syncfusion.licensing.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.Buttons/17.2.0.47": {
-      "sha512": "e8lJ8W5MA5H49wuMUi/UOydSDnJKtN0F2Ce67aL5YfY9sB8FBvdAysDEeDYtByh4f5rGZ2ogFlvaybfM6jQrvg==",
+    "Syncfusion.Xamarin.Buttons/17.2.0.51": {
+      "sha512": "NUviStRhWl8PLxyCKnbYBHAeYPKptfShDMXkykx7nG3/tyITVwBy/E9te6yAt1w3D6P1jvrCp73p8Ej3XCCcIA==",
       "type": "package",
-      "path": "syncfusion.xamarin.buttons/17.2.0.47",
+      "path": "syncfusion.xamarin.buttons/17.2.0.51",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1044,14 +1053,14 @@
         "lib/uap10.0/Syncfusion.Buttons.XForms.UWP/Themes/Generic.xaml",
         "lib/uap10.0/Syncfusion.Buttons.XForms.dll",
         "lib/uap10.0/Syncfusion.Buttons.XForms.xml",
-        "syncfusion.xamarin.buttons.17.2.0.47.nupkg.sha512",
+        "syncfusion.xamarin.buttons.17.2.0.51.nupkg.sha512",
         "syncfusion.xamarin.buttons.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.Core/17.2.0.47": {
-      "sha512": "pbOuZ+VModCHm9dX6issglwoeWx1vyjXLrjHbeEZqP5ptQuR9D8cNrh1dpALu8BLCrRvdF++oaMXuYfjmdhCdA==",
+    "Syncfusion.Xamarin.Core/17.2.0.51": {
+      "sha512": "Mz/wFpGuEv6PiwDoeG8nbGF9qJYKKUK3P2ZxKL8iI1vgp5bWQ+FvKexfDeNjO5L5FvLzgXbu8617Z9ObH/4Stg==",
       "type": "package",
-      "path": "syncfusion.xamarin.core/17.2.0.47",
+      "path": "syncfusion.xamarin.core/17.2.0.51",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1075,14 +1084,14 @@
         "lib/uap10.0/Syncfusion.Core.XForms.UWP/TILRenderer/ToggleIcons/ToggleVisibleIcon.xaml",
         "lib/uap10.0/Syncfusion.Core.XForms.dll",
         "lib/uap10.0/Syncfusion.Core.XForms.xml",
-        "syncfusion.xamarin.core.17.2.0.47.nupkg.sha512",
+        "syncfusion.xamarin.core.17.2.0.51.nupkg.sha512",
         "syncfusion.xamarin.core.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.DataSource/17.2.0.47": {
-      "sha512": "twvty8quqDJrFAI5k4zSF6cxV/33k+0i29T8r/aud5HOmzbFim+YoXSPJUoUZPQqZe5Pc6MIbXRXc2jn+OiWZA==",
+    "Syncfusion.Xamarin.DataSource/17.2.0.51": {
+      "sha512": "vmz/hFDoxDN10kIb7TTeQ6ewR8kniSevtMm+nqxqihSREYbdbwq3MGJSEbHPpIufc5aPgbItZOXl2MJ34/ZD4w==",
       "type": "package",
-      "path": "syncfusion.xamarin.datasource/17.2.0.47",
+      "path": "syncfusion.xamarin.datasource/17.2.0.51",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1096,7 +1105,7 @@
         "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.DataSource.Portable.dll",
         "lib/uap10.0/Syncfusion.DataSource.Portable.XML",
         "lib/uap10.0/Syncfusion.DataSource.Portable.dll",
-        "syncfusion.xamarin.datasource.17.2.0.47.nupkg.sha512",
+        "syncfusion.xamarin.datasource.17.2.0.51.nupkg.sha512",
         "syncfusion.xamarin.datasource.nuspec"
       ]
     },
@@ -1874,10 +1883,10 @@
         "xam.plugins.settings.nuspec"
       ]
     },
-    "Xamarin.Forms/4.2.0.709249": {
-      "sha512": "3DWqPSn9kSKJW5mwjmICV/+4IpPQrequEN1VXUhsF0i9KKnfj49jFk9VbJnT9o2aesJAk00NED67XPbSmbxKjw==",
+    "Xamarin.Forms/4.2.0.778463": {
+      "sha512": "0dGuPOn9KrS65rmVgOrV5knDYHxWkWEm7c/CLp6AKSlvOpZ40+YrN+7oX5hHE6lpX+dizLCaOE/RvYS3ONy9/Q==",
       "type": "package",
-      "path": "xamarin.forms/4.2.0.709249",
+      "path": "xamarin.forms/4.2.0.778463",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2116,7 +2125,7 @@
         "lib/uap10.0/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.4.2.0.709249.nupkg.sha512",
+        "xamarin.forms.4.2.0.778463.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
@@ -2195,7 +2204,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "Acr.UserDialogs >= 7.0.4",
+      "Acr.UserDialogs >= 7.0.27",
       "Microsoft.AppCenter.Analytics >= 2.1.1",
       "Microsoft.AppCenter.Crashes >= 2.1.1",
       "Microsoft.AppCenter.Distribute >= 2.1.1",
@@ -2205,12 +2214,12 @@
       "Newtonsoft.Json >= 12.0.2",
       "PropertyChanged.Fody >= 2.6.1",
       "RestSharp >= 106.6.10",
-      "Syncfusion.Licensing >= 17.2.0.47",
-      "Syncfusion.Xamarin.Buttons >= 17.2.0.47",
-      "Syncfusion.Xamarin.DataSource >= 17.2.0.47",
+      "Syncfusion.Licensing >= 17.2.0.51",
+      "Syncfusion.Xamarin.Buttons >= 17.2.0.51",
+      "Syncfusion.Xamarin.DataSource >= 17.2.0.51",
       "Xam.Plugin.Connectivity >= 3.2.0",
       "Xam.Plugins.Settings >= 3.1.1",
-      "Xamarin.Forms >= 4.2.0.709249",
+      "Xamarin.Forms >= 4.2.0.778463",
       "Xamarin.Forms.Essentials.Controls >= 1.1.1",
       "Xamarin.Forms.InputKit >= 3.0.12",
       "Xamarin.Forms.Svg >= 1.0.0-pre4"
@@ -2260,7 +2269,7 @@
         "dependencies": {
           "Acr.UserDialogs": {
             "target": "Package",
-            "version": "[7.0.4, )"
+            "version": "[7.0.27, )"
           },
           "Microsoft.AppCenter.Analytics": {
             "target": "Package",
@@ -2302,15 +2311,15 @@
           },
           "Syncfusion.Licensing": {
             "target": "Package",
-            "version": "[17.2.0.47, )"
+            "version": "[17.2.0.51, )"
           },
           "Syncfusion.Xamarin.Buttons": {
             "target": "Package",
-            "version": "[17.2.0.47, )"
+            "version": "[17.2.0.51, )"
           },
           "Syncfusion.Xamarin.DataSource": {
             "target": "Package",
-            "version": "[17.2.0.47, )"
+            "version": "[17.2.0.51, )"
           },
           "Xam.Plugin.Connectivity": {
             "target": "Package",
@@ -2322,7 +2331,7 @@
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[4.2.0.709249, )"
+            "version": "[4.2.0.778463, )"
           },
           "Xamarin.Forms.Essentials.Controls": {
             "target": "Package",

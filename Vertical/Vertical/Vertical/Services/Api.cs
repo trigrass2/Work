@@ -38,20 +38,20 @@ namespace Vertical.Services
 
                 if (restResponse.IsSuccessful)
                 {
-                    Loger.WriteMessageAsync(LogPriority.Info, $"В запросе {client?.BaseUrl}: Данные отправлены");
+                    await Loger.WriteMessageAsync(LogPriority.Info, $"В запросе {client?.BaseUrl}: Данные отправлены");
                     return res;
                 }
                 else
                 {
-                    Loger.WriteMessageAsync(LogPriority.Info, $"В запросе {client?.BaseUrl}: Данные не отправлены -> {restResponse.Content}");
-                    return default(string);
+                    await Loger.WriteMessageAsync(LogPriority.Info, $"В запросе {client?.BaseUrl}: Данные не отправлены -> {restResponse.Content}");
+                    return default;
                 }
 
             }
             catch (Exception ex)
             {
-                Loger.WriteMessageAsync(LogPriority.Error, $"В запросе {client?.BaseUrl} Ошибка при отправке данных на сервер", ex.Message);
-                return default(string);
+                await Loger.WriteMessageAsync(LogPriority.Error, $"В запросе {client?.BaseUrl} Ошибка при отправке данных на сервер", ex.Message);
+                return default;
             }
         }
 
@@ -113,13 +113,13 @@ namespace Vertical.Services
                 request.AddParameter("application/json", jsonModel, ParameterType.RequestBody);
 
                 var restResponse = await client.ExecuteTaskAsync(request);
-                Loger.WriteMessageAsync(LogPriority.Info, $"Запрос {client?.BaseUrl}: {restResponse.StatusCode}");
+                await Loger.WriteMessageAsync(LogPriority.Info, $"Запрос {client?.BaseUrl}: {restResponse.StatusCode}");
                 return restResponse.StatusCode;
             }
             catch (Exception ex)
             {
-                Loger.WriteMessageAsync(LogPriority.Error, $"В запросе {client?.BaseUrl} Ошибка при отправке данных на сервер", ex.Message);
-                return default(HttpStatusCode);
+                await Loger.WriteMessageAsync(LogPriority.Error, $"В запросе {client?.BaseUrl} Ошибка при отправке данных на сервер", ex.Message);
+                return default;
             }
         }
 
@@ -132,7 +132,7 @@ namespace Vertical.Services
         /// <param name="nameMetod">имя метода</param>
         /// <param name="callingFunction">вызывающая функция</param>
         /// <returns>коллекцтя объектов</returns>
-        public static IList<T> GetDataFromServer<T>(string nameMetod, object model = default(object))
+        public static IList<T> GetDataFromServer<T>(string nameMetod, object model = default)
         {
             var client = new RestClient(domain + $"/api/{nameMetod}");
 
@@ -151,7 +151,7 @@ namespace Vertical.Services
                 else
                 {
                     Loger.WriteMessageAsync(LogPriority.Info, $"{client?.BaseUrl} данные не получены: {restResponse.Content}");
-                    return default(IList<T>);
+                    return default;
                 }
                 
             }
@@ -186,20 +186,20 @@ namespace Vertical.Services
 
                 if (restResponse.IsSuccessful)
                 {                    
-                    Loger.WriteMessageAsync(LogPriority.Info, $"{client?.BaseUrl} данные получены");
+                    await Loger.WriteMessageAsync(LogPriority.Info, $"{client?.BaseUrl} данные получены");
                     return JsonConvert.DeserializeObject<IList<T>>(restResponse.Content);
                 }
                 else
                 {
-                    Loger.WriteMessageAsync(LogPriority.Info, $"{client?.BaseUrl} данные не получены: {restResponse.Content}");
+                    await Loger.WriteMessageAsync(LogPriority.Info, $"{client?.BaseUrl} данные не получены: {restResponse.Content}");
                     return default(IList<T>);
                 }
 
             }
             catch (Exception ex)
             {
-                Loger.WriteMessageAsync(LogPriority.Error, $"В запросе {client?.BaseUrl} Ошибка при получении данных с червера", ex.Message);
-                return default(IList<T>);
+                await Loger.WriteMessageAsync(LogPriority.Error, $"В запросе {client?.BaseUrl} Ошибка при получении данных с червера", ex.Message);
+                return default;
             }
         }
 
@@ -227,36 +227,16 @@ namespace Vertical.Services
                     AccessToken = JsonConvert.DeserializeObject<AccessToken>(restResponse.Content).Access_token;                    
                 }
 
-                Loger.WriteMessageAsync(LogPriority.Info, $"Статус авторизации: {restResponse.StatusCode}");
+                await Loger.WriteMessageAsync(LogPriority.Info, $"Статус авторизации: {restResponse.StatusCode}");
                 return restResponse.StatusCode;
             }
             catch (Exception ex)
             {
-                Loger.WriteMessageAsync(LogPriority.Error, "Ошибка при получении токена", ex.Message);
-                return default(HttpStatusCode);
+                await Loger.WriteMessageAsync(LogPriority.Error, "Ошибка при получении токена", ex.Message);
+                return default;
             }
             
         }
-
-        /// <summary>
-        /// Регистрация аккаунта
-        /// </summary>
-        /// <param name="login">логин</param>
-        /// <param name="password">пароль</param>
-        /// <param name="confirmPassword">подтверждение пароля</param>
-        public static void RegisterAccount(string login, string password, string confirmPassword)
-        {
-            var client = new RestClient("http://34.90.63.119/api/Account/Register");
-
-            var request = new RestRequest(Method.POST);
-
-            request.AddParameter("Email", login);
-            request.AddParameter("Password", password);
-            request.AddParameter("ConfirmPassword", confirmPassword);
-
-            var restResponse = client.Execute(request);
-        }
-
         
         /// <summary>
         /// проверяет статус сервера
@@ -280,7 +260,7 @@ namespace Vertical.Services
             catch (Exception ex)
             {
                 Loger.WriteMessageAsync(LogPriority.Error, "Ошибка при проверке статуса сервера", ex.Message);
-                return default(HttpStatusCode);
+                return default;
             }
         }
     }

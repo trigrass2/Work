@@ -67,7 +67,8 @@ namespace Vertical.ViewModels
         {
             var item = new SystemObjectPropertyValueModel(param as SystemObjectPropertyValueModel);
             var items = await Api.GetDataFromServerAsync<SystemObjectModel>("System/GetSystemObjects", new { ParentGUID = item.SourceObjectParentGUID });
-            var action = await App.Current.MainPage.DisplayActionSheet(null, null, null, items.Select(x => x.Name).ToArray());
+            
+            var action = await UserDialogs.Instance.ActionSheetAsync(null, null, null, buttons: items.Select(x => x.Name).ToArray());
             if(action != null)
             {
                 item.Value = items.Where(x => x.Name == action).Select(q => q.GUID).FirstOrDefault();
@@ -97,8 +98,7 @@ namespace Vertical.ViewModels
             {
                 int valueNum = 0;
                 if (newProperty.Value != null)
-                {
-                    //var v = await Api.GetDataFromServerAsync<SystemObjectPropertyValueModel>("System/GetSystemObjectPropertiesValues", new { ObjectGUID = SystemObjectModel?.GUID });
+                {                    
                     valueNum = SystemPropertyModels.Where(q => q?.ID == newProperty?.ID).Max(x => x.ValueNum);
                 }
                 newProperty.ValueNum = valueNum + 1;
@@ -127,12 +127,11 @@ namespace Vertical.ViewModels
                 if (string.IsNullOrEmpty(prop.SourceObjectParentGUID))
                 {
                     var types = await Api.GetDataFromServerAsync<SystemObjectTypeModel>("System/GetSystemObjectTypes");
-                    var action = await Application.Current.MainPage
-                                                  .DisplayActionSheet(
+                    var action = await UserDialogs.Instance.ActionSheetAsync(
                                                   "Тип нового объекта",
                                                   "отмена",
                                                   null,
-                                                  types.Select(x => x.Name).ToArray());
+                                                  buttons: types.Select(x => x.Name).ToArray());
                     if (!string.IsNullOrEmpty(action) && action != "отмена")
                     {
                         int typeId = types.Where(x => x.Name == action).Select(x => x.ID).FirstOrDefault();
@@ -182,12 +181,11 @@ namespace Vertical.ViewModels
                 else
                 {
                     var objects = await Api.GetDataFromServerAsync<SystemObjectModel>("System/GetSystemObjects", new { ParentGUID = prop.SourceObjectParentGUID });
-                    var action = await Application.Current.MainPage
-                                                      .DisplayActionSheet(
+                    var action = await UserDialogs.Instance.ActionSheetAsync(
                                                       "",
                                                       "отмена",
                                                       null,
-                                                      objects.Select(x => x.Name).ToArray());
+                                                      buttons: objects.Select(x => x.Name).ToArray());
                     if (!string.IsNullOrEmpty(action) && action != "отмена")
                     {
                         using (UserDialogs.Instance.Loading("Создание объекта...", null, null, true, MaskType.Black))

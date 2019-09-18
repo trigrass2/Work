@@ -29,7 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Acr.UserDialogs" Version="7.0.4" />
+    <PackageReference Include="Acr.UserDialogs" Version="7.0.27" />
     <PackageReference Include="Microsoft.AppCenter.Analytics" Version="2.1.1" />
     <PackageReference Include="Microsoft.AppCenter.Crashes" Version="2.1.1" />
     <PackageReference Include="Microsoft.AppCenter.Distribute" Version="2.1.1" />
@@ -38,12 +38,12 @@
     <PackageReference Include="NGraphics" Version="0.5.0" />
     <PackageReference Include="PropertyChanged.Fody" Version="2.6.1" />
     <PackageReference Include="RestSharp" Version="106.6.10" />
-    <PackageReference Include="Syncfusion.Licensing" Version="17.2.0.47" />
-    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="17.2.0.47" />
-    <PackageReference Include="Syncfusion.Xamarin.DataSource" Version="17.2.0.47" />
+    <PackageReference Include="Syncfusion.Licensing" Version="17.2.0.51" />
+    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="17.2.0.51" />
+    <PackageReference Include="Syncfusion.Xamarin.DataSource" Version="17.2.0.51" />
     <PackageReference Include="Xam.Plugin.Connectivity" Version="3.2.0" />
     <PackageReference Include="Xam.Plugins.Settings" Version="3.1.1" />
-    <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />
+    <PackageReference Include="Xamarin.Forms" Version="4.2.0.778463" />
     <PackageReference Include="Xamarin.Forms.Essentials.Controls" Version="1.1.1" />
     <PackageReference Include="Xamarin.Forms.InputKit" Version="3.0.12" />
     <PackageReference Include="Xamarin.Forms.Svg" Version="1.0.0-pre4" />

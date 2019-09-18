@@ -1,1 +1,0 @@
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android"><item><color android:color="@color/splash_background" /></item><item android:drawable="@drawable/pikgroup_logo" android:gravity="center" /></layer-list>

@@ -13,6 +13,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Svg;
 using static Vertical.Constants;
 
+
 namespace Vertical.ViewModels
 {    
     /// <summary>
@@ -89,7 +90,7 @@ namespace Vertical.ViewModels
 
             SystemObjectModels?.Clear();
 
-            IList<SystemObjectModel> items = default(IList<SystemObjectModel>);
+            IList<SystemObjectModel> items = default;
 
             if(TypePage == "Шаблоны")
             {
@@ -144,13 +145,13 @@ namespace Vertical.ViewModels
                 {
                     if (_selectedObject?.Template == true)
                     {                        
-                        string action = await App.Current.MainPage.DisplayActionSheet("Выберите действие", "Отмена", null, "Создать", "Архив");
+                        string action = await UserDialogs.Instance.ActionSheetAsync("Выберите действие", "Отмена", null, buttons: new []{ "Создать", "Архив"});
                         switch (action)
                         {
                             case "Создать":
                                 {
                                     try
-                                    {
+                                    {                                        
                                         PromptResult pResult = await UserDialogs.Instance.PromptAsync(new PromptConfig
                                         {
                                             InputType = InputType.Name,
@@ -198,7 +199,7 @@ namespace Vertical.ViewModels
             {
                 if (_selectedObject?.Template == true)
                 {
-                    string action = await App.Current.MainPage.DisplayActionSheet("Выберите действие", "Отмена", null, "Создать", "Архив");
+                    string action = await UserDialogs.Instance.ActionSheetAsync("Выберите действие", "Отмена", null, buttons: new []{ "Создать", "Архив" });
                     switch (action)
                     {
                         case "Создать":

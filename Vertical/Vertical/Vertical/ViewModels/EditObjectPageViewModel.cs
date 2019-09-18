@@ -1,4 +1,5 @@
-﻿using Android.Util;
+﻿using Acr.UserDialogs;
+using Android.Util;
 using PropertyChanged;
 using System;
 using System.Collections.Generic;
@@ -53,14 +54,15 @@ namespace Vertical.ViewModels
 
             if (!NetworkCheck.IsInternet())
             {
-                await Application.Current.MainPage.DisplayAlert("Сообщение", "Отсутствует интернет-соединение!", "Ок");
+                
+                await UserDialogs.Instance.AlertAsync("Отсутствует интернет - соединение!");
                 IsEnabled = true;
                 return;
             }
 
             if (!Api.SendDataToServer("System/EditSystemObject", NewObject))
             {
-                await Application.Current.MainPage.DisplayAlert("Сообщение", "Не удалось создать.", "Ок");
+                await UserDialogs.Instance.AlertAsync("Не удалось создать.");
                 IsEnabled = true;
                 return;
             }
