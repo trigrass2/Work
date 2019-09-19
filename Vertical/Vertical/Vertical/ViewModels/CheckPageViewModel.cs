@@ -31,10 +31,7 @@ namespace Vertical.ViewModels
         public DateTime MinDate { get; set; }
         public DateTime MaxDate { get; set; }
         public DateTime SelectedDate { get; set; }
-
-        private int? PropertyID { get; set; }
-        public bool IsChanged { get; set; } = false;
-
+                        
         public CheckPageViewModel() { }
 
         public CheckPageViewModel(SystemObjectModel obj)
@@ -50,17 +47,25 @@ namespace Vertical.ViewModels
 
         private async void IsChecked(object obj)
         {
-            var model = obj as SystemObjectPropertyValueModel;
-            await Api.SendDataToServerAsync("System/AddSystemObjectPropertyValue",
+            if (!NetworkCheck.IsInternet())
+            {
+                await UserDialogs.Instance.AlertAsync("Нет подключения к интернету");
+                return;
+            }
+            if(obj is SystemObjectPropertyValueModel model)
+            {
+                await Api.SendDataToServerAsync("System/AddSystemObjectPropertyValue",
                                             new
                                             {
                                                 ObjectGUID = SystemObjectModel?.GUID,
                                                 PropertyID = model?.ID,
                                                 PropertyNum = model?.Num,
-                                                Value = model?.Value,
-                                                ValueNum = model?.ValueNum
+                                                model?.Value,
+                                                model?.ValueNum
                                             }
                                             );
+            }
+            
         }
 
         private async void EditObject(object param)
@@ -68,7 +73,7 @@ namespace Vertical.ViewModels
             var item = new SystemObjectPropertyValueModel(param as SystemObjectPropertyValueModel);
             var items = await Api.GetDataFromServerAsync<SystemObjectModel>("System/GetSystemObjects", new { ParentGUID = item.SourceObjectParentGUID });
             
-            var action = await UserDialogs.Instance.ActionSheetAsync(null, null, null, buttons: items.Select(x => x.Name).ToArray());
+            var action = await UserDialogs.Instance.ActionSheetAsync(null, "Отмена", null, buttons: items.Select(x => x.Name).ToArray());
             if(action != null)
             {
                 item.Value = items.Where(x => x.Name == action).Select(q => q.GUID).FirstOrDefault();
@@ -83,7 +88,7 @@ namespace Vertical.ViewModels
             var property = commandParameter as SystemObjectPropertyValueModel;
             SystemPropertyModels.Remove(property);
         }
-
+                
         private async Task CreateArrangement(SystemObjectPropertyValueModel property)
         {
             var newProperty = new SystemObjectPropertyValueModel(property);
@@ -122,101 +127,102 @@ namespace Vertical.ViewModels
                 }
                 
             }
-            else
-            {
-                if (string.IsNullOrEmpty(prop.SourceObjectParentGUID))
-                {
-                    var types = await Api.GetDataFromServerAsync<SystemObjectTypeModel>("System/GetSystemObjectTypes");
-                    var action = await UserDialogs.Instance.ActionSheetAsync(
-                                                  "Тип нового объекта",
-                                                  "отмена",
-                                                  null,
-                                                  buttons: types.Select(x => x.Name).ToArray());
-                    if (!string.IsNullOrEmpty(action) && action != "отмена")
-                    {
-                        int typeId = types.Where(x => x.Name == action).Select(x => x.ID).FirstOrDefault();
-                        PromptResult pResult = await UserDialogs.Instance.PromptAsync(new PromptConfig
-                        {
-                            InputType = InputType.Name,
-                            OkText = "Создать",
-                            Title = "Создание объекта"
-                        });
-                        using (UserDialogs.Instance.Loading("Создание объекта...", null, null, true, MaskType.Black))
-                        {
-                            if (pResult.Ok && !string.IsNullOrWhiteSpace(pResult.Text))
-                            {
-                                string guidNewItem = await Api.AddSystemObjectAsync("System/AddSystemObject", new { Name = pResult.Text, TypeID = typeId, ParentGUID = prop.SystemObjectGUID });
-                                if (guidNewItem != default(string))
-                                {
-                                    int valueNum = 0;
-                                    if (prop.Value != null && prop.Array == true)
-                                    {
-                                        var v = await Api.GetDataFromServerAsync<SystemObjectPropertyValueModel>("System/GetSystemObjectPropertiesValues", new { ObjectGUID = SystemObjectModel?.GUID });
-                                        valueNum = v.Max(x => x.ValueNum);
-                                    }
-                                    else
-                                    {
-                                        valueNum = prop.ValueNum;
-                                    }
 
-                                    prop.Value = guidNewItem;
-                                    await Api.SendDataToServerAsync("System/AddSystemObjectPropertyValue",
-                                        new
-                                        {
-                                            ObjectGUID = SystemObjectModel?.GUID,
-                                            PropertyID = prop.ID,
-                                            PropertyNum = prop.Num,
-                                            Value = prop.Value,
-                                            ValueNum = valueNum + 1
-                                        });
+            //else
+            //{
+            //    //if (string.IsNullOrEmpty(prop.SourceObjectParentGUID))
+            //    //{
+            //    //    var types = await Api.GetDataFromServerAsync<SystemObjectTypeModel>("System/GetSystemObjectTypes");
+            //    //    var action = await UserDialogs.Instance.ActionSheetAsync(
+            //    //                                  "Тип нового объекта",
+            //    //                                  "Отмена",
+            //    //                                  null,
+            //    //                                  buttons: types.Select(x => x.Name).ToArray());
+            //    //    if (!string.IsNullOrEmpty(action) && action != "отмена")
+            //    //    {
+            //    //        int typeId = types.Where(x => x.Name == action).Select(x => x.ID).FirstOrDefault();
+            //    //        PromptResult pResult = await UserDialogs.Instance.PromptAsync(new PromptConfig
+            //    //        {
+            //    //            InputType = InputType.Name,
+            //    //            OkText = "Создать",
+            //    //            Title = "Создание объекта"
+            //    //        });
+            //    //        using (UserDialogs.Instance.Loading("Создание объекта...", null, null, true, MaskType.Black))
+            //    //        {
+            //    //            if (pResult.Ok && !string.IsNullOrWhiteSpace(pResult.Text))
+            //    //            {
+            //    //                string guidNewItem = await Api.AddSystemObjectAsync("System/AddSystemObject", new { Name = pResult.Text, TypeID = typeId, ParentGUID = prop.SystemObjectGUID });
+            //    //                if (guidNewItem != default(string))
+            //    //                {
+            //    //                    int valueNum = 0;
+            //    //                    if (prop.Value != null && prop.Array == true)
+            //    //                    {
+            //    //                        var v = await Api.GetDataFromServerAsync<SystemObjectPropertyValueModel>("System/GetSystemObjectPropertiesValues", new { ObjectGUID = SystemObjectModel?.GUID });
+            //    //                        valueNum = v.Max(x => x.ValueNum);
+            //    //                    }
+            //    //                    else
+            //    //                    {
+            //    //                        valueNum = prop.ValueNum;
+            //    //                    }
 
-                                    //Source = new NotifyTaskCompletion<ObservableCollection<IGrouping<string, SystemObjectPropertyValueModel>>>(UpdateSystemPropertyModels());
-                                }
+            //    //                    prop.Value = guidNewItem;
+            //    //                    await Api.SendDataToServerAsync("System/AddSystemObjectPropertyValue",
+            //    //                        new
+            //    //                        {
+            //    //                            ObjectGUID = SystemObjectModel?.GUID,
+            //    //                            PropertyID = prop.ID,
+            //    //                            PropertyNum = prop.Num,
+            //    //                            Value = prop.Value,
+            //    //                            ValueNum = valueNum + 1
+            //    //                        });
 
-                            }
-                        }
+            //    //                    //Source = new NotifyTaskCompletion<ObservableCollection<IGrouping<string, SystemObjectPropertyValueModel>>>(UpdateSystemPropertyModels());
+            //    //                }
 
-                    }
-                }
-                else
-                {
-                    var objects = await Api.GetDataFromServerAsync<SystemObjectModel>("System/GetSystemObjects", new { ParentGUID = prop.SourceObjectParentGUID });
-                    var action = await UserDialogs.Instance.ActionSheetAsync(
-                                                      "",
-                                                      "отмена",
-                                                      null,
-                                                      buttons: objects.Select(x => x.Name).ToArray());
-                    if (!string.IsNullOrEmpty(action) && action != "отмена")
-                    {
-                        using (UserDialogs.Instance.Loading("Создание объекта...", null, null, true, MaskType.Black))
-                        {
-                            var item = objects.Where(x => x.Name == action).FirstOrDefault();
-                            int valueNum = 0;
-                            if (prop.Value != null && prop.Array == true)
-                            {
-                                var v = await Api.GetDataFromServerAsync<SystemObjectPropertyValueModel>("System/GetSystemObjectPropertiesValues", new { ObjectGUID = SystemObjectModel?.GUID });
-                                valueNum = v.Max(x => x.ValueNum);
-                            }
-                            else
-                            {
-                                valueNum = prop.ValueNum;
-                            }
-                            prop.Value = item.GUID;
-                            await Api.SendDataToServerAsync("System/AddSystemObjectPropertyValue",
-                                         new
-                                         {
-                                             ObjectGUID = SystemObjectModel?.GUID,
-                                             PropertyID = prop.ID,
-                                             PropertyNum = prop.Num,
-                                             Value = prop.Value,
-                                             ValueNum = valueNum + 1
-                                         });
+            //    //            }
+            //    //        }
 
-                            //Source = new NotifyTaskCompletion<ObservableCollection<IGrouping<string, SystemObjectPropertyValueModel>>>(UpdateSystemPropertyModels());
-                        }
-                    }
-                }
-            }
+            //    //    }
+            //    //}
+            //    //else
+            //    //{
+            //    //    var objects = await Api.GetDataFromServerAsync<SystemObjectModel>("System/GetSystemObjects", new { ParentGUID = prop.SourceObjectParentGUID });
+            //    //    var action = await UserDialogs.Instance.ActionSheetAsync(
+            //    //                                      "",
+            //    //                                      "Отмена",
+            //    //                                      null,
+            //    //                                      buttons: objects.Select(x => x.Name).ToArray());
+            //    //    if (!string.IsNullOrEmpty(action) && action != "отмена")
+            //    //    {
+            //    //        using (UserDialogs.Instance.Loading("Создание объекта...", null, null, true, MaskType.Black))
+            //    //        {
+            //    //            var item = objects.Where(x => x.Name == action).FirstOrDefault();
+            //    //            int valueNum = 0;
+            //    //            if (prop.Value != null && prop.Array == true)
+            //    //            {
+            //    //                var v = await Api.GetDataFromServerAsync<SystemObjectPropertyValueModel>("System/GetSystemObjectPropertiesValues", new { ObjectGUID = SystemObjectModel?.GUID });
+            //    //                valueNum = v.Max(x => x.ValueNum);
+            //    //            }
+            //    //            else
+            //    //            {
+            //    //                valueNum = prop.ValueNum;
+            //    //            }
+            //    //            prop.Value = item.GUID;
+            //    //            await Api.SendDataToServerAsync("System/AddSystemObjectPropertyValue",
+            //    //                         new
+            //    //                         {
+            //    //                             ObjectGUID = SystemObjectModel?.GUID,
+            //    //                             PropertyID = prop.ID,
+            //    //                             PropertyNum = prop.Num,
+            //    //                             Value = prop.Value,
+            //    //                             ValueNum = valueNum + 1
+            //    //                         });
+
+            //    //            //Source = new NotifyTaskCompletion<ObservableCollection<IGrouping<string, SystemObjectPropertyValueModel>>>(UpdateSystemPropertyModels());
+            //    //        }
+            //    //    }
+            //    //}
+            //}
         }
 
         private async Task DeleteNullValues(IEnumerable<SystemObjectPropertyValueModel> values, int? groupId)

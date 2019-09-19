@@ -103,7 +103,7 @@ namespace Vertical.ViewModels
 
             if (items != null)
             {
-                foreach(var i in items)
+                foreach(var i in items.OrderByDescending(x => x.CreationTime).OrderBy(q => q.TypeID))
                 {
                     SystemObjectModels.Add(i);
                 }
@@ -117,11 +117,29 @@ namespace Vertical.ViewModels
         }
 
         private async void GoToEditObjectPage(object commandParameter)
-        {            
+        {
             IsEnabled = false;
+
             await Navigation.PushModalAsync(new EditObjectPage(commandParameter as SystemObjectModel));
 
             IsEnabled = true;
+            //var action = await UserDialogs.Instance.ActionSheetAsync(null, "Отмена", null, buttons: new []{ "Редактировать", "Удалить"});
+            //if (!string.IsNullOrEmpty(action))
+            //{
+            //    IsEnabled = false;
+            //    switch (action)
+            //    {
+            //        case "Редактировать":
+            //            {
+            //                await Navigation.PushModalAsync(new EditObjectPage(commandParameter as SystemObjectModel));
+            //                IsEnabled = true;
+            //            } break;
+            //        case "Удалить":
+            //            {
+
+            //            } break;
+            //    }
+            //}
         }
         
         private async void GoToAddNewObjectPage()

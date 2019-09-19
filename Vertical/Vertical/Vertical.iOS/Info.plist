@@ -36,5 +36,9 @@
 	<string>ПИК-Система</string>
 	<key>XSLaunchImageAssets</key>
 	<string>Assets.xcassets/LaunchImages.launchimage</string>
+	<key>Fonts provided by the application</key>
+	<array>
+		<string>fontawesome-webfont.ttf</string>
+	</array>
 </dict>
 </plist>

@@ -28,7 +28,7 @@
                             </Label>
                             <Label x:Name="nameObjectLabel" 
                                    Text="{Binding Name}" TextColor="Black" 
-                                   VerticalTextAlignment="Center" FontSize="Body"
+                                   VerticalTextAlignment="Center" FontSize="Caption"
                                    HorizontalTextAlignment="Start"
                                    Grid.Column="1"/>
                             <Button
@@ -37,7 +37,7 @@
                                 FontSize="Large"
                                 Text="{StaticResource IconPencil}" TextColor="{StaticResource LightGreyColor}"                                
                                 Command="{Binding Source={x:Reference Page}, Path = BindingContext.GoToEditObjectPageCommand}" 
-                                CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"
+                                CommandParameter="{Binding}"
                                 HorizontalOptions="End"                                
                                 BackgroundColor="Transparent"
                                 IsEnabled="{Binding Source={x:Reference Page}, Path = BindingContext.IsEnabled}">

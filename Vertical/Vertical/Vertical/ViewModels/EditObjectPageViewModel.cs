@@ -3,7 +3,6 @@ using Android.Util;
 using PropertyChanged;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Windows.Input;
 using Vertical.Models;
 using Vertical.Services;
@@ -59,10 +58,10 @@ namespace Vertical.ViewModels
                 IsEnabled = true;
                 return;
             }
-
-            if (!Api.SendDataToServer("System/EditSystemObject", NewObject))
+            
+            if (await Api.SendDataToServerAsync("System/EditSystemObject", NewObject) != System.Net.HttpStatusCode.OK)
             {
-                await UserDialogs.Instance.AlertAsync("Не удалось создать.");
+                await UserDialogs.Instance.AlertAsync("Не удалось изменить");
                 IsEnabled = true;
                 return;
             }

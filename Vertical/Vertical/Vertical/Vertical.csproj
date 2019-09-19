@@ -54,6 +54,10 @@
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v8.1\Mono.Android.dll</HintPath>
       <Private></Private>
     </Reference>
+	<Reference Include="Monotouch">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoTouch\v1.0\monotouch.dll</HintPath>
+      <Private></Private>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>

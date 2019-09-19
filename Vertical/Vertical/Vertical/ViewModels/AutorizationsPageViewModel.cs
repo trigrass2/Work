@@ -66,7 +66,6 @@ namespace Vertical.ViewModels
                 {
                     await Task.Run(async () =>
                     {
-
                         if (NetworkCheck.IsInternet())
                         {
                             _statusAutorization = await Api.GetToken(User.Login, User.Password);
