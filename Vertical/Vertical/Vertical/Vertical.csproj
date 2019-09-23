@@ -29,10 +29,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Acr.UserDialogs" Version="7.0.27" />
+    <PackageReference Include="Acr.UserDialogs" Version="7.0.4" />
     <PackageReference Include="Microsoft.AppCenter.Analytics" Version="2.1.1" />
     <PackageReference Include="Microsoft.AppCenter.Crashes" Version="2.1.1" />
     <PackageReference Include="Microsoft.AppCenter.Distribute" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AppCenter.Push" Version="2.1.1" />
     <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
     <PackageReference Include="NGraphics" Version="0.5.0" />
@@ -50,6 +51,9 @@
   </ItemGroup>
 
   <ItemGroup>
+	<Reference Include="Mono.Android">
+      <HintPath>..\..\..\..\..\..\..\Library\Frameworks\Xamarin.Android.framework\Versions\9.4.1.0\lib\xamarin.android\xbuild-frameworks\MonoAndroid\v9.0.99\Mono.Android.dll</HintPath>
+    </Reference>
     <Reference Include="Mono.Android">
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v8.1\Mono.Android.dll</HintPath>
       <Private></Private>

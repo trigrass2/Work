@@ -6,6 +6,8 @@ using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using Microsoft.AppCenter.Distribute;
+using Microsoft.AppCenter.Push;
+
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Vertical
@@ -23,9 +25,9 @@ namespace Vertical
         protected override void OnStart()
         {
             SvgImageSource.RegisterAssembly();
-            AppCenter.Start($"{Constants.IOSSecret} {Constants.AndroidSecret}",
-                  typeof(Analytics), typeof(Crashes), typeof(Distribute));
-
+            AppCenter.Start($"{Constants.IOSSecret} {Constants.AndroidSecret} 3ef5a6e3-874d-44b7-a40f-c1410aadb92d",
+                  typeof(Analytics), typeof(Crashes), typeof(Distribute), typeof(Push));
+          
         }
 
         protected override void OnSleep()

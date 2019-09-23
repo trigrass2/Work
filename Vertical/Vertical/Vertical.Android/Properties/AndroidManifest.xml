@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="1.0" package="com.pik.system" android:installLocation="auto" android:versionCode="2">
 	<uses-sdk android:minSdkVersion="18" android:targetSdkVersion="28" />
+  <permission android:name="com.pik.system.permission.C2D_MESSAGE" android:protectionLevel="signature" />
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -8,5 +9,17 @@
 	<uses-permission android:name="android.permission.READ_CONTACTS" />
 	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.INTERNET" />
 	<application android:label="Vertical.Android" android:icon="@mipmap/icon"></application>
+	<application android:name="android.support.multidex.MultiDexApplication"></application>
+	<receiver android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver" android:exported="false" />
+	<receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" 
+            android:exported="true" 
+            android:permission="com.google.android.c2dm.permission.SEND">
+		<intent-filter>
+			<action android:name="com.google.android.c2dm.intent.RECEIVE" />
+			<action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+			<category android:name="${applicationId}" />
+		</intent-filter>
+	</receiver>
 </manifest>
